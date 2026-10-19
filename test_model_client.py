@@ -18,7 +18,7 @@ class ModelTests(unittest.TestCase):
   with self.assertRaises(ModelError):endpoint(self.cfg)
  def test_history_conversion(self):
   p=responses_payload({'messages':[{'role':'system','content':'rules'},{'role':'user','content':'task'},{'role':'assistant','content':None,'tool_calls':[{'id':'call_1','function':{'name':'inspect_candidates','arguments':'{}'}}]},{'role':'tool','tool_call_id':'call_1','content':'{"status":"OK"}'}],'tools':[{'type':'function','function':{'name':'inspect_candidates','parameters':{'type':'object','properties':{}}}}],'tool_choice':'auto','thinking':{'type':'disabled'}})
-  self.assertEqual(p['instructions'],'rules');self.assertEqual([x.get('type') for x in p['input']],[None,'function_call','function_call_output']);self.assertEqual(p['tools'][0]['name'],'inspect_candidates')
+  self.assertEqual(p['instructions'],'rules');self.assertEqual([x.get('type') for x in p['input']],['message','function_call','function_call_output']);self.assertEqual(p['tools'][0]['name'],'inspect_candidates')
  def test_forced_tool_conversion(self):
   r=responses_payload({'tool_choice':{'type':'function','function':{'name':'connection_probe'}}});self.assertEqual(r['tool_choice'],{'type':'function','name':'connection_probe'})
  def test_response_tool_call_conversion(self):self.assertEqual(normalize_responses(self.response())['choices'][0]['message']['tool_calls'][0]['id'],'call_1')
@@ -42,7 +42,14 @@ class ModelTests(unittest.TestCase):
  def test_probe_requires_function_call(self):
   with self.assertRaises(ModelError):test_connection(self.cfg,transport=lambda p:{'choices':[{'message':{'role':'assistant','content':'hello'}}]})
  def test_probe_accepts_correct_call_only(self):
-  r=test_connection(self.cfg,transport=lambda p:{'choices':[{'message':{'tool_calls':[{'function':{'name':'connection_probe','arguments':'{}'}}]}}]});self.assertEqual(r['status'],'CONNECTED_TOOL_CALL_VERIFIED')
+  seen=[]
+  def fake(p):
+   seen.append(p)
+   m={'tool_calls':[{'id':'probe_1','function':{'name':'connection_probe','arguments':'{}'}}]} if len(seen)==1 else {'content':'CONNECTION_OK'}
+   return {'choices':[{'message':m}]}
+  r=test_connection(self.cfg,transport=fake)
+  self.assertEqual(r['status'],'CONNECTED_TOOL_CALL_VERIFIED');self.assertTrue(r['multi_turn_verified'])
+  self.assertEqual(seen[1]['messages'][-2]['tool_call_id'],'probe_1')
  def test_empty_key_not_ready(self):self.cfg['api_key']='';self.assertFalse(readiness(self.cfg)['ready'])
 
 if __name__=='__main__':unittest.main(verbosity=2)

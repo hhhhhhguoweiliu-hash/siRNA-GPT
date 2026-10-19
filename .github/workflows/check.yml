@@ -11,4 +11,4 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run scientific integration and cloud boundary checks
-        run: python -m unittest test_core test_model_client test_http test_responses_integration test_conversation test_api_diagnostics test_cloud -v
+        run: python -m unittest discover -p 'test_*.py' -v

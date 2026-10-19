@@ -10,3 +10,4 @@ _test_runs/
 connection*.json
 server.local.json
 *.log
+connection.*.json

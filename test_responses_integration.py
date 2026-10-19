@@ -12,6 +12,8 @@ class IntegrationTests(unittest.TestCase):
   def fake(req,timeout):
    body=json.loads(req.data);calls.append(body)
    self.assertTrue(req.full_url.endswith('/responses'));self.assertNotIn('messages',body)
+   # Regression: Ark rejects a mixed multi-turn input list if type is omitted.
+   self.assertTrue(all(x.get('type') in ('message','function_call','function_call_output') for x in body['input']))
    outputs=[x for x in body['input'] if x.get('type')=='function_call_output']
    n=len(outputs)
    if n<6:

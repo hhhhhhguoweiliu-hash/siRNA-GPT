@@ -52,14 +52,14 @@ def responses_payload(payload):
   elif role=='tool':out['input'].append({'type':'function_call_output','call_id':message['tool_call_id'],'output':message.get('content') or ''})
   else:
    if message.get('content'):
-    out['input'].append({'role':role,'content':[{'type':'output_text' if role=='assistant' else 'input_text','text':message['content']}]})
+    out['input'].append({'type':'message','role':role,'content':[{'type':'output_text' if role=='assistant' else 'input_text','text':message['content']}]})
    for call in message.get('tool_calls') or []:
     out['input'].append({'type':'function_call','call_id':call['id'],'name':call['function']['name'],'arguments':call['function']['arguments']})
  if instructions:out['instructions']='\n'.join(instructions)
- if payload.get('tools'):out['tools']=[{'type':'function',**tool['function']} for tool in payload['tools']]
+ if payload.get('tools'):out['tools']=[{'type':'function',**tool['function']} if tool.get('type')=='function' else dict(tool) for tool in payload['tools']]
  if 'tool_choice' in payload:
   choice=payload['tool_choice']
-  out['tool_choice']={'type':'function','name':choice['function']['name']} if isinstance(choice,dict) else choice
+  out['tool_choice']=({'type':'function','name':choice['function']['name']} if choice.get('type')=='function' and 'function' in choice else choice) if isinstance(choice,dict) else choice
  # v0.2 uses stateless history and disabled thinking; no hidden reasoning state is omitted.
  if out.get('thinking',{}).get('type')=='enabled':raise ModelError('当前Responses适配仅验证关闭深度思考的无状态历史传递。','CONFIG_INVALID')
  return out
@@ -67,14 +67,24 @@ def responses_payload(payload):
 def normalize_responses(data):
  if data.get('status')=='incomplete':raise ModelError('Responses输出不完整，本轮未执行工具指令。','OUTPUT_TRUNCATED')
  if data.get('status') in ('failed','cancelled'):raise ModelError('Responses任务失败或取消。','RESPONSE_INVALID')
- calls=[];text=[]
+ calls=[];text=[];sources=[];searches=[]
  for item in data.get('output',[]):
   if item.get('type')=='function_call':
    calls.append({'id':item.get('call_id') or item.get('id'),'type':'function','function':{'name':item.get('name'),'arguments':item.get('arguments','{}')}})
-  elif item.get('type')=='message':text.extend(c.get('text','') for c in item.get('content',[]) if c.get('type')=='output_text')
+  elif item.get('type')=='web_search_call':searches.append({'status':item.get('status'),'action':item.get('action',{})})
+  elif item.get('type')=='message':
+   for c in item.get('content',[]):
+    if c.get('type')=='output_text':
+     text.append(c.get('text',''))
+     for a in c.get('annotations',[]):
+      if a.get('type')=='url_citation' and isinstance(a.get('url'),str):
+       from urllib.parse import urlsplit
+       u=urlsplit(a['url'])
+       if u.scheme=='https' and u.hostname and not u.username and not u.password and a['url'] not in [s['url'] for s in sources]:
+        sources.append({'title':a.get('title') or u.hostname,'url':a['url'],'summary':a.get('summary','')[:1500]})
  if not calls and not text:raise ModelError('Responses未返回文本或函数调用。','RESPONSE_INVALID')
  usage=data.get('usage',{})
- return {'id':data.get('id'),'model':data.get('model'),'choices':[{'finish_reason':'tool_calls' if calls else 'stop','message':{'role':'assistant','content':'\n'.join(text) or None,**({'tool_calls':calls} if calls else {})}}],'usage':usage}
+ return {'id':data.get('id'),'model':data.get('model'),'choices':[{'finish_reason':'tool_calls' if calls else 'stop','message':{'role':'assistant','content':'\n'.join(text) or None,**({'tool_calls':calls} if calls else {})}}],'usage':usage,'sources':sources,'web_search_calls':searches}
 
 def readiness(cfg):
  result={'key_present':bool(cfg.get('api_key')),'model_present':bool(cfg.get('model')),'model_valid':False,'ready':False,'message':'请先填写模型ID'}
@@ -159,4 +169,12 @@ def test_connection(cfg,transport=None):
  try:args=json.loads(calls[0]['function'].get('arguments','{}'))
  except Exception:raise ModelError('模型工具参数不是有效JSON。','TOOLS_NOT_CONFIRMED') from None
  if args!={}:raise ModelError('模型工具参数不符合要求。','TOOLS_NOT_CONFIRMED')
- return {'status':'CONNECTED_TOOL_CALL_VERIFIED','provider':cfg.get('provider'),'model':extract_model(cfg.get('model')),'seconds':round(time.monotonic()-start,3),'usage':response.get('usage',{}),'request_id':response.get('_request_id',''),'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'probe_tools_executed':False,'note':'真实API返回正确的工具指令；完整任务仍需运行验证'}
+ # Verify tool-result replay as well as first-turn function selection.
+ call=calls[0]
+ if not call.get('id'):raise ModelError('工具调用缺少关联ID','TOOLS_NOT_CONFIRMED')
+ history=list(payload['messages'])+[{'role':'assistant','content':None,'tool_calls':calls},
+  {'role':'tool','tool_call_id':call['id'],'content':'{"status":"OK","probe":"connection"}'},
+  {'role':'user','content':'工具返回成功，请只回答 CONNECTION_OK，不要再调用工具。'}]
+ final=transport({'messages':history,'max_tokens':256}) if transport else request_completion(cfg,{'messages':history,'max_tokens':256})
+ if not (final['choices'][0]['message'].get('content') or '').strip():raise ModelError('工具回传后没有最终回答','TOOLS_NOT_CONFIRMED')
+ return {'status':'CONNECTED_TOOL_CALL_VERIFIED','provider':cfg.get('provider'),'model':extract_model(cfg.get('model')),'seconds':round(time.monotonic()-start,3),'usage':response.get('usage',{}),'request_id':response.get('_request_id',''),'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'probe_tools_executed':True,'multi_turn_verified':True,'note':'真实API返回正确的工具指令；完整任务仍需运行验证'}
