@@ -4,7 +4,8 @@ new vm.Script(html.split('<script>')[1].split('</script>')[0]);
 let unit=html.split('// Browser backup unit:')[1].split('// End browser backup unit.')[0];unit=unit.slice(unit.indexOf('\n')+1);
 const memory=new Map(),status={textContent:''};let record={};
 const context={JSON,Date,setTimeout,localStorage:{getItem:k=>memory.get(k),setItem:(k,v)=>memory.set(k,v)},$:()=>status,api:async()=>record};
-vm.createContext(context);vm.runInContext(unit,context);
+vm.createContext(context);vm.runInContext(html.split('// Human text start')[1].split('// Human text end')[0],context);
+const readable=context.displayText('NOT_ORDER_READY_MODIFICATIONS_UNFROZEN VEGFA_SD_3499 [S3]');assert(!readable.includes('NOT_ORDER_READY'));assert(readable.includes('VEGFA_SD_3499 [S3]'));vm.runInContext(unit,context);
 (async()=>{for(let i=0;i<4;i++){record={id:'c'+i,evidence_records:[{result:'TEST_'+i}]};await context.backupConversation({id:record.id,messages:[{id:'u'+i},{id:'a'+i}],busy:false})}
 let data=JSON.parse([...memory.values()][0]);assert.equal(data.length,3);assert.equal(data[0].record.id,'c3');assert.equal(data[2].record.id,'c1');
 record={id:'new-empty'};await context.backupConversation({id:record.id,messages:[{id:'greeting'}],busy:false});assert.equal(JSON.parse([...memory.values()][0])[0].record.id,'c3');
