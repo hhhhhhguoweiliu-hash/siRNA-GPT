@@ -50,13 +50,17 @@ def execute(payload):
  finally:
   with LOCK:STATE['running']=False
 
-def check_connection():
+def check_connection(check_research=False):
  global CONNECTION_FINGERPRINT
  c=config()
  try:
   result=test_connection(c);CONNECTION_FINGERPRINT=client_fingerprint(c)
  except Exception as e:result={'status':'FAILED','message':str(e),**(e.diagnostics() if isinstance(e,ModelError) else {'code':'MODEL_ERROR'})}
  save_json(HOME/'connection.last.json',result)
+ if check_research:
+  from startup_checks import research_checks
+  checks=research_checks(c,result.get('status')=='CONNECTED_TOOL_CALL_VERIFIED')
+  with LOCK:STATE['research_connection']=checks
  with LOCK:STATE.update(checking_connection=False,connection=result)
 
 class Handler(BaseHTTPRequestHandler):
@@ -120,7 +124,7 @@ class Handler(BaseHTTPRequestHandler):
     with LOCK:
      if STATE['running'] or STATE['checking_connection'] or CONVERSATION.busy:return self.send({'error':'已有任务运行中'},409)
      STATE.update(checking_connection=True,connection={'status':'CHECKING'})
-    threading.Thread(target=check_connection,daemon=True).start()
+    threading.Thread(target=check_connection,kwargs={'check_research':True},daemon=True).start()
     return self.send({'started':True},202)
    if self.path=='/api/run':
     if data.get('mode') not in ('agent','workflow') or data.get('tool_mode') not in ('live','imported'):return self.send({'error':'不支持的运行模式'},400)

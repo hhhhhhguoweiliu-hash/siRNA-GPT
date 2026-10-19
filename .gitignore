@@ -11,3 +11,4 @@ connection*.json
 server.local.json
 *.log
 connection.*.json
+_startup_checks/

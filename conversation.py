@@ -322,6 +322,7 @@ class Conversation:
                 report = self.session.path/'report.json'
                 if report.exists(): context['report'] = json.loads(report.read_text(encoding='utf-8'))
         cfg = self.cfg_loader()
+        available_tools=[t for t in RESEARCH_TOOLS if t['function']['name']!='search_web' or cfg.get('web_search_available') is not False]
         system = ('你是研究者的 siRNA 科研助手。先理解问题，再选择最少但足够的工具，读取结果后决定是否换关键词或继续读取。'
             '简单解释可直接回答；涉及新文献、明确要求查证或最新信息时必须用检索工具。'
             '生物文献优先 search_pubmed；官方软件文档和通用网页使用 search_web；需要查看来源细节用 read_webpage。'
@@ -332,6 +333,7 @@ class Conversation:
             '明确区分外部文献、本地计算结果和你的推断；其他基因可以查文献但不可伪装本地评分。'
             '不得编造 siRNA 序列、PMID、DOI 或实验结果。用户继续问时利用 recent_messages。' + SCOPE + NATURAL_STYLE)
         if not web_enabled: system += '本轮用户关闭了联网；不可搜索或声称已联网。'
+        elif cfg.get('web_search_available') is False:system += '通用网页搜索当前未通过连接检查；仍可使用 PubMed 联网检索和可信网页读取。不要要求用户先开通才能查 PubMed。'
         messages = [{'role':'system','content':system}, {'role':'user','content':json.dumps({'question':text,'local_context':context},ensure_ascii=False)}]
         with self.lock:
             self.research_state = {'status':'running','question':text,'steps':[],'sources':[]}; self.persist()
@@ -339,7 +341,7 @@ class Conversation:
         invoke = self.transport or (lambda p:request_completion(cfg,p))
         for turn in range(7):
             payload={'model':cfg.get('model'),'messages':list(messages)}
-            if web_enabled and tool_count<6: payload.update(tools=RESEARCH_TOOLS,tool_choice='auto')
+            if web_enabled and tool_count<6: payload.update(tools=available_tools,tool_choice='auto')
             elif web_enabled:
                 messages.append({'role':'system','content':'工具预算已用完，请只根据已取得的证据回答；没有资料就如实说明。'})
                 payload['messages']=list(messages)

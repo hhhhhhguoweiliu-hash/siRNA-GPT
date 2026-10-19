@@ -22,6 +22,9 @@
 
 ## 修复与检查
 
+- 页面区分 PubMed 和普通网页搜索的实际连接状态。豆包返回 ToolNotOpen 时，禁用该工具供模型选择，但保留 PubMed 和可信网页读取；页面提供服务端提示的官方开通入口。开通后的“检测模型与联网”会重新检查三项连接。
+- 在云端用独立会话检查完整路径：自然语言提问 → 模型选择 PubMed → 真实检索 → 工具结果回传 → 生成带来源的回答。该测试不替换用户正在使用的会话，结果单独写入 STARTUP_CHECK research_conversation 日志。
+
 - 所有 Responses input 元素都显式包含 type（message / function_call / function_call_output），避免混合工具历史报 MissingParameter input.type。
 - “检测连接”实际执行两次模型请求：请求函数调用、回传测试函数结果并取得最终回答。第一轮可调用不再被当作多轮已验证。
 - Gunicorn 启动时在后台执行轻量检查：真实两轮模型调用、公开关键词 PubMed 检索、官方网页搜索。结果保存在服务器记录并以不含密钥的摘要写入 Render 日志；同一运行目录、同一 commit 只测一次。STARTUP_CHECKS=0 可关闭。

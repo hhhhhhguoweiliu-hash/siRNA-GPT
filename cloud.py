@@ -16,6 +16,8 @@ def cloud_config():
     c.update(provider='doubao', api_mode='responses', base_url='https://ark.cn-beijing.volces.com/api/v3',
         api_key=os.environ.get('ARK_API_KEY',''), model=os.environ.get('ARK_MODEL','doubao-seed-2-1-pro-260915'),
         request_timeout=90, api_retries=1)
+    net=local.STATE.get('research_connection',{})
+    if 'web' in net:c['web_search_available']=net['web'].get('status')=='OK'
     return c
 local.config=cloud_config
 core.config=cloud_config

@@ -76,6 +76,17 @@ class ResearchLoopTests(unittest.TestCase):
         c=self.controller(lambda p:(seen.append(p),model('TEST_ONLY local answer'))[1]);c.result={'status':'PARTIAL_COMPLETE'}
         c.answer('Explain result',web_enabled=False)
         self.assertNotIn('tools',seen[0]);self.assertIn('PARTIAL_COMPLETE',seen[0]['messages'][-1]['content'])
+    def test_web_search_not_open_does_not_disable_pubmed(self):
+        seen=[];self.cfg['web_search_available']=False
+        c=self.controller(lambda p:(seen.append(p),model('TEST_ONLY answer'))[1]);c.answer('Question')
+        names=[x['function']['name'] for x in seen[0]['tools']]
+        self.assertIn('search_pubmed',names);self.assertIn('read_webpage',names);self.assertNotIn('search_web',names)
+    def test_availability_does_not_hide_provider_error(self):
+        from model_client import ModelError
+        from startup_checks import research_checks
+        with patch('research.search_pubmed',return_value={'status':'OK','sources':[{'url':'https://pubmed.ncbi.nlm.nih.gov/1/'}]}),patch('research.search_web',side_effect=ModelError('TEST not open',provider_code='ToolNotOpen',http_status=404)):
+            r=research_checks(self.cfg,True)
+        self.assertEqual(r['web']['provider_code'],'ToolNotOpen');self.assertEqual(r['pubmed']['status'],'OK')
     def test_failure_allows_new_tool_instead_of_fake_success(self):
         seen=[]
         def fake(p):
