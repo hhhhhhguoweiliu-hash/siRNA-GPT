@@ -11,6 +11,13 @@ class ModelError(Exception):
  def diagnostics(self):
   return {'code':self.code,'provider_code':self.provider_code,'provider_message':self.provider_message,'request_id':self.request_id,'http_status':self.http_status}
 
+def account_blocked(diagnostics):
+ """Terminal account/billing/auth errors are not transient request throttling."""
+ code=str(diagnostics.get('provider_code',''))
+ return diagnostics.get('http_status') in (401,402) or code in {
+  'SetLimitExceeded','AccountOverdueError','OperationDenied.ServiceOverdue',
+  'OperationDenied.ServiceNotOpen','ModelNotOpen','InvalidAccountStatus','AuthenticationError'}
+
 def extract_model(value):
  text=str(value or '').strip()
  if not text:return ''
@@ -121,6 +128,7 @@ def provider_http_error(error,key):
  if code=='AccessDenied':hint='当前凭证无权访问所请求的资源，请核对账号、项目授权和白名单'
  elif code in ('OperationDenied.ServiceNotOpen','ModelNotOpen'):hint='对应模型服务尚未开通，请在方舟控制台确认'
  elif code in ('AccountOverdueError','OperationDenied.ServiceOverdue'):hint='服务端报告账户欠费，请核对计费状态'
+ elif code=='SetLimitExceeded':hint='模型累计用量已达到账号设置上限，服务暂停；请在开通管理核对限额，程序不会自动提高限额'
  else:hint=hints.get(error.code,'服务端返回错误')
  parts=['豆包 API HTTP '+str(error.code)+' / '+code+'：'+hint]
  parts.append('服务端说明：'+message if message else '服务端未提供具体说明；不能仅凭HTTP状态码确定原因。')
@@ -150,8 +158,9 @@ def request_completion(cfg,payload,opener=None):
    data['_request_id']=rid
    return data
   except urllib.error.HTTPError as e:
-   if e.code in (429,502,503,504) and attempt<retries:time.sleep(.5*(attempt+1));continue
-   raise provider_http_error(e,cfg['api_key']) from None
+   error=provider_http_error(e,cfg['api_key'])
+   if e.code in (429,502,503,504) and not account_blocked(error.diagnostics()) and attempt<retries:time.sleep(.5*(attempt+1));continue
+   raise error from None
   except (socket.timeout,TimeoutError):raise ModelError('模型请求超时，未自动重发以避免重复调用；可查看日志后手动重试。','NETWORK_TIMEOUT') from None
   except urllib.error.URLError as e:
    reason=getattr(e,'reason',e)

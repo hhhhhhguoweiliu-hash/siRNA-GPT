@@ -8,6 +8,7 @@ import base64,hashlib,io,json,os,random,re,threading,time,uuid,zipfile
 from pathlib import Path
 from core import HOME,save_json,now
 from runtime_info import manifest
+from model_client import account_blocked
 
 LOCK=threading.Lock()
 STATE={'status':'NOT_STARTED'}
@@ -36,6 +37,7 @@ def run(cfg_loader,run_id):
         save_json(out/'protocol.json',protocol);save_json(out/'cases.json',suite)
         STOP.clear();STATE.clear();STATE.update(status='RUNNING',run_id=run_id,completed=0,total=len(jobs));log('BEGIN',protocol)
         results=[]
+        blocking_error=None
         for index,(case,group,rep) in enumerate(jobs):
             if STOP.is_set():break
             answer_id='A'+str(index+1).zfill(3);folder=out/answer_id
@@ -50,13 +52,18 @@ def run(cfg_loader,run_id):
             if secret:raw=raw.replace(secret,'[REDACTED]')
             r=json.loads(raw);folder.mkdir(parents=True,exist_ok=True);save_json(folder/'result.json',r);results.append(r)
             STATE.update(completed=index+1);log('CASE',{'answer_id':answer_id,'case_id':case['id'],'group':group,'repeat':rep,'status':r['status'],'seconds':r.get('seconds'),'tool_calls':r.get('tool_calls',0),'tokens':r.get('total_tokens',0)})
+            if account_blocked(r.get('provider_error',{})):
+                blocking_error=r['provider_error'];STATE.update(blocking_error=blocking_error)
+                log('ACCOUNT_BLOCK',blocking_error);break
         save_json(out/'results.json',results)
         import csv
         for filename,rows in [('blind_answers.tsv',[{'answer_id':r['answer_id'],'case_id':r['case_id'],'request':next(c['request'] for c in cases if c['id']==r['case_id']),'answer':r.get('answer',''),'reviewer_id':'','accuracy_0_2':'','evidence_0_2':'','task_fit_0_2':'','limits_0_2':'','notes':''} for r in results]),
             ('private_key.tsv',[{k:r[k] for k in ['answer_id','case_id','group','repeat','status']} for r in results])]:
             with (out/filename).open('w',encoding='utf-8-sig',newline='') as f:
                 w=csv.DictWriter(f,fieldnames=list(rows[0]),delimiter='\t');w.writeheader();w.writerows(rows)
-        STATE.update(status='STOPPED' if STOP.is_set() else 'COMPLETE',finished_at=now());save_json(out/'completion.json',STATE)
+        STATE.update(status='BLOCKED_ACCOUNT' if blocking_error else 'STOPPED' if STOP.is_set() else 'COMPLETE',
+            finished_at=now(),pending=len(jobs)-len(results),scientific_quality_scored=False)
+        save_json(out/'completion.json',STATE)
         # Includes raw conversation/model attempts and scientific tables, not just summaries.
         buffer=io.BytesIO()
         with zipfile.ZipFile(buffer,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:

@@ -88,7 +88,7 @@ class Handler(BaseHTTPRequestHandler):
   if path=='/api/development-evaluation-download':
    import paper_pilot
    identity=paper_pilot.STATE.get('run_id','')
-   if not identity or paper_pilot.STATE.get('status') not in ('COMPLETE','STOPPED','FAILED','STOPPED_TIMEOUT'):return self.send({'error':'评价未完成或本次服务中尚无结果'},409)
+   if not identity or paper_pilot.STATE.get('status') not in ('COMPLETE','STOPPED','FAILED','STOPPED_TIMEOUT','BLOCKED_ACCOUNT'):return self.send({'error':'评价未完成或本次服务中尚无结果'},409)
    directory=HOME/'evaluation_runs'/identity;memory=io.BytesIO()
    with zipfile.ZipFile(memory,'w',zipfile.ZIP_DEFLATED) as z:
     for p in directory.rglob('*'):

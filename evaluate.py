@@ -3,7 +3,7 @@ import argparse,csv,hashlib,json,random,time,uuid
 from pathlib import Path
 from core import config,save_json,TaskError,TOOLS
 from conversation import Conversation,PlannedSession,prepare_inputs,PRESETS,SCOPE
-from model_client import request_completion
+from model_client import request_completion,ModelError
 from runtime_info import manifest
 
 def wait(c,seconds=360):
@@ -13,7 +13,7 @@ def wait(c,seconds=360):
         c.request_stop()
         raise TimeoutError('Evaluation timed out. Stop this batch; do not start concurrent follow-up cases.')
 
-def run_case(group,case,cfg,root,transport=None):
+def _run_case(group,case,cfg,root,transport=None):
     if group not in ('llm','workflow','agent'):raise ValueError('Unknown evaluation arm')
     Path(root).mkdir(parents=True,exist_ok=True)
     start=time.monotonic();data={**case.get('input',{}),**case.get('task',{}),'message':case['request'],'tool_mode':'imported','web_enabled':False}
@@ -26,7 +26,8 @@ def run_case(group,case,cfg,root,transport=None):
         result.update(status=(c.result or {}).get('status',c.phase),answer=c.messages[-1]['text'],
             tool_calls=(c.session.tool_calls if c.session else 0)+sum(len(r['observations']) for r in c.export_record()['evidence_records']),record=c.export_record(),
             usage=[e['usage'] for e in c.events if e.get('usage')],phase=c.phase,
-            completed_tools=list(c.session.state) if c.session else [],tool_results=c.session.state if c.session else {},plan=c.plan)
+            completed_tools=list(c.session.state) if c.session else [],tool_results=c.session.state if c.session else {},plan=c.plan,
+            provider_error={k:c.result.get(k) for k in ['code','provider_code','http_status','request_id']} if c.result and c.result.get('code') else {})
     elif group=='workflow':
         inputs=prepare_inputs(data);inputs['task'].update(case.get('task',{}))
         preset=case.get('preset','full')
@@ -48,7 +49,16 @@ def run_case(group,case,cfg,root,transport=None):
         result.update(status='ANSWERED_NO_TOOLS',answer=r['choices'][0]['message'].get('content') or '',usage=[r.get('usage',{})])
     result['seconds']=round(time.monotonic()-start,3)
     result['total_tokens']=sum(int(u.get('total_tokens',0)) for u in result['usage'])
+    if result.get('provider_error') and not result['usage']:result['total_tokens']=None
     return result
+
+def run_case(group,case,cfg,root,transport=None):
+    started=time.monotonic()
+    try:return _run_case(group,case,cfg,root,transport)
+    except ModelError as e:
+        return {'group':group,'case_id':case['id'],'status':'FAILED','answer':str(e),
+            'provider_error':{k:v for k,v in e.diagnostics().items() if k!='provider_message'},
+            'usage':[],'tool_calls':0,'total_tokens':None,'seconds':round(time.monotonic()-started,3)}
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--cases',required=True);p.add_argument('--output',required=True)
