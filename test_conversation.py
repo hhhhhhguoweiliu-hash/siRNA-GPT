@@ -70,7 +70,7 @@ class ConversationTests(unittest.TestCase):
         seen=[]
         def fake(p):
             seen.append(p)
-            if p['tools'][0]['function']['name']=='propose_plan':
+            if p.get('tools') and p['tools'][0]['function']['name']=='propose_plan':
                 return message_response(name='propose_plan',args={'decision':'ready','summary':'仅核对','tools':['verify_target'],'question':''})
             tool_messages=[m for m in p['messages'] if m['role']=='tool']
             if len(tool_messages)<2:return message_response(name=['inspect_candidates','verify_target'][len(tool_messages)])
@@ -106,7 +106,7 @@ class ConversationTests(unittest.TestCase):
     def test_auto_full_report_is_marked_test_model(self):
         from conversation import ORDER
         def fake(p):
-            if p['tools'][0]['function']['name']=='propose_plan':
+            if p.get('tools') and p['tools'][0]['function']['name']=='propose_plan':
                 return message_response(name='propose_plan',args={'decision':'ready','summary':'TEST_ONLY完整计划','tools':['compile_report'],'question':''})
             n=len([m for m in p['messages'] if m['role']=='tool'])
             if n<6:return message_response(name=ORDER[n])

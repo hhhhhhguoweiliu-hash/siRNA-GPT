@@ -51,7 +51,7 @@ def authorized(value):
 
 def application(environ,start_response):
     path=environ.get('PATH_INFO','/');method=environ.get('REQUEST_METHOD','GET')
-    if path=='/healthz' and method=='GET':return response(start_response,200,{'status':'ok','version':'0.5-cloud'})
+    if path=='/healthz' and method=='GET':return response(start_response,200,{'status':'ok','version':'0.6-cloud'})
     host=environ.get('HTTP_HOST','')
     if not allowed_host(host):return response(start_response,403,{'error':'Invalid host'})
     if len(os.environ.get('WEB_PASSWORD',''))<16:

@@ -12,3 +12,4 @@ server.local.json
 *.log
 connection.*.json
 _startup_checks/
+evaluation_runs/

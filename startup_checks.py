@@ -44,6 +44,22 @@ def verify_research_conversation(cfg_loader):
         'answer_preview':redact(answer.get('text',''),cfg_loader().get('api_key','')),
         'message':'' if ok else 'Isolated live conversation did not complete with retrieved sources.'}
 
+def verify_scientific_conversation(cfg_loader):
+    from conversation import Conversation
+    c=Conversation(cfg_loader=cfg_loader,root=HOME/'_startup_checks')
+    c.submit({'message':'请对默认9条人VEGFA候选做完整核对，读取已有官方分数和seed结果，关联缺氧表达背景，最后生成2条优先核查候选的报告。不查文献。',
+        'interaction_mode':'auto','tool_mode':'imported','web_enabled':False})
+    def wait():
+        deadline=time.monotonic()+240
+        while c.snapshot()['busy'] and time.monotonic()<deadline:time.sleep(.3)
+    wait()
+    if c.plan and c.phase=='awaiting_execution':c.action('execute',c.plan['id']);wait()
+    state=c.snapshot();result=c.result or {};tools=list(c.session.state) if c.session else []
+    ok=not state['busy'] and result.get('status')=='COMPLETE' and len(tools)==6
+    return {'status':'VERIFIED' if ok else 'FAILED','tools':tools,'source_count':0,
+        'message':'Full six-tool workflow with imported scientific outputs; no heavy cloud model/R rerun.' if ok else c.messages[-1].get('text',''),
+        'answer_preview':redact(c.messages[-1].get('text',''),cfg_loader().get('api_key',''))}
+
 def run():
     if not os.environ.get('RENDER_SERVICE_ID') or os.environ.get('STARTUP_CHECKS','1')!='1':return
     import app
@@ -60,7 +76,7 @@ def run():
                         app.CONNECTION_FINGERPRINT=client_fingerprint(app.config())
                 return
         except (ValueError,OSError):pass
-    cfg=app.config();result={'commit':commit,'version':'0.5-cloud'}
+    cfg=app.config();result={'commit':commit,'version':'0.6-cloud'}
     with app.LOCK:app.STATE['checking_connection']=True
     app.check_connection(check_research=True)
     with app.LOCK:
@@ -70,4 +86,8 @@ def run():
         try:result['research_conversation']=verify_research_conversation(app.config)
         except Exception as e:result['research_conversation']={'status':'FAILED','message':redact(str(e),cfg.get('api_key',''))}
         log('research_conversation',result['research_conversation'],cfg)
+    if result['model'].get('status')=='CONNECTED_TOOL_CALL_VERIFIED':
+        try:result['scientific_conversation']=verify_scientific_conversation(app.config)
+        except Exception as e:result['scientific_conversation']={'status':'FAILED','message':redact(str(e),cfg.get('api_key',''))}
+        log('scientific_conversation',result['scientific_conversation'],cfg)
     save_json(marker,result)

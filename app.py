@@ -2,6 +2,7 @@
 from http.server import ThreadingHTTPServer,BaseHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import urlparse,unquote
+import html
 import json,threading,mimetypes,webbrowser,argparse,os,io,csv,zipfile
 from core import HOME,Session,config,default_candidates,canonical,save_json
 from model_client import readiness,extract_model,test_connection,client_fingerprint,ModelError,ARK_BASE_URL
@@ -23,7 +24,7 @@ def public_state():
  with LOCK:s=dict(STATE);s['events']=list(STATE['events'])
  r=readiness(c)
  connected=s['connection'].get('status')=='CONNECTED_TOOL_CALL_VERIFIED' and CONNECTION_FINGERPRINT==client_fingerprint(c)
- s.update({'api_ready':r['ready'],'api_connected':connected,'readiness':r,'model':c.get('model',''),'base_url':c.get('base_url',''),'version':'0.3.2','history':history(),'candidates':[{'candidate_id':r['candidate_id'],'guide':canonical(r),'source':r.get('source_tool')} for r in default_candidates()]})
+ s.update({'api_ready':r['ready'],'api_connected':connected,'readiness':r,'model':c.get('model',''),'base_url':c.get('base_url',''),'version':'0.6-cloud','history':history(),'candidates':[{'candidate_id':r['candidate_id'],'guide':canonical(r),'source':r.get('source_tool')} for r in default_candidates()]})
  s['conversation']=CONVERSATION.snapshot()
  return s
 def progress(event):
@@ -76,7 +77,20 @@ class Handler(BaseHTTPRequestHandler):
   if not self.valid_host():return self.send({'error':'Invalid host'},403)
   path=unquote(urlparse(self.path).path)
   if path=='/api/status':return self.send(public_state())
-  if path=='/api/conversation-record':return self.send(CONVERSATION.snapshot())
+  if path=='/api/conversation-record':return self.send(CONVERSATION.export_record())
+  if path=='/api/runtime':
+   from runtime_info import manifest
+   return self.send(manifest())
+  if path in ('/knowledge','/api/knowledge'):
+   from knowledge import catalogue
+   data=catalogue()
+   if path=='/api/knowledge':return self.send(data)
+   body='<meta charset="utf-8"><title>siRNA-GPT 项目资料</title><style>body{max-width:800px;margin:40px auto;padding:0 20px;font:16px/1.8 system-ui}article{padding:20px 0;border-bottom:1px solid #ddd}small{color:#666}</style><h1>本地项目说明卡</h1><p>版本 '+html.escape(data['version'])+'；待外部专家审核。它们说明当前实现，不替代原始论文或实验验证。</p>'
+   for card in data['cards']:
+    body+='<article id="'+html.escape(card['id'])+'"><h2>'+html.escape(card['title'])+'</h2><p>'+html.escape(card['text'])+'</p><small>依据：'+html.escape(card['basis'])+'</small>'
+    if card.get('original_url'):body+='<p><a href="'+html.escape(card['original_url'],quote=True)+'">原始文献入口</a></p>'
+    body+='</article>'
+   return self.send(body,kind='text/html; charset=utf-8')
   if path=='/api/candidate-template':return self.send('candidate_id\tguide_core19_5to3\tsource\n',kind='text/tab-separated-values; charset=utf-8')
   if path in ('/','/index.html'):return self.send((HOME/'index.html').read_bytes(),kind='text/html; charset=utf-8')
   if path.startswith('/runs/'):
@@ -84,8 +98,8 @@ class Handler(BaseHTTPRequestHandler):
    if target.name=='download.zip' and allowed in target.parent.parents and (target.parent/'result.json').is_file():
     memory=io.BytesIO()
     with zipfile.ZipFile(memory,'w',zipfile.ZIP_DEFLATED) as z:
-     for p in target.parent.iterdir():
-      if p.is_file() and p.suffix in ('.json','.jsonl','.tsv','.html','.txt','.log'):z.write(p,p.name)
+     for p in target.parent.rglob('*'):
+      if p.is_file() and p.suffix in ('.json','.jsonl','.tsv','.html','.txt','.log'):z.write(p,p.relative_to(target.parent))
     return self.send(memory.getvalue(),kind='application/zip')
    if allowed not in target.parents or not target.is_file():return self.send({'error':'Not found'},404)
    types={'.tsv':'text/tab-separated-values; charset=utf-8','.json':'application/json; charset=utf-8','.jsonl':'text/plain; charset=utf-8','.html':'text/html; charset=utf-8','.txt':'text/plain; charset=utf-8'}
@@ -100,6 +114,7 @@ class Handler(BaseHTTPRequestHandler):
    if n>50000:return self.send({'error':'Input too large'},413)
    data=json.loads(self.rfile.read(n).decode('utf-8'))
    if not isinstance(data,dict):return self.send({'error':'Request must be a JSON object'},400)
+   if self.path=='/api/stop':return self.send(CONVERSATION.request_stop())
    if self.path in ('/api/message','/api/action'):
     with LOCK:
      if STATE['running'] or STATE['checking_connection'] or CONVERSATION.busy:return self.send({'error':'已有任务或连接检查正在运行'},409)
@@ -145,7 +160,7 @@ if __name__=='__main__':
   except OSError:continue
  if server is None:raise SystemExit('No available localhost port. See README.')
  url='http://127.0.0.1:'+str(server.server_port)
- save_json(HOME/'server.local.json',{'url':url,'pid':os.getpid(),'version':'0.3.2'})
+ save_json(HOME/'server.local.json',{'url':url,'pid':os.getpid(),'version':'0.6-cloud'})
  print('RPE siRNA Agent v0.3.2: '+url,flush=True)
  if args.open:webbrowser.open(url)
  try:server.serve_forever()

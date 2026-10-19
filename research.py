@@ -19,6 +19,8 @@ def schema(name, description, properties, required):
         'parameters':{'type':'object','properties':properties,'required':required,'additionalProperties':False}}}
 
 RESEARCH_TOOLS = [
+    schema('search_local_knowledge','检索版本化的本地项目说明卡。无需联网，资料未经外部专家审核，不替代原始论文。',
+        {'query':{'type':'string'}},['query']),
     schema('search_pubmed', '用英文关键词检索 PubMed 原始文献，返回真实 PMID、题名、摘要和链接。生物机制与 siRNA 文献优先使用。',
         {'query':{'type':'string'},'limit':{'type':'integer','minimum':1,'maximum':6}}, ['query']),
     schema('search_web', '通过豆包官方联网工具搜索公开网页或官方工具文档。仅把需要检索的公开关键词传入，不传候选表、原始转录组或密钥。',
@@ -131,8 +133,11 @@ def read_webpage(url,opener=None):
         'sources':[{'title':title,'url':final,'kind':'public webpage'}]}
 
 def run_tool(name,args,cfg,transport=None):
-    expected={'search_pubmed':{'query','limit'},'search_web':{'query'},'read_webpage':{'url'}}
+    expected={'search_local_knowledge':{'query'},'search_pubmed':{'query','limit'},'search_web':{'query'},'read_webpage':{'url'}}
     if name not in expected or not isinstance(args,dict) or set(args)-expected[name]: raise ValueError('工具名或参数不受支持。')
+    if name=='search_local_knowledge':
+        from knowledge import search
+        return search(**args)
     if name=='search_pubmed':return search_pubmed(**args)
     if name=='search_web':return search_web(cfg=cfg,transport=transport,**args)
     return read_webpage(**args)

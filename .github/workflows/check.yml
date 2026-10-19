@@ -12,3 +12,5 @@ jobs:
           python-version: '3.12'
       - name: Run scientific integration and cloud boundary checks
         run: python -m unittest discover -p 'test_*.py' -v
+      - name: Check frontend syntax and browser backup states
+        run: node test_browser_backup.cjs

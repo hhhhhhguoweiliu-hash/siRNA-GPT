@@ -75,7 +75,8 @@ class ResearchLoopTests(unittest.TestCase):
         seen=[]
         c=self.controller(lambda p:(seen.append(p),model('TEST_ONLY local answer'))[1]);c.result={'status':'PARTIAL_COMPLETE'}
         c.answer('Explain result',web_enabled=False)
-        self.assertNotIn('tools',seen[0]);self.assertIn('PARTIAL_COMPLETE',seen[0]['messages'][-1]['content'])
+        self.assertEqual([t['function']['name'] for t in seen[0].get('tools',[])],['search_local_knowledge'])
+        self.assertIn('PARTIAL_COMPLETE',seen[0]['messages'][-1]['content'])
     def test_web_search_not_open_does_not_disable_pubmed(self):
         seen=[];self.cfg['web_search_available']=False
         c=self.controller(lambda p:(seen.append(p),model('TEST_ONLY answer'))[1]);c.answer('Question')
