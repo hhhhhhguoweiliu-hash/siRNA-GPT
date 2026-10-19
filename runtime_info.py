@@ -1,11 +1,11 @@
 """Public, credential-free runtime and asset identity for reproducible records."""
 import hashlib,json,os
 from pathlib import Path
-VERSION='0.6-cloud'
+VERSION='0.7-cloud'
 ROOT=Path(__file__).resolve().parent
 
 def manifest():
-    names=['core.py','conversation.py','research.py','knowledge.py','model_client.py',
+    names=['core.py','conversation.py','research.py','knowledge.py','model_client.py','expression_data.py',
         'data/candidates.tsv','data/historical_scores.tsv','data/VEGFA.fasta','data/expression.tsv.gz',
         'data/historical_seed_matches.tsv','data/provenance.json']
     assets={}

@@ -13,3 +13,5 @@ server.local.json
 connection.*.json
 _startup_checks/
 evaluation_runs/
+
+uploaded_expression/

@@ -73,6 +73,13 @@ class Session:
   self.mode=mode;self.tool_mode=tool_mode;self.event_cb=event or (lambda x:None)
   self.id=datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+uuid.uuid4().hex[:6]
   self.path=Path(run_root or HOME/'runs')/self.id;self.path.mkdir(parents=True)
+  from expression_data import load_dataset,builtin_receipt
+  identity=self.task.get('expression_dataset_id','builtin')
+  dataset=load_dataset(identity) if identity!='builtin' else None
+  self.expression_rows=dataset['rows'] if dataset else None
+  self.expression_source=dataset['receipt'] if dataset else builtin_receipt()
+  save_json(self.path/'expression_source.json',self.expression_source)
+  if dataset:save_json(self.path/'expression_snapshot.json',dataset)
   self.state={};self.events=[];self.model_messages=[];self.tool_calls=0
   save_json(self.path/'input.json',{'task':self.task,'candidates':self.candidates,'mode':mode,'tool_mode':tool_mode})
   save_json(self.path/'run_config.json',{'provider':self.cfg.get('provider'),'model':self.cfg.get('model'),'base_url':self.cfg.get('base_url'),'api_key_saved':False,'mode':mode,'tool_mode':tool_mode,'version':VERSION,'runtime':manifest(),'started_at':now(),'rules':'no custom fusion; review flags first, score descending among unflagged; expression annotation only'})
@@ -176,12 +183,13 @@ class Session:
   self.seed_rows=rows;write_tsv(self.path/'seed_matches.tsv',rows)
   return {'status':status,'scope':'guide only, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target','positive_rows':len(rows),'details':'seed_matches.tsv','counts':{r['candidate_id']:sum(int(float(z['seed_site_count'])) for z in rows if z['candidate_id']==r['candidate_id']) for r in self.state['inspect_candidates']['rows']}}
  def tool_query_expression(self):
-  self.require('match_seed');exp=read_tsv(DATA/'expression.tsv.gz');bygene={r['ENTREZID']:r for r in exp if r['ENTREZID']}
+  self.require('match_seed');exp=self.expression_rows if self.expression_rows is not None else read_tsv(DATA/'expression.tsv.gz');bygene={r['ENTREZID']:r for r in exp if r['ENTREZID']}
   targets=[r for r in exp if r['approved_symbol']=='VEGFA']
   if len(targets)!=1:raise TaskError('VEGFA表达映射不唯一，需核对')
   annot=[];summary=[]
   for candidate in self.state['inspect_candidates']['rows']:
    cid=candidate['candidate_id'];matched=[r for r in self.seed_rows if r['candidate_id']==cid];found=0;detected=0;normoxia_detected=0
+   matched=[m for m in matched if m['gene_id']!='7422']
    for m in matched:
     e=bygene.get(m['gene_id']);found+=bool(e)
     if e:
@@ -191,7 +199,12 @@ class Session:
     else:annot.append({**m,'approved_symbol':'UNMAPPED','mapping':'NO_BASELINE_GENE_MAP'})
    summary.append({'candidate_id':cid,'matched_genes':len(matched),'baseline_mapped_genes':found,'hypoxia_detected_genes':detected,'normoxia_detected_genes':normoxia_detected,'state_detected_genes':detected if self.task['state']=='Hypoxia' else normoxia_detected,'unmapped_genes':len(matched)-found})
   write_tsv(self.path/'seed_expression_details.tsv',annot)
-  return {'status':'LIVE_JOIN_OF_BASELINE_AND_SEED','target':targets[0],'candidate_summary':summary,'details':'seed_expression_details.tsv','rule':'TPM>=1 in >=2/4 vessels; annotation only; no risk exclusion; does not change ranking','scope':'untreated, one culture run, 4 vessels/state, hypoxia 1%O2 24h; not perturbation labels'}
+  # TPM stays separate from model score; no unvalidated weighted risk score.
+  for row in summary:
+   row['hypoxia_only_detected_genes']=sum(int(bygene[m['gene_id']]['Hypoxia_n_TPM_ge1'])>=2 and int(bygene[m['gene_id']]['Normoxia_n_TPM_ge1'])<2 for m in self.seed_rows if m['candidate_id']==row['candidate_id'] and m['gene_id'] in bygene and m['gene_id']!='7422')
+   row['normoxia_only_detected_genes']=sum(int(bygene[m['gene_id']]['Normoxia_n_TPM_ge1'])>=2 and int(bygene[m['gene_id']]['Hypoxia_n_TPM_ge1'])<2 for m in self.seed_rows if m['candidate_id']==row['candidate_id'] and m['gene_id'] in bygene and m['gene_id']!='7422')
+  write_tsv(self.path/'expression_comparison.tsv',summary)
+  return {'status':'LIVE_JOIN_OF_BASELINE_AND_SEED','target':targets[0],'candidate_summary':summary,'source':self.expression_source,'target_excluded_from_offtarget_counts':True,'expression_comparison':'expression_comparison.tsv','details':'seed_expression_details.tsv','rule':'TPM>=1 in >=2/4 vessels; annotation only; no risk exclusion; does not change ranking','scope':self.expression_source['scope']+'; not siRNA perturbation labels'}
  def tool_compile_report(self):
   self.require('inspect_candidates','verify_target','score_candidates','match_seed','query_expression')
   base={r['candidate_id']:r for r in self.state['verify_target']['rows']}
@@ -221,6 +234,9 @@ class Session:
   write_tsv(self.path/'candidates_ranked.tsv',rows)
   report={'status':'COMPLETE','run_id':self.id,'mode':self.mode,'tool_mode':self.tool_mode,'model_used':self.mode=='agent','selected_for_review':selected,'rows':rows,'expression':self.state['query_expression']['target'],'rules':'先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。','not_order_ready':True,'limitations':['仅人VEGFA及当前参考','既有候选来自siDirect，尚非用户的文献候选清单','仅guide mer7m8匹配，不是全面脱靶或毒性检测','近似匹配使用经序列核对的历史结果','模型分数不是敲低百分比','待确认化学形式与成熟SOP；不作为订购单','当前推荐规则用于流程原型，尚未经生物学效力验证']}
   report['task']=self.task
+  report['expression_source']=self.expression_source
+  report['expression_comparison']=self.state['query_expression']['candidate_summary']
+  report['expression_changes_ranking']=False
   if not all(r['candidate_id'] in original and canonical(current[r['candidate_id']])==old[r['candidate_id']] for r in rows):
    report['limitations'][1]='候选来源由用户提供；文献全文、完整双链及修饰信息仍需核对'
   save_json(self.path/'report.json',report);self.render(report)
@@ -233,7 +249,7 @@ class Session:
   content+='<h1>缺氧RPE siRNA筛选辅助 · 首份候选报告</h1><p>'+esc(mode)+' | '+esc(self.id)+'</p>'
   content+='<p>关注状态：'+('缺氧' if self.task['state']=='Hypoxia' else '常氧')+'。工具模式：'+('本次实时执行OligoFormer和SeedMatchR' if self.tool_mode=='live' else '明确导入历史工具输出')+'。近似匹配为历史证据。</p>'
   content+='<section><h2>优先核查候选</h2><p>'+esc('、'.join(r['selected_for_review']) or '暂无无复核提示的候选')+'</p><p>'+esc(r['rules'])+'</p><p>这是计算核查建议，尚非订购或实验有效性结论。</p></section>'
-  content+='<section><h2>VEGFA表达背景</h2><p>常氧平均TPM '+esc(t['TPM_Normoxia_mean'])+'；缺氧平均TPM '+esc(t['TPM_Hypoxia_mean'])+'。未处理基线，仅作背景说明。</p></section>'
+  content+='<section><h2>表达数据来源与TPM</h2><p>'+esc(self.expression_source['label'])+'；'+esc(self.expression_source['source'])+'</p><p>VEGFA常氧平均TPM '+esc(t['TPM_Normoxia_mean'])+'；缺氧平均TPM '+esc(t['TPM_Hypoxia_mean'])+'。这些是基线表达，不是敲低率，也不进入OligoFormer。</p><p>'+esc(self.expression_source['scope'])+'</p><p>检测规则：TPM≥1且至少2/4样本；仅供表达背景复核，不作安全阈值，不改变排序。下表排除目标基因VEGFA；未映射不等于不表达。</p><div class="scroll"><table><tr><th>候选</th><th>seed匹配非靶基因</th><th>常氧检测到</th><th>缺氧检测到</th><th>仅缺氧检测到</th><th>仅常氧检测到</th><th>未映射</th></tr>'+''.join('<tr>'+''.join('<td>'+esc(x[k])+'</td>' for k in ['candidate_id','matched_genes','normoxia_detected_genes','hypoxia_detected_genes','hypoxia_only_detected_genes','normoxia_only_detected_genes','unmapped_genes'])+'</tr>' for x in r['expression_comparison'])+'</table></div><p><a href="expression_comparison.tsv">下载两状态比较表</a> · <a href="seed_expression_details.tsv">下载逐基因TPM与匹配明细</a> · <a href="expression_source.json">数据来源记录</a></p></section>'
   content+='<section><h2>候选证据表</h2><div class="scroll"><table><tr>'+''.join('<th>'+k+'</th>' for k in ['顺序','候选','guide配对核心 5′→3′','模型分数 非百分比','覆盖转录本数','seed匹配基因数','其中所选状态检测到表达','待核对提示'])+'</tr>'+body+'</table></div></section>'
   if r.get('model_summary'):
    content+='<section><h2>豆包任务解读</h2><p style="white-space:pre-wrap">'+esc(r['model_summary'])+'</p><small>以上为模型生成的解读；序列、分数和证据以本报告表格及原始记录为准。</small></section>'

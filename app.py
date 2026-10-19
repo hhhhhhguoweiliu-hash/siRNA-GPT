@@ -24,7 +24,7 @@ def public_state():
  with LOCK:s=dict(STATE);s['events']=list(STATE['events'])
  r=readiness(c)
  connected=s['connection'].get('status')=='CONNECTED_TOOL_CALL_VERIFIED' and CONNECTION_FINGERPRINT==client_fingerprint(c)
- s.update({'api_ready':r['ready'],'api_connected':connected,'readiness':r,'model':c.get('model',''),'base_url':c.get('base_url',''),'version':'0.6-cloud','history':history(),'candidates':[{'candidate_id':r['candidate_id'],'guide':canonical(r),'source':r.get('source_tool')} for r in default_candidates()]})
+ s.update({'api_ready':r['ready'],'api_connected':connected,'readiness':r,'model':c.get('model',''),'base_url':c.get('base_url',''),'version':'0.7-cloud','history':history(),'candidates':[{'candidate_id':r['candidate_id'],'guide':canonical(r),'source':r.get('source_tool')} for r in default_candidates()]})
  s['conversation']=CONVERSATION.snapshot()
  return s
 def progress(event):
@@ -41,7 +41,7 @@ def execute(payload):
    available={r['candidate_id']:r for r in default_candidates()}
    if not ids or any(i not in available for i in ids):raise ValueError('请选择有效候选')
    candidates=[available[i] for i in ids]
-  task={'gene':payload.get('gene','VEGFA'),'species':'Homo sapiens','state':payload.get('state','Hypoxia'),'top_n':payload.get('top_n',2),'request':str(payload.get('request',''))[:2000]}
+  task={'gene':payload.get('gene','VEGFA'),'species':'Homo sapiens','state':payload.get('state','Hypoxia'),'top_n':payload.get('top_n',2),'request':str(payload.get('request',''))[:2000],'expression_dataset_id':payload.get('expression_dataset_id','builtin')}
   s=Session(candidates=candidates,task=task,mode=payload.get('mode','agent'),tool_mode=payload.get('tool_mode','live'),event=progress)
   with LOCK:STATE['run_id']=s.id
   result=s.run()
@@ -76,6 +76,11 @@ class Handler(BaseHTTPRequestHandler):
  def do_GET(self):
   if not self.valid_host():return self.send({'error':'Invalid host'},403)
   path=unquote(urlparse(self.path).path)
+  if path=='/api/data-source':
+   from expression_data import builtin_receipt
+   return self.send({'expression':builtin_receipt(),'candidates':{'source':'siDirect 2.0, computed 2026-10-16','count':9,'user_literature_candidates':False},'model_inference':'historical outputs; sequence checked before reuse','expression_changes_ranking':False})
+  if path=='/api/expression-template':
+   return self.send('ENTREZID\tapproved_symbol\tNor1\tNor2\tNor3\tNor4\tHyp1\tHyp2\tHyp3\tHyp4\n',kind='text/tab-separated-values; charset=utf-8')
   if path=='/api/status':return self.send(public_state())
   if path=='/api/conversation-record':return self.send(CONVERSATION.export_record())
   if path=='/api/runtime':
@@ -111,9 +116,13 @@ class Handler(BaseHTTPRequestHandler):
   if origin and origin not in ('http://127.0.0.1:'+str(self.server.server_port),'http://localhost:'+str(self.server.server_port)):return self.send({'error':'Invalid origin'},403)
   try:
    n=int(self.headers.get('Content-Length','0'))
-   if n>50000:return self.send({'error':'Input too large'},413)
+   if n>(16000000 if self.path=='/api/expression-upload' else 50000):return self.send({'error':'Input too large'},413)
    data=json.loads(self.rfile.read(n).decode('utf-8'))
    if not isinstance(data,dict):return self.send({'error':'Request must be a JSON object'},400)
+   if self.path=='/api/expression-upload':
+    from expression_data import upload
+    try:return self.send(upload(data.get('text'),data.get('label',''),data.get('confirmed')))
+    except ValueError as e:return self.send({'error':str(e)},400)
    if self.path=='/api/stop':return self.send(CONVERSATION.request_stop())
    if self.path in ('/api/message','/api/action'):
     with LOCK:
@@ -160,7 +169,7 @@ if __name__=='__main__':
   except OSError:continue
  if server is None:raise SystemExit('No available localhost port. See README.')
  url='http://127.0.0.1:'+str(server.server_port)
- save_json(HOME/'server.local.json',{'url':url,'pid':os.getpid(),'version':'0.6-cloud'})
+ save_json(HOME/'server.local.json',{'url':url,'pid':os.getpid(),'version':'0.7-cloud'})
  print('RPE siRNA Agent v0.3.2: '+url,flush=True)
  if args.open:webbrowser.open(url)
  try:server.serve_forever()

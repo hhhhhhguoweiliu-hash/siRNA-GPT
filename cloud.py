@@ -51,7 +51,7 @@ def authorized(value):
 
 def application(environ,start_response):
     path=environ.get('PATH_INFO','/');method=environ.get('REQUEST_METHOD','GET')
-    if path=='/healthz' and method=='GET':return response(start_response,200,{'status':'ok','version':'0.6-cloud'})
+    if path=='/healthz' and method=='GET':return response(start_response,200,{'status':'ok','version':'0.7-cloud'})
     host=environ.get('HTTP_HOST','')
     if not allowed_host(host):return response(start_response,403,{'error':'Invalid host'})
     if len(os.environ.get('WEB_PASSWORD',''))<16:
@@ -69,7 +69,7 @@ def application(environ,start_response):
         if path=='/api/config':return response(start_response,409,{'error':'云端配置由Render环境变量管理；请在后台更新后重新部署。'})
         try:
             n=int(environ.get('CONTENT_LENGTH') or 0)
-            if n<0 or n>50000:return response(start_response,413,{'error':'Input too large'})
+            if n<0 or n>(16000000 if path=='/api/expression-upload' else 50000):return response(start_response,413,{'error':'Input too large'})
             data=json.loads(environ['wsgi.input'].read(n).decode('utf-8'))
         except (ValueError,UnicodeError,KeyError):return response(start_response,400,{'error':'Invalid JSON request'})
         if not isinstance(data,dict):return response(start_response,400,{'error':'JSON object required'})

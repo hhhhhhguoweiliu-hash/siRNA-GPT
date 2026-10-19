@@ -71,6 +71,11 @@ def prepare_inputs(data):
     if type(n) is not int or not 1 <= n <= 5: raise ValueError('核查数量应为1至5的整数')
     task = {'gene': 'VEGFA', 'species': 'Homo sapiens', 'state': state, 'top_n': n,
             'request': str(data.get('message', ''))[:2000]}
+    identity=data.get('expression_dataset_id','builtin')
+    if identity!='builtin':
+        from expression_data import load_dataset
+        load_dataset(identity)
+    task['expression_dataset_id']=identity
     # Sequence validity is checked by inspect_candidates before downstream workers.
     return {'task': task, 'candidates': candidates, 'tool_mode': data.get('tool_mode', 'live')}
 
