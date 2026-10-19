@@ -1,0 +1,16 @@
+{
+  "provider": "doubao",
+  "api_mode": "responses",
+  "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+  "model": "doubao-seed-2-1-pro-260915",
+  "api_key": "",
+  "thinking": "disabled",
+  "max_output_tokens": 1800,
+  "request_timeout": 90,
+  "api_retries": 1,
+  "max_model_turns": 12,
+  "max_tool_calls": 18,
+  "legacy_root": "",
+  "oligo_python": "",
+  "rscript": ""
+}

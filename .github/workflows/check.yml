@@ -1,0 +1,14 @@
+name: Program checks
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run scientific integration and cloud boundary checks
+        run: python -m unittest test_core test_model_client test_http test_responses_integration test_conversation test_api_diagnostics test_cloud -v

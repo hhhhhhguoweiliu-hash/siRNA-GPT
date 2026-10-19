@@ -1,0 +1,12 @@
+config.local.json
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+runs/
+conversations/
+_test_runs/
+connection*.json
+server.local.json
+*.log

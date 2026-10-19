@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: sirna-gpt
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn cloud:application --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 180 --access-logfile -
+    healthCheckPath: /healthz
+    envVars:
+      - key: ARK_MODEL
+        value: doubao-seed-2-1-pro-260915
+      - key: ARK_API_KEY
+        sync: false
+      - key: WEB_PASSWORD
+        generateValue: true
