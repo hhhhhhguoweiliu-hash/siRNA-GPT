@@ -16,7 +16,7 @@ def wait(c,seconds=360):
 def run_case(group,case,cfg,root,transport=None):
     if group not in ('llm','workflow','agent'):raise ValueError('Unknown evaluation arm')
     Path(root).mkdir(parents=True,exist_ok=True)
-    start=time.monotonic();data={**case.get('input',{}),'message':case['request'],'tool_mode':'imported'}
+    start=time.monotonic();data={**case.get('input',{}),**case.get('task',{}),'message':case['request'],'tool_mode':'imported','web_enabled':False}
     result={'group':group,'case_id':case['id'],'status':'FAILED','tool_calls':0,'usage':[]}
     if group=='agent':
         c=Conversation(root=Path(root)/'conversations',cfg_loader=lambda:cfg,transport=transport,
@@ -25,7 +25,8 @@ def run_case(group,case,cfg,root,transport=None):
         if c.plan and c.phase=='awaiting_execution':c.action('execute',c.plan['id']);wait(c)
         result.update(status=(c.result or {}).get('status',c.phase),answer=c.messages[-1]['text'],
             tool_calls=(c.session.tool_calls if c.session else 0)+sum(len(r['observations']) for r in c.export_record()['evidence_records']),record=c.export_record(),
-            usage=[e['usage'] for e in c.events if e.get('usage')])
+            usage=[e['usage'] for e in c.events if e.get('usage')],phase=c.phase,
+            completed_tools=list(c.session.state) if c.session else [],tool_results=c.session.state if c.session else {},plan=c.plan)
     elif group=='workflow':
         inputs=prepare_inputs(data);inputs['task'].update(case.get('task',{}))
         preset=case.get('preset','full')
@@ -37,11 +38,11 @@ def run_case(group,case,cfg,root,transport=None):
                 result.update(status='FAILED',answer=r['message']);break
         else:
             r=s.result_for_plan();result.update(status=r['status'],answer=json.dumps(r,ensure_ascii=False))
-        result.update(tool_calls=s.tool_calls,run_id=s.id,tool_results=s.state)
+        result.update(tool_calls=s.tool_calls,run_id=s.id,tool_results=s.state,completed_tools=list(s.state))
     else:
         inputs=prepare_inputs(data);inputs['task'].update(case.get('task',{}))
         # Same supplied case input and declared capability boundary, without tools or retrieved outputs.
-        payload={'messages':[{'role':'system','content':'你是siRNA研究助手。根据所给需求和输入回答，不能假装执行工具或编造实验/模型数值。当前系统能力边界：'+SCOPE},
+        payload={'model':cfg.get('model'),'messages':[{'role':'system','content':'你是siRNA研究助手。根据所给需求和输入回答，不能假装执行工具或编造实验/模型数值。当前系统能力边界：'+SCOPE},
             {'role':'user','content':json.dumps({'request':case['request'],'input':inputs,'tool_descriptions':TOOLS,'preset':case.get('preset','full')},ensure_ascii=False)}]}
         r=transport(payload) if transport else request_completion(cfg,payload)
         result.update(status='ANSWERED_NO_TOOLS',answer=r['choices'][0]['message'].get('content') or '',usage=[r.get('usage',{})])

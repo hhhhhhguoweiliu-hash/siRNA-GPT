@@ -3,7 +3,7 @@ from http.server import ThreadingHTTPServer,BaseHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import urlparse,unquote
 import html
-import json,threading,mimetypes,webbrowser,argparse,os,io,csv,zipfile
+import json,threading,mimetypes,webbrowser,argparse,os,io,csv,zipfile,datetime
 from core import HOME,Session,config,default_candidates,canonical,save_json
 from model_client import readiness,extract_model,test_connection,client_fingerprint,ModelError,ARK_BASE_URL
 from conversation import Conversation
@@ -82,6 +82,18 @@ class Handler(BaseHTTPRequestHandler):
   if path=='/api/expression-template':
    return self.send('ENTREZID\tapproved_symbol\tNor1\tNor2\tNor3\tNor4\tHyp1\tHyp2\tHyp3\tHyp4\n',kind='text/tab-separated-values; charset=utf-8')
   if path=='/api/status':return self.send(public_state())
+  if path=='/api/development-evaluation':
+   import paper_pilot
+   return self.send(dict(paper_pilot.STATE))
+  if path=='/api/development-evaluation-download':
+   import paper_pilot
+   identity=paper_pilot.STATE.get('run_id','')
+   if not identity or paper_pilot.STATE.get('status') not in ('COMPLETE','STOPPED','FAILED','STOPPED_TIMEOUT'):return self.send({'error':'评价未完成或本次服务中尚无结果'},409)
+   directory=HOME/'evaluation_runs'/identity;memory=io.BytesIO()
+   with zipfile.ZipFile(memory,'w',zipfile.ZIP_DEFLATED) as z:
+    for p in directory.rglob('*'):
+     if p.is_file():z.write(p,p.relative_to(directory))
+   return self.send(memory.getvalue(),kind='application/zip')
   if path=='/api/conversation-record':return self.send(CONVERSATION.export_record())
   if path=='/api/runtime':
    from runtime_info import manifest
@@ -124,6 +136,24 @@ class Handler(BaseHTTPRequestHandler):
     try:return self.send(upload(data.get('text'),data.get('label',''),data.get('confirmed')))
     except ValueError as e:return self.send({'error':str(e)},400)
    if self.path=='/api/stop':return self.send(CONVERSATION.request_stop())
+   if self.path=='/api/development-evaluation-stop':
+    import paper_pilot
+    paper_pilot.STOP.set();return self.send({'message':'当前案例结束后停止，不再启动下一案例'})
+   if self.path=='/api/development-evaluation-start':
+    import paper_pilot
+    with LOCK:
+     if STATE['running'] or STATE['checking_connection'] or CONVERSATION.busy:return self.send({'error':'请等待当前任务结束'},409)
+     if paper_pilot.STATE.get('status')=='RUNNING':return self.send({'error':'评价已经运行中'},409)
+     if data.get('confirm_api_usage') is not True:return self.send({'error':'需确认本次运行54条开发评价记录，会产生模型API用量'},400)
+     identity='dev_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+__import__('uuid').uuid4().hex[:6]
+     STATE['running']=True
+     paper_pilot.STATE.update(status='RUNNING',run_id=identity,completed=0,total=54)
+    def evaluate_once():
+     try:paper_pilot.run(config,identity)
+     finally:
+      with LOCK:STATE['running']=False
+    threading.Thread(target=evaluate_once,daemon=True).start()
+    return self.send({'started':True,'run_id':identity,'expected_records':54},202)
    if self.path in ('/api/message','/api/action'):
     with LOCK:
      if STATE['running'] or STATE['checking_connection'] or CONVERSATION.busy:return self.send({'error':'已有任务或连接检查正在运行'},409)

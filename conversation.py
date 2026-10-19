@@ -69,7 +69,7 @@ def prepare_inputs(data):
     if state not in ('Hypoxia', 'Normoxia'): raise ValueError('细胞状态无效')
     n = data.get('top_n', 2)
     if type(n) is not int or not 1 <= n <= 5: raise ValueError('核查数量应为1至5的整数')
-    task = {'gene': 'VEGFA', 'species': 'Homo sapiens', 'state': state, 'top_n': n,
+    task = {'gene': data.get('gene','VEGFA'), 'species': data.get('species','Homo sapiens'), 'state': state, 'top_n': n,
             'request': str(data.get('message', ''))[:2000]}
     identity=data.get('expression_dataset_id','builtin')
     if identity!='builtin':
