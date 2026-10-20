@@ -3,7 +3,7 @@
 Usage: python scripts/build_migration_figures.py --output research/<new>/paper
 Optional plot dependencies: requirements-research.txt (PYTHONPATH=.plot_deps).
 """
-import argparse, csv, datetime as dt, gzip, hashlib, html, json, shutil, subprocess
+import argparse, csv, datetime as dt, gzip, hashlib, html, json, shutil, subprocess, sys
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -12,13 +12,15 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Patch
+from matplotlib.backends.backend_pdf import PdfPages
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from figure_style import configure,prepare
 
 ROOT=Path(__file__).resolve().parents[1]
 SCI=ROOT/'research/2026-10-19_scientific/data'
 BATCH=ROOT/'research/2026-10-20_takeover'
 N,H,LIVE,IMP,GRAY='#427D9D','#D7784C','#338B77','#A97538','#77818D'
-plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,
-    'axes.spines.right':False,'pdf.fonttype':42,'svg.fonttype':'none'})
+FONT_FILES=configure()
 
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def read(path): return json.loads(path.read_text(encoding='utf-8-sig'))
@@ -26,10 +28,14 @@ def tsv(path): return pd.read_csv(path,sep='\t')
 def write(path,value): path.write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf-8')
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--output',required=True);args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--output',required=True)
+    p.add_argument('--combined-pdf',action='store_true');args=p.parse_args()
     out=Path(args.output)
     if out.exists() and any(out.iterdir()):raise SystemExit('Use a new empty output directory')
     (out/'figures').mkdir(parents=True);(out/'data').mkdir()
+    (out/'diagnostics').mkdir()
+    pdf=PdfPages(out/'figures/Manuscript_Figures_Arial.pdf') if args.combined_pdf else None
+    typography=[]
     sources=[]
     def source(path):
         sources.append({'path':path.relative_to(ROOT).as_posix(),'bytes':path.stat().st_size,'sha256':sha(path)})
@@ -37,10 +43,15 @@ def main():
     def copy(path,name=None):
         source(path);shutil.copy2(path,out/'data'/(name or path.name))
     def save(fig,name):
-        for ext in ('png','svg','pdf'):
-            fig.savefig(out/'figures'/f'{name}.{ext}',dpi=300,bbox_inches='tight',facecolor='white')
+        typography.append({'figure':name,**prepare(fig)})
+        folder=out/('diagnostics' if name=='Figure4_development_evidence' else 'figures')
+        for ext in (('png','svg') if pdf else ('png','svg','pdf')):
+            fig.savefig(folder/f'{name}.{ext}',dpi=450,bbox_inches='tight',facecolor='white')
+        if pdf and name!='Figure4_development_evidence':pdf.savefig(fig,bbox_inches='tight',facecolor='white')
         plt.close(fig)
-    def panel(ax,label,title):ax.set_title(title,loc='left',pad=14);ax.text(-.12,1.08,label,transform=ax.transAxes,weight='bold',fontsize=15)
+    def panel(ax,label,title):
+        ax.set_title(title,loc='left',pad=14,weight='bold')
+        ax.text(-.12,1.08,label,transform=ax.transAxes,weight='bold',fontsize=15,gid='panel_label')
     def box(ax,x,y,w,h,text,color='#EAF1F5'):
         ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=.04',facecolor=color,edgecolor='#B0BBC4'))
         ax.text(x+w/2,y+h/2,text,ha='center',va='center',fontsize=10)
@@ -48,6 +59,7 @@ def main():
 
     # Only the archived publisher text is interpreted; no original figure is copied.
     source(ROOT/'references/CRISPR-GPT/paper_extracted_text.txt')
+    source(ROOT/'scripts/figure_style.py')
     source(ROOT/'docs/reviews/20261020_1435_initial_review.md')
     for name in ['candidate_evidence.tsv','seed_expression_state_comparison.tsv',
                  'VEGFA_eight_samples_TPM.tsv','TPM_detection_threshold_sensitivity.tsv']:
@@ -87,7 +99,9 @@ def main():
           ['Fine-tuning / wet lab','Not performed here','No equivalence to the full source system']]
     table=ax.table(cellText=rows,colLabels=['Source-paper concept','This project','Evidence boundary'],loc='center',cellLoc='left',colWidths=[.28,.23,.49])
     table.auto_set_font_size(False);table.set_fontsize(10);table.scale(1,2.1)
-    for (r,c),cell in table.get_celld().items():cell.set_edgecolor('#D4DCE2');cell.set_facecolor('#EAF1F5' if r==0 else 'white')
+    for (r,c),cell in table.get_celld().items():
+        cell.set_edgecolor('#D4DCE2');cell.set_facecolor('#EAF1F5' if r==0 else 'white')
+        if r==0:cell.get_text().set_weight('bold')
     fig.subplots_adjust(hspace=.28);save(fig,'Figure1_system_migration')
 
     # F2: timing is measured from executor start, not unrecorded planning latency.
@@ -203,12 +217,34 @@ def main():
       {'figure':'Figure1_system_migration','reference':'原文 Fig.1–2；本图为本项目重新绘制的架构，不复用原图',
        'caption':'a，研究者提供任务、候选方向和状态；单一豆包API通过多阶段控制器澄清、规划并经人工确认执行。绿色表示本地实际核对或关联，棕色表示经一致性核查的历史官方输出导入。b，与原文的概念对应和当前实现范围。当前未完成专用微调、独立评价或新湿实验。'},
       {'figure':'Figure2_real_Auto_case','reference':'原文 Fig.3a / Fig.4c 的实际案例呈现思路',
-       'caption':'a，真实Auto运行20261020_064921_2dae59的执行事件时间轴；横轴从首个执行器请求开始，不包含未保留的规划耗时。七轮执行器API返回与六项工具逐一对应；工具起点竖线使亚毫秒至毫秒级步骤仍可见，横条长度保留实际时间。导入历史结果的步骤不称现场模型推理。b，实际输入、工具证据及优先复核名单。执行器已知token小计59,767；规划轮用量缺失，完整总量未知。没有外部检索，未将本次工具导出替代独立语义评分。'},
+       'caption':'a，真实Auto运行20261020_064921_2dae59的执行事件时间轴；横轴从首个执行器请求开始，不包含未保留的规划耗时。七轮执行器API返回与六项工具逐一对应；竖线标出极短工具步骤的起点，横条长度保留实际时间。导入历史结果的步骤不称现场模型推理。b，实际输入、工具证据及优先复核名单。执行器已知token小计59,767；规划轮用量缺失，完整总量未知。没有外部检索，未将本次工具导出替代独立语义评分。'},
       {'figure':'Figure3_candidate_and_cell_context','reference':'本课题增加的siRNA序列与自有细胞表达背景结果',
        'caption':'a，同一培养批次、每状态4皿、未转染的VEGFA逐样本TPM；短横线为均值，均值比约5.09，仅为描述。b，9条siDirect计算候选的历史OligoFormer分数；颜色只标已有复核提示，分数不是敲低比例。c，两状态中符合TPM≥1且至少2/4皿的非靶seed匹配基因数；guide第2–8位、0错配、既有代表性3′UTR，未映射与不表达区分保存在底表。d，同一候选两状态的注释计数；虚线为相等计数参考线，未作回归或新风险评分。TPM不进入排序，不推断缺氧特异敲低或实验脱靶。候选不是用户文献序列或订购单。'},
       {'figure':'Figure4_development_evidence','reference':'原文 Fig.3b / Fig.4 / Fig.5 的分层评价思路；本图仅作开发诊断',
        'caption':'a，新批次54个记录全部显示，6个已见开发任务×3组×3次技术重复。C完整，P局部完成，A无工具回答，I空闲/澄清，F输入/程序停止，T响应不完整，N网络错误，E规划格式失败。F与I是否恰当必须读答案，不能自动记为正确拒绝。b，18个题目重复单元中12个三组均无基础设施错误；缺氧完整题为0/3。1条E是系统自身失败，仍留在无API错误记录中等待评分。不存在独立科学评分，图不表示准确率、优越性或显著性。'}]
     write(out/'figure_captions.json',captions)
+    english=[
+        {'figure':captions[0]['figure'],'title':'Adaptation of the CRISPR-GPT workflow to a VEGFA siRNA assistance system',
+         'caption':'a, Researcher inputs, a single API with a controlled multistage workflow, and traceable tool outputs. Live sequence checks and expression joins are separated from verified historical OligoFormer and SeedMatchR imports. b, Implemented features and boundaries of this simplified adaptation. This schematic is not experimental evidence. Specialized fine-tuning, independent quality evaluation and new wet-lab validation have not been performed.'},
+        {'figure':captions[1]['figure'],'title':'An archived real Auto execution for the supported VEGFA candidate pool',
+         'caption':'a, Executor event timestamps from run 20261020_064921_2dae59, showing seven API requests and six scientific tools. Time starts at the first executor request; unrecorded planning time is excluded. Vertical ticks mark the start of short tool operations. Historical imports are not new heavy-model inference. b, Actual inputs, evidence and two candidates prioritized for review. The executor returned 59,767 tokens in total; full-case usage is unknown because planning usage was not retained. External web retrieval was disabled. These candidates are not order-ready or experimentally validated.'},
+        {'figure':captions[2]['figure'],'title':'Candidate evidence and untreated ARPE-19 expression context',
+         'caption':'a, VEGFA TPM in four normoxic and four hypoxic dishes from one culture run, without siRNA treatment. Hypoxia was 1% O2 for 24 h. Points are dishes and horizontal lines are means; the ratio of means is 5.09. No paired or treatment-effect inference is made. b, Historical OligoFormer scores for nine siDirect candidates, coloured by existing review flags; scores are not knockdown fractions. c, Non-target seed-matched genes detected at TPM >= 1 in at least two of four dishes per state. Matching uses guide positions 2–8, zero mismatches and representative annotated 3-prime UTRs. Unmapped genes are retained separately in source data. d, The same candidates across both expression states; the dotted line indicates equal counts. TPM annotates context and does not change ranking. No measured off-target or hypoxia-specific knockdown effect is claimed.'},
+        {'figure':captions[3]['figure'],'title':'Complete execution records and missing paired coverage in the development pilot',
+         'caption':'a, All 54 records from six previously seen tasks, three configurations and three technical repeats. C, complete; P, partial; A, answer without tools; I, idle or clarification; F, input or program stop; T, incomplete output; N, network error; E, planner format failure. A stop or clarification is not automatically a correct response. b, Twelve of 18 task-repeat triplets had no infrastructure error, including zero of three hypoxia-full triplets. The planner format failure is an internal system failure and remains eligible for later scoring. Repeats do not increase the number of independent tasks. No independent quality score, superiority or significance is shown.'}]
+    write(out/'figure_captions_en.json',english)
+    write(out/'manuscript_eligibility.json',{'figures':[
+        {'figure':captions[0]['figure'],'role':'Implementation schematic; not empirical validation'},
+        {'figure':captions[1]['figure'],'role':'One complete operational case; not superiority evidence'},
+        {'figure':captions[2]['figure'],'role':'Descriptive baseline and historical candidate evidence; no treatment claim'},
+        {'figure':captions[3]['figure'],'role':'Troubleshooting only; excluded from manuscript quality-comparison results'}],
+        'quality_comparison_ready':False,'independent_scoring_done':False,'new_wet_lab_done':False,
+        'gate':'Complete prespecified data and analysis required before claiming a manuscript result. No cherry-picking successful repeats.'})
+    write(out/'typography_audit.json',{'font_files':FONT_FILES,'figures':typography,
+        'style_sources':['https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/',
+                         'https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/'],
+        'note':'183 mm plotting canvas; tight bounding box may change actual exported page width. Final target-journal layout still requires review.'})
+    if pdf:pdf.close()
     checks={'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         'generator_path':Path(__file__).resolve().relative_to(ROOT).as_posix(),'generator_sha256':sha(Path(__file__).resolve()),
         'real_Auto_runtime_commit':summary['runtime_commit'],'real_batch_runtime_commit':read(BATCH/'three_arm/summary.json')['runtime_commit'],
@@ -217,12 +253,18 @@ def main():
         'scientific_quality_scored':False,'new_heavy_model_execution':False,'new_wet_lab':False,'source_files':sources}
     write(out/'provenance.json',checks)
     items=[]
-    for c in captions:
-        name=c['figure'];items.append(f'<section><h2>{name}</h2><img src="figures/{name}.png" alt="{name}"><p>{html.escape(c["caption"])}</p><p><a href="figures/{name}.svg">SVG</a> · <a href="figures/{name}.pdf">PDF</a></p></section>')
-    (out/'index.html').write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>siRNA-GPT 文献迁移结果图</title><style>body{font:16px/1.65 sans-serif;max-width:1150px;margin:30px auto;padding:20px;color:#20313c}img{width:100%}section{margin:44px 0;border-top:1px solid #ddd}a{color:#327292}</style><h1>siRNA-GPT 文献迁移结果图</h1><p>四张组合图来自已归档真实运行和细胞背景数据；不是新增模型推理或湿实验。配对质量评价和独立评分尚未完成。</p>'+''.join(items)+'</html>',encoding='utf-8')
+    for c in english:
+        name=c['figure'];pdf_name='Manuscript_Figures_Arial' if args.combined_pdf else name
+        folder='diagnostics' if name=='Figure4_development_evidence' else 'figures'
+        title=('Troubleshooting only — not a manuscript quality comparison: ' if folder=='diagnostics' else '')+c['title']
+        pdf_link=f' · <a href="figures/{pdf_name}.pdf">PDF</a>' if folder=='figures' else ''
+        items.append(f'<section><h2>{html.escape(title)}</h2><img src="{folder}/{name}.png" alt="{name}"><p>{html.escape(c["caption"])}</p><p><a href="{folder}/{name}.svg">Editable SVG</a>{pdf_link}</p></section>')
+    (out/'index.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><title>siRNA-GPT manuscript figures</title><style>body{font:16px/1.65 Arial,sans-serif;max-width:1150px;margin:30px auto;padding:20px;color:#20313c}img{width:100%}section{margin:44px 0;border-top:1px solid #ddd}a{color:#327292}</style><h1>siRNA-GPT manuscript figures</h1><p>Archived real executions and untreated baseline context. Historical imports are labelled. Independent quality evaluation and new wet-lab validation remain incomplete.</p>'+''.join(items)+'</html>',encoding='utf-8')
     # A compact preview for visual inspection; independent PNG/PDF/SVG remain the outputs.
     fig,axs=plt.subplots(2,2,figsize=(16,12))
-    for ax,c in zip(axs.flat,captions):ax.imshow(plt.imread(out/'figures'/f'{c["figure"]}.png'));ax.axis('off')
+    for ax,c in zip(axs.flat,captions):
+        folder='diagnostics' if c['figure']=='Figure4_development_evidence' else 'figures'
+        ax.imshow(plt.imread(out/folder/f'{c["figure"]}.png'));ax.axis('off')
     fig.tight_layout();fig.savefig(out/'contact_sheet.jpg',dpi=130);plt.close(fig)
     write(out/'manifest.json',{'files':[{'path':p.relative_to(out).as_posix(),'bytes':p.stat().st_size,'sha256':sha(p)} for p in sorted(out.rglob('*')) if p.is_file()]})
     print(json.dumps({k:v for k,v in checks.items() if k!='source_files'},ensure_ascii=True))

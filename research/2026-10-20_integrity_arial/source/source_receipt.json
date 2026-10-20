@@ -1,0 +1,20 @@
+{
+  "source_file": "C:\\00000\\ARPE RNA-seq\\result\\result\\6_expression\\expression\\gene_tpm.xls",
+  "source_bytes": 3041039,
+  "source_sha256": "c0ef6fbcfb5ae62f3979dfa1e359dd4d046caa1a281d72ff3816fd22ad5bcdcc",
+  "compressed_bytes": 1047248,
+  "compressed_sha256": "ee28410e38526b87f23f8e46f0238a027ff44c62b36a017b801860ca11d22dc2",
+  "compression_roundtrip_byte_identical": true,
+  "all_source_rows_preserved": 50116,
+  "sample_columns": [
+    "Hyp1",
+    "Hyp2",
+    "Hyp3",
+    "Hyp4",
+    "Nor1",
+    "Nor2",
+    "Nor3",
+    "Nor4"
+  ],
+  "source_scope": "entire unfiltered vendor TPM table; existing untreated baseline, not new experiment"
+}

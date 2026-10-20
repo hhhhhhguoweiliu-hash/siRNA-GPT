@@ -14,12 +14,14 @@ Codex统一维护本表，ChatGPT在docs/reviews/提交独立复核。已有详�
 | R02 | ChatGPT；独立评审另需真人 | 待复核PR #1最新分支 | 读three_arm/evidence_audit.json、failure_diagnostics.tsv及原始答案；只提供for_review给独立评审，不提供private_key；不把本次复核当独立评分 |
 | C05 | Codex | 已完成自动统计与可评材料 | three_arm含54记录表、配对覆盖、工具证据、原始usage、空白评审表、分离密钥、2幅新批诊断图；无科学准确率 |
 | C06 | Codex + ChatGPT | 诊断留存与参数冻结已修；真实新版诊断待执行 | Agent规划/执行及普通LLM均保留不完整原文；协议提前保存有效参数与哈希，131项检查通过；下一步见research/2026-10-20_migration/NEXT_EVALUATION.md，未另开批 |
-| C07 | Codex | 已交4张组合图、10个panel及底表 | research/2026-10-20_migration：系统迁移、真实Auto、候选/细胞背景、54条逐题诊断；PNG/SVG/PDF、中文图注、数据/来源哈希及原文图对应，未画无评分质量结果 |
+| C07 | Codex | 已交系统/单案例/背景图；诊断不作论文质量结果 | 旧4图称“论文组合图”范围过宽，现纠正：3张候选论文插图分别支持限定用途，Figure4移出论文PDF、仅作排障；不以图数量代替验证 |
+| C08 | Codex | 真实性核查与英文Arial新图 | research/2026-10-20_integrity_arial：8/8 TPM直接追溯原始公司表，9/9历史分数、54逐条记录与归档一致；上游重型复跑/独立评分/湿实验仍未完成；实际字体和完整性准入单独验证 |
 | U01 | 用户提供，Codex导入 | 尚缺准确文献序列/来源 | 填inputs/literature_candidates.template.tsv；记录链方向/末端/来源，不用默认9条代替 |
 
 ## 当前可立即复用
 
 - [本轮4张论文组合图、底表和原文迁移结果文字](../research/2026-10-20_migration/README.md)。[现有复核落实记录](REVIEW_RESPONSE_20261020.md)。以后主动同步GitHub/必要时Drive，不等重复提醒。
+- 最新以[真实性审计与英文Arial图](../research/2026-10-20_integrity_arial/README.md)及[论文准入规则](RESEARCH_INTEGRITY.md)为准：开发诊断不进入论文质量结果；完整预定数据和分析不足时如实未完成。
 - [10幅原型/背景图、3幅运行诊断图及底层数据](../research/README.md)。
 - [原文可读文本、出处和读取边界](../references/CRISPR-GPT/README.md)。
 - [现有三组开发预评估说明](../DEVELOPMENT_PILOT.md)。

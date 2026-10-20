@@ -1,0 +1,54 @@
+{
+  "pinned_history_files_verified": 37,
+  "vendor_TPM_file": "C:\\00000\\ARPE RNA-seq\\result\\result\\6_expression\\expression\\gene_tpm.xls",
+  "vendor_TPM_sha256": "c0ef6fbcfb5ae62f3979dfa1e359dd4d046caa1a281d72ff3816fd22ad5bcdcc",
+  "VEGFA_original_vendor_row": {
+    "": "VEGFA",
+    "Hyp1": "96.703964",
+    "Hyp2": "145.434845",
+    "Hyp3": "78.31118",
+    "Hyp4": "89.110283",
+    "Nor1": "18.909967",
+    "Nor2": "16.512081",
+    "Nor3": "17.521896",
+    "Nor4": "27.453253"
+  },
+  "sample_values_verified": 8,
+  "baseline_means_TPM": {
+    "Nor": 20.09929925,
+    "Hyp": 102.39006799999999
+  },
+  "baseline_scope": "one culture run, four separate dishes per oxygen state, untreated; not paired",
+  "candidate_rows_present_and_consistent": 9,
+  "heavy_tool_rerun_this_session": false,
+  "historical_model_execution_independently_replayed": false,
+  "historical_output_limit": "Archive consistency verified, not independent replay of upstream weights/reference execution",
+  "Auto_full_six_tool_case_verified": true,
+  "Auto_semantic_quality_independently_scored": false,
+  "new_pilot_records_and_per_case_exports_verified": 54,
+  "independent_development_tasks": 6,
+  "per_case_available_repeats": {
+    "ambiguous_direction": 3,
+    "invalid_sequence": 3,
+    "normal_hypoxia": 0,
+    "normal_normoxia": 1,
+    "target_only": 2,
+    "unsupported_target": 3
+  },
+  "full_quality_comparison_ready": false,
+  "independent_expert_scoring_done": false,
+  "new_wet_lab_done": false,
+  "archives": [
+    {
+      "path": "research\\2026-10-20_takeover\\auto_case\\tools.zip",
+      "sha256": "8a00267334f290c3b3812041bd6e3f103933e728eee9df4b24210c0e25b19aaf",
+      "CRC": "PASS"
+    },
+    {
+      "path": "research\\2026-10-20_takeover\\three_arm_original.zip",
+      "sha256": "c7ed5855173f433f0671a0952d9c244c4173956ab8b347f57ab188d6a37a466b",
+      "CRC": "PASS"
+    }
+  ],
+  "truth_boundary": "File integrity and reproduced arithmetic do not by themselves authenticate physical laboratory work or prove model interpretation correct."
+}
