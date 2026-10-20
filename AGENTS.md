@@ -2,6 +2,8 @@
 
 先读CODEX_HANDOFF.md及docs/TASKS.md。继续现有Python/原生前端栈，避免无必要重建项目或引入复杂多Agent框架。
 
+新ChatGPT/Codex协作读COLLABORATION.md和docs/WORKBOARD.md：Codex默认统一维护代码、WORKBOARD和STATUS；ChatGPT新建带所审commit的docs/reviews/复核。收到对方更新通知后重新读最新提交，不假装能自动读取另一个聊天，也不覆盖并行修改。
+
 - 不把API密钥、网页密码、config.local.json、真实环境变量写进Git、日志或报告。示例配置应为空值。当前仓库为私有；改变可见性、费用或额度设置需用户明确授权。
 - 优先直接使用已发表官方工具，先跑官方示例并记录版本/权重/参考数据。不得自行发明或重写脱靶算法、任意融合权重；适配代码只负责IO、映射、调度、溯源。
 - 区分实时执行、历史结果导入、文献推断与实验结果。新序列不匹配已有记录时必须明确失败，不能套用旧分数。
