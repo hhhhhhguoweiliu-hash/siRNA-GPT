@@ -1,0 +1,91 @@
+﻿answer_id	case_id	request	answer	reviewer_id	accuracy_0_2	evidence_0_2	task_fit_0_2	limits_0_2	notes
+A001	normal_normoxia	请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A002	invalid_sequence	请核对该VEGFA候选并筛选。	bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向						
+A003	target_only	只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。	"{""status"": ""PARTIAL_COMPLETE"", ""run_id"": ""20261019_141930_7b0beb"", ""completed_tools"": [""inspect_candidates"", ""verify_target""], ""message"": ""我检查了这9条候选，信息格式和19nt guide配对核心都符合本次计算要求。\n这9条候选都能完全匹配本次使用的VEGFA设计参考序列，各自的转录本覆盖情况已经记下来了。"", ""note"": ""本次只完成所选核对任务，没有生成完整筛选报告或候选排序。""}"						
+A004	target_only	只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A005	ambiguous_direction	这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。	unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向						
+A006	unsupported_target	请计算筛选人KRAS的siRNA；不要替换成VEGFA。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419574914ed95513e461b85a83ff8b942ff8c861710f135
+请求ID：021792419574914ed95513e461b85a83ff8b942ff8c861710f135"						
+A007	unsupported_target	请计算筛选人KRAS的siRNA；不要替换成VEGFA。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 0217924195763353156a3d5251ec5fd1a9edbd2c8e75a9c3ddced
+请求ID：0217924195763353156a3d5251ec5fd1a9edbd2c8e75a9c3ddced"						
+A008	unsupported_target	请计算筛选人KRAS的siRNA；不要替换成VEGFA。	v0.3仅已验证人VEGFA，当前靶点或物种不支持						
+A009	ambiguous_direction	这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。	unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向						
+A010	unsupported_target	请计算筛选人KRAS的siRNA；不要替换成VEGFA。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A011	target_only	只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 0217924195805812ea45376b696365ea6d0529cc2566cf7dab5ef
+请求ID：0217924195805812ea45376b696365ea6d0529cc2566cf7dab5ef"						
+A012	invalid_sequence	请核对该VEGFA候选并筛选。	bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向						
+A013	normal_hypoxia	请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A014	normal_normoxia	请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419585910619b169e3834457b465f4a1674da52f85a94d3
+请求ID：021792419585910619b169e3834457b465f4a1674da52f85a94d3"						
+A015	invalid_sequence	请核对该VEGFA候选并筛选。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419588334e8da636536c29a57598fab12b973f8fda26f33
+请求ID：021792419588334e8da636536c29a57598fab12b973f8fda26f33"						
+A016	unsupported_target	请计算筛选人KRAS的siRNA；不要替换成VEGFA。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A017	normal_normoxia	请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419592028cd31eac8229c74daa7d4d74052dc3c32799852
+请求ID：021792419592028cd31eac8229c74daa7d4d74052dc3c32799852"						
+A018	normal_hypoxia	请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。	"{""status"": ""COMPLETE"", ""selected_for_review"": [""VEGFA_SD_3499"", ""VEGFA_SD_3500""], ""report"": ""report.html"", ""table"": ""candidates_ranked.tsv"", ""rules"": ""先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。"", ""not_order_ready"": true, ""model_summary"": """", ""run_id"": ""20261019_141952_fdb2fb""}"						
+A019	unsupported_target	请计算筛选人KRAS的siRNA；不要替换成VEGFA。	v0.3仅已验证人VEGFA，当前靶点或物种不支持						
+A020	invalid_sequence	请核对该VEGFA候选并筛选。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419598325b6ef94156a979b704a6b85dbeb7998fa61e148
+请求ID：021792419598325b6ef94156a979b704a6b85dbeb7998fa61e148"						
+A021	unsupported_target	请计算筛选人KRAS的siRNA；不要替换成VEGFA。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A022	target_only	只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A023	target_only	只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。	"{""status"": ""PARTIAL_COMPLETE"", ""run_id"": ""20261019_142001_001912"", ""completed_tools"": [""inspect_candidates"", ""verify_target""], ""message"": ""我检查了这9条候选，信息格式和19nt guide配对核心都符合本次计算要求。\n这9条候选都能完全匹配本次使用的VEGFA设计参考序列，各自的转录本覆盖情况已经记下来了。"", ""note"": ""本次只完成所选核对任务，没有生成完整筛选报告或候选排序。""}"						
+A024	ambiguous_direction	这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A025	unsupported_target	请计算筛选人KRAS的siRNA；不要替换成VEGFA。	v0.3仅已验证人VEGFA，当前靶点或物种不支持						
+A026	normal_normoxia	请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419606883fb9ad9ccefd1cf94f2af1554e5d9f812858b00
+请求ID：021792419606883fb9ad9ccefd1cf94f2af1554e5d9f812858b00"						
+A027	normal_normoxia	请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。	"{""status"": ""COMPLETE"", ""selected_for_review"": [""VEGFA_SD_3499"", ""VEGFA_SD_3500"", ""VEGFA_SD_1157""], ""report"": ""report.html"", ""table"": ""candidates_ranked.tsv"", ""rules"": ""先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。"", ""not_order_ready"": true, ""model_summary"": """", ""run_id"": ""20261019_142007_b9d43a""}"						
+A028	invalid_sequence	请核对该VEGFA候选并筛选。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A029	normal_hypoxia	请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 0217924196137020b6a535eac4f8e78612710df2bd33e0422278d
+请求ID：0217924196137020b6a535eac4f8e78612710df2bd33e0422278d"						
+A030	normal_normoxia	请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。	"{""status"": ""COMPLETE"", ""selected_for_review"": [""VEGFA_SD_3499"", ""VEGFA_SD_3500"", ""VEGFA_SD_1157""], ""report"": ""report.html"", ""table"": ""candidates_ranked.tsv"", ""rules"": ""先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。"", ""not_order_ready"": true, ""model_summary"": """", ""run_id"": ""20261019_142013_a53355""}"						
+A031	ambiguous_direction	这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。	unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向						
+A032	normal_normoxia	请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A033	target_only	只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A034	normal_hypoxia	请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。	"{""status"": ""COMPLETE"", ""selected_for_review"": [""VEGFA_SD_3499"", ""VEGFA_SD_3500""], ""report"": ""report.html"", ""table"": ""candidates_ranked.tsv"", ""rules"": ""先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。"", ""not_order_ready"": true, ""model_summary"": """", ""run_id"": ""20261019_142020_d6ef8e""}"						
+A035	normal_hypoxia	请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。	"{""status"": ""COMPLETE"", ""selected_for_review"": [""VEGFA_SD_3499"", ""VEGFA_SD_3500""], ""report"": ""report.html"", ""table"": ""candidates_ranked.tsv"", ""rules"": ""先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。"", ""not_order_ready"": true, ""model_summary"": """", ""run_id"": ""20261019_142023_a1d899""}"						
+A036	ambiguous_direction	这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A037	invalid_sequence	请核对该VEGFA候选并筛选。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A038	ambiguous_direction	这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 0217924196310940a5720dfd57fd83aed3bdbca02adba849335d0
+请求ID：0217924196310940a5720dfd57fd83aed3bdbca02adba849335d0"						
+A039	invalid_sequence	请核对该VEGFA候选并筛选。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 0217924196325022a8a12ba4ff96db35a2adc2caf7562c3939ee3
+请求ID：0217924196325022a8a12ba4ff96db35a2adc2caf7562c3939ee3"						
+A040	ambiguous_direction	这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A041	ambiguous_direction	这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419635700265c448ee6909a398288d07ae906a66b9cb1cf
+请求ID：021792419635700265c448ee6909a398288d07ae906a66b9cb1cf"						
+A042	normal_hypoxia	请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 0217924196369998b056a623bf426f62c797dc732369cf9aa2793
+请求ID：0217924196369998b056a623bf426f62c797dc732369cf9aa2793"						
+A043	normal_hypoxia	请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A044	target_only	只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。	"{""status"": ""PARTIAL_COMPLETE"", ""run_id"": ""20261019_142040_87628a"", ""completed_tools"": [""inspect_candidates"", ""verify_target""], ""message"": ""我检查了这9条候选，信息格式和19nt guide配对核心都符合本次计算要求。\n这9条候选都能完全匹配本次使用的VEGFA设计参考序列，各自的转录本覆盖情况已经记下来了。"", ""note"": ""本次只完成所选核对任务，没有生成完整筛选报告或候选排序。""}"						
+A045	normal_hypoxia	请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 0217924196426891a8dd591c9e3190a609d5cb270370aee2eaf76
+请求ID：0217924196426891a8dd591c9e3190a609d5cb270370aee2eaf76"						
+A046	normal_normoxia	请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A047	target_only	只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419645630ccbdf6fa4f62a84920463b89d4ca27ee2c8e55
+请求ID：021792419645630ccbdf6fa4f62a84920463b89d4ca27ee2c8e55"						
+A048	invalid_sequence	请核对该VEGFA候选并筛选。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A049	invalid_sequence	请核对该VEGFA候选并筛选。	bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向						
+A050	normal_normoxia	请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。	"{""status"": ""COMPLETE"", ""selected_for_review"": [""VEGFA_SD_3499"", ""VEGFA_SD_3500"", ""VEGFA_SD_1157""], ""report"": ""report.html"", ""table"": ""candidates_ranked.tsv"", ""rules"": ""先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。"", ""not_order_ready"": true, ""model_summary"": """", ""run_id"": ""20261019_142049_6fb696""}"						
+A051	normal_hypoxia	请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。	豆包这次没有正常返回结果。具体原因放在下面的错误详情里。						
+A052	ambiguous_direction	这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419655671655dd71e1d01ef51dda793fc89c90573b8e1d1
+请求ID：021792419655671655dd71e1d01ef51dda793fc89c90573b8e1d1"						
+A053	target_only	只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 0217924196569606ccf9412c566ef0a3e60cd40e0464675cd9ed8
+请求ID：0217924196569606ccf9412c566ef0a3e60cd40e0464675cd9ed8"						
+A054	unsupported_target	请计算筛选人KRAS的siRNA；不要替换成VEGFA。	"豆包 API HTTP 429 / SetLimitExceeded：请求限流或配额受限
+服务端说明：Your account [2133169827] has reached the set usage limit for the [doubao-seed-2-1-pro] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the ""Safe Experience Mode"". Request id: 021792419658389fe72bfc0272752ca5305ae414c6616a3c37a7c
+请求ID：021792419658389fe72bfc0272752ca5305ae414c6616a3c37a7c"						

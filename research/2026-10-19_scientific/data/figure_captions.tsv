@@ -1,0 +1,11 @@
+﻿figure	title	caption_zh	scope
+Fig01_system_scope	当前系统框架	迁移原文的规划、执行、工具和人机协作结构。橙色框明确标为历史结果导入；不是完整复现原文，也不表示已实现新序列现场计算。	descriptive or engineering; not experimental siRNA efficacy
+Fig02_candidate_model_scores	9条候选效力模型分数	使用10月16日已有计算结果。颜色只表示当前复核提示，不表示安全/危险已获验证；分数不是敲低比例。排序沿用当前原型规则，TPM没有参与排序。	descriptive or engineering; not experimental siRNA efficacy
+Fig03_guide_seed_map	候选序列与seed位置	展示经核对的19nt guide配对核心，红框为位置2–8。不是可直接订购的完整双链与修饰方案。	descriptive or engineering; not experimental siRNA efficacy
+Fig04_transcript_coverage	参考转录本覆盖	固定20条参考VEGFA转录本中的序列匹配覆盖，不代表这些异构体都在ARPE-19中表达，也不是全基因组脱靶检查。	descriptive or engineering; not experimental siRNA efficacy
+Fig05_seed_expression_context	seed匹配与两状态表达关联	仅guide mer7m8、代表性参考3′UTR。排除目标基因VEGFA；TPM阈值为描述性检测规则，不是毒性阈值。匹配、表达和未映射分开记录，不能从柱高推断实际脱靶程度。	descriptive or engineering; not experimental siRNA efficacy
+Fig06_VEGFA_baseline_TPM	VEGFA基线表达	每点为一个分别提取RNA的培养皿，横线为均值。8样本属于同一培养批次；本图不进行推断检验，不是siRNA处理后的敲低结果。均值已与网页内置表达表核对。	descriptive or engineering; not experimental siRNA efficacy
+Fig07_context_marker_expression	预先列出的背景基因表达	这是指定基因的基线表达展示，不是从显著性结果挑选的发现性signature，不证明缺氧导致了siRNA效力改变。GAPDH/ACTB仅展示，不能据本图认定适合作内参。	descriptive or engineering; not experimental siRNA efficacy
+Fig08_workflow_development_status	固定流程开发任务记录	实际运行6个开发案例各3次：正常任务和错误输入全部保留。Stopped表示程序停止，不自动等于语义上正确拒绝。不是三组比较，也不是独立测试集准确率。	descriptive or engineering; not experimental siRNA efficacy
+Fig09_workflow_local_time	固定流程本地耗时	只报告本机固定流程的实测耗时，每点一次运行。不可与未运行的普通LLM/Agent比较，不代表重型模型现场推理时间，也不是云端响应时间。	descriptive or engineering; not experimental siRNA efficacy
+Fig10_TPM_threshold_sensitivity	TPM检测阈值敏感性	使用可唯一回连到原始逐样本TPM的基因，改变描述性检测阈值；不拟合新权重、不选择最有利阈值，不改变候选排序。此图映射范围与云端汇总表可能不同，详见数据列。	descriptive or engineering; not experimental siRNA efficacy

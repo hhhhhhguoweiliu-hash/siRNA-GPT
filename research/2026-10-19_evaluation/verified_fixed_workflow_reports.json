@@ -1,0 +1,77 @@
+[
+  {
+    "answer_id": "A018",
+    "case_id": "normal_hypoxia",
+    "repeat": 1,
+    "selected_for_review": [
+      "VEGFA_SD_3499",
+      "VEGFA_SD_3500"
+    ],
+    "state": "Hypoxia",
+    "target_TPM_H": "102.390068",
+    "target_TPM_N": "20.09929925"
+  },
+  {
+    "answer_id": "A027",
+    "case_id": "normal_normoxia",
+    "repeat": 1,
+    "selected_for_review": [
+      "VEGFA_SD_3499",
+      "VEGFA_SD_3500",
+      "VEGFA_SD_1157"
+    ],
+    "state": "Normoxia",
+    "target_TPM_H": "102.390068",
+    "target_TPM_N": "20.09929925"
+  },
+  {
+    "answer_id": "A030",
+    "case_id": "normal_normoxia",
+    "repeat": 3,
+    "selected_for_review": [
+      "VEGFA_SD_3499",
+      "VEGFA_SD_3500",
+      "VEGFA_SD_1157"
+    ],
+    "state": "Normoxia",
+    "target_TPM_H": "102.390068",
+    "target_TPM_N": "20.09929925"
+  },
+  {
+    "answer_id": "A034",
+    "case_id": "normal_hypoxia",
+    "repeat": 3,
+    "selected_for_review": [
+      "VEGFA_SD_3499",
+      "VEGFA_SD_3500"
+    ],
+    "state": "Hypoxia",
+    "target_TPM_H": "102.390068",
+    "target_TPM_N": "20.09929925"
+  },
+  {
+    "answer_id": "A035",
+    "case_id": "normal_hypoxia",
+    "repeat": 2,
+    "selected_for_review": [
+      "VEGFA_SD_3499",
+      "VEGFA_SD_3500"
+    ],
+    "state": "Hypoxia",
+    "target_TPM_H": "102.390068",
+    "target_TPM_N": "20.09929925"
+  },
+  {
+    "answer_id": "A050",
+    "case_id": "normal_normoxia",
+    "repeat": 2,
+    "selected_for_review": [
+      "VEGFA_SD_3499",
+      "VEGFA_SD_3500",
+      "VEGFA_SD_1157"
+    ],
+    "state": "Normoxia",
+    "target_TPM_H": "102.390068",
+    "target_TPM_N": "20.09929925"
+  }
+]
