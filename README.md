@@ -2,7 +2,7 @@
 
 面向缺氧RPE / VEGFA的siRNA候选核对与筛选辅助Agent。当前使用豆包API、受控工具流程、已有官方科学计算结果和本项目ARPE-19常氧/缺氧表达背景。
 
-**Codex接手先读：[CODEX_HANDOFF.md](CODEX_HANDOFF.md)**，然后按[任务清单](docs/TASKS.md)推进。
+**Codex接手先读：[CODEX_HANDOFF.md](CODEX_HANDOFF.md)**。当前首要路线是**[仿照主参考文献，先出结果](docs/PAPER_MIGRATION_FAST_TRACK.md)**；[原文可读文本与出处](references/CRISPR-GPT/README.md)已补入，再按[任务清单](docs/TASKS.md)处理细节。
 
 | 内容 | 入口 |
 |---|---|

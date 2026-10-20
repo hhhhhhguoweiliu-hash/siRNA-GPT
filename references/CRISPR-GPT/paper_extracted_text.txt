@@ -1,0 +1,1578 @@
+<PARSED TEXT FOR PAGE: 1 / 24>
+nature biomedical engineering
+
+Article                                                                                               https://doi.org/10.1038/s41551-025-01463-z
+
+
+CRISPR-GPT for agentic automation of
+gene-editing experiments
+
+Received: 25 June 2024                             Yuanhao Qu 1,9, Kaixuan Huang2,9, Ming Yin2, Kanghong Zhan3, Dyllan Liu4,
+                                                   Di Yin1, Henry C. Cousins5,6, William A. Johnson1, Xiaotong Wang1, Mihir Shah                    5
+                                                                                                                                                     ,
+Accepted: 17 June 2025
+                                                   Russ B. Altman 4,7, Denny Zhou8, Mengdi Wang 2 & Le Cong 1
+Published online: 30 July 2025
+
+    Check for updates                              Performing effective gene-editing experiments requires a deep
+                                                   understanding of both the CRISPR technology and the biological system
+                                                   involved. Meanwhile, despite their versatility and promise, large language
+                                                   models (LLMs) often lack domain-specific knowledge and struggle to
+                                                   accurately solve biological design problems. We present CRISPR-GPT, an LLM
+                                                   agent system to automate and enhance CRISPR-based gene-editing design
+                                                   and data analysis. CRISPR-GPT leverages the reasoning capabilities of LLMs
+                                                   for complex task decomposition, decision-making and interactive human–
+                                                   artificial intelligence (AI) collaboration. This system incorporates domain
+                                                   expertise, retrieval techniques, external tools and a specialized LLM fine
+                                                   tuned with open-forum discussions among scientists. CRISPR-GPT assists
+                                                   users in selecting CRISPR systems, experiment planning, designing guide
+                                                   RNAs, choosing delivery methods, drafting protocols, designing assays and
+                                                   analysing data. We showcase the potential of CRISPR-GPT by knocking out
+                                                   four genes with CRISPR-Cas12a in a human lung adenocarcinoma cell line
+                                                   and epigenetically activating two genes using CRISPR-dCas9 in a human
+                                                   melanoma cell line. CRISPR-GPT enables fully AI-guided gene-editing
+                                                   experiment design and analysis across different modalities, validating its
+                                                   effectiveness as an AI co-pilot in genome engineering.
+
+Large language models (LLMs) have demonstrated exceptional                   of chemistry-related tasks such as paracetamol synthesis, whereas
+capabilities in language skills and encapsulate a substantial amount         Co-scientist14 integrates automated experimentation, achieving suc-
+of world knowledge1–5. Recent research has also enhanced LLMs                cessful optimization of palladium-catalysed cross-coupling reac-
+with external tools, improving their problem-solving abilities and           tion. LLMs have also shown initial promise in generating biological
+efficiencies6–8. Moreover, LLMs have also demonstrated potential             protocols, as demonstrated by studies like BioPlanner15. While recent
+as tool makers9 and black-box optimizers10. To this end, research-           advancements, such as OpenAI’s o1 preview, have improved reasoning
+ers have explored LLM-based specialized models for various                   abilities in areas such as mathematics and coding, progress in biologi-
+scientific domains11,12, particularly for mathematics and chemistry          cal tasks remains comparatively limited. This limitation stems from
+tasks. ChemCrow13 uses tool-augmented LLM for solving a range                general-purpose LLMs’ lack of in-depth understanding of biology,
+
+
+1
+ Department of Pathology, Department of Genetics, Cancer Biology Program, Stanford University School of Medicine, Stanford, CA, USA. 2Center
+for Statistics and Machine Learning, Department of Electrical and Computer Engineering, Princeton University, Princeton, NJ, USA. 3Department of
+Computing, Data Science, and Society, University of California, Berkeley, Berkeley, CA, USA. 4Department of Computer Science, University of California,
+Berkeley, Berkeley, CA, USA. 5Department of Medicine, Stanford University School of Medicine, Stanford, CA, USA. 6Medical Scientist Training Program,
+Stanford University School of Medicine, Stanford, CA, USA. 7Department of Bioengineering, Department of Genetics, Stanford University, Stanford, CA,
+USA. 8Google DeepMind, Mountain View, CA, USA. 9These authors contributed equally: Yuanhao Qu, Kaixuan Huang.         e-mail: mengdiw@princeton.edu;
+congle@stanford.edu
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                245
+<PARSED TEXT FOR PAGE: 2 / 24>
+Article                                                                                                                                  https://doi.org/10.1038/s41551-025-01463-z
+
+
+
+    Gene-editing                                                                          Meta mode                                                             User proxy                   Gene-editing
+                                    User proxy                                                                                Task executor                                                    bench
+     scenarios                                                                      Step-by-step guidance on
+                                                                                                                             & Tool provider                                             Evaluation framework for
+                                                                               Pre-defined gene-editing meta-tasks
+                                      User:                                                                                                                                                    gene-editing
+                                                                                                                                                               CRISPR-GPT:                 experimental design
+                                Select meta-task 1:                                                                                     LLM
+  CRISPR knockout               generating a                                                                                                            We will go through
+                                knockout                                                                                             techniques         a step-by-step protocol below:
+                                using CRISPR                                                                                                            ...                                Experiment
+                                                                                                                            • ReAct
+                                                                                                                                                                                           planning
+      Cas                                                                                                                   • RAG
+                                                                                                                            • Chain of Thought
+     Base editing                                                                                                           • Instruction fine tuning
+                     Base                                                   Auto mode                                                                                                      sgRNA design
+                                      User:                                                            LLM planner
+                    editor
+
+
+                                                          CRISPR-GPT   Customized guidance on                                                                  CRISPR-GPT:
+                                                                        freestyle user requests                                  Computational
+                                Which CRISPR system                                                 Task 1. CRISPRi                                     We will help you identify the
+     Cas                        should I use to repress                                             system select                   skills              best CRISPR system and
+                                TGFBR1 expression                                                   Task 2. sgRNA design                                                                   Delivery selection
+                                                                                                                                                        design sgRNAs below:
+     Prime editing              and how should I                                                                           • Web search                 ...
+                                design sgRNAs?
+                                                                                                                           • Literature search
+                   RT
+                                                                                                                           • Table processing                                              CRISPR
+            Cas                                                                                                            • Code generation                                               troubleshooting
+  Epigenetic editing                                                                                                                                           CRISPR-GPT:
+     (CRISPRa/i)                       User:
+                                                                                          Q&A mode                                Bioinformatic
+                                                                                                                                                        Cas12a and Cas12f are both         CRISPR
+                   Activator/
+                                What are the                                         Real-time answers to                             tools
+                   repressor
+                                                                                                                                                        CRISPR-associated nucleases,       knowledge
+                                differences between
+                         Gene
+                                Cas12a and Cas12f?
+                                                                                      ad hoc questions                     • Primer3                    each with distinct
+            dCas                                                                                                                                        characteristics ...
+                                                                                                                           • CRISPRitz
+                                                                                                                                                                                           Ethics
+                                                                                                                           • CRISPResso2
+                                                                                                                                                                                           and safety
+
+
+
+Fig. 1 | Overview of CRISPR-GPT. CRISPR-GPT is an LLM-powered multi-agent                            planner, Task executor and Tool provider. Together, these components are
+system designed to provide AI copiloting for human researchers in gene editing.                      equipped with a comprehensive suite of tools and decision-support capabilities
+It supports four primary gene-editing modalities: knockout, base editing,                            to facilitate the design, planning and analysis of gene-editing workflows.
+prime editing and epigenetic editing (CRISPRa/i). The system offers three user                       To evaluate CRISPR-GPT’s performance, we developed the Gene-editing bench,
+interaction modes: Meta mode (step-by-step guidance on predefined tasks),                            a framework of 288 test cases covering tasks such as experimental planning,
+Auto mode (customized guidance based on user requests) and Q&A mode                                  sgRNA design, delivery method selection and more. Figure was originally created
+(real-time answers to ad hoc questions), to streamline experiment design and                         with BioRender.com/tb8sq6f.
+planning. CRISPR-GPT consists of four core components: the User proxy, LLM
+
+
+
+
+compounded by the unique challenges of biological experiments,                                       Results
+including the variability of living systems, the noisy nature of bio-                                Building AI co-pilot harnessing LLM’s reasoning ability
+logical data and the highly specialized, less transferable nature of                                 CRISPR-GPT supports four major gene-editing modalities and
+biological skills and tools.                                                                         22 gene-editing experiment tasks (Fig. 1 and Supplementary Table 1).
+     Gene editing has transformed biological research and medi-                                      It offers tunable levels of automation via three modes: Meta, Auto
+cine, allowing for precise DNA modifications for both therapeutic                                    and Q&A. They are designed to accommodate users ranging from
+and experimental applications. CRISPR-Cas, the most well-known                                       novice PhD-level scientists fresh to gene editing, to domain experts
+gene-editing technology, originated from bacterial immune                                            looking for more efficient, automated solutions for selected tasks
+systems16–24. Its development has led to advanced techniques like                                    (Fig. 1). The ‘Meta mode’ is designed for beginner researchers, guid-
+CRISPR activation and interference (CRISPRa/i)25–29, base editing30,31                               ing them through a sequence of essential tasks from selection of
+and prime editing32,33, creating a powerful toolkit for genetic modi-                                CRISPR systems, delivery methods, to designing gRNA, assessing
+fication and epigenetic modulation. In basic biomedical research,                                    off-target efficiency, generating experiment protocols and data analy-
+CRISPR gene-editing has become one of the most frequently used                                       sis. Throughout this decision-making process, CRISPR-GPT interacts
+laboratory techniques: at the largest non-profit plasmid DNA reposi-                                 with users at every step, provides instructions and seeks clarifications
+tory, Addgene, 8 of the 15 top requested plasmids worldwide were                                     when needed. The ‘Auto mode’ caters to advanced researchers and
+for CRISPR gene-editing34. On the application side, CRISPR has pro-                                  does not adhere to a predefined task order. Users submit a freestyle
+duced the first permanent cure for sickle cell disease (SCD)35 and                                   request, and the LLM Planner decomposes this into tasks, manages
+β-thalassaemia36, as well as facilitating plant engineering for sustain-                             their interdependence, builds a customized workflow and executes
+able agriculture20. As one of the most powerful biotechnologies,                                     them automatically. It fills in missing information on the basis of the
+numerous software and protocols exist for specific gene-editing                                      initial inputs and explains its decisions and thought process, allowing
+tasks. Despite these resources, an end-to-end solution—from                                          users to monitor and adjust the process. The ‘Q&A mode’ supports
+CRISPR-Cas system selection, guide (g)RNA design, off-target evalua-                                 users with on-demand scientific inquiries about gene editing.
+tion, to delivery and data analysis—remains complex, particularly for                                      To assess the AI agent’s capabilities to perform gene-editing
+newcomers. AI-assisted tools can simplify gene-editing experiment                                    research, we compiled an evaluation test set, Gene-editing bench,
+design and data analysis, making the technology more accessible and                                  from both public sources and human experts (details in Supplementary
+accelerating scientific and therapeutic discoveries.                                                 Note C). This test set covers a variety of gene-editing tasks (Fig. 1). By
+     We introduce CRISPR-GPT, a solution that combines the strengths                                 using the test set, we performed extensive evaluation of CRISPR-GPT’s
+of LLMs with domain-specific knowledge, chain-of-thought reasoning,                                  capabilities in major gene-editing research tasks, such as experi-
+instruction fine-tuning, retrieval techniques and tools. CRISPR-GPT is                               ment planning, delivery selection, single guide (sg)RNA design and
+centred around LLM-powered planning and execution agents (Fig. 1).                                   experiment troubleshooting. In addition, we invited human experts
+This system leverages the reasoning abilities of general-purpose LLMs                                to perform a thorough user experience evaluation of CRISPR-GPT and
+and multi-agent collaboration for task decomposition, constructing                                   collected valuable human feedback.
+state machines and automated decision-making (Fig. 2a). It draws                                           Further, we implement CRISPR-GPT in real-world wet labs. Using
+upon expert knowledge from leading practitioners and peer-reviewed                                   CRISPR-GPT as an AI co-pilot, we demonstrate a fully AI-guided
+published literature in gene editing for retrieval-augmented genera-                                 knockout (KO) of four genes: TGFβR1, SNAI1, BAX and BCL2L1, using
+tion (RAG)13.                                                                                        CRISPR-Cas12a in human lung adenocarcinoma cell line, as well as
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                                                                          246
+<PARSED TEXT FOR PAGE: 3 / 24>
+Article                                                                                                                            https://doi.org/10.1038/s41551-025-01463-z
+
+
+a
+                                                                                                                                   Task executor agent
+                                          LLM planner         Generated task list                Task 1
+                                                                                                                    Previous                                               Task 3
+                                             agent                                            Cas system                                           Task 2
+                                                              Exp. Task 1 Cas system                                  state
+                                                                                               selection                                      Delivery method           sgRNA design
+                                                                selection, task 2 ...
+                                                                                                                                                 selection              for knockout
+                                                                                                              Inherit memory from
+                                         User                                                                    previous state
+                                     information                   Instruction
+                                                              Exp. given the input ,
+                                                                 select the most                                 Select proper
+                                                          relevant Cas enzyme below...                            Cas enzyme
+                        User–agent
+                                                                                                                    for gene
+                        interactions          LLM                     Input                                        knockout
+                                           user-proxy                                                            (current state)
+                                             agent         Exp. user hope to edit single
+                                                            gene TGFβR1 in a common
+                                                             cancer cell line A549...
+Exp. I want to knock-
+    out the human
+TGFβR1 gene in A549                                                Feedback
+  lung cancer cells.
+                                                          Exp. SpCas9 is recommended                         Transition to next state
+                                                                   because...
+
+                                                                                                    Next              Next
+                                              Tool             Function needed                     state 1           state 2
+                          API call
+                                            provider                                                                                                    Chain of state machines
+                                             agent          Exp. web search needed to
+                                                          search for relevant publications
+
+
+
+
+b           Example of a typical chain-of-tasks breakdown in CRISPR-GPT
+
+
+                                                                                                                                            Task 6.
+                     Task 1.                   Task 2.                Task 3.                 Task 4.                Task 5.                                      Task 7.
+                                                                                                                                          Validation
+                     CRISPR                   Delivery              GuideRNA/                Off-target            Experiment                                  Data analysis
+                                                                                                                                           methods
+                     system                   methods                pegRNA                  prediction             protocols                                   for editing
+                                                                                                                                          and assay
+                    selection                 selection               design                                                                                     outcomes
+                                                                                                                                        primer design
+
+
+
+Fig. 2 | CRISPR-GPT adopts a compositional, multi-agent architecture to                          is provided to the user first with sufficient information for the current decision-
+enable human–AI collaboration and automated experimental designs. a, The                         making step and the required inputs. After receiving the response from the user,
+backbone of CRISPR-GPT involves multi-agent collaboration between four core                      it provides output and feedback, where Tool providers are potentially called
+components: (1) The LLM Planner agent is responsible for configuring tasks on                    during the execution of the state. Afterwards, the state machine transits to the
+the basis of the user’s needs. It automatically performs task decomposition on                   next state. (3) The LLM User-proxy agent is responsible for interacting with the
+the basis of the user’s request, the descriptions of the currently supported tasks               Task executor on behalf of the user, where the user can monitor the process
+and internal knowledge. The state machines of the selected tasks are chained                     and provide corrections to the User-proxy agent if the generated content needs
+together to fulfill the user’s request. (2) The Task executor agent implements the               modification or improvement. It generates responses to every step of the state
+chain of state machines from the Planner agent and is responsible for providing                  machine on behalf of the user. (4) Tool providers support diverse external tools
+instructions and feedback, receiving input from the User-proxy agent and calling                 and connect to search engines or databases via API calls. Part of the panel was
+external tools. State machines are central to the Task executor, where each                      created with BioRender.com/svkmgjk. b, Breakdown of individual tasks in a
+state is responsible for one round of interaction with the user. The instruction                 typical CRISPR-GPT workflow for gene-editing experiments.
+
+
+
+
+AI-guided CRISPR-dCas9 epigenetic activation of two genes: NCR3LG1                               the agent’s LLM Planner will analyse the user’s request, drawing on its
+and CEACAM1, in a human melanoma model. All these wet-lab experi-                                extensive internal knowledge base via retrieval techniques. Leverag-
+ments were carried out by junior researchers not familiar with gene                              ing the reasoning abilities of the base LLM, the Planner generates a
+editing. They both succeeded on the first attempt, confirmed by not                              chain-of-thought37,38 reasoning path and chooses an optimal action
+only editing efficiencies, but also biologically relevant phenotypes                             from a set of plausible ones while following expert-written guide-
+and protein-level validation, highlighting the potential of LLM-guided                           lines. Consequently, the Planner breaks down the user’s request into a
+biological research.                                                                             sequence of discrete tasks, for example, ‘CRISPR-Cas system selection’
+     CRISPR-GPT is a multi-agent, compositional system involving a                               and ‘gRNA design for knockout’, while managing interdependencies
+team of LLM-based agents, including an LLM Planner agent, a User-                                among these tasks. Each individual task is solved by an LLM-powered
+proxy agent, Task executor agents and Tool provider agents (Fig. 2a).                            state machine, via the Task executor, entailing a sequence of states to
+These components are powered by LLMs to interact with one another                                progress towards the specific goal. After the meta-task decomposition,
+as well as the human user. We also refer to the full system as an ‘agent’                        the Task executor will chain the state machines of the corresponding
+to encapsulate the overall functionalities.                                                      tasks together into a larger state machine and begin the execution
+     To automate biological experiment design and analysis, we view                              process, systematically addressing each task in sequence to ensure that
+the overall problem as sequential decision-making. This perspective                              the experiment’s objectives are met efficiently and effectively (Fig. 2a).
+frames the interaction between the user and the automated system                                      The User-proxy agent is responsible for guiding the user through-
+as a series of decision-making steps, each essential for progressing                             out the decision-making process via multiple rounds of textual inter-
+towards the ultimate goal. Take the Auto mode for example. A user can                            actions (typical user interactions required by each task detailed in
+initiate the process with a meta-request, for example, “I want to knock                          Supplementary Table 2). At each decision point, the internal state
+out the human TGFβR1 gene in A549 lung cancer cells”. In response,                               machine presents a ‘state variable’ to the User-proxy agent, which
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                                                 247
+<PARSED TEXT FOR PAGE: 4 / 24>
+Article                                                                                             https://doi.org/10.1038/s41551-025-01463-z
+
+includes the current task instructions, and specifies any necessary        a primary and a secondary delivery method (Fig. 4a). To evaluate
+input from the user to proceed. The User-proxy agent then interprets       the performance of this module, we compiled test cases including
+this state given the user interactions and makes informed decisions        50 biological systems as part of the Gene-editing bench. For each
+as input to the Task executor on behalf of the user. Subsequently, the     case, we invited three human experts to score potential delivery
+User-proxy agent receives feedback from the Task executor, including       options and utilized those as ground truth. We then evaluated the
+the task results and the reasoning process that led to those outcomes.     output of CRISPR-GPT and baseline models by comparing to the
+Concurrently, the User-proxy agent continues to interact with the user     pre-compiled ground-truth score sheet. We found that CRISPR-GPT
+and provides them with instructions, continuously integrating their        outperforms the baseline GPT-4 and GPT-3-turbo models (Fig. 4b).
+feedback to ensure alignment with the user’s objectives (detailed in       The agent has a substantial edge on difficult tasks such as those
+Methods; Fig. 2a and Supplementary Fig. 1).                                involving hard-to-transfect cell lines and primary cell types. We also
+     To enhance the LLM with domain knowledge, we enable the CRISPR        noticed that including an additional literature search step improves
+agent to retrieve and synthesize information from published protocols,     the agent’s performance only moderately. More details about the
+peer-reviewed research papers and expert-written guidelines, and           delivery selection evaluation can be found in Supplementary Note C2.
+to utilize external tools and conduct web searches via Tool provider
+agents (Fig. 2a).                                                          gRNA design. Good gRNA design is crucial for the success of CRISPR
+     For an end-to-end gene-editing workflow, CRISPR-GPT typically         experiments. Various gRNA design tools and software, such as
+constructs a chain of tasks that includes selecting the appropriate        CRISPick39–42 and ChopChop43, are available. However, we believe there
+CRISPR system, recommending delivery methods, designing gRNAs,             are two key challenges in general usage: (1) choosing a trustworthy
+predicting off-target effects, selecting experimental protocols, plan-     source and (2) difficulty in quickly identifying gRNAs that suit specific
+ning validation assays and performing data analysis (Fig. 2b). The         user requirements or experiment contexts, often requiring lengthy
+system’s modular architecture facilitates easy integration of addi-        sorting, ranking or literature review. To address these issues, we uti-
+tional functionalities and tools. CRISPR-GPT serves as a prototype         lized pre-designed gRNA tables from CRISPick, a reputable and widely
+LLM-powered AI co-pilot for scientific research, with potential applica-   used tool. We leverage the reasoning capabilities of LLMs to accurately
+tions extending beyond gene editing.                                       identify regions of interest and quickly extract relevant gRNAs. This
+                                                                           approach is similar to the recently proposed ‘chain-of-tables’ meth-
+CRISPR-GPT agents automate gene-editing research tasks                     odology44 (Fig. 4c, Extended Data Fig. 1a, and Supplementary Demo
+CRISPR-GPT is able to automate gene-editing research via several key       Videos 1 and 2). To evaluate the ability of CRISPR-GPT to correctly
+functionalities. For each functionality we discuss the agentic imple-      retrieve gRNAs, we compiled a gRNA design test set with ground truth
+mentation and evaluation results.                                          from human experts (detailed in Supplementary Note C3). CRISPR-GPT
+                                                                           agent outperforms the baseline LLMs in accurately selecting gRNA
+Experiment planning. The Task planner agent is charged with directing      design actions and configuring the arguments (Fig. 4d).
+the entire workflow and breaking down the user’s meta-request into a            Further, we picked a real-world test case from a cancer biology
+task chain (Fig. 2b). While the Planner selects and follows a predefined   study, in which many highly ranked gRNA designs did not generate
+workflow in the Meta mode, it is able to take in freestyle user requests   biological phenotypes, even when their editing efficiencies were
+and auto-build a customized workflow in the Auto mode. For example,        high45. Instead, the authors of the study had to design gRNAs manu-
+a user may only need part of the pre-designed workflow including           ally against exons encoding important functional domains within
+CRISPR-Cas system selection, delivery method selection, gRNA design        a gene, and exon-selected gRNAs induced expected cancer-killing
+and experimental protocol selection before the experiment. Then the        effects. We tested CRISPR-GPT for designing gRNAs targeting BRD4
+Task planner agent extracts the right information from the user request    gene from this study, and compared results with those generated
+and assembles a customized workflow to suit user needs (Fig. 3a). To       by CRISPick and CHOPCHOP (Extended Data Fig. 1). CRISPR-GPT
+evaluate CRISPR-GPT’s ability to correctly layout gene-editing tasks       was uniquely able to select the key exons, Exon3–4, within BRD4.
+and manage intertask dependence, we compiled a planning test set, as       In contrast, gRNAs designed by CRISPick or CHOPCHOP would be
+part of the Gene-editing bench, with user requests and golden answers      likely ineffective, as 7 out of 8 gRNAs mapped to non-essential exons
+curated by human experts. Using this test set, we evaluated CRISPR-GPT     (Extended Data Fig. 1). Taken together, our results support the benefit
+in comparison with prompted general LLMs, showing that CRISPR-GPT          and validity of this module.
+outperforms general LLMs in planning gene-editing tasks (Fig. 3b).
+The CRISPR-GPT agent driven by GPT-4o scored over 0.99 in accuracy,        Other functions and tools. CRISPR-GPT provides specific sugges-
+precision, recall and F1 score, and had <0.05 normalized Levenshtein       tions on the choice of the CRISPR system, experimental and valida-
+distance between agent-generated plans and golden answers (Fig. 3b).       tion protocol by leveraging LLM’s reasoning ability and retrieving
+For extensive description of the test set and evaluation, please see       information from an expert-reviewed knowledge base46–51. It also offers
+Supplementary Note C1.                                                     automated gRNA off-target prediction, primer design for validation
+                                                                           experiments, and data analysis. In particular, the agent provides
+Delivery method selection. We present and evaluate the delivery            fully automated solutions to run external software, such as Primer3
+agent of CRISPR-GPT (Fig. 4a,b). Delivery is a critical step for all       (ref. 52), CRISPRitz53–56 and CRISPResso2 (ref. 57) (Supplementary
+gene-editing experiments. CRISPR-GPT equips LLM with expert-               Table 1). We focused on implementing these tools as they are con-
+tailored instructions and external tools to choose delivery methods.       sidered gold standard in respective tasks and have been extensively
+Specifically, the agent first tries to understand the biological system    validated in previous work.
+that the user is planning to edit. It extracts keywords for the target
+cell/tissues/organisms, performs Google search and summarizes the          Problem solving via fine-tuning LLM on scientific discussion
+results. Then, given its own knowledge and search results, CRISPR-GPT      General-purpose LLMs may possess broad knowledge but often lack
+matches the user case with a major biological category (cell lines,        the deep understanding of science needed to solve research problems.
+primary cells, in vivo and so on) which reduces the possible options       To enhance the CRISPR-GPT agent’s capacity in answering advanced
+to a focused set of candidate methods. Next, CRISPR-GPT performs           research questions, we build a Q&A mode that synthesizes informa-
+literature search with user and method-specific keywords, and ranks        tion from multiple resources, including published literature, estab-
+the candidate methods on the basis of citation metrics to suggest          lished protocols and discussions between human scientists, utilizing
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                            248
+<PARSED TEXT FOR PAGE: 5 / 24>
+Article                                                                                                                  https://doi.org/10.1038/s41551-025-01463-z
+
+
+               a
+               CRISPR-GPT: Auto mode - auto-build workflow
+
+
+                          User: How should I use CRISPR to
+                                                                                                                     Task executor for subtasks
+                    knock out human BRD4 gene in A549 cell
+                    line and minimize off-target effect?
+                                                                                                                   Task                Task description
+                                                                                                          knockout.StateStep1           Cas selection
+                                                                                                          knockout.StateStep2         Delivery selection
+                                                                                                          knockout.StateStep3           sgRNA design
+                                                                          LLM planner     LLMs
+                                                                                                         base_editing.StateStep1 Base editor system selection
+                                                                                                         base_editing.StateStep2      Delivery selection
+                         CRISPR-GPT: {'Thoughts': 'The user                                              base_editing.StateStep3        sgRNA design
+                   wants to perform a gene knockout in A549
+                   cells for the BRD4 gene and predict off-target.'                                                                 ...
+                   'Tasks': ['knockout.StateStep1', 'knockout.Stat-
+                   eStep2', 'knockout.StateStep3', 'knockout.Stat-
+                   eStep4', 'off_target.OffTarget']}
+
+                                                                            STEP 1           STEP 2          STEP 3            STEP 4                         STEP 5
+                                                                           knockout.        knockout.       knockout.         off_target.                    knockout.
+                                                                           StateStep1       StateStep2      StateStep3        OffTarget                      StateStep4
+                                            Assemble                                        Delivery                          Predicting
+                                       customized workflow                Cas selection                   sgRNA design                                       Protocols
+                                                                                            selection                         off-targets
+
+               b
+                   Auto mode LLM planner evaluation
+
+                           1.0                                      1.0                                                                               0.25
+
+
+                           0.8                                      0.8                                                                               0.20
+
+
+
+
+                                                                                                                               Levenshtein distance
+                                                                                                                                   Normalized
+                           0.6                                      0.6                                                                               0.15
+                   Score
+
+
+
+
+                                                            Score
+
+
+
+
+                           0.4                                      0.4                                                                               0.10
+
+
+                           0.2                                      0.2                                                                               0.05
+
+
+                            0                                        0                                                                                  0
+                                    Accuracy                               Precision         Recall          F1 score
+
+                                                                                              CRISPR-GPT                CRISPR-GPT
+                                                          GPT-3.5-turbo          GPT-4o                                 with GPT-4o
+                                                                                              with GPT-3.5-turbo
+
+Fig. 3 | Task decomposition and experiment planning in CRISPR-GPT Auto                      the panel was created with BioRender.com/qy4v. b, Evaluation of the LLM
+mode with performance evaluation. a, The LLM Planner agent automatically                    Planner using a gene-editing planning test set. For each test case, we generate
+breaks down the user’s meta-request to a sequence of tasks. Then it assembles               three independent answers from each model and report the average scores
+a customized workflow of the chained tasks to meet the user’s needs. Part of                (Supplementary Note C). Data shown are the mean ± s.d. (n = 3 per group).
+
+
+
+a combination of RAG technique, a fine-tuned specialized model and                               To assess the performance of the Q&A mode, we used the
+a general LLM (for which we picked GPT-4o; Methods).                                       Gene-editing bench Q&A test set (Supplementary Note C). The test
+     To enhance the Q&A mode’s capacity to ‘think’ like a scientist for                    questions encompass basic gene-editing knowledge, experimental
+problem solving, we sought to train a specialized language model                           troubleshooting, CRISPR application in various biological systems,
+using real scientific discussions among domain experts. The fine-tuned                     ethics and safety66,67. We prompted CRISPR-GPT, GPT-3.5-turbo and
+model is used as one of the multiple sources of knowledge for the Q&A                      GPT-4o to generate responses to test questions. Three human experts
+mode (Fig. 4e). To this end, we collected 11 years of open-forum discus-                   scored the answers in a fully blinded setting. The test demonstrated
+sions from a public Google Discussion Group on CRISPR gene-editing,                        that the Q&A mode outperformed baseline LLMs in accuracy, rea-
+starting from 2013 (Supplementary Note B). The discussion group                            soning and conciseness, with improvement of 12%, 15% and 32%,
+involved a diverse cohort of scientists worldwide. This dataset, com-                      respectively, versus GPT-4o (Fig. 4f). Human evaluators observed
+prising ~4,000 discussion threads, was curated into an instructional                       that general-purpose LLMs sometimes make factual errors and tend
+dataset with over 3,000 question-and-answer pairs (Supplementary                           to provide extensive answers not all of which are relevant to the ques-
+Note B). Using this dataset, we fine tuned an 8-billion-parameter LLM                      tions. For example, one question was about solving cell growth issues
+on the basis of the Llama3-instruct model58–65. The fine-tuned model,                      in an experiment where a scientist performed Cas9 editing followed
+which we call CRISPR-Llama3, has improved abilities in gene-editing                        by single-cell sorting using MCF-7 cells. For this question, the Q&A
+questions, outperforms the baseline model on basic questions by                            mode provided a concise, accurate summary of potential reasons
+a moderate 8% and on real-world research questions by ~20% (Sup-                           and actionable solutions. In contrast, GPT-4o responded with a long
+plementary Figs. 2 and 3). We integrate this fine-tuned LLM into the                       list of 9 factors/options, but at least 2 of them were not applicable to
+Q&A mode as a ‘brainstorming source’, enabling the agent to generate                       MCF-7 cells (Extended Data Fig. 2). This and other examples (Extended
+ideas like a human scientist and provide a second opinion for difficult                    Data Figs. 3 and 4) showcase the advantage of the CRISPR-GPT Q&A
+queries (Fig. 4e).                                                                         mode. Overall, evaluation results confirmed that the multisource
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                                       249
+<PARSED TEXT FOR PAGE: 6 / 24>
+Article                                                                                                                                                                                                       https://doi.org/10.1038/s41551-025-01463-z
+
+
+a                                                                                                                                 b
+    Delivery selection: integrating domain knowledge and web search tool
+                                                                                                                                                  1.0                              1.0
+                                                 Match to         Select            Review
+                              Extract key                                        paper to rank
+                                                 biological      potential                                                                        0.8                              0.8
+
+
+
+
+                                                                                                                               Evaluation score
+                             information                                          best option
+                                                  category        options
+
+                                                                                                                                                  0.6                              0.6
+           User: "I plan to do CRISPR knockout in primary human hepatocyte culture, what delivery method
+           should I use?"                                                                                                                         0.4                              0.4
+
+                                            Thought-2: Two                       Response: "Here are the recommended
+        Action-1: Extract                                                                                                                         0.2                              0.2
+                                                                      Action-2: delivery approaches:
+        key words               Thought-1: delivery options
+                                            for "primary cell":       Search     1.Top choice: RNP/mRNA electroporation
+        "primary human          Category is
+                                            1. RNP/mRNA               literature pros/cons, relevant papers are...                                 0                                 0
+ CRISPR hepatocyte" and         "primary
+                                            electroporation.          and rank
+        Google search to        cells".
+  GPT   identify category.
+                                            2. Lentivirus/            options    2.Second choice: Lentivirus viral delivery                             All categories                      Cell line                              Embryo          In vivo                Organoid       Primary cell
+                                            retroviral delivery.                 pros/cons, relevant papers are ..."
+                                                                                                                                                                                                                                        CRISPR-GPT
+                                                                                                                                                                              GPT-3.5-turbo              GPT-4-turbo                                                        CRISPR-GPT
+                                                                                                                                                                                                                                        without literature search
+c
+    sgRNA design: processing pre-designed sgRNA table and knowledge in the reasoning chain
+                                              (Optional)         Plan gRNA            Perform            Present
+                                                                                                                                                                                              d                          Action selection                                       Argument configuration
+                      Extract key           Suggest exons     table processing       Action-1 to    final table with
+                     information                                                                                                                                                                        1.0                                                               1.0
+                                               to target           actions            Action-X        relevant info
+
+
+                                                                                                                                                                                                        0.8                                                               0.8
+        User: "Could you help me design 3 sgRNA knockout human APOE gene within cut position 44,908,949 to 44,909,009?"
+
+
+
+
+                                                                                                                                                                                                                                                               Accuracy
+                                                                                                                                                                                             Accuracy
+                                                                                                                                                                                                        0.6                                                               0.6
+
+           Thought-1: To design 5 knockout gRNA for                                     Action-2:                                                                                                       0.4                                                               0.4
+                                                                    Action-1:           Function:     Action-3:        Action-4:                  Response:
+           human APOE gene within the specified cut
+                                                                    Function:                         Function:        Function:                  Designed sgRNAs below:
+           position range, we need to first filter for rows                             BETWEEN                                                                                                         0.2                                                               0.2
+                                                                    SELECT                            ORDER BY         TOP                        1.CCGGCCAGCCGCTACAGGAG
+           where the target gene symbol is 'APOE'.                                      Argument:                                                 2.GCGGCTGCGCGCGCGGATGG
+                                                                    Argument:                         Argument:        Argument:                                                                         0                                                                 0
+ CRISPR-   Next, we will subset rows where the sgRNA                                    1."sgRNA cut                                              3.GCCTGGGCCCGCTCCTGTAG
+                                                                    1."Target gene                    1."Combined      1."3"
+  GPT      cut position is between 44908949 and                                         position"                                                                                                                                                                   CRISPR-GPT               CRISPR-GPT
+                                                                    Symbol"                           rank"                                       "detailed information can be                                            GPT-3.5-turbo            GPT-4o
+           44909009. Finally, we will sort these rows                                   2. "44908949"                                             downloaded"                                                                                                       with GPT-3.5-turbo       with GPT-4o
+                                                                    2. "APOE"                         2. "ascending"
+           by the combined rank and get the top 5 rows.                                 3. "44909009"
+
+
+
+e                                                                                                                                                                                                                  f 6
+    Q&A mode: harnessing power of fine-tuning model and peer-reviewed literature
+                                                                                                                                                                                                                                   5
+
+
+
+
+                                                                                                                                                                                                                Evaluation score
+              "I am trying to generate a CRISPR-Cas9-mediated deletion in MCF-7 cells. To screen for the deletion in individual clonal cell populations, I need to
+        User: sort individual GFP+ cells into wells of 96-well plates. However, following the sort, the cells don't seem to be growing. Other than a potentially bad                                                               4
+              sorting buffer, does anyone know why this might be occurring?"
+                                                                                                                                                                                                                                   3
+                                    Action-1:                        Action-2:                      Action-3:                                       Response:                                                                      2
+                                    CRISPR-Llama: generate           RAG: generate answer with      General LLM: generate answer                    To improve the growth of your GFP+ MCF-7
+            Thought-1:              answer with the fine-tuned       peer-reivew CRISPR                                                             cells post-sorting, consider the following steps:                              1
+            User is asking an       model                            literature and protocols       Execution agent: summarize                      1. Optimize growth conditions:
+            experiment                                                                              input from all 3 actions using                  2. Gentle handling during sorting:...                                          0
+ CRISPR-
+            problem.                Execution agent: store the       Execution agent: store the     CRISPR-Llama, RAG, general                      3. Post-sorting care:..
+  GPT                                                                                                                                                                                                                                  Accuracy      Reasoning Completeness Conciseness
+                                    CRISPR-Llama-generated           RAG-enhanced answer in         LLMs answers, regenerate a                      4. Check for off-target and essential genes:...
+                                    answer in agent memory           agent memory                   final response to the question.                 Retrieved papers: [...]
+                                                                                                                                                                                                                                               GPT-3.5-turbo              GPT-4o      CRISPR-GPT
+
+
+Fig. 4 | CRISPR-GPT automates gene-editing research and experiment tasks.                                                                                 to generate functions and associated parameters to design gRNAs requested by
+a, Design of delivery method selection agent in CRISPR-GPT, showing the                                                                                   the user. Data shown are the mean ± s.d. (n = 3 per group). e, Design of Q&A mode
+workflow, example request and a series of agent thoughts–actions to identify                                                                              in CRISPR-GPT, showing the workflow, example request and a series of agent
+most suitable delivery methods for the user’s needs. b, Evaluation results of                                                                             thoughts–actions to answer gene-editing questions. f, Evaluation of CRISPR-GPT
+delivery method selection using CRISPR-GPT and baseline models. Data shown are                                                                            and baseline models for answering gene-editing research questions. Models
+the mean ± s.d. (n = 3 per group). c, Design of gRNA design agent in CRISPR-GPT,                                                                          were prompted to generate answers, which were anonymized, evaluated by three
+showing the workflow, example request and a series of agent thoughts–actions                                                                              human experts in a fully blind setup. Scores range from 1 (lowest) to 5 (highest).
+to select top-ranked gRNA customized to user’s request. d, Evaluation results of                                                                          All scores above were from three independent trials (details on evaluation in
+gRNA design using CRISPR-GPT and baseline models. Models were prompted                                                                                    Supplementary Note C). Data shown are the mean ± s.d. (n = 3 per group).
+
+
+
+Q&A mode is better at answering advanced research questions about                                                                                        Real-world demonstration for fully AI-guided gene editing
+gene editing.                                                                                                                                            To showcase and validate CRISPR-GPT’s ability as an AI co-pilot to
+                                                                                                                                                         general biologists, we enlisted two junior researchers unfamiliar with
+CRISPR-GPT excels in human–AI collaboration                                                                                                              gene editing. They used CRISPR-GPT in two real-world experiments:
+To further evaluate the human user experience of CRISPR-GPT, we                                                                                          (1) designing and conducting a multigene knockout and (2) epigenetic
+assembled a panel of eight gene-editing experts to assess the agents’                                                                                    editing, from scratch.
+performance for end-to-end experiment covering all 22 individual                                                                                               In the first experiment, the junior researcher conducted gene
+tasks (Supplementary Table 2 and 3 demos). The experts were asked                                                                                        knockouts in the human A549 lung adenocarcinoma cell line, target-
+to rate their experiences in four dimensions: accuracy, reasoning and                                                                                    ing four genes involved in tumour survival and metastasis: TGFβR1,
+action, completeness and conciseness (see Supplementary Note C for                                                                                       SNAI1, BAX and BCL2L1 (Fig. 6). The experiment was designed from
+detailed rubrics). CRISPR-GPT demonstrated improved accuracy and                                                                                         scratch with CRISPR-GPT (Fig. 6a). On the basis of the user–AI interac-
+strong capabilities in reasoning and action, whereas general LLMs,                                                                                       tion, enAsCas12a was selected for its multitarget editing capability
+such as GPT-4o, often included errors and were prone to hallucination                                                                                    and low off-target effects. For delivery, CRISPR-GPT recommended
+(Fig. 5a,b).                                                                                                                                             lentiviral transduction for stable Cas and gRNA expression. The gRNAs
+     Highlighted by human evaluators’ observations (Fig. 5c), the                                                                                        for the four target genes were designed through CRISPR-GPT. Further-
+CRISPR-GPT agent provides users with more accurate, concise and                                                                                          more, CRISPR-GPT provided step-by-step protocols for gRNA cloning,
+well-rounded instructions to execute the planned experiments. The                                                                                        lentivirus production and viral delivery into A549 cells. To validate
+ability of CRISPR-GPT to perform specialty gene-editing tasks, such                                                                                      the editing, the researcher followed CRISPR-GPT’s next-generation
+as exon-selected gRNA design, customized off-target prediction and                                                                                       sequencing (NGS) protocol, using assay primers designed via the inte-
+automated sequencing data analysis, reinforced its advantage versus                                                                                      grated Primer3 tool. After generating the NGS data, the raw sequencing
+general-purpose LLMs. This is confirmed by the task-specific evalu-                                                                                      files were uploaded into CRISPR-GPT for automated analysis through
+ation results (Fig. 5b). Despite its strengths, CRISPR-GPT struggled                                                                                     the CRISPResso2 pipeline. The analysis reports, sent directly via email,
+with complex requests and rare biological cases, highlighting areas                                                                                      summarized the editing outcomes and showed consistently ~80%
+for improvement (limitations in Supplementary Note D).                                                                                                   high efficiency across all target genes (Fig. 6b, Supplementary Demo
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                                                                                                                                                                250
+<PARSED TEXT FOR PAGE: 7 / 24>
+Article                                                                                                                               https://doi.org/10.1038/s41551-025-01463-z
+
+
+   a
+
+                                           Overall human expert ratings                                  Meta mode                                              Auto mode
+
+                                                       Accuracy                                           Accuracy                                                 Accuracy
+                                                         5                                                 5                                                        5
+                                                         4                                                 4                                                        4
+                                                         3                                                 3                                                        3
+                                                         2                                                 2                                                        2
+                                 Conciseness             1                               Conciseness                                        Conciseness
+                                                                                                            1                                                        1
+                                                        0                                                  0                                                        0
+
+                                                                        Reasoning                                           Reasoning                                          Reasoning
+                           GPT-3.5-turbo                                and action                                          and action                                         and action
+
+                           GPT-4o
+
+                           CRISPR-GPT             Completeness                                          Completeness                                          Completeness
+
+
+
+   b                                                     Human expert ratings by tasks                               c
+                       5
+
+                       4                                                                                                          Human experts’ observations
+Accuracy
+
+
+
+
+                       3
+                                                                                                                         GPT-3.5-turbo
+                       2
+                                                                                                                              High-level guidance
+                       1                                                                                                      Some redundant and irrelavant information
+                       0
+                                                                                                                              Major hallucination (sgRNA/primer design,
+                                                                                                                              protocols)
+Reasoning and action
+
+
+
+
+                       5
+                                                                                                                              Lack of key experimental details
+                       4                                                                                                      Lack of ability to perform actions
+
+                       3
+
+                       2
+
+                       1                                                                                                 GPT-4o
+
+                       0
+                                                                                                                              Relatively detailed guidance
+                                                                                                                              Some redundant and irrelavant information
+                       5
+                                                                                                                              Major hallucination (sgRNA/primer design,
+Completeness
+
+
+
+
+                       4                                                                                                      protocols)
+                                                                                                                              Occasional flawed experimental details
+                       3
+                                                                                                                              Lack of ability to perform actions
+                       2
+
+                       1
+
+                       0                                                                                                 CRISPR-GPT
+
+                       5                                                                                                      Complete detailed guidance
+                                                                                                                              Concise responses
+Conciseness
+
+
+
+
+                       4
+                                                                                                                              No hallucination and rare flawed details
+                       3                                                                                                      Ability to perform actions using bioinformatic tools
+                                                                                                                              Less information on rationale behind guidance
+                       2
+                                                                                                                              Limitations in some complex gene-editing scenarios
+                       1
+
+                       0
+                                                                                                   is
+                               n
+
+
+
+
+                                                            gn
+                                       le ve 2
+
+
+
+
+                                                                                           ol nt
+                                                                    ed ta 4
+
+
+
+
+                                                                                      ot rim 5
+
+
+
+
+                                                                                          si nd
+
+
+                                                                                         an k 7
+                                                    A sk 3
+
+
+
+
+                                                                        tio t
+                                io
+                           le 1
+
+
+
+
+                                                                                                ys
+                                                                      ic rge
+                                     se eli sk
+                                         ct ry
+
+
+
+
+                                                                                     er tio 6
+                                                                                    pr pe sk
+                                                                  pr ff- ask
+
+
+
+
+                                                                                        oc e
+                                                         si
+                         se sk
+                             ct
+
+
+
+
+                                                                                       de n a
+                                                                                            gn
+
+
+                                                                                             al
+                                                                           n
+
+
+
+
+                                                                                       ta as
+                                              n
+
+
+
+
+                                                                                             s
+
+                                                                                  im a k
+                                        D Ta
+
+
+
+
+                                                      de
+
+
+
+
+                                                                                      Ex Ta
+                       as Ta
+
+
+
+
+                                           io
+
+                                                  RN Ta
+
+
+
+
+                                                                                pr alid Tas
+                                                                     O T
+
+
+
+
+                                                                                     Da T
+                                                  sg
+                       C
+
+
+
+
+                                                                                   V
+
+
+
+
+Fig. 5 | CRISPR-GPT outperforms general-purpose LLM for gene-editing                                   in Supplementary Table 2). b, Human user experience: evaluation results
+research in human user experiences. a, Human user experience: evaluation                               breakdown by major gene-editing tasks. Data shown are the mean ± s.d.
+of CRISPR-GPT for end-to-end gene-editing copiloting. Human experts scored                             (n = 8 per group). c, User observations on the strengths and limitations of
+performances from 1 (lowest) to 5 (highest). See detailed procedure and                                CRISPR-GPT compared to baseline LLMs.
+rubrics in Supplementary Note C (full chat history and video demo provided
+
+
+
+Video 3, user interactions summarized in Supplementary Table 4, full                                   CDH1 expression change and up to 34-fold reduction in VIM expression
+chat history listed in Supplementary Table 2). To further assess the                                   change, which are both key marker genes in the EMT process. This con-
+biological phenotypes of TGFβR1 and SNAI1 knockout in A549 cells, the                                  firms the biological role of TGFβR1 and SNAI1 signalling in driving EMT
+researcher conducted an epithelial–mesenchymal transition (EMT)                                        progression (a crucial driver of metastasis) in lung cancer cells (Fig. 6d).
+induction experiment by treating A549 cells with TGFβ (Fig. 6c and                                         In the second experiment, the junior researcher performed epi-
+Methods). The qPCR results revealed that the knockout A549 cell lines                                  genetic editing to activate two genes involved in cancer immuno-
+(A549 TGFβR1 KO and A549 SNAI1 KO) showed up to 9-fold reduction in                                    therapy resistance in a human melanoma model cell line (Fig. 6e, user
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                                                  251
+<PARSED TEXT FOR PAGE: 8 / 24>
+Article                                                                                                                                                                            https://doi.org/10.1038/s41551-025-01463-z
+
+
+a                                                                                                             b                                                                         CRISPR-Cas12 multigene knockout
+                                                                                                                                                                         100
+        CRISPR-GPT                     Human–AI
+
+
+
+
+                                                                                                                                        Editing efficiency (%, by NGS)
+                                                                            Wet Lab
+           agent                       interaction
+                                                                                                                                                                             80
+                            "I hope to knockout TGFβR1
+                            in human A549 cell line"                                                                                                                         60
+
+
+                                                                                                                                                                             40
+                                   "I prefer multiple editing
+                                   with low off-target"                                                                                                                      20
+         Task 1.
+       Cas selection
+                                   Suggest enCas12a
+                                                                                                                                                                             0
+                                                                    Obtain enCas12a
+                                                                    lentiviral plasmids                                                                                                TGFβR1     SNAI1                             BAX1           BCL2L1
+                                   "I hope to edit A549
+          Task 2.
+                                   cell line"                                                                 c
+     Delivery selection
+                                  Suggest lentivirus
+                                  delivery                                                                          Seed A549
+                                                                                                                                                                                                 E state                                                     M state
+                                                                                                                   in 10-cm dish
+                                   "I hope to design sgRNAs
+                                                                                                                                                                                                                                      EMT
+                                   for human TGFβR1”                Order oligos                                                                                                                                                    induction
+         Task 3.
+                                                                    for top-ranked
+       sgRNA design                Designed sgRNAs with             gRNA
+                                   relevant information                                                                                                                                                                                 + TGFβ
+
+                                                                                                                                    Day -2                                                       Day 0                                                           Day 8
+
+           Task 4.                 In silico off-target
+    Off-target prediction          sites prediction
+                                                                                                              d
+                                                                                                                                                                                   CDH1                                                                    VIM
+                                                                                                                                    8                                                                                               8
+          Task 5.                  Cloning, virus-                  gRNA cloning                                                                                                 ****                                                                ****
+        Experiment
+                                   making protocols                 Virus packaging                                                                                           ****                                                                ****
+         protocols                                                  Virus transduction
+
+
+
+
+                                                                                                                                                                                                           log2 expression change
+                                                                                                           log2 expression change
+                                                                                                                                    6                                                                                               6
+
+                                   "I hope to use NGS to
+          Task 6.                  validate"
+      Validation and                                                Order designed
+                                                                    NGS primers                                                     4                                                                                               4
+      primer design                NGS protocol and
+                                   primer design
+
+
+                                                                                                                                    2                                                                                               2
+                                                                    gDNA extraction
+                                                                    Library construction
+                                                                    Sequencing
+
+                                                                                                                                    0                                                                                               0
+
+                                   "Upload raw NGS                                                                                                                                          O
+
+
+
+
+                                                                                                                                                                                                                                                                  O
+                                                                                                                                                                                   KO
+
+
+
+
+                                                                                                                                                                                                                                                      KO
+                                                                                                                                                                         T
+
+
+
+
+                                                                                                                                                                                                                                              T
+                                                                                                                                                                  W
+
+
+
+
+                                                                                                                                                                                                                                             W
+                                   data file”
+                                                                                                                                                                                          1K
+
+
+
+
+                                                                                                                                                                                                                                                                 1K
+                                                                    Receive agent
+         Task 7.
+                                                                                                                                                                                  R1
+
+
+
+
+                                                                                                                                                                                                                                                  R1
+                                                                                                                                           49
+
+
+
+
+                                                                                                                                                                                                                                        49
+                                                                                                                                                                                        AI
+
+
+
+
+                                                                                                                                                                                                                                                             AI
+                                                                    outputs for
+                                                                                                                                                                             Fβ
+
+
+
+
+                                                                                                                                                                                                                                                  Fβ
+       Data analysis
+                                                                                                                                                                                       SN
+
+
+
+
+                                                                                                                                                                                                                                                           SN
+                                                                                                                                    A5
+
+
+
+
+                                                                                                                                                                                                                                    A5
+                                   Analysed data                    editing outcomes
+                                                                                                                                                                         TG
+
+
+
+
+                                                                                                                                                                                                                                              TG
+                                                                                                                                                                                   49
+
+
+
+
+                                                                                                                                                                                                                                                        49
+                                                                                                                             8
+
+
+
+
+                                                                                                                                                                                                                               8
+                                   via CRISPResso2
+                                                                                                                                                       49
+
+
+
+
+                                                                                                                                                                                                                                             49
+                                                                                                                     y
+
+
+
+
+                                                                                                                                                                                                                        y
+                                                                                                                                                                                  A5
+
+
+
+
+                                                                                                                                                                                                                                                   A5
+                                                                                                           Da
+
+
+
+
+                                                                                                                                                                                                            Da
+                                                                                                                                        A5
+
+
+
+
+                                                                                                                                                                                                                                        A5
+                                                                                                                                                                              8
+
+
+
+
+                                                                                                                                                                                                                                                  8
+                                                                                                                                    8
+
+
+
+
+                                                                                                                                                                                                                                    8
+                                                                                                                                                                             y
+
+
+
+
+                                                                                                                                                                                                                                                  y
+                                                                                                                                                                         Da
+
+
+
+
+                                                                                                                                                                                                                                              Da
+                                                                                                                             y
+
+
+
+
+                                                                                                                                                                                                                               y
+                                                                                                                 Da
+
+
+
+
+                                                                                                                                                                                                                   Da
+
+
+e                                                               f
+    CRISPR-dCas9 epigenetic editing                                                        Validation of epigenetic activation of NCR3LG1 and CEACAM1
+     Task: Please design and perform
+     experiment to activate NCR3LG1 and                                                                                                                                                                                                                      sgNTC
+                                                                                                        sgNTC
+     CEACAM1 expression in A375
+
+         Task 1.                Beginner                                                                                                                                                                                                                     sgRNA_1
+                                                                                                        sgRNA_1
+            ...                 scientist
+
+                                CRISPR-GPT
+         Task 7.                                                                                                                                                                                                                                             sgRNA_2
+                                                                                                        sgRNA_2
+
+
+    Result: Successful CRISPR activation                                                                                                                                                                                                                     sgRNA_3
+    of CEACAM1, NCR3LG1 in A375                                                                         sgRNA_3
+
+                                                                                           4        5             6                                                      7                                                               4             5           6          7
+                                                                     0                    10      10      10                                                  10                             0                                      10             10            10      10
+                                                                                     NCR3LG1-PE                                                                                                                   CEACAM1-PE
+
+Fig. 6 | Wet-lab demonstrations of CRISPR-GPT in knockout and activation                       after EMT induction by TGFβ. qPCR analysis shows reduced expression changes
+experiments. a, The full workflow of CRISPR-GPT-guided knockout experiment                     in EMT marker genes (CDH1, VIM) in A549 TGFβR1 and SNAI1 knockout cells
+of TGFβR1, SNAI1, BAX1 and BCL2L1 through multiple rounds of human–AI                          compared with A549 wildtype (WT) cells, confirming successful knockouts of
+interaction (TGFβR1 knockout is shown as an example, see Supplementary Demo                    TGFβR1/SNAI1. Data shown are the mean ± s.d. (n = 3 per group). One-way analysis
+Video 3 and full chat history listed in Supplementary Table 2). Panel was originally           of variance (ANOVA) was used to calculate statistics. ****p < 0.0001. e, Simplified
+created with BioRender.com/iim1m2t and processed. b, Editing efficiencies for                  workflow of a beginner researcher activating NCR3LG1 and CEACAM1 expression
+TGFβR1, SNAI1, BAX1 and BCL2L1 measured via NGS, analysed using CRISPResso2                    through multiround interactions with CRISPR-GPT (full chat history listed in
+and CRISPR-GPT. c, Schematic of the EMT induction process via TGFβ treatment                   Supplementary Table 2). f, Editing outcomes of NCR3LG1 and CEACAM1 activation
+(Methods). Panel was originally created with BioRender.com/iim1m2t and                         using CRISPR-GPT-designed sgRNAs, measured via flow cytometry (Methods).
+processed. d, Functional outcomes of TGFβR1 and SNAI1 knockout in A549 cells
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                                                                                                                                      252
+<PARSED TEXT FOR PAGE: 9 / 24>
+Article                                                                                                 https://doi.org/10.1038/s41551-025-01463-z
+
+interactions summarized in Supplementary Table 4, full chat history            an error with a warning note, asking the user to manually remove the
+listed in Supplementary Table 2). CRISPR-GPT guides the researcher             sequence from the input. This prevents the leakage of sensitive infor-
+through the full workflow: identifying the most suitable CRISPR activa-        mation to external models and tools (Extended Data Fig. 5).
+tion system, selecting an appropriate delivery method for A375 cells,                Looking ahead, the uses of CRISPR-GPT could be further expanded
+designing dCas9 gRNAs (three gRNAs per gene) and generating pro-               by connecting to latest advances in genome/protein foundation mod-
+tocols for validating editing outcomes. After editing was completed,           els, plasmid design tools and other machine learning models, to enable
+measurements of target protein expression level confirmed successful           experiment design and analysis tasks beyond gene editing. In addition,
+activation of both genes, with up to 56.5% efficiency for NCR3LG1, and         the integration of CRISPR-GPT with automated laboratory platforms
+90.2% efficiency for CEACAM1, when comparing gRNA-edited groups                and robotics holds immense promise. By bridging computational
+vs negative control gRNAs (Fig. 6f).                                           design, analysis and physical execution, researchers could leverage the
+     Overall, CRISPR-GPT enabled successful completion of the first            agent’s expertise to orchestrate end-to-end automated experiments,
+set of AI-guided gene-editing experiments. Interactions between the            minimizing manual intervention and accelerating the pace of discovery.
+researchers and LLM-powered agents led to efficient, accurate and
+ethically mindful gene-editing on the first attempt, even by users new         Methods
+to the technique.                                                              Large language model-powered autonomous agent
+                                                                               CRISPR-GPT consists of the following 4 core components (Fig. 1): LLM
+Discussion                                                                     Planner, Tool providers, Task executors, and the LLM User-proxy agent
+CRISPR-GPT demonstrates the potential of LLMs to automate and                  that serve as the interface with users for taking inputs and communi-
+enhance biological research and experiment design and analysis.                cating outputs. Each component can be viewed as an LLM-powered
+This AI-guided workflow leverages LLM for reasoning, multi-agent               single agent with relatively simple functionality, and the overall system
+collaboration and scientific discussions for brainstorming, reduces            functions via multi-agent interaction. These single agents leverage
+errors, and improves research quality and reproducibility. Despite             general-purpose LLMs, such as GPT-4o (used in all four core agents
+its current capabilities, CRISPR-GPT has limitations. For example, the         unless otherwise specified, such as when comparing GPT-4 vs GPT-3.5,
+agent system relies on high-quality instructions and discussion data           where we use GPT-4o and GPT-3.5), as their base model to handle a wide
+from human scientists who have deep knowledge about the biology                range of tasks. The LLMs rely on carefully designed prompts to guide
+domain. Such data are hard to collect, creating challenges for further         their behaviour and interactions, with example prompts provided in
+improvements and scaling up. Further, evaluation of such AI tools is           Supplementary Note E.
+generally challenging due to the need to collect substantial feedback
+from human biologists. For another example, the current gRNA design            The Task executor operates as state machines, providing
+step mainly supporting human and mouse targets could be further                robust decomposition and progress contro
+expanded.                                                                      A total of 22 tasks (summarized in Supplementary Table 1) have been
+      Technologies such as CRISPR-Cas9 pose potential ethical and              implemented, each decomposed into subgoals, with states providing
+safety risks, including potential misuse for dual purposes, which can be       instructions and guiding users through decision-making via multiple
+exemplified with AI tools68. Altering human genomes raises substantial         rounds of textual interaction. A central management class tracks the
+ethical concerns, particularly with germline cell and embryo editing.          current state, task queue, and memory for state outputs and execution
+Due to these concerns, such editing is illegal in the United States and        history. State transitions occur sequentially, or based on conditional
+many other countries. In addition, gene-editing technology could be            logic from execution results as needed. States process user input
+abused to create bioweapons, such as genetically engineered viruses69.         and generate structured outputs containing the status, reasoning
+      To mitigate these risks, we augment CRISPR-GPT with an addi-             and response, which are stored continuously to ensure continuity
+tional layer of safety mechanism to defend against malicious dual              across tasks. This framework supports both predefined workflows
+uses. Following the guidelines given in a moratorium70 on heritable            (Meta mode) and dynamically generated task sequences (Auto mode),
+genome editing, CRISPR-GPT ensures that users cannot bypass the                offering flexibility, reliability and robust error handling for executing
+step of specifying the organism they are editing. If the target is human       CRISPR-GPT tasks.
+tissue or organs, the system triggers the following steps: (1) displays a           In Meta mode, the Task executor follows predefined workflows
+warning note when proceeding with human gene-editing experiments;              that cover complete pipelines for four meta-tasks, each correspond-
+(2) provides a link to the international moratorium with an explanatory        ing to a major type of gene-editing experiment. In Auto mode, the LLM
+note; and (3) asks users to confirm that they understand the risks and         Planner dynamically generates a customized sequence of tasks on the
+have read the international guidelines before proceeding. The agent            basis of the user’s meta-request. The Task executor then constructs
+also checks if the user request involves editing of human germline cells       and executes the workflow by chaining the state machines of the cor-
+or dangerous, pathogenic viruses (Supplementary Note D and Data 2).            responding tasks into a larger state machine, enabling seamless and
+If such a risk is identified, it will trigger an error message and stop pro-   automated execution of complex gene-editing pipelines.
+ceeding (Extended Data Fig. 5 for examples of the risk mitigation tests).
+      Other concerns are related to user data privacy issues, especially       The Tool provider connects the Task executor with external
+when human genome sequence information might be exchanged by                   application programming interfaces (APIs)
+using AI tools. We follow the data privacy and HIPAA privacy rule in           To connect language models with external functionalities73–77, the
+healthcare71. Although genome-scale sequences are fundamentally                system needs to (1) analyse the current situation and judge whether it
+linked to identities, DNA segments of up to 20-bp length are considered        is suitable to call an external tool; and (2) know what kinds of tools are
+safe and not able to identify human identity72.                                available and choose the best from them. Instead of directly exposing
+      CRISPR-GPT includes functionalities to prevent sharing of identifi-      the interfaces of the APIs to LLMs, in CRISPR-GPT, we wrap the usage of
+able private human/patient sequences with public LLM models. Our               APIs inside the states and expose more user-friendly and LLM-friendly
+solution involves two key measures. First, the system would never store        textual interfaces through hand-written instructions and responses. In
+any identifiable long genome sequence in the server that would poten-          plain words, we are teaching users (human agents and LLM User-proxy
+tially reveal patient private information. Second, a filter is implemented     agents) to use the tools. The tools include Google web search, Google
+to detect any sequence of 20 or more A/T/G/C/U bases in prompts                Scholar search, literature retrieval and bioinformatic tools such as
+before sending them to external LLMs. If detected, the agent raises            Primer3 (ref. 52), CRISPRitz53 and CRISPResso2 (ref. 57).
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                  253
+<PARSED TEXT FOR PAGE: 10 / 24>
+Article                                                                                              https://doi.org/10.1038/s41551-025-01463-z
+
+The LLM Planner automatically plans gene-editing                            terms from the user’s natural language request. These terms provide
+experiments on the basis of the user’s request                              insight into the biological context of the experiment. The LLM is then
+LLMs such as GPT-4, Gemini and Claude serve as the reasoning core of        tasked with accessing up-to-date information using a Google Search
+the LLM-powered agent to solve real-world decision-making problems.         API to gather additional context about the biological system in the
+Our LLM Planner operates on the basis of two key components:                user request.
+(1) the user query and (2) a predefined table containing comprehensive           On the basis of the combined information from the user’s request
+descriptions and interdependency information for all available tasks        and external data, the LLM categorizes the system into one of 7 major
+(example in Supplementary Note E). Using the ReAct prompting tech-          biological categories:
+nique, the LLM is prompted to output a chain-of-thought reasoning             1. Mammalian in vivo
+path along with the final action from the plausible action set (Fig. 2a).     2. Mammalian embryos
+On the basis of LLM’s internal knowledge, combined with our manu-             3. Mammalian primary cells or stem cells ex vivo
+ally written task descriptions and decomposition instructions, the            4. Mammalian cell lines with strong evidence of high-efficiency
+Planner analyses the user’s request, intelligently decomposes it into            transfection
+an ordered list of tasks, and ensures that the dependencies between           5. Mammalian cell lines or organoids without strong evidence of
+tasks are respected (detailed prompt format provided in Supplemen-               high-efficiency transfection
+tary Note E). Once the decomposition is complete, the correspond-             6. Human in vivo or human embryos
+ing state machines are automatically chained together to execute all          7. Bacteria, viruses and other organisms
+tasks in the appropriate sequence. For robustness, we prevent the LLM
+from dynamically adding or deleting tasks (state machines) during                These categories encompass the majority of biological systems
+execution. However, we acknowledge that enabling dynamic task man-          relevant to CRISPR delivery. For each category, we curated 1–3 delivery
+agement is an important step towards developing a more intelligent          methods on the basis of human experts’ knowledge, which represent
+science AI agent and leave this for future work.                            the most commonly used CRISPR delivery strategies.
+                                                                                 To further tailor the recommendations to the user’s specific sce-
+LLM User-proxy agent automatically interacts with the Task                  nario, the agent system conducts a Google Scholar search to identify
+executor on the basis of the meta-request                                   relevant peer-reviewed literature. The search is guided by the key terms
+The LLM User-proxy agent automatically interacts with the Task              extracted from the user’s request. From the search results, the top 10
+executor on the basis of the meta-request. Central to our system, this      relevant papers are ranked by citation count, providing a quantitative
+agent serves as an intermediary between the user and a state machine        measure for prioritizing the potential delivery options within each
+derived from an initial task decomposition step—breaking down the           biological category.
+gene-editing process into a structured sequence of actions and deci-             While citation numbers are not a definitive metric for determining
+sions. At each step, the state machine presents a current state to the      the most appropriate delivery method, they offer a useful reference
+LLM agent, which includes a task description and specifies any required     point. This approach helps to present well-informed recommendations
+input. This input varies by task type and may include general experi-       along with relevant literature to the user.
+mental context (for example, “I hope to design 4 sgRNAs targeting
+human TGFβR1”) or a specific Cas system (for example, enCas12a), as         Guide RNA design agent
+shown in Supplementary Fig. 1b.                                             Designing sgRNAs is a critical challenge in CRISPR editing, as it directly
+     The LLM User-proxy agent interprets the current state and makes        impacts editing efficiency. While many sgRNA design tools (web-based
+informed decisions on the user’s behalf. It integrates multiple sources     and software packages) exist, they typically follow shared design prin-
+of information, including:                                                  ciples and use metrics, such as on-target/off-target scores, exon num-
+  1.   Instructions from the state machine,                                 ber and cut position, to rank candidates. We identified two main user
+  2.   User requests,                                                       challenges: (1) finding a trustworthy sgRNA design source and (2)
+  3.   Session interaction history, and                                     efficiently selecting sgRNAs that meet specific criteria without manu-
+  4.   Results from external computational tools.                           ally evaluating every metric.
+                                                                                  To address these issues, we leveraged pre-designed sgRNA tables
+      This synthesized information is formatted into a structured           from CRISPick, a widely used and validated library from the Broad
+prompt for the agent, which determines the most appropriate next            Institute. We combined this with the reasoning and action (ReAct)
+action. For instance, when designing a CRISPR experiment, the agent         capabilities of LLMs to process user-driven table queries. Our agent
+might combine user input about a target gene with computational             executes a series of actions step by step to generate outputs, akin to
+results to suggest sgRNA candidates.                                        the recently described ‘chain-of-table’ methodology15.
+      While the User-proxy agent operates autonomously, user over-                The agent system can choose from four key functions:
+sight remains essential. Users are encouraged to monitor task progres-       • SELECT: Retrieves rows where the specified column matches the
+sion and intervene as needed to correct errors or misinterpretations,          given value.
+preserving the integrity of the gene-editing design (Supplementary           • BETWEEN: Selects rows where the specified column’s values fall
+Fig. 1a).                                                                      within a specified range (inclusive).
+      This approach fosters a collaborative synergy between human            • ORDERBY: Orders the table on the basis of values in a specified
+expertise and AI. By leveraging the LLM agent’s reasoning ability, we          column.
+enable a more efficient, accurate and user-friendly design experience.       • TOP: Returns the top N rows of the table.
+The sequential decision-making framework streamlines execution
+while ensuring that user input remains central to experiment planning.           These can be expanded in the future via human or LLM-driven sug-
+                                                                            gestions. The agent extracts relevant parameters from both the user
+Delivery method selection agent                                             request and table, applies the functions, and returns pre-designed sgR-
+Our approach mirrors the thought process of human gene-editing              NAs with associated metadata through a visual table and download link.
+experts to identify the most appropriate delivery method on the basis            We also developed an optional exon suggestion module for CRISPR
+of the user’s specific biological system. The workflow is illustrated       knockout design. Since sgRNAs targeting non-essential regions can
+in Fig. 4a. It begins by instructing the LLM to extract key biological      be less effective, we hypothesized that LLMs could use their broad
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                              254
+<PARSED TEXT FOR PAGE: 11 / 24>
+Article                                                                                           https://doi.org/10.1038/s41551-025-01463-z
+
+knowledge base to suggest functionally important exons. For example,        3. Gene-editing delivery method selection: 50 test cases cover-
+targeting the BD1/BD2 domains has been shown to effectively disrupt            ing a range of biological systems and major experiment types.
+BRD4 function44. We prompt the LLM to reason through gene function             For each test case, we asked human experts to rank the avail-
+and recommend candidate exons (Extended Data Fig. 1), which are then           able delivery method and report the consensus ranking as
+incorporated into table queries.                                               answer.
+     To our knowledge, no existing sgRNA design tools integrate gene        4. Gene-editing Q&A: 138 questions and answers, filtered for
+functional domains, making this exon suggestion feature a valuable             errors or issues, compiled from both public sources and
+reference. However, we note that its performance may be limited for            human experts.
+genes with sparse literature or minimal online information.
+
+Q&A mode                                                                  Validation of individual gene-editing agents
+General-purpose LLMs often lack sufficient understanding of advanced      Using this benchmark dataset, we evaluated key functions of the
+biology. As outlined in Supplementary Note A, we identified key failure   CRISPR-GPT agent system:
+modes: (1) information hallucination, (2) outdated CRISPR knowledge,        1. Planning evaluation: For each query, we generated three
+(3) absence of peer-reviewed sources and (4) poor alignment with               batches of subtask lists using CRISPR-GPT and compared
+user-specific problem-solving needs. To overcome these challenges,             them to ground truth using accuracy, precision, recall and
+CRISPR-GPT’s Q&A mode employs a multisource system for answer-                 F1 scores. Task ordering was assessed via normalized Leven-
+ing advanced biology questions (Fig. 4e). Upon receiving a query, it           shtein distance. We also tested GPT-4o and GPT-3.5-turbo
+synthesizes information from three sources:                                    for comparison, evaluating the models’ ability to plan and
+  1. Fine-tuned CRISPR-LLama: Trained on human discussion                      sequence gene-editing tasks.
+     threads from a CRISPR-focused Google Group, this model                 2. Delivery method selection: For each test case, CRISPR-GPT
+     improves problem-solving and troubleshooting beyond the                   (with and without literature search), GPT-3.5-turbo and
+     baseline (Supplementary Note B).                                          GPT-4-turbo proposed primary and secondary delivery
+  2. RAG-based literature retrieval (Tool provider agent): This                methods. Responses were scored against ground truth
+     accesses a curated, expert-selected CRISPR literature                     (primary: weight 2; secondary: weight 1), summed across
+     database (~50 key papers chosen for impact and recency;                   categories to assess each model’s ability to suggest delivery
+     Supplementary Fig. 4 and Note F). Using OpenAI Embed-                     methods across biological systems.
+     dings and FAISS, both database entries and user queries are            3. Guide RNA design evaluation: CRISPR-GPT generated gRNA
+     embedded into semantic vectors. The top k (k = 4) passages                design function lists and parameters, which were compared
+     are retrieved by cosine similarity, ranked and summarized to              to ground truth to evaluate function selection, order and
+     guide the model’s response.                                               parameter accuracy. We also tested GPT-4 and GPT-3.5-turbo,
+  3. General-purpose LLM: For example, ChatGPT or LLama, used                  assessing their ability to interpret user intent and produce
+     as an additional source.                                                  effective design strategies.
+                                                                            4. Q&A mode evaluation: We selected 40 questions and prompt-
+Extendibility of CRISPR-GPT                                                    ed CRISPR-GPT, GPT-3.5-turbo and GPT-4 to generate answers.
+Given that CRISPR-GPT has a modular multi-agent architecture, inte-            Three human experts scored responses across four aspects in
+grating new tools and functions into the existing system is easy and           a blinded setup, and average scores were used to determine
+training free. To add a new tool/function, the procedure is as follows:        final performance, evaluating the models’ ability to handle
+  (1) Tool wrapping: Develop specific code to encapsulate the                  diverse gene-editing questions.
+      tool’s functionality within a state machine, which we call a
+      Tool provider agent. This wrapper presents user-friendly and           Detailed evaluation procedures for all the above are provided in
+      LLM-friendly textual interfaces through carefully crafted           Supplementary Note C.
+      instructions and responses.
+  (2) Meta mode integration: If we want to add the tool to be used        Human experience evaluation
+      in the Meta mode, we add the entry state of the new state           To holistically evaluate user experiences of the CRISPR-GPT, we invited
+      machine to appropriate positions within the relevant prede-         8 independent CRISPR human experts to test the agent system via its
+      fined workflow.                                                     web surface. Each expert was asked to make one gene-editing request
+  (3) Auto mode integration: Register the entry state of the new          under the Meta mode and two gene-editing requests under the Auto
+      tool’s state machine in the task decomposition table. This          mode. More details on the evaluation procedures are given in Sup-
+      ensures that during task decomposition, the Planner agent           plementary Note C. In addition, we also provide a total of 20 full chat
+      becomes aware of the new tool and can incorporate it into its       history demos from these tests in Supplementary Data 1 (details listed
+      decision-making process.                                            in Supplementary Table 2).
+
+                                                                          Real-world applicability of CRISPR-GPT via wet lab
+Performance assessment of CRISPR-GPT                                      demonstrations
+Benchmark dataset. We compiled Gene-editing bench, a collection           To evaluate the real-world applicability of CRISPR-GPT, we conducted
+of test questions and answers for evaluating AI tools’ capabilities for   two independent wet lab demonstrations:
+CRISPR experimental design, with a total of 288 unique entries cover-
+ing four topics:                                                            1.   Beginner Researcher 1: We invited an independent junior PhD
+                                                                                 scientist unfamiliar with the CRISPR field to perform CRISPR
+  1. Gene-editing planning: we compiled a total of 50 test cases                 gene-editing experiments using CRISPR-GPT via human–
+     and answers curated by consensus of human gene-editing                      agent collaboration. The researcher applied CRISPR-GPT
+     experts.                                                                    to execute a gene knockout experiment as part of a cancer
+  2. CRISPR gRNA design: 50 test cases with pre-compiled answers                 research project. The agent provided step-by-step guidance
+     by human experts.                                                           throughout the process (video demonstrations are available
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                          255
+<PARSED TEXT FOR PAGE: 12 / 24>
+Article                                                                                             https://doi.org/10.1038/s41551-025-01463-z
+
+     in Supplementary Demo Videos 1–3, full chat history in Sup-           Complementary DNA synthesis and qPCR were performed using the
+     plementary Data 1, and details in Supplementary Table 2). The         Power SYBR Green RNA-to-CT 1-Step kit (4389986, ThermoFisher) on
+     results were validated through next-generation sequencing             a BioRad CFX384 system (BioRad). Gene expression was quantified
+     and functional assays.                                                using specific primers for CDH1 (forward: CTG AGG ATG GTG TAA
+  2. Beginner Researcher 2: An undergraduate student, also                 GCG ATG; reverse: GTC TGT CAT GGA AGG TGC TC) and VIM (forward:
+     unfamiliar with the CRISPR field, was invited to perform              GTG AAT CCA GAT TAG TTT CCC TCA; reverse: CAA GAC CTG CTC AAT
+     gene-editing experiments through collaboration with                   GTT AAG ATG). Expression levels were normalized to appropriate
+     CRISPR-GPT. The student implemented CRISPR activation in a            housekeeping genes.
+     cancer immunology research project, with stepwise guidance
+     provided by the agent (full chat history provided in Supple-          Flow cytometry (FACS) analysis
+     mentary Data 1, details in Supplementary Table 2). The results        To assess the expression of NCR3LG1 and CEACAM1, cells were stained
+     were validated through antibody staining and FACS sorting.            with B7-H6 monoclonal antibody ( JAM1EW), PE (eBioscience) (1:100
+                                                                           dilution) for NCR3LG1 and anti-CD66a/c/e mouse monoclonal anti-
+Cell line and cell culture                                                 body (PE [Phycoerythrin], clone ASL-32, 1:100 dilution) for CEACAM1.
+A375 and A549 cells were cultured in DMEM medium (high glucose,            Staining was performed following manufacturer guidelines, and data
+GlutaMAX; 10-569-044 Gibco) with 10% fetal bovine serum (FBS; 100-         were acquired using a CytoFLEX analyser. Flow cytometry data were
+106, Gemini Bio), 100 U ml−1 penicillin and 100 μg ml−1 streptomycin       analysed using standard software. Detailed gating strategies are shown
+(15140-122 Gibco). Cells were maintained at 37 °C in a humidified atmos-   in Supplementary Fig. 5.
+phere with 5% CO2.
+                                                                           Reporting summary
+CRISPR RNA cloning                                                         Further information on research design is available in the Nature
+Cloning of sgRNAs was carried out using BbsI or Esp3I (R3539, R0734        Portfolio Reporting Summary linked to this article.
+NEB) through a Golden Gate assembly into a lentiviral backbone. The
+constructs were sequence-verified via Sanger sequencing using a U6         Data availability
+sequencing primer (5’-GACTATCATATGCTTACCGT-3’).                            The main data supporting the results in this study are available within
+                                                                           the paper and its Supplementary Information. Additional data are
+Lentivirus packaging and transduction                                      deposited in GitHub at https://github.com/cong-lab/crispr-gpt-pub
+Lentivirus production was performed by co-transfecting the assem-          (ref. 78).
+bled lentiviral vector with VSV-G envelope and Delta-Vpr packaging
+plasmids into HEK-293T cells using PEI transfection reagent (765090,       Code availability
+Sigma-Aldrich). Supernatants were collected at 48 h post transfec-         Because of safety concerns, data, code and prompts will not be fully
+tion. A375 and A549 cells were transduced at low multiplicity of infec-    released to the public until the development of US regulations in the
+tion (MOI) with 8 μg ml−1 polybrene using a spin infection method          field of artificial intelligence and its scientific applications. While
+at 1,000 × g for 45 min. After 24 h, cells were selected with 1 μg ml−1    the full code is not freely available, it has been peer reviewed. We will
+puromycin to establish stable cell lines.                                  also release a light version in GitHub at https://github.com/cong-lab/
+                                                                           crispr-gpt-pub (ref. 78).
+Genomic DNA extraction, PCR and sequencing
+Genomic DNA was extracted from selected cells at 7 days post trans-        References
+fection using QuickExtract DNA Extraction Solution (LGCQE09050,            1.  Chowdhery, A. et al. PaLM: scaling language modeling with
+Lucigen) following manufacturer instructions. Targeted loci were               pathways. J. Mach. Learn. Res. 24, 240 (2023).
+amplified via PCR using Phusion Flash High-Fidelity PCR Master Mix         2. Hoffmann, J. et al. An empirical analysis of compute-optimal
+(F548L, ThermoFisher) with primers containing Illumina sequencing              large language model training. In Advances in Neural Information
+adapters. Paired-end reads (150 bp) were generated using the Illumina          Processing Systems (eds Koyejo, S. et al.) Vol. 35, 30016–30030
+MiSeq platform.                                                                (Curran Associates, Inc., 2022).
+     PCR primers:                                                          3. OpenAI et al. GPT-4 technical report. Preprint at https://doi.org/
+ • TGFβR1: Forward: AGATAGAGGGTACTACGTTGAAAGACT;                               10.48550/arXiv.2303.08774 (2024).
+   reverse: AAAAAAGTCTTTCAACGTAGTACCCTCT                                   4. The Claude 3 Model Family: Opus, Sonnet, Haiku (Anthropic, 2024).
+ • SNAI1: Forward: AGATCAGTTGAAGGCCTTTCGAGCCTG; reverse:                   5. Anil, R. et al. PaLM 2 technical report. Preprint at https://doi.org/
+   AAAACAGGCTCGAAAGGCCTTCAACTG                                                 10.48550/arXiv.2305.10403 (2023).
+ • BAX: Forward: AGATATCCAGGATCGAGCAGGGCGAAT; reverse:                     6. Yao, S. et al. ReAct: synergizing reasoning and acting in language
+   AAAAAATTCGCCCTGCTCGATCCTGGAT                                                models. In Proc. 11th International Conference on Learning
+ • BCL2L1: Forward: AGATACGCACAGTGCCCCGCCGAAGGA;                               Representations (OpenReview, 2023).
+   reverse: AAAATCCTTCGGCGGGGCACTGTGCGT                                    7. Liu, R. et al. Mind’s eye: grounded language model reasoning
+                                                                               through simulation. In Proc. 11th International Conference on
+TGFβ treatment                                                                 Learning Representations (OpenReview, 2023).
+For optimal EMT induction, cells were seeded at a density of 750,000       8. Schick, T. et al. Toolformer: language models can teach
+cells per 100 mm tissue culture plate and incubated for 24 h. The              themselves to use tools. In Advances in Neural Information
+medium was then replaced with 2% FBS DMEM for an additional 24 h.              Processing Systems (eds Oh, A. et al.) Vol. 36, 68539–68551
+Cells were subsequently treated with 5 ng ml−1 TGFβ (240-B/CF, R&D)            (Curran Associates, Inc., 2023).
+in 2% FBS DMEM for 7 days. To ensure consistent cell density during        9. Cai, T., Wang, X., Ma, T., Chen, X. & Zhou, D. Large language
+the treatment, cells were reseeded at the same density every 2 days.           models as tool makers. In Proc. 12th International Conference on
+                                                                               Learning Representations (OpenReview, 2024).
+Quantitative PCR                                                           10. Yang, C. et al. Large language models as optimizers. In Proc.
+Total RNA was extracted using the Direct-zol RNA Purification kit              12th International Conference on Learning Representations
+(R2051, Zymo Research) according to manufacturer instructions.                 (OpenReview, 2024).
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                            256
+<PARSED TEXT FOR PAGE: 13 / 24>
+Article                                                                                               https://doi.org/10.1038/s41551-025-01463-z
+
+11. Li, T. et al. CancerGPT for few shot drug pair synergy prediction       36. Office of the Commissioner. FDA roundup: January 16, 2024.
+    using large pretrained language models. npj Digit. Med. 7,                  FDA News Release https://www.fda.gov/news-events/press-
+    40 (2024).                                                                  announcements/fda-roundup-january-16-2024 (2024).
+12. Wu, S. et al. BloombergGPT: a large language model for finance.         37. Wei, J. et al. Chain-of-thought prompting elicits reasoning in
+    Preprint at https://doi.org/10.48550/arXiv.2303.17564 (2023).               large language models. In Advances in Neural Information
+13. M. Bran, A. et al. Augmenting large language models with                    Processing Systems (eds Koyejo, S. et al.) Vol. 35, 24824–24837
+    chemistry tools. Nat. Mach. Intell. 6, 525–535 (2024).                      (Curran Associates, Inc., 2022).
+14. Boiko, D. A., MacKnight, R., Kline, B. & Gomes, G. Autonomous           38. Zhou, D. et al. Least-to-most prompting enables complex
+    chemical research with large language models. Nature 624,                   reasoning in large language models. In Proc. 11th International
+    570–578 (2023).                                                             Conference on Learning Representations (OpenReview, 2023).
+15. O’Donoghue, O. et al. BioPlanner: automatic evaluation of LLMs          39. Kim, H. K. et al. Deep learning improves prediction of CRISPR–
+    on protocol planning in biology. In Proceedings of the 2023                 Cpf1 guide RNA activity. Nat. Biotechnol. 36, 239–241 (2018).
+    Conference on Empirical Methods in Natural Language Processing          40. DeWeirdt, P. C. et al. Optimization of AsCas12a for combinatorial
+    (eds Bouamor, H., Pino, J. & Bali, K.) 2676–2694 (Association for           genetic screens in human cells. Nat. Biotechnol. 39, 94–104 (2021).
+    Computational Linguistics, 2023).                                       41. Doench, J. G. et al. Optimized sgRNA design to maximize activity
+16. Jinek, M. et al. A programmable dual-RNA-guided DNA                         and minimize off-target effects of CRISPR-Cas9. Nat. Biotechnol.
+    endonuclease in adaptive bacterial immunity. Science 337,                   34, 184–191 (2016).
+    816–821 (2012).                                                         42. Sanson, K. R. et al. Optimized libraries for CRISPR-Cas9 genetic
+17. Cong, L. et al. Multiplex genome engineering using CRISPR/Cas               screens with multiple modalities. Nat. Commun. 9, 5416 (2018).
+    systems. Science 339, 819–823 (2013).                                   43. Labun, K. et al. CHOPCHOP v3: expanding the CRISPR web
+18. Mali, P. et al. RNA-guided human genome engineering via Cas9.               toolbox beyond genome editing. Nucleic Acids Res. 47,
+    Science 339, 823–826 (2013).                                                W171–W174 (2019).
+19. Jinek, M. et al. RNA-programmed genome editing in human cells.          44. Wang, Z. et al. Chain-of-table: evolving tables in the reasoning
+    eLife 2, e00471 (2013).                                                     chain for table understanding. In Proc. 12th International
+20. Doudna, J. A. & Charpentier, E. The new frontier of genome                  Conference on Learning Representations (OpenReview, 2024).
+    engineering with CRISPR-Cas9. Science 346, 1258096 (2014).              45. Shi, J. et al. Discovery of cancer drug targets by CRISPR-Cas9
+21. Mali, P., Esvelt, K. M. & Church, G. M. Cas9 as a versatile tool for        screening of protein domains. Nat. Biotechnol. 33, 661–667 (2015).
+    engineering biology. Nat. Methods 10, 957–963 (2013).                   46. Giuliano, C. J., Lin, A., Girish, V. & Sheltzer, J. M. Generating single
+22. Hsu, P. D., Lander, E. S. & Zhang, F. Development and applications of       cell-derived knockout clones in mammalian cells with CRISPR/
+    CRISPR-Cas9 for genome engineering. Cell 157, 1262–1278 (2014).             Cas9. Curr. Protoc. Mol. Biol. 128, e100 (2019).
+23. Sander, J. D. & Joung, J. K. CRISPR-Cas systems for editing,            47. Du, D. & Qi, L. S. CRISPR technology for genome activation and
+    regulating and targeting genomes. Nat. Biotechnol. 32, 347–355              repression in mammalian cells. Cold Spring Harb. Protoc. 2016,
+    (2014).                                                                     pdb.prot090175 (2016).
+24. Shalem, O., Sanjana, N. E. & Zhang, F. High-throughput functional       48. Huang, T. P., Newby, G. A. & Liu, D. R. Precision genome editing
+    genomics using CRISPR–Cas9. Nat. Rev. Genet. 16, 299–311 (2015).            using cytosine and adenine base editors in mammalian cells. Nat.
+25. Qi, L. S. et al. Repurposing CRISPR as an RNA-guided platform for           Protoc. 16, 1089–1128 (2021).
+    sequence-specific control of gene expression. Cell 152, 1173–1183       49. Hanna, R. E. et al. Massively parallel assessment of human
+    (2013).                                                                     variants with base editor screens. Cell 184, 1064–1080.e20 (2021).
+26. Gilbert, L. A. et al. CRISPR-mediated modular RNA-guided                50. Doman, J. L., Sousa, A. A., Randolph, P. B., Chen, P. J. & Liu,
+    regulation of transcription in eukaryotes. Cell 154, 442–451 (2013).        D. R. Designing and executing prime editing experiments in
+27. Konermann, S. et al. Optical control of mammalian endogenous                mammalian cells. Nat. Protoc. 17, 2431–2468 (2022).
+    transcription and epigenetic states. Nature 500, 472–476 (2013).        51. McGee, A. V. et al. Modular vector assembly enables rapid
+28. Maeder, M. L. et al. CRISPR RNA-guided activation of endogenous             assessment of emerging CRISPR technologies. Cell Genomics 4,
+    human genes. Nat. Methods 10, 977–979 (2013).                               100519 (2024).
+29. Perez-Pinera, P. et al. RNA-guided gene activation by                   52. Untergasser, A. et al. Primer3—new capabilities and interfaces.
+    CRISPR-Cas9-based transcription factors. Nat. Methods 10,                   Nucleic Acids Res. 40, e115 (2012).
+    973–976 (2013).                                                         53. Cancellieri, S., Canver, M. C., Bombieri, N., Giugno, R. & Pinello,
+30. Anzalone, A. V. et al. Search-and-replace genome editing without            L. CRISPRitz: rapid, high-throughput and variant-aware in
+    double-strand breaks or donor DNA. Nature 576, 149–157 (2019).              silico off-target site identification for CRISPR genome editing.
+31. Gaudelli, N. M. et al. Programmable base editing of A•T to G•C in           Bioinformatics 36, 2001–2008 (2020).
+    genomic DNA without DNA cleavage. Nature 551, 464–471 (2017).           54. Hwang, G.-H. et al. PE-Designer and PE-Analyzer: web-based
+32. Anzalone, A. V., Koblan, L. W. & Liu, D. R. Genome editing with             design and analysis tools for CRISPR prime editing. Nucleic Acids
+    CRISPR–Cas nucleases, base editors, transposases and prime                  Res. 49, W499–W504 (2021).
+    editors. Nat. Biotechnol. 38, 824–844 (2020).                           55. Chow, R. D., Chen, J. S., Shen, J. & Chen, S. A web tool for
+33. Pickar-Oliver, A. & Gersbach, C. A. The next generation of CRISPR–          the design of prime-editing guide RNAs. Nat. Biomed. Eng. 5,
+    Cas technologies and applications. Nat. Rev. Mol. Cell Biol. 20,            190–194 (2021).
+    490–507 (2019).                                                         56. Morris, J. A., Rahman, J. A., Guo, X. & Sanjana, N. E. Automated
+34. Tsang, J. 15 Years of Addgene: The Top 15 Plasmids. Addgene Blog            design of CRISPR prime editors for 56,000 human pathogenic
+    https://blog.addgene.org/15-years-of-addgene-the-top-15-                    variants. iScience 24, 103380 (2021).
+    plasmids (2019).                                                        57. Clement, K. et al. CRISPResso2 provides accurate and rapid
+35. Office of the Commissioner. FDA approves first gene therapies               genome editing sequence analysis. Nat. Biotechnol. 37,
+    to treat patients with sickle cell disease. FDA News Release                224–226 (2019).
+    https://www.fda.gov/news-events/press-announcements/fda-                58. Introducing Meta Llama 3: the most capable openly available
+    approves-first-gene-therapies-treat-patients-sickle-cell-disease            LLM to date. Meta Blog https://ai.meta.com/blog/meta-llama-3/
+    (2024).                                                                     (2024).
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                 257
+<PARSED TEXT FOR PAGE: 14 / 24>
+Article                                                                                                 https://doi.org/10.1038/s41551-025-01463-z
+
+59. Vaswani, A. et al. Attention is all you need. Adv. Neural Inf. Process.   This work used supercomputing resources provided by Nebius
+    Syst. 30, 5998–6008 (2017).                                               Group N.V. and the Stanford Genetics Bioinformatics Service Center,
+60. Loshchilov, I. et al. Decoupled Weight Decay Regularization               supported by NIH Instrumentation Grant S10 OD023452. We thank the
+    (ICLR, 2019).                                                             Stanford Institute for Stem Cell Biology and Regenerative Medicine,
+61. Hu, E. et al. LoRA: Low-Rank Adaptation of Large Language Models          the Stanford Cancer Institute, and the Stanford Wu-Tsai Neuroscience
+    (ICLR, 2022).                                                             Institute for technical advice and support.
+62. Dettmers, T., Pagnoni, A., Holtzman, A. & Zettlemoyer, L.
+    QLORA: efficient finetuning of quantized LLMs. In Proc. 37th              Author contributions
+    International Conference on Neural Information Processing                 Y.Q., K.H., M.Y., M.W. and L.C. designed the research, constructed
+    Systems (eds Oh, A. et al.) 441 (NeurIPS, 2023).                          models, performed experiments and analysed data. K.Z., D.L. and
+63. Zhou, C. et al. Lima: Less is more for alignment. In Proc. 37th           D.Z. supported model construction, deployment and evaluation.
+    International Conference on Neural Information Processing                 Y.Q., X.W., D.Y, M.Y., H.C.C., W.A.J., M.S. and R.B.A. contributed to
+    Systems (eds Oh, A. et al.) 2400 (NeurIPS, 2023).                         human evaluation and analysed data. L.C. and M.W. conceived and
+64. Delvin, J., Chang, M.-W., Lee, K. & Toutanova, K. BERT: pre-training      supervised the research. Y.Q., K.H., M.Y., M.W. and L.C. wrote the paper
+    of deep bidirectional transformers for language understanding.            with input from all authors.
+    Proc. Conf. NAACL-HLT 2019, 4171–4186 (2019).
+65. Liu, Z., Lin, W., Shi, Y. & Zhao, J. RoBERTa: A Robustly Optimized        Competing interests
+    BERT Pretraining Approach. In Proc. 20th Chinese National                 Princeton University and Stanford University have filed patent
+    Conference on Computational Linguistics (eds Li, S. et al.) 1218–         applications (#19/093,928, Princeton and Stanford, 2025) based on
+    1227 (Chinese Information Processing Society of China, 2021).             this work, where L.C., M.W., Y.Q. and K.H. are listed as inventors. L.C. is
+66. Frequently Asked Questions About CRISPR (Innovative Genomics              a member of the scientific advisory board of Arbor Biotechnologies.
+    Institute, 2025).                                                         L.C. has equity interest in Auto Bio, Rootpath Genomics, and Acrobat
+67. Beumer, J. et al. CRISPR: questions and answers. STAR Protoc.             Genomics. D.Z. is an employee of Google DeepMind. The remaining
+    https://star-protocols.cell.com/protocols/2555 (2023).                    authors declare no competing interests.
+68. Doudna, J. A. The promise and challenge of therapeutic genome
+    editing. Nature 578, 229–236 (2020).                                      Additional information
+69. Hoffmann, S. A. et al. Safety by design: biosafety and biosecurity        Extended data is available for this paper at
+    in the age of synthetic genomics. iScience 26, 106165 (2023).             https://doi.org/10.1038/s41551-025-01463-z.
+70. Lander, E. S. et al. Adopt a moratorium on heritable genome
+    editing. Nature 567, 165–168 (2019).                                      Supplementary information The online version
+71. Summary of the HIPAA Privacy Rule https://www.hhs.gov/hipaa/              contains supplementary material available at
+    for-professionals/privacy/laws-regulations/index.html                     https://doi.org/10.1038/s41551-025-01463-z.
+    (US Department of Health and Human Services, 2008).
+72. Naveed, M. et al. Privacy in the genomic era. ACM Comput. Surv.           Correspondence and requests for materials should be addressed to
+    48, 6 (2015).                                                             Mengdi Wang or Le Cong.
+73. OpenAI. ChatGPT plugins. https://openai.com/blog/chatgpt-
+    plugins (2023).                                                           Peer review information Nature Biomedical Engineering thanks the
+74. Shen, Y. et al. HuggingGPT: solving AI tasks with ChatGPT and             anonymous reviewers for their contribution to the peer review of
+    its friends in hugging face. In Advances in Neural Information            this work.
+    Processing Systems (eds Oh, A. et al.) Vol. 36, 38154–38180
+    (Curran Associates, Inc., 2023).                                          Reprints and permissions information is available at
+75. Wang, G. et al. Voyager: an open-ended embodied agent with                www.nature.com/reprints.
+    large language models. Preprint at https://doi.org/10.48550/
+    arXiv.2305.16291 (2023).                                                  Publisher’s note Springer Nature remains neutral with regard to
+76. Hao, S., Liu, T., Wang, Z. & Hu, Z. ToolkenGPT: augmenting frozen         jurisdictional claims in published maps and institutional affiliations.
+    language models with massive tools via tool embeddings. In
+    Advances in Neural Information Processing Systems (eds Oh, A.             Open Access This article is licensed under a Creative Commons
+    et al.) Vol. 36, 45870–45894 (Curran Associates, Inc., 2023).             Attribution 4.0 International License, which permits use, sharing,
+77. Patil, S. G., Zhang, T., Wang, X. & Gonzalez, J. E. Gorilla: large        adaptation, distribution and reproduction in any medium or format,
+    language model connected with massive APIs. In Advances in                as long as you give appropriate credit to the original author(s) and the
+    Neural Information Processing Systems (eds Globerson, A. et al.)          source, provide a link to the Creative Commons licence, and indicate
+    Vol. 37, 126544–126565 (Curran Associates, Inc., 2024).                   if changes were made. The images or other third party material in this
+78. Qu, Y. et al. CRISPR-GPT: an LLM agent for automated design of            article are included in the article’s Creative Commons licence, unless
+    gene-editing experiments. GitHub https://github.com/cong-lab/             indicated otherwise in a credit line to the material. If material is not
+    crispr-gpt-pub (2024).                                                    included in the article’s Creative Commons licence and your intended
+                                                                              use is not permitted by statutory regulation or exceeds the permitted
+Acknowledgements                                                              use, you will need to obtain permission directly from the copyright
+This work was supported by the National Institutes of Health                  holder. To view a copy of this licence, visit http://creativecommons.
+(grant nos. 1R35HG011316 and 1R01GM141627 to L.C.), Donald and                org/licenses/by/4.0/.
+Delia Baxter Foundation Faculty Scholar award (L.C.), the Weintz family
+foundation (L.C.), and National Science Foundation grant 1653435 (M.W.).      © The Author(s) 2025, modified publication 2025
+
+
+
+
+Nature Biomedical Engineering | Volume 10 | February 2026 | 245–258                                                                                   258
+<PARSED TEXT FOR PAGE: 15 / 24>
+Article                                                                                                    https://doi.org/10.1038/s41551-025-01463-z
+
+
+
+
+Extended Data Fig. 1 | LLM-powered exon suggestion for guideRNA design          the designs are provided. CRISPick designs used the default combined ranking
+in CRISPR-GPT. a, Workflow of the exon suggestion feature within the            by on-/off-target scores based on Azimuth 2.0 algorithm and Cutting Frequency
+guideRNA design module in CRISPR-GPT. b. Demonstration of the thought and       Determination (CFD) scores. CHOPCHOP design uses the default on-target
+action processes for exon suggestion in response to a real-world user request   efficiency ranking based on Doench et al., 2016. d, Exons and key bromodomains
+(additional details in Methods) c. Comparison of gRNA designs with exon         (BD1/BD2) of the BRD4 protein are shown for reference.
+information from different tools (CRISPR-GPT, CRISPick, CHOPCHOP). Notes on
+
+
+
+
+Nature Biomedical Engineering
+<PARSED TEXT FOR PAGE: 16 / 24>
+Article                                                                                                    https://doi.org/10.1038/s41551-025-01463-z
+
+
+
+
+Extended Data Fig. 2 | Example of CRISPR-GPT QA on gene-editing questions, compared to baseline models (Part 1/3). The question was from the gene-editing
+QA test set (Supplementary Note C). Questions and answers are displayed, with expert notes in bottom boxes. Evaluations and comments conducted in a fully
+blinded setting.
+
+
+
+
+Nature Biomedical Engineering
+<PARSED TEXT FOR PAGE: 17 / 24>
+Article                                                                                                    https://doi.org/10.1038/s41551-025-01463-z
+
+
+
+
+Extended Data Fig. 3 | Example of CRISPR-GPT QA on gene-editing questions, compared to baseline models (Part 2/3). The question was from the gene-editing
+QA test set (Supplementary Note C). Questions and answers are displayed, with expert notes in bottom boxes. Evaluations and comments conducted in a fully
+blinded setting.
+
+
+
+
+Nature Biomedical Engineering
+<PARSED TEXT FOR PAGE: 18 / 24>
+Article                                                                                                    https://doi.org/10.1038/s41551-025-01463-z
+
+
+
+
+Extended Data Fig. 4 | Example of CRISPR-GPT QA on gene-editing questions, compared to baseline models (Part 3/3). The question was from the gene-editing
+QA test set (Supplementary Note C). Questions and answers are displayed, with expert notes in bottom boxes. Evaluations and comments conducted in a fully
+blinded setting.
+
+
+
+
+Nature Biomedical Engineering
+<PARSED TEXT FOR PAGE: 19 / 24>
+Article                                                                                                        https://doi.org/10.1038/s41551-025-01463-z
+
+
+
+
+Extended Data Fig. 5 | Examples of CRISPR-GPT defending against dual usage and ethical, privacy risks. The agent identifies potential risks related to dual usage
+risks (top), human heritable gene-editing and private genetic information leakage (bottom), responds with warning messages or errors, and stops proceeding.
+
+
+
+
+Nature Biomedical Engineering

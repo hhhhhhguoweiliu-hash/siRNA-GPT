@@ -1,0 +1,52 @@
+{
+  "title": "CRISPR-GPT for agentic automation of gene-editing experiments",
+  "doi": "10.1038/s41551-025-01463-z",
+  "article_url": "https://www.nature.com/articles/s41551-025-01463-z",
+  "authors_code_url": "https://github.com/cong-lab/crispr-gpt-pub",
+  "source": "Text extracted by document read API from user-provided PDF; not a generated paraphrase",
+  "source_file_name": "s41551-025-01463-z.pdf",
+  "source_pdf_size_bytes": 17033615,
+  "source_pdf_reported_page_count": 24,
+  "read_date_utc": "2026-10-20",
+  "indexed_line_windows": [
+    [
+      1,
+      1000
+    ],
+    [
+      1001,
+      1578
+    ]
+  ],
+  "indexed_has_more": false,
+  "extracted_page_markers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "pages_20_to_24_text_request": "No readable content was found in this file for the requested mode.",
+  "limitations": [
+    "Original PDF binary transfer failed; no original PDF committed.",
+    "Text extraction may reorder columns and omit figure details.",
+    "Supplementary Information is not separately archived here."
+  ],
+  "extracted_file": "paper_extracted_text.txt",
+  "extracted_bytes": 159144,
+  "extracted_sha256": "66abc98b9b3dc4ee1e33838bcd69c54bfd4a4101f9d576040ecf50c75f421672"
+}

@@ -1,5 +1,7 @@
 # 与 CRISPR-GPT 的对齐核查：siRNA-GPT 0.6
 
+2026-10-20补充：[原文可提取文本及读取边界](references/CRISPR-GPT/README.md)现已入仓；[优先迁移路线](docs/PAPER_MIGRATION_FAST_TRACK.md)把本页机制对照落实到首批案例、图表和评价。当前未取得原PDF字节，不应将文本归档说成已经提交原始PDF或完整补充材料。
+
 核查依据为用户提供的完整论文 PDF、论文 Methods 与图1–4，以及作者公开仓库 README。参考论文：Qu et al., *CRISPR-GPT for agentic automation of gene-editing experiments*, DOI 10.1038/s41551-025-01463-z。作者仓库：https://github.com/cong-lab/crispr-gpt-pub 。作者当前只公开轻量版本，不能据此声称已经逐行复现原文完整系统。
 
 ## 逐项对照

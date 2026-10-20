@@ -4,6 +4,8 @@
 
 ## 先读这些
 
+**当前优先：[按CRISPR-GPT迁移并取得首批结果](docs/PAPER_MIGRATION_FAST_TRACK.md)**，先读[原文资料](references/CRISPR-GPT/README.md)。不把专用微调、全工具复现或扩大湿实验作为第一批结果的门槛。当前Git含原文可提取文本；PDF字节下载失败，未提交原PDF，详见来源说明。
+
 1. [AGENTS.md](AGENTS.md)：执行约束。
 2. [课题全貌](docs/PROJECT.md)：研究目的、证据链、完成标准。
 3. [当前状态](docs/STATUS.md)：已完成与尚未完成的事实。
