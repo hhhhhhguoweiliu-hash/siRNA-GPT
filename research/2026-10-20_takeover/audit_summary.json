@@ -43,6 +43,6 @@
     "python": "3.10.11",
     "platform": "Windows-10-10.0.26200-SP0"
   },
-  "source_commit": "a86b12bb26bc59e84cd02ecb5c7803ce736c141f",
+  "source_commit": "6450b26273c2370a177163924df9f7e170836baf",
   "branch": "codex/20261020-evidence-pilot"
 }
