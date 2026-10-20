@@ -88,6 +88,7 @@ def _run_case(group,case,cfg,root,transport=None):
     result['total_tokens']=(sum(u['total_tokens'] for u in result['usage'])
         if result['usage'] and known else 0 if group=='workflow' else None)
     result['usage_complete']=group=='workflow' or bool(result['usage']) and known and not result.get('provider_error')
+    result['known_token_subtotal']=sum(u['total_tokens'] for u in result['usage'] if isinstance(u.get('total_tokens'),int)) if result['usage'] else 0 if group=='workflow' else None
     return result
 
 def run_case(group,case,cfg,root,transport=None):

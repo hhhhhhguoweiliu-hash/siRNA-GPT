@@ -48,6 +48,14 @@ def main():
     tpm_means={state:sum(float(r['TPM']) for r in raw_tpm if r['state']==state)/4 for state in ['Normoxia','Hypoxia']}
     report=json.loads(reports[0].with_name('report.json').read_text(encoding='utf-8'))
     probe=json.loads((batch/'model_connection.json').read_text(encoding='utf-8'))
+    online_path=batch/'model_connection_online.json'
+    online=json.loads(online_path.read_text(encoding='utf-8')) if online_path.exists() else None
+    auto_path=batch/'auto_case/conversation.json'
+    auto=json.loads(auto_path.read_text(encoding='utf-8')) if auto_path.exists() else None
+    if auto:
+        assert auto['result']['status']=='COMPLETE' and len(auto['scientific_run']['tool_results'])==6
+        assert auto['plan']['source']=='豆包LLM规划' and auto['plan']['completed']==auto['plan']['tools']
+        assert auto['result']['selected_for_review']==report['selected_for_review']
     summary={'checked_in_manifest_files_verified':len(m['files']),'historical_entries':len(records),
         'unique_answer_ids':54,'historical_schedule_and_6x3x3_coverage_verified':True,
         'historical_account_limit_entries':len(blocked),'historical_blocked_agent_scientific_calls':0,
@@ -56,7 +64,9 @@ def main():
         'candidate_evidence_all_9_rows_equal_to_handoff':True,
         'selected_for_review':report['selected_for_review'],'baseline_VEGFA_TPM_means':tpm_means,
         'model_probe':{'status':probe['status'],'provider_code':probe.get('provider_code'),'http_status':probe.get('http_status')},
-        'production_model_state':'NOT_TESTED_AUTH_REQUIRED','true_auto_case_run':False,'new_three_arm_batch_run':False,
+        'production_model_state':online['connection']['status'] if online else 'NOT_TESTED_AUTH_REQUIRED',
+        'true_auto_case_run':bool(auto),'auto_runtime_commit':auto['runtime']['commit'] if auto else None,
+        'new_three_arm_batch_audited':(batch/'three_arm/summary.json').exists(),
         'scientific_accuracy_scored':False,'scientific_mode':'verified historical imports; no heavy inference',
         'environment':{'python':platform.python_version(),'platform':platform.platform()},
         'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),

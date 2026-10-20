@@ -6,6 +6,22 @@ from unittest.mock import patch
 import evaluate,paper_pilot
 
 class EvaluationExportTests(unittest.TestCase):
+    def test_ready_plan_preserves_planner_usage_before_execution(self):
+        from test_conversation import message_response
+        from conversation import Conversation
+        import time
+        with tempfile.TemporaryDirectory() as tmp:
+            def transport(payload):
+                r=message_response(name='propose_plan',args={'decision':'ready','summary':'TEST','tools':['verify_target'],'question':''})
+                r['usage']={'total_tokens':37};return r
+            c=Conversation(root=Path(tmp),cfg_loader=lambda:{},transport=transport)
+            c.submit({'interaction_mode':'auto','message':'TEST','web_enabled':False})
+            deadline=time.monotonic()+5
+            while c.snapshot()['busy'] and time.monotonic()<deadline:time.sleep(.01)
+            self.assertEqual(c.phase,'awaiting_execution')
+            planner=[e for e in c.events if e['kind']=='planner_finished']
+            self.assertEqual([e['usage']['total_tokens'] for e in planner],[37])
+
     def suite(self,root):
         source=root/'cases.json'
         source.write_text(json.dumps({'review_status':'TEST_ONLY','cases':[
@@ -32,10 +48,13 @@ class EvaluationExportTests(unittest.TestCase):
 
     def test_missing_model_usage_remains_unknown_and_raw_answer_is_saved(self):
         with tempfile.TemporaryDirectory() as tmp:
-            r=evaluate.run_case('llm',{'id':'x','request':'TEST_ONLY'},
-                {'model':'TEST','api_key':'TEST_SECRET'},tmp,
-                lambda p:{'choices':[{'message':{'content':'TEST_ONLY'}}]})
-            self.assertIsNone(r['total_tokens']);self.assertFalse(r['usage_complete'])
+            for usage,expected in [(None,None),({'input_tokens':7},None),({'total_tokens':11},11)]:
+                response={'choices':[{'message':{'content':'TEST_ONLY'}}]}
+                if usage is not None:response['usage']=usage
+                r=evaluate.run_case('llm',{'id':'x','request':'TEST_ONLY'},
+                    {'model':'TEST','api_key':'TEST_SECRET'},tmp,lambda p:response)
+                self.assertEqual(r['total_tokens'],expected)
+                self.assertEqual(r['usage_complete'],expected is not None)
             self.assertTrue((Path(tmp)/'model_request.json').is_file())
             self.assertIn('TEST_ONLY',(Path(tmp)/'model_response.json').read_text())
 

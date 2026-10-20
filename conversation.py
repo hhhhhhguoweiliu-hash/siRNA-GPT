@@ -339,6 +339,7 @@ class Conversation:
             context = {'plan': self.plan, 'result': self.result,'input_error':input_error,
                 'tool_results': self.session.state if self.session else {}}
             def build():
+                planner_event=None
                 if mode == 'meta':
                     preset = data.get('preset', 'full')
                     if preset not in PRESETS: raise ValueError('请选择支持的引导任务')
@@ -346,7 +347,8 @@ class Conversation:
                     source = '预设引导路径（未调用LLM规划）'
                 else:
                     proposed, usage = propose(text, inputs, self.messages, self.cfg_loader(), self.model_call, local_context=context)
-                    self.progress({'time': now(), 'kind': 'planner_finished', 'message': '任务规划已返回', 'usage': usage})
+                    planner_event={'time': now(), 'kind': 'planner_finished', 'message': '任务规划已返回', 'usage': usage}
+                    self.progress(planner_event)
                     source = '豆包LLM规划'
                 if proposed['decision'] == 'research':
                     with self.lock: self.phase = previous_phase
@@ -358,7 +360,7 @@ class Conversation:
                     if input_error:raise TaskError(input_error)
                     if self.session:
                         self.previous_runs.append({'run_id':self.session.id,'task':self.session.task,'result':self.result})
-                    self.result = None; self.events = []; self.session = None
+                    self.result = None; self.events = [planner_event] if planner_event else []; self.session = None
                     inputs['task'].update(proposed.get('task_updates', {}))
                     self.private = inputs
                     self.plan = {'id': uuid.uuid4().hex[:12], 'mode': mode, 'source': source,
