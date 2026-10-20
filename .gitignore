@@ -19,3 +19,6 @@ uploaded_expression/
 figures_rebuilt/
 
 research_regenerated/
+
+.test_tmp/
+.plot_deps/

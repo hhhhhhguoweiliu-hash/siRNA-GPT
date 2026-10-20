@@ -18,7 +18,7 @@ def log(kind,value):
     print('PAPER_PILOT '+kind+' '+json.dumps(value,ensure_ascii=True,separators=(',',':')),flush=True)
 
 def run(cfg_loader,run_id):
-    from evaluate import run_case
+    from evaluate import run_case,write_execution_status,export_answers
     if not re.fullmatch(r'[a-zA-Z0-9_-]{1,50}',run_id):raise ValueError('Invalid run ID')
     if not LOCK.acquire(blocking=False):return
     out=HOME/'evaluation_runs'/run_id
@@ -38,32 +38,35 @@ def run(cfg_loader,run_id):
         STOP.clear();STATE.clear();STATE.update(status='RUNNING',run_id=run_id,completed=0,total=len(jobs));log('BEGIN',protocol)
         results=[]
         blocking_error=None
+        timed_out=False
+        write_execution_status(out,jobs,results,'RUNNING')
         for index,(case,group,rep) in enumerate(jobs):
             if STOP.is_set():break
             answer_id='A'+str(index+1).zfill(3);folder=out/answer_id
             try:r=run_case(group,case,cfg,folder)
-            except TimeoutError:
+            except TimeoutError as e:
                 # Do not overlap with a timed-out running conversation.
-                STATE.update(status='STOPPED_TIMEOUT');log('STOP',STATE);raise
+                timed_out=True
+                r={'group':group,'case_id':case['id'],'status':'TIMED_OUT','answer':str(e),
+                    'usage':[],'tool_calls':0,'seconds':None,'total_tokens':None}
             except Exception as e:r={'group':group,'case_id':case['id'],'status':'FAILED','answer':str(e),'usage':[],'tool_calls':0,'seconds':None}
             r.update(answer_id=answer_id,repeat=rep,recorded_at=now())
             # Strip the actual secret if a provider were to echo it in an error/text.
             raw=json.dumps(r,ensure_ascii=False);secret=cfg.get('api_key','')
             if secret:raw=raw.replace(secret,'[REDACTED]')
             r=json.loads(raw);folder.mkdir(parents=True,exist_ok=True);save_json(folder/'result.json',r);results.append(r)
-            STATE.update(completed=index+1);log('CASE',{'answer_id':answer_id,'case_id':case['id'],'group':group,'repeat':rep,'status':r['status'],'seconds':r.get('seconds'),'tool_calls':r.get('tool_calls',0),'tokens':r.get('total_tokens',0)})
+            save_json(out/'results.json',results);write_execution_status(out,jobs,results,'RUNNING')
+            STATE.update(completed=index+1);log('CASE',{'answer_id':answer_id,'case_id':case['id'],'group':group,'repeat':rep,'status':r['status'],'seconds':r.get('seconds'),'tool_calls':r.get('tool_calls',0),'tokens':r.get('total_tokens')})
             if account_blocked(r.get('provider_error',{})):
                 blocking_error=r['provider_error'];STATE.update(blocking_error=blocking_error)
                 log('ACCOUNT_BLOCK',blocking_error);break
+            if timed_out:break
         save_json(out/'results.json',results)
-        import csv
-        for filename,rows in [('blind_answers.tsv',[{'answer_id':r['answer_id'],'case_id':r['case_id'],'request':next(c['request'] for c in cases if c['id']==r['case_id']),'answer':r.get('answer',''),'reviewer_id':'','accuracy_0_2':'','evidence_0_2':'','task_fit_0_2':'','limits_0_2':'','notes':''} for r in results]),
-            ('private_key.tsv',[{k:r[k] for k in ['answer_id','case_id','group','repeat','status']} for r in results])]:
-            with (out/filename).open('w',encoding='utf-8-sig',newline='') as f:
-                w=csv.DictWriter(f,fieldnames=list(rows[0]),delimiter='\t');w.writeheader();w.writerows(rows)
-        STATE.update(status='BLOCKED_ACCOUNT' if blocking_error else 'STOPPED' if STOP.is_set() else 'COMPLETE',
+        export_answers(out,cases,results)
+        STATE.update(status='BLOCKED_ACCOUNT' if blocking_error else 'STOPPED_TIMEOUT' if timed_out else 'STOPPED' if STOP.is_set() else 'COMPLETE',
             finished_at=now(),pending=len(jobs)-len(results),scientific_quality_scored=False)
         save_json(out/'completion.json',STATE)
+        write_execution_status(out,jobs,results,STATE['status'])
         # Includes raw conversation/model attempts and scientific tables, not just summaries.
         buffer=io.BytesIO()
         with zipfile.ZipFile(buffer,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
