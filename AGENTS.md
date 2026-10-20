@@ -1,5 +1,7 @@
 # 项目协作约束
 
+先遵守[用户明确要求](docs/USER_REQUIREMENTS.md)：真实、完整且有研究意义；Codex负责执行和上传，科研取舍交另一ChatGPT对话与用户决定。面向只有生物学背景的用户，默认简短中文、少术语；必要英文/缩写首次解释全称和中文意思。不展开不必要的长篇科研分析，交付后只说完成内容、文件位置和是否到了需要共同决策的时候。
+
 先读CODEX_HANDOFF.md及docs/TASKS.md。继续现有Python/原生前端栈，避免无必要重建项目或引入复杂多Agent框架。
 
 新ChatGPT/Codex协作读COLLABORATION.md和docs/WORKBOARD.md：Codex默认统一维护代码、WORKBOARD和STATUS；ChatGPT新建带所审commit的docs/reviews/复核。收到对方更新通知后重新读最新提交，不假装能自动读取另一个聊天，也不覆盖并行修改。
