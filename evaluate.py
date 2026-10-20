@@ -95,9 +95,13 @@ def run_case(group,case,cfg,root,transport=None):
     started=time.monotonic()
     try:return _run_case(group,case,cfg,root,transport)
     except ModelError as e:
+        partial=getattr(e,'response_snapshot',None)
+        if partial is not None:save_json(Path(root)/'model_error_response.json',safe_record(partial,cfg))
+        usage=partial.get('usage',{}) if isinstance(partial,dict) else {}
         return {'group':group,'case_id':case['id'],'status':'FAILED','answer':str(e),
             'provider_error':{k:v for k,v in e.diagnostics().items() if k!='provider_message'},
-            'usage':[],'tool_calls':0,'total_tokens':None,'seconds':round(time.monotonic()-started,3)}
+            'usage':[usage] if usage else [],'usage_complete':False,'partial_response_saved':partial is not None,
+            'tool_calls':0,'total_tokens':None,'seconds':round(time.monotonic()-started,3)}
 
 def main(argv=None):
     p=argparse.ArgumentParser();p.add_argument('--cases',required=True);p.add_argument('--output',required=True)

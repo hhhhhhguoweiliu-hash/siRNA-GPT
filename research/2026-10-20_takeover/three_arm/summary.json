@@ -1,0 +1,55 @@
+{
+  "archive_bytes": 5028649,
+  "archive_sha256": "c7ed5855173f433f0671a0952d9c244c4173956ab8b347f57ab188d6a37a466b",
+  "zip_crc": "PASS",
+  "run_id": "dev_20261020_070207_843de3",
+  "runtime_commit": "e53bacba981a9082fad4df57c600eb93de159dc8",
+  "model": "doubao-seed-2-1-pro-260915",
+  "planned": 54,
+  "attempted": 54,
+  "pending": 0,
+  "completion_status": "COMPLETE",
+  "groups": [
+    {
+      "group": "llm",
+      "attempted": 18,
+      "status_counts": "{\"ANSWERED_NO_TOOLS\": 12, \"FAILED\": 6}",
+      "provider_error_records": 6,
+      "scientific_tool_attempts": 0,
+      "usage_unknown_records": 6,
+      "known_token_subtotal": 54129,
+      "median_seconds_all_states": 29.4015,
+      "median_seconds_without_provider_errors": 20.3065,
+      "median_seconds_provider_errors": 47.8815
+    },
+    {
+      "group": "workflow",
+      "attempted": 18,
+      "status_counts": "{\"FAILED\": 9, \"PARTIAL_COMPLETE\": 3, \"COMPLETE\": 6}",
+      "provider_error_records": 0,
+      "scientific_tool_attempts": 51,
+      "usage_unknown_records": 0,
+      "known_token_subtotal": 0,
+      "median_seconds_all_states": 0.0055,
+      "median_seconds_without_provider_errors": 0.0055,
+      "median_seconds_provider_errors": null
+    },
+    {
+      "group": "agent",
+      "attempted": 18,
+      "status_counts": "{\"COMPLETE\": 4, \"PARTIAL_COMPLETE\": 3, \"idle\": 8, \"FAILED\": 3}",
+      "provider_error_records": 2,
+      "scientific_tool_attempts": 38,
+      "usage_unknown_records": 10,
+      "known_token_subtotal": 241107,
+      "median_seconds_all_states": 13.69,
+      "median_seconds_without_provider_errors": 9.125,
+      "median_seconds_provider_errors": 104.322
+    }
+  ],
+  "web_enabled": false,
+  "independent_development_tasks": 6,
+  "technical_repeats_per_task": 3,
+  "scientific_quality_scored": false,
+  "note": "Raw states and timing are not accuracy. Token sums are returned usage only; no monetary cost inferred."
+}

@@ -1,7 +1,5 @@
 # 已有结果、图表与原始评价记录
 
-新一轮接手、离线复现及真实Auto记录见[2026-10-20交付](2026-10-20_takeover/README.md)。本轮不覆盖下面历史批次；真实新三组运行按其独立批次归档。
-
 本目录为真实产物的Git交接版，未运行的模型结果没有补造。全部文件校验见[manifest.json](manifest.json)，可运行`python scripts/inspect_research_results.py`检查。
 
 ## 2026-10-19原型与表达背景

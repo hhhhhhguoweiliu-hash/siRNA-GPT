@@ -1,0 +1,21 @@
+{
+  "planned_units": 54,
+  "recorded_units": 54,
+  "independent_development_tasks": 6,
+  "technical_repeats": 3,
+  "unique_agent_conversations": 18,
+  "infrastructure_error_records": 8,
+  "three_arm_repeat_units_without_infrastructure_error": 12,
+  "per_case_available_repeats": {
+    "ambiguous_direction": 3,
+    "invalid_sequence": 3,
+    "normal_hypoxia": 0,
+    "normal_normoxia": 1,
+    "target_only": 2,
+    "unsupported_target": 3
+  },
+  "completed_agent_scope_checks": 7,
+  "scientific_quality_scored": false,
+  "full_six_task_paired_quality_comparison_ready": false,
+  "limitation": "Availability is not correctness. Clarifications and program failures still need independent scoring. The hypoxia task has no complete plain-LLM response in this batch."
+}

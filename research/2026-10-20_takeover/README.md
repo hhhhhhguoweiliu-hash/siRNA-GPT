@@ -53,4 +53,31 @@ python -c "import sys,runpy; sys.path.insert(0,'.plot_deps'); runpy.run_path('sc
 
 真实Auto经现有网页输入需求→模型计划→按计划开始执行；三组经现有网页勾选用量确认→启动本次预评估。没有通过启动脚本或环境变量自动起批。
 
-批次运行完成后补充原始ZIP、`three_arm/`自动统计与去组名答案；任何异常和未执行单元均保留，旧失败不拼入新批。
+## 新三组真实批次：已运行，仍不足完整质量比较
+
+批次`dev_20261020_070207_843de3`，北京时间15:02:07–15:20:50；`three_arm_original.zip`为逐字节原包，5,028,649字节、459个文件，SHA256及CRC见下载收据。54条唯一ID、协议顺序、6题×3组×3次和逐条/汇总一致性通过，Agent18个会话ID独立；协议关闭外部联网。未把昨日失败或本地固定流程拼进本批。
+
+| 组 | 本批实际状态 |
+|---|---|
+| 普通LLM | 12条ANSWERED_NO_TOOLS；6条OUTPUT_TRUNCATED，没有完整可用回答 |
+| 固定流程 | 6完整、3局部核对、9异常输入停止 |
+| Agent | 4完整、3局部、8 idle；3失败含2网络与1计划格式失败 |
+
+这不是54条全有效配对：18个题目重复单元中12个无API异常；`normal_hypoxia`为0/3，`normal_normoxia`为1/3、`target_only`为2/3。其余异常任务各3/3仍需人工评其停止/澄清是否正确。只有6道已见开发题，不是18道独立题，不能作泛化或显著性结论。完整Agent的4份正常报告和3份target_only证据范围检查通过；这是工具覆盖/条件核查，不是科学准确率。
+
+`three_arm/`提供原始results.json.gz、54行records.tsv、execution_status.tsv、配对可用性、failure_diagnostics.tsv、7份完成Agent的证据范围核查、group_summary.tsv和2幅PNG/SVG/PDF诊断图。原始答案与空白评分栏在`for_review/`；`private_key.tsv`单独保存。只给评审for_review及已冻结评分说明，不给原始ZIP/密钥。去掉组名不能保证风格盲法。
+
+已知返回用量小计：普通LLM54,129、Agent241,107 tokens；失败调用缺usage、部分Agent缺规划轮，因此都不是全组总量，不推算货币费用。独立科学分数未填。6次OUTPUT_TRUNCATED没有保留服务端incomplete_details，不能断言确切原因一定为1800输出上限；本地已补充错误原文留存，下一轮先诊断，再冻结统一参数，不自动提高账号额度或覆盖失败。
+
+线上该版本未给普通LLM单独保存请求/响应JSON；12份原始回答和返回usage仍在原包，输入由cases/protocol与当次源码追溯。不能将此包称为所有HTTP字节均已留存。新代码已为后续调用保存请求、正常响应与不完整响应，但不能补造本批丢失内容。
+
+复现本批审计（新空目录）：
+
+```powershell
+python -c "import sys,runpy; sys.path.insert(0,'.plot_deps'); runpy.run_path('scripts/summarize_development_batch.py',run_name='__main__')" --archive research/2026-10-20_takeover/three_arm_original.zip --output research/new_batch_audit --plot
+python scripts/audit_development_evidence.py --batch research/new_batch_audit
+```
+
+审计时修正了两项验收脚本自身的问题：效力与seed步骤可合法交换，按工具集合与依赖检查；原research/README.md受历史manifest固定，已按接手blob逐字节恢复，入口链接只写WORKBOARD/STATUS。原始research证据37项最终再次通过。
+
+126项最终软件检查记录见`tests-final-126.txt`。本批诊断图只展示执行状态/分任务耗时，API异常不混作正常推理耗时；无准确率、优越性或显著性图。

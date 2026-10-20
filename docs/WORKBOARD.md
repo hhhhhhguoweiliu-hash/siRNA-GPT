@@ -10,9 +10,10 @@ Codex统一维护本表，ChatGPT在docs/reviews/提交独立复核。已有详�
 | R01 | ChatGPT | 已提交并读取 | e53bacb新增docs/reviews/20261020_1435_initial_review.md；两项必要修复已落实于bd41679，详见本轮验收 |
 | C02 | Codex | 线上已有效；本地单独失败 | 本地一次403/AccessDenied已停；线上显示工具回传已验证并实际完成Auto，不混同两套凭证；未修改密钥/额度 |
 | C03 | Codex | 已完成并校验归档 | 线上e53bacb，run 20261020_064921_2dae59，6科学工具；会话49801字节，29文件ZIP 434351字节，CRC通过；历史导入标识保留 |
-| C04 | Codex；既有网页用量确认 | 新批次运行中，52/54已记录 | dev_20261020_070207_843de3，通过网页勾选确认启动；全部关闭外网。运行期间不部署/重启；结束后立即保存原包 |
-| R02 | ChatGPT；独立评审另需真人 | 依赖C03/C04 | 复核证据与组间公平性，输出必要修正；ChatGPT复核不能代替独立专家评分 |
-| C05 | Codex | 离线表图已交；等待新批次 | 已有audit_summary.json、workflow_summary.tsv及10幅重绘图；新三组结束后导出状态/延迟/usage/调用，不代填科学评分 |
+| C04 | Codex；既有网页用量确认 | 已交54条真实运行；完整配对不足 | dev_20261020_070207_843de3：54唯一ID/协议顺序/6×3×3/独立会话及CRC通过；6输出不完整+2网络失败，另1规划格式失败；不可宣称完整有效三组质量比较 |
+| R02 | ChatGPT；独立评审另需真人 | 待复核PR #1最新分支 | 读three_arm/evidence_audit.json、failure_diagnostics.tsv及原始答案；只提供for_review给独立评审，不提供private_key；不把本次复核当独立评分 |
+| C05 | Codex | 已完成自动统计与可评材料 | three_arm含54记录表、配对覆盖、工具证据、原始usage、空白评审表、分离密钥、2幅新批诊断图；无科学准确率 |
+| C06 | Codex + ChatGPT | 下一轮必要修正，尚未另开批 | 6次OUTPUT_TRUNCATED未保存原始incomplete_details，本地已补留存；先据真实诊断决定统一响应参数，再冻结新协议与新目录运行，不替换本批失败或拼接正常记录 |
 | U01 | 用户提供，Codex导入 | 尚缺准确文献序列/来源 | 填inputs/literature_candidates.template.tsv；记录链方向/末端/来源，不用默认9条代替 |
 
 ## 当前可立即复用
@@ -31,3 +32,5 @@ Codex统一维护本表，ChatGPT在docs/reviews/提交独立复核。已有详�
 Codex分支`codex/20261020-evidence-pilot`；接手`e1f044397ea60d4133d3b8e58a1501c6904d14c4`，已合入科研复核`e53bacb`。代码修复`bd41679`；124项Python检查、Node前端检查通过。Windows隔离Python的临时目录问题通过在工作区运行测试解决，原错误和纠正命令均保留。当前代码修复仍在任务分支，不宣称已部署。线上真实Auto及新批次使用e53bacb；不在批次中途改变模型或工具版本。
 
 后续新增规划轮usage保留回归，最终125项Python及Node检查通过。线上e53bacb会清除ready计划的planner事件，故本批及Auto完整token总量可能未知，只交已知小计；本地已修复。完整Auto原文与工具包已校验，新批原包待结束后下载。详细命令、失败记录与范围见research/2026-10-20_takeover/README.md。
+
+本批于15:02:07–15:20:50完成（北京时间），原包5,028,649字节、459文件、CRC通过。普通LLM12回答/6响应不完整；Agent4完整/3局部/8 idle/3失败（2网络、1计划格式）；固定流程6完整/3局部/9输入停止。18个题目重复配对中12个无API异常，normal_hypoxia为0/3；不是18道独立题或科学正确率。新增不完整响应原文留存回归，最终检查日志tests-final-126.txt。所有成果见PR #1的任务分支，尚未合入main/部署。

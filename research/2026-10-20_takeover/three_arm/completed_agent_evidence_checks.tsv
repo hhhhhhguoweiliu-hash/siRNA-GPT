@@ -1,0 +1,8 @@
+﻿answer_id	case_id	status	completed_tools	plan_scope_and_evidence	semantic_grade
+A001	normal_normoxia	COMPLETE	inspect_candidates;verify_target;match_seed;score_candidates;query_expression;compile_report	PASS	NOT_SCORED
+A004	target_only	PARTIAL_COMPLETE	inspect_candidates;verify_target	PASS	NOT_SCORED
+A013	normal_hypoxia	COMPLETE	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	PASS	NOT_SCORED
+A022	target_only	PARTIAL_COMPLETE	inspect_candidates;verify_target	PASS	NOT_SCORED
+A033	target_only	PARTIAL_COMPLETE	inspect_candidates;verify_target	PASS	NOT_SCORED
+A043	normal_hypoxia	COMPLETE	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	PASS	NOT_SCORED
+A046	normal_normoxia	COMPLETE	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	PASS	NOT_SCORED

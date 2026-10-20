@@ -1,0 +1,4 @@
+﻿group	attempted	status_counts	provider_error_records	scientific_tool_attempts	usage_unknown_records	known_token_subtotal	median_seconds_all_states	median_seconds_without_provider_errors	median_seconds_provider_errors
+llm	18	"{""ANSWERED_NO_TOOLS"": 12, ""FAILED"": 6}"	6	0	6	54129	29.4015	20.3065	47.8815
+workflow	18	"{""FAILED"": 9, ""PARTIAL_COMPLETE"": 3, ""COMPLETE"": 6}"	0	51	0	0	0.0055	0.0055	
+agent	18	"{""COMPLETE"": 4, ""PARTIAL_COMPLETE"": 3, ""idle"": 8, ""FAILED"": 3}"	2	38	10	241107	13.69	9.125	104.322

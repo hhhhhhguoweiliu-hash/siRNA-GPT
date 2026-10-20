@@ -149,7 +149,12 @@ def request_completion(cfg,payload,opener=None):
   try:
    with open_fn(req,timeout=int(cfg.get('request_timeout',90))) as response:
     data=json.load(response);rid=response.headers.get('x-request-id','')
-   if isinstance(data,dict) and cfg.get('api_mode')=='responses':data=normalize_responses(data)
+   if isinstance(data,dict) and cfg.get('api_mode')=='responses':
+    try:data=normalize_responses(data)
+    except ModelError as error:
+     # Preserve the provider payload for the owning run's redacted archive.
+     # Do not put partial answers into a successful completion or public logs.
+     error.response_snapshot=data;error.request_id=rid;raise
    if not isinstance(data,dict) or not data.get('choices'):raise ModelError('API未返回可用消息，可能是接口类型或模型不兼容。','RESPONSE_INVALID')
    choice=data['choices'][0]
    if choice.get('finish_reason')=='length':raise ModelError('模型输出达到长度上限，本轮未执行不完整的工具指令；请调整输出上限后重试。','OUTPUT_TRUNCATED')

@@ -6,6 +6,20 @@ from unittest.mock import patch
 import evaluate,paper_pilot
 
 class EvaluationExportTests(unittest.TestCase):
+    def test_incomplete_provider_payload_is_preserved_without_fake_success(self):
+        from model_client import request_completion
+        from test_model_client import Response
+        cfg={'provider':'doubao','api_mode':'responses','model':'TEST','api_key':'TEST_SECRET','base_url':'https://ark.cn-beijing.volces.com/api/v3'}
+        partial={'status':'incomplete','incomplete_details':{'reason':'max_output_tokens'},
+            'usage':{'total_tokens':1811},'output':[{'type':'message','content':[{'type':'output_text','text':'TEST_SECRET partial'}]}]}
+        with tempfile.TemporaryDirectory() as tmp:
+            r=evaluate.run_case('llm',{'id':'x','request':'TEST'},cfg,tmp,
+                lambda payload:request_completion(cfg,payload,lambda req,timeout:Response(partial)))
+            saved=(Path(tmp)/'model_error_response.json').read_text(encoding='utf-8')
+            self.assertEqual(r['status'],'FAILED');self.assertTrue(r['partial_response_saved'])
+            self.assertIsNone(r['total_tokens']);self.assertEqual(r['usage'][0]['total_tokens'],1811)
+            self.assertNotIn('TEST_SECRET',saved);self.assertIn('max_output_tokens',saved)
+
     def test_ready_plan_preserves_planner_usage_before_execution(self):
         from test_conversation import message_response
         from conversation import Conversation

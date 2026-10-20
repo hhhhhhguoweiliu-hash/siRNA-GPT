@@ -1,0 +1,5 @@
+Verified files: 37
+Recorded scheduled entries: 54
+Raw statuses: {'agent:FAILED': 18, 'workflow:FAILED': 9, 'workflow:PARTIAL_COMPLETE': 3, 'llm:FAILED': 18, 'workflow:COMPLETE': 6}
+Account-limit blocked entries: 36
+This batch does NOT establish three-arm scientific accuracy or superiority.
