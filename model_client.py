@@ -113,6 +113,15 @@ def redact(text,key=''):
  s=re.sub(r'(?i)(Bearer\s+)[^\s"\']+',r'\1[REDACTED]',s)
  return s[:500]
 
+def model_error_evidence(error,cfg,request=None):
+ """Full private run evidence, redacted before persistence; never a successful answer."""
+ value={'diagnostics':error.diagnostics(),'request':getattr(error,'request_snapshot',request),
+        'response':getattr(error,'response_snapshot',None),'status':'FAILED_NOT_A_VALID_ANSWER'}
+ raw=json.dumps(value,ensure_ascii=False)
+ if cfg.get('api_key'):raw=raw.replace(str(cfg['api_key']),'[REDACTED]')
+ raw=re.sub(r'(?i)(Bearer\s+)[^\s"\']+',r'\1[REDACTED]',raw)
+ return json.loads(raw)
+
 def provider_http_error(error,key):
  """Keep the provider's actual explanation and request ID; never infer an exact cause from 403 alone."""
  try:body=json.loads(error.read(12000).decode('utf-8','replace'))
@@ -154,10 +163,12 @@ def request_completion(cfg,payload,opener=None):
     except ModelError as error:
      # Preserve the provider payload for the owning run's redacted archive.
      # Do not put partial answers into a successful completion or public logs.
-     error.response_snapshot=data;error.request_id=rid;raise
+     error.response_snapshot=data;error.request_snapshot=body;error.request_id=rid;raise
    if not isinstance(data,dict) or not data.get('choices'):raise ModelError('API未返回可用消息，可能是接口类型或模型不兼容。','RESPONSE_INVALID')
    choice=data['choices'][0]
-   if choice.get('finish_reason')=='length':raise ModelError('模型输出达到长度上限，本轮未执行不完整的工具指令；请调整输出上限后重试。','OUTPUT_TRUNCATED')
+   if choice.get('finish_reason')=='length':
+    error=ModelError('模型输出达到长度上限，本轮未执行不完整的工具指令；请调整输出上限后重试。','OUTPUT_TRUNCATED',request_id=rid)
+    error.response_snapshot=data;error.request_snapshot=body;raise error
    if choice.get('finish_reason') in ('content_filter','sensitive'):raise ModelError('本轮响应被服务端过滤，未宣称任务完成。','CONTENT_FILTERED')
    if not isinstance(choice.get('message'),dict):raise ModelError('模型返回消息格式无效。','RESPONSE_INVALID')
    data['_request_id']=rid

@@ -9,7 +9,7 @@ from knowledge import search as local_search
 from runtime_info import manifest
 from pathlib import Path
 from core import HOME, Session, TOOLS, SCHEMAS, TaskError, TaskCancelled, config, default_candidates, save_json, now
-from model_client import request_completion, ModelError
+from model_client import request_completion, ModelError, model_error_evidence
 from research import RESEARCH_TOOLS, run_tool as research_tool
 
 ORDER = [x[0] for x in TOOLS]
@@ -169,7 +169,13 @@ class PlannedSession(Session):
             payload={'model':self.cfg.get('model'),'messages':list(messages)}
             if allowed:payload.update(tools=allowed,tool_choice='auto')
             save_json(self.path/'attempts'/(attempt+'_turn'+str(turn+1)+'_request.json'),payload)
-            response=transport(payload) if transport else self.api(payload)
+            try:response=transport(payload) if transport else self.api(payload)
+            except ModelError as error:
+                evidence=model_error_evidence(error,self.cfg,payload)
+                save_json(self.path/'attempts'/(attempt+'_turn'+str(turn+1)+'_error.json'),evidence)
+                partial=evidence.get('response') or {}
+                self.emit('model_failed','执行助手请求失败，原始诊断已保留',usage=partial.get('usage',{}))
+                raise
             if getattr(self,'cancelled',lambda:False)():raise TaskCancelled('已停止后续工具调用，已完成结果保留。')
             choice = response['choices'][0]; message = choice['message']
             if choice.get('finish_reason') == 'length': raise TaskError('执行回复被截断，尚未确认完成')
@@ -233,7 +239,16 @@ class Conversation:
 
     def model_call(self,payload):
         self.check_cancelled()
-        r=self.transport(payload) if self.transport else request_completion(self.cfg_loader(),payload)
+        cfg=self.cfg_loader()
+        try:r=self.transport(payload) if self.transport else request_completion(cfg,payload)
+        except ModelError as error:
+            evidence=model_error_evidence(error,cfg,payload)
+            ref=uuid.uuid4().hex[:24]
+            evidence.update(id=ref,kind='model_failure',observations=[],sources=[])
+            save_json(self.root/'evidence'/(ref+'.json'),evidence);self.audit_refs.append(ref)
+            partial=evidence.get('response') or {}
+            self.events.append({'time':now(),'kind':'model_failed','message':'模型请求失败，原始诊断已保留','usage':partial.get('usage',{})})
+            raise
         self.check_cancelled();return r
 
     def register_sources(self,sources):

@@ -13,11 +13,13 @@ Codex统一维护本表，ChatGPT在docs/reviews/提交独立复核。已有详�
 | C04 | Codex；既有网页用量确认 | 已交54条真实运行；完整配对不足 | dev_20261020_070207_843de3：54唯一ID/协议顺序/6×3×3/独立会话及CRC通过；6输出不完整+2网络失败，另1规划格式失败；不可宣称完整有效三组质量比较 |
 | R02 | ChatGPT；独立评审另需真人 | 待复核PR #1最新分支 | 读three_arm/evidence_audit.json、failure_diagnostics.tsv及原始答案；只提供for_review给独立评审，不提供private_key；不把本次复核当独立评分 |
 | C05 | Codex | 已完成自动统计与可评材料 | three_arm含54记录表、配对覆盖、工具证据、原始usage、空白评审表、分离密钥、2幅新批诊断图；无科学准确率 |
-| C06 | Codex + ChatGPT | 下一轮必要修正，尚未另开批 | 6次OUTPUT_TRUNCATED未保存原始incomplete_details，本地已补留存；先据真实诊断决定统一响应参数，再冻结新协议与新目录运行，不替换本批失败或拼接正常记录 |
+| C06 | Codex + ChatGPT | 诊断留存与参数冻结已修；真实新版诊断待执行 | Agent规划/执行及普通LLM均保留不完整原文；协议提前保存有效参数与哈希，131项检查通过；下一步见research/2026-10-20_migration/NEXT_EVALUATION.md，未另开批 |
+| C07 | Codex | 已交4张组合图、10个panel及底表 | research/2026-10-20_migration：系统迁移、真实Auto、候选/细胞背景、54条逐题诊断；PNG/SVG/PDF、中文图注、数据/来源哈希及原文图对应，未画无评分质量结果 |
 | U01 | 用户提供，Codex导入 | 尚缺准确文献序列/来源 | 填inputs/literature_candidates.template.tsv；记录链方向/末端/来源，不用默认9条代替 |
 
 ## 当前可立即复用
 
+- [本轮4张论文组合图、底表和原文迁移结果文字](../research/2026-10-20_migration/README.md)。[现有复核落实记录](REVIEW_RESPONSE_20261020.md)。以后主动同步GitHub/必要时Drive，不等重复提醒。
 - [10幅原型/背景图、3幅运行诊断图及底层数据](../research/README.md)。
 - [原文可读文本、出处和读取边界](../references/CRISPR-GPT/README.md)。
 - [现有三组开发预评估说明](../DEVELOPMENT_PILOT.md)。
@@ -34,3 +36,7 @@ Codex分支`codex/20261020-evidence-pilot`；接手`e1f044397ea60d4133d3b8e58a15
 后续新增规划轮usage保留回归，最终125项Python及Node检查通过。线上e53bacb会清除ready计划的planner事件，故本批及Auto完整token总量可能未知，只交已知小计；本地已修复。完整Auto原文与工具包已校验，新批原包待结束后下载。详细命令、失败记录与范围见research/2026-10-20_takeover/README.md。
 
 本批于15:02:07–15:20:50完成（北京时间），原包5,028,649字节、459文件、CRC通过。普通LLM12回答/6响应不完整；Agent4完整/3局部/8 idle/3失败（2网络、1计划格式）；固定流程6完整/3局部/9输入停止。18个题目重复配对中12个无API异常，normal_hypoxia为0/3；不是18道独立题或科学正确率。新增不完整响应原文留存回归，最终检查日志tests-final-126.txt。所有成果见PR #1的任务分支，尚未合入main/部署。
+
+### 2026-10-20 第二批：按原文迁移组织图和数据
+
+从3230670继续，重新fetch后main仍e53bacb；首轮复核两项必修已有回归，再核对PR无新增评论。本轮新增C07的4张组合图及10个panel，底表/事件时间轴可复算；不把重新组合图叫新增实验。C06补齐Agent两阶段失败留存和两入口参数冻结，131项Python检查通过。代码、数据与图统一更新PR #1；尚未合入main/部署。完整质量比较、独立评分和真实文献候选仍未完成。用户当前无需重复上传已保存文件或提供密钥。

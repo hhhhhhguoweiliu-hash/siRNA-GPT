@@ -8,7 +8,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--batch',required=True);p.add_argument('--output',required=True);a=p.parse_args()
     batch=Path(a.batch).resolve();out=Path(a.output).resolve()
     assert ROOT in batch.parents and ROOT in out.parents and not out.exists()
-    local_exclusions=('historical_export_check','plot-install.txt')
+    local_exclusions=('historical_export_check','plot-install.txt','render_attempt_')
     files={ROOT/n for n in subprocess.check_output(['git','ls-files'],cwd=ROOT,text=True).splitlines()}
     files.update(path for path in batch.rglob('*') if path.is_file())
     files={path for path in files if path.is_file() and not (batch in path.parents and
@@ -22,7 +22,7 @@ def main():
         if len(secret)>=8 and secret in raw:raise SystemExit('Secret detected; package not written')
         entries.append({'path':path.relative_to(ROOT).as_posix(),'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()})
     manifest={'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
-        'batch':batch.relative_to(ROOT).as_posix(),'files':entries,'excluded_local_trials':'historical_export_check* and installation log remain local; real failed research batches retained'}
+        'batch':batch.relative_to(ROOT).as_posix(),'files':entries,'excluded_local_trials':'historical_export_check*, render_attempt_* and installation log remain local; real failed research batches retained'}
     (batch/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
     files.add(batch/'manifest.json');out.parent.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(out,'x',zipfile.ZIP_DEFLATED,compresslevel=9) as z:

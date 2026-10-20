@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://www.nature.com/articles/s41551-025-01463-z",
+    "checked_at": "2026-10-20T08:14:07.900245+00:00",
+    "http_status": 200,
+    "bytes": 3038,
+    "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+    "citation_meta": [],
+    "figure4_text_present": false,
+    "correction_terms_present": {
+      "legend": false,
+      "colour": false,
+      "color": false,
+      "8 December 2025": false
+    }
+  },
+  {
+    "url": "https://www.nature.com/articles/s41551-025-01589-0",
+    "checked_at": "2026-10-20T08:14:13.949303+00:00",
+    "http_status": 200,
+    "bytes": 3038,
+    "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+    "citation_meta": [],
+    "figure4_text_present": false,
+    "correction_terms_present": {
+      "legend": false,
+      "colour": false,
+      "color": false,
+      "8 December 2025": false
+    }
+  }
+]

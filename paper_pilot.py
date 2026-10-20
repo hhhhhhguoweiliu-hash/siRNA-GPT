@@ -9,6 +9,7 @@ from pathlib import Path
 from core import HOME,save_json,now
 from runtime_info import manifest
 from model_client import account_blocked
+from evaluation_protocol import evaluation_settings,settings_sha256
 
 LOCK=threading.Lock()
 STATE={'status':'NOT_STARTED'}
@@ -34,6 +35,8 @@ def run(cfg_loader,run_id):
             'seed':20261019,'repeats':3,'groups':['llm','workflow','agent'],'review_status':suite['review_status'],
             'web_enabled':False,'planned_observations':len(jobs),'scheduled_order':[{'case_id':c['id'],'group':g,'repeat':n} for c,g,n in jobs],
             'limitations':['Development cases; not held out or expert reviewed','No automatic semantic quality score','Repeated tasks are not independent biological replicates','Scientific results imported, not heavy model/R reruns','Fixed arm receives preset and structured task; not asked to parse unrestricted language','Cost in currency unavailable; usage is provider-returned token count']}
+        protocol['model_settings']=evaluation_settings(cfg)
+        protocol['model_settings_sha256']=settings_sha256(protocol['model_settings'])
         save_json(out/'protocol.json',protocol);save_json(out/'cases.json',suite)
         STOP.clear();STATE.clear();STATE.update(status='RUNNING',run_id=run_id,completed=0,total=len(jobs));log('BEGIN',protocol)
         results=[]

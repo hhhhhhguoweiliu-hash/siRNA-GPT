@@ -7,6 +7,7 @@ from core import config,save_json,TaskError,TOOLS
 from conversation import Conversation,PlannedSession,prepare_inputs,PRESETS,SCOPE
 from model_client import request_completion,ModelError,account_blocked
 from runtime_info import manifest
+from evaluation_protocol import evaluation_settings,settings_sha256
 
 def safe_record(value,cfg):
     raw=json.dumps(value,ensure_ascii=False)
@@ -86,7 +87,7 @@ def _run_case(group,case,cfg,root,transport=None):
     result['seconds']=round(time.monotonic()-start,3)
     known=all(isinstance(u.get('total_tokens'),int) for u in result['usage'])
     result['total_tokens']=(sum(u['total_tokens'] for u in result['usage'])
-        if result['usage'] and known else 0 if group=='workflow' else None)
+        if result['usage'] and known and not result.get('provider_error') else 0 if group=='workflow' else None)
     result['usage_complete']=group=='workflow' or bool(result['usage']) and known and not result.get('provider_error')
     result['known_token_subtotal']=sum(u['total_tokens'] for u in result['usage'] if isinstance(u.get('total_tokens'),int)) if result['usage'] else 0 if group=='workflow' else None
     return result
@@ -122,6 +123,8 @@ def main(argv=None):
         'api_mode':cfg.get('api_mode'),'web_enabled':False,
         'scope':'execution cases; no automatic scientific quality score; imported scientific outputs only',
         'claim':'Development examples are not a frozen held-out expert test set.'}
+    protocol['model_settings']=evaluation_settings(cfg)
+    protocol['model_settings_sha256']=settings_sha256(protocol['model_settings'])
     jobs=[(case,group,rep) for case in cases for group in groups for rep in range(1,a.repeats+1)]
     rng=random.Random(a.seed);rng.shuffle(jobs)
     protocol.update(planned_observations=len(jobs),scheduled_order=[{'case_id':c['id'],'group':g,'repeat':n} for c,g,n in jobs])

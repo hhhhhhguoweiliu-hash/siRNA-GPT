@@ -6,6 +6,7 @@ ROOT=Path(__file__).resolve().parent
 
 def manifest():
     names=['core.py','conversation.py','research.py','knowledge.py','model_client.py','expression_data.py',
+        'evaluate.py','paper_pilot.py','evaluation_protocol.py','evaluation_cases.example.json',
         'data/candidates.tsv','data/historical_scores.tsv','data/VEGFA.fasta','data/expression.tsv.gz',
         'data/historical_seed_matches.tsv','data/provenance.json']
     assets={}
