@@ -40,15 +40,16 @@ def main():
         # explicit error header, never infer a provider cause from FAILED alone.
         header=re.search(r'API HTTP (\d+) / ([A-Za-z0-9_.]+)[:：]',r.get('answer',''))
         if not provider_code and header:provider_code=header[2];diagnostic_source='LEGACY_ADAPTER_ERROR_HEADER'
+        infrastructure_error=bool(provider_code or error.get('code'))
         usage=r.get('usage',[]);known=[u['total_tokens'] for u in usage if isinstance(u.get('total_tokens'),int)]
-        complete=workflow or bool(usage) and len(known)==len(usage) and not provider_code
+        complete=workflow or bool(usage) and len(known)==len(usage) and not infrastructure_error
         planner_lost=r['group']=='agent' and bool(r.get('plan')) and not any(e.get('kind')=='planner_finished' for e in r.get('record',{}).get('events',[]))
         if planner_lost:complete=False
         rows.append({'answer_id':r['answer_id'],'case_id':r['case_id'],'group':r['group'],'repeat':r['repeat'],'status':r['status'],
             'all_tool_attempts_raw':r.get('tool_calls'),'scientific_tool_attempts':scientific_attempts,'research_tool_attempts':research_attempts,'seconds':r.get('seconds'),
             'usage_records':len(usage),'usage_complete':complete,'planner_usage_missing_from_export':planner_lost,'total_tokens_audited':sum(known) if complete else None,
             'known_token_subtotal':sum(known) if known or workflow else None,
-            'provider_code':provider_code,'provider_diagnostic_source':diagnostic_source,
+            'provider_code':provider_code,'infrastructure_error':infrastructure_error,'provider_diagnostic_source':diagnostic_source,
             'raw_total_tokens':r.get('total_tokens'),'completed_tools':';'.join(r.get('completed_tools',[]))})
     write_tsv(out/'records.tsv',rows,list(rows[0]))
     lookup={key(r):r for r in results}
@@ -59,11 +60,15 @@ def main():
     grouped=[]
     for group in protocol['groups']:
         sub=[r for r in rows if r['group']==group];seconds=[r['seconds'] for r in sub if isinstance(r['seconds'],(int,float))]
+        regular=[r['seconds'] for r in sub if not r['infrastructure_error'] and isinstance(r['seconds'],(int,float))]
+        errors=[r['seconds'] for r in sub if r['infrastructure_error'] and isinstance(r['seconds'],(int,float))]
         grouped.append({'group':group,'attempted':len(sub),'status_counts':json.dumps(dict(collections.Counter(r['status'] for r in sub))),
-            'provider_error_records':sum(bool(r['provider_code']) for r in sub),'scientific_tool_attempts':sum(r['scientific_tool_attempts'] or 0 for r in sub),
+            'provider_error_records':sum(r['infrastructure_error'] for r in sub),'scientific_tool_attempts':sum(r['scientific_tool_attempts'] or 0 for r in sub),
             'usage_unknown_records':sum(not r['usage_complete'] for r in sub),
             'known_token_subtotal':sum(r['known_token_subtotal'] or 0 for r in sub) if any(r['known_token_subtotal'] is not None for r in sub) else None,
-            'median_seconds_all_states':statistics.median(seconds) if seconds else None})
+            'median_seconds_all_states':statistics.median(seconds) if seconds else None,
+            'median_seconds_without_provider_errors':statistics.median(regular) if regular else None,
+            'median_seconds_provider_errors':statistics.median(errors) if errors else None})
     write_tsv(out/'group_summary.tsv',grouped,list(grouped[0]))
     summary={'archive_bytes':src.stat().st_size,'archive_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),'zip_crc':'PASS',
         'run_id':protocol['id'],'runtime_commit':protocol['runtime']['commit'],'model':protocol['model'],'planned':54,'attempted':len(results),'pending':54-len(results),
@@ -96,7 +101,7 @@ def plot(out,rows,cases):
     fig,axes=plt.subplots(2,3,figsize=(12,7));palette=['#7E8994','#6089AE','#38836F']
     for ax,c in zip(axes.flat,ids):
         for j,g in enumerate(groups):
-            data=[r for r in rows if r['case_id']==c and r['group']==g and not r['provider_code'] and isinstance(r['seconds'],(int,float))]
+            data=[r for r in rows if r['case_id']==c and r['group']==g and not r['infrastructure_error'] and isinstance(r['seconds'],(int,float))]
             ax.scatter([j+(r['repeat']-2)*.08 for r in data],[r['seconds'] for r in data],color=palette[j],s=30)
         ax.set(title=c,xticks=range(3),xticklabels=groups,ylabel='Wall time (s)',ylim=(0,None));ax.spines[['top','right']].set_visible(False)
     fig.suptitle('Per-task observed latency; API errors excluded; no quality or significance test')
