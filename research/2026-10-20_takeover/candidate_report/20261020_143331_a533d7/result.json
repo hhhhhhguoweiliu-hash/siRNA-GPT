@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "selected_for_review": [
+    "VEGFA_SD_3499",
+    "VEGFA_SD_3500"
+  ],
+  "report": "report.html",
+  "table": "candidates_ranked.tsv",
+  "rules": "先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。",
+  "not_order_ready": true
+}

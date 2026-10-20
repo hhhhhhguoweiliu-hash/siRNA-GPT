@@ -1,0 +1,34 @@
+test_cli_stops_after_access_denied_and_exports_all_54_units (test_evaluation_exports.EvaluationExportTests) ... ok
+test_missing_model_usage_remains_unknown_and_raw_answer_is_saved (test_evaluation_exports.EvaluationExportTests) ... ok
+test_timeout_preserves_partial_pilot_and_no_further_case_starts (test_evaluation_exports.EvaluationExportTests) ... ok
+test_agent_preserves_structured_provider_code (test_quota_guard.QuotaTests) ... ok
+test_batch_stops_and_exports_after_first_account_block (test_quota_guard.QuotaTests) ... ok
+test_failed_model_case_has_elapsed_time_and_unknown_tokens (test_quota_guard.QuotaTests) ... ok
+test_transient_429_still_has_bounded_retry (test_quota_guard.QuotaTests) ... ok
+test_usage_limit_does_not_retry (test_quota_guard.QuotaTests) ... ok
+test_common_structured_target_passes_to_all_preparation (test_paper_pilot.PilotTests) ... ok
+test_evaluation_web_endpoints_require_auth_and_explicit_usage_ack (test_paper_pilot.PilotTests) ... ok
+test_explicit_pilot_archives_all_answers_and_runs_once (test_paper_pilot.PilotTests) ... ok
+test_invalid_run_id_rejected (test_paper_pilot.PilotTests) ... ok
+test_empty_key_not_ready (test_model_client.ModelTests) ... ok
+test_endpoint (test_model_client.ModelTests) ... ok
+test_extract_json_model (test_model_client.ModelTests) ... ok
+test_extract_python_model (test_model_client.ModelTests) ... ok
+test_forced_tool_conversion (test_model_client.ModelTests) ... ok
+test_full_endpoint_normalized (test_model_client.ModelTests) ... ok
+test_history_conversion (test_model_client.ModelTests) ... ok
+test_http_401_classified_and_key_not_echoed (test_model_client.ModelTests) ... ok
+test_network_block_classified (test_model_client.ModelTests) ... ok
+test_numeric_rejected (test_model_client.ModelTests) ... ok
+test_probe_accepts_correct_call_only (test_model_client.ModelTests) ... ok
+test_probe_requires_function_call (test_model_client.ModelTests) ... ok
+test_real_request_shape_with_explicit_fake_opener (test_model_client.ModelTests) ... ok
+test_response_text_conversion (test_model_client.ModelTests) ... ok
+test_response_tool_call_conversion (test_model_client.ModelTests) ... ok
+test_truncated_rejected (test_model_client.ModelTests) ... ok
+test_wrong_host_rejected_for_ark_key (test_model_client.ModelTests) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 1.328s
+
+OK

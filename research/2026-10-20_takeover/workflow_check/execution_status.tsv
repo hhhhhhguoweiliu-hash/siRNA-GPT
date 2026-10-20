@@ -1,0 +1,7 @@
+﻿schedule_index	case_id	group	repeat	answer_id	execution	status	pending_reason
+1	ambiguous_direction	workflow	1	8ef35851ea9f	ATTEMPTED	FAILED	
+2	normal_normoxia	workflow	1	65d8bf59a1df	ATTEMPTED	COMPLETE	
+3	invalid_sequence	workflow	1	9c9387bd5f39	ATTEMPTED	FAILED	
+4	normal_hypoxia	workflow	1	64b9478f85bc	ATTEMPTED	COMPLETE	
+5	target_only	workflow	1	adb142f736d5	ATTEMPTED	PARTIAL_COMPLETE	
+6	unsupported_target	workflow	1	d30a4fc7785c	ATTEMPTED	FAILED	

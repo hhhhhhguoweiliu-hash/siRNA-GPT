@@ -1,0 +1,1 @@
+Redrew 10 descriptive figures and copied 3 original audit SVGs; no API or heavy inference used.

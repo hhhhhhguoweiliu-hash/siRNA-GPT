@@ -1,0 +1,20 @@
+{
+  "source": "Rendered JSON from authenticated /api/status; selected credential-free fields",
+  "api_connected": true,
+  "connection": {
+    "checked_at": "2026-10-20T06:45:25.430864+00:00",
+    "model": "doubao-seed-2-1-pro-260915",
+    "multi_turn_verified": true,
+    "probe_tools_executed": true,
+    "provider": "doubao",
+    "request_id": "021792478723656e5604ce51ad3a2545ae54a532380ddced106b6",
+    "seconds": 1.999,
+    "status": "CONNECTED_TOOL_CALL_VERIFIED",
+    "usage": {"input_tokens": 478, "output_tokens": 20, "total_tokens": 498}
+  },
+  "research_connection": {
+    "pubmed": {"source_count": 1, "status": "OK"},
+    "web": {"request_id": "02179247872730911f0f19ac6c045766b433dd71333664da67762", "source_count": 3, "status": "OK"}
+  },
+  "limitation": "Deployed diagnostic returns first probe usage only; this is not the full two-turn token total. Local 403 probe is a separate configuration."
+}

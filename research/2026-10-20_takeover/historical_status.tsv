@@ -1,0 +1,6 @@
+﻿group	status	records
+agent	FAILED	18
+llm	FAILED	18
+workflow	COMPLETE	6
+workflow	FAILED	9
+workflow	PARTIAL_COMPLETE	3

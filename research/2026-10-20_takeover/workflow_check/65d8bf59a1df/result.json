@@ -1,0 +1,1219 @@
+{
+  "group": "workflow",
+  "case_id": "normal_normoxia",
+  "status": "COMPLETE",
+  "tool_calls": 6,
+  "usage": [],
+  "answer": "{\"status\": \"COMPLETE\", \"selected_for_review\": [\"VEGFA_SD_3499\", \"VEGFA_SD_3500\", \"VEGFA_SD_1157\"], \"report\": \"report.html\", \"table\": \"candidates_ranked.tsv\", \"rules\": \"先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。\", \"not_order_ready\": true, \"model_summary\": \"\", \"run_id\": \"20261020_143714_a9074f\"}",
+  "run_id": "20261020_143714_a9074f",
+  "tool_results": {
+    "inspect_candidates": {
+      "status": "LIVE_CHECKED",
+      "rows": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "guide_core19_5to3": "AUAGACAUCCAUGAACUUC",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        },
+        {
+          "candidate_id": "VEGFA_SD_2739",
+          "guide_core19_5to3": "AGAACUAGUGGUUUCAAUG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3119",
+          "guide_core19_5to3": "AUAUCUGUUCAAGAUAAGC",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3193",
+          "guide_core19_5to3": "ACCUUAUUUCAAAGGAAUG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3429",
+          "guide_core19_5to3": "UAUUACGGAUAAACAGUAG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "guide_core19_5to3": "UGUACUACGGAAUAUCUCG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "guide_core19_5to3": "AUGUACUACGGAAUAUCUC",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3502",
+          "guide_core19_5to3": "AUAUGUACUACGGAAUAUC",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3535",
+          "guide_core19_5to3": "UAUCUGUAUUUCUUUGUCG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        }
+      ],
+      "warning": "配对核心用于计算；不自动转换为订购序列或声称已做化学修饰验证"
+    },
+    "verify_target": {
+      "status": "LIVE_EXECUTED",
+      "reference_sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "rows": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "guide_core19_5to3": "AUAGACAUCCAUGAACUUC",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+          "reference_transcript": "NM_003376.6",
+          "covered_transcripts": 20,
+          "reference_transcript_count": 20,
+          "sites": [
+            {
+              "transcript": "NM_001171623.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001171626.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001171628.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001317010.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001025369.3",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001171627.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001171625.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001204384.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001287044.2",
+              "start_1based": 191
+            },
+            {
+              "transcript": "NM_001025367.3",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001171630.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001171622.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001171624.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001025370.3",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001204385.2",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001025368.3",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001033756.3",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_003376.6",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001025366.3",
+              "start_1based": 1159
+            },
+            {
+              "transcript": "NM_001171629.2",
+              "start_1based": 1159
+            }
+          ],
+          "mRNA_context_57nt": "AGAAUCAUCACGAAGUGGUGAAGUUCAUGGAUGUCUAUCAGCGCAGCUACUGCCAUC"
+        },
+        {
+          "candidate_id": "VEGFA_SD_2739",
+          "guide_core19_5to3": "AGAACUAGUGGUUUCAAUG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+          "reference_transcript": "NM_003376.6",
+          "covered_transcripts": 20,
+          "reference_transcript_count": 20,
+          "sites": [
+            {
+              "transcript": "NM_001171623.2",
+              "start_1based": 2792
+            },
+            {
+              "transcript": "NM_001171626.2",
+              "start_1based": 2669
+            },
+            {
+              "transcript": "NM_001171628.2",
+              "start_1based": 2537
+            },
+            {
+              "transcript": "NM_001317010.2",
+              "start_1based": 2669
+            },
+            {
+              "transcript": "NM_001025369.3",
+              "start_1based": 2634
+            },
+            {
+              "transcript": "NM_001171627.2",
+              "start_1based": 2634
+            },
+            {
+              "transcript": "NM_001171625.2",
+              "start_1based": 2723
+            },
+            {
+              "transcript": "NM_001204384.2",
+              "start_1based": 2609
+            },
+            {
+              "transcript": "NM_001287044.2",
+              "start_1based": 1701
+            },
+            {
+              "transcript": "NM_001025367.3",
+              "start_1based": 2723
+            },
+            {
+              "transcript": "NM_001171630.2",
+              "start_1based": 2507
+            },
+            {
+              "transcript": "NM_001171622.2",
+              "start_1based": 2507
+            },
+            {
+              "transcript": "NM_001171624.2",
+              "start_1based": 2741
+            },
+            {
+              "transcript": "NM_001025370.3",
+              "start_1based": 2537
+            },
+            {
+              "transcript": "NM_001204385.2",
+              "start_1based": 2609
+            },
+            {
+              "transcript": "NM_001025368.3",
+              "start_1based": 2669
+            },
+            {
+              "transcript": "NM_001033756.3",
+              "start_1based": 2603
+            },
+            {
+              "transcript": "NM_003376.6",
+              "start_1based": 2741
+            },
+            {
+              "transcript": "NM_001025366.3",
+              "start_1based": 2792
+            },
+            {
+              "transcript": "NM_001171629.2",
+              "start_1based": 2603
+            }
+          ],
+          "mRNA_context_57nt": "AGGACCUAUGUCCUCACACCAUUGAAACCACUAGUUCUGUCCCCCCAGGAGACCUGG"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3119",
+          "guide_core19_5to3": "AUAUCUGUUCAAGAUAAGC",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+          "reference_transcript": "NM_003376.6",
+          "covered_transcripts": 20,
+          "reference_transcript_count": 20,
+          "sites": [
+            {
+              "transcript": "NM_001171623.2",
+              "start_1based": 3172
+            },
+            {
+              "transcript": "NM_001171626.2",
+              "start_1based": 3049
+            },
+            {
+              "transcript": "NM_001171628.2",
+              "start_1based": 2917
+            },
+            {
+              "transcript": "NM_001317010.2",
+              "start_1based": 3049
+            },
+            {
+              "transcript": "NM_001025369.3",
+              "start_1based": 3014
+            },
+            {
+              "transcript": "NM_001171627.2",
+              "start_1based": 3014
+            },
+            {
+              "transcript": "NM_001171625.2",
+              "start_1based": 3103
+            },
+            {
+              "transcript": "NM_001204384.2",
+              "start_1based": 2989
+            },
+            {
+              "transcript": "NM_001287044.2",
+              "start_1based": 2081
+            },
+            {
+              "transcript": "NM_001025367.3",
+              "start_1based": 3103
+            },
+            {
+              "transcript": "NM_001171630.2",
+              "start_1based": 2887
+            },
+            {
+              "transcript": "NM_001171622.2",
+              "start_1based": 2887
+            },
+            {
+              "transcript": "NM_001171624.2",
+              "start_1based": 3121
+            },
+            {
+              "transcript": "NM_001025370.3",
+              "start_1based": 2917
+            },
+            {
+              "transcript": "NM_001204385.2",
+              "start_1based": 2989
+            },
+            {
+              "transcript": "NM_001025368.3",
+              "start_1based": 3049
+            },
+            {
+              "transcript": "NM_001033756.3",
+              "start_1based": 2983
+            },
+            {
+              "transcript": "NM_003376.6",
+              "start_1based": 3121
+            },
+            {
+              "transcript": "NM_001025366.3",
+              "start_1based": 3172
+            },
+            {
+              "transcript": "NM_001171629.2",
+              "start_1based": 2983
+            }
+          ],
+          "mRNA_context_57nt": "UGAUCGGUGACAGUCACUAGCUUAUCUUGAACAGAUAUUUAAUUUUGCUAACACUCA"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3193",
+          "guide_core19_5to3": "ACCUUAUUUCAAAGGAAUG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+          "reference_transcript": "NM_003376.6",
+          "covered_transcripts": 20,
+          "reference_transcript_count": 20,
+          "sites": [
+            {
+              "transcript": "NM_001171623.2",
+              "start_1based": 3246
+            },
+            {
+              "transcript": "NM_001171626.2",
+              "start_1based": 3123
+            },
+            {
+              "transcript": "NM_001171628.2",
+              "start_1based": 2991
+            },
+            {
+              "transcript": "NM_001317010.2",
+              "start_1based": 3123
+            },
+            {
+              "transcript": "NM_001025369.3",
+              "start_1based": 3088
+            },
+            {
+              "transcript": "NM_001171627.2",
+              "start_1based": 3088
+            },
+            {
+              "transcript": "NM_001171625.2",
+              "start_1based": 3177
+            },
+            {
+              "transcript": "NM_001204384.2",
+              "start_1based": 3063
+            },
+            {
+              "transcript": "NM_001287044.2",
+              "start_1based": 2155
+            },
+            {
+              "transcript": "NM_001025367.3",
+              "start_1based": 3177
+            },
+            {
+              "transcript": "NM_001171630.2",
+              "start_1based": 2961
+            },
+            {
+              "transcript": "NM_001171622.2",
+              "start_1based": 2961
+            },
+            {
+              "transcript": "NM_001171624.2",
+              "start_1based": 3195
+            },
+            {
+              "transcript": "NM_001025370.3",
+              "start_1based": 2991
+            },
+            {
+              "transcript": "NM_001204385.2",
+              "start_1based": 3063
+            },
+            {
+              "transcript": "NM_001025368.3",
+              "start_1based": 3123
+            },
+            {
+              "transcript": "NM_001033756.3",
+              "start_1based": 3057
+            },
+            {
+              "transcript": "NM_003376.6",
+              "start_1based": 3195
+            },
+            {
+              "transcript": "NM_001025366.3",
+              "start_1based": 3246
+            },
+            {
+              "transcript": "NM_001171629.2",
+              "start_1based": 3057
+            }
+          ],
+          "mRNA_context_57nt": "CCCCUGGCUCCCCAGCACACAUUCCUUUGAAAUAAGGUUUCAAUAUACAUCUACAUA"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3429",
+          "guide_core19_5to3": "UAUUACGGAUAAACAGUAG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+          "reference_transcript": "NM_003376.6",
+          "covered_transcripts": 20,
+          "reference_transcript_count": 20,
+          "sites": [
+            {
+              "transcript": "NM_001171623.2",
+              "start_1based": 3482
+            },
+            {
+              "transcript": "NM_001171626.2",
+              "start_1based": 3359
+            },
+            {
+              "transcript": "NM_001171628.2",
+              "start_1based": 3227
+            },
+            {
+              "transcript": "NM_001317010.2",
+              "start_1based": 3359
+            },
+            {
+              "transcript": "NM_001025369.3",
+              "start_1based": 3324
+            },
+            {
+              "transcript": "NM_001171627.2",
+              "start_1based": 3324
+            },
+            {
+              "transcript": "NM_001171625.2",
+              "start_1based": 3413
+            },
+            {
+              "transcript": "NM_001204384.2",
+              "start_1based": 3299
+            },
+            {
+              "transcript": "NM_001287044.2",
+              "start_1based": 2391
+            },
+            {
+              "transcript": "NM_001025367.3",
+              "start_1based": 3413
+            },
+            {
+              "transcript": "NM_001171630.2",
+              "start_1based": 3197
+            },
+            {
+              "transcript": "NM_001171622.2",
+              "start_1based": 3197
+            },
+            {
+              "transcript": "NM_001171624.2",
+              "start_1based": 3431
+            },
+            {
+              "transcript": "NM_001025370.3",
+              "start_1based": 3227
+            },
+            {
+              "transcript": "NM_001204385.2",
+              "start_1based": 3299
+            },
+            {
+              "transcript": "NM_001025368.3",
+              "start_1based": 3359
+            },
+            {
+              "transcript": "NM_001033756.3",
+              "start_1based": 3293
+            },
+            {
+              "transcript": "NM_003376.6",
+              "start_1based": 3431
+            },
+            {
+              "transcript": "NM_001025366.3",
+              "start_1based": 3482
+            },
+            {
+              "transcript": "NM_001171629.2",
+              "start_1based": 3293
+            }
+          ],
+          "mRNA_context_57nt": "UAUCAUUUAUUUAUUGGUGCUACUGUUUAUCCGUAAUAAUUGUGGGGAAAAGAUAUU"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "guide_core19_5to3": "UGUACUACGGAAUAUCUCG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+          "reference_transcript": "NM_003376.6",
+          "covered_transcripts": 20,
+          "reference_transcript_count": 20,
+          "sites": [
+            {
+              "transcript": "NM_001171623.2",
+              "start_1based": 3552
+            },
+            {
+              "transcript": "NM_001171626.2",
+              "start_1based": 3429
+            },
+            {
+              "transcript": "NM_001171628.2",
+              "start_1based": 3297
+            },
+            {
+              "transcript": "NM_001317010.2",
+              "start_1based": 3429
+            },
+            {
+              "transcript": "NM_001025369.3",
+              "start_1based": 3394
+            },
+            {
+              "transcript": "NM_001171627.2",
+              "start_1based": 3394
+            },
+            {
+              "transcript": "NM_001171625.2",
+              "start_1based": 3483
+            },
+            {
+              "transcript": "NM_001204384.2",
+              "start_1based": 3369
+            },
+            {
+              "transcript": "NM_001287044.2",
+              "start_1based": 2461
+            },
+            {
+              "transcript": "NM_001025367.3",
+              "start_1based": 3483
+            },
+            {
+              "transcript": "NM_001171630.2",
+              "start_1based": 3267
+            },
+            {
+              "transcript": "NM_001171622.2",
+              "start_1based": 3267
+            },
+            {
+              "transcript": "NM_001171624.2",
+              "start_1based": 3501
+            },
+            {
+              "transcript": "NM_001025370.3",
+              "start_1based": 3297
+            },
+            {
+              "transcript": "NM_001204385.2",
+              "start_1based": 3369
+            },
+            {
+              "transcript": "NM_001025368.3",
+              "start_1based": 3429
+            },
+            {
+              "transcript": "NM_001033756.3",
+              "start_1based": 3363
+            },
+            {
+              "transcript": "NM_003376.6",
+              "start_1based": 3501
+            },
+            {
+              "transcript": "NM_001025366.3",
+              "start_1based": 3552
+            },
+            {
+              "transcript": "NM_001171629.2",
+              "start_1based": 3363
+            }
+          ],
+          "mRNA_context_57nt": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "guide_core19_5to3": "AUGUACUACGGAAUAUCUC",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+          "reference_transcript": "NM_003376.6",
+          "covered_transcripts": 20,
+          "reference_transcript_count": 20,
+          "sites": [
+            {
+              "transcript": "NM_001171623.2",
+              "start_1based": 3553
+            },
+            {
+              "transcript": "NM_001171626.2",
+              "start_1based": 3430
+            },
+            {
+              "transcript": "NM_001171628.2",
+              "start_1based": 3298
+            },
+            {
+              "transcript": "NM_001317010.2",
+              "start_1based": 3430
+            },
+            {
+              "transcript": "NM_001025369.3",
+              "start_1based": 3395
+            },
+            {
+              "transcript": "NM_001171627.2",
+              "start_1based": 3395
+            },
+            {
+              "transcript": "NM_001171625.2",
+              "start_1based": 3484
+            },
+            {
+              "transcript": "NM_001204384.2",
+              "start_1based": 3370
+            },
+            {
+              "transcript": "NM_001287044.2",
+              "start_1based": 2462
+            },
+            {
+              "transcript": "NM_001025367.3",
+              "start_1based": 3484
+            },
+            {
+              "transcript": "NM_001171630.2",
+              "start_1based": 3268
+            },
+            {
+              "transcript": "NM_001171622.2",
+              "start_1based": 3268
+            },
+            {
+              "transcript": "NM_001171624.2",
+              "start_1based": 3502
+            },
+            {
+              "transcript": "NM_001025370.3",
+              "start_1based": 3298
+            },
+            {
+              "transcript": "NM_001204385.2",
+              "start_1based": 3370
+            },
+            {
+              "transcript": "NM_001025368.3",
+              "start_1based": 3430
+            },
+            {
+              "transcript": "NM_001033756.3",
+              "start_1based": 3364
+            },
+            {
+              "transcript": "NM_003376.6",
+              "start_1based": 3502
+            },
+            {
+              "transcript": "NM_001025366.3",
+              "start_1based": 3553
+            },
+            {
+              "transcript": "NM_001171629.2",
+              "start_1based": 3364
+            }
+          ],
+          "mRNA_context_57nt": "GUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACGA"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3502",
+          "guide_core19_5to3": "AUAUGUACUACGGAAUAUC",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+          "reference_transcript": "NM_003376.6",
+          "covered_transcripts": 20,
+          "reference_transcript_count": 20,
+          "sites": [
+            {
+              "transcript": "NM_001171623.2",
+              "start_1based": 3555
+            },
+            {
+              "transcript": "NM_001171626.2",
+              "start_1based": 3432
+            },
+            {
+              "transcript": "NM_001171628.2",
+              "start_1based": 3300
+            },
+            {
+              "transcript": "NM_001317010.2",
+              "start_1based": 3432
+            },
+            {
+              "transcript": "NM_001025369.3",
+              "start_1based": 3397
+            },
+            {
+              "transcript": "NM_001171627.2",
+              "start_1based": 3397
+            },
+            {
+              "transcript": "NM_001171625.2",
+              "start_1based": 3486
+            },
+            {
+              "transcript": "NM_001204384.2",
+              "start_1based": 3372
+            },
+            {
+              "transcript": "NM_001287044.2",
+              "start_1based": 2464
+            },
+            {
+              "transcript": "NM_001025367.3",
+              "start_1based": 3486
+            },
+            {
+              "transcript": "NM_001171630.2",
+              "start_1based": 3270
+            },
+            {
+              "transcript": "NM_001171622.2",
+              "start_1based": 3270
+            },
+            {
+              "transcript": "NM_001171624.2",
+              "start_1based": 3504
+            },
+            {
+              "transcript": "NM_001025370.3",
+              "start_1based": 3300
+            },
+            {
+              "transcript": "NM_001204385.2",
+              "start_1based": 3372
+            },
+            {
+              "transcript": "NM_001025368.3",
+              "start_1based": 3432
+            },
+            {
+              "transcript": "NM_001033756.3",
+              "start_1based": 3366
+            },
+            {
+              "transcript": "NM_003376.6",
+              "start_1based": 3504
+            },
+            {
+              "transcript": "NM_001025366.3",
+              "start_1based": 3555
+            },
+            {
+              "transcript": "NM_001171629.2",
+              "start_1based": 3366
+            }
+          ],
+          "mRNA_context_57nt": "CUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACGACA"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3535",
+          "guide_core19_5to3": "UAUCUGUAUUUCUUUGUCG",
+          "source": "siDirect_2.0",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+          "reference_transcript": "NM_003376.6",
+          "covered_transcripts": 20,
+          "reference_transcript_count": 20,
+          "sites": [
+            {
+              "transcript": "NM_001171623.2",
+              "start_1based": 3588
+            },
+            {
+              "transcript": "NM_001171626.2",
+              "start_1based": 3465
+            },
+            {
+              "transcript": "NM_001171628.2",
+              "start_1based": 3333
+            },
+            {
+              "transcript": "NM_001317010.2",
+              "start_1based": 3465
+            },
+            {
+              "transcript": "NM_001025369.3",
+              "start_1based": 3430
+            },
+            {
+              "transcript": "NM_001171627.2",
+              "start_1based": 3430
+            },
+            {
+              "transcript": "NM_001171625.2",
+              "start_1based": 3519
+            },
+            {
+              "transcript": "NM_001204384.2",
+              "start_1based": 3405
+            },
+            {
+              "transcript": "NM_001287044.2",
+              "start_1based": 2497
+            },
+            {
+              "transcript": "NM_001025367.3",
+              "start_1based": 3519
+            },
+            {
+              "transcript": "NM_001171630.2",
+              "start_1based": 3303
+            },
+            {
+              "transcript": "NM_001171622.2",
+              "start_1based": 3303
+            },
+            {
+              "transcript": "NM_001171624.2",
+              "start_1based": 3537
+            },
+            {
+              "transcript": "NM_001025370.3",
+              "start_1based": 3333
+            },
+            {
+              "transcript": "NM_001204385.2",
+              "start_1based": 3405
+            },
+            {
+              "transcript": "NM_001025368.3",
+              "start_1based": 3465
+            },
+            {
+              "transcript": "NM_001033756.3",
+              "start_1based": 3399
+            },
+            {
+              "transcript": "NM_003376.6",
+              "start_1based": 3537
+            },
+            {
+              "transcript": "NM_001025366.3",
+              "start_1based": 3588
+            },
+            {
+              "transcript": "NM_001171629.2",
+              "start_1based": 3399
+            }
+          ],
+          "mRNA_context_57nt": "CAUAUUUAUUUUUAAACAACGACAAAGAAAUACAGAUAUAUCUUAAAAAAAAAAAAG"
+        }
+      ],
+      "coverage_scope": "reference annotation, not measured isoform usage"
+    },
+    "score_candidates": {
+      "status": "IMPORTED_HISTORICAL",
+      "source_sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+      "rows": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "guide_core19_5to3": "AUAGACAUCCAUGAACUUC",
+          "design_transcript": "NM_003376.6",
+          "core_target_start_1based": "1159",
+          "mRNA_context_57nt": "AGAAUCAUCACGAAGUGGUGAAGUUCAUGGAUGUCUAUCAGCGCAGCUACUGCCAUC",
+          "matching_sites_n": "1",
+          "raw_class1": 0.7076764106750488,
+          "oligoformer_scaled_score": 0.9489940667152404,
+          "official_func_filter": 0,
+          "repeat_identical": "True",
+          "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+          "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+        },
+        {
+          "candidate_id": "VEGFA_SD_2739",
+          "guide_core19_5to3": "AGAACUAGUGGUUUCAAUG",
+          "design_transcript": "NM_003376.6",
+          "core_target_start_1based": "2741",
+          "mRNA_context_57nt": "AGGACCUAUGUCCUCACACCAUUGAAACCACUAGUUCUGUCCCCCCAGGAGACCUGG",
+          "matching_sites_n": "1",
+          "raw_class1": 0.6573420166969299,
+          "oligoformer_scaled_score": 0.881495644390583,
+          "official_func_filter": 0,
+          "repeat_identical": "True",
+          "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+          "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3119",
+          "guide_core19_5to3": "AUAUCUGUUCAAGAUAAGC",
+          "design_transcript": "NM_003376.6",
+          "core_target_start_1based": "3121",
+          "mRNA_context_57nt": "UGAUCGGUGACAGUCACUAGCUUAUCUUGAACAGAUAUUUAAUUUUGCUAACACUCA",
+          "matching_sites_n": "1",
+          "raw_class1": 0.6884453892707825,
+          "oligoformer_scaled_score": 0.9232052670121192,
+          "official_func_filter": 4,
+          "repeat_identical": "True",
+          "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+          "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3193",
+          "guide_core19_5to3": "ACCUUAUUUCAAAGGAAUG",
+          "design_transcript": "NM_003376.6",
+          "core_target_start_1based": "3195",
+          "mRNA_context_57nt": "CCCCUGGCUCCCCAGCACACAUUCCUUUGAAAUAAGGUUUCAAUAUACAUCUACAUA",
+          "matching_sites_n": "1",
+          "raw_class1": 0.5737422704696655,
+          "oligoformer_scaled_score": 0.7693883846998214,
+          "official_func_filter": 4,
+          "repeat_identical": "True",
+          "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+          "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3429",
+          "guide_core19_5to3": "UAUUACGGAUAAACAGUAG",
+          "design_transcript": "NM_003376.6",
+          "core_target_start_1based": "3431",
+          "mRNA_context_57nt": "UAUCAUUUAUUUAUUGGUGCUACUGUUUAUCCGUAAUAAUUGUGGGGAAAAGAUAUU",
+          "matching_sites_n": "1",
+          "raw_class1": 0.7010828852653503,
+          "oligoformer_scaled_score": 0.9401521491408348,
+          "official_func_filter": 0,
+          "repeat_identical": "True",
+          "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+          "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "guide_core19_5to3": "UGUACUACGGAAUAUCUCG",
+          "design_transcript": "NM_003376.6",
+          "core_target_start_1based": "3501",
+          "mRNA_context_57nt": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG",
+          "matching_sites_n": "1",
+          "raw_class1": 0.7393843531608582,
+          "oligoformer_scaled_score": 0.9915144175887107,
+          "official_func_filter": 0,
+          "repeat_identical": "True",
+          "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+          "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "guide_core19_5to3": "AUGUACUACGGAAUAUCUC",
+          "design_transcript": "NM_003376.6",
+          "core_target_start_1based": "3502",
+          "mRNA_context_57nt": "GUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACGA",
+          "matching_sites_n": "1",
+          "raw_class1": 0.7273184061050415,
+          "oligoformer_scaled_score": 0.9753339825868607,
+          "official_func_filter": 0,
+          "repeat_identical": "True",
+          "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+          "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3502",
+          "guide_core19_5to3": "AUAUGUACUACGGAAUAUC",
+          "design_transcript": "NM_003376.6",
+          "core_target_start_1based": "3504",
+          "mRNA_context_57nt": "CUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACGACA",
+          "matching_sites_n": "1",
+          "raw_class1": 0.7251685857772827,
+          "oligoformer_scaled_score": 0.9724510735273361,
+          "official_func_filter": 4,
+          "repeat_identical": "True",
+          "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+          "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3535",
+          "guide_core19_5to3": "UAUCUGUAUUUCUUUGUCG",
+          "design_transcript": "NM_003376.6",
+          "core_target_start_1based": "3537",
+          "mRNA_context_57nt": "CAUAUUUAUUUUUAAACAACGACAAAGAAAUACAGAUAUAUCUUAAAAAAAAAAAAG",
+          "matching_sites_n": "1",
+          "raw_class1": 0.7483892440795898,
+          "oligoformer_scaled_score": 1.0035899763107299,
+          "official_func_filter": 0,
+          "repeat_identical": "True",
+          "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+          "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+        }
+      ],
+      "score_not_percent": true
+    },
+    "match_seed": {
+      "status": "IMPORTED_HISTORICAL",
+      "scope": "guide only, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target",
+      "positive_rows": 14524,
+      "details": "seed_matches.tsv",
+      "counts": {
+        "VEGFA_SD_1157": 2197,
+        "VEGFA_SD_2739": 1495,
+        "VEGFA_SD_3119": 2665,
+        "VEGFA_SD_3193": 2386,
+        "VEGFA_SD_3429": 279,
+        "VEGFA_SD_3499": 778,
+        "VEGFA_SD_3500": 1548,
+        "VEGFA_SD_3502": 2516,
+        "VEGFA_SD_3535": 3156
+      }
+    },
+    "query_expression": {
+      "status": "LIVE_JOIN_OF_BASELINE_AND_SEED",
+      "target": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "candidate_summary": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1155,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_2739",
+          "matched_genes": 1365,
+          "baseline_mapped_genes": 1362,
+          "hypoxia_detected_genes": 809,
+          "normoxia_detected_genes": 851,
+          "state_detected_genes": 851,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 14,
+          "normoxia_only_detected_genes": 56
+        },
+        {
+          "candidate_id": "VEGFA_SD_3119",
+          "matched_genes": 2209,
+          "baseline_mapped_genes": 2206,
+          "hypoxia_detected_genes": 1275,
+          "normoxia_detected_genes": 1335,
+          "state_detected_genes": 1335,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 17,
+          "normoxia_only_detected_genes": 77
+        },
+        {
+          "candidate_id": "VEGFA_SD_3193",
+          "matched_genes": 1988,
+          "baseline_mapped_genes": 1986,
+          "hypoxia_detected_genes": 1150,
+          "normoxia_detected_genes": 1206,
+          "state_detected_genes": 1206,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 15,
+          "normoxia_only_detected_genes": 71
+        },
+        {
+          "candidate_id": "VEGFA_SD_3429",
+          "matched_genes": 276,
+          "baseline_mapped_genes": 275,
+          "hypoxia_detected_genes": 187,
+          "normoxia_detected_genes": 200,
+          "state_detected_genes": 200,
+          "unmapped_genes": 1,
+          "hypoxia_only_detected_genes": 2,
+          "normoxia_only_detected_genes": 15
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 480,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 858,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        },
+        {
+          "candidate_id": "VEGFA_SD_3502",
+          "matched_genes": 2139,
+          "baseline_mapped_genes": 2136,
+          "hypoxia_detected_genes": 1354,
+          "normoxia_detected_genes": 1443,
+          "state_detected_genes": 1443,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 17,
+          "normoxia_only_detected_genes": 106
+        },
+        {
+          "candidate_id": "VEGFA_SD_3535",
+          "matched_genes": 2602,
+          "baseline_mapped_genes": 2600,
+          "hypoxia_detected_genes": 1561,
+          "normoxia_detected_genes": 1646,
+          "state_detected_genes": 1646,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 21,
+          "normoxia_only_detected_genes": 106
+        }
+      ],
+      "source": {
+        "id": "builtin",
+        "label": "本项目2026-10-16整理的ARPE-19基线表达表",
+        "source": "PACKAGED_PROJECT_DATA",
+        "sha256": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+        "origin": "C:\\00000\\ARPE RNA-seq\\result\\result.zip",
+        "samples": [
+          "Nor1",
+          "Nor2",
+          "Nor3",
+          "Nor4",
+          "Hyp1",
+          "Hyp2",
+          "Hyp3",
+          "Hyp4"
+        ],
+        "scope": "同一培养批次，每状态4皿；未转染；缺氧1% O2 24h",
+        "per_sample_tpm_available_in_packaged_table": false,
+        "ranking_changed": false
+      },
+      "target_excluded_from_offtarget_counts": true,
+      "expression_comparison": "expression_comparison.tsv",
+      "details": "seed_expression_details.tsv",
+      "rule": "TPM>=1 in >=2/4 vessels; annotation only; no risk exclusion; does not change ranking",
+      "scope": "同一培养批次，每状态4皿；未转染；缺氧1% O2 24h; not siRNA perturbation labels"
+    },
+    "compile_report": {
+      "status": "COMPLETE",
+      "selected_for_review": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500",
+        "VEGFA_SD_1157"
+      ],
+      "report": "report.html",
+      "table": "candidates_ranked.tsv",
+      "rules": "先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。",
+      "not_order_ready": true
+    }
+  },
+  "completed_tools": [
+    "inspect_candidates",
+    "verify_target",
+    "score_candidates",
+    "match_seed",
+    "query_expression",
+    "compile_report"
+  ],
+  "seconds": 1.172,
+  "total_tokens": 0,
+  "usage_complete": true,
+  "repeat": 1,
+  "answer_id": "65d8bf59a1df"
+}

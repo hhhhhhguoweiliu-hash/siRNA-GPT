@@ -1,0 +1,16 @@
+{
+  "group": "workflow",
+  "case_id": "ambiguous_direction",
+  "status": "FAILED",
+  "tool_calls": 1,
+  "usage": [],
+  "answer": "unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向",
+  "run_id": "20261020_143713_59c57d",
+  "tool_results": {},
+  "completed_tools": [],
+  "seconds": 0.109,
+  "total_tokens": 0,
+  "usage_complete": true,
+  "repeat": 1,
+  "answer_id": "8ef35851ea9f"
+}

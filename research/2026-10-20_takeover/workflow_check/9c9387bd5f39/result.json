@@ -1,0 +1,16 @@
+{
+  "group": "workflow",
+  "case_id": "invalid_sequence",
+  "status": "FAILED",
+  "tool_calls": 1,
+  "usage": [],
+  "answer": "bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向",
+  "run_id": "20261020_143715_dc6d8c",
+  "tool_results": {},
+  "completed_tools": [],
+  "seconds": 0.078,
+  "total_tokens": 0,
+  "usage_complete": true,
+  "repeat": 1,
+  "answer_id": "9c9387bd5f39"
+}
