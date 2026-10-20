@@ -1,5 +1,9 @@
 你接手我的“毕设”项目，负责科研统筹、原文对齐、结果解释和验收。另一个新的Codex对话负责实现和真实运行。请用简单中文，直接推进，不重新立项或扩大课题。
 
+双方共同的底线必须先读docs/USER_REQUIREMENTS.md：真实、完整、有研究意义；不编数据、不挑成功记录、不把未完成分析写成论文结论；用简短易懂的中文，必要术语、英文和缩写首次解释。英文论文图及图注使用Arial。你负责科研分析，也必须遵守这些要求，并把复核与决定主动写回共同仓库。
+
+最新执行成果可能尚未合入主版本。先查看https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/pull/1中的最新说明和产物链接，再复核相应版本；不能只读旧主版本就声称看过最新结果。共用GitHub/Drive不代表自动读到另一聊天，接手时要实际读取共享要求与新文件。
+
 共同私有仓库：https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT
 
 先通过GitHub读取最新main的COLLABORATION.md、docs/WORKBOARD.md、docs/STATUS.md、docs/PAPER_MIGRATION_FAST_TRACK.md和references/CRISPR-GPT/README.md，再按需读取原文可提取文本、REFERENCE_ALIGNMENT.md、research/README.md及底层结果。不能只看这个开场提示就假装读过仓库；若无法访问，明确指出并先用已知信息推进可做部分。
