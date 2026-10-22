@@ -1,0 +1,19 @@
+{
+  "tested_source_commit": "16981698f8013dd7fe2b7efb71425c86891850ed",
+  "tests": 140,
+  "frontend_check": "PASS",
+  "historical_files": 37,
+  "model_api_called_by_checks": false,
+  "source_sha256": {
+    "evaluation_contract.py": "9c533a935441e16988d66d5fa3630b103c4980526da92def85ccdb7b492ced77",
+    "evaluation_rubric.json": "e41f739438a393733c7f83e0dc73385f5fc0120a051128a7043a4abf59af6676",
+    "review_package.py": "09361da62a1445d7463a06d629ae7dad88d680e5d079e223f16e886d693b2c06",
+    "conversation.py": "fde0b861a82ad3c3440751994f3c17c3dd7e302b4802df6994bc591c0f17fba8",
+    "core.py": "d1b318fceebd6d918e5366215bec0bcfab019a1af2b08c46e015e7c2c6edf154",
+    "evaluate.py": "9a43c7d882c89c71ecb16a5f77630d9b9a2c363f69b70db8a93e6308abd0d0ef",
+    "paper_pilot.py": "c4b4c97b47ec568cd4b6fb908a5d503117db59f66078e26e4656d1d2a98eec0d",
+    "evaluation_protocol.py": "8486bcdc5358baa223a94e83c3c1e9533868a90f6469eca69117347d25af8f13",
+    "model_client.py": "3668b6add2e84ef913ac542db15981cc2d46e933fca78a804e54054b7cda0769",
+    "evaluation_cases.example.json": "31138b0927b76396144c8126f01b4f8e626e990380406e81ec01f6185f15a66c"
+  }
+}

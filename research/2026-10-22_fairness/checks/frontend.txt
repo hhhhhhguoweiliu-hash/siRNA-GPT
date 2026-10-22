@@ -1,0 +1,2 @@
+node test_browser_backup.cjs: PASS
+python scripts/inspect_research_results.py: 37 pinned files verified; old failure evidence preserved

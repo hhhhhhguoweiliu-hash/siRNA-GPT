@@ -1,0 +1,18 @@
+{
+  "service": "sirna-gpt",
+  "service_url": "https://sirna-gpt.onrender.com",
+  "service_id": "srv-dbardmc9v7es739llto0",
+  "workspace_confirmed_by_user": "My Workspace",
+  "pull_request": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/pull/1",
+  "source_commit": "16981698f8013dd7fe2b7efb71425c86891850ed",
+  "merged_main_commit": "9daff5df20ae44e417d2009a04ff1c6b6e39af8b",
+  "deploy_id": "dep-dbcq3cm1egvs73f0m3b0",
+  "deploy_status": "live",
+  "deploy_finished_at_utc": "2026-10-22T05:40:52.333321Z",
+  "healthz": {"status":"ok", "version":"0.7-cloud"},
+  "startup_model_tool_callback": "CONNECTED_TOOL_CALL_VERIFIED",
+  "startup_checks_preserved": true,
+  "automatic_evaluation_at_startup": false,
+  "account_limits_or_permissions_changed": false,
+  "note": "Deploy live and HTTP health verified; diagnostic and batch must be recorded separately through manual usage confirmation. Startup smoke records are not those new evaluation units."
+}
