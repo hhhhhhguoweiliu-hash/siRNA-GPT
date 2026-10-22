@@ -1,0 +1,122 @@
+{
+  "run_id": "dev_20261022_054717_79c2d3",
+  "runtime_commit": "9daff5df20ae44e417d2009a04ff1c6b6e39af8b",
+  "planned": 54,
+  "recorded": 54,
+  "pending": 0,
+  "state_counts": {
+    "agent:COMPLETE": 6,
+    "workflow:FAILED": 9,
+    "workflow:PARTIAL_COMPLETE": 3,
+    "agent:PARTIAL_COMPLETE": 3,
+    "llm:ANSWERED_NO_TOOLS": 18,
+    "agent:idle": 7,
+    "workflow:COMPLETE": 6,
+    "agent:FAILED": 2
+  },
+  "states_by_case": {
+    "normal_normoxia": {
+      "llm": {
+        "ANSWERED_NO_TOOLS": 3
+      },
+      "workflow": {
+        "COMPLETE": 3
+      },
+      "agent": {
+        "COMPLETE": 3
+      }
+    },
+    "invalid_sequence": {
+      "llm": {
+        "ANSWERED_NO_TOOLS": 3
+      },
+      "workflow": {
+        "FAILED": 3
+      },
+      "agent": {
+        "idle": 2,
+        "FAILED": 1
+      }
+    },
+    "target_only": {
+      "llm": {
+        "ANSWERED_NO_TOOLS": 3
+      },
+      "workflow": {
+        "PARTIAL_COMPLETE": 3
+      },
+      "agent": {
+        "PARTIAL_COMPLETE": 3
+      }
+    },
+    "ambiguous_direction": {
+      "llm": {
+        "ANSWERED_NO_TOOLS": 3
+      },
+      "workflow": {
+        "FAILED": 3
+      },
+      "agent": {
+        "idle": 2,
+        "FAILED": 1
+      }
+    },
+    "unsupported_target": {
+      "llm": {
+        "ANSWERED_NO_TOOLS": 3
+      },
+      "workflow": {
+        "FAILED": 3
+      },
+      "agent": {
+        "idle": 3
+      }
+    },
+    "normal_hypoxia": {
+      "llm": {
+        "ANSWERED_NO_TOOLS": 3
+      },
+      "workflow": {
+        "COMPLETE": 3
+      },
+      "agent": {
+        "COMPLETE": 3
+      }
+    }
+  },
+  "actual_model_requests": 80,
+  "request_stages": {
+    "planner": 18,
+    "executor": 44,
+    "plain": 18
+  },
+  "response_statuses": {
+    "completed": 80
+  },
+  "responses_with_incomplete_details": [],
+  "provider_error_answer_ids": [],
+  "usage_by_group": {
+    "llm": {
+      "total_tokens": 109570,
+      "known_token_subtotal": 109570,
+      "unknown_answer_ids": []
+    },
+    "workflow": {
+      "total_tokens": 0,
+      "known_token_subtotal": 0,
+      "unknown_answer_ids": []
+    },
+    "agent": {
+      "total_tokens": 878820,
+      "known_token_subtotal": 878820,
+      "unknown_answer_ids": []
+    }
+  },
+  "generic_failure_answer_ids": [
+    "A037",
+    "A040"
+  ],
+  "same_raw_input": true,
+  "independent_scores_filled": false,
+  "note": "Technical completeness is not scientific accuracy. Generic failure answers remain unchanged and must not be replaced by their error details in scoring."
+}

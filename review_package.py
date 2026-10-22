@@ -30,7 +30,7 @@ def export_review_package(out,cases,results):
         # Actual evidence, including input-provided annotations; no group or repeat key.
         tool_results=r.get('tool_results',{})
         save_json(folder/'evidence.json',{'tool_results':tool_results,
-            'execution_error':r.get('provider_error'),
+            'execution_error':r.get('provider_error') or (r.get('record',{}).get('result') if r.get('status')=='FAILED' else None),
             'evidence_scope':'Tool outputs only if actually obtained; input-provided fields are in input.json. No independent wet-lab proof.'})
         answer=r.get('answer','');(folder/'answer.txt').write_text(answer,encoding='utf-8')
         rows.append(dict.fromkeys(fields,'')|{'answer_id':identity,'case_id':r['case_id'],

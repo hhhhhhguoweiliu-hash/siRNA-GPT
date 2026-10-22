@@ -11,7 +11,7 @@ from pathlib import Path
 from core import HOME, Session, TOOLS, SCHEMAS, TaskError, TaskCancelled, config, default_candidates, save_json, now
 from model_client import request_completion, ModelError, model_error_evidence
 from research import RESEARCH_TOOLS, run_tool as research_tool
-from evaluation_contract import FINAL_ANSWER_STYLE, FIELD_INSTRUCTIONS
+from evaluation_contract import FINAL_ANSWER_STYLE, FIELD_INSTRUCTIONS, workflow_answer
 
 ORDER = [x[0] for x in TOOLS]
 LABELS = dict(zip(ORDER, ['核对候选信息', '核对靶转录本', '计算效力模型分数', '检查 seed 匹配', '查询细胞表达背景', '生成候选报告']))
@@ -21,7 +21,7 @@ DEPS = {'inspect_candidates': [], 'verify_target': ['inspect_candidates'],
 PRESETS = {'full': ORDER, 'target': ORDER[:2], 'score': ORDER[:3],
            'seed': ['inspect_candidates', 'match_seed', 'query_expression']}
 NATURAL_STYLE = ('用自然、简洁的中文交流，像和同实验室的同学一起做事。先直接回应用户最关心的问题，再说明必要依据或下一步。'
-    '通常用两到四句话，复杂问题再展开；少用固定标题、套话、状态码和英文内部字段。'
+    '通常用两到四句话，复杂问题再展开；少用套话、状态码和英文内部字段。'
     '结合上下文理解“这个”“继续”“为什么”，不要每次重新介绍系统或要求切换模式。'
     '缺少关键信息时只问一个明确的问题。只有需要时才说明限制，不在每条回答后重复免责声明。'
     '语言自然不等于放松事实要求：没有工具证据不能说已经计算或验证，不能编造数值或文献。')
@@ -338,6 +338,16 @@ class Conversation:
                         if e.http_status == 403: friendly = '豆包这次拒绝了访问请求，这一步还没有完成。可以展开下面的错误详情，核对具体的权限原因。'
                         elif e.code in ('NETWORK_BLOCKED', 'NETWORK_UNAVAILABLE', 'NETWORK_TIMEOUT'): friendly = '这次没有顺利连上豆包，所以还没得到回答。请检查网络后再试一次，之前的工具记录仍然保留。'
                         else: friendly = '豆包这次没有正常返回结果。具体原因放在下面的错误详情里。'
+                    elif isinstance(e, TaskError):
+                        first_input_error=self.session and not self.session.state and any(
+                            event.get('kind')=='tool_failed' and event.get('message')=='inspect_candidates'
+                            and event.get('error')==str(e) for event in self.events[-3:])
+                        if first_input_error:
+                            friendly=workflow_answer({'task':self.session.task,'candidates':self.session.candidates}, {}, str(e))
+                        else:
+                            friendly=('判定：本次请求未完成。\n关键结果：'+str(e)+
+                                '\n证据：本次执行错误记录；已完成的工具结果仍保留。'
+                                '\n限制或下一步：先处理上述问题，再继续；未完成部分不作为计算结果。')
                     self.add('assistant', friendly, diagnostics=str(e), kind='error')
             finally:
                 with self.lock: self.busy = False; self.persist()

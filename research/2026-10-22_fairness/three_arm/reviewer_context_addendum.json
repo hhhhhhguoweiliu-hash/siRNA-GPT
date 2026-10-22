@@ -1,0 +1,38 @@
+[
+  {
+    "answer_id": "A037",
+    "source": "original record.result and record.events",
+    "original_error": {
+      "status": "FAILED",
+      "message": "bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向"
+    },
+    "original_tool_errors": [
+      {
+        "time": "2026-10-22T05:55:24.881880+00:00",
+        "kind": "tool_failed",
+        "message": "inspect_candidates",
+        "error": "bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向"
+      }
+    ],
+    "answer_unchanged": true,
+    "human_score": null
+  },
+  {
+    "answer_id": "A040",
+    "source": "original record.result and record.events",
+    "original_error": {
+      "status": "FAILED",
+      "message": "unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向"
+    },
+    "original_tool_errors": [
+      {
+        "time": "2026-10-22T05:56:05.702903+00:00",
+        "kind": "tool_failed",
+        "message": "inspect_candidates",
+        "error": "unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向"
+      }
+    ],
+    "answer_unchanged": true,
+    "human_score": null
+  }
+]

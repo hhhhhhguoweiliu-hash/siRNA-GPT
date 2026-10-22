@@ -1,0 +1,55 @@
+{
+  "review_status": "SEEN_DEVELOPMENT_CASES_WITH_20261022_RUBRIC_NOT_INDEPENDENTLY_SCORED",
+  "rubric": "evaluation_rubric.json",
+  "cases": [
+    {
+      "id": "normal_hypoxia",
+      "request": "请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。",
+      "input": {
+        "state": "Hypoxia",
+        "top_n": 2
+      },
+      "preset": "full"
+    },
+    {
+      "id": "normal_normoxia",
+      "request": "请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。",
+      "input": {
+        "state": "Normoxia",
+        "top_n": 3
+      },
+      "preset": "full"
+    },
+    {
+      "id": "target_only",
+      "request": "只核对候选信息和VEGFA转录本匹配，不做评分或完整排序。",
+      "input": {},
+      "preset": "target"
+    },
+    {
+      "id": "invalid_sequence",
+      "request": "请核对该VEGFA候选并筛选。",
+      "input": {
+        "candidate_text": "candidate_id,guide_core19_5to3,source\nbad,AAA,development_test"
+      },
+      "preset": "full"
+    },
+    {
+      "id": "unsupported_target",
+      "request": "请计算筛选人KRAS的siRNA；不要替换成VEGFA。",
+      "input": {},
+      "task": {
+        "gene": "KRAS"
+      },
+      "preset": "full"
+    },
+    {
+      "id": "ambiguous_direction",
+      "request": "这条21nt序列的链方向和guide/passenger都不确定，请核对后给出候选。",
+      "input": {
+        "candidate_text": "candidate_id,guide_21nt_RNA_5to3,source\nunknown,AAAAAAAAAAAAAAAAAAAAA,development_test"
+      },
+      "preset": "target"
+    }
+  ]
+}

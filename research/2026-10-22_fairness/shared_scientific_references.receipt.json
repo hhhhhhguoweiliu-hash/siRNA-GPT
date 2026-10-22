@@ -1,0 +1,48 @@
+{
+  "bytes": 942250,
+  "sha256": "f37760663106313dd93445f3454d041e4af08321d6740c2fa1af14f2f4966577",
+  "source_runtime_commit": "9daff5df20ae44e417d2009a04ff1c6b6e39af8b",
+  "files": {
+    "data/candidates.tsv": {
+      "bytes": 6404,
+      "sha256": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853",
+      "runtime_hash_verified": true
+    },
+    "data/historical_scores.tsv": {
+      "bytes": 2272,
+      "sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+      "runtime_hash_verified": true
+    },
+    "data/VEGFA.fasta": {
+      "bytes": 73742,
+      "sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "runtime_hash_verified": true
+    },
+    "data/expression.tsv.gz": {
+      "bytes": 674448,
+      "sha256": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+      "runtime_hash_verified": true
+    },
+    "data/historical_seed_matches.tsv": {
+      "bytes": 522219,
+      "sha256": "3701a561a84cdf9df29108f6c235398cc377901a598293071f5724f706f2ac3c",
+      "runtime_hash_verified": true
+    },
+    "data/provenance.json": {
+      "bytes": 3488,
+      "sha256": "c2f0ff2200cbbbd79e73724db2a4673c0a356ae3dbe548380c6f0b6223c7ef18",
+      "runtime_hash_verified": true
+    },
+    "data/historical_near_matches.tsv": {
+      "bytes": 160365,
+      "sha256": "af0926615f20e405023109b66a4ad00620f938cb53f84a605c4cb9ed7e209e72",
+      "runtime_hash_verified": false
+    },
+    "data/utr_gene_map.tsv": {
+      "bytes": 531510,
+      "sha256": "d72d9b45ae6fade48c80d17a937163cd79d51cc34f0207755c1cc73b80bac836",
+      "runtime_hash_verified": false
+    }
+  },
+  "contains_group_key": false
+}
