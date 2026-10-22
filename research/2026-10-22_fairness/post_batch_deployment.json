@@ -1,0 +1,106 @@
+{
+  "service": "sirna-gpt",
+  "service_url": "https://sirna-gpt.onrender.com",
+  "service_id": "srv-dbardmc9v7es739llto0",
+  "workspace_confirmed_by_user": "My Workspace",
+  "pull_request": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/pull/2",
+  "source_commit": "9b00cd6c70de0b485677b3a4d488d67b582fbfbb",
+  "merged_main_commit": "1f155cf2ed051f85a440f8162488989a462f2b14",
+  "deploy_id": "dep-dbcqjndg1s2s738bfb70",
+  "deploy_status": "live",
+  "deploy_finished_at_utc": "2026-10-22T06:15:36.100835Z",
+  "healthz_http_status": 200,
+  "healthz": {
+    "status": "ok",
+    "version": "0.7-cloud"
+  },
+  "original_batch_runtime_commit": "9daff5df20ae44e417d2009a04ff1c6b6e39af8b",
+  "batch_finished_before_this_deployment": true,
+  "new_batch_rerun": false,
+  "manual_usage_confirmation_preserved": true,
+  "account_limits_or_permissions_changed": false,
+  "github_check_runs": [
+    {
+      "run_id": 39732619571,
+      "conclusion": "SUCCESS"
+    },
+    {
+      "run_id": 39732643044,
+      "conclusion": "SUCCESS"
+    }
+  ],
+  "startup_checks_preserved": true,
+  "note": "New deployment and startup smoke checks are separate from the completed 54 observations; original answers remain unchanged.",
+  "startup_model_status": "CONNECTED_TOOL_CALL_VERIFIED",
+  "startup_scientific_status": "VERIFIED",
+  "startup_results": [
+  {
+    "timestamp": "2026-10-22T06:15:39.935215983Z",
+    "name": "pubmed",
+    "status": "OK",
+    "source_count": 1,
+    "message": "",
+    "provider_code": "",
+    "request_id": "",
+    "multi_turn_verified": false
+  },
+  {
+    "timestamp": "2026-10-22T06:16:06.407515085Z",
+    "name": "web",
+    "status": "OK",
+    "source_count": 6,
+    "message": "",
+    "provider_code": "",
+    "request_id": "021792649740181c7a72a88d43dfac05486ec15ae720432bef9a4",
+    "multi_turn_verified": false
+  },
+  {
+    "timestamp": "2026-10-22T06:16:06.407541735Z",
+    "name": "model",
+    "status": "CONNECTED_TOOL_CALL_VERIFIED",
+    "source_count": 0,
+    "message": "",
+    "provider_code": "",
+    "request_id": "02179264973402953952e287ddd1b7d9109cd0048896ba0d136b3",
+    "multi_turn_verified": true
+  },
+  {
+    "timestamp": "2026-10-22T06:16:25.391244646Z",
+    "name": "research_conversation",
+    "status": "VERIFIED",
+    "source_count": 3,
+    "message": "",
+    "provider_code": "",
+    "request_id": "",
+    "multi_turn_verified": false,
+    "tools": [
+      "search_pubmed"
+    ],
+    "source_titles": [
+      "如何区分回答中的资料来源",
+      "模型分数和实验敲低率",
+      "OligoFormer: an accurate and robust prediction method for siRNA design."
+    ],
+    "answer_preview": "真实题名为：**“OligoFormer: an accurate and robust prediction method for siRNA design.”**，2024 年发表于 *Bioinformatics*，PMID: **39321261**，DOI: **10.1093/bioinformatics/btae577** [S3]。\n\n依据 PubMed 摘要，它提出用于 **siRNA 设计**的预测方法，核心评估内容包括：\n- 在多个 **siRNA efficacy（敲低/抑制效率）数据集**上与 6 种方法做基准比较；\n- 使用跨数据集验证评价 AUC、PRC、F1、PCC 等指标；\n- 流程还整合 **PITA score** 和 **TargetScan score**，用于预测 siRNA 的 efficacy 与 off-target effects（脱靶效应）[S3]。\n\n以上仅依据检索到的 PubMed 摘要，未阅读全文。\n\n[S3] https://pubmed.ncbi.nlm.nih.gov/39321261/"
+  },
+  {
+    "timestamp": "2026-10-22T06:17:22.123311036Z",
+    "name": "scientific_conversation",
+    "status": "VERIFIED",
+    "source_count": 0,
+    "message": "Full six-tool workflow with imported scientific outputs; no heavy cloud model/R rerun.",
+    "provider_code": "",
+    "request_id": "",
+    "multi_turn_verified": false,
+    "tools": [
+      "inspect_candidates",
+      "verify_target",
+      "score_candidates",
+      "match_seed",
+      "query_expression",
+      "compile_report"
+    ],
+    "answer_preview": "## 判定\n默认9条人 VEGFA 候选均已完成核对；优先核查的2条为 **VEGFA_SD_3499** 和 **VEGFA_SD_3500**。两者都是无官方功能过滤提示的候选，且模型分数居前；所有候选当前均不可直接下单，因为化学修饰尚未冻结确认。\n\n## 关键结果\n\n| 优先级 | 候选 | 19nt guide核心 | OligoFormer分数 | 排除VEGFA后的seed位点数 | 去重非靶基因数 | 缺氧检出基因数 |\n|---|---|---|---:|---:|---:|---:|\n| 1 | VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 0.9915 | 777 | 728 | 463 |\n| 2 | VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 0.9753 | 1547 | 1333 | 811 |\n\n完整9条排序中的其余候选按规则处理：VEGFA_SD_1157、2739、3429虽无官方功能过滤提示，但分数低于前两名；VEGFA_SD_3119、3193、3502、3535带有官方功能过滤提示，列"
+  }
+]
+}

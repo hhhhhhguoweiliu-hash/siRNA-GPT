@@ -91,13 +91,17 @@
     "bytes": 1429,
     "sha256": "68c84591b39b54786953a3222bbbf5e38047b3de2e8d4bb8642dc26717e82934"
   },
+  "post_batch_deployment.json": {
+    "bytes": 4746,
+    "sha256": "3de54c354e190c9d1a7ad743964ba39501661b907665824dd85dedf0a8456a19"
+  },
   "PRE_RUN_PROTOCOL.md": {
     "bytes": 3116,
     "sha256": "c0cd0dc75915e799cb33c6fd58f0f8180affc9728b5f294eb0ac07e1c04843f4"
   },
   "README.md": {
-    "bytes": 5950,
-    "sha256": "599d0d8db153c4735b4cb6443c7875313ae527bcdcfdf8b5036320ad0bdb44a1"
+    "bytes": 6086,
+    "sha256": "af73c0a995d981709bbf4584389435a8c5f631ded3625f949219b6712d939b7f"
   },
   "shared_scientific_references.receipt.json": {
     "bytes": 1730,
