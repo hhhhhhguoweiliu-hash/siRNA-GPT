@@ -99,6 +99,24 @@ class FairnessTests(unittest.TestCase):
         r=run_case('agent',case,self.cfg,self.root/'scope',fake)
         self.assertEqual(r['status'],'FAILED');self.assertEqual(r['tool_calls'],0)
         self.assertIn('KRAS',r['record']['result']['message'])
+    def test_agent_guard_failure_keeps_failed_status_and_shows_actual_input_reason(self):
+        for case in (self.cases[3],self.cases[5]):
+            def fake(payload):
+                choice=payload.get('tool_choice')
+                if isinstance(choice,dict) and choice.get('function',{}).get('name')=='propose_plan':
+                    self.assertNotIn('少用固定标题',payload['messages'][0]['content'])
+                    return message_response(name='propose_plan',args={'decision':'ready','summary':'TEST_ONLY',
+                        'tools':['verify_target'],'question':''})
+                return message_response(name='inspect_candidates',args={})
+            out=self.root/('guard_'+case['id']);r=run_case('agent',case,self.cfg,out/'A001',fake)
+            self.assertEqual(r['status'],'FAILED');self.assertEqual(r['completed_tools'],[])
+            self.assertEqual(r['tool_calls'],1);self.assertFalse(r['provider_error'])
+            for heading in ('判定','关键结果','证据','限制或下一步'):self.assertIn(heading,r['answer'])
+            self.assertIn('AAA' if case['id']=='invalid_sequence' else 'A'*21,r['answer'])
+            r.update(answer_id='A001',repeat=1);export_answers(out,[case],[r])
+            e=json.loads((out/'for_review/answers/A001/evidence.json').read_text(encoding='utf-8'))
+            self.assertEqual(e['execution_error']['status'],'FAILED')
+            self.assertIn('19nt',e['execution_error']['message'])
     def test_http_diagnostic_preserves_manual_usage_ack_and_has_one_planned_record(self):
         import os,cloud
         from test_cloud import call

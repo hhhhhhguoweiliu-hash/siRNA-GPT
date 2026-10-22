@@ -15,6 +15,12 @@ def user_input(request):
         except (ValueError,TypeError):continue
         if isinstance(value,dict) and isinstance(value.get('input'),dict):return value['input']
 
+def response_fields(response):
+    raw=response.get('_raw_response',response)
+    return {'response_id':raw.get('id'),'request_id':response.get('_request_id'),
+        'response_status':raw.get('status'),'incomplete_details':raw.get('incomplete_details'),
+        'usage':raw.get('usage',response.get('usage',{}))}
+
 def audit(archive,output):
     raw=Path(archive).read_bytes();out=Path(output)
     if out.exists() and any(out.iterdir()):raise ValueError('Use a new empty output directory')
@@ -28,6 +34,9 @@ def audit(archive,output):
         assert [key(x) for x in results]==[key(x) for x in schedule[:len(results)]]
         assert len({x['answer_id'] for x in results})==len(results)
         assert completion['pending']==len(schedule)-len(results)
+        assert completion['completed']==len(results) and completion['total']==len(schedule)
+        assert completion['scientific_quality_scored'] is False
+        if completion['status']=='COMPLETE':assert len(results)==len(schedule)
         assert settings_sha256(p['model_settings'])==p['model_settings_sha256']
         settings=p['model_settings'];snapshots={};checks=[];request_checks=[]
         for r in results:
@@ -38,22 +47,28 @@ def audit(archive,output):
                 name=aid+'/actual_model_request.json' if aid+'/actual_model_request.json' in z.namelist() else aid+'/model_error_evidence.json'
                 request=read(name);request=request.get('request',request)
                 visible=user_input(request)
+                response_name=aid+'/model_response.json' if aid+'/model_response.json' in z.namelist() else aid+'/model_error_response.json'
+                response=read(response_name) if response_name in z.namelist() else {}
                 request_checks.append({'answer_id':aid,'stage':'plain','actual_input_matches':visible==snap['input'],
                     'max_output_tokens':request.get('max_output_tokens',request.get('max_tokens')),
-                    'thinking':request.get('thinking'),'model':request.get('model')})
+                    'thinking':request.get('thinking'),'model':request.get('model'),**response_fields(response)})
             if r['group']=='agent':
                 exchanges=r.get('record',{}).get('evidence_records',[])
                 first=next((e for e in exchanges if e.get('request') and user_input(e['request']) is not None),None)
                 request=first['request'] if first else {}
                 request_checks.append({'answer_id':aid,'stage':'planner','actual_input_matches':user_input(request)==snap['input'],
                     'max_output_tokens':request.get('max_output_tokens',request.get('max_tokens')),
-                    'thinking':request.get('thinking'),'model':request.get('model')})
+                    'thinking':request.get('thinking'),'model':request.get('model'),**response_fields(first.get('response',{}) if first else {})})
             for name in z.namelist():
                 if not name.startswith(aid+'/runs/') or not (name.endswith('_response.json') or name.endswith('_error.json')):continue
                 saved=read(name);request=saved.get('_request',saved.get('request',{}))
-                if request:request_checks.append({'answer_id':aid,'stage':'executor',
-                    'max_output_tokens':request.get('max_output_tokens',request.get('max_tokens')),
-                    'thinking':request.get('thinking'),'model':request.get('model')})
+                if request:
+                    visible=user_input(request)
+                    request_checks.append({'answer_id':aid,'stage':'executor',
+                        'actual_candidates_match':visible is not None and visible.get('candidates')==snap['input']['candidates'],
+                        'actual_task_matches':visible is not None and visible.get('task')==snap['input']['task'],
+                        'max_output_tokens':request.get('max_output_tokens',request.get('max_tokens')),
+                        'thinking':request.get('thinking'),'model':request.get('model'),**response_fields(saved)})
             tools=r.get('tool_results',{});states=tools.get('query_expression',{}).get('candidate_summary',[])
             byid={x['candidate_id']:x for x in states}
             count_checks={}
@@ -64,16 +79,25 @@ def audit(archive,output):
                 'count_field_consistency':count_checks,'semantic_score':None})
         assert all(len(set(v))==1 for v in snapshots.values()),'Raw case inputs differ across arms/repeats'
         assert all(x.get('actual_input_matches',True) for x in request_checks),'Actual model input mismatch'
+        assert all(x.get('actual_candidates_match',True) and x.get('actual_task_matches',True) for x in request_checks),'Executor original candidates/task mismatch'
         assert all(x['max_output_tokens']==settings['max_output_tokens'] for x in request_checks),'Output cap mismatch'
         assert all(x['thinking']=={'type':settings['thinking']} for x in request_checks),'Thinking setting mismatch'
         assert all(x['model']==p['model'] for x in request_checks),'Model mismatch'
+        assert all(all(x['count_field_consistency'].values()) for x in checks),'Tool count fields differ from reviewed anchors'
         for name in ['protocol.json','cases.json','completion.json','execution_status.tsv','private_key.tsv']:
             (out/name).write_bytes(z.read(name))
         review_files=[n for n in z.namelist() if n.startswith('for_review/')]
         assert review_files and not any('private_key' in n for n in review_files)
         rows=list(csv.DictReader(io.StringIO(z.read('for_review/blank_scores.tsv').decode('utf-8-sig')),delimiter='\t'))
         assert len(rows)==len(results)
+        assert {row['answer_id'] for row in rows}=={r['answer_id'] for r in results}
         assert all(not row[k] for row in rows for k in ['reviewer_id','accuracy_0_2','evidence_0_2','task_fit_0_2','limits_0_2'])
+        assert {x['case_id'] for x in read('for_review/complete_tasks.json')}=={x['id'] for x in cases['cases']}
+        for r in results:
+            prefix='for_review/answers/'+r['answer_id']+'/'
+            assert z.read(prefix+'answer.txt').decode('utf-8')==r.get('answer',''),'Anonymous answer was changed'
+            assert read(prefix+'input.json')==read(r['answer_id']+'/case_input.json'),'Review input mismatch'
+            assert read(prefix+'evidence.json')['tool_results']==r.get('tool_results',{}),'Review tool evidence mismatch'
         with zipfile.ZipFile(out/'for_review.zip','w',zipfile.ZIP_DEFLATED) as target:
             for name in review_files:target.writestr(name.removeprefix('for_review/'),z.read(name))
     (out/'results.json.gz').write_bytes(gzip.compress(json.dumps(results,ensure_ascii=False).encode('utf-8'),mtime=0))

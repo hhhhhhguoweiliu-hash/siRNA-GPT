@@ -2,7 +2,7 @@
 
 双方先读docs/USER_REQUIREMENTS.md。真实、完整且有研究意义是共同底线；日常简短中文，术语和必要英文/缩写首次解释。你负责执行、检查和主动上传；科研分析和方向选择由另一个对话与用户共同决定。完整材料上传后，再简短提示是否需要共同分析决策。
 
-最新执行成果见https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/pull/1及其产物说明；接手时一并读取，避免只读旧主版本后重复工作或漏掉要求。尚未合入主版本的代码和结果，不得说成网站已更新。
+PR #1已合入并部署；最新执行成果先从最新main的docs/WORKBOARD.md、docs/STATUS.md和research/2026-10-22_fairness/README.md读取，PR #1保留修复讨论。接手时实际核对当前commit与部署版本，避免只读旧PR后漏掉新结果；尚未部署的内容仍须如实说明。
 
 仓库：https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT
 线上：https://sirna-gpt.onrender.com

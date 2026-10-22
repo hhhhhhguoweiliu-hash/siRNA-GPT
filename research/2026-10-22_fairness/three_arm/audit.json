@@ -1,0 +1,2710 @@
+{
+  "mode": "batch",
+  "runtime": {
+    "version": "0.7-cloud",
+    "commit": "9daff5df20ae44e417d2009a04ff1c6b6e39af8b",
+    "assets": {
+      "core.py": "e6a39471d854c5af51709d4c64f0e4004297a813c71ac71c8e45b7f58389b515",
+      "conversation.py": "7711e54c757401ed6b47683aeb92656544722eb5fab945e65dedf2100c5bd641",
+      "research.py": "47e88179625b78e5f5feb099ad947c97a368fe41e9d32397b49b8c95e20eb245",
+      "knowledge.py": "91cd3cddb1253883c4b6403907f83572737762fc8d73e494c8e329ed907c5203",
+      "model_client.py": "53d993531467055dfd964b85297026bfab345f2d24af0c1172733e2f7a6b7849",
+      "expression_data.py": "06bbc8024c69a4fd201952b651285fc6e1e1e719fe1142f7b91eb982d49ed592",
+      "evaluate.py": "ee90d16064da69df9b7e113d5009c024aa42bd8e356aaf3d0b8a0744b9830fc0",
+      "paper_pilot.py": "ea59a696992e667475efef3fda0de8893e26db55ff0591d5b0b2725238e428f6",
+      "evaluation_protocol.py": "8486bcdc5358baa223a94e83c3c1e9533868a90f6469eca69117347d25af8f13",
+      "evaluation_cases.example.json": "0a2bae44c14aa431d407977f256c5769b0f04da4b15723a68a37d8fc2d364f86",
+      "evaluation_contract.py": "9c533a935441e16988d66d5fa3630b103c4980526da92def85ccdb7b492ced77",
+      "evaluation_rubric.json": "e41f739438a393733c7f83e0dc73385f5fc0120a051128a7043a4abf59af6676",
+      "review_package.py": "09361da62a1445d7463a06d629ae7dad88d680e5d079e223f16e886d693b2c06",
+      "data/candidates.tsv": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853",
+      "data/historical_scores.tsv": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+      "data/VEGFA.fasta": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "data/expression.tsv.gz": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+      "data/historical_seed_matches.tsv": "3701a561a84cdf9df29108f6c235398cc377901a598293071f5724f706f2ac3c",
+      "data/provenance.json": "c2f0ff2200cbbbd79e73724db2a4673c0a356ae3dbe548380c6f0b6223c7ef18"
+    },
+    "scientific_mode": "verified_imports",
+    "knowledge_review": "draft_project_notes",
+    "specialized_fine_tuned_model": false,
+    "durable_cloud_storage": false
+  },
+  "archive_bytes": 2441770,
+  "archive_sha256": "ac580c48aa7769cd114c5895903eb2c49bcaf72b0718004fb928c1b30e6e5ef2",
+  "archive_crc": "PASS",
+  "planned_units": 54,
+  "recorded_units": 54,
+  "completion": {
+    "status": "COMPLETE",
+    "run_id": "dev_20261022_054717_79c2d3",
+    "completed": 54,
+    "total": 54,
+    "finished_at": "2026-10-22T06:00:47.852707+00:00",
+    "pending": 0,
+    "scientific_quality_scored": false
+  },
+  "state_counts": {
+    "agent:COMPLETE": 6,
+    "workflow:FAILED": 9,
+    "workflow:PARTIAL_COMPLETE": 3,
+    "agent:PARTIAL_COMPLETE": 3,
+    "llm:ANSWERED_NO_TOOLS": 18,
+    "agent:idle": 7,
+    "workflow:COMPLETE": 6,
+    "agent:FAILED": 2
+  },
+  "input_hashes_by_case": {
+    "normal_normoxia": [
+      "d940fde7e9fd55774dadd3cdf863df1eb6793fc58cf0dce40d6790d137539322"
+    ],
+    "invalid_sequence": [
+      "7905679fbe1e9bb110a5cb931d670d14cdfe1461d636b89e6dbbffe8812c3b63"
+    ],
+    "target_only": [
+      "13e70389468b46b41e49c73899c26562930ce8f5d8ff367318b536df5b46a867"
+    ],
+    "ambiguous_direction": [
+      "aee28069c8b8c647db993e70414c921c074c019e5c2572cfe2be41b0820a92f3"
+    ],
+    "unsupported_target": [
+      "97fa7fdbfcbdea1ecb36db2047fa5ea7541d31b756d2a5eeb3b23837e071c56d"
+    ],
+    "normal_hypoxia": [
+      "45d154cf66e820d6b669beabdbcc118bd0de301e1ab882ee6b95db2f6a3d1a4f"
+    ]
+  },
+  "same_raw_inputs": true,
+  "actual_request_checks": [
+    {
+      "answer_id": "A001",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264803806255eac14dce3bb90e0d7c435405ce6caf2c6e66",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8743,
+        "output_tokens": 199,
+        "total_tokens": 8942,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A001",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264804376069bee7302ebcfceb03bd4615aad0dc32895781",
+      "request_id": "02179264804376069bee7302ebcfceb03bd4615aad0dc32895781",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8043,
+        "output_tokens": 21,
+        "total_tokens": 8064,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A001",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926480464498d04290f080f41f1dcb9c4b0d68f0930a7fd42",
+      "request_id": "0217926480464498d04290f080f41f1dcb9c4b0d68f0930a7fd42",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8802,
+        "output_tokens": 45,
+        "total_tokens": 8847,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A001",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648052495006c460d0b2d36d003716bcb3522c0d1163a3b",
+      "request_id": "021792648052495006c460d0b2d36d003716bcb3522c0d1163a3b",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26334,
+        "output_tokens": 20,
+        "total_tokens": 26354,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A001",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648056497cd226039e9cdd284b6568180b30f64bff16791",
+      "request_id": "021792648056497cd226039e9cdd284b6568180b30f64bff16791",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26034,
+        "output_tokens": 589,
+        "total_tokens": 26623,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A004",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648077093474cb012b3b24af2f1528e3bfa9e6caaec9a99",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8697,
+        "output_tokens": 162,
+        "total_tokens": 8859,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A004",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264808291052e41e2783ec5c4cff790c8cff2820f61039bb",
+      "request_id": "02179264808291052e41e2783ec5c4cff790c8cff2820f61039bb",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8003,
+        "output_tokens": 21,
+        "total_tokens": 8024,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A004",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264808535780c56aa2c9b300d5cdd78b61f7b93dd69f1421",
+      "request_id": "02179264808535780c56aa2c9b300d5cdd78b61f7b93dd69f1421",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8704,
+        "output_tokens": 19,
+        "total_tokens": 8723,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A004",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648088166e5604ce51ad3a2545ae54a532380ddcee42daa",
+      "request_id": "021792648088166e5604ce51ad3a2545ae54a532380ddcee42daa",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 21371,
+        "output_tokens": 923,
+        "total_tokens": 22294,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A006",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926481059538e05db81a26ab4b44637eb56f02aba94cde204",
+      "request_id": "0217926481059538e05db81a26ab4b44637eb56f02aba94cde204",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7514,
+        "output_tokens": 555,
+        "total_tokens": 8069,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A007",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648120865ec6553b2bbb2bcb1bdf9627ab55f9f64a97525",
+      "request_id": "021792648120865ec6553b2bbb2bcb1bdf9627ab55f9f64a97525",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7514,
+        "output_tokens": 453,
+        "total_tokens": 7967,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A010",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926481359810ab9d8edb12c66686fe4c60e6bc8d0079888e3",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8688,
+        "output_tokens": 246,
+        "total_tokens": 8934,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A011",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648144797afc51c7847b25ba05aee7737b2a1fca3c47aa3",
+      "request_id": "021792648144797afc51c7847b25ba05aee7737b2a1fca3c47aa3",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7519,
+        "output_tokens": 1411,
+        "total_tokens": 8930,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A013",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264817741015fbdadcab519d4036db755cb38dce68e4108b",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8741,
+        "output_tokens": 194,
+        "total_tokens": 8935,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A013",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648181885fba75098d9ee455dd9478ca57adcb3fd1509cf",
+      "request_id": "021792648181885fba75098d9ee455dd9478ca57adcb3fd1509cf",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8043,
+        "output_tokens": 21,
+        "total_tokens": 8064,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A013",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926481845180bbf51ace819fab93059a10f5630b348e42947",
+      "request_id": "0217926481845180bbf51ace819fab93059a10f5630b348e42947",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8802,
+        "output_tokens": 28,
+        "total_tokens": 8830,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A013",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648189079226d55c1868491c89c6234734c8c3308d7f7b0",
+      "request_id": "021792648189079226d55c1868491c89c6234734c8c3308d7f7b0",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 22494,
+        "output_tokens": 21,
+        "total_tokens": 22515,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A013",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264819191931531f02f4f0092e9c8b48ace140f1c72a2070",
+      "request_id": "02179264819191931531f02f4f0092e9c8b48ace140f1c72a2070",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 24619,
+        "output_tokens": 20,
+        "total_tokens": 24639,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A013",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648197271d6bdab3051f46472bfd942e874cc5db02ced4b",
+      "request_id": "021792648197271d6bdab3051f46472bfd942e874cc5db02ced4b",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26372,
+        "output_tokens": 20,
+        "total_tokens": 26392,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A013",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926482006916a861da7d15ce34477456226ae15cbbab484ae",
+      "request_id": "0217926482006916a861da7d15ce34477456226ae15cbbab484ae",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26060,
+        "output_tokens": 549,
+        "total_tokens": 26609,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A014",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648215478ccbdf6fa4f62a84920463b89d4ca27eeccc694",
+      "request_id": "021792648215478ccbdf6fa4f62a84920463b89d4ca27eeccc694",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7541,
+        "output_tokens": 1230,
+        "total_tokens": 8771,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A015",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648243368ed9c07a18069cfb59ad66daf7e7bd921c931a5",
+      "request_id": "021792648243368ed9c07a18069cfb59ad66daf7e7bd921c931a5",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 870,
+        "output_tokens": 336,
+        "total_tokens": 1206,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A016",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926482539329fa816846a66c284e8394e3eec456c07115410",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8686,
+        "output_tokens": 279,
+        "total_tokens": 8965,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A017",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648265495f952b6c252d6ae62c15909f77d85597e729146",
+      "request_id": "021792648265495f952b6c252d6ae62c15909f77d85597e729146",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7541,
+        "output_tokens": 935,
+        "total_tokens": 8476,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A020",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264829058033412155cdacfc777b8945c244aabe1bb4bd67",
+      "request_id": "02179264829058033412155cdacfc777b8945c244aabe1bb4bd67",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 870,
+        "output_tokens": 244,
+        "total_tokens": 1114,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A021",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926483022042d417bd9da6e7dfe27ae15305eaa9a4f922787",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8686,
+        "output_tokens": 228,
+        "total_tokens": 8914,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A022",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648311369e9cca6f75bf938e3a6ba47ab928f3a20717473",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8696,
+        "output_tokens": 172,
+        "total_tokens": 8868,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A022",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648317012303db35ac9981d5ef8d4d6ed5948323cb00b6c",
+      "request_id": "021792648317012303db35ac9981d5ef8d4d6ed5948323cb00b6c",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8003,
+        "output_tokens": 21,
+        "total_tokens": 8024,
+        "input_tokens_details": {
+          "cached_tokens": 8003
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A022",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648319117b5bbc295b386b4b249d67905c97ffef84a9266",
+      "request_id": "021792648319117b5bbc295b386b4b249d67905c97ffef84a9266",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8704,
+        "output_tokens": 19,
+        "total_tokens": 8723,
+        "input_tokens_details": {
+          "cached_tokens": 8704
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A022",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648320494a74db14f970067a2e49e99d172164f6c717152",
+      "request_id": "021792648320494a74db14f970067a2e49e99d172164f6c717152",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 21371,
+        "output_tokens": 762,
+        "total_tokens": 22133,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A024",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264834438044b253f74506d616fc92fe2071d898a6e83f84",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 2079,
+        "output_tokens": 277,
+        "total_tokens": 2356,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A026",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264835296927e8fc0fa0715a86ae045e34656b3bc8a6acf2",
+      "request_id": "02179264835296927e8fc0fa0715a86ae045e34656b3bc8a6acf2",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7541,
+        "output_tokens": 1034,
+        "total_tokens": 8575,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A028",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648388762ec6553b2bbb2bcb1bdf9627ab55f9f643e05be",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 2030,
+        "output_tokens": 210,
+        "total_tokens": 2240,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A029",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926483994942ed1cec50adc32004fbc5d33f366676059f144",
+      "request_id": "0217926483994942ed1cec50adc32004fbc5d33f366676059f144",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7541,
+        "output_tokens": 960,
+        "total_tokens": 8501,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A032",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648423982a28a523199212da973704da21f2917eba41b8f",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8742,
+        "output_tokens": 200,
+        "total_tokens": 8942,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A032",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264843113047c8075984f4c09bb3b0ca9abced541e4d752e",
+      "request_id": "02179264843113047c8075984f4c09bb3b0ca9abced541e4d752e",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8043,
+        "output_tokens": 21,
+        "total_tokens": 8064,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A032",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926484330035ff81645323f0060132cd8f23da37b47d3a051",
+      "request_id": "0217926484330035ff81645323f0060132cd8f23da37b47d3a051",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8802,
+        "output_tokens": 19,
+        "total_tokens": 8821,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A032",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926484347915bf05a230eba2dfb3c75629cf63151ecb55105",
+      "request_id": "0217926484347915bf05a230eba2dfb3c75629cf63151ecb55105",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 21913,
+        "output_tokens": 29,
+        "total_tokens": 21942,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A032",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648439364a494df944a230ff836cdfb3920056d772e5391",
+      "request_id": "021792648439364a494df944a230ff836cdfb3920056d772e5391",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 24619,
+        "output_tokens": 20,
+        "total_tokens": 24639,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A032",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926484460138e176da3b05ba6e67d04a3c716a002517318b4",
+      "request_id": "0217926484460138e176da3b05ba6e67d04a3c716a002517318b4",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26372,
+        "output_tokens": 20,
+        "total_tokens": 26392,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A032",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648450083d335b84ce8255b194a031442d80d4f21b4dd0b",
+      "request_id": "021792648450083d335b84ce8255b194a031442d80d4f21b4dd0b",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26072,
+        "output_tokens": 574,
+        "total_tokens": 26646,
+        "input_tokens_details": {
+          "cached_tokens": 7992
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A033",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648464387fef52c4b25b30e28d151ef041e4abfe5626931",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8698,
+        "output_tokens": 177,
+        "total_tokens": 8875,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A033",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648470831e9cb5252029dbbd5be23154381b1012bc0df84",
+      "request_id": "021792648470831e9cb5252029dbbd5be23154381b1012bc0df84",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8003,
+        "output_tokens": 21,
+        "total_tokens": 8024,
+        "input_tokens_details": {
+          "cached_tokens": 8003
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A033",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264847253138b4ca612c111379c83d27b4a8b1bb37679a8d",
+      "request_id": "02179264847253138b4ca612c111379c83d27b4a8b1bb37679a8d",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8704,
+        "output_tokens": 20,
+        "total_tokens": 8724,
+        "input_tokens_details": {
+          "cached_tokens": 8704
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A033",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926484743123587b81e5d6fed80d7b8fbd8e8cb3fa6530256",
+      "request_id": "0217926484743123587b81e5d6fed80d7b8fbd8e8cb3fa6530256",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 21371,
+        "output_tokens": 703,
+        "total_tokens": 22074,
+        "input_tokens_details": {
+          "cached_tokens": 21371
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A036",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264850143100056b3041b0d991ed41cbed734fffb816c590",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 2078,
+        "output_tokens": 331,
+        "total_tokens": 2409,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A037",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926485163782d2adc5f67699b5065fc2ee83bfd4d90a8c10d",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 2030,
+        "output_tokens": 152,
+        "total_tokens": 2182,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A037",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926485225196c7b67136913b8291adfcb1079846bf42fe222",
+      "request_id": "0217926485225196c7b67136913b8291adfcb1079846bf42fe222",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 1354,
+        "output_tokens": 21,
+        "total_tokens": 1375,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A038",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648525279c5efbddbe56039efc9b84fbe25d0bd071de0d7",
+      "request_id": "021792648525279c5efbddbe56039efc9b84fbe25d0bd071de0d7",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 897,
+        "output_tokens": 532,
+        "total_tokens": 1429,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A039",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926485477809436a70d8fd44afb73ab39bbb6df35ba421419",
+      "request_id": "0217926485477809436a70d8fd44afb73ab39bbb6df35ba421419",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 870,
+        "output_tokens": 283,
+        "total_tokens": 1153,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A040",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648555259185f554c98e4e9934305289bae83dd85de132b",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 2081,
+        "output_tokens": 194,
+        "total_tokens": 2275,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A040",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926485639478da07b58b0e27c4ddc87ce60198aebfc61216e",
+      "request_id": "0217926485639478da07b58b0e27c4ddc87ce60198aebfc61216e",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 1399,
+        "output_tokens": 21,
+        "total_tokens": 1420,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A041",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264856612558f2fcd7b6996c2abcdc77dac59912aca279c5",
+      "request_id": "02179264856612558f2fcd7b6996c2abcdc77dac59912aca279c5",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 897,
+        "output_tokens": 503,
+        "total_tokens": 1400,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A042",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926485805852d2adc5f67699b5065fc2ee83bfd4d90f70758",
+      "request_id": "0217926485805852d2adc5f67699b5065fc2ee83bfd4d90f70758",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7541,
+        "output_tokens": 1177,
+        "total_tokens": 8718,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A043",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648606674bfe35b6525b6a24c7ddbea7b420bd558489041",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8742,
+        "output_tokens": 195,
+        "total_tokens": 8937,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A043",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926486113783862fb1b5b304033b62047eb9aa7ba76e5713d",
+      "request_id": "0217926486113783862fb1b5b304033b62047eb9aa7ba76e5713d",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8043,
+        "output_tokens": 21,
+        "total_tokens": 8064,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A043",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926486208402dc0f013dd9de882804ee1715bc98a4a44a369",
+      "request_id": "0217926486208402dc0f013dd9de882804ee1715bc98a4a44a369",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8802,
+        "output_tokens": 45,
+        "total_tokens": 8847,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A043",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264862586318d6e3628ce906dcdb201e7d3c05ff32a17edb",
+      "request_id": "02179264862586318d6e3628ce906dcdb201e7d3c05ff32a17edb",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26334,
+        "output_tokens": 20,
+        "total_tokens": 26354,
+        "input_tokens_details": {
+          "cached_tokens": 8504
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A043",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264862986693401d1cd864a49a938337b58c4876d63ed5c8",
+      "request_id": "02179264862986693401d1cd864a49a938337b58c4876d63ed5c8",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26022,
+        "output_tokens": 481,
+        "total_tokens": 26503,
+        "input_tokens_details": {
+          "cached_tokens": 7992
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A045",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926486497841671218e8484143d9389dc42eb9b9f1f67557f",
+      "request_id": "0217926486497841671218e8484143d9389dc42eb9b9f1f67557f",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7541,
+        "output_tokens": 1106,
+        "total_tokens": 8647,
+        "input_tokens_details": {
+          "cached_tokens": 7541
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A046",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648676241a3a94bdc8ab7718b894d5a0168b39b208bb43b",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8742,
+        "output_tokens": 188,
+        "total_tokens": 8930,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A046",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648681736cbe31712b8a2594f4e458beea699b0fad2c2f1",
+      "request_id": "021792648681736cbe31712b8a2594f4e458beea699b0fad2c2f1",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8043,
+        "output_tokens": 21,
+        "total_tokens": 8064,
+        "input_tokens_details": {
+          "cached_tokens": 8043
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A046",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648683329f79d90d738734a45cb3eac38ebc4a074af57a1",
+      "request_id": "021792648683329f79d90d738734a45cb3eac38ebc4a074af57a1",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8802,
+        "output_tokens": 19,
+        "total_tokens": 8821,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A046",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648686207355cac89e6d983ae8d30678a5b54f9afdecef7",
+      "request_id": "021792648686207355cac89e6d983ae8d30678a5b54f9afdecef7",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 21913,
+        "output_tokens": 21,
+        "total_tokens": 21934,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A046",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648687848d5261995f9623e565b5d66b904398165db04b9",
+      "request_id": "021792648687848d5261995f9623e565b5d66b904398165db04b9",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 24038,
+        "output_tokens": 21,
+        "total_tokens": 24059,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A046",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648692254952cd98d4cbfe14737b7b0cd3357391b767b04",
+      "request_id": "021792648692254952cd98d4cbfe14737b7b0cd3357391b767b04",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 24638,
+        "output_tokens": 20,
+        "total_tokens": 24658,
+        "input_tokens_details": {
+          "cached_tokens": 21816
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A046",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648697471d43c98a3a6422f05688e398a72cec5f4171ba8",
+      "request_id": "021792648697471d43c98a3a6422f05688e398a72cec5f4171ba8",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26391,
+        "output_tokens": 20,
+        "total_tokens": 26411,
+        "input_tokens_details": {
+          "cached_tokens": 21816
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A046",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648700176f17176ac9df90535d88cbb24b1f2709bce3975",
+      "request_id": "021792648700176f17176ac9df90535d88cbb24b1f2709bce3975",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 26091,
+        "output_tokens": 549,
+        "total_tokens": 26640,
+        "input_tokens_details": {
+          "cached_tokens": 21304
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A047",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648713186bba9dcb446c9769753d8e06563bdd07fe98f62",
+      "request_id": "021792648713186bba9dcb446c9769753d8e06563bdd07fe98f62",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7519,
+        "output_tokens": 1181,
+        "total_tokens": 8700,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A048",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926487382738b056a623bf426f62c797dc732369cf967ed1b",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 2032,
+        "output_tokens": 219,
+        "total_tokens": 2251,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A051",
+      "stage": "planner",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648749368de2cfbc22a0f44ef1f4fdf213841a20ead7030",
+      "request_id": null,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8742,
+        "output_tokens": 198,
+        "total_tokens": 8940,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A051",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648755726a3a94bdc8ab7718b894d5a0168b39b20811db8",
+      "request_id": "021792648755726a3a94bdc8ab7718b894d5a0168b39b20811db8",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8043,
+        "output_tokens": 21,
+        "total_tokens": 8064,
+        "input_tokens_details": {
+          "cached_tokens": 8043
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A051",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648757932cbe31712b8a2594f4e458beea699b0fa78915d",
+      "request_id": "021792648757932cbe31712b8a2594f4e458beea699b0fa78915d",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 8802,
+        "output_tokens": 19,
+        "total_tokens": 8821,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A051",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648759808a3a94bdc8ab7718b894d5a0168b39b20d5ef5c",
+      "request_id": "021792648759808a3a94bdc8ab7718b894d5a0168b39b20d5ef5c",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 21913,
+        "output_tokens": 48,
+        "total_tokens": 21961,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A051",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648764209ccbdf6fa4f62a84920463b89d4ca27eef8a72b",
+      "request_id": "021792648764209ccbdf6fa4f62a84920463b89d4ca27eef8a72b",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 27367,
+        "output_tokens": 20,
+        "total_tokens": 27387,
+        "input_tokens_details": {
+          "cached_tokens": 8504
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A051",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648770070114488fbfaf31238bc59a8d8e7bd2490b878f2",
+      "request_id": "021792648770070114488fbfaf31238bc59a8d8e7bd2490b878f2",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 29120,
+        "output_tokens": 20,
+        "total_tokens": 29140,
+        "input_tokens_details": {
+          "cached_tokens": 8504
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A051",
+      "stage": "executor",
+      "actual_candidates_match": true,
+      "actual_task_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_02179264877359527ce9617f6c3913264d7d32061afe934ebd007",
+      "request_id": "02179264877359527ce9617f6c3913264d7d32061afe934ebd007",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 28808,
+        "output_tokens": 551,
+        "total_tokens": 29359,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A052",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648786482b8b2db5ad8d9605f3baecb70a2647fd8f06441",
+      "request_id": "021792648786482b8b2db5ad8d9605f3baecb70a2647fd8f06441",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 897,
+        "output_tokens": 493,
+        "total_tokens": 1390,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A053",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_0217926488021865c037dcb8e3ed606fc7cba25b86789db570700",
+      "request_id": "0217926488021865c037dcb8e3ed606fc7cba25b86789db570700",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7519,
+        "output_tokens": 1032,
+        "total_tokens": 8551,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "answer_id": "A054",
+      "stage": "plain",
+      "actual_input_matches": true,
+      "max_output_tokens": 1800,
+      "thinking": {
+        "type": "disabled"
+      },
+      "model": "doubao-seed-2-1-pro-260915",
+      "response_id": "resp_021792648831085cb7351d9044201d9f0a73472d4e357aef771de",
+      "request_id": "021792648831085cb7351d9044201d9f0a73472d4e357aef771de",
+      "response_status": "completed",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 7514,
+        "output_tokens": 459,
+        "total_tokens": 7973,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  ],
+  "tool_evidence_checks": [
+    {
+      "answer_id": "A001",
+      "case_id": "normal_normoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "invalid_sequence",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A003",
+      "case_id": "target_only",
+      "status": "PARTIAL_COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "target_only",
+      "status": "PARTIAL_COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A005",
+      "case_id": "ambiguous_direction",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A006",
+      "case_id": "unsupported_target",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "unsupported_target",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A008",
+      "case_id": "unsupported_target",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A009",
+      "case_id": "ambiguous_direction",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A010",
+      "case_id": "unsupported_target",
+      "status": "idle",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A011",
+      "case_id": "target_only",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A012",
+      "case_id": "invalid_sequence",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "normal_hypoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "match_seed",
+        "score_candidates",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "normal_normoxia",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A015",
+      "case_id": "invalid_sequence",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A016",
+      "case_id": "unsupported_target",
+      "status": "idle",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "normal_normoxia",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A018",
+      "case_id": "normal_hypoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A019",
+      "case_id": "unsupported_target",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A020",
+      "case_id": "invalid_sequence",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A021",
+      "case_id": "unsupported_target",
+      "status": "idle",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "target_only",
+      "status": "PARTIAL_COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A023",
+      "case_id": "target_only",
+      "status": "PARTIAL_COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A024",
+      "case_id": "ambiguous_direction",
+      "status": "idle",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "unsupported_target",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A026",
+      "case_id": "normal_normoxia",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A027",
+      "case_id": "normal_normoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A028",
+      "case_id": "invalid_sequence",
+      "status": "idle",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A029",
+      "case_id": "normal_hypoxia",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A030",
+      "case_id": "normal_normoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A031",
+      "case_id": "ambiguous_direction",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A032",
+      "case_id": "normal_normoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A033",
+      "case_id": "target_only",
+      "status": "PARTIAL_COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A034",
+      "case_id": "normal_hypoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A035",
+      "case_id": "normal_hypoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A036",
+      "case_id": "ambiguous_direction",
+      "status": "idle",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A037",
+      "case_id": "invalid_sequence",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A038",
+      "case_id": "ambiguous_direction",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A039",
+      "case_id": "invalid_sequence",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A040",
+      "case_id": "ambiguous_direction",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A041",
+      "case_id": "ambiguous_direction",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A042",
+      "case_id": "normal_hypoxia",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A043",
+      "case_id": "normal_hypoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A044",
+      "case_id": "target_only",
+      "status": "PARTIAL_COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A045",
+      "case_id": "normal_hypoxia",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A046",
+      "case_id": "normal_normoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A047",
+      "case_id": "target_only",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A048",
+      "case_id": "invalid_sequence",
+      "status": "idle",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A049",
+      "case_id": "invalid_sequence",
+      "status": "FAILED",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A050",
+      "case_id": "normal_normoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A051",
+      "case_id": "normal_hypoxia",
+      "status": "COMPLETE",
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "count_field_consistency": {
+        "3499": true,
+        "3500": true,
+        "1157": true
+      },
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A052",
+      "case_id": "ambiguous_direction",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A053",
+      "case_id": "target_only",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    },
+    {
+      "answer_id": "A054",
+      "case_id": "unsupported_target",
+      "status": "ANSWERED_NO_TOOLS",
+      "completed_tools": [],
+      "count_field_consistency": {},
+      "semantic_score": null
+    }
+  ],
+  "review_materials_complete_for_recorded_units": true,
+  "independent_scoring_done": false,
+  "limitation": "Input/field/record checks are not scientific accuracy. All failures retained; no superiority conclusion."
+}

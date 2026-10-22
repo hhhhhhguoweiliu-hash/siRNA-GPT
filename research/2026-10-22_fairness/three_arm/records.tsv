@@ -1,0 +1,1029 @@
+﻿answer_id	case_id	group	repeat	status	seconds	tool_calls	completed_tools	model_calls	total_tokens	usage_complete	original_error	answer	human_quality_score
+A001	normal_normoxia	agent	1	COMPLETE	38.949	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	5	78830	True		"## 判定
+常氧条件下，建议优先核查的3条 VEGFA 候选为：**VEGFA_SD_3499、VEGFA_SD_3500、VEGFA_SD_1157**。它们均已实际比对到 NM_003376.6，19nt 核心覆盖20条参考转录本；但当前都**不是可直接订购状态**，化学修饰/订购序列尚未冻结。
+
+## 关键结果
+
+| 优先级 | 候选ID | 19nt guide核心 | NM_003376.6核心坐标 | OligoFormer分数 | 非靶seed位点数 | 非靶去重基因数 | 常氧检出基因数 |
+|---|---|---|---:|---:|---:|---:|---:|
+| 1 | VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 0.9915 | 777 | 728 | 480 |
+| 2 | VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 0.9753 | 1547 | 1333 | 858 |
+| 3 | VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1159–1177 | 0.9490 | 2197 | 1876 | 1155 |
+
+VEGFA 本身在常氧表达表中的平均 TPM 为 **20.10**，4/4个常氧样本满足 TPM≥1；表达背景只作注释，未改变排序。
+
+## 证据
+已完成候选检查、目标比对、历史模型分数读取、guide seed 匹配、常氧表达关联和报告汇总。排序规则是：先选没有已知复核提示的候选，再按 OligoFormer 分数降序；因此分数最高的 VEGFA_SD_3535 未进入前三，需作为提示候选另行核对。输出文件包括 **report.html** 和 **candidates_ranked.tsv**。
+
+## 限制或下一步
+OligoFormer 分数是**模型分数，不是敲低百分比**；seed 匹配是代表性注释3′UTR的 mer7m8、0错配位点统计，**不是实验脱靶验证**。下一步应先核对这3条的双链/修饰方案，再安排实际敲低和脱靶评估。"	
+A002	invalid_sequence	workflow	2	FAILED	0.005	1		0	0	True		"判定：停止后续计算。
+关键结果：bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向；原始输入：[{""candidate_id"": ""bad"", ""guide_core19_5to3"": ""AAA""}]。
+证据：本题原始输入及输入检查错误；未执行后续评分或排序。
+限制或下一步：确认支持的目标、链身份和明确19nt配对核心；不自动截短21nt。"	
+A003	target_only	workflow	3	PARTIAL_COMPLETE	0.091	2	inspect_candidates;verify_target	0	0	True		"判定：所要求的候选及转录本核对完成。
+关键结果：
+候选 | 参考 | 19nt核心起止(1-based) | 参考转录本覆盖
+--- | --- | --- | ---
+VEGFA_SD_1157 | NM_003376.6 | 1159–1177 | 20/20
+VEGFA_SD_2739 | NM_003376.6 | 2741–2759 | 20/20
+VEGFA_SD_3119 | NM_003376.6 | 3121–3139 | 20/20
+VEGFA_SD_3193 | NM_003376.6 | 3195–3213 | 20/20
+VEGFA_SD_3429 | NM_003376.6 | 3431–3449 | 20/20
+VEGFA_SD_3499 | NM_003376.6 | 3501–3519 | 20/20
+VEGFA_SD_3500 | NM_003376.6 | 3502–3520 | 20/20
+VEGFA_SD_3502 | NM_003376.6 | 3504–3522 | 20/20
+VEGFA_SD_3535 | NM_003376.6 | 3537–3555 | 20/20
+证据：本次候选检查和参考序列比对；核心坐标来自verify_target，不用23nt设计窗口坐标代替。
+限制或下一步：未评分、未做seed/表达分析、未选top候选；参考覆盖不等于细胞内异构体表达。"	
+A004	target_only	agent	3	PARTIAL_COMPLETE	28.734	2	inspect_candidates;verify_target	4	47900	True	"## 判定
+9个候选均通过信息核对，guide配对核心均为明确19nt；在参考转录本 **NM_003376.6** 上实际比对匹配，并且均覆盖20/20条已列VEGFA参考转录本。此次未做评分、排序、表达或脱靶分析。
+
+## 关键结果
+| candidate_id | 19nt guide核心 | NM_003376.6核心坐标 | 23nt设计窗口坐标 | 覆盖转录本 | 合成状态 |
+|---|---|---:|---:|---:|---|
+| VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1159–1177 | 1157–1179 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_2739 | AGAACUAGUGGUUUCAAUG | 2741–2759 | 2739–2761 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3119 | AUAUCUGUUCAAGAUAAGC | 3121–3139 | 3119–3141 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3193 | ACCUUAUUUCAAAGGAAUG | 3195–3213 | 3193–3215 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3429 | UAUUACGGAUAAACAGUAG | 3431–3449 | 3429–3451 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 3499–3521 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 3500–3522 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3502 | AUAUGUACUACGGAAUAUC | 3504–3522 | 3502–3524 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3535 | UAUCUGUAUUUCUUUGUCG | 3537–3555 | 3535–3557 | 20/20 | 修饰未冻结，暂不可订购 |
+
+## 证据
+- `inspect_candidates` 实时核对：9条均保留19nt guide配对核心，来源为siDirect_2.0。
+- `verify_target` 实时比对：9条均在NM_003376.6命中，并覆盖20条参考转录本；参考序列校验值为 `30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706`。
+- 表中“23nt设计窗口坐标”来自原始候选记录，不等同于19nt核心坐标；19nt核心坐标是本轮实际比对结果。
+
+## 限制或下一步
+覆盖20/20只表示参考注释序列匹配，不代表缺氧细胞中各VEGFA isoform的实际表达比例。当前序列均未冻结化学修饰，不能直接视为可订购成品；本次也没有产生模型分数或推荐排序。"	"## 判定
+9个候选均通过信息核对，guide配对核心均为明确19nt；在参考转录本 **NM_003376.6** 上实际比对匹配，并且均覆盖20/20条已列VEGFA参考转录本。此次未做评分、排序、表达或脱靶分析。
+
+## 关键结果
+| candidate_id | 19nt guide核心 | NM_003376.6核心坐标 | 23nt设计窗口坐标 | 覆盖转录本 | 合成状态 |
+|---|---|---:|---:|---:|---|
+| VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1159–1177 | 1157–1179 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_2739 | AGAACUAGUGGUUUCAAUG | 2741–2759 | 2739–2761 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3119 | AUAUCUGUUCAAGAUAAGC | 3121–3139 | 3119–3141 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3193 | ACCUUAUUUCAAAGGAAUG | 3195–3213 | 3193–3215 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3429 | UAUUACGGAUAAACAGUAG | 3431–3449 | 3429–3451 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 3499–3521 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 3500–3522 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3502 | AUAUGUACUACGGAAUAUC | 3504–3522 | 3502–3524 | 20/20 | 修饰未冻结，暂不可订购 |
+| VEGFA_SD_3535 | UAUCUGUAUUUCUUUGUCG | 3537–3555 | 3535–3557 | 20/20 | 修饰未冻结，暂不可订购 |
+
+## 证据
+- `inspect_candidates` 实时核对：9条均保留19nt guide配对核心，来源为siDirect_2.0。
+- `verify_target` 实时比对：9条均在NM_003376.6命中，并覆盖20条参考转录本；参考序列校验值为 `30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706`。
+- 表中“23nt设计窗口坐标”来自原始候选记录，不等同于19nt核心坐标；19nt核心坐标是本轮实际比对结果。
+
+## 限制或下一步
+覆盖20/20只表示参考注释序列匹配，不代表缺氧细胞中各VEGFA isoform的实际表达比例。当前序列均未冻结化学修饰，不能直接视为可订购成品；本次也没有产生模型分数或推荐排序。
+本次只完成所选核对任务，没有生成完整筛选报告或候选排序。"	
+A005	ambiguous_direction	workflow	2	FAILED	0.054	1		0	0	True		"判定：停止后续计算。
+关键结果：unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向；原始输入：[{""candidate_id"": ""unknown"", ""guide_21nt_RNA_5to3"": ""AAAAAAAAAAAAAAAAAAAAA""}]。
+证据：本题原始输入及输入检查错误；未执行后续评分或排序。
+限制或下一步：确认支持的目标、链身份和明确19nt配对核心；不自动截短21nt。"	
+A006	unsupported_target	llm	3	ANSWERED_NO_TOOLS	14.945	0		1	8069	True		"## 判定
+
+无法计算或筛选人 **KRAS** siRNA，也不能把输入中的 **VEGFA** 候选替换为 KRAS。当前系统数据和计算工具仅支持人 **VEGFA**、ARPE-19 常氧或缺氧背景。
+
+## 关键结果
+
+| 项目 | 核对结果 |
+|---|---|
+| 用户请求基因 | KRAS（Homo sapiens，Hypoxia，top 2） |
+| 实际输入候选数 | 9 条 |
+| 实际候选靶基因 | 全部为 VEGFA |
+| 设计转录本 | 全部为 NM_003376.6 |
+| 候选 ID | VEGFA_SD_1157、2739、3119、3193、3429、3499、3500、3502、3535 |
+| 是否可作为 KRAS 筛选结果 | 否；不能仅凭已有 VEGFA 19nt 核心推断 KRAS 靶向性、模型分数或排名 |
+| 是否产生 top 2 | 否 |
+
+## 证据
+
+- 每条输入记录均明确标注 `""target_gene"": ""VEGFA""`、`""source_run"": ""VEGFA_NM003376_6""`。
+- 所列 23nt 窗口、21nt guide/passenger 和 19nt 配对核心均来自 VEGFA 参考序列设计。
+- 工具描述中的本地 `verify_target`、评分和 seed/表达流程限定在当前 20 条 VEGFA 参考及 ARPE-19 表达背景；没有 KRAS 参考库、KRAS 模型上下文或 KRAS seed/expression 计算结果。
+- 因此，这些候选的 `target_start_1based / target_end_1based` 只能表述为 VEGFA 原始候选表中的 23nt 设计窗口坐标，不能改写或外推为 KRAS 坐标。
+
+## 限制或下一步
+
+本轮不能给出 KRAS siRNA 分数、排名、seed 位点数、表达过滤结果或实验敲低预测。若要进行真实 KRAS 筛选，需要先提供或接入：人 KRAS 目标转录本版本、针对 KRAS 生成的候选 19nt 配对核心及链信息，并启用支持 KRAS 的靶标核对、模型评分、seed 匹配和相应表达背景。当前不会把 VEGFA 结果伪装成 KRAS 结果。"	
+A007	unsupported_target	llm	1	ANSWERED_NO_TOOLS	14.932	0		1	7967	True		"## 判定
+无法计算或筛选人 **KRAS** siRNA。当前本地数据和模型仅支持人 **VEGFA**、ARPE-19 常氧/缺氧背景；本次导入的 9 条候选也全部标注为 **VEGFA / NM_003376.6**，不能替换或改称为 KRAS 结果。
+
+## 关键结果
+| 核对项 | 结果 |
+|---|---|
+| 请求基因 | KRAS（Homo sapiens） |
+| 实际候选基因 | 全部为 VEGFA |
+| 候选数量 | 9 条 |
+| 候选 ID | VEGFA_SD_1157、2739、3119、3193、3429、3499、3500、3502、3535 |
+| 设计转录本 | 全部为 NM_003376.6 |
+| KRAS 19nt 配对核心 | 未提供 |
+| KRAS 模型分数、seed 匹配、缺氧表达筛选 | 均不能计算 |
+| Top 2 KRAS siRNA | 无可报告结果 |
+
+## 证据
+输入候选字段明确显示：`target_gene = VEGFA`、`source_run = VEGFA_NM003376_6`、`design_transcript = NM_003376.6`。已有 `core_matches_n = 20` 和 `all_20_transcripts_core_match = True` 也只是原始输入中针对 20 条 VEGFA 参考转录本的覆盖注释，不是 KRAS 比对结果。
+
+## 限制或下一步
+需要另行提供或生成针对人 KRAS 参考转录本的候选，且每条应包含明确的 19nt guide/passenger 配对核心及链方向；在此之前不能运行本系统的 VEGFA 专用评分、seed 匹配或缺氧表达流程，也不能把 VEGFA 候选改作 KRAS siRNA。"	
+A008	unsupported_target	workflow	2	FAILED	0.006	1		0	0	True		"判定：停止后续计算。
+关键结果：v0.3仅已验证人VEGFA，当前靶点或物种不支持；原始输入：已提供9条候选。
+证据：本题原始输入及输入检查错误；未执行后续评分或排序。
+限制或下一步：确认支持的目标、链身份和明确19nt配对核心；不自动截短21nt。"	
+A009	ambiguous_direction	workflow	1	FAILED	0.082	1		0	0	True		"判定：停止后续计算。
+关键结果：unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向；原始输入：[{""candidate_id"": ""unknown"", ""guide_21nt_RNA_5to3"": ""AAAAAAAAAAAAAAAAAAAAA""}]。
+证据：本题原始输入及输入检查错误；未执行后续评分或排序。
+限制或下一步：确认支持的目标、链身份和明确19nt配对核心；不自动截短21nt。"	
+A010	unsupported_target	agent	2	idle	8.893	0		1	8934	True		"判定：不支持。当前本地数据、候选库和计算工具只支持人 VEGFA，不能计算筛选人 KRAS，也不会把输入中的 VEGFA 候选替换成 KRAS。关键结果：本次没有运行 inspect、打分、seed 或表达分析；随表 9 条候选的 target_gene 均为 VEGFA，不能作为 KRAS 结果。证据：用户明确要求 KRAS；候选字段显示来源为 VEGFA_NM003376_6，target_gene=VEGFA。限制或下一步：如需要，我可以改用联网检索公开 KRAS siRNA 文献/网页证据，但那不是本地计算筛选；也可以在你提供 VEGFA 候选时继续本地分析。
+请计算筛选人KRAS的siRNA；不要替换成VEGFA。"	
+A011	target_only	llm	2	ANSWERED_NO_TOOLS	32.507	0		1	8930	True		"## 判定
+
+可按“仅核对候选信息和 VEGFA 转录本匹配”处理；以下结果仅来自输入中的候选字段，未进行新的评分、seed 匹配、表达查询或完整排序。
+
+## 关键结果
+
+9 个候选均满足本系统当前要求的明确 19 nt guide 配对核心格式；来源、基因和物种范围一致。输入记录均显示其 19 nt 核心匹配全部 20 条 VEGFA 参考转录本。
+
+| candidate_id | 23nt 原始窗口坐标（NM_003376.6，1-based 闭区间） | guide 19nt 核心 | 长度/碱基 | 20转录本核心匹配 | 工作池 |
+|---|---:|---|---|---|---|
+| VEGFA_SD_1157 | 1157–1179 | AUAGACAUCCAUGAACUUC | 19 nt / A,U,G,C | 20/20；True | True |
+| VEGFA_SD_2739 | 2739–2761 | AGAACUAGUGGUUUCAAUG | 19 nt / A,U,G,C | 20/20；True | True |
+| VEGFA_SD_3119 | 3119–3141 | AUAUCUGUUCAAGAUAAGC | 19 nt / A,U,G,C | 20/20；True | True |
+| VEGFA_SD_3193 | 3193–3215 | ACCUUAUUUCAAAGGAAUG | 19 nt / A,U,G,C | 20/20；True | True |
+| VEGFA_SD_3429 | 3429–3451 | UAUUACGGAUAAACAGUAG | 19 nt / A,U,G,C | 20/20；True | True |
+| VEGFA_SD_3499 | 3499–3521 | UGUACUACGGAAUAUCUCG | 19 nt / A,U,G,C | 20/20；True | True |
+| VEGFA_SD_3500 | 3500–3522 | AUGUACUACGGAAUAUCUC | 19 nt / A,U,G,C | 20/20；True | True |
+| VEGFA_SD_3502 | 3502–3524 | AUAUGUACUACGGAAUAUC | 19 nt / A,U,G,C | 20/20；True | True |
+| VEGFA_SD_3535 | 3535–3557 | UAUCUGUAUUUCUUUGUCG | 19 nt / A,U,G,C | 20/20；True | True |
+
+补充核对：
+
+- 靶基因：9/9 为 **VEGFA**。
+- 设计转录本：9/9 为 **NM_003376.6**。
+- 来源工具：9/9 为 **siDirect_2.0**；来源运行 **VEGFA_NM003376_6**。
+- 21nt 链、3′ 悬垂、passenger 核心及 `functional_rule=U` 等字段在输入中均存在；未在此轮重新判定链功能优劣。
+- 合成状态均为 **NOT_ORDER_READY_MODIFICATIONS_UNFROZEN**，不等于可直接下单状态。
+
+## 证据
+
+- 候选信息来自输入 JSON 的 `inspect_candidates` 对应字段：`candidate_id`、`target_gene`、`design_transcript`、`guide_paired_core_19nt_5to3`、`target_start_1based/target_end_1based`、`working_pool_pass`。
+- VEGFA 转录本覆盖来自输入已有字段：`core_matches_n=20`、`all_20_transcripts_core_match=True` 及 `core_matches_transcripts`。
+- 转录本列表包含：NM_001171623.2、NM_001171626.2、NM_001171628.2、NM_001317010.2、NM_001025369.3、NM_001171627.2、NM_001171625.2、NM_001204384.2、NM_001287044.2、NM_001025367.3、NM_001171630.2、NM_001171622.2、NM_001171624.2、NM_001025370.3、NM_001204385.2、NM_001025368.3、NM_001033756.3、NM_003376.6、NM_001025366.3、NM_001171629.2。
+
+## 限制或下一步
+
+- 上述 1157–1179 等坐标是**原始候选表中的 23nt 设计窗口坐标**，不是 19nt 核心坐标；输入未提供在每条转录本上实际比对得到的 `core_start_1based`。
+- `core_matches_n/all_20_transcripts_core_match` 是原始输入已有参考覆盖注释；本轮转述该注释，未独立重新运行序列比对。
+- 未运行 OligoFormer 评分，因此没有模型分数；未运行 seed 匹配或表达查询，也不报告脱靶基因数。
+- 如需下一步，可在明确参考转录本上实际比对以给出 19nt 核心起止坐标，或按要求另行运行评分/seed/表达分析。"	
+A012	invalid_sequence	workflow	3	FAILED	0.008	1		0	0	True		"判定：停止后续计算。
+关键结果：bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向；原始输入：[{""candidate_id"": ""bad"", ""guide_core19_5to3"": ""AAA""}]。
+证据：本题原始输入及输入检查错误；未执行后续评分或排序。
+限制或下一步：确认支持的目标、链身份和明确19nt配对核心；不自动截短21nt。"	
+A013	normal_hypoxia	agent	1	COMPLETE	38.081	6	inspect_candidates;verify_target;match_seed;score_candidates;query_expression;compile_report	7	125984	True		"## 判定
+优先核查的2条为：**VEGFA_SD_3499**、**VEGFA_SD_3500**。二者均通过VEGFA转录本覆盖核对，且OligoFormer分数较高、seed位点负担相对可控；但当前**不是订购就绪状态**，化学修饰尚未冻结确认。
+
+## 关键结果
+
+| 优先级 | 候选ID | 19nt guide核心 | NM_003376.6核心位置 | OligoFormer分数 | seed位点数（含VEGFA） | 排除VEGFA后seed位点数 | 排除VEGFA去重匹配基因数 | 缺氧检出基因数 |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| 1 | VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 0.9915 | 778 | 777 | 728 | 463 |
+| 2 | VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 0.9753 | 1548 | 1547 | 1333 | 811 |
+
+补充背景：VEGFA在ARPE-19缺氧组平均TPM为 **102.390068**，4/4皿TPM≥1；常氧组平均TPM为 **20.09929925**。表达信息只作背景注释，不改变排序。
+
+## 证据
+- 9条候选均读取为明确19nt配对核心。
+- 目标核对显示两条候选均命中 **20/20条VEGFA参考转录本**；表中坐标为本轮实际比对的19nt核心坐标。
+- seed结果为历史导入：仅guide链、mer7m8、0错配、代表性注释3′UTR；是**seed位点数，不是实验脱靶数**。
+- 报告已生成：`report.html`；排序表：`candidates_ranked.tsv`。
+
+## 限制或下一步
+这些结果不能解释为敲低百分比，也不能替代实验脱靶验证。下一步建议先冻结化学修饰和订购序列，再做湿实验敲低及必要的脱靶核查。"	
+A014	normal_normoxia	llm	1	ANSWERED_NO_TOOLS	27.876	0		1	8771	True		"## 判定
+
+无法生成“已关联表达背景”的常氧 Top 3 报告。输入只包含 9 条候选的 siDirect 设计/规则字段，未提供任何已有的：
+
+- OligoFormer `score`
+- SeedMatchR 匹配结果
+- 表达表映射或常氧检测结果
+- `verify_target` / `score_candidates` / `match_seed` / `query_expression` 的历史工具输出
+
+因此不能假装已读取工具结果，也不能根据 Tm、GC 或 vendor mismatch 自创综合排序。
+
+## 关键结果
+
+### 候选结构核对
+
+| candidate_id | 19nt guide 核心 | 长度 | 原始23nt窗口坐标 | 原始参考覆盖注释 | 常氧表达关联 |
+|---|---|---:|---|---|---|
+| VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 19 nt | 1157–1179 | 20/20，原始字段 | 未提供 |
+| VEGFA_SD_2739 | AGAACUAGUGGUUUCAAUG | 19 nt | 2739–2761 | 20/20，原始字段 | 未提供 |
+| VEGFA_SD_3119 | AUAUCUGUUCAAGAUAAGC | 19 nt | 3119–3141 | 20/20，原始字段 | 未提供 |
+| VEGFA_SD_3193 | ACCUUAUUUCAAAGGAAUG | 19 nt | 3193–3215 | 20/20，原始字段 | 未提供 |
+| VEGFA_SD_3429 | UAUUACGGAUAAACAGUAG | 19 nt | 3429–3451 | 20/20，原始字段 | 未提供 |
+| VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 19 nt | 3499–3521 | 20/20，原始字段 | 未提供 |
+| VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 19 nt | 3500–3522 | 20/20，原始字段 | 未提供 |
+| VEGFA_SD_3502 | AUAUGUACUACGGAAUAUC | 19 nt | 3502–3524 | 20/20，原始字段 | 未提供 |
+| VEGFA_SD_3535 | UAUCUGUAUUUCUUUGUCG | 19 nt | 3535–3557 | 20/20，原始字段 | 未提供 |
+
+### 可直接确认的共性
+
+- 物种/基因：人 `VEGFA`
+- 状态请求：常氧 Normoxia
+- 来源：`siDirect_2.0`
+- 设计转录本：`NM_003376.6`
+- 9 条候选均：
+  - 有明确 19nt 配对核心；
+  - `working_pool_pass = True`；
+  - `exclusion_reason = NA`；
+  - 原始字段称 `core_matches_n = 20`、`all_20_transcripts_core_match = True`；
+  - 尚非订购就绪：`NOT_ORDER_READY_MODIFICATIONS_UNFROZEN`。
+
+## 证据
+
+- 以上序列、坐标、Tm、GC、vendor minimum mismatches、20 条转录本覆盖注释均来自用户提供的导入候选表。
+- `target_start_1based / target_end_1based` 是原始候选表中的 23nt 设计窗口坐标，不应改称为 19nt 核心坐标。
+- `core_matches_n = 20` 和 `all_20_transcripts_core_match = True` 是原始输入已有注释；本轮没有独立重新运行 20 条转录本比对。
+- 输入中没有以下字段：`score`、`seed_site_count_all`、`seed_site_count_nontarget`、`matched_genes`、`baseline_mapped_genes`、`state_detected_genes`、`unmapped_genes`。
+- `vendor_min_mismatches_*` 不能替代 SeedMatchR 结果，也不能称为脱靶基因数。
+
+## 限制或下一步
+
+需要补齐已有工具结果后才能给出 3 条优先核查候选，至少应提供：
+
+1. 每条 19nt guide 的 OligoFormer `score`；
+2. guide mer7m8 的 seed 位点数、排除 VEGFA 后的位点数和去重匹配基因；
+3. 这些非靶基因在 ARPE-19 常氧中的映射与检测结果，包括：
+   - `baseline_mapped_genes`
+   - `state_detected_genes`
+   - `unmapped_genes`
+4. 若要求精确核心位置，还需提供在明确参考转录本上实际比对得到的 `core_start_1based`。
+
+在这些结果缺失时，最多只能报告“9 条均通过结构初筛”，不能输出可信的 Top 3 优先级。"	
+A015	invalid_sequence	llm	3	ANSWERED_NO_TOOLS	10.554	0		1	1206	True		"## 判定
+无法筛选出 top 2；本次候选不符合系统要求的明确 **19 nt guide 配对核心**，因此不进入靶向核对、评分、seed 匹配或排序。
+
+## 关键结果
+
+| 候选ID | 提供序列 | 长度核对 | 处置 |
+|---|---|---:|---|
+| `bad` | `AAA` | 3 nt，缺少16 nt | 淘汰；不进行后续计算 |
+
+## 证据
+- 原始输入仅有 1 条候选：`AAA`，来源为 `development_test`。
+- 任务要求基因：人 `VEGFA`；状态：`Hypoxia`；请求 top 2。
+- 本系统当前要求候选为明确的 **19 nt guide 配对核心**；该候选长度为 3 nt，不满足必要输入条件。
+- 因未通过候选检查，不能声称已完成：
+  - 20条 VEGFA 参考转录本核对；
+  - OligoFormer 评分；
+  - mer7m8 seed 位点数、非靶匹配基因数；
+  - 缺氧表达注释；
+  - top 2 优先排序。
+
+## 限制或下一步
+请提供至少 2 条、每条恰为 **19 nt**、仅含 A/U/C/G（如使用 T 需注明）的人 VEGFA guide 核心序列；收到后才能按“核对靶标 → 评分/seed匹配 → 表达注释 → top 2排序”的流程处理。"	
+A016	unsupported_target	agent	3	idle	11.464	0		1	8965	True		"判定：不支持KRAS的本地siRNA计算筛选。关键结果：当前内置数据、候选核对、模型打分、seed与表达注释工具只支持人VEGFA，且本次输入的9条候选也全部标注为VEGFA（NM_001171等VEGFA转录本），不能将它们当作KRAS候选或改跑VEGFA结果。证据：任务设置基因为KRAS，但系统边界明确仅支持VEGFA；候选字段target_gene均为VEGFA、candidate_id均为VEGFA_SD_*。限制或下一步：我不会替换成VEGFA；如你需要，我可以改为联网检索公开KRAS siRNA文献/数据库线索，但那不是本地计算筛选结果。
+请计算筛选人KRAS的siRNA；不要替换成VEGFA。"	
+A017	normal_normoxia	llm	3	ANSWERED_NO_TOOLS	21.307	0		1	8476	True		"## 判定
+
+输入为 **9条已导入的人 VEGFA / ARPE-19 常氧候选**，均含明确19nt guide配对核心，且原始记录均显示20/20条VEGFA参考转录本核心匹配、`working_pool_pass=True`。
+
+但本次仅提供候选设计字段，**未提供已有的 SeedMatchR、表达关联或 OligoFormer/历史score结果**。因此不能生成有证据支撑的常氧Top 3排序；以下只能列为“候选池内可优先送核查”，不是模型或表达加权排序。
+
+## 关键结果
+
+| 优先核查 | candidate_id | 23nt窗口坐标* | guide 19nt核心 | GC% | guide seed Tm | guide vendor最小错配 | 参考覆盖注释 |
+|---|---|---:|---|---:|---:|---:|---|
+| 1 | VEGFA_SD_2739 | 2739–2761 | AGAACUAGUGGUUUCAAUG | 36.84 | 18.9°C | 3 | 20/20 |
+| 2 | VEGFA_SD_3499 | 3499–3521 | UGUACUACGGAAUAUCUCG | 42.11 | 21.3°C | 3 | 20/20 |
+| 3 | VEGFA_SD_3500 | 3500–3522 | AUGUACUACGGAAUAUCUC | 36.84 | 20.2°C | 3 | 20/20 |
+
+\*坐标是原始候选表中的**23nt设计窗口坐标**，不是本轮独立比对得到的19nt核心坐标；未提供`core_start_1based`。
+
+选择理由仅限于输入字段：三者guide链vendor最小错配均为3，GC和seed Tm处于本组相对适中范围；其中3499与3500高度邻近、核心序列高度相关，若后续资源有限，可先取其一再用seed匹配和实验结果决定是否保留另一条。
+
+## 证据
+
+- 来源：`siDirect_2.0 / VEGFA_NM003376_6`，设计转录本：`NM_003376.6`。
+- 9条候选均有：
+  - 明确的`guide_paired_core_19nt_5to3`；
+  - `working_pool_pass=True`；
+  - `exclusion_reason=NA`；
+  - `all_20_transcripts_core_match=True`、`core_matches_n=20`。
+- 上述“20/20匹配”是**原始输入已有参考覆盖注释**，本轮未重新运行转录本比对。
+- 全部候选`synthesis_status=NOT_ORDER_READY_MODIFICATIONS_UNFROZEN`，尚不能视为可直接订购版本。
+- 常氧表达关联所需字段未提供，包括：`seed_site_count_all`、`seed_site_count_nontarget`、`matched_genes`、`baseline_mapped_genes`、`state_detected_genes`、`unmapped_genes`；因此未把任何表达背景计入排序。
+- 输入中也没有`score`字段，故未报告OligoFormer分数，更不能推断敲低百分比。
+
+## 限制或下一步
+
+1. 需导入或运行 **guide mer7m8 seed匹配**，并区分：含VEGFA的seed位点数、排除VEGFA位点数、去重非靶基因数。
+2. 再将非靶匹配基因关联ARPE-19常氧表达表，报告可映射、未映射及“至少2/4皿TPM≥1”的基因数。
+3. 若有历史OligoFormer结果，可导入`score`；分数仅作模型排序，不能写作敲低百分比。
+4. 完成上述结果后，才能把当前“3条优先核查候选”确认为正式常氧Top 3；当前结论是**待核查优先级，不是最终排名**。"	
+A018	normal_hypoxia	workflow	1	COMPLETE	3.494	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	0	0	True		"判定：本题报告流程完成；以下仅为优先复核名单。
+关键结果：
+候选 | 模型分数 | seed位点(含VEGFA) | 去重非靶匹配基因 | 可映射基因 | Hypoxia检出基因
+--- | --- | --- | --- | --- | ---
+VEGFA_SD_3499 | 0.9915 | 778 | 728 | 726 | 463
+VEGFA_SD_3500 | 0.9753 | 1548 | 1333 | 1330 | 811
+证据：候选/参考核对、以前保存的官方分数和seed匹配、两状态表达关联、报告文件。
+限制或下一步：分数不是敲低率；seed不是实测脱靶；表达仅作注释、不改变排序；合成形式和实验仍待核对。"	
+A019	unsupported_target	workflow	1	FAILED	0.092	1		0	0	True		"判定：停止后续计算。
+关键结果：v0.3仅已验证人VEGFA，当前靶点或物种不支持；原始输入：已提供9条候选。
+证据：本题原始输入及输入检查错误；未执行后续评分或排序。
+限制或下一步：确认支持的目标、链身份和明确19nt配对核心；不自动截短21nt。"	
+A020	invalid_sequence	llm	1	ANSWERED_NO_TOOLS	11.609	0		1	1114	True		"## 判定
+该候选不能进入筛选与排序；本次无合格候选可筛选出 top 2。
+
+## 关键结果
+| 候选ID | 19nt guide核心 | 核对结果 |
+|---|---|---|
+| bad | AAA（3 nt） | 不合格：长度不是要求的19 nt |
+
+## 证据
+- 原始输入仅提供1条候选：`guide_core19_5to3 = ""AAA""`，来源为 `development_test`。
+- 该序列只有3 nt，缺少16个碱基，不满足本系统当前对明确19 nt VEGFA配对核心的要求。
+- 因核心序列不合格，不能进行参考转录本核对、模型评分、seed位点统计、表达查询或优先级排序。
+- 本次最多可报告候选数为1，且为不合格；即使补充合格候选，也只能按实际合格数量给出结果。
+
+## 限制或下一步
+请提供完整的19 nt guide核心后，才能依次进行VEGFA参考匹配、OligoFormer评分、seed匹配和缺氧表达注释；未运行的结果不作猜测。"	
+A021	unsupported_target	agent	1	idle	9.131	0		1	8914	True		"判定：当前不能计算筛选人 KRAS 的 siRNA。关键结果：本地数据、模型和表达工具仅支持人 VEGFA，且当前导入的9条候选也全部标注为 VEGFA/NM_003376.6，不能替换成 VEGFA 后冒充 KRAS 结果。证据：任务基因为 KRAS；候选字段 target_gene 均为 VEGFA，candidate_id 也均为 VEGFA_SD_*。限制或下一步：如需 KRAS，只能另行联网检索公开文献/数据库证据，或提供受支持的 KRAS 本地数据集后再计算；当前不会运行筛选或给排序。
+请计算筛选人KRAS的siRNA；不要替换成VEGFA。"	
+A022	target_only	agent	2	PARTIAL_COMPLETE	32.781	2	inspect_candidates;verify_target	4	47748	True	"## 判定
+已完成候选信息核对和 VEGFA 转录本匹配；未做模型评分、敲低预测或完整排序。9 个候选均通过 19nt 配对核心核对，并在参考集中匹配到 20/20 条 VEGFA 转录本。
+
+## 关键结果
+
+| candidate_id | 19nt guide core | NM_003376.6 19nt核心坐标 | 转录本覆盖 | 合成状态 |
+|---|---|---:|---:|---|
+| VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1159–1177 | 20/20 | 不可直接下单 |
+| VEGFA_SD_2739 | AGAACUAGUGGUUUCAAUG | 2741–2759 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3119 | AUAUCUGUUCAAGAUAAGC | 3121–3139 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3193 | ACCUUAUUUCAAAGGAAUG | 3195–3213 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3429 | UAUUACGGAUAAACAGUAG | 3431–3449 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3502 | AUAUGUACUACGGAAUAUC | 3504–3522 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3535 | UAUCUGUAUUUCUUUGUCG | 3537–3555 | 20/20 | 不可直接下单 |
+
+## 证据
+工具实时核对状态分别为 `LIVE_CHECKED` 和 `LIVE_EXECUTED`；参考转录本为 NM_003376.6，参考文件 SHA256 为 `30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706`。原始表中的 1157、2739 等坐标是 23nt 设计窗口坐标，实际 19nt 核心起点均比设计窗口晚 2 nt。
+
+## 限制或下一步
+转录本覆盖是参考注释匹配，不代表缺氧条件下实际 isoform 使用比例；`NOT_ORDER_READY_MODIFICATIONS_UNFROZEN` 表示尚不能按当前信息直接订购。若需要，我可以继续只针对这些候选做表达背景注释，仍然不评分、不排序。"	"## 判定
+已完成候选信息核对和 VEGFA 转录本匹配；未做模型评分、敲低预测或完整排序。9 个候选均通过 19nt 配对核心核对，并在参考集中匹配到 20/20 条 VEGFA 转录本。
+
+## 关键结果
+
+| candidate_id | 19nt guide core | NM_003376.6 19nt核心坐标 | 转录本覆盖 | 合成状态 |
+|---|---|---:|---:|---|
+| VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1159–1177 | 20/20 | 不可直接下单 |
+| VEGFA_SD_2739 | AGAACUAGUGGUUUCAAUG | 2741–2759 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3119 | AUAUCUGUUCAAGAUAAGC | 3121–3139 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3193 | ACCUUAUUUCAAAGGAAUG | 3195–3213 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3429 | UAUUACGGAUAAACAGUAG | 3431–3449 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3502 | AUAUGUACUACGGAAUAUC | 3504–3522 | 20/20 | 不可直接下单 |
+| VEGFA_SD_3535 | UAUCUGUAUUUCUUUGUCG | 3537–3555 | 20/20 | 不可直接下单 |
+
+## 证据
+工具实时核对状态分别为 `LIVE_CHECKED` 和 `LIVE_EXECUTED`；参考转录本为 NM_003376.6，参考文件 SHA256 为 `30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706`。原始表中的 1157、2739 等坐标是 23nt 设计窗口坐标，实际 19nt 核心起点均比设计窗口晚 2 nt。
+
+## 限制或下一步
+转录本覆盖是参考注释匹配，不代表缺氧条件下实际 isoform 使用比例；`NOT_ORDER_READY_MODIFICATIONS_UNFROZEN` 表示尚不能按当前信息直接订购。若需要，我可以继续只针对这些候选做表达背景注释，仍然不评分、不排序。
+本次只完成所选核对任务，没有生成完整筛选报告或候选排序。"	
+A023	target_only	workflow	1	PARTIAL_COMPLETE	0.054	2	inspect_candidates;verify_target	0	0	True		"判定：所要求的候选及转录本核对完成。
+关键结果：
+候选 | 参考 | 19nt核心起止(1-based) | 参考转录本覆盖
+--- | --- | --- | ---
+VEGFA_SD_1157 | NM_003376.6 | 1159–1177 | 20/20
+VEGFA_SD_2739 | NM_003376.6 | 2741–2759 | 20/20
+VEGFA_SD_3119 | NM_003376.6 | 3121–3139 | 20/20
+VEGFA_SD_3193 | NM_003376.6 | 3195–3213 | 20/20
+VEGFA_SD_3429 | NM_003376.6 | 3431–3449 | 20/20
+VEGFA_SD_3499 | NM_003376.6 | 3501–3519 | 20/20
+VEGFA_SD_3500 | NM_003376.6 | 3502–3520 | 20/20
+VEGFA_SD_3502 | NM_003376.6 | 3504–3522 | 20/20
+VEGFA_SD_3535 | NM_003376.6 | 3537–3555 | 20/20
+证据：本次候选检查和参考序列比对；核心坐标来自verify_target，不用23nt设计窗口坐标代替。
+限制或下一步：未评分、未做seed/表达分析、未选top候选；参考覆盖不等于细胞内异构体表达。"	
+A024	ambiguous_direction	agent	3	idle	8.572	0		1	2356	True		"判定：还不能给出有效候选。关键结果：你已提供一条21nt RNA序列“AAAAAAAAAAAAAAAAAAAAA”，但它是poly-A，且当前系统的配对核心要求是明确的19nt guide；在链方向和guide/passenger均未知时，不能擅自截取、补碱基或把某一条链假定为guide。证据：输入仅含上述21nt序列，local_context中没有任何已核对或计算记录。下一步：请提供该序列对应的靶位点/坐标，或同时给出互补链及5′→3′方向；我才能核对并提取候选。
+请提供该21nt序列在VEGFA上的靶位点/坐标，或给出互补链并标明每条链的5′→3′方向；否则无法确定19nt guide核心。"	
+A025	unsupported_target	workflow	3	FAILED	0.007	1		0	0	True		"判定：停止后续计算。
+关键结果：v0.3仅已验证人VEGFA，当前靶点或物种不支持；原始输入：已提供9条候选。
+证据：本题原始输入及输入检查错误；未执行后续评分或排序。
+限制或下一步：确认支持的目标、链身份和明确19nt配对核心；不自动截短21nt。"	
+A026	normal_normoxia	llm	2	ANSWERED_NO_TOOLS	31.689	0		1	8575	True		"## 判定
+
+无法按要求生成“已读取工具结果并关联常氧表达背景”的3条优先核查报告。输入中只有候选设计字段，缺少以下必要结果：
+
+- `score_candidates` 的 OligoFormer 分数
+- `match_seed` 的 seed 位点/基因结果
+- `query_expression` 的常氧表达结果
+
+因此不能凭空计算、补排名，也不能把供应商错配数或 GC% 当作 seed 匹配/表达结果。
+
+## 关键结果
+
+### 已能核对的候选基本信息
+
+| candidate_id | 23nt窗口坐标* | guide 19nt核心 | 格式核对 | 输入中的参考覆盖注释 |
+|---|---:|---|---|---|
+| VEGFA_SD_1157 | 1157–1179 | AUAGACAUCCAUGAACUUC | 通过 | 20/20 |
+| VEGFA_SD_2739 | 2739–2761 | AGAACUAGUGGUUUCAAUG | 通过 | 20/20 |
+| VEGFA_SD_3119 | 3119–3141 | AUAUCUGUUCAAGAUAAGC | 通过 | 20/20 |
+| VEGFA_SD_3193 | 3193–3215 | ACCUUAUUUCAAAGGAAUG | 通过 | 20/20 |
+| VEGFA_SD_3429 | 3429–3451 | UAUUACGGAUAAACAGUAG | 通过 | 20/20 |
+| VEGFA_SD_3499 | 3499–3521 | UGUACUACGGAAUAUCUCG | 通过 | 20/20 |
+| VEGFA_SD_3500 | 3500–3522 | AUGUACUACGGAAUAUCUC | 通过 | 20/20 |
+| VEGFA_SD_3502 | 3502–3524 | AUAUGUACUACGGAAUAUC | 通过 | 20/20 |
+| VEGFA_SD_3535 | 3535–3557 | UAUCUGUAUUUCUUUGUCG | 通过 | 20/20 |
+
+\*这是原始候选表中的23nt设计窗口坐标，不是19nt核心坐标。
+
+9条候选均：
+
+- 含明确19nt guide配对核心；
+- 来源为 siDirect_2.0，设计转录本为 NM_003376.6；
+- `working_pool_pass=True`；
+- 输入字段声称 `all_20_transcripts_core_match=True`、`core_matches_n=20`；
+- 尚不可直接订购：`NOT_ORDER_READY_MODIFICATIONS_UNFROZEN`。
+
+### 不能确定前3名
+
+以下关键字段全部缺失：
+
+| 必要结果 | 当前状态 |
+|---|---|
+| OligoFormer `score` | 缺失 |
+| `seed_site_count_all` | 缺失 |
+| `seed_site_count_nontarget` | 缺失 |
+| `matched_genes` | 缺失 |
+| `baseline_mapped_genes` | 缺失 |
+| 常氧 `state_detected_genes` | 缺失 |
+| `unmapped_genes` | 缺失 |
+
+## 证据
+
+- 原始输入提供了9条候选的23nt窗口、21nt双链、19nt配对核心、链末端悬垂、Tm、GC%、供应商错配数及参考覆盖注释。
+- 输入的 `tool_mode` 为 `imported`，但实际未包含任何已导入的评分、seed匹配或表达查询输出。
+- `vendor_min_mismatches_*` 是供应商错配字段，不能替代官方 SeedMatchR 的 mer7m8 匹配结果。
+- seed匹配不等于实验脱靶；表达背景只作注释，不应单独改变候选排序。
+
+## 限制或下一步
+
+1. 需补充或实际运行：  
+   `verify_target → score_candidates → match_seed → query_expression(Normoxia) → compile_report`。
+2. 报告中可使用模型分数和常氧表达背景筛选，但不能把分数解释为敲低百分比。
+3. 在上述结果补齐前，只能确认9条候选格式完整，不能给出有证据支持的3条优先核查排序。"	
+A027	normal_normoxia	workflow	1	COMPLETE	3.778	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	0	0	True		"判定：本题报告流程完成；以下仅为优先复核名单。
+关键结果：
+候选 | 模型分数 | seed位点(含VEGFA) | 去重非靶匹配基因 | 可映射基因 | Normoxia检出基因
+--- | --- | --- | --- | --- | ---
+VEGFA_SD_3499 | 0.9915 | 778 | 728 | 726 | 480
+VEGFA_SD_3500 | 0.9753 | 1548 | 1333 | 1330 | 858
+VEGFA_SD_1157 | 0.949 | 2197 | 1876 | 1874 | 1155
+证据：候选/参考核对、以前保存的官方分数和seed匹配、两状态表达关联、报告文件。
+限制或下一步：分数不是敲低率；seed不是实测脱靶；表达仅作注释、不改变排序；合成形式和实验仍待核对。"	
+A028	invalid_sequence	agent	1	idle	10.633	0		1	2240	True		"判定：需要补充信息。当前唯一候选的 guide 序列已提供为“AAA”，但长度只有3 nt，不符合本系统要求的19 nt VEGFA配对核心，因此无法进入效力评分、seed分析或前2名筛选。请提供19 nt的 guide core；若有多个候选，也可一次发来。
+请把候选 bad 的 guide_core19_5to3 替换或补充为明确的19 nt RNA/DNA序列后再继续吗？"	
+A029	normal_hypoxia	llm	3	ANSWERED_NO_TOOLS	20.712	0		1	8501	True		"## 判定
+
+无法生成“已有官方分数、seed结果及缺氧表达关联”的优先核查报告：本次输入只包含 siDirect 候选与设计字段，未提供 OligoFormer `score`、SeedMatchR 结果或缺氧表达查询结果；在 `imported` 模式下不能补算或编造。
+
+已完成可核对的是：9 条候选均在人 VEGFA 范围内，含明确19 nt guide配对核心，原始输入均标注20/20转录本核心匹配、`working_pool_pass=True`。
+
+## 关键结果
+
+| candidate_id | 19 nt guide核心 | 23nt窗口坐标（原表） | 模型分数 | seed/缺氧关联 | 可否进入前2 |
+|---|---|---:|---|---|---|
+| VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1157–1179 | 未提供 | 未提供 | 不能排序 |
+| VEGFA_SD_2739 | AGAACUAGUGGUUUCAAUG | 2739–2761 | 未提供 | 未提供 | 不能排序 |
+| VEGFA_SD_3119 | AUAUCUGUUCAAGAUAAGC | 3119–3141 | 未提供 | 未提供 | 不能排序 |
+| VEGFA_SD_3193 | ACCUUAUUUCAAAGGAAUG | 3193–3215 | 未提供 | 未提供 | 不能排序 |
+| VEGFA_SD_3429 | UAUUACGGAUAAACAGUAG | 3429–3451 | 未提供 | 未提供 | 不能排序 |
+| VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3499–3521 | 未提供 | 未提供 | 不能排序 |
+| VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3500–3522 | 未提供 | 未提供 | 不能排序 |
+| VEGFA_SD_3502 | AUAUGUACUACGGAAUAUC | 3502–3524 | 未提供 | 未提供 | 不能排序 |
+| VEGFA_SD_3535 | UAUCUGUAUUUCUUUGUCG | 3535–3557 | 未提供 | 未提供 | 不能排序 |
+
+## 证据
+
+- 来源字段：所有记录均为 `VEGFA_NM003376_6 / siDirect_2.0`，物种和任务为人 VEGFA。
+- 输入已有设计信息：9条均含19 nt配对核心、21 nt guide/passenger、3′ overhang、seed Tm、vendor minimum mismatches、GC%。
+- 输入已有覆盖注释：9条均为 `core_matches_n=20`、`all_20_transcripts_core_match=True`；这是原始输入注释，不代表本轮重新比对。
+- 所有候选均为 `working_pool_pass=True`，但合成状态为 `NOT_ORDER_READY_MODIFICATIONS_UNFROZEN`，尚不可直接下单。
+- 缺少报告所必需的已导入字段：`score`、seed位点数/非靶位点数、去重匹配基因、缺氧表达检出基因数及未映射基因数。
+
+## 限制或下一步
+
+请提供这些候选对应的官方历史结果表，至少包含：
+
+1. guide 19 nt核心或 candidate_id；
+2. OligoFormer `score`；
+3. guide mer7m8 的 `seed_site_count_all`、`seed_site_count_nontarget`、`matched_genes`；
+4. ARPE-19 缺氧背景下的 `baseline_mapped_genes`、`state_detected_genes`、`unmapped_genes`。
+
+数据齐备后，才能按“官方模型分数 + seed负担 + 缺氧表达注释”选出2条优先核查候选；当前不会用 siDirect 或 Tm/G C% 自创综合排序。"	
+A030	normal_normoxia	workflow	3	COMPLETE	3.381	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	0	0	True		"判定：本题报告流程完成；以下仅为优先复核名单。
+关键结果：
+候选 | 模型分数 | seed位点(含VEGFA) | 去重非靶匹配基因 | 可映射基因 | Normoxia检出基因
+--- | --- | --- | --- | --- | ---
+VEGFA_SD_3499 | 0.9915 | 778 | 728 | 726 | 480
+VEGFA_SD_3500 | 0.9753 | 1548 | 1333 | 1330 | 858
+VEGFA_SD_1157 | 0.949 | 2197 | 1876 | 1874 | 1155
+证据：候选/参考核对、以前保存的官方分数和seed匹配、两状态表达关联、报告文件。
+限制或下一步：分数不是敲低率；seed不是实测脱靶；表达仅作注释、不改变排序；合成形式和实验仍待核对。"	
+A031	ambiguous_direction	workflow	3	FAILED	0.005	1		0	0	True		"判定：停止后续计算。
+关键结果：unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向；原始输入：[{""candidate_id"": ""unknown"", ""guide_21nt_RNA_5to3"": ""AAAAAAAAAAAAAAAAAAAAA""}]。
+证据：本题原始输入及输入检查错误；未执行后续评分或排序。
+限制或下一步：确认支持的目标、链身份和明确19nt配对核心；不自动截短21nt。"	
+A032	normal_normoxia	agent	2	COMPLETE	40.208	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	7	125446	True		"## 判定
+已按 ARPE-19 常氧背景完成 9 条 VEGFA 候选核对；优先核查的 3 条为：
+
+1. **VEGFA_SD_3499**
+2. **VEGFA_SD_3500**
+3. **VEGFA_SD_1157**
+
+## 关键结果
+
+| 优先级 | 候选 | 19nt guide核心 | NM_003376.6核心坐标 | OligoFormer分数 | 非靶seed位点数 | 去重非靶基因数 | 常氧检出基因数 |
+|---|---|---|---|---:|---:|---:|---:|
+| 1 | VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 0.9915 | 777 | 728 | 480 |
+| 2 | VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 0.9753 | 1547 | 1333 | 858 |
+| 3 | VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1159–1177 | 0.9490 | 2197 | 1876 | 1155 |
+
+VEGFA 本身在常氧表达表中的平均 TPM 为 **20.10**，4/4 个常氧皿满足 TPM≥1。三条候选的19nt核心均覆盖参考注释中的20个VEGFA转录本；该覆盖是参考注释结果，不代表实测isoform使用情况。
+
+## 证据
+目标核对为本次实时执行，参考转录本为 **NM_003376.6**；评分和seed匹配为已保存历史结果读取，表达关联为本次实时连接内置 ARPE-19 表达表。报告文件已生成：`report.html`，排序表为 `candidates_ranked.tsv`。
+
+## 限制或下一步
+OligoFormer 分数是模型分数，不是敲低百分比；seed匹配是计算位点数，不是实验验证的脱靶事件。所有候选当前均为 **NOT_ORDER_READY_MODIFICATIONS_UNFROZEN**，不能直接视为可订购序列；下一步建议先做实验敲低与毒性/非靶效应核查。"	
+A033	target_only	agent	1	PARTIAL_COMPLETE	30.532	2	inspect_candidates;verify_target	4	47697	True	"## 判定
+9个候选均通过信息核对，并均在VEGFA参考转录本中找到19nt guide配对核心；未做评分、排序或表达分析。
+
+## 关键结果
+| candidate_id | 19nt guide核心 | NM_003376.6核心坐标 | 覆盖转录本数 | 合成状态 |
+|---|---|---:|---:|---|
+| VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1159–1177 | 20/20 | 非订购就绪 |
+| VEGFA_SD_2739 | AGAACUAGUGGUUUCAAUG | 2741–2759 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3119 | AUAUCUGUUCAAGAUAAGC | 3121–3139 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3193 | ACCUUAUUUCAAAGGAAUG | 3195–3213 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3429 | UAUUACGGAUAAACAGUAG | 3431–3449 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3502 | AUAUGUACUACGGAAUAUC | 3504–3522 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3535 | UAUCUGUAUUUCUUUGUCG | 3537–3555 | 20/20 | 非订购就绪 |
+
+## 证据
+工具实时核对显示候选来源均为siDirect_2.0，配对核心均为19nt；VEGFA匹配参考为NM_003376.6，参考文件SHA256为`30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706`。原始表中的1157、2739等坐标是23nt设计窗口坐标，不是19nt核心坐标。
+
+## 限制或下一步
+覆盖度是参考转录本注释匹配，不代表实测isoform使用比例；当前状态也未验证化学修饰或可订购性。如需继续，我可以只对这些候选做seed位点核对，仍不评分。"	"## 判定
+9个候选均通过信息核对，并均在VEGFA参考转录本中找到19nt guide配对核心；未做评分、排序或表达分析。
+
+## 关键结果
+| candidate_id | 19nt guide核心 | NM_003376.6核心坐标 | 覆盖转录本数 | 合成状态 |
+|---|---|---:|---:|---|
+| VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1159–1177 | 20/20 | 非订购就绪 |
+| VEGFA_SD_2739 | AGAACUAGUGGUUUCAAUG | 2741–2759 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3119 | AUAUCUGUUCAAGAUAAGC | 3121–3139 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3193 | ACCUUAUUUCAAAGGAAUG | 3195–3213 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3429 | UAUUACGGAUAAACAGUAG | 3431–3449 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3502 | AUAUGUACUACGGAAUAUC | 3504–3522 | 20/20 | 非订购就绪 |
+| VEGFA_SD_3535 | UAUCUGUAUUUCUUUGUCG | 3537–3555 | 20/20 | 非订购就绪 |
+
+## 证据
+工具实时核对显示候选来源均为siDirect_2.0，配对核心均为19nt；VEGFA匹配参考为NM_003376.6，参考文件SHA256为`30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706`。原始表中的1157、2739等坐标是23nt设计窗口坐标，不是19nt核心坐标。
+
+## 限制或下一步
+覆盖度是参考转录本注释匹配，不代表实测isoform使用比例；当前状态也未验证化学修饰或可订购性。如需继续，我可以只对这些候选做seed位点核对，仍不评分。
+本次只完成所选核对任务，没有生成完整筛选报告或候选排序。"	
+A034	normal_hypoxia	workflow	3	COMPLETE	2.9	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	0	0	True		"判定：本题报告流程完成；以下仅为优先复核名单。
+关键结果：
+候选 | 模型分数 | seed位点(含VEGFA) | 去重非靶匹配基因 | 可映射基因 | Hypoxia检出基因
+--- | --- | --- | --- | --- | ---
+VEGFA_SD_3499 | 0.9915 | 778 | 728 | 726 | 463
+VEGFA_SD_3500 | 0.9753 | 1548 | 1333 | 1330 | 811
+证据：候选/参考核对、以前保存的官方分数和seed匹配、两状态表达关联、报告文件。
+限制或下一步：分数不是敲低率；seed不是实测脱靶；表达仅作注释、不改变排序；合成形式和实验仍待核对。"	
+A035	normal_hypoxia	workflow	2	COMPLETE	3.294	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	0	0	True		"判定：本题报告流程完成；以下仅为优先复核名单。
+关键结果：
+候选 | 模型分数 | seed位点(含VEGFA) | 去重非靶匹配基因 | 可映射基因 | Hypoxia检出基因
+--- | --- | --- | --- | --- | ---
+VEGFA_SD_3499 | 0.9915 | 778 | 728 | 726 | 463
+VEGFA_SD_3500 | 0.9753 | 1548 | 1333 | 1330 | 811
+证据：候选/参考核对、以前保存的官方分数和seed匹配、两状态表达关联、报告文件。
+限制或下一步：分数不是敲低率；seed不是实测脱靶；表达仅作注释、不改变排序；合成形式和实验仍待核对。"	
+A036	ambiguous_direction	agent	2	idle	14.96	0		1	2409	True		"判定：暂时不能直接生成有效候选。关键结果：输入已提供1条21nt RNA序列，内容为21个连续A（AAAAAAAAAAAAAAAAAAAAA），但链方向、正义/反义及guide/passenger身份均未知；本系统当前要求核对明确的19nt guide配对核心，不能把21nt序列擅自截断成某个19nt候选。证据：候选表字段 guide_21nt_RNA_5to3 已给出该序列，来源为 development_test；当前没有可用于判断链方向或链身份的靶位点、配对伙伴或转录本坐标。限制或下一步：请提供该21nt序列在VEGFA参考转录本上的预期靶位置/配对序列，或明确要测试哪一段19nt及其5'→3'方向；确认后我可以核对并按现有缺氧背景给出最多2条候选。
+请明确这条21nt序列对应的VEGFA靶位置/互补链信息，或指定要核对的19nt核心及其5'→3'方向。"	
+A037	invalid_sequence	agent	3	FAILED	8.747	1		2	3557	True	bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向	这次请求没能完成。	
+A038	ambiguous_direction	llm	1	ANSWERED_NO_TOOLS	22.42	0		1	1429	True		"## 判定
+不能给出候选或排序。所提供“21nt RNA”为 **21个连续A**，链方向、guide/passenger身份不明，且无法确定明确的 **19nt guide配对核心**；同时它明显不像有效的人 VEGFA 靶向siRNA候选。
+
+## 关键结果
+
+| 项目 | 核对结果 |
+|---|---|
+| 候选ID | unknown |
+| 输入序列 | AAAAAAAAAAAAAAAAAAAAA |
+| 长度 | 21 nt |
+| 碱基层面 | 仅含A，无数值字符或简并碱基 |
+| 链方向 | 未提供 |
+| guide/passenger | 未确定 |
+| 19nt配对核心 | 无法唯一确定；任意连续19nt均为 poly-A |
+| 基因/物种适用性 | 未证明属于人 VEGFA |
+| 模型分数 | 未运行；缺少verify_target所需有效核心与链信息 |
+| seed匹配/表达 | 未运行；需先确定guide链及19nt核心 |
+| Top 2候选 | 无法产生：有效候选数为0 |
+
+## 证据
+- 原始输入仅给出1条序列：`guide_21nt_RNA_5to3 = AAAAAAAAAAAAAAAAAAAAA`，来源为 `development_test`。
+- 本系统要求候选为**明确的19nt guide配对核心**，并且当前仅支持人 **VEGFA**、ARPE-19常氧或缺氧背景。
+- 由于未指定哪一条链是guide，也未说明21nt两端如何截取，19nt核心不能被可靠选定；poly-A序列也不能据序列本身推定方向。
+- 因目标核对未通过，未执行或导入目标覆盖、OligoFormer评分、SeedMatchR及表达查询结果。
+
+## 限制或下一步
+请基于实际双链siRNA设计提供以下信息后才能核对：
+1. 明确标注的 **guide链 5′→3′ 19nt核心**；  
+2. 对应的passenger链；  
+3. 若保留21nt格式，请说明两端突出碱基及19bp配对区域；  
+4. 人 VEGFA 参考转录本或候选在转录本上的预期位置。
+
+在当前信息下，不能把该poly-A序列列为VEGFA候选，也不能编造分数、覆盖或脱靶/seed匹配结果。"	
+A039	invalid_sequence	llm	2	ANSWERED_NO_TOOLS	7.372	0		1	1153	True		"## 判定
+无法筛选出前2名；候选不合格，未进入靶点核对、模型评分、seed匹配和表达查询。
+
+## 关键结果
+| 候选ID | 核对结果 | 原因 |
+|---|---|---|
+| bad | 不通过 | 提供序列为 `AAA`，长度3 nt，不是明确的19 nt guide配对核心 |
+
+## 证据
+- 原始输入仅含1个候选：`bad`
+- 字段：`guide_core19_5to3 = AAA`
+- 来源：`development_test`
+- 任务要求：人 VEGFA、Hypoxia、top 2；但有效19 nt候选数为0，因此不能排序，也不能产生前2候选。
+- 因候选长度不合格，后续 `verify_target`、`score_candidates`、`match_seed`、`query_expression` 均无有效输入；本轮没有模型分数、seed位点数、匹配基因数或表达结果。
+
+## 限制或下一步
+请提供至少2条明确的19 nt VEGFA guide核心序列；当前系统核对的是19 nt配对核心，这不是对所有siRNA生物学设计的通用要求。不要把3 nt片段当作完整候选，也不能在缺少结果时推测评分或脱靶情况。"	
+A040	ambiguous_direction	agent	1	FAILED	10.847	1		2	3695	True	unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向	这次请求没能完成。	
+A041	ambiguous_direction	llm	3	ANSWERED_NO_TOOLS	14.378	0		1	1400	True		"## 判定
+不能给出可排序候选，也不能调用模型评分或seed匹配。原因是：
+
+1. 输入仅提供1条21nt序列：`AAAAAAAAAAAAAAAAAAAAA`，且链方向、guide/passenger身份未定。
+2. 本系统当前要求明确的**19nt guide配对核心**；不能从不确定方向的21nt序列中擅自截取。
+3. 该序列为21个连续A，明显不像可直接确认的VEGFA靶向siRNA guide；在未进行参考比对前，不能假定其靶向VEGFA。
+4. 候选ID为`unknown`，来源为`development_test`，缺少可靠链注释。
+
+## 关键结果
+
+| 项目 | 核对结果 |
+|---|---|
+| 候选数 | 1 |
+| 序列 | `AAAAAAAAAAAAAAAAAAAAA` |
+| 长度 | 21nt |
+| 链方向 | 未提供 |
+| guide/passenger | 未确定 |
+| 明确19nt guide核心 | 无 |
+| VEGFA参考转录本核对 | 未执行/不能执行 |
+| OligoFormer分数 | 无 |
+| seed位点与基因匹配 | 无 |
+| 缺氧表达注释 | 无 |
+| Top 2候选 | 无法产生：仅有1个不合格输入候选 |
+
+## 证据
+- 原始输入字段：`guide_21nt_RNA_5to3 = ""AAAAAAAAAAAAAAAAAAAAA""`。
+- 原始候选元数据：`candidate_id = ""unknown""`，`source = ""development_test""`。
+- 任务请求已明确说明“链方向和guide/passenger都不确定”。
+- 在缺少明确19nt guide核心及链方向的情况下，无法满足本地`verify_target → score_candidates/match_seed → query_expression → compile_report`的前置条件。
+
+## 限制或下一步
+请提供可判定为guide链的**明确19nt配对核心序列**，并说明其5′→3′方向；如仍只有21nt双链，也需要给出两条链及末端结构或明确哪条为guide。确认后才可在人VEGFA、ARPE-19缺氧背景下进行参考覆盖核对、模型评分、seed匹配和表达注释。"	
+A042	normal_hypoxia	llm	1	ANSWERED_NO_TOOLS	26.004	0		1	8718	True		"## 判定
+
+无法生成“2条优先核查候选”的排序报告。原因是输入虽包含候选和工具说明，但未提供任何已导入的官方 **OligoFormer score**、官方 **SeedMatchR 结果**或缺氧表达关联结果；本轮也未实际调用工具，因此不能编造或补算。
+
+已完成的仅是：9条候选均在人 VEGFA、设计转录本 NM_003376.6、19nt 明确配对核心、工作池通过、20条参考转录本核心匹配这些输入字段层面的核对。
+
+## 关键结果
+
+### 全部候选核对结果
+
+| candidate_id | 23nt窗口坐标（原始候选） | guide 19nt核心 | 格式/来源核对 | 参考覆盖注释 | 官方score | seed结果 | 缺氧表达关联 |
+|---|---:|---|---|---|---|---|---|
+| VEGFA_SD_1157 | 1157–1179 | AUAGACAUCCAUGAACUUC | 通过 | 20/20 | 未提供 | 未提供 | 未提供 |
+| VEGFA_SD_2739 | 2739–2761 | AGAACUAGUGGUUUCAAUG | 通过 | 20/20 | 未提供 | 未提供 | 未提供 |
+| VEGFA_SD_3119 | 3119–3141 | AUAUCUGUUCAAGAUAAGC | 通过 | 20/20 | 未提供 | 未提供 | 未提供 |
+| VEGFA_SD_3193 | 3193–3215 | ACCUUAUUUCAAAGGAAUG | 通过 | 20/20 | 未提供 | 未提供 | 未提供 |
+| VEGFA_SD_3429 | 3429–3451 | UAUUACGGAUAAACAGUAG | 通过 | 20/20 | 未提供 | 未提供 | 未提供 |
+| VEGFA_SD_3499 | 3499–3521 | UGUACUACGGAAUAUCUCG | 通过 | 20/20 | 未提供 | 未提供 | 未提供 |
+| VEGFA_SD_3500 | 3500–3522 | AUGUACUACGGAAUAUCUC | 通过 | 20/20 | 未提供 | 未提供 | 未提供 |
+| VEGFA_SD_3502 | 3502–3524 | AUAUGUACUACGGAAUAUC | 通过 | 20/20 | 未提供 | 未提供 | 未提供 |
+| VEGFA_SD_3535 | 3535–3557 | UAUCUGUAUUUCUUUGUCG | 通过 | 20/20 | 未提供 | 未提供 | 未提供 |
+
+### 优先2条
+
+暂不指定。缺少官方模型分数与 guide mer7m8 seed 匹配结果，若按 GC、Tm、窗口位置等字段自行排序，会构成自创综合评分，不符合要求。
+
+## 证据
+
+- 输入字段显示9条候选均为：
+  - `target_gene = VEGFA`
+  - `species = Homo sapiens`
+  - `working_pool_pass = True`
+  - `exclusion_reason = NA`
+  - `oligo_input_derivation = 19_BP_PAIRED_CORE_FROM_VERIFIED_AUTHOR_21NT_DUPLEX_NOT_ARBITRARY_TRUNCATION`
+  - `core_matches_n = 20`
+  - `all_20_transcripts_core_match = True`
+- 所有候选均含21nt guide/passenger、3′ overhang及19nt配对核心，符合本系统当前要求的候选输入格式。
+- 输入中没有以下必要结果字段：
+  - `score`
+  - `seed_site_count_all`
+  - `seed_site_count_nontarget`
+  - `matched_genes`
+  - `baseline_mapped_genes`
+  - `state_detected_genes`
+  - `unmapped_genes`
+- 原始坐标是候选表中的23nt设计窗口坐标，不能改称为19nt核心坐标。
+
+## 限制或下一步
+
+需要补充或实际运行以下已定义流程后，才能给出缺氧背景下前2条：
+
+1. 读取/导入官方 OligoFormer `score`；分数只表示模型分数，不是敲低百分比。  
+2. 运行或导入官方 SeedMatchR 的 guide mer7m8 结果，区分seed位点数、排除VEGFA后的位点数、去重匹配基因数。  
+3. 将非靶匹配基因映射 builtin 表达表，并统计 Hypoxia 下至少2/4皿 TPM ≥ 1的基因数。  
+4. 所有候选当前均为 `NOT_ORDER_READY_MODIFICATIONS_UNFROZEN`，即使后续优先，也不代表已可直接订购或已完成实验验证。"	
+A043	normal_hypoxia	agent	3	COMPLETE	42.733	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	5	78705	True		"**判定**  
+优先核查的2条候选为：**VEGFA_SD_3499**、**VEGFA_SD_3500**。两者均能在 **NM_003376.6** 的20条VEGFA参考转录本中覆盖，且无官方功能过滤提示；当前不是可直接订购状态，因化学修饰尚未冻结。
+
+**关键结果**
+
+| 优先级 | 候选ID | 19nt guide核心 | NM_003376.6核心坐标 | OligoFormer分数 | seed位点数（含VEGFA） | 排除VEGFA后seed位点数 | 去重非靶基因 | 缺氧检出基因 |
+|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501–3519 | 0.9915 | 778 | 777 | 728 | 463 |
+| 2 | VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502–3520 | 0.9753 | 1548 | 1547 | 1333 | 811 |
+
+**证据**  
+报告编译按“先列无官方复核提示候选，再按OligoFormer分数降序”执行；表达数据只作注释，不改变排序。VEGFA本身在ARPE-19缺氧组4/4皿达到TPM≥1，平均TPM为102.39，高于常氧组20.10。
+
+**限制或下一步**  
+OligoFormer分数是模型分数，不是敲低百分比；seed匹配是代表性注释3′UTR上的mer7m8零错配位点，不是实验脱靶验证。建议下一步优先对这两条做订购前序列、修饰方案和实验敲低/脱靶核查；完整报告文件为 `report.html`，排序表为 `candidates_ranked.tsv`。"	
+A044	target_only	workflow	2	PARTIAL_COMPLETE	0.012	2	inspect_candidates;verify_target	0	0	True		"判定：所要求的候选及转录本核对完成。
+关键结果：
+候选 | 参考 | 19nt核心起止(1-based) | 参考转录本覆盖
+--- | --- | --- | ---
+VEGFA_SD_1157 | NM_003376.6 | 1159–1177 | 20/20
+VEGFA_SD_2739 | NM_003376.6 | 2741–2759 | 20/20
+VEGFA_SD_3119 | NM_003376.6 | 3121–3139 | 20/20
+VEGFA_SD_3193 | NM_003376.6 | 3195–3213 | 20/20
+VEGFA_SD_3429 | NM_003376.6 | 3431–3449 | 20/20
+VEGFA_SD_3499 | NM_003376.6 | 3501–3519 | 20/20
+VEGFA_SD_3500 | NM_003376.6 | 3502–3520 | 20/20
+VEGFA_SD_3502 | NM_003376.6 | 3504–3522 | 20/20
+VEGFA_SD_3535 | NM_003376.6 | 3537–3555 | 20/20
+证据：本次候选检查和参考序列比对；核心坐标来自verify_target，不用23nt设计窗口坐标代替。
+限制或下一步：未评分、未做seed/表达分析、未选top候选；参考覆盖不等于细胞内异构体表达。"	
+A045	normal_hypoxia	llm	2	ANSWERED_NO_TOOLS	26.232	0		1	8647	True		"## 判定
+
+无法按“已有官方分数和seed结果”完成排序并生成2条优先核查候选：本次输入为 **imported** 模式，但只提供了 siDirect 候选、23nt窗口、21nt链、19nt配对核心及基础规则字段；未提供官方 **OligoFormer score**、SeedMatchR 结果或缺氧表达关联结果。因此不能编造分数、seed位点数、匹配基因数或表达检测数，也不能据此声称前2名。
+
+## 关键结果
+
+### 候选结构核对
+
+| candidate_id | 19nt guide核心 | 23nt窗口坐标（原始候选表） | 20条参考核心匹配（来源字段） | 工作池 |
+|---|---|---:|---:|---|
+| VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 1157–1179 | 20/20 | True |
+| VEGFA_SD_2739 | AGAACUAGUGGUUUCAAUG | 2739–2761 | 20/20 | True |
+| VEGFA_SD_3119 | AUAUCUGUUCAAGAUAAGC | 3119–3141 | 20/20 | True |
+| VEGFA_SD_3193 | ACCUUAUUUCAAAGGAAUG | 3193–3215 | 20/20 | True |
+| VEGFA_SD_3429 | UAUUACGGAUAAACAGUAG | 3429–3451 | 20/20 | True |
+| VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3499–3521 | 20/20 | True |
+| VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3500–3522 | 20/20 | True |
+| VEGFA_SD_3502 | AUAUGUACUACGGAAUAUC | 3502–3524 | 20/20 | True |
+| VEGFA_SD_3535 | UAUCUGUAUUUCUUUGUCG | 3535–3557 | 20/20 | True |
+
+### 优先核查结论
+
+- 官方分数：**缺失**。
+- guide mer7m8 seed匹配：**缺失**。
+- 缺氧表达关联：**缺失**。
+- 因此：**不能确定2条优先核查候选**。
+- 所有候选均显示：
+  - 明确19nt配对核心；
+  - `working_pool_pass=True`；
+  - 来源记录称20/20 VEGFA转录本核心匹配；
+  - 合成状态均为 `NOT_ORDER_READY_MODIFICATIONS_UNFROZEN`，尚非冻结修饰后的订购就绪版本。
+
+## 证据
+
+- 输入中存在的字段仅包括：siDirect来源、23nt target window、21nt guide/passenger、19nt paired core、seed Tm、vendor minimum mismatches、GC%、`core_matches_n=20`、`all_20_transcripts_core_match=True`、`working_pool_pass=True`。
+- 输入中未出现以下用于报告排序的必要字段或结果：
+  - `score`：OligoFormer模型分数；
+  - `seed_site_count_all`；
+  - `seed_site_count_nontarget`；
+  - `matched_genes`；
+  - `baseline_mapped_genes`；
+  - `state_detected_genes`；
+  - `unmapped_genes`；
+  - 缺氧ARPE-19表达表关联结果。
+- `target_start_1based/target_end_1based` 是原始候选表的23nt设计窗口坐标，不能改写为19nt核心坐标。
+- `core_matches_n=20` 和 `all_20_transcripts_core_match=True` 是输入已有参考覆盖注释；本次未独立重新比对。
+- `vendor_min_mismatches_*` 是供应商标注的最小错配信息，不是SeedMatchR结果，也不能称为seed位点数或实验脱靶数。
+
+## 限制或下一步
+
+1. 需补充或允许运行已有的官方流程结果：  
+   `score_candidates` → `match_seed` → `query_expression`。
+2. 在取得分数、seed匹配和缺氧表达注释后，才能按规则筛选并列出2条优先核查候选。
+3. 即使结果齐全，模型分数也不是敲低百分比，seed匹配也不是实验脱靶；缺氧表达数据只作风险注释，不改变模型排序。"	
+A046	normal_normoxia	agent	3	COMPLETE	36.849	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	8	149517	True		"## 判定
+常氧条件下，优先核查的3条候选为：**VEGFA_SD_3499、VEGFA_SD_3500、VEGFA_SD_1157**。它们均命中 VEGFA，且覆盖20条参考转录本；但当前都**不是可直接订购状态**，化学修饰尚未冻结。
+
+## 关键结果
+| 优先级 | 候选ID | 19nt guide核心 | OligoFormer分数 | 非靶seed位点数 | 非靶匹配基因数 | 常氧检出基因数 | 19nt核心坐标（NM_003376.6） |
+|---|---|---|---:|---:|---:|---:|---|
+| 1 | VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 0.9915 | 777 | 728 | 480 | 3501–3519 |
+| 2 | VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 0.9753 | 1547 | 1333 | 858 | 3502–3520 |
+| 3 | VEGFA_SD_1157 | AUAGACAUCCAUGAACUUC | 0.9490 | 2197 | 1876 | 1155 | 1159–1177 |
+
+目标本底：VEGFA 在 ARPE-19 常氧中的平均 TPM 为 **20.0993**，4/4 皿满足 TPM≥1。
+
+## 证据
+已完成候选检查、靶标核对、评分读取、seed匹配、常氧表达关联和报告汇总。筛选规则是先排除已有复核提示的候选，再按 OligoFormer 分数降序；表达背景只作注释，不改变排序。报告文件已生成：`report.html`，排序表为 `candidates_ranked.tsv`。
+
+## 限制或下一步
+OligoFormer 分数是模型分数，**不是敲低百分比**；seed匹配是3′UTR代表性注释中的序列位点统计，**不是实验脱靶验证**。建议下一步先核查这3条的化学修饰与双链订购格式，再安排湿实验敲低和必要的脱靶评估。"	
+A047	target_only	llm	1	ANSWERED_NO_TOOLS	24.997	0		1	8700	True		"## 判定
+- 按“只核对候选信息和 VEGFA 转录本匹配”处理：**不做评分、不排序、不做 seed/表达分析**。
+- 共核对 **9 条候选**；全部来自人 **VEGFA / NM_003376.6**，均含明确 **19 nt guide-paired core**，且原始记录均标注 **20/20 条 VEGFA 参考转录本核心匹配**。
+- 我未实际调用 `verify_target`；以下转录本覆盖结论仅为转述输入中的已有字段。
+
+## 关键结果
+
+| candidate_id | 23 nt窗口坐标* | guide 19 nt配对核心 | 20转录本核心匹配 | 工作池 | 合成状态 |
+|---|---:|---|---|---|---|
+| VEGFA_SD_1157 | 1157–1179 | AUAGACAUCCAUGAACUUC | 20/20；True | True | 未达下单就绪 |
+| VEGFA_SD_2739 | 2739–2761 | AGAACUAGUGGUUUCAAUG | 20/20；True | True | 未达下单就绪 |
+| VEGFA_SD_3119 | 3119–3141 | AUAUCUGUUCAAGAUAAGC | 20/20；True | True | 未达下单就绪 |
+| VEGFA_SD_3193 | 3193–3215 | ACCUUAUUUCAAAGGAAUG | 20/20；True | True | 未达下单就绪 |
+| VEGFA_SD_3429 | 3429–3451 | UAUUACGGAUAAACAGUAG | 20/20；True | True | 未达下单就绪 |
+| VEGFA_SD_3499 | 3499–3521 | UGUACUACGGAAUAUCUCG | 20/20；True | True | 未达下单就绪 |
+| VEGFA_SD_3500 | 3500–3522 | AUGUACUACGGAAUAUCUC | 20/20；True | True | 未达下单就绪 |
+| VEGFA_SD_3502 | 3502–3524 | AUAUGUACUACGGAAUAUC | 20/20；True | True | 未达下单就绪 |
+| VEGFA_SD_3535 | 3535–3557 | UAUCUGUAUUUCUUUGUCG | 20/20；True | True | 未达下单就绪 |
+
+\*坐标是原始候选表中的 **23 nt设计窗口坐标**，不是19 nt核心坐标。
+
+## 证据
+- 9条候选的共同输入字段：
+  - `target_gene`: VEGFA  
+  - `design_transcript`: NM_003376.6  
+  - `core_matches_n`: 20  
+  - `all_20_transcripts_core_match`: True  
+  - `oligo_input_derivation`: 19_BP_PAIRED_CORE_FROM_VERIFIED_AUTHOR_21NT_DUPLEX_NOT_ARBITRARY_TRUNCATION  
+- 匹配转录本列表在每条候选中均包含以下20条：  
+  NM_001171623.2、NM_001171626.2、NM_001171628.2、NM_001317010.2、NM_001025369.3、NM_001171627.2、NM_001171625.2、NM_001204384.2、NM_001287044.2、NM_001025367.3、NM_001171630.2、NM_001171622.2、NM_001171624.2、NM_001025370.3、NM_001204385.2、NM_001025368.3、NM_001033756.3、NM_003376.6、NM_001025366.3、NM_001171629.2。
+
+## 限制或下一步
+- 本次未产生 OligoFormer `score`、敲低百分比、seed位点、脱靶基因或缺氧表达结果。
+- 输入未给各转录本上的实际 `core_start_1based`，因此不能把23 nt窗口坐标改称为19 nt核心起点。
+- 如需进一步核验，可运行 `verify_target` 做独立本地比对；之后再按需求决定是否评分或 seed/表达分析。"	
+A048	invalid_sequence	agent	2	idle	7.136	0		1	2251	True		"判定：当前唯一候选 bad 的 guide_core19_5to3 为“AAA”，仅3 nt，不符合本系统要求的明确19 nt配对核心，因此不能进入后续筛选或评分。请提供一个或多个完整的19 nt候选序列；若你希望按当前设置筛选，还需要至少有2个合格候选，才能返回缺氧背景下的前2名。
+请补充完整的19 nt guide核心序列；若要筛选前2名，请至少提供2个合格候选。"	
+A049	invalid_sequence	workflow	1	FAILED	0.091	1		0	0	True		"判定：停止后续计算。
+关键结果：bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向；原始输入：[{""candidate_id"": ""bad"", ""guide_core19_5to3"": ""AAA""}]。
+证据：本题原始输入及输入检查错误；未执行后续评分或排序。
+限制或下一步：确认支持的目标、链身份和明确19nt配对核心；不自动截短21nt。"	
+A050	normal_normoxia	workflow	2	COMPLETE	3.492	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	0	0	True		"判定：本题报告流程完成；以下仅为优先复核名单。
+关键结果：
+候选 | 模型分数 | seed位点(含VEGFA) | 去重非靶匹配基因 | 可映射基因 | Normoxia检出基因
+--- | --- | --- | --- | --- | ---
+VEGFA_SD_3499 | 0.9915 | 778 | 728 | 726 | 480
+VEGFA_SD_3500 | 0.9753 | 1548 | 1333 | 1330 | 858
+VEGFA_SD_1157 | 0.949 | 2197 | 1876 | 1874 | 1155
+证据：候选/参考核对、以前保存的官方分数和seed匹配、两状态表达关联、报告文件。
+限制或下一步：分数不是敲低率；seed不是实测脱靶；表达仅作注释、不改变排序；合成形式和实验仍待核对。"	
+A051	normal_hypoxia	agent	2	COMPLETE	37.077	6	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report	7	133672	True		"## 判定
+
+优先核查 2 条为：**VEGFA_SD_3499** 和 **VEGFA_SD_3500**。两者均命中 VEGFA、覆盖20个参考转录本，且无官方功能过滤提示；但当前都**不是可直接订购状态**，修饰方案尚未冻结。
+
+## 关键结果
+
+| 优先级 | 候选 | 19nt guide核心 | NM_003376.6核心位置 | OligoFormer分数 | 非靶seed位点数 | 去重非靶基因数 | 缺氧检出基因数 |
+|---|---|---|---:|---:|---:|---:|---:|
+| 1 | **VEGFA_SD_3499** | UGUACUACGGAAUAUCUCG | 3501–3519 | **0.9915** | 777 | 728 | 463 |
+| 2 | **VEGFA_SD_3500** | AUGUACUACGGAAUAUCUC | 3502–3520 | **0.9753** | 1547 | 1333 | 811 |
+
+补充：VEGFA 本身在 ARPE-19 缺氧组平均 TPM 为 **102.39**，4/4 皿满足 TPM≥1；常氧组平均 TPM 为 **20.10**，也是4/4皿检出。
+
+## 证据
+
+- 9条候选均通过19nt核心检查，并在 **NM_003376.6** 上完成实际比对；每个核心覆盖 **20/20** 个参考转录本。
+- 分数和seed结果来自已导入的历史官方结果；选择规则是：先排除有 `official_func_filter` 提示的候选，再按 OligoFormer 分数降序。
+- 缺氧表达只用于注释，**不改变排序**。
+- 报告和排序表已生成：`report.html`、`candidates_ranked.tsv`。
+
+## 限制或下一步
+
+OligoFormer 分数**不是敲低百分比**；seed匹配是代表性3′UTR的 mer7m8、0错配位点统计，**不是实验脱靶验证**。下一步建议先对这2条做独立供应商脱靶核对，再冻结化学修饰和订购序列。"	
+A052	ambiguous_direction	llm	2	ANSWERED_NO_TOOLS	15.396	0		1	1390	True		"## 判定
+不能给出有效候选或优先排序。所给21nt序列为21个连续腺嘌呤（`AAAAAAAAAAAAAAAAAAAAA`），未提供可靠链方向、guide/passenger归属；且其任何19nt子串均为多聚A，不满足当前系统要求的明确19nt VEGFA配对核心，也未通过VEGFA参考核对和模型评分。
+
+## 关键结果
+
+| 项目 | 核对结果 |
+|---|---|
+| 输入ID | unknown |
+| 输入长度 | 21 nt |
+| 链方向 | 不确定 |
+| guide/passenger | 不确定 |
+| 19nt配对核心 | 不明确；两个可能滑窗子串均为 `AAAAAAAAAAAAAAAAAAA` |
+| 基因/物种范围 | 任务声明为人 VEGFA，但序列本身无证据支持靶向VEGFA |
+| 20条VEGFA参考覆盖 | 未提供已核对结果；不能声称匹配 |
+| OligoFormer分数 | 无；未完成官方verify_target，不能评分或导入历史分数 |
+| seed匹配/表达 | 无；未确定guide链，不能运行 mer7m8 或查询缺氧表达 |
+| top 2 | 无法产生：有效候选数为0 |
+
+## 证据
+- 原始候选字段：`guide_21nt_RNA_5to3 = AAAAAAAAAAAAAAAAAAAAA`，来源为 `development_test`。
+- 系统边界要求候选必须是“明确的19nt guide配对核心”；当前仅给一条方向和功能链均不确定的21nt多聚A序列。
+- 多聚A序列可能对应poly(A)样区域，不能仅凭长度或任务字段认定为VEGFA siRNA。
+
+## 限制或下一步
+需要由用户或上游记录明确：
+1. 该21mer的基因组/转录本来源链方向；  
+2. 哪一条是RNA诱导沉默复合体装载的guide链；  
+3. 覆盖两个3′悬垂碱基的实际19bp配对核心；  
+4. 该核心在明确VEGFA参考转录本上的位置。  
+
+补齐后才能依次执行参考完全匹配核对、官方模型评分、seed匹配和缺氧表达注释。"	
+A053	target_only	llm	3	ANSWERED_NO_TOOLS	28.724	0		1	8551	True		"## 判定
+
+已按“只核对”要求处理：9 个候选均属于 **Homo sapiens VEGFA**，19 nt guide/passenger 配对核心长度、21 nt 链结构、3′ 二核苷酸悬垂及来源字段完整；未进行评分、排序、seed 匹配或表达查询。
+
+## 关键结果
+
+| candidate_id | 23 nt设计窗口坐标* | guide 19 nt核心 | passenger 19 nt核心 | 结构核对 | VEGFA转录本覆盖注释 |
+|---|---:|---|---|---|---|
+| VEGFA_SD_1157 | 1157–1179 | AUAGACAUCCAUGAACUUC | GAAGUUCAUGGAUGUCUAU | 通过 | 20/20，all=True |
+| VEGFA_SD_2739 | 2739–2761 | AGAACUAGUGGUUUCAAUG | CAUUGAAACCACUAGUUCU | 通过 | 20/20，all=True |
+| VEGFA_SD_3119 | 3119–3141 | AUAUCUGUUCAAGAUAAGC | GCUUAUCUUGAACAGAUAU | 通过 | 20/20，all=True |
+| VEGFA_SD_3193 | 3193–3215 | ACCUUAUUUCAAAGGAAUG | CAUUCCUUUGAAAUAAGGU | 通过 | 20/20，all=True |
+| VEGFA_SD_3429 | 3429–3451 | UAUUACGGAUAAACAGUAG | CUACUGUUUAUCCGUAAUA | 通过 | 20/20，all=True |
+| VEGFA_SD_3499 | 3499–3521 | UGUACUACGGAAUAUCUCG | CGAGAUAUUCCGUAGUACA | 通过 | 20/20，all=True |
+| VEGFA_SD_3500 | 3500–3522 | AUGUACUACGGAAUAUCUC | GAGAUAUUCCGUAGUACAU | 通过 | 20/20，all=True |
+| VEGFA_SD_3502 | 3502–3524 | AUAUGUACUACGGAAUAUC | GAUAUUCCGUAGUACAUAU | 通过 | 20/20，all=True |
+| VEGFA_SD_3535 | 3535–3557 | UAUCUGUAUUUCUUUGUCG | CGACAAAGAAAUACAGAUA | 通过 | 20/20，all=True |
+
+\*坐标为原始候选表中的 **23 nt设计窗口** 坐标，不是19 nt核心坐标。
+
+## 证据
+
+- 来源：导入记录，`source_run=VEGFA_NM003376_6`，`source_tool=siDirect_2.0`，设计转录本为 **NM_003376.6**。
+- 每个候选均提供：
+  - 21 nt guide/passenger RNA；
+  - 明确的19 nt配对核心；
+  - guide/passenger 3′ 二核苷酸悬垂；
+  - `oligo_input_derivation=19_BP_PAIRED_CORE_FROM_VERIFIED_AUTHOR_21NT_DUPLEX_NOT_ARBITRARY_TRUNCATION`。
+- 原始字段显示：9 个候选均为 `core_matches_n=20`、`all_20_transcripts_core_match=True`，覆盖列出的20条VEGFA参考转录本，包括 NM_003376.6。
+- 所有候选均为 `working_pool_pass=True`、`exclusion_reason=NA`；合成状态均为 `NOT_ORDER_READY_MODIFICATIONS_UNFROZEN`。
+
+## 限制或下一步
+
+- 本轮只转述并核对输入已有字段；**未实际重新运行20条转录本序列比对**，因此不生成新的 `core_start_1based`。
+- 未运行 OligoFormer 评分、seed 匹配、脱靶/基因计数、缺氧表达查询，也未做候选排序。
+- 如需下一步，可在明确参考转录本上重新比对以给出19 nt核心起点，或按要求执行评分与完整排序。"	
+A054	unsupported_target	llm	2	ANSWERED_NO_TOOLS	16.14	0		1	7973	True		"## 判定
+无法计算或筛选人 **KRAS** siRNA；不能把输入中的 VEGFA 候选替换为 KRAS。当前本地数据和计算工具仅支持人 **VEGFA**、ARPE-19 常氧/缺氧背景。
+
+## 关键结果
+- 本次提供的 **9 条候选均为 VEGFA**，来源记录为 `VEGFA_NM003376_6`，设计转录本为 `NM_003376.6`。
+- 候选 ID 包括：`VEGFA_SD_1157、2739、3119、3193、3429、3499、3500、3502、3535`。
+- 未提供任何 KRAS 转录本、KRAS 19nt guide 配对核心或 KRAS 参考覆盖结果，因此不能给出 KRAS top 2 排名、模型分数或缺氧表达注释。
+
+## 证据
+- 输入任务基因虽为 `KRAS`，但所有候选字段均标注 `""target_gene"": ""VEGFA""`。
+- 工具范围说明中，本地验证为“20条 VEGFA 参考序列”；系统能力边界也明确仅支持 VEGFA。
+- 这些候选的 `target_start_1based/target_end_1based` 是原始 VEGFA 23nt 设计窗口坐标，不能解释为 KRAS 坐标。
+- 已有的 `core_matches_n=20`、`all_20_transcripts_core_match=True` 仅表示输入记录中的 VEGFA 参考覆盖注释，不能用于 KRAS。
+
+## 限制或下一步
+- 若要进行 KRAS 筛选，需要先接入人 KRAS 参考转录本、候选生成、靶点核对、模型评分、seed 匹配和表达数据；当前流程不能完成。
+- 如需继续，我可以基于公开文献或网页检索 KRAS siRNA 的已有研究，但文献结果不等同于本地计算、模型预测或实验验证。"	
