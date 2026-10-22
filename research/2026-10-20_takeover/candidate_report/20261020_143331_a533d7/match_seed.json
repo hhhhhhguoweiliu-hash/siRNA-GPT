@@ -1,0 +1,17 @@
+{
+  "status": "IMPORTED_HISTORICAL",
+  "scope": "guide only, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target",
+  "positive_rows": 14524,
+  "details": "seed_matches.tsv",
+  "counts": {
+    "VEGFA_SD_1157": 2197,
+    "VEGFA_SD_2739": 1495,
+    "VEGFA_SD_3119": 2665,
+    "VEGFA_SD_3193": 2386,
+    "VEGFA_SD_3429": 279,
+    "VEGFA_SD_3499": 778,
+    "VEGFA_SD_3500": 1548,
+    "VEGFA_SD_3502": 2516,
+    "VEGFA_SD_3535": 3156
+  }
+}

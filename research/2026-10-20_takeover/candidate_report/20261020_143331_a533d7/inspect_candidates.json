@@ -1,0 +1,60 @@
+{
+  "status": "LIVE_CHECKED",
+  "rows": [
+    {
+      "candidate_id": "VEGFA_SD_1157",
+      "guide_core19_5to3": "AUAGACAUCCAUGAACUUC",
+      "source": "siDirect_2.0",
+      "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+    },
+    {
+      "candidate_id": "VEGFA_SD_2739",
+      "guide_core19_5to3": "AGAACUAGUGGUUUCAAUG",
+      "source": "siDirect_2.0",
+      "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3119",
+      "guide_core19_5to3": "AUAUCUGUUCAAGAUAAGC",
+      "source": "siDirect_2.0",
+      "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3193",
+      "guide_core19_5to3": "ACCUUAUUUCAAAGGAAUG",
+      "source": "siDirect_2.0",
+      "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3429",
+      "guide_core19_5to3": "UAUUACGGAUAAACAGUAG",
+      "source": "siDirect_2.0",
+      "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3499",
+      "guide_core19_5to3": "UGUACUACGGAAUAUCUCG",
+      "source": "siDirect_2.0",
+      "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3500",
+      "guide_core19_5to3": "AUGUACUACGGAAUAUCUC",
+      "source": "siDirect_2.0",
+      "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3502",
+      "guide_core19_5to3": "AUAUGUACUACGGAAUAUC",
+      "source": "siDirect_2.0",
+      "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3535",
+      "guide_core19_5to3": "UAUCUGUAUUUCUUUGUCG",
+      "source": "siDirect_2.0",
+      "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+    }
+  ],
+  "warning": "配对核心用于计算；不自动转换为订购序列或声称已做化学修饰验证"
+}

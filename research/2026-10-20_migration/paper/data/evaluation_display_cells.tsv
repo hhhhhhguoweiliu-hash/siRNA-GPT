@@ -1,0 +1,55 @@
+case_id	group	repeat	answer_id	raw_status	display_category
+normal_hypoxia	llm	1	A042	FAILED	Incomplete output
+normal_hypoxia	llm	2	A045	FAILED	Incomplete output
+normal_hypoxia	llm	3	A029	FAILED	Incomplete output
+normal_hypoxia	workflow	1	A018	COMPLETE	Complete
+normal_hypoxia	workflow	2	A035	COMPLETE	Complete
+normal_hypoxia	workflow	3	A034	COMPLETE	Complete
+normal_hypoxia	agent	1	A013	COMPLETE	Complete
+normal_hypoxia	agent	2	A051	FAILED	Network error
+normal_hypoxia	agent	3	A043	COMPLETE	Complete
+normal_normoxia	llm	1	A014	ANSWERED_NO_TOOLS	Answer / no tools
+normal_normoxia	llm	2	A026	FAILED	Incomplete output
+normal_normoxia	llm	3	A017	FAILED	Incomplete output
+normal_normoxia	workflow	1	A027	COMPLETE	Complete
+normal_normoxia	workflow	2	A050	COMPLETE	Complete
+normal_normoxia	workflow	3	A030	COMPLETE	Complete
+normal_normoxia	agent	1	A001	COMPLETE	Complete
+normal_normoxia	agent	2	A032	FAILED	Network error
+normal_normoxia	agent	3	A046	COMPLETE	Complete
+target_only	llm	1	A047	ANSWERED_NO_TOOLS	Answer / no tools
+target_only	llm	2	A011	ANSWERED_NO_TOOLS	Answer / no tools
+target_only	llm	3	A053	FAILED	Incomplete output
+target_only	workflow	1	A023	PARTIAL_COMPLETE	Partial
+target_only	workflow	2	A044	PARTIAL_COMPLETE	Partial
+target_only	workflow	3	A003	PARTIAL_COMPLETE	Partial
+target_only	agent	1	A033	PARTIAL_COMPLETE	Partial
+target_only	agent	2	A022	PARTIAL_COMPLETE	Partial
+target_only	agent	3	A004	PARTIAL_COMPLETE	Partial
+invalid_sequence	llm	1	A020	ANSWERED_NO_TOOLS	Answer / no tools
+invalid_sequence	llm	2	A039	ANSWERED_NO_TOOLS	Answer / no tools
+invalid_sequence	llm	3	A015	ANSWERED_NO_TOOLS	Answer / no tools
+invalid_sequence	workflow	1	A049	FAILED	Input / program stop
+invalid_sequence	workflow	2	A002	FAILED	Input / program stop
+invalid_sequence	workflow	3	A012	FAILED	Input / program stop
+invalid_sequence	agent	1	A028	idle	Idle / clarify
+invalid_sequence	agent	2	A048	FAILED	Planner format failure
+invalid_sequence	agent	3	A037	idle	Idle / clarify
+unsupported_target	llm	1	A007	ANSWERED_NO_TOOLS	Answer / no tools
+unsupported_target	llm	2	A054	ANSWERED_NO_TOOLS	Answer / no tools
+unsupported_target	llm	3	A006	ANSWERED_NO_TOOLS	Answer / no tools
+unsupported_target	workflow	1	A019	FAILED	Input / program stop
+unsupported_target	workflow	2	A008	FAILED	Input / program stop
+unsupported_target	workflow	3	A025	FAILED	Input / program stop
+unsupported_target	agent	1	A021	idle	Idle / clarify
+unsupported_target	agent	2	A010	idle	Idle / clarify
+unsupported_target	agent	3	A016	idle	Idle / clarify
+ambiguous_direction	llm	1	A038	ANSWERED_NO_TOOLS	Answer / no tools
+ambiguous_direction	llm	2	A052	ANSWERED_NO_TOOLS	Answer / no tools
+ambiguous_direction	llm	3	A041	ANSWERED_NO_TOOLS	Answer / no tools
+ambiguous_direction	workflow	1	A009	FAILED	Input / program stop
+ambiguous_direction	workflow	2	A005	FAILED	Input / program stop
+ambiguous_direction	workflow	3	A031	FAILED	Input / program stop
+ambiguous_direction	agent	1	A040	idle	Idle / clarify
+ambiguous_direction	agent	2	A036	idle	Idle / clarify
+ambiguous_direction	agent	3	A024	idle	Idle / clarify

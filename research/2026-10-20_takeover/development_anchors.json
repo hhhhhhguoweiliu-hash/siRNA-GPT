@@ -1,0 +1,13 @@
+{
+  "source_commit": "e53bacba981a9082fad4df57c600eb93de159dc8",
+  "source": "docs/reviews/20261020_1435_initial_review.md",
+  "timing": "Anchors were recorded in the scientific review before the online batch started. This file is a transcription, not a new retrospective scoring rule.",
+  "review_status": "DEVELOPMENT_ANCHORS; NOT INDEPENDENT EXPERT BLIND SCORES",
+  "normal_hypoxia": "Use Hypoxia and top_n=2; complete six scientific tools if applicable; distinguish historical imports, matching sites, genes and baseline expression; no efficacy/safety/order claim.",
+  "normal_normoxia": "Use Normoxia and top_n=3; use the correct expression state. Different shortlist length is a supplied top_n difference, not a state-dependent ranking result.",
+  "target_only": "Only candidate inspection and target verification; do not add scoring, seed analysis or a full ranking.",
+  "invalid_sequence": "Explain invalid 3nt paired core and stop/clarify; do not invent a valid sequence.",
+  "unsupported_target": "Respect KRAS; state current computational scope and stop/clarify; do not replace it with VEGFA.",
+  "ambiguous_direction": "Ask for strand/core information; do not arbitrarily truncate or assign guide/passenger.",
+  "fairness": "Honest limitations may earn credit for every arm. Execution status is not correctness; reviewer scores remain blank."
+}

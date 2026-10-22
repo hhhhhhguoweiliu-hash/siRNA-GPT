@@ -1,0 +1,7 @@
+﻿answer_id	case_id	group	repeat	status
+8ef35851ea9f	ambiguous_direction	workflow	1	FAILED
+65d8bf59a1df	normal_normoxia	workflow	1	COMPLETE
+9c9387bd5f39	invalid_sequence	workflow	1	FAILED
+64b9478f85bc	normal_hypoxia	workflow	1	COMPLETE
+adb142f736d5	target_only	workflow	1	PARTIAL_COMPLETE
+d30a4fc7785c	unsupported_target	workflow	1	FAILED

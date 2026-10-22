@@ -89,7 +89,8 @@ class OptimizationTests(unittest.TestCase):
    c.answer('TEST one');c.answer('TEST two')
   self.assertEqual(c.source_registry['https://pubmed.ncbi.nlm.nih.gov/1/']['id'],'S1')
   self.assertEqual({s['id'] for s in c.messages[-1]['sources']},{'S1','S2'})
-  exported=c.export_record();self.assertEqual(len(exported['evidence_records']),2)
+  exported=c.export_record();self.assertEqual(len([r for r in exported['evidence_records'] if r.get('kind')!='model_exchange']),2)
+  self.assertEqual(len([r for r in exported['evidence_records'] if r.get('kind')=='model_exchange']),4)
   encoded=json.dumps(exported);self.assertIn('RAW_TEST_A',encoded);self.assertIn('RAW_TEST_B',encoded);self.assertNotIn('TEST_SECRET',encoded)
  def test_continue_in_meta_mode_advances_current_plan(self):
   c=self.controller();self.guided(c);c.submit({'interaction_mode':'meta','message':'继续'});self.wait(c)

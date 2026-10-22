@@ -1,0 +1,8 @@
+test_cli_stops_after_access_denied_and_exports_all_54_units (test_evaluation_exports.EvaluationExportTests) ... ok
+test_missing_model_usage_remains_unknown_and_raw_answer_is_saved (test_evaluation_exports.EvaluationExportTests) ... ok
+test_timeout_preserves_partial_pilot_and_no_further_case_starts (test_evaluation_exports.EvaluationExportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.268s
+
+OK

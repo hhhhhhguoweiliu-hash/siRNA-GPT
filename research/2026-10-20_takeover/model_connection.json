@@ -1,0 +1,12 @@
+{
+  "model": "doubao-seed-2-1-pro-260915",
+  "provider": "doubao",
+  "api_mode": "responses",
+  "status": "FAILED",
+  "message": "豆包 API HTTP 403 / AccessDenied：当前凭证无权访问所请求的资源，请核对账号、项目授权和白名单\n服务端说明：The request failed because you do not have access to the requested resource. Request id: 02179247807341458818742e03404164f2bdc6cf7ab386ad8cf8f\n请求ID：02179247807341458818742e03404164f2bdc6cf7ab386ad8cf8f",
+  "code": "HTTP_403",
+  "provider_code": "AccessDenied",
+  "provider_message": "The request failed because you do not have access to the requested resource. Request id: 02179247807341458818742e03404164f2bdc6cf7ab386ad8cf8f",
+  "request_id": "02179247807341458818742e03404164f2bdc6cf7ab386ad8cf8f",
+  "http_status": 403
+}

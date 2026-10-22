@@ -1,0 +1,90 @@
+{
+  "PDF_pages": [
+    {
+      "page": 1,
+      "fonts": [
+        {
+          "base_font": "/ELUGPM+ArialMT",
+          "embedded_TrueType": true
+        },
+        {
+          "base_font": "/ELUGPM+Arial-BoldMT",
+          "embedded_TrueType": true
+        }
+      ],
+      "font_size_min_pt": 6.0039370079,
+      "font_size_max_pt": 8.0,
+      "width_mm": 163.924,
+      "height_mm": 117.809,
+      "no_CJK_text": true,
+      "text_extractable": true
+    },
+    {
+      "page": 2,
+      "fonts": [
+        {
+          "base_font": "/ELUGPM+ArialMT",
+          "embedded_TrueType": true
+        },
+        {
+          "base_font": "/ELUGPM+Arial-BoldMT",
+          "embedded_TrueType": true
+        }
+      ],
+      "font_size_min_pt": 5.0,
+      "font_size_max_pt": 8.0,
+      "width_mm": 167.52,
+      "height_mm": 93.208,
+      "no_CJK_text": true,
+      "text_extractable": true
+    },
+    {
+      "page": 3,
+      "fonts": [
+        {
+          "base_font": "/ELUGPM+ArialMT",
+          "embedded_TrueType": true
+        },
+        {
+          "base_font": "/ELUGPM+Arial-BoldMT",
+          "embedded_TrueType": true
+        }
+      ],
+      "font_size_min_pt": 5.0,
+      "font_size_max_pt": 8.0,
+      "width_mm": 157.466,
+      "height_mm": 133.951,
+      "no_CJK_text": true,
+      "text_extractable": true
+    }
+  ],
+  "SVG_figures": [
+    {
+      "path": "diagnostics\\Figure4_development_evidence.svg",
+      "editable_text": true,
+      "Arial_declared": true,
+      "no_DejaVu_reference": true
+    },
+    {
+      "path": "figures\\Figure1_system_migration.svg",
+      "editable_text": true,
+      "Arial_declared": true,
+      "no_DejaVu_reference": true
+    },
+    {
+      "path": "figures\\Figure2_real_Auto_case.svg",
+      "editable_text": true,
+      "Arial_declared": true,
+      "no_DejaVu_reference": true
+    },
+    {
+      "path": "figures\\Figure3_candidate_and_cell_context.svg",
+      "editable_text": true,
+      "Arial_declared": true,
+      "no_DejaVu_reference": true
+    }
+  ],
+  "result": "PASS",
+  "development_diagnosis_excluded_from_manuscript_PDF": true,
+  "scope": "Font and language verification, not scientific result validation. Actual exported sizes reported; target-journal page layout remains to be confirmed."
+}

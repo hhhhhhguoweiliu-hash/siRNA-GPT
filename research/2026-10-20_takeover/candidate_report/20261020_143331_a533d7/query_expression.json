@@ -1,0 +1,138 @@
+{
+  "status": "LIVE_JOIN_OF_BASELINE_AND_SEED",
+  "target": {
+    "feature_id": "VEGFA",
+    "approved_symbol": "VEGFA",
+    "ENTREZID": "7422",
+    "TPM_Normoxia_mean": "20.09929925",
+    "TPM_Hypoxia_mean": "102.390068",
+    "Normoxia_n_TPM_ge1": "4",
+    "Hypoxia_n_TPM_ge1": "4"
+  },
+  "candidate_summary": [
+    {
+      "candidate_id": "VEGFA_SD_1157",
+      "matched_genes": 1876,
+      "baseline_mapped_genes": 1874,
+      "hypoxia_detected_genes": 1086,
+      "normoxia_detected_genes": 1155,
+      "state_detected_genes": 1086,
+      "unmapped_genes": 2,
+      "hypoxia_only_detected_genes": 10,
+      "normoxia_only_detected_genes": 79
+    },
+    {
+      "candidate_id": "VEGFA_SD_2739",
+      "matched_genes": 1365,
+      "baseline_mapped_genes": 1362,
+      "hypoxia_detected_genes": 809,
+      "normoxia_detected_genes": 851,
+      "state_detected_genes": 809,
+      "unmapped_genes": 3,
+      "hypoxia_only_detected_genes": 14,
+      "normoxia_only_detected_genes": 56
+    },
+    {
+      "candidate_id": "VEGFA_SD_3119",
+      "matched_genes": 2209,
+      "baseline_mapped_genes": 2206,
+      "hypoxia_detected_genes": 1275,
+      "normoxia_detected_genes": 1335,
+      "state_detected_genes": 1275,
+      "unmapped_genes": 3,
+      "hypoxia_only_detected_genes": 17,
+      "normoxia_only_detected_genes": 77
+    },
+    {
+      "candidate_id": "VEGFA_SD_3193",
+      "matched_genes": 1988,
+      "baseline_mapped_genes": 1986,
+      "hypoxia_detected_genes": 1150,
+      "normoxia_detected_genes": 1206,
+      "state_detected_genes": 1150,
+      "unmapped_genes": 2,
+      "hypoxia_only_detected_genes": 15,
+      "normoxia_only_detected_genes": 71
+    },
+    {
+      "candidate_id": "VEGFA_SD_3429",
+      "matched_genes": 276,
+      "baseline_mapped_genes": 275,
+      "hypoxia_detected_genes": 187,
+      "normoxia_detected_genes": 200,
+      "state_detected_genes": 187,
+      "unmapped_genes": 1,
+      "hypoxia_only_detected_genes": 2,
+      "normoxia_only_detected_genes": 15
+    },
+    {
+      "candidate_id": "VEGFA_SD_3499",
+      "matched_genes": 728,
+      "baseline_mapped_genes": 726,
+      "hypoxia_detected_genes": 463,
+      "normoxia_detected_genes": 480,
+      "state_detected_genes": 463,
+      "unmapped_genes": 2,
+      "hypoxia_only_detected_genes": 7,
+      "normoxia_only_detected_genes": 24
+    },
+    {
+      "candidate_id": "VEGFA_SD_3500",
+      "matched_genes": 1333,
+      "baseline_mapped_genes": 1330,
+      "hypoxia_detected_genes": 811,
+      "normoxia_detected_genes": 858,
+      "state_detected_genes": 811,
+      "unmapped_genes": 3,
+      "hypoxia_only_detected_genes": 9,
+      "normoxia_only_detected_genes": 56
+    },
+    {
+      "candidate_id": "VEGFA_SD_3502",
+      "matched_genes": 2139,
+      "baseline_mapped_genes": 2136,
+      "hypoxia_detected_genes": 1354,
+      "normoxia_detected_genes": 1443,
+      "state_detected_genes": 1354,
+      "unmapped_genes": 3,
+      "hypoxia_only_detected_genes": 17,
+      "normoxia_only_detected_genes": 106
+    },
+    {
+      "candidate_id": "VEGFA_SD_3535",
+      "matched_genes": 2602,
+      "baseline_mapped_genes": 2600,
+      "hypoxia_detected_genes": 1561,
+      "normoxia_detected_genes": 1646,
+      "state_detected_genes": 1561,
+      "unmapped_genes": 2,
+      "hypoxia_only_detected_genes": 21,
+      "normoxia_only_detected_genes": 106
+    }
+  ],
+  "source": {
+    "id": "builtin",
+    "label": "本项目2026-10-16整理的ARPE-19基线表达表",
+    "source": "PACKAGED_PROJECT_DATA",
+    "sha256": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+    "origin": "C:\\00000\\ARPE RNA-seq\\result\\result.zip",
+    "samples": [
+      "Nor1",
+      "Nor2",
+      "Nor3",
+      "Nor4",
+      "Hyp1",
+      "Hyp2",
+      "Hyp3",
+      "Hyp4"
+    ],
+    "scope": "同一培养批次，每状态4皿；未转染；缺氧1% O2 24h",
+    "per_sample_tpm_available_in_packaged_table": false,
+    "ranking_changed": false
+  },
+  "target_excluded_from_offtarget_counts": true,
+  "expression_comparison": "expression_comparison.tsv",
+  "details": "seed_expression_details.tsv",
+  "rule": "TPM>=1 in >=2/4 vessels; annotation only; no risk exclusion; does not change ranking",
+  "scope": "同一培养批次，每状态4皿；未转染；缺氧1% O2 24h; not siRNA perturbation labels"
+}

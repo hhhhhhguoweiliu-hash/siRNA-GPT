@@ -1,0 +1,17 @@
+{
+  "source_filename": "conversation-record.json",
+  "bytes": 49801,
+  "sha256": "48f26557abe0d719806760a92fbdcb1d1988ab8ed5c378cfb118fa36ca45a6d7",
+  "json_parse": "PASS",
+  "run_id": "20261020_064921_2dae59",
+  "scientific_tools": [
+    "inspect_candidates",
+    "verify_target",
+    "score_candidates",
+    "match_seed",
+    "query_expression",
+    "compile_report"
+  ],
+  "browser_download_finalized": true,
+  "matches_pending_file_sha256": true
+}

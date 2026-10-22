@@ -1,0 +1,19 @@
+﻿case_id	repeat	all_three_attempted	all_three_without_infrastructure_error	missing_or_infrastructure_arms	scientific_quality_scored
+ambiguous_direction	1	True	True		False
+ambiguous_direction	2	True	True		False
+ambiguous_direction	3	True	True		False
+invalid_sequence	1	True	True		False
+invalid_sequence	2	True	True		False
+invalid_sequence	3	True	True		False
+normal_hypoxia	1	True	False	llm	False
+normal_hypoxia	2	True	False	llm;agent	False
+normal_hypoxia	3	True	False	llm	False
+normal_normoxia	1	True	True		False
+normal_normoxia	2	True	False	llm;agent	False
+normal_normoxia	3	True	False	llm	False
+target_only	1	True	True		False
+target_only	2	True	True		False
+target_only	3	True	False	llm	False
+unsupported_target	1	True	True		False
+unsupported_target	2	True	True		False
+unsupported_target	3	True	True		False

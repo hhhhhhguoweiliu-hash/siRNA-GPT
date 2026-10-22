@@ -1,0 +1,78 @@
+{
+  "runtime": {
+    "version": "0.7-cloud",
+    "commit": "local",
+    "assets": {
+      "core.py": "fd7211d02aac2d32ad1de73126e23ed2ecc10d7928395078dc450b907ae6f71f",
+      "conversation.py": "bf306374c0ade40e7a4f56af060ce509f6fd84ad6bfc0c4ea2f8d9d5367c6259",
+      "research.py": "559ca5f24e8d50377244973ff3aec139587b0a2ad7d8b08dc3fce21f855e0ee2",
+      "knowledge.py": "08d6902899bad04a4f9efb1c71c6f63830a98728235ef4b2596a7b253b95e321",
+      "model_client.py": "9eaa261ed6df61c37aa6ab79c57ddc42ce65e2918de9c98a82c9e4f6c9165358",
+      "expression_data.py": "209d5afb92294051b6c64fc058550d99aa568a5ada5baa5d5c50668f53f20bc5",
+      "data/candidates.tsv": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853",
+      "data/historical_scores.tsv": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+      "data/VEGFA.fasta": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "data/expression.tsv.gz": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+      "data/historical_seed_matches.tsv": "3701a561a84cdf9df29108f6c235398cc377901a598293071f5724f706f2ac3c",
+      "data/provenance.json": "c2f0ff2200cbbbd79e73724db2a4673c0a356ae3dbe548380c6f0b6223c7ef18"
+    },
+    "scientific_mode": "verified_imports",
+    "knowledge_review": "draft_project_notes",
+    "specialized_fine_tuned_model": false,
+    "durable_cloud_storage": false
+  },
+  "dataset_sha256": "776ddaf1d96a936cb80c0b30fb63a26585e30e3dc616c1e57f56986221ede96b",
+  "dataset_review": "DEVELOPMENT_EXAMPLES_NOT_FROZEN_OR_EXPERT_REVIEWED",
+  "model": "doubao-seed-2-1-pro-260915",
+  "provider": "doubao",
+  "groups": [
+    "workflow"
+  ],
+  "repeats": 1,
+  "seed": 20261019,
+  "cases": [
+    "normal_hypoxia",
+    "normal_normoxia",
+    "target_only",
+    "invalid_sequence",
+    "unsupported_target",
+    "ambiguous_direction"
+  ],
+  "api_mode": "responses",
+  "web_enabled": false,
+  "scope": "execution cases; no automatic scientific quality score; imported scientific outputs only",
+  "claim": "Development examples are not a frozen held-out expert test set.",
+  "planned_observations": 6,
+  "scheduled_order": [
+    {
+      "case_id": "ambiguous_direction",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "normal_normoxia",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "target_only",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "workflow",
+      "repeat": 1
+    }
+  ]
+}

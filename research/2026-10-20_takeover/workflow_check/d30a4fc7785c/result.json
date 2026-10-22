@@ -1,0 +1,16 @@
+{
+  "group": "workflow",
+  "case_id": "unsupported_target",
+  "status": "FAILED",
+  "tool_calls": 1,
+  "usage": [],
+  "answer": "v0.3仅已验证人VEGFA，当前靶点或物种不支持",
+  "run_id": "20261020_143717_84f529",
+  "tool_results": {},
+  "completed_tools": [],
+  "seconds": 0.093,
+  "total_tokens": 0,
+  "usage_complete": true,
+  "repeat": 1,
+  "answer_id": "d30a4fc7785c"
+}

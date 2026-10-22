@@ -1,0 +1,24 @@
+{
+  "figures": [
+    {
+      "figure": "Figure1_system_migration",
+      "role": "Implementation schematic; not empirical validation"
+    },
+    {
+      "figure": "Figure2_real_Auto_case",
+      "role": "One complete operational case; not superiority evidence"
+    },
+    {
+      "figure": "Figure3_candidate_and_cell_context",
+      "role": "Descriptive baseline and historical candidate evidence; no treatment claim"
+    },
+    {
+      "figure": "Figure4_development_evidence",
+      "role": "Troubleshooting only; excluded from manuscript quality-comparison results"
+    }
+  ],
+  "quality_comparison_ready": false,
+  "independent_scoring_done": false,
+  "new_wet_lab_done": false,
+  "gate": "Complete prespecified data and analysis required before claiming a manuscript result. No cherry-picking successful repeats."
+}

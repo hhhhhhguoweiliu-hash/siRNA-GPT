@@ -1,0 +1,94 @@
+{
+  "source_commit": "3230670c657036e6fdbbb83adbc9080c82a5cea9",
+  "generator_path": "scripts/build_migration_figures.py",
+  "generator_sha256": "9d2230b314a55346398e27352f1144135c393a676c61a23862f2fba12ac0db70",
+  "real_Auto_runtime_commit": "e53bacba981a9082fad4df57c600eb93de159dc8",
+  "real_batch_runtime_commit": "e53bacba981a9082fad4df57c600eb93de159dc8",
+  "records": 54,
+  "independent_development_tasks": 6,
+  "technical_repeats": 3,
+  "complete_hypoxia_triplets": 0,
+  "no_infrastructure_error_triplets": 12,
+  "Auto_tools": 6,
+  "Auto_executor_returned_tokens": 59767,
+  "scientific_quality_scored": false,
+  "new_heavy_model_execution": false,
+  "new_wet_lab": false,
+  "source_files": [
+    {
+      "path": "references/CRISPR-GPT/paper_extracted_text.txt",
+      "bytes": 160722,
+      "sha256": "df7cd505fe921c97be44609e11d0e91b9db1f6fba186dfaaf74df9ddba81cb80"
+    },
+    {
+      "path": "docs/reviews/20261020_1435_initial_review.md",
+      "bytes": 7682,
+      "sha256": "96f41a0fdf35840c7b5910a5b562b3031c24b572f1401dc06ce183c29dd31d81"
+    },
+    {
+      "path": "research/2026-10-19_scientific/data/candidate_evidence.tsv",
+      "bytes": 1731,
+      "sha256": "12c5ba8eaca29a0e1d4882fe72e6f0e60e267c6365ad1cd8216d14485ba29e1b"
+    },
+    {
+      "path": "research/2026-10-19_scientific/data/seed_expression_state_comparison.tsv",
+      "bytes": 608,
+      "sha256": "7023be198c9645b33872a7ea19c31cb3313744c153cc590a0eee5f637a469d2a"
+    },
+    {
+      "path": "research/2026-10-19_scientific/data/VEGFA_eight_samples_TPM.tsv",
+      "bytes": 217,
+      "sha256": "e34a969ebd9ff350e5680ab4475feb53288306aa6213c54c5cf98ed6971d8cd8"
+    },
+    {
+      "path": "research/2026-10-19_scientific/data/TPM_detection_threshold_sensitivity.tsv",
+      "bytes": 10691,
+      "sha256": "ea91c2c9486769b4a33fd7f6be1aba31b46e1f1bcdbe0c552d688f9c821d30f9"
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm/records.tsv",
+      "bytes": 6182,
+      "sha256": "fc71613e6dab0be2ebfb4c34eedef402d7484f6e8f94882b510240c507ae2d2c"
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm/paired_availability.tsv",
+      "bytes": 828,
+      "sha256": "06efb1d931dffede0bbf917d96f376d36760ff02b3b9b6361d024f47964c1a90"
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm/evidence_audit.json",
+      "bytes": 784,
+      "sha256": "419f74f637bf1d1a42a95f75f89876fe1e495fc666eaa9c0930a0292872cbf80"
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm/failure_diagnostics.tsv",
+      "bytes": 2460,
+      "sha256": "c3b2318a0e08321671edf6d983ab58820d227394dab196c6d98b6adf63caf05e"
+    },
+    {
+      "path": "research/2026-10-20_takeover/auto_case/conversation.json",
+      "bytes": 49801,
+      "sha256": "48f26557abe0d719806760a92fbdcb1d1988ab8ed5c378cfb118fa36ca45a6d7"
+    },
+    {
+      "path": "research/2026-10-20_takeover/auto_case/summary.json",
+      "bytes": 1268,
+      "sha256": "85d38c711ffd8988775ff3e0acb6d44651252ca29f3139df6dc9603fe9f0c052"
+    },
+    {
+      "path": "research/2026-10-20_takeover/auto_case/tools.zip",
+      "bytes": 434351,
+      "sha256": "8a00267334f290c3b3812041bd6e3f103933e728eee9df4b24210c0e25b19aaf"
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm_original.zip",
+      "bytes": 5028649,
+      "sha256": "c7ed5855173f433f0671a0952d9c244c4173956ab8b347f57ab188d6a37a466b"
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm/results.json.gz",
+      "bytes": 86129,
+      "sha256": "eafa59ffacedd87a2e5c7c33de38ae79128d87e4bdfb9110f5f5241a23f275c9"
+    }
+  ]
+}

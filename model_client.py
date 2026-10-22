@@ -16,7 +16,7 @@ def account_blocked(diagnostics):
  code=str(diagnostics.get('provider_code',''))
  return diagnostics.get('http_status') in (401,402) or code in {
   'SetLimitExceeded','AccountOverdueError','OperationDenied.ServiceOverdue',
-  'OperationDenied.ServiceNotOpen','ModelNotOpen','InvalidAccountStatus','AuthenticationError'}
+  'OperationDenied.ServiceNotOpen','ModelNotOpen','InvalidAccountStatus','AuthenticationError','AccessDenied'}
 
 def extract_model(value):
  text=str(value or '').strip()
@@ -113,6 +113,15 @@ def redact(text,key=''):
  s=re.sub(r'(?i)(Bearer\s+)[^\s"\']+',r'\1[REDACTED]',s)
  return s[:500]
 
+def model_error_evidence(error,cfg,request=None):
+ """Full private run evidence, redacted before persistence; never a successful answer."""
+ value={'diagnostics':error.diagnostics(),'request':getattr(error,'request_snapshot',request),
+        'response':getattr(error,'response_snapshot',None),'status':'FAILED_NOT_A_VALID_ANSWER'}
+ raw=json.dumps(value,ensure_ascii=False)
+ if cfg.get('api_key'):raw=raw.replace(str(cfg['api_key']),'[REDACTED]')
+ raw=re.sub(r'(?i)(Bearer\s+)[^\s"\']+',r'\1[REDACTED]',raw)
+ return json.loads(raw)
+
 def provider_http_error(error,key):
  """Keep the provider's actual explanation and request ID; never infer an exact cause from 403 alone."""
  try:body=json.loads(error.read(12000).decode('utf-8','replace'))
@@ -149,13 +158,24 @@ def request_completion(cfg,payload,opener=None):
   try:
    with open_fn(req,timeout=int(cfg.get('request_timeout',90))) as response:
     data=json.load(response);rid=response.headers.get('x-request-id','')
-   if isinstance(data,dict) and cfg.get('api_mode')=='responses':data=normalize_responses(data)
+   provider_response=data
+   if isinstance(data,dict) and cfg.get('api_mode')=='responses':
+    try:data=normalize_responses(data)
+    except ModelError as error:
+     # Preserve the provider payload for the owning run's redacted archive.
+     # Do not put partial answers into a successful completion or public logs.
+     error.response_snapshot=data;error.request_snapshot=body;error.request_id=rid;raise
    if not isinstance(data,dict) or not data.get('choices'):raise ModelError('API未返回可用消息，可能是接口类型或模型不兼容。','RESPONSE_INVALID')
    choice=data['choices'][0]
-   if choice.get('finish_reason')=='length':raise ModelError('模型输出达到长度上限，本轮未执行不完整的工具指令；请调整输出上限后重试。','OUTPUT_TRUNCATED')
+   if choice.get('finish_reason')=='length':
+    error=ModelError('模型输出达到长度上限，本轮未执行不完整的工具指令；请调整输出上限后重试。','OUTPUT_TRUNCATED',request_id=rid)
+    error.response_snapshot=data;error.request_snapshot=body;raise error
    if choice.get('finish_reason') in ('content_filter','sensitive'):raise ModelError('本轮响应被服务端过滤，未宣称任务完成。','CONTENT_FILTERED')
    if not isinstance(choice.get('message'),dict):raise ModelError('模型返回消息格式无效。','RESPONSE_INVALID')
+   data=dict(data)
    data['_request_id']=rid
+   data['_request']=body
+   data['_raw_response']=provider_response
    return data
   except urllib.error.HTTPError as e:
    error=provider_http_error(e,cfg['api_key'])
@@ -186,4 +206,4 @@ def test_connection(cfg,transport=None):
   {'role':'user','content':'工具返回成功，请只回答 CONNECTION_OK，不要再调用工具。'}]
  final=transport({'messages':history,'max_tokens':256}) if transport else request_completion(cfg,{'messages':history,'max_tokens':256})
  if not (final['choices'][0]['message'].get('content') or '').strip():raise ModelError('工具回传后没有最终回答','TOOLS_NOT_CONFIRMED')
- return {'status':'CONNECTED_TOOL_CALL_VERIFIED','provider':cfg.get('provider'),'model':extract_model(cfg.get('model')),'seconds':round(time.monotonic()-start,3),'usage':response.get('usage',{}),'request_id':response.get('_request_id',''),'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'probe_tools_executed':True,'multi_turn_verified':True,'note':'真实API返回正确的工具指令；完整任务仍需运行验证'}
+ return {'status':'CONNECTED_TOOL_CALL_VERIFIED','provider':cfg.get('provider'),'model':extract_model(cfg.get('model')),'seconds':round(time.monotonic()-start,3),'usage':response.get('usage',{}),'usage_calls':[response.get('usage',{}),final.get('usage',{})],'request_id':response.get('_request_id',''),'final_request_id':final.get('_request_id',''),'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'probe_tools_executed':True,'multi_turn_verified':True,'note':'真实API返回正确的工具指令；完整任务仍需运行验证'}

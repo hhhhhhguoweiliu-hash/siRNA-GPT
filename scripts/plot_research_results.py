@@ -1,11 +1,14 @@
 """Redraw descriptive figures from checked-in tables, without API or model inference."""
 from pathlib import Path
+import sys
 import argparse,shutil
 import numpy as np,pandas as pd,matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle,FancyBboxPatch,FancyArrowPatch
 from matplotlib.colors import ListedColormap
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from figure_style import configure,prepare
 
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);args=parser.parse_args()
@@ -14,9 +17,10 @@ if OUT.exists() and any(OUT.iterdir()):raise SystemExit('Use a new empty output 
 OUT.mkdir(parents=True,exist_ok=True)
 SCI=ROOT/'research/2026-10-19_scientific';AUDIT=ROOT/'research/2026-10-19_evaluation'
 def table(name):return pd.read_csv(SCI/'data'/name,sep='\t')
-plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,'axes.spines.right':False,'pdf.fonttype':42,'svg.fonttype':'none'})
+configure()
 N,H='#427D9D','#D7784C'
 def save(fig,name):
+ prepare(fig)
  for ext in ['png','svg','pdf']:fig.savefig(OUT/(name+'.'+ext),dpi=300,bbox_inches='tight',facecolor='white')
  plt.close(fig)
 
@@ -71,6 +75,5 @@ for ax,cid in zip(axes.flat,c.candidate_id):
  ax.set_title(cid,fontsize=9);ax.set_xscale('log');ax.axvline(1,ls=':',color='#9AA7AF')
 axes[0,0].legend(frameon=False,fontsize=8);fig.supxlabel('TPM detection threshold, ≥2/4 samples');fig.supylabel('Detected non-target seed-matched genes');fig.suptitle('Descriptive sensitivity; no fitted or validated risk score');save(fig,'Fig10_TPM_threshold_sensitivity')
 
-# Audit figures are supplied as immutable source SVGs; no model-quality scores are generated.
-for p in (AUDIT/'figures').glob('*.svg'):shutil.copy2(p,OUT/p.name)
-print('Redrew 10 descriptive figures and copied 3 original audit SVGs; no API or heavy inference used.')
+# Historical diagnostic SVGs remain in their original directory; do not relabel them as new Arial manuscript figures.
+print('Redrew 10 descriptive figures in Arial; no API or heavy inference used. Original diagnostic SVGs unchanged.')

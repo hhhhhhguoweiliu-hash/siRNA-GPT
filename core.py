@@ -136,12 +136,16 @@ class Session:
     while True:
      start=mrna.find(sense,start)
      if start<0:break
-     hits.append({'transcript':accession,'start_1based':start+1});start+=1
+     hits.append({'transcript':accession,'start_1based':start+1,'end_1based':start+19,'coordinate_scope':'19nt paired core; 1-based closed interval'});start+=1
    selected=[h for h in hits if h['transcript']=='NM_003376.6']
    if not selected:raise TaskError(x['candidate_id']+'未完全匹配固定设计参考NM_003376.6，停止效力评分')
    start=selected[0]['start_1based']-1;m=refs['NM_003376.6']
    context='X'*max(0,19-start)+m[max(0,start-19):start+38]+'X'*max(0,start+38-len(m))
-   rr.append({**x,'reference_transcript':'NM_003376.6','covered_transcripts':len(set(h['transcript'] for h in hits)),'reference_transcript_count':len(refs),'sites':hits,'mRNA_context_57nt':context})
+   raw=next(r for r in self.candidates if r['candidate_id']==x['candidate_id'])
+   rr.append({**x,'reference_transcript':'NM_003376.6','core_start_1based':start+1,'core_end_1based':start+19,
+       'design_window_start_1based':raw.get('target_start_1based'),'design_window_end_1based':raw.get('target_end_1based'),
+       'design_window_scope':'source 23nt design window; not 19nt core coordinates',
+       'covered_transcripts':len(set(h['transcript'] for h in hits)),'reference_transcript_count':len(refs),'sites':hits,'mRNA_context_57nt':context})
   return {'status':'LIVE_EXECUTED','reference_sha256':sha(DATA/'VEGFA.fasta'),'rows':rr,'coverage_scope':'reference annotation, not measured isoform usage'}
  def check_external(self,relative):
   root=Path(self.cfg['legacy_root']);manifest=json.loads((DATA/'provenance.json').read_text(encoding='utf-8'))
@@ -181,7 +185,10 @@ class Session:
    ids={r['candidate_id'] for r in self.state['inspect_candidates']['rows']}
    rows=[r for r in read_tsv(DATA/'historical_seed_matches.tsv') if r['candidate_id'] in ids];status='IMPORTED_HISTORICAL'
   self.seed_rows=rows;write_tsv(self.path/'seed_matches.tsv',rows)
-  return {'status':status,'scope':'guide only, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target','positive_rows':len(rows),'details':'seed_matches.tsv','counts':{r['candidate_id']:sum(int(float(z['seed_site_count'])) for z in rows if z['candidate_id']==r['candidate_id']) for r in self.state['inspect_candidates']['rows']}}
+  counts={r['candidate_id']:sum(int(float(z['seed_site_count'])) for z in rows if z['candidate_id']==r['candidate_id']) for r in self.state['inspect_candidates']['rows']}
+  return {'status':status,'scope':'guide only, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target','positive_rows':len(rows),'details':'seed_matches.tsv',
+      'counts':counts,'counts_unit':'seed sites including VEGFA, not genes','seed_site_counts_all':counts,
+      'seed_site_counts_nontarget':{cid:sum(int(float(z['seed_site_count'])) for z in rows if z['candidate_id']==cid and z['gene_id']!='7422') for cid in counts}}
  def tool_query_expression(self):
   self.require('match_seed');exp=self.expression_rows if self.expression_rows is not None else read_tsv(DATA/'expression.tsv.gz');bygene={r['ENTREZID']:r for r in exp if r['ENTREZID']}
   targets=[r for r in exp if r['approved_symbol']=='VEGFA']
@@ -190,6 +197,12 @@ class Session:
   for candidate in self.state['inspect_candidates']['rows']:
    cid=candidate['candidate_id'];matched=[r for r in self.seed_rows if r['candidate_id']==cid];found=0;detected=0;normoxia_detected=0
    matched=[m for m in matched if m['gene_id']!='7422']
+   # One representative gene row; aggregate duplicate records only for counting sites.
+   unique={}
+   for m in matched:
+    if m['gene_id'] not in unique:unique[m['gene_id']]=dict(m)
+    else:unique[m['gene_id']]['seed_site_count']=str(int(float(unique[m['gene_id']]['seed_site_count']))+int(float(m['seed_site_count'])))
+   matched=list(unique.values())
    for m in matched:
     e=bygene.get(m['gene_id']);found+=bool(e)
     if e:
@@ -197,12 +210,15 @@ class Session:
      normoxia_detected+=int(e['Normoxia_n_TPM_ge1'])>=2
      annot.append({**m,**e})
     else:annot.append({**m,'approved_symbol':'UNMAPPED','mapping':'NO_BASELINE_GENE_MAP'})
-   summary.append({'candidate_id':cid,'matched_genes':len(matched),'baseline_mapped_genes':found,'hypoxia_detected_genes':detected,'normoxia_detected_genes':normoxia_detected,'state_detected_genes':detected if self.task['state']=='Hypoxia' else normoxia_detected,'unmapped_genes':len(matched)-found})
+   summary.append({'candidate_id':cid,'seed_site_count_all':sum(int(float(m['seed_site_count'])) for m in self.seed_rows if m['candidate_id']==cid),
+       'seed_site_count_nontarget':sum(int(float(m['seed_site_count'])) for m in matched),
+       'matched_genes':len(matched),'baseline_mapped_genes':found,'hypoxia_detected_genes':detected,'normoxia_detected_genes':normoxia_detected,'state_detected_genes':detected if self.task['state']=='Hypoxia' else normoxia_detected,'unmapped_genes':len(matched)-found})
   write_tsv(self.path/'seed_expression_details.tsv',annot)
   # TPM stays separate from model score; no unvalidated weighted risk score.
   for row in summary:
-   row['hypoxia_only_detected_genes']=sum(int(bygene[m['gene_id']]['Hypoxia_n_TPM_ge1'])>=2 and int(bygene[m['gene_id']]['Normoxia_n_TPM_ge1'])<2 for m in self.seed_rows if m['candidate_id']==row['candidate_id'] and m['gene_id'] in bygene and m['gene_id']!='7422')
-   row['normoxia_only_detected_genes']=sum(int(bygene[m['gene_id']]['Normoxia_n_TPM_ge1'])>=2 and int(bygene[m['gene_id']]['Hypoxia_n_TPM_ge1'])<2 for m in self.seed_rows if m['candidate_id']==row['candidate_id'] and m['gene_id'] in bygene and m['gene_id']!='7422')
+   ids={m['gene_id'] for m in self.seed_rows if m['candidate_id']==row['candidate_id'] and m['gene_id'] in bygene and m['gene_id']!='7422'}
+   row['hypoxia_only_detected_genes']=sum(int(bygene[g]['Hypoxia_n_TPM_ge1'])>=2 and int(bygene[g]['Normoxia_n_TPM_ge1'])<2 for g in ids)
+   row['normoxia_only_detected_genes']=sum(int(bygene[g]['Normoxia_n_TPM_ge1'])>=2 and int(bygene[g]['Hypoxia_n_TPM_ge1'])<2 for g in ids)
   write_tsv(self.path/'expression_comparison.tsv',summary)
   return {'status':'LIVE_JOIN_OF_BASELINE_AND_SEED','target':targets[0],'candidate_summary':summary,'source':self.expression_source,'target_excluded_from_offtarget_counts':True,'expression_comparison':'expression_comparison.tsv','details':'seed_expression_details.tsv','rule':'TPM>=1 in >=2/4 vessels; annotation only; no risk exclusion; does not change ranking','scope':self.expression_source['scope']+'; not siRNA perturbation labels'}
  def tool_compile_report(self):

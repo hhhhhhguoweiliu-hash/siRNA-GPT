@@ -1,0 +1,7 @@
+﻿answer_id	case_id	status	tool_calls	seconds	total_tokens
+8ef35851ea9f	ambiguous_direction	FAILED	1	0.109	0
+65d8bf59a1df	normal_normoxia	COMPLETE	6	1.172	0
+9c9387bd5f39	invalid_sequence	FAILED	1	0.078	0
+64b9478f85bc	normal_hypoxia	COMPLETE	6	1.781	0
+adb142f736d5	target_only	PARTIAL_COMPLETE	2	0.141	0
+d30a4fc7785c	unsupported_target	FAILED	1	0.093	0

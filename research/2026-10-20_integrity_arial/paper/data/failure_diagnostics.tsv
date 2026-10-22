@@ -1,0 +1,19 @@
+﻿answer_id	case_id	group	repeat	infrastructure_error	code	provider_code	message	semantic_grade
+A002	invalid_sequence	workflow	2	False			bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向	NOT_SCORED
+A005	ambiguous_direction	workflow	2	False			unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向	NOT_SCORED
+A008	unsupported_target	workflow	2	False			v0.3仅已验证人VEGFA，当前靶点或物种不支持	NOT_SCORED
+A009	ambiguous_direction	workflow	1	False			unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向	NOT_SCORED
+A012	invalid_sequence	workflow	3	False			bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向	NOT_SCORED
+A017	normal_normoxia	llm	3	True	OUTPUT_TRUNCATED		Responses输出不完整，本轮未执行工具指令。	NOT_SCORED
+A019	unsupported_target	workflow	1	False			v0.3仅已验证人VEGFA，当前靶点或物种不支持	NOT_SCORED
+A025	unsupported_target	workflow	3	False			v0.3仅已验证人VEGFA，当前靶点或物种不支持	NOT_SCORED
+A026	normal_normoxia	llm	2	True	OUTPUT_TRUNCATED		Responses输出不完整，本轮未执行工具指令。	NOT_SCORED
+A029	normal_hypoxia	llm	3	True	OUTPUT_TRUNCATED		Responses输出不完整，本轮未执行工具指令。	NOT_SCORED
+A031	ambiguous_direction	workflow	3	False			unknown：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向	NOT_SCORED
+A032	normal_normoxia	agent	2	True	NETWORK_UNAVAILABLE		这次没有顺利连上豆包，所以还没得到回答。请检查网络后再试一次，之前的工具记录仍然保留。	NOT_SCORED
+A042	normal_hypoxia	llm	1	True	OUTPUT_TRUNCATED		Responses输出不完整，本轮未执行工具指令。	NOT_SCORED
+A045	normal_hypoxia	llm	2	True	OUTPUT_TRUNCATED		Responses输出不完整，本轮未执行工具指令。	NOT_SCORED
+A048	invalid_sequence	agent	2	False			计划必须包含1至6个支持的工具	NOT_SCORED
+A049	invalid_sequence	workflow	1	False			bad：需明确19nt guide配对核心；不能自动截短21nt或猜测链方向	NOT_SCORED
+A051	normal_hypoxia	agent	2	True	NETWORK_UNAVAILABLE		这次没有顺利连上豆包，所以还没得到回答。请检查网络后再试一次，之前的工具记录仍然保留。	NOT_SCORED
+A053	target_only	llm	3	True	OUTPUT_TRUNCATED		Responses输出不完整，本轮未执行工具指令。	NOT_SCORED

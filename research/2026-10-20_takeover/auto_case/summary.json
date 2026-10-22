@@ -1,0 +1,39 @@
+{
+  "run_id": "20261020_064921_2dae59",
+  "runtime_commit": "e53bacba981a9082fad4df57c600eb93de159dc8",
+  "plan_source": "豆包LLM规划",
+  "planned_tools": [
+    "inspect_candidates",
+    "verify_target",
+    "score_candidates",
+    "match_seed",
+    "query_expression",
+    "compile_report"
+  ],
+  "actual_tool_statuses": {
+    "inspect_candidates": "LIVE_CHECKED",
+    "verify_target": "LIVE_EXECUTED",
+    "score_candidates": "IMPORTED_HISTORICAL",
+    "match_seed": "IMPORTED_HISTORICAL",
+    "query_expression": "LIVE_JOIN_OF_BASELINE_AND_SEED",
+    "compile_report": "COMPLETE"
+  },
+  "status": "COMPLETE",
+  "candidate_rows_equal_to_offline_and_historical": true,
+  "selected_for_review": [
+    "VEGFA_SD_3499",
+    "VEGFA_SD_3500"
+  ],
+  "executor_model_calls": 7,
+  "executor_returned_token_subtotal": 59767,
+  "planner_usage_missing": true,
+  "full_case_total_tokens": null,
+  "web_enabled": false,
+  "external_sources_retrieved": 0,
+  "scientific_quality_scored": false,
+  "limitations": [
+    "Original model wording retained, not an independent scientific grade",
+    "Matching-site counts 778/1548 differ from unique genes 728/1333",
+    "Planning-round usage was cleared by deployed code; no cost inferred"
+  ]
+}

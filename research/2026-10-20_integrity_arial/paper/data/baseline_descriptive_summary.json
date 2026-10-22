@@ -1,0 +1,12 @@
+{
+  "means_TPM": {
+    "Normoxia": 20.09929925,
+    "Hypoxia": 102.39006799999999
+  },
+  "ratio_of_means": 5.094210834240899,
+  "dishes_per_state": 4,
+  "culture_runs": 1,
+  "paired": false,
+  "treatment": "untreated baseline",
+  "inference": "descriptive only"
+}

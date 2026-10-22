@@ -1,0 +1,55 @@
+﻿answer_id	case_id	group	repeat	status	all_tool_attempts_raw	scientific_tool_attempts	research_tool_attempts	seconds	usage_records	usage_complete	planner_usage_missing_from_export	total_tokens_audited	known_token_subtotal	provider_code	infrastructure_error	provider_diagnostic_source	raw_total_tokens	completed_tools
+A001	normal_normoxia	agent	1	COMPLETE	6	6	0	32.834	6	False	True		47679		False		47679	inspect_candidates;verify_target;match_seed;score_candidates;query_expression;compile_report
+A002	invalid_sequence	workflow	2	FAILED	1	1	0	0.004	0	True	False	0	0		False		0	
+A003	target_only	workflow	3	PARTIAL_COMPLETE	2	2	0	0.006	0	True	False	0	0		False		0	inspect_candidates;verify_target
+A004	target_only	agent	3	PARTIAL_COMPLETE	2	2	0	20.015	3	False	True		10840		False		10840	inspect_candidates;verify_target
+A005	ambiguous_direction	workflow	2	FAILED	1	1	0	0.004	0	True	False	0	0		False		0	
+A006	unsupported_target	llm	3	ANSWERED_NO_TOOLS	0	0	0	19.099	1	True	False	7727	7727		False		7727	
+A007	unsupported_target	llm	1	ANSWERED_NO_TOOLS	0	0	0	15.433	1	True	False	7681	7681		False		7681	
+A008	unsupported_target	workflow	2	FAILED	1	1	0	0.004	0	True	False	0	0		False		0	
+A009	ambiguous_direction	workflow	1	FAILED	1	1	0	0.004	0	True	False	0	0		False		0	
+A010	unsupported_target	agent	2	idle	0	0	0	6.823	1	True	False	1669	1669		False		1669	
+A011	target_only	llm	2	ANSWERED_NO_TOOLS	0	0	0	39.522	1	True	False	8385	8385		False		8385	
+A012	invalid_sequence	workflow	3	FAILED	1	1	0	0.004	0	True	False	0	0		False		0	
+A013	normal_hypoxia	agent	1	COMPLETE	6	6	0	30.671	5	False	True		36396		False		36396	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report
+A014	normal_normoxia	llm	1	ANSWERED_NO_TOOLS	0	0	0	48.161	1	True	False	8769	8769		False		8769	
+A015	invalid_sequence	llm	3	ANSWERED_NO_TOOLS	0	0	0	12.903	1	True	False	809	809		False		809	
+A016	unsupported_target	agent	3	idle	0	0	0	5.616	1	True	False	1648	1648		False		1648	
+A017	normal_normoxia	llm	3	FAILED	0	0	0	43.336	0	False	False				True			
+A018	normal_hypoxia	workflow	1	COMPLETE	6	6	0	2.938	0	True	False	0	0		False		0	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report
+A019	unsupported_target	workflow	1	FAILED	1	1	0	0.004	0	True	False	0	0		False		0	
+A020	invalid_sequence	llm	1	ANSWERED_NO_TOOLS	0	0	0	16.921	1	True	False	853	853		False		853	
+A021	unsupported_target	agent	1	idle	0	0	0	4.212	1	True	False	1629	1629		False		1629	
+A022	target_only	agent	2	PARTIAL_COMPLETE	2	2	0	17.36	3	False	True		10806		False		10806	inspect_candidates;verify_target
+A023	target_only	workflow	1	PARTIAL_COMPLETE	2	2	0	0.008	0	True	False	0	0		False		0	inspect_candidates;verify_target
+A024	ambiguous_direction	agent	3	idle	0	0	0	6.517	1	True	False	1703	1703		False		1703	
+A025	unsupported_target	workflow	3	FAILED	1	1	0	0.005	0	True	False	0	0		False		0	
+A026	normal_normoxia	llm	2	FAILED	0	0	0	67.361	0	False	False				True			
+A027	normal_normoxia	workflow	1	COMPLETE	6	6	0	3.206	0	True	False	0	0		False		0	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report
+A028	invalid_sequence	agent	1	idle	0	0	0	7.612	1	True	False	1676	1676		False		1676	
+A029	normal_hypoxia	llm	3	FAILED	0	0	0	46.31	0	False	False				True			
+A030	normal_normoxia	workflow	3	COMPLETE	6	6	0	2.967	0	True	False	0	0		False		0	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report
+A031	ambiguous_direction	workflow	3	FAILED	1	1	0	0.005	0	True	False	0	0		False		0	
+A032	normal_normoxia	agent	2	FAILED	5	5	0	105.218	4	False	True		22557		True		22557	inspect_candidates;verify_target;match_seed;score_candidates;query_expression
+A033	target_only	agent	1	PARTIAL_COMPLETE	2	2	0	17.46	3	False	True		10751		False		10751	inspect_candidates;verify_target
+A034	normal_hypoxia	workflow	3	COMPLETE	6	6	0	2.631	0	True	False	0	0		False		0	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report
+A035	normal_hypoxia	workflow	2	COMPLETE	6	6	0	2.996	0	True	False	0	0		False		0	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report
+A036	ambiguous_direction	agent	2	idle	0	0	0	10.02	1	True	False	1731	1731		False		1731	
+A037	invalid_sequence	agent	3	idle	0	0	0	6.621	1	True	False	1671	1671		False		1671	
+A038	ambiguous_direction	llm	1	ANSWERED_NO_TOOLS	0	0	0	26.587	1	True	False	1063	1063		False		1063	
+A039	invalid_sequence	llm	2	ANSWERED_NO_TOOLS	0	0	0	30.598	1	True	False	964	964		False		964	
+A040	ambiguous_direction	agent	1	idle	0	0	0	8.23	1	True	False	1706	1706		False		1706	
+A041	ambiguous_direction	llm	3	ANSWERED_NO_TOOLS	0	0	0	18.149	1	True	False	969	969		False		969	
+A042	normal_hypoxia	llm	1	FAILED	0	0	0	49.453	0	False	False				True			
+A043	normal_hypoxia	agent	3	COMPLETE	6	6	0	29.372	7	False	True		58347		False		58347	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report
+A044	target_only	workflow	2	PARTIAL_COMPLETE	2	2	0	0.049	0	True	False	0	0		False		0	inspect_candidates;verify_target
+A045	normal_hypoxia	llm	2	FAILED	0	0	0	42.528	0	False	False				True			
+A046	normal_normoxia	agent	3	COMPLETE	6	6	0	24.617	4	False	True		27718		False		27718	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report
+A047	target_only	llm	1	ANSWERED_NO_TOOLS	0	0	0	28.205	1	True	False	8326	8326		False		8326	
+A048	invalid_sequence	agent	2	FAILED	0	0	0	6.217	0	False	False				False		0	
+A049	invalid_sequence	workflow	1	FAILED	1	1	0	0.004	0	True	False	0	0		False		0	
+A050	normal_normoxia	workflow	2	COMPLETE	6	6	0	2.532	0	True	False	0	0		False		0	inspect_candidates;verify_target;score_candidates;match_seed;query_expression;compile_report
+A051	normal_hypoxia	agent	2	FAILED	3	3	0	103.426	2	False	True		2580		True		2580	inspect_candidates;verify_target;match_seed
+A052	ambiguous_direction	llm	2	ANSWERED_NO_TOOLS	0	0	0	21.514	1	True	False	950	950		False		950	
+A053	target_only	llm	3	FAILED	0	0	0	119.412	0	False	False				True			
+A054	unsupported_target	llm	2	ANSWERED_NO_TOOLS	0	0	0	16.642	1	True	False	7633	7633		False		7633	

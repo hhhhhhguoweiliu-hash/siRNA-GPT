@@ -1,5 +1,6 @@
 {
-  "review_status": "DEVELOPMENT_EXAMPLES_NOT_FROZEN_OR_EXPERT_REVIEWED",
+  "review_status": "SEEN_DEVELOPMENT_CASES_WITH_20261022_RUBRIC_NOT_INDEPENDENTLY_SCORED",
+  "rubric": "evaluation_rubric.json",
   "cases": [
     {"id":"normal_hypoxia","request":"请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。","input":{"state":"Hypoxia","top_n":2},"preset":"full"},
     {"id":"normal_normoxia","request":"请按常氧条件核对这些VEGFA候选，读取已有工具结果，关联表达背景并生成3条优先核查候选的报告。","input":{"state":"Normoxia","top_n":3},"preset":"full"},
