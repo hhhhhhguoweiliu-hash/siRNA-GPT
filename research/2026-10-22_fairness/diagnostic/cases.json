@@ -1,0 +1,15 @@
+{
+  "review_status": "SEEN_DEVELOPMENT_CASES_WITH_20261022_RUBRIC_NOT_INDEPENDENTLY_SCORED",
+  "rubric": "evaluation_rubric.json",
+  "cases": [
+    {
+      "id": "normal_hypoxia",
+      "request": "请核对这些人VEGFA候选，读取已有官方分数和seed结果，关联缺氧背景并生成2条优先核查候选的报告。",
+      "input": {
+        "state": "Hypoxia",
+        "top_n": 2
+      },
+      "preset": "full"
+    }
+  ]
+}

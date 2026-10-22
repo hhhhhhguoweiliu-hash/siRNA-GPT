@@ -1,0 +1,2 @@
+﻿schedule_index	case_id	group	repeat	answer_id	execution	status	pending_reason
+1	normal_hypoxia	llm	1	A001	ATTEMPTED	ANSWERED_NO_TOOLS	

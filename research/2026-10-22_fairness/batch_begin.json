@@ -1,0 +1,345 @@
+{
+  "id": "dev_20261022_054717_79c2d3",
+  "started_at": "2026-10-22T05:47:17.789215+00:00",
+  "runtime": {
+    "version": "0.7-cloud",
+    "commit": "9daff5df20ae44e417d2009a04ff1c6b6e39af8b",
+    "assets": {
+      "core.py": "e6a39471d854c5af51709d4c64f0e4004297a813c71ac71c8e45b7f58389b515",
+      "conversation.py": "7711e54c757401ed6b47683aeb92656544722eb5fab945e65dedf2100c5bd641",
+      "research.py": "47e88179625b78e5f5feb099ad947c97a368fe41e9d32397b49b8c95e20eb245",
+      "knowledge.py": "91cd3cddb1253883c4b6403907f83572737762fc8d73e494c8e329ed907c5203",
+      "model_client.py": "53d993531467055dfd964b85297026bfab345f2d24af0c1172733e2f7a6b7849",
+      "expression_data.py": "06bbc8024c69a4fd201952b651285fc6e1e1e719fe1142f7b91eb982d49ed592",
+      "evaluate.py": "ee90d16064da69df9b7e113d5009c024aa42bd8e356aaf3d0b8a0744b9830fc0",
+      "paper_pilot.py": "ea59a696992e667475efef3fda0de8893e26db55ff0591d5b0b2725238e428f6",
+      "evaluation_protocol.py": "8486bcdc5358baa223a94e83c3c1e9533868a90f6469eca69117347d25af8f13",
+      "evaluation_cases.example.json": "0a2bae44c14aa431d407977f256c5769b0f04da4b15723a68a37d8fc2d364f86",
+      "evaluation_contract.py": "9c533a935441e16988d66d5fa3630b103c4980526da92def85ccdb7b492ced77",
+      "evaluation_rubric.json": "e41f739438a393733c7f83e0dc73385f5fc0120a051128a7043a4abf59af6676",
+      "review_package.py": "09361da62a1445d7463a06d629ae7dad88d680e5d079e223f16e886d693b2c06",
+      "data/candidates.tsv": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853",
+      "data/historical_scores.tsv": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+      "data/VEGFA.fasta": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "data/expression.tsv.gz": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+      "data/historical_seed_matches.tsv": "3701a561a84cdf9df29108f6c235398cc377901a598293071f5724f706f2ac3c",
+      "data/provenance.json": "c2f0ff2200cbbbd79e73724db2a4673c0a356ae3dbe548380c6f0b6223c7ef18"
+    },
+    "scientific_mode": "verified_imports",
+    "knowledge_review": "draft_project_notes",
+    "specialized_fine_tuned_model": false,
+    "durable_cloud_storage": false
+  },
+  "cases_sha256": "0a2bae44c14aa431d407977f256c5769b0f04da4b15723a68a37d8fc2d364f86",
+  "model": "doubao-seed-2-1-pro-260915",
+  "provider": "doubao",
+  "api_mode": "responses",
+  "mode": "batch",
+  "seed": 20261019,
+  "repeats": 3,
+  "groups": [
+    "llm",
+    "workflow",
+    "agent"
+  ],
+  "review_status": "SEEN_DEVELOPMENT_CASES_WITH_20261022_RUBRIC_NOT_INDEPENDENTLY_SCORED",
+  "web_enabled": false,
+  "planned_observations": 54,
+  "scheduled_order": [
+    {
+      "case_id": "normal_normoxia",
+      "group": "agent",
+      "repeat": 1
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "workflow",
+      "repeat": 2
+    },
+    {
+      "case_id": "target_only",
+      "group": "workflow",
+      "repeat": 3
+    },
+    {
+      "case_id": "target_only",
+      "group": "agent",
+      "repeat": 3
+    },
+    {
+      "case_id": "ambiguous_direction",
+      "group": "workflow",
+      "repeat": 2
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "llm",
+      "repeat": 3
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "llm",
+      "repeat": 1
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "workflow",
+      "repeat": 2
+    },
+    {
+      "case_id": "ambiguous_direction",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "agent",
+      "repeat": 2
+    },
+    {
+      "case_id": "target_only",
+      "group": "llm",
+      "repeat": 2
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "workflow",
+      "repeat": 3
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "agent",
+      "repeat": 1
+    },
+    {
+      "case_id": "normal_normoxia",
+      "group": "llm",
+      "repeat": 1
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "llm",
+      "repeat": 3
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "agent",
+      "repeat": 3
+    },
+    {
+      "case_id": "normal_normoxia",
+      "group": "llm",
+      "repeat": 3
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "llm",
+      "repeat": 1
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "agent",
+      "repeat": 1
+    },
+    {
+      "case_id": "target_only",
+      "group": "agent",
+      "repeat": 2
+    },
+    {
+      "case_id": "target_only",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "ambiguous_direction",
+      "group": "agent",
+      "repeat": 3
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "workflow",
+      "repeat": 3
+    },
+    {
+      "case_id": "normal_normoxia",
+      "group": "llm",
+      "repeat": 2
+    },
+    {
+      "case_id": "normal_normoxia",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "agent",
+      "repeat": 1
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "llm",
+      "repeat": 3
+    },
+    {
+      "case_id": "normal_normoxia",
+      "group": "workflow",
+      "repeat": 3
+    },
+    {
+      "case_id": "ambiguous_direction",
+      "group": "workflow",
+      "repeat": 3
+    },
+    {
+      "case_id": "normal_normoxia",
+      "group": "agent",
+      "repeat": 2
+    },
+    {
+      "case_id": "target_only",
+      "group": "agent",
+      "repeat": 1
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "workflow",
+      "repeat": 3
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "workflow",
+      "repeat": 2
+    },
+    {
+      "case_id": "ambiguous_direction",
+      "group": "agent",
+      "repeat": 2
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "agent",
+      "repeat": 3
+    },
+    {
+      "case_id": "ambiguous_direction",
+      "group": "llm",
+      "repeat": 1
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "llm",
+      "repeat": 2
+    },
+    {
+      "case_id": "ambiguous_direction",
+      "group": "agent",
+      "repeat": 1
+    },
+    {
+      "case_id": "ambiguous_direction",
+      "group": "llm",
+      "repeat": 3
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "llm",
+      "repeat": 1
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "agent",
+      "repeat": 3
+    },
+    {
+      "case_id": "target_only",
+      "group": "workflow",
+      "repeat": 2
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "llm",
+      "repeat": 2
+    },
+    {
+      "case_id": "normal_normoxia",
+      "group": "agent",
+      "repeat": 3
+    },
+    {
+      "case_id": "target_only",
+      "group": "llm",
+      "repeat": 1
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "agent",
+      "repeat": 2
+    },
+    {
+      "case_id": "invalid_sequence",
+      "group": "workflow",
+      "repeat": 1
+    },
+    {
+      "case_id": "normal_normoxia",
+      "group": "workflow",
+      "repeat": 2
+    },
+    {
+      "case_id": "normal_hypoxia",
+      "group": "agent",
+      "repeat": 2
+    },
+    {
+      "case_id": "ambiguous_direction",
+      "group": "llm",
+      "repeat": 2
+    },
+    {
+      "case_id": "target_only",
+      "group": "llm",
+      "repeat": 3
+    },
+    {
+      "case_id": "unsupported_target",
+      "group": "llm",
+      "repeat": 2
+    }
+  ],
+  "limitations": [
+    "Development cases; not held out or expert reviewed",
+    "No automatic semantic quality score",
+    "Repeated tasks are not independent biological replicates",
+    "Scientific results imported, not heavy model/R reruns",
+    "Fixed arm receives preset and structured task; not asked to parse unrestricted language",
+    "Cost in currency unavailable; usage is provider-returned token count"
+  ],
+  "model_settings": {
+    "max_output_tokens": 1800,
+    "answer_contract": "evaluation_contract.FINAL_ANSWER_STYLE / 20261022",
+    "rubric": "evaluation_rubric.json / 20261022_1310; seen development tasks",
+    "input_policy": "identical full raw candidate rows and task conditions; planner sees actual sequences",
+    "thinking": "disabled",
+    "request_timeout_seconds": 90,
+    "api_retries": 1,
+    "max_model_turns": 12,
+    "max_tool_calls": 18,
+    "case_timeout_seconds": 360,
+    "external_web_enabled": false,
+    "temperature_policy": "not explicitly set; provider default",
+    "response_policy": "provider incomplete remains a failure; never silently extend or retry for a better answer",
+    "budget_policy": "same per-request output cap for both model arms; agent can make multiple requests"
+  },
+  "model_settings_sha256": "e7250eb5c7244f5f21b7bf860883bc90d4fa726af2be479d85d19182aa7e12e2"
+}
