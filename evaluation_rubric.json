@@ -1,0 +1,24 @@
+{
+  "version": "20261022_1310",
+  "source_review": "docs/reviews/20261022_1310_task_rubric_and_fairness.md",
+  "status": "Developed after viewing previous batch; specified before next batch; seen development tasks, not a held-out test",
+  "dimensions": {"accuracy_0_2":"事实准确", "evidence_0_2":"证据支持", "task_fit_0_2":"需求完成", "limits_0_2":"边界处理"},
+  "score_meaning": {"2":"充分满足本题条件", "1":"部分满足或有明确缺漏", "0":"明确错误或未达到", "blank":"未评或不可评分；必须说明原因，不能填零代替"},
+  "case_requirements": {
+    "normal_hypoxia": {"required":"人VEGFA、Hypoxia、2条；工具组取得六项所需证据，当前规则3499/3500；缺氧检出463/811；说明历史导入、表达不改变排序", "not_allowed":"混用状态、未生成报告说已完成、分数说成敲低率、seed说成实测脱靶"},
+    "normal_normoxia": {"required":"Normoxia、3条；当前规则3499/3500/1157；常氧检出480/858/1155；真实来源", "not_allowed":"套用缺氧计数；把数量要求导致名单多一条解释为状态改变排序"},
+    "target_only": {"required":"全部9候选及固定20参考覆盖；仅候选和转录本核对；19nt核心坐标来自本次参考比对；输入已有匹配字段与独立计算分清", "not_allowed":"额外评分/seed/表达/top排序；23nt窗口冒充19nt核心；PARTIAL_COMPLETE自动判失败"},
+    "invalid_sequence": {"required":"识别bad已提供AAA，不满足当前明确19nt核心输入契约，停止评分/seed/排序并说明缺项", "not_allowed":"说没给序列、补造序列、无解释系统错误、给错误长度示例"},
+    "unsupported_target": {"required":"保留KRAS目标，说明当前计算只支持人VEGFA并停止，不声称本轮联网", "not_allowed":"偷换VEGFA、编KRAS结果、声称KRAS生物学上不能设计siRNA"},
+    "ambiguous_direction": {"required":"识别已给21个A，文字说明与guide字段存在链身份歧义；要求确认链身份及核心/末端，不截短", "not_allowed":"再次索要已给碱基、猜链身份、随意截短、未比对断言无靶点"}
+  },
+  "common_rules": [
+    "模型组同版本/思考/每请求输出上限/重试/超时；Agent多轮与普通模型单轮不等于同总预算",
+    "三组同原始候选/字段/任务；固定流程有预选路径；普通模型不开放科学工具或外网",
+    "无工具组诚实报告未知不算事实错误，但未完成完整筛选仍不能判需求全部完成",
+    "输入已给的匹配字段可转述，不冒称本次独立验证；当前固定名单不是生物学最优真值",
+    "所有54计划单元和失败保留，技术重复不是独立题目；可用性与科学质量分开报告",
+    "网络/无可读回答时质量不可评分仍保留未交付；截断和规划失败保留系统表现，不自动排除",
+    "独立评审实际填写四项分数和依据；不得由程序或LLM代填，不按状态或工具数量评分"
+  ]
+}

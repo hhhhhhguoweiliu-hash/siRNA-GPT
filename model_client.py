@@ -158,6 +158,7 @@ def request_completion(cfg,payload,opener=None):
   try:
    with open_fn(req,timeout=int(cfg.get('request_timeout',90))) as response:
     data=json.load(response);rid=response.headers.get('x-request-id','')
+   provider_response=data
    if isinstance(data,dict) and cfg.get('api_mode')=='responses':
     try:data=normalize_responses(data)
     except ModelError as error:
@@ -171,7 +172,10 @@ def request_completion(cfg,payload,opener=None):
     error.response_snapshot=data;error.request_snapshot=body;raise error
    if choice.get('finish_reason') in ('content_filter','sensitive'):raise ModelError('本轮响应被服务端过滤，未宣称任务完成。','CONTENT_FILTERED')
    if not isinstance(choice.get('message'),dict):raise ModelError('模型返回消息格式无效。','RESPONSE_INVALID')
+   data=dict(data)
    data['_request_id']=rid
+   data['_request']=body
+   data['_raw_response']=provider_response
    return data
   except urllib.error.HTTPError as e:
    error=provider_http_error(e,cfg['api_key'])

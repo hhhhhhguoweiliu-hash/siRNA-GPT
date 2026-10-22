@@ -4,6 +4,9 @@ import hashlib, json
 def evaluation_settings(cfg):
     # Defaults mirror model_client.request_completion and conversation.run_model.
     return {'max_output_tokens': int(cfg.get('max_output_tokens', 1800)),
+        'answer_contract': 'evaluation_contract.FINAL_ANSWER_STYLE / 20261022',
+        'rubric': 'evaluation_rubric.json / 20261022_1310; seen development tasks',
+        'input_policy': 'identical full raw candidate rows and task conditions; planner sees actual sequences',
         'thinking': cfg.get('thinking', 'disabled'),
         'request_timeout_seconds': int(cfg.get('request_timeout', 90)),
         'api_retries': max(0, min(int(cfg.get('api_retries', 1)), 2)),

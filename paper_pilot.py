@@ -18,9 +18,10 @@ STOP=threading.Event()
 def log(kind,value):
     print('PAPER_PILOT '+kind+' '+json.dumps(value,ensure_ascii=True,separators=(',',':')),flush=True)
 
-def run(cfg_loader,run_id):
+def run(cfg_loader,run_id,mode='batch'):
     from evaluate import run_case,write_execution_status,export_answers
     if not re.fullmatch(r'[a-zA-Z0-9_-]{1,50}',run_id):raise ValueError('Invalid run ID')
+    if mode not in ('batch','diagnostic'):raise ValueError('Invalid evaluation mode')
     if not LOCK.acquire(blocking=False):return
     out=HOME/'evaluation_runs'/run_id
     try:
@@ -28,16 +29,20 @@ def run(cfg_loader,run_id):
         out.mkdir(parents=True);cfg=cfg_loader()
         # Same model, scientific imports and metadata; no external search in any arm.
         source=HOME/'evaluation_cases.example.json';suite=json.loads(source.read_text(encoding='utf-8'))
-        cases=suite['cases'];jobs=[(c,g,n) for c in cases for g in ['llm','workflow','agent'] for n in range(1,4)]
+        cases=suite['cases']
+        if mode=='diagnostic':
+            cases=[next(c for c in cases if c['id']=='normal_hypoxia')]
+            jobs=[(cases[0],'llm',1)]
+        else:jobs=[(c,g,n) for c in cases for g in ['llm','workflow','agent'] for n in range(1,4)]
         random.Random(20261019).shuffle(jobs)
         protocol={'id':run_id,'started_at':now(),'runtime':manifest(),'cases_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
             'model':cfg.get('model'),'provider':cfg.get('provider'),'api_mode':cfg.get('api_mode'),
-            'seed':20261019,'repeats':3,'groups':['llm','workflow','agent'],'review_status':suite['review_status'],
+            'mode':mode,'seed':20261019,'repeats':1 if mode=='diagnostic' else 3,'groups':['llm'] if mode=='diagnostic' else ['llm','workflow','agent'],'review_status':suite['review_status'],
             'web_enabled':False,'planned_observations':len(jobs),'scheduled_order':[{'case_id':c['id'],'group':g,'repeat':n} for c,g,n in jobs],
             'limitations':['Development cases; not held out or expert reviewed','No automatic semantic quality score','Repeated tasks are not independent biological replicates','Scientific results imported, not heavy model/R reruns','Fixed arm receives preset and structured task; not asked to parse unrestricted language','Cost in currency unavailable; usage is provider-returned token count']}
         protocol['model_settings']=evaluation_settings(cfg)
         protocol['model_settings_sha256']=settings_sha256(protocol['model_settings'])
-        save_json(out/'protocol.json',protocol);save_json(out/'cases.json',suite)
+        save_json(out/'protocol.json',protocol);save_json(out/'cases.json',{**suite,'cases':cases})
         STOP.clear();STATE.clear();STATE.update(status='RUNNING',run_id=run_id,completed=0,total=len(jobs));log('BEGIN',protocol)
         results=[]
         blocking_error=None
@@ -79,6 +84,7 @@ def run(cfg_loader,run_id):
                 if p.is_file() and p.name not in ('seed_matches.tsv','seed_expression_details.tsv'):
                     z.write(p,p.relative_to(out))
         archive=buffer.getvalue();encoded=base64.b64encode(archive).decode();chunks=[encoded[i:i+6500] for i in range(0,len(encoded),6500)]
+        (out.parent/(run_id+'.zip')).write_bytes(archive)
         log('ARCHIVE',{'run_id':run_id,'bytes':len(archive),'sha256':hashlib.sha256(archive).hexdigest(),'chunks':len(chunks)})
         for index,chunk in enumerate(chunks):log('CHUNK',{'run_id':run_id,'i':index,'data':chunk})
         log('DONE',STATE)

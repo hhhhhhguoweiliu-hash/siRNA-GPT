@@ -8,6 +8,7 @@ from conversation import Conversation,PlannedSession,prepare_inputs,PRESETS,SCOP
 from model_client import request_completion,ModelError,account_blocked
 from runtime_info import manifest
 from evaluation_protocol import evaluation_settings,settings_sha256
+from evaluation_contract import FINAL_ANSWER_STYLE,FIELD_INSTRUCTIONS,input_sha256,workflow_answer
 
 def safe_record(value,cfg):
     raw=json.dumps(value,ensure_ascii=False)
@@ -40,6 +41,15 @@ def export_answers(out,cases,results):
     keys=[{k:r[k] for k in ['answer_id','case_id','group','repeat','status']} for r in results]
     write_rows(Path(out)/'blind_answers.tsv',blind,fields)
     write_rows(Path(out)/'private_key.tsv',keys,['answer_id','case_id','group','repeat','status'])
+    from review_package import export_review_package
+    export_review_package(Path(out),cases,results)
+    # Keep the legacy entry point usable, but include links to full review context.
+    with (Path(out)/'for_review/blind_answers.tsv').open(encoding='utf-8-sig') as f:
+        rich=list(csv.DictReader(f,delimiter='\t'))
+    if rich:
+        for row in rich:
+            for key in ('input_file','evidence_file'):row[key]='for_review/'+row[key]
+        write_rows(Path(out)/'blind_answers.tsv',rich,list(rich[0]))
 
 def wait(c,seconds=360):
     deadline=time.monotonic()+seconds
@@ -52,7 +62,11 @@ def _run_case(group,case,cfg,root,transport=None):
     if group not in ('llm','workflow','agent'):raise ValueError('Unknown evaluation arm')
     Path(root).mkdir(parents=True,exist_ok=True)
     start=time.monotonic();data={**case.get('input',{}),**case.get('task',{}),'message':case['request'],'tool_mode':'imported','web_enabled':False}
-    result={'group':group,'case_id':case['id'],'status':'FAILED','tool_calls':0,'usage':[]}
+    inputs=prepare_inputs(data)
+    save_json(Path(root)/'case_input.json',{'request':case['request'],'input':inputs,
+        'supplied_fields':{**case.get('input',{}),**case.get('task',{})},'input_sha256':input_sha256(inputs)})
+    result={'group':group,'case_id':case['id'],'status':'FAILED','tool_calls':0,'usage':[],
+        'input_sha256':input_sha256(inputs),'case_input':inputs}
     if group=='agent':
         c=Conversation(root=Path(root)/'conversations',cfg_loader=lambda:cfg,transport=transport,
             session_factory=lambda **kw:PlannedSession(run_root=Path(root)/'runs',**kw))
@@ -60,29 +74,28 @@ def _run_case(group,case,cfg,root,transport=None):
         if c.plan and c.phase=='awaiting_execution':c.action('execute',c.plan['id']);wait(c)
         result.update(status=(c.result or {}).get('status',c.phase),answer=c.messages[-1]['text'],
             tool_calls=(c.session.tool_calls if c.session else 0)+sum(len(r['observations']) for r in c.export_record()['evidence_records']),record=c.export_record(),
-            usage=[e['usage'] for e in c.events if e.get('usage')],phase=c.phase,
+            usage=[e.get('usage',{}) for e in c.events if e.get('kind') in ('planner_finished','model_finished','model_failed')],phase=c.phase,
             completed_tools=list(c.session.state) if c.session else [],tool_results=c.session.state if c.session else {},plan=c.plan,
             provider_error={k:c.result.get(k) for k in ['code','provider_code','http_status','request_id']} if c.result and c.result.get('code') else {})
     elif group=='workflow':
-        inputs=prepare_inputs(data);inputs['task'].update(case.get('task',{}))
         preset=case.get('preset','full')
         if preset not in PRESETS:raise ValueError('Unknown fixed preset')
         s=PlannedSession(planned_tools=PRESETS[preset],mode='workflow',cfg=cfg,run_root=Path(root)/'runs',**inputs)
         for name in s.planned_tools:
             r=s.call(name,{})
             if r.get('status')=='ERROR':
-                result.update(status='FAILED',answer=r['message']);break
+                result.update(status='FAILED',answer=workflow_answer(inputs,s.state,r['message']));break
         else:
-            r=s.result_for_plan();result.update(status=r['status'],answer=json.dumps(r,ensure_ascii=False))
+            r=s.result_for_plan();result.update(status=r['status'],answer=workflow_answer(inputs,s.state))
         result.update(tool_calls=s.tool_calls,run_id=s.id,tool_results=s.state,completed_tools=list(s.state))
     else:
-        inputs=prepare_inputs(data);inputs['task'].update(case.get('task',{}))
         # Same supplied case input and declared capability boundary, without tools or retrieved outputs.
-        payload={'model':cfg.get('model'),'messages':[{'role':'system','content':'你是siRNA研究助手。根据所给需求和输入回答，不能假装执行工具或编造实验/模型数值。当前系统能力边界：'+SCOPE},
-            {'role':'user','content':json.dumps({'request':case['request'],'input':inputs,'tool_descriptions':TOOLS,'preset':case.get('preset','full')},ensure_ascii=False)}]}
+        payload={'model':cfg.get('model'),'messages':[{'role':'system','content':'你是siRNA研究助手。根据所给需求和输入回答，不开放科学工具或外网，不能假装执行工具或编造实验/模型数值。当前系统能力边界：'+SCOPE+FINAL_ANSWER_STYLE+FIELD_INSTRUCTIONS},
+            {'role':'user','content':json.dumps({'request':case['request'],'input':inputs,'tool_descriptions':TOOLS},ensure_ascii=False)}]}
         save_json(Path(root)/'model_request.json',safe_record(payload,cfg))
         r=transport(payload) if transport else request_completion(cfg,payload)
         save_json(Path(root)/'model_response.json',safe_record(r,cfg))
+        save_json(Path(root)/'actual_model_request.json',safe_record(r.get('_request',payload),cfg))
         result.update(status='ANSWERED_NO_TOOLS',answer=r['choices'][0]['message'].get('content') or '',usage=[r.get('usage',{})])
     result['seconds']=round(time.monotonic()-start,3)
     known=all(isinstance(u.get('total_tokens'),int) for u in result['usage'])
@@ -96,12 +109,15 @@ def run_case(group,case,cfg,root,transport=None):
     started=time.monotonic()
     try:return _run_case(group,case,cfg,root,transport)
     except ModelError as e:
+        from model_client import model_error_evidence
+        save_json(Path(root)/'model_error_evidence.json',model_error_evidence(e,cfg))
         partial=getattr(e,'response_snapshot',None)
         if partial is not None:save_json(Path(root)/'model_error_response.json',safe_record(partial,cfg))
         usage=partial.get('usage',{}) if isinstance(partial,dict) else {}
         return {'group':group,'case_id':case['id'],'status':'FAILED','answer':str(e),
             'provider_error':{k:v for k,v in e.diagnostics().items() if k!='provider_message'},
             'usage':[usage] if usage else [],'usage_complete':False,'partial_response_saved':partial is not None,
+            'known_token_subtotal':usage.get('total_tokens'),
             'tool_calls':0,'total_tokens':None,'seconds':round(time.monotonic()-started,3)}
 
 def main(argv=None):

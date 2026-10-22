@@ -144,16 +144,19 @@ class Handler(BaseHTTPRequestHandler):
     with LOCK:
      if STATE['running'] or STATE['checking_connection'] or CONVERSATION.busy:return self.send({'error':'请等待当前任务结束'},409)
      if paper_pilot.STATE.get('status')=='RUNNING':return self.send({'error':'评价已经运行中'},409)
-     if data.get('confirm_api_usage') is not True:return self.send({'error':'需确认本次运行54条开发评价记录，会产生模型API用量'},400)
-     identity='dev_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+__import__('uuid').uuid4().hex[:6]
+     if data.get('confirm_api_usage') is not True:return self.send({'error':'需先确认本次诊断或开发评价会调用模型并产生用量'},400)
+     evaluation_mode=data.get('mode','batch')
+     if evaluation_mode not in ('batch','diagnostic'):return self.send({'error':'评价模式无效'},400)
+     expected_records=1 if evaluation_mode=='diagnostic' else 54
+     identity=('diag_' if evaluation_mode=='diagnostic' else 'dev_')+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+__import__('uuid').uuid4().hex[:6]
      STATE['running']=True
-     paper_pilot.STATE.update(status='RUNNING',run_id=identity,completed=0,total=54)
+     paper_pilot.STATE.update(status='RUNNING',run_id=identity,completed=0,total=expected_records)
     def evaluate_once():
-     try:paper_pilot.run(config,identity)
+     try:paper_pilot.run(config,identity,mode=evaluation_mode)
      finally:
       with LOCK:STATE['running']=False
     threading.Thread(target=evaluate_once,daemon=True).start()
-    return self.send({'started':True,'run_id':identity,'expected_records':54},202)
+    return self.send({'started':True,'run_id':identity,'expected_records':expected_records},202)
    if self.path in ('/api/message','/api/action'):
     with LOCK:
      if STATE['running'] or STATE['checking_connection'] or CONVERSATION.busy:return self.send({'error':'已有任务或连接检查正在运行'},409)
