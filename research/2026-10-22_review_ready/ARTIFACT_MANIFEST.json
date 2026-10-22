@@ -1,0 +1,50 @@
+{
+  ".gitignore": {
+    "bytes": 17,
+    "sha256": "b106fec0903d3e7f0f464103f5eef8d858a09dc21265247910d1741d58aa5720"
+  },
+  "blank_scores.tsv": {
+    "bytes": 4480,
+    "sha256": "27eb57808eefbda99a67d14abaef6424a681950691a95389272da6d456121601"
+  },
+  "blank_scores.xlsx": {
+    "bytes": 79711,
+    "sha256": "2b9fa0e32ed52bbf0ab7c2d6c9b06378a98d095987b7ac4c8c57a1d0dd728c4c"
+  },
+  "DELIVERY_CHECKS.md": {
+    "bytes": 1381,
+    "sha256": "2f8e9c4557feb3a0d8874b6eb5fbbdb89bdddbbca4ea0c5c473628a51f79ef30"
+  },
+  "for_review_with_scoring.zip": {
+    "bytes": 1272133,
+    "sha256": "011fd7fbd74584b9c1765c6a0707116fb1ea977d9a81042a317dca06b87cc5cc"
+  },
+  "ISSUE_INDEX.md": {
+    "bytes": 3301,
+    "sha256": "46eb607a1eb9e81d69eb34da40f87962d63c5f415e199ea9854b4ebc3a2a63cb"
+  },
+  "original_answers_manifest.json": {
+    "bytes": 17148,
+    "sha256": "7d2c5e54f2be27e424d8c074f81b035dd04939db814ca52ef9701c8856598d4c"
+  },
+  "README.md": {
+    "bytes": 3427,
+    "sha256": "5ab477a02714c8bf86a471e130601dba59d7ff1bbb174f52793f19c367ec8201"
+  },
+  "RESULTS_TEXT_LIMITS.md": {
+    "bytes": 1619,
+    "sha256": "299f257b42d2a033b95c85f5262a50116bb6b4e5d99149fe7552965f7bc4f453"
+  },
+  "review_package_verification.json": {
+    "bytes": 55831,
+    "sha256": "e84e5462e411a957c071db0ee913f68aeaf291d55845c55180064bad85ea656c"
+  },
+  "scoring_and_bundle_verification.json": {
+    "bytes": 28029,
+    "sha256": "1966dbb5926f0646d208ca663eb7611a6d96ef74e3a05ca9770295d5d95c7532"
+  },
+  "SCORING_GUIDE.md": {
+    "bytes": 1034,
+    "sha256": "1889279df88d5b6bb6cc778f841c9eb852d26299f137f794fc95527c86d0e155"
+  }
+}

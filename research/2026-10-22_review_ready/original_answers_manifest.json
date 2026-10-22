@@ -1,0 +1,434 @@
+[
+  {
+    "answer_id": "A001",
+    "case_id": "normal_normoxia",
+    "answer_sha256": "dbe2f719a3064c1bb4f373b44e33c3dcebe7fe19335a1bde5cd9cab6b8223811",
+    "input_sha256": "1e24b9a0c568c7627552cd86efedef9612d2c4ccd20faf60569a838e7766e4a5",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A002",
+    "case_id": "invalid_sequence",
+    "answer_sha256": "828d8ae02f2b6220118b2d6b8e35b43174433221c6deac9085276d7fe26cb6e9",
+    "input_sha256": "91b8ae3b3e3d0beb8ef5067ec9a2b42b28aa8f3754095acc3fb53cb63b4c8564",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A003",
+    "case_id": "target_only",
+    "answer_sha256": "902ed131cc345976862c9ddb9bb120b55c46245e8c66af8540731e094588bdb5",
+    "input_sha256": "6ce00a1610d345cdc29f9af43f18cf4e586f95ba31a22572e2ffb0766d6e3ee2",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A004",
+    "case_id": "target_only",
+    "answer_sha256": "ce374a7ce5593f11e9ac8dc6b311f4ed7aaa47ebb58aafa69113993aea3c3e35",
+    "input_sha256": "6ce00a1610d345cdc29f9af43f18cf4e586f95ba31a22572e2ffb0766d6e3ee2",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A005",
+    "case_id": "ambiguous_direction",
+    "answer_sha256": "48330a66f00994eec29a229aa0293fa6712007688d31cd56aeac09b13c568650",
+    "input_sha256": "6908e0c0d87bd2401db970448eab507879fb1532b2801c9de11fd665f848a312",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A006",
+    "case_id": "unsupported_target",
+    "answer_sha256": "096ea5499c01d82f36a2366c488efa48451efc97acefddcd357192926e445ba6",
+    "input_sha256": "b098d9bd4005c11d451c3332534decb306fc8de5dc1f499fa2e3025bcde4d78f",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A007",
+    "case_id": "unsupported_target",
+    "answer_sha256": "a1f70cf4977f546f65156bd9c16c8fdf04f027513a88cd452f696f7c6cf524e4",
+    "input_sha256": "b098d9bd4005c11d451c3332534decb306fc8de5dc1f499fa2e3025bcde4d78f",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A008",
+    "case_id": "unsupported_target",
+    "answer_sha256": "807076d991859fb5523a74950542fe0db59bef2e6f92a38c7323d1dc185b1939",
+    "input_sha256": "b098d9bd4005c11d451c3332534decb306fc8de5dc1f499fa2e3025bcde4d78f",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A009",
+    "case_id": "ambiguous_direction",
+    "answer_sha256": "48330a66f00994eec29a229aa0293fa6712007688d31cd56aeac09b13c568650",
+    "input_sha256": "6908e0c0d87bd2401db970448eab507879fb1532b2801c9de11fd665f848a312",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A010",
+    "case_id": "unsupported_target",
+    "answer_sha256": "08468b81a943d344f152d93828886c8afd7f218f17ef0e749ca239e4559e2ec0",
+    "input_sha256": "b098d9bd4005c11d451c3332534decb306fc8de5dc1f499fa2e3025bcde4d78f",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A011",
+    "case_id": "target_only",
+    "answer_sha256": "50bf0aae958f3f5228c9974e591c318f1037bf5ba0487ab3e34a4f3034559cd8",
+    "input_sha256": "6ce00a1610d345cdc29f9af43f18cf4e586f95ba31a22572e2ffb0766d6e3ee2",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A012",
+    "case_id": "invalid_sequence",
+    "answer_sha256": "828d8ae02f2b6220118b2d6b8e35b43174433221c6deac9085276d7fe26cb6e9",
+    "input_sha256": "91b8ae3b3e3d0beb8ef5067ec9a2b42b28aa8f3754095acc3fb53cb63b4c8564",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A013",
+    "case_id": "normal_hypoxia",
+    "answer_sha256": "d78013acfbcf671e215522b15fc203347e8a83f92dd643f68282a5605172b554",
+    "input_sha256": "a6162e841a554d492a7a596c215062341b0722670efea4658ea8d4af7be4d3c6",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A014",
+    "case_id": "normal_normoxia",
+    "answer_sha256": "9b4a0d5ca822fe0092c88731bea9bbf01d0ba374aa561be9684edc5f7d38a058",
+    "input_sha256": "1e24b9a0c568c7627552cd86efedef9612d2c4ccd20faf60569a838e7766e4a5",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A015",
+    "case_id": "invalid_sequence",
+    "answer_sha256": "aec145d42e2df92102c5b47dc625a16c38811f62c5fd4d7c985c1c2d62e37d40",
+    "input_sha256": "91b8ae3b3e3d0beb8ef5067ec9a2b42b28aa8f3754095acc3fb53cb63b4c8564",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A016",
+    "case_id": "unsupported_target",
+    "answer_sha256": "efe3beca008c0891043e3c62b84298a4dada460331a8085cb42a1c982e584317",
+    "input_sha256": "b098d9bd4005c11d451c3332534decb306fc8de5dc1f499fa2e3025bcde4d78f",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A017",
+    "case_id": "normal_normoxia",
+    "answer_sha256": "cd82b4d3a77972331cc2b8963e1123e63cd69256fd39d77aaceb161924f61c7b",
+    "input_sha256": "1e24b9a0c568c7627552cd86efedef9612d2c4ccd20faf60569a838e7766e4a5",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A018",
+    "case_id": "normal_hypoxia",
+    "answer_sha256": "5eb32a6c743b733b702933322165358090c11dba5faa68ab13ce9467a20e3d60",
+    "input_sha256": "a6162e841a554d492a7a596c215062341b0722670efea4658ea8d4af7be4d3c6",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A019",
+    "case_id": "unsupported_target",
+    "answer_sha256": "807076d991859fb5523a74950542fe0db59bef2e6f92a38c7323d1dc185b1939",
+    "input_sha256": "b098d9bd4005c11d451c3332534decb306fc8de5dc1f499fa2e3025bcde4d78f",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A020",
+    "case_id": "invalid_sequence",
+    "answer_sha256": "40b52f6a03230c4dabd71f563e3a1fc5fcf25362c3dafef249a12fc61663b1b6",
+    "input_sha256": "91b8ae3b3e3d0beb8ef5067ec9a2b42b28aa8f3754095acc3fb53cb63b4c8564",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A021",
+    "case_id": "unsupported_target",
+    "answer_sha256": "e4c841fb6e1e5a29afefbf9f9be7e6aa745ddec0e17524af1681f7b5577634c8",
+    "input_sha256": "b098d9bd4005c11d451c3332534decb306fc8de5dc1f499fa2e3025bcde4d78f",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A022",
+    "case_id": "target_only",
+    "answer_sha256": "2fdb0c0e28a87af80764db3de30995edb811b44d1652ec15e9cfef9d94f86458",
+    "input_sha256": "6ce00a1610d345cdc29f9af43f18cf4e586f95ba31a22572e2ffb0766d6e3ee2",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A023",
+    "case_id": "target_only",
+    "answer_sha256": "902ed131cc345976862c9ddb9bb120b55c46245e8c66af8540731e094588bdb5",
+    "input_sha256": "6ce00a1610d345cdc29f9af43f18cf4e586f95ba31a22572e2ffb0766d6e3ee2",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A024",
+    "case_id": "ambiguous_direction",
+    "answer_sha256": "ca7b2efb0c150d0a0787c6631daf86079dd31751156428bc3f2e456492da4b5f",
+    "input_sha256": "6908e0c0d87bd2401db970448eab507879fb1532b2801c9de11fd665f848a312",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A025",
+    "case_id": "unsupported_target",
+    "answer_sha256": "807076d991859fb5523a74950542fe0db59bef2e6f92a38c7323d1dc185b1939",
+    "input_sha256": "b098d9bd4005c11d451c3332534decb306fc8de5dc1f499fa2e3025bcde4d78f",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A026",
+    "case_id": "normal_normoxia",
+    "answer_sha256": "1c44368f782dcbe46f133c74c995c45409b962c1d24d0401535e9019d7b537d1",
+    "input_sha256": "1e24b9a0c568c7627552cd86efedef9612d2c4ccd20faf60569a838e7766e4a5",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A027",
+    "case_id": "normal_normoxia",
+    "answer_sha256": "b841d5d1c351f5b3f7d1be47b508773adb952789d308c42ef72023e428afe177",
+    "input_sha256": "1e24b9a0c568c7627552cd86efedef9612d2c4ccd20faf60569a838e7766e4a5",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A028",
+    "case_id": "invalid_sequence",
+    "answer_sha256": "c108adf69ed2fe1095979a6a54f37a798fc969380cb9cae08b51991f2ffbc059",
+    "input_sha256": "91b8ae3b3e3d0beb8ef5067ec9a2b42b28aa8f3754095acc3fb53cb63b4c8564",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A029",
+    "case_id": "normal_hypoxia",
+    "answer_sha256": "77c2adc58e412f93ef3ef2ca30efdb295783e9712b1dfb719962b62531e86569",
+    "input_sha256": "a6162e841a554d492a7a596c215062341b0722670efea4658ea8d4af7be4d3c6",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A030",
+    "case_id": "normal_normoxia",
+    "answer_sha256": "b841d5d1c351f5b3f7d1be47b508773adb952789d308c42ef72023e428afe177",
+    "input_sha256": "1e24b9a0c568c7627552cd86efedef9612d2c4ccd20faf60569a838e7766e4a5",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A031",
+    "case_id": "ambiguous_direction",
+    "answer_sha256": "48330a66f00994eec29a229aa0293fa6712007688d31cd56aeac09b13c568650",
+    "input_sha256": "6908e0c0d87bd2401db970448eab507879fb1532b2801c9de11fd665f848a312",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A032",
+    "case_id": "normal_normoxia",
+    "answer_sha256": "cffd4281c20982fec8a9b1585bc484b29b174768efe0d1acef5de69f9236423c",
+    "input_sha256": "1e24b9a0c568c7627552cd86efedef9612d2c4ccd20faf60569a838e7766e4a5",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A033",
+    "case_id": "target_only",
+    "answer_sha256": "16c0471109950e01f1c651917c4e75cfa583aefa344beae45be3f84f6d4e169e",
+    "input_sha256": "6ce00a1610d345cdc29f9af43f18cf4e586f95ba31a22572e2ffb0766d6e3ee2",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A034",
+    "case_id": "normal_hypoxia",
+    "answer_sha256": "5eb32a6c743b733b702933322165358090c11dba5faa68ab13ce9467a20e3d60",
+    "input_sha256": "a6162e841a554d492a7a596c215062341b0722670efea4658ea8d4af7be4d3c6",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A035",
+    "case_id": "normal_hypoxia",
+    "answer_sha256": "5eb32a6c743b733b702933322165358090c11dba5faa68ab13ce9467a20e3d60",
+    "input_sha256": "a6162e841a554d492a7a596c215062341b0722670efea4658ea8d4af7be4d3c6",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A036",
+    "case_id": "ambiguous_direction",
+    "answer_sha256": "eb8949586103ee81ed1c2c07266e7b020b358977b41a24998060613f40cd0357",
+    "input_sha256": "6908e0c0d87bd2401db970448eab507879fb1532b2801c9de11fd665f848a312",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A037",
+    "case_id": "invalid_sequence",
+    "answer_sha256": "d1217e489e53603cbf8403b7ccbe1fcb286f55ae4ce8b629e258ed20b3b38b1c",
+    "input_sha256": "91b8ae3b3e3d0beb8ef5067ec9a2b42b28aa8f3754095acc3fb53cb63b4c8564",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A038",
+    "case_id": "ambiguous_direction",
+    "answer_sha256": "163032dcaf7d06cf46f4a9a80173797a69f31b10db57a8a0ae407284c79364c5",
+    "input_sha256": "6908e0c0d87bd2401db970448eab507879fb1532b2801c9de11fd665f848a312",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A039",
+    "case_id": "invalid_sequence",
+    "answer_sha256": "fa3415c3cbeea7f6854c218d6fb1ff7ddccb0fbc8bf4dcb75cf05d9217d462cf",
+    "input_sha256": "91b8ae3b3e3d0beb8ef5067ec9a2b42b28aa8f3754095acc3fb53cb63b4c8564",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A040",
+    "case_id": "ambiguous_direction",
+    "answer_sha256": "d1217e489e53603cbf8403b7ccbe1fcb286f55ae4ce8b629e258ed20b3b38b1c",
+    "input_sha256": "6908e0c0d87bd2401db970448eab507879fb1532b2801c9de11fd665f848a312",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A041",
+    "case_id": "ambiguous_direction",
+    "answer_sha256": "bcb3c52ea145f99df2f06c92719d264739d71680b2bf5cf7b823dc422e54195a",
+    "input_sha256": "6908e0c0d87bd2401db970448eab507879fb1532b2801c9de11fd665f848a312",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A042",
+    "case_id": "normal_hypoxia",
+    "answer_sha256": "008c678f8e21d0e2ad29d09bfc8c4780b57a3b69ab1f00908ad7e7cbcce1a62f",
+    "input_sha256": "a6162e841a554d492a7a596c215062341b0722670efea4658ea8d4af7be4d3c6",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A043",
+    "case_id": "normal_hypoxia",
+    "answer_sha256": "6b02b27b06b9c3d81db35a1b7cb35fa005303e702f38dba0a6153370a8e125fe",
+    "input_sha256": "a6162e841a554d492a7a596c215062341b0722670efea4658ea8d4af7be4d3c6",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A044",
+    "case_id": "target_only",
+    "answer_sha256": "902ed131cc345976862c9ddb9bb120b55c46245e8c66af8540731e094588bdb5",
+    "input_sha256": "6ce00a1610d345cdc29f9af43f18cf4e586f95ba31a22572e2ffb0766d6e3ee2",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A045",
+    "case_id": "normal_hypoxia",
+    "answer_sha256": "e6321ed6db7b93dda1e04a0c053633e57342aa48e857847d9a18e7f13a83562e",
+    "input_sha256": "a6162e841a554d492a7a596c215062341b0722670efea4658ea8d4af7be4d3c6",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A046",
+    "case_id": "normal_normoxia",
+    "answer_sha256": "9820516a87a829b26af6bbb82f0060e27b004f93a146038c91917eae1aab8b2f",
+    "input_sha256": "1e24b9a0c568c7627552cd86efedef9612d2c4ccd20faf60569a838e7766e4a5",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A047",
+    "case_id": "target_only",
+    "answer_sha256": "a01967e115a67cfea7f68c25c75a4bc7730fdbc0fbf2421e14684e297e52900d",
+    "input_sha256": "6ce00a1610d345cdc29f9af43f18cf4e586f95ba31a22572e2ffb0766d6e3ee2",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A048",
+    "case_id": "invalid_sequence",
+    "answer_sha256": "59ce5ce3a8b48eea4881c7d79da7cf7944237288c30368e87f37e9d6568e87a2",
+    "input_sha256": "91b8ae3b3e3d0beb8ef5067ec9a2b42b28aa8f3754095acc3fb53cb63b4c8564",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A049",
+    "case_id": "invalid_sequence",
+    "answer_sha256": "828d8ae02f2b6220118b2d6b8e35b43174433221c6deac9085276d7fe26cb6e9",
+    "input_sha256": "91b8ae3b3e3d0beb8ef5067ec9a2b42b28aa8f3754095acc3fb53cb63b4c8564",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A050",
+    "case_id": "normal_normoxia",
+    "answer_sha256": "b841d5d1c351f5b3f7d1be47b508773adb952789d308c42ef72023e428afe177",
+    "input_sha256": "1e24b9a0c568c7627552cd86efedef9612d2c4ccd20faf60569a838e7766e4a5",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A051",
+    "case_id": "normal_hypoxia",
+    "answer_sha256": "dbe009b0fed53005e147d0d056ae275d506251e8d50d51e09941a5787d1cf253",
+    "input_sha256": "a6162e841a554d492a7a596c215062341b0722670efea4658ea8d4af7be4d3c6",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A052",
+    "case_id": "ambiguous_direction",
+    "answer_sha256": "3e6ab52587fee7e76281b785bec159c25a96ff9dd83f073839be1ac72b6d4bdd",
+    "input_sha256": "6908e0c0d87bd2401db970448eab507879fb1532b2801c9de11fd665f848a312",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A053",
+    "case_id": "target_only",
+    "answer_sha256": "f5b5970207a847678e0a9f9ece475a1477587e3443d736b400ebd37089b3e0a6",
+    "input_sha256": "6ce00a1610d345cdc29f9af43f18cf4e586f95ba31a22572e2ffb0766d6e3ee2",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  },
+  {
+    "answer_id": "A054",
+    "case_id": "unsupported_target",
+    "answer_sha256": "b56576e92204d98fafc03dfe4d756746ff8e731beef3ef3be080e1a007a571ef",
+    "input_sha256": "b098d9bd4005c11d451c3332534decb306fc8de5dc1f499fa2e3025bcde4d78f",
+    "tool_evidence_matches": true,
+    "answer_unchanged": true
+  }
+]
