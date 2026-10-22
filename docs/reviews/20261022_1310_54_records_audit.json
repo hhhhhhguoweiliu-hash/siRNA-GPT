@@ -1,0 +1,1644 @@
+{
+  "review_date": "2026-10-22 Asia/Shanghai",
+  "batch_id": "dev_20261020_070207_843de3",
+  "reviewed_branch_commit": "c6970b8ba0ae437716d7a82e89bf89f53d5ce141",
+  "runtime_commit": "e53bacba981a9082fad4df57c600eb93de159dc8",
+  "source": "research/2026-10-20_takeover/three_arm/results.json.gz",
+  "raw_bytes": 86129,
+  "raw_sha256": "eafa59ffacedd87a2e5c7c33de38ae79128d87e4bdfb9110f5f5241a23f275c9",
+  "planned": 54,
+  "recorded": 54,
+  "unique_answer_ids": 54,
+  "unique_case_arm_repeat_cells": 54,
+  "schedule_matches": true,
+  "raw_state_counts": {
+    "agent:COMPLETE": 4,
+    "workflow:FAILED": 9,
+    "workflow:PARTIAL_COMPLETE": 3,
+    "agent:PARTIAL_COMPLETE": 3,
+    "llm:ANSWERED_NO_TOOLS": 12,
+    "agent:idle": 8,
+    "llm:FAILED": 6,
+    "workflow:COMPLETE": 6,
+    "agent:FAILED": 3
+  },
+  "pairs_without_output_or_network_error": {
+    "normal_hypoxia": 0,
+    "normal_normoxia": 1,
+    "target_only": 2,
+    "invalid_sequence": 3,
+    "unsupported_target": 3,
+    "ambiguous_direction": 3
+  },
+  "all54": [
+    {
+      "answer_id": "A001",
+      "case_id": "normal_normoxia",
+      "group": "agent",
+      "repeat": 1,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "match_seed",
+        "score_candidates",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "invalid_sequence",
+      "group": "workflow",
+      "repeat": 2,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 1,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A003",
+      "case_id": "target_only",
+      "group": "workflow",
+      "repeat": 3,
+      "raw_status": "PARTIAL_COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 2,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "target_only",
+      "group": "agent",
+      "repeat": 3,
+      "raw_status": "PARTIAL_COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 2,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A005",
+      "case_id": "ambiguous_direction",
+      "group": "workflow",
+      "repeat": 2,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 1,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A006",
+      "case_id": "unsupported_target",
+      "group": "llm",
+      "repeat": 3,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "unsupported_target",
+      "group": "llm",
+      "repeat": 1,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A008",
+      "case_id": "unsupported_target",
+      "group": "workflow",
+      "repeat": 2,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 1,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A009",
+      "case_id": "ambiguous_direction",
+      "group": "workflow",
+      "repeat": 1,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 1,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A010",
+      "case_id": "unsupported_target",
+      "group": "agent",
+      "repeat": 2,
+      "raw_status": "idle",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A011",
+      "case_id": "target_only",
+      "group": "llm",
+      "repeat": 2,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A012",
+      "case_id": "invalid_sequence",
+      "group": "workflow",
+      "repeat": 3,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 1,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "normal_hypoxia",
+      "group": "agent",
+      "repeat": 1,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "normal_normoxia",
+      "group": "llm",
+      "repeat": 1,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A015",
+      "case_id": "invalid_sequence",
+      "group": "llm",
+      "repeat": 3,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A016",
+      "case_id": "unsupported_target",
+      "group": "agent",
+      "repeat": 3,
+      "raw_status": "idle",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "normal_normoxia",
+      "group": "llm",
+      "repeat": 3,
+      "raw_status": "FAILED",
+      "error_code": "OUTPUT_TRUNCATED",
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A018",
+      "case_id": "normal_hypoxia",
+      "group": "workflow",
+      "repeat": 1,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A019",
+      "case_id": "unsupported_target",
+      "group": "workflow",
+      "repeat": 1,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 1,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A020",
+      "case_id": "invalid_sequence",
+      "group": "llm",
+      "repeat": 1,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A021",
+      "case_id": "unsupported_target",
+      "group": "agent",
+      "repeat": 1,
+      "raw_status": "idle",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "target_only",
+      "group": "agent",
+      "repeat": 2,
+      "raw_status": "PARTIAL_COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 2,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A023",
+      "case_id": "target_only",
+      "group": "workflow",
+      "repeat": 1,
+      "raw_status": "PARTIAL_COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 2,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A024",
+      "case_id": "ambiguous_direction",
+      "group": "agent",
+      "repeat": 3,
+      "raw_status": "idle",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "unsupported_target",
+      "group": "workflow",
+      "repeat": 3,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 1,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A026",
+      "case_id": "normal_normoxia",
+      "group": "llm",
+      "repeat": 2,
+      "raw_status": "FAILED",
+      "error_code": "OUTPUT_TRUNCATED",
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A027",
+      "case_id": "normal_normoxia",
+      "group": "workflow",
+      "repeat": 1,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A028",
+      "case_id": "invalid_sequence",
+      "group": "agent",
+      "repeat": 1,
+      "raw_status": "idle",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A029",
+      "case_id": "normal_hypoxia",
+      "group": "llm",
+      "repeat": 3,
+      "raw_status": "FAILED",
+      "error_code": "OUTPUT_TRUNCATED",
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A030",
+      "case_id": "normal_normoxia",
+      "group": "workflow",
+      "repeat": 3,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A031",
+      "case_id": "ambiguous_direction",
+      "group": "workflow",
+      "repeat": 3,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 1,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A032",
+      "case_id": "normal_normoxia",
+      "group": "agent",
+      "repeat": 2,
+      "raw_status": "FAILED",
+      "error_code": "NETWORK_UNAVAILABLE",
+      "scientific_tool_attempts": 5,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "match_seed",
+        "score_candidates",
+        "query_expression"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A033",
+      "case_id": "target_only",
+      "group": "agent",
+      "repeat": 1,
+      "raw_status": "PARTIAL_COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 2,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A034",
+      "case_id": "normal_hypoxia",
+      "group": "workflow",
+      "repeat": 3,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A035",
+      "case_id": "normal_hypoxia",
+      "group": "workflow",
+      "repeat": 2,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A036",
+      "case_id": "ambiguous_direction",
+      "group": "agent",
+      "repeat": 2,
+      "raw_status": "idle",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A037",
+      "case_id": "invalid_sequence",
+      "group": "agent",
+      "repeat": 3,
+      "raw_status": "idle",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A038",
+      "case_id": "ambiguous_direction",
+      "group": "llm",
+      "repeat": 1,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A039",
+      "case_id": "invalid_sequence",
+      "group": "llm",
+      "repeat": 2,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A040",
+      "case_id": "ambiguous_direction",
+      "group": "agent",
+      "repeat": 1,
+      "raw_status": "idle",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A041",
+      "case_id": "ambiguous_direction",
+      "group": "llm",
+      "repeat": 3,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A042",
+      "case_id": "normal_hypoxia",
+      "group": "llm",
+      "repeat": 1,
+      "raw_status": "FAILED",
+      "error_code": "OUTPUT_TRUNCATED",
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A043",
+      "case_id": "normal_hypoxia",
+      "group": "agent",
+      "repeat": 3,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A044",
+      "case_id": "target_only",
+      "group": "workflow",
+      "repeat": 2,
+      "raw_status": "PARTIAL_COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 2,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A045",
+      "case_id": "normal_hypoxia",
+      "group": "llm",
+      "repeat": 2,
+      "raw_status": "FAILED",
+      "error_code": "OUTPUT_TRUNCATED",
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A046",
+      "case_id": "normal_normoxia",
+      "group": "agent",
+      "repeat": 3,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A047",
+      "case_id": "target_only",
+      "group": "llm",
+      "repeat": 1,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A048",
+      "case_id": "invalid_sequence",
+      "group": "agent",
+      "repeat": 2,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A049",
+      "case_id": "invalid_sequence",
+      "group": "workflow",
+      "repeat": 1,
+      "raw_status": "FAILED",
+      "error_code": null,
+      "scientific_tool_attempts": 1,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A050",
+      "case_id": "normal_normoxia",
+      "group": "workflow",
+      "repeat": 2,
+      "raw_status": "COMPLETE",
+      "error_code": null,
+      "scientific_tool_attempts": 6,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A051",
+      "case_id": "normal_hypoxia",
+      "group": "agent",
+      "repeat": 2,
+      "raw_status": "FAILED",
+      "error_code": "NETWORK_UNAVAILABLE",
+      "scientific_tool_attempts": 3,
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "match_seed"
+      ],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A052",
+      "case_id": "ambiguous_direction",
+      "group": "llm",
+      "repeat": 2,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A053",
+      "case_id": "target_only",
+      "group": "llm",
+      "repeat": 3,
+      "raw_status": "FAILED",
+      "error_code": "OUTPUT_TRUNCATED",
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    },
+    {
+      "answer_id": "A054",
+      "case_id": "unsupported_target",
+      "group": "llm",
+      "repeat": 2,
+      "raw_status": "ANSWERED_NO_TOOLS",
+      "error_code": null,
+      "scientific_tool_attempts": 0,
+      "completed_tools": [],
+      "semantic_score": null,
+      "independent_reviewer_id": null
+    }
+  ],
+  "notes": [
+    "No expert scores were assigned. Raw program state is not scientific correctness.",
+    "The 12 pairs without output/network errors include the A048 planning-format failure.",
+    "Plain LLM receives full candidate metadata. The agent planner receives candidate_count but not the candidate rows.",
+    "Current standards expand pre-run development anchors after observing results and are not a prospective held-out evaluation."
+  ],
+  "evidence_checks": [
+    {
+      "id": "A001",
+      "scope": "normal_normoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500",
+        "VEGFA_SD_1157"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1155,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 480,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 858,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    },
+    {
+      "id": "A003",
+      "scope": "target_only",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ]
+    },
+    {
+      "id": "A004",
+      "scope": "target_only",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ]
+    },
+    {
+      "id": "A013",
+      "scope": "normal_hypoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1086,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 463,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 811,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    },
+    {
+      "id": "A018",
+      "scope": "normal_hypoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1086,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 463,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 811,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    },
+    {
+      "id": "A022",
+      "scope": "target_only",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ]
+    },
+    {
+      "id": "A023",
+      "scope": "target_only",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ]
+    },
+    {
+      "id": "A027",
+      "scope": "normal_normoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500",
+        "VEGFA_SD_1157"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1155,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 480,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 858,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    },
+    {
+      "id": "A030",
+      "scope": "normal_normoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500",
+        "VEGFA_SD_1157"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1155,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 480,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 858,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    },
+    {
+      "id": "A033",
+      "scope": "target_only",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ]
+    },
+    {
+      "id": "A034",
+      "scope": "normal_hypoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1086,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 463,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 811,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    },
+    {
+      "id": "A035",
+      "scope": "normal_hypoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1086,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 463,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 811,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    },
+    {
+      "id": "A043",
+      "scope": "normal_hypoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1086,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 463,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 811,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    },
+    {
+      "id": "A044",
+      "scope": "target_only",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ]
+    },
+    {
+      "id": "A046",
+      "scope": "normal_normoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500",
+        "VEGFA_SD_1157"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1155,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 480,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 858,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    },
+    {
+      "id": "A050",
+      "scope": "normal_normoxia",
+      "count": 9,
+      "all20": true,
+      "coreCoordinates": [
+        {
+          "id": "VEGFA_SD_1157",
+          "pos": 1159
+        },
+        {
+          "id": "VEGFA_SD_3499",
+          "pos": 3501
+        },
+        {
+          "id": "VEGFA_SD_3500",
+          "pos": 3502
+        }
+      ],
+      "selected": [
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3500",
+        "VEGFA_SD_1157"
+      ],
+      "sourceModes": {
+        "score": "IMPORTED_HISTORICAL",
+        "seed": "IMPORTED_HISTORICAL",
+        "expression": "LIVE_JOIN_OF_BASELINE_AND_SEED"
+      },
+      "expression": {
+        "feature_id": "VEGFA",
+        "approved_symbol": "VEGFA",
+        "ENTREZID": "7422",
+        "TPM_Normoxia_mean": "20.09929925",
+        "TPM_Hypoxia_mean": "102.390068",
+        "Normoxia_n_TPM_ge1": "4",
+        "Hypoxia_n_TPM_ge1": "4"
+      },
+      "counts": [
+        {
+          "candidate_id": "VEGFA_SD_1157",
+          "matched_genes": 1876,
+          "baseline_mapped_genes": 1874,
+          "hypoxia_detected_genes": 1086,
+          "normoxia_detected_genes": 1155,
+          "state_detected_genes": 1155,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 10,
+          "normoxia_only_detected_genes": 79
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "matched_genes": 728,
+          "baseline_mapped_genes": 726,
+          "hypoxia_detected_genes": 463,
+          "normoxia_detected_genes": 480,
+          "state_detected_genes": 480,
+          "unmapped_genes": 2,
+          "hypoxia_only_detected_genes": 7,
+          "normoxia_only_detected_genes": 24
+        },
+        {
+          "candidate_id": "VEGFA_SD_3500",
+          "matched_genes": 1333,
+          "baseline_mapped_genes": 1330,
+          "hypoxia_detected_genes": 811,
+          "normoxia_detected_genes": 858,
+          "state_detected_genes": 858,
+          "unmapped_genes": 3,
+          "hypoxia_only_detected_genes": 9,
+          "normoxia_only_detected_genes": 56
+        }
+      ]
+    }
+  ]
+}
