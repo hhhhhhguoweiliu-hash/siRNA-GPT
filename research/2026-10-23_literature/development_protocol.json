@@ -1,0 +1,26 @@
+{
+  "protocol_version": "taskB-development-v1",
+  "created_before_implementation": true,
+  "takeover_main": "1e4fe57a059fbf19cf32b4685cc249a3d297e98c",
+  "scope": "Small local library for tool use, score interpretation, strand orientation, seed limitations, expression context and provenance only",
+  "evaluation_boundary": "Ten visible development checks, not independent scientific evaluation, no human scores and no comparison with the old 54 records",
+  "planned_cases": [
+    {"id":"B01","question":"OligoFormer需要什么siRNA和mRNA输入，19个碱基和57个碱基分别是什么？","action":"import_text_pdf_and_query","expected_sources":["OligoFormer official README or paper","pinned official inference code"],"expected_behavior":"Chinese query retrieves English source chunks; original file, page or fragment and actual excerpt can be opened"},
+    {"id":"B02","question":"OligoFormer分数超过1可以解释为超过100%的敲低率吗？","action":"query","expected_sources":["pinned official inference code","project score note"],"expected_behavior":"Separate official score scaling from project interpretation; do not report a measured knockdown percentage"},
+    {"id":"B03","question":"默认候选的21碱基guide和passenger、19碱基配对核心、23碱基设计窗口如何区分？坐标为什么不同？","action":"query","expected_sources":["siDirect official documentation","Task A project provenance record","project sequence note"],"expected_behavior":"Cite actual retrieved material; label project coordinate derivation separately from literature; do not fabricate an order-ready duplex"},
+    {"id":"B04","question":"SeedMatchR中guide的mer7m8种子匹配定义是什么，方向怎样确定？","action":"query","expected_sources":["SeedMatchR 1.1.1 get_seed documentation or source"],"expected_behavior":"Retrieve English definition of g2-g8 and reverse-complement target; do not substitute current version for historical 1.1.1"},
+    {"id":"B05","question":"seed匹配位点数和去重基因数是一回事吗？找到匹配能证明真实脱靶吗？","action":"query","expected_sources":["SeedMatchR paper or official documentation","project seed note"],"expected_behavior":"Distinguish counts and reference scope; no inference of observed toxicity or experimental repression"},
+    {"id":"B06","question":"我们未转染的ARPE-19常氧和缺氧TPM，能用来证明某条siRNA的敲低效果吗？","action":"query","expected_sources":["project expression note","project scientific scope"],"expected_behavior":"Label project setup and baseline evidence; do not infer siRNA perturbation response or new state-dependent ranking"},
+    {"id":"B07","question":"网站显示的默认九条OligoFormer和SeedMatchR结果是本次重新计算的吗，证据来源在哪里？","action":"query","expected_sources":["Task A project provenance record","project scope or evidence note"],"expected_behavior":"Historical imports remain distinct from new local calculations; export includes corpus version, question, search terms and source chunks"},
+    {"id":"B08","question":"请给出本项目已经测得的人类患者视力改善百分比和临床给药剂量。","action":"local_only_no_evidence","expected_sources":[],"expected_behavior":"Explicit evidence insufficiency; no fabricated clinical number, no unsolicited external search"},
+    {"id":"B09","question":"这个损坏的PDF能否作为原文依据导入？","action":"import_corrupt_and_image_only_pdf","expected_sources":[],"expected_behavior":"Reject malformed and image-only files with readable reason; no successful document or partial usable index; no OCR claim"},
+    {"id":"B10","question":"导出文库后重新导入，B01的英文片段、原始PDF页码和引用还能对应吗？","action":"export_reimport_rebuild_and_query","expected_sources":["same originals and chunks as B01"],"expected_behavior":"Hashes, metadata, library version and source locations preserved; rebuilt index retrieves same evidence; reject altered or unsafe archives"}
+  ],
+  "minimal_real_demo": {
+    "planned_questions":["B02","B08"],
+    "entry":"Authenticated existing UI with explicit model-usage confirmation; two questions only, no development-evaluation batch",
+    "external_search":false,
+    "on_account_error":"Stop immediately and retain actual request, response or diagnostics and unexecuted status",
+    "record":"All questions, retrieved excerpts, library version, answers, model requests/responses and usage; no independent scores"
+  }
+}
