@@ -1,0 +1,45 @@
+{
+  "code_commit": "ba94bb4da1b3794d5ea29984a5d8577660806c26",
+  "git_branches_verified": [
+    "main",
+    "codex/20261020-evidence-pilot"
+  ],
+  "github_checks": [
+    {
+      "run_id": 39979868750,
+      "status": "success",
+      "branch": "main"
+    },
+    {
+      "run_id": 39979869502,
+      "status": "success",
+      "branch": "codex/20261020-evidence-pilot"
+    }
+  ],
+  "drive_bundle_verification": {
+    "id": "1tHrQRfe3k-zIJR07qqWaz7YEa4ASa8Qv",
+    "title": "siRNA-GPT_TaskB_library_and_checks_20261023.zip",
+    "mime_type": "application/zip",
+    "size": "2296409",
+    "url": "https://drive.google.com/file/d/1tHrQRfe3k-zIJR07qqWaz7YEa4ASa8Qv/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1tHrQRfe3k-zIJR07qqWaz7YEa4ASa8Qv/view?usp=drivesdk",
+    "file_or_folder": "file",
+    "created_time": null,
+    "modified_time": "2026-10-23T15:35:45.461Z",
+    "parent_ids": [
+      "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "drive_report_id": "1aDTHRK_J22luN-Pku3vAIti25APJmLTe",
+  "drive_delivery_id": "1OwS8jpBrwo2NtkVQZAaWNVPNYv3iqd0O",
+  "deployed_task_b": false,
+  "real_model_demo_run": false,
+  "blocking_step": "User to sign in to original website; preserve existing records before deployment",
+  "no_new_54_batch": true
+}

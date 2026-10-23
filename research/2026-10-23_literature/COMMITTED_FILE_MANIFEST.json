@@ -1,0 +1,323 @@
+{
+  "commit": "ba94bb4da1b3794d5ea29984a5d8577660806c26",
+  "scope": "Actual Git blob bytes; Windows local/Drive ZIP bytes are separately listed in FILE_MANIFEST.json",
+  "checked_files": 50,
+  "line_ending_differences": [
+    "app.py",
+    "cloud.py",
+    "conversation.py",
+    "knowledge.py",
+    "requirements.txt",
+    "research.py",
+    "runtime_info.py"
+  ],
+  "files": [
+    {
+      "file": "app.py",
+      "git_bytes": 18869,
+      "git_sha256": "161594db436a6653cb22b50e15954c3249468c490efbc56f511de05c5545feb1",
+      "local_sha256": "05bf36ec57794dec0b4602c2012ad26571b4854f2f229030e9b3a690e3fc5c08",
+      "difference": "CRLF/LF line endings only"
+    },
+    {
+      "file": "cloud.py",
+      "git_bytes": 5912,
+      "git_sha256": "6950cb170fe1b03d9aaf6e8465120db4058ad260a19124f0c8189d1d4930459a",
+      "local_sha256": "c8f5f85f84f5c24a68c7bc5149d20685425e65ffe62907edfae030210361c6bc",
+      "difference": "CRLF/LF line endings only"
+    },
+    {
+      "file": "conversation.py",
+      "git_bytes": 50073,
+      "git_sha256": "b091f361afb93b90c2a5e360024eb6fefcdda238bdbcb69c37ea2ed033ad3a35",
+      "local_sha256": "42b95b16de4a88ff7f3b6a9bde627f2e7a944a6e67f3b82893a9a067a7ac31d5",
+      "difference": "CRLF/LF line endings only"
+    },
+    {
+      "file": "index.html",
+      "git_bytes": 42397,
+      "git_sha256": "8fea6afc76d85b27a07c0dee0a6924ca9dd7fcba3b2d1c4c05fcd55e4a17fc5e",
+      "local_sha256": "8fea6afc76d85b27a07c0dee0a6924ca9dd7fcba3b2d1c4c05fcd55e4a17fc5e"
+    },
+    {
+      "file": "knowledge.py",
+      "git_bytes": 4777,
+      "git_sha256": "f2be96e863bfd3d4c0e163f3ad4a404e3997c0b6ac293728ad13c7f85c02ad74",
+      "local_sha256": "87ceb4a48cb5373e71eafb7830e7720b42ea889f7ebf90a57c5bb883125a5187",
+      "difference": "CRLF/LF line endings only"
+    },
+    {
+      "file": "library_demo.py",
+      "git_bytes": 4432,
+      "git_sha256": "a33928072ecff18a566ac626c0a98dc1ab025652a7ea8d532f9bc3a7d542ab99",
+      "local_sha256": "a33928072ecff18a566ac626c0a98dc1ab025652a7ea8d532f9bc3a7d542ab99"
+    },
+    {
+      "file": "library_ui.js",
+      "git_bytes": 4988,
+      "git_sha256": "d0f7e7f3af74d5fdb5ad076753abaf1c300b9a76a029bbea5d0c5cdbae9fc533",
+      "local_sha256": "d0f7e7f3af74d5fdb5ad076753abaf1c300b9a76a029bbea5d0c5cdbae9fc533"
+    },
+    {
+      "file": "literature.py",
+      "git_bytes": 23271,
+      "git_sha256": "8d0aee986db4a3c09a5ee9c92aea2a9434f33e1c1b05e5a38f10f2f4c118b675",
+      "local_sha256": "8d0aee986db4a3c09a5ee9c92aea2a9434f33e1c1b05e5a38f10f2f4c118b675"
+    },
+    {
+      "file": "pdf_text_worker.py",
+      "git_bytes": 2555,
+      "git_sha256": "e1d9df6fbec7c153c694946a08f04e00ea9c2b0607d199102c1b80be9ba50ed1",
+      "local_sha256": "e1d9df6fbec7c153c694946a08f04e00ea9c2b0607d199102c1b80be9ba50ed1"
+    },
+    {
+      "file": "references/sirna_library/acquisition/oligoformer_fulltext.xml",
+      "git_bytes": 90386,
+      "git_sha256": "1956bc10e6641094a736d78982d2750b4385d108ee3eebb49e8957c7685467a3",
+      "local_sha256": "1956bc10e6641094a736d78982d2750b4385d108ee3eebb49e8957c7685467a3"
+    },
+    {
+      "file": "references/sirna_library/acquisition/seedmatchr_fulltext.xml",
+      "git_bytes": 50100,
+      "git_sha256": "146038caddf230bfb0b143cf6b4653c09c83592f5b96831e13b1e27151e55feb",
+      "local_sha256": "146038caddf230bfb0b143cf6b4653c09c83592f5b96831e13b1e27151e55feb"
+    },
+    {
+      "file": "references/sirna_library/acquisition/sidirect_fulltext.xml",
+      "git_bytes": 64847,
+      "git_sha256": "45deba96ac99f7a9afcac6e8a3b64e82e52b156abb232a1f09979102b4996ea9",
+      "local_sha256": "45deba96ac99f7a9afcac6e8a3b64e82e52b156abb232a1f09979102b4996ea9"
+    },
+    {
+      "file": "references/sirna_library/acquisition_receipt.json",
+      "git_bytes": 2901,
+      "git_sha256": "9017cb555af60400582048581cb7fdef5cac4649d2a990e470eb8a160e708f46",
+      "local_sha256": "9017cb555af60400582048581cb7fdef5cac4649d2a990e470eb8a160e708f46"
+    },
+    {
+      "file": "references/sirna_library/oligoformer_official_infer.txt",
+      "git_bytes": 22032,
+      "git_sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+      "local_sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f"
+    },
+    {
+      "file": "references/sirna_library/oligoformer_official_readme.txt",
+      "git_bytes": 9037,
+      "git_sha256": "fce74ce24f4c5275cdea80d09aa441e4425451f7a35894393b453357ed1841a1",
+      "local_sha256": "fce74ce24f4c5275cdea80d09aa441e4425451f7a35894393b453357ed1841a1"
+    },
+    {
+      "file": "references/sirna_library/oligoformer_paper_extracted_text.txt",
+      "git_bytes": 34556,
+      "git_sha256": "e2cea21b6712b85250758e8b69a9135ff579b422cbdc81606d130e3ba9e6fd1e",
+      "local_sha256": "e2cea21b6712b85250758e8b69a9135ff579b422cbdc81606d130e3ba9e6fd1e"
+    },
+    {
+      "file": "references/sirna_library/project_candidate_provenance_20261023.txt",
+      "git_bytes": 11927,
+      "git_sha256": "6a1b8c9ea14cc5ae67700e189a7e6969db041aa4cb3838eae4d7c0ffeae7364d",
+      "local_sha256": "6a1b8c9ea14cc5ae67700e189a7e6969db041aa4cb3838eae4d7c0ffeae7364d"
+    },
+    {
+      "file": "references/sirna_library/publisher_pdf_attempts.json",
+      "git_bytes": 1382,
+      "git_sha256": "a9439ce85e3c475a4998fa25420f247a26452c66dce62f11b9f333e9e32e0c3f",
+      "local_sha256": "a9439ce85e3c475a4998fa25420f247a26452c66dce62f11b9f333e9e32e0c3f"
+    },
+    {
+      "file": "references/sirna_library/README.md",
+      "git_bytes": 2890,
+      "git_sha256": "f00ff3d22c4c178b8322a30e326476fe78d0d0b67966e8bd9a89d5d5745e84c5",
+      "local_sha256": "f00ff3d22c4c178b8322a30e326476fe78d0d0b67966e8bd9a89d5d5745e84c5"
+    },
+    {
+      "file": "references/sirna_library/seedmatchr_111_get_seed.txt",
+      "git_bytes": 1816,
+      "git_sha256": "f72c0ee41a849b5fd075fb7ca3de5014e072b5ce94796ac59e464f4add9da306",
+      "local_sha256": "f72c0ee41a849b5fd075fb7ca3de5014e072b5ce94796ac59e464f4add9da306"
+    },
+    {
+      "file": "references/sirna_library/seedmatchr_111_get_seed_source.txt",
+      "git_bytes": 4045,
+      "git_sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+      "local_sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9"
+    },
+    {
+      "file": "references/sirna_library/seedmatchr_paper_extracted_text.txt",
+      "git_bytes": 15947,
+      "git_sha256": "2a3c9b1477964896182ff11c7c9adb70286527311979f46f2ee8f44a5a73a2e5",
+      "local_sha256": "2a3c9b1477964896182ff11c7c9adb70286527311979f46f2ee8f44a5a73a2e5"
+    },
+    {
+      "file": "references/sirna_library/sidirect_paper_extracted_text.txt",
+      "git_bytes": 19627,
+      "git_sha256": "f9013c3f5940f6cb597e9d42195586720a044de2222b14820891542d26e2f7b3",
+      "local_sha256": "f9013c3f5940f6cb597e9d42195586720a044de2222b14820891542d26e2f7b3"
+    },
+    {
+      "file": "references/sirna_library/sidirect_publisher_paper.pdf",
+      "git_bytes": 697982,
+      "git_sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd",
+      "local_sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd"
+    },
+    {
+      "file": "references/sirna_library/sidirect_publisher_paper.pdf.pages.json",
+      "git_bytes": 43410,
+      "git_sha256": "846076684e8ec50185f0a8178a8422fe0f888a2a2f879f75ba5f231bd8cc39ca",
+      "local_sha256": "846076684e8ec50185f0a8178a8422fe0f888a2a2f879f75ba5f231bd8cc39ca"
+    },
+    {
+      "file": "references/sirna_library/sources.json",
+      "git_bytes": 5611,
+      "git_sha256": "bab3fc8132b6588d9cde45b3cd21f6047c088ff879d86e39219bb01413c7f537",
+      "local_sha256": "bab3fc8132b6588d9cde45b3cd21f6047c088ff879d86e39219bb01413c7f537"
+    },
+    {
+      "file": "requirements.txt",
+      "git_bytes": 31,
+      "git_sha256": "1ec75c576b89da5fc73e5ba7f5c6bb429643809f69b3b8d7a0b9f3ef4ad9cdad",
+      "local_sha256": "3e30c7392df3942a470d77a3c845c0019f2307b546c10a4e35ac0a09db714e69",
+      "difference": "CRLF/LF line endings only"
+    },
+    {
+      "file": "research/2026-10-23_literature/development_protocol.json",
+      "git_bytes": 4544,
+      "git_sha256": "8ef13d3084564565e31e4e6d1c5ad5b25062ce20b9027f2dbaa56772c6211d93",
+      "local_sha256": "8ef13d3084564565e31e4e6d1c5ad5b25062ce20b9027f2dbaa56772c6211d93"
+    },
+    {
+      "file": "research/2026-10-23_literature/EXECUTION.md",
+      "git_bytes": 4043,
+      "git_sha256": "b314ee7848b1f15c8f262c49a9e6883a1efc117b43befc190812452d407ec4b5",
+      "local_sha256": "b314ee7848b1f15c8f262c49a9e6883a1efc117b43befc190812452d407ec4b5"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/citation_transport_TEST_ONLY.json",
+      "git_bytes": 124099,
+      "git_sha256": "6c0f84a94108173e71ae1d87dad75e85584eddd5c48d80d81f0059e52034cc92",
+      "local_sha256": "6c0f84a94108173e71ae1d87dad75e85584eddd5c48d80d81f0059e52034cc92"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/development_checks.json",
+      "git_bytes": 21581,
+      "git_sha256": "a31ff9b6960de57e9213b3d28811ed9a4c0d2ad086b774b7038e77296023912b",
+      "local_sha256": "a31ff9b6960de57e9213b3d28811ed9a4c0d2ad086b774b7038e77296023912b"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/import_records.json",
+      "git_bytes": 13715,
+      "git_sha256": "69412bdbcf08f7f99c0e5d7596b1c661d8b95e735ee14d3fe00aaca27cc23f1f",
+      "local_sha256": "69412bdbcf08f7f99c0e5d7596b1c661d8b95e735ee14d3fe00aaca27cc23f1f"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/library_export.zip",
+      "git_bytes": 659406,
+      "git_sha256": "50cc6067fd4fdcb40cdec61ee4f56fe256cb452b87d1883321c3341a3fe2cf63",
+      "local_sha256": "50cc6067fd4fdcb40cdec61ee4f56fe256cb452b87d1883321c3341a3fe2cf63"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/local_ui_search.png",
+      "git_bytes": 92916,
+      "git_sha256": "2d344ca6d24a6a84271094345839e1949fedbe6c9763de337ff37994fc0d7c68",
+      "local_sha256": "2d344ca6d24a6a84271094345839e1949fedbe6c9763de337ff37994fc0d7c68"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/no_evidence_offline_record.json",
+      "git_bytes": 9262,
+      "git_sha256": "dc53c4732a7b871966575f47c946e77867ae91aed723eb52233a1698b8fface6",
+      "local_sha256": "dc53c4732a7b871966575f47c946e77867ae91aed723eb52233a1698b8fface6"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/retrieval_records.json",
+      "git_bytes": 333868,
+      "git_sha256": "d053f8f1575dac8054e99c6ba2dda76811f8cc2c1ca34988710b305c55b1f754",
+      "local_sha256": "d053f8f1575dac8054e99c6ba2dda76811f8cc2c1ca34988710b305c55b1f754"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/unit_checks_01.json",
+      "git_bytes": 212,
+      "git_sha256": "6df2aafccf007f3e930236536b9d0e1b779955324aac998280937e67a860b83f",
+      "local_sha256": "6df2aafccf007f3e930236536b9d0e1b779955324aac998280937e67a860b83f"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/unit_checks_01.txt",
+      "git_bytes": 20562,
+      "git_sha256": "38c2904ecc1391f32ed779c177a2dcb345c7e85043d9e841c339b3f4b80ec0cd",
+      "local_sha256": "38c2904ecc1391f32ed779c177a2dcb345c7e85043d9e841c339b3f4b80ec0cd"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/unit_checks_02.json",
+      "git_bytes": 212,
+      "git_sha256": "c102a10cfc673c12cdbd6787be9fe4b9a751800326bd1e9d8cd350e05890bbe5",
+      "local_sha256": "c102a10cfc673c12cdbd6787be9fe4b9a751800326bd1e9d8cd350e05890bbe5"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/unit_checks_02.txt",
+      "git_bytes": 20562,
+      "git_sha256": "87fddcb47f898d8451acffa913c6cfb5ddbb78bd1dbf0a1b23feba2ee6ec21ac",
+      "local_sha256": "87fddcb47f898d8451acffa913c6cfb5ddbb78bd1dbf0a1b23feba2ee6ec21ac"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/citation_transport_TEST_ONLY.json",
+      "git_bytes": 136262,
+      "git_sha256": "88a5455eff81f9f1c03ffa482bc25d827b1391568f790c712f722f2fbd635f1c",
+      "local_sha256": "88a5455eff81f9f1c03ffa482bc25d827b1391568f790c712f722f2fbd635f1c"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/development_checks.json",
+      "git_bytes": 21730,
+      "git_sha256": "7fc1b06ce75fbbbf5ff9a58ecbc2cb83684d0781cc32c64533e4bbefa44ebac3",
+      "local_sha256": "7fc1b06ce75fbbbf5ff9a58ecbc2cb83684d0781cc32c64533e4bbefa44ebac3"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/import_records.json",
+      "git_bytes": 13715,
+      "git_sha256": "29c5e882ea166237593715e582eb6be82b7c5d5f8bafb0171cef024ce988a369",
+      "local_sha256": "29c5e882ea166237593715e582eb6be82b7c5d5f8bafb0171cef024ce988a369"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/library_export.zip",
+      "git_bytes": 659404,
+      "git_sha256": "b69d0167e94224a3abeb7e88ed4abe85dcfef7377507fba0c7044e365e54223f",
+      "local_sha256": "b69d0167e94224a3abeb7e88ed4abe85dcfef7377507fba0c7044e365e54223f"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/no_evidence_offline_record.json",
+      "git_bytes": 9532,
+      "git_sha256": "a5865c8153b1b36311f71fbe5db3314d579c906fde37626541f2a77b84ef777a",
+      "local_sha256": "a5865c8153b1b36311f71fbe5db3314d579c906fde37626541f2a77b84ef777a"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/retrieval_records.json",
+      "git_bytes": 371440,
+      "git_sha256": "48900e93d67edd91c782f66ffb90f8a7e736879f5c1c74b3f8634e642771833b",
+      "local_sha256": "48900e93d67edd91c782f66ffb90f8a7e736879f5c1c74b3f8634e642771833b"
+    },
+    {
+      "file": "research/2026-10-23_literature/README.md",
+      "git_bytes": 5286,
+      "git_sha256": "28ec347ac9e52f800a09cb67e644731c5bdd067efcb0653a595f204c14db8b48",
+      "local_sha256": "28ec347ac9e52f800a09cb67e644731c5bdd067efcb0653a595f204c14db8b48"
+    },
+    {
+      "file": "research.py",
+      "git_bytes": 10014,
+      "git_sha256": "68b5fe3da4f076e7e06331da166fa8dbeedc2bbadfecc267209b8759775c3be3",
+      "local_sha256": "92374d857e8b8d08f972c8149efc1c533ae91a2c4c5ca6b56285c2f6eccf8f38",
+      "difference": "CRLF/LF line endings only"
+    },
+    {
+      "file": "runtime_info.py",
+      "git_bytes": 1296,
+      "git_sha256": "b1fe3c522613e364f3e1873dd7b234f8d51d08ac9a076e2a75c14edfaa345c50",
+      "local_sha256": "35678f09c6591596fc42ba1db994ff420d9eea7af270f0fc8450ac5e8283f547",
+      "difference": "CRLF/LF line endings only"
+    },
+    {
+      "file": "test_literature.py",
+      "git_bytes": 12136,
+      "git_sha256": "b526cffa98366616fdfff1977ee70ddf538debe912b1d3080e1e5452855c15fe",
+      "local_sha256": "b526cffa98366616fdfff1977ee70ddf538debe912b1d3080e1e5452855c15fe"
+    }
+  ]
+}
