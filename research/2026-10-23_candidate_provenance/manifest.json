@@ -130,8 +130,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11584,
-      "sha256": "487a893c8a9fed1a46daf2d3191590524cb3ec9f72b400b313a6c7970089668f"
+      "bytes": 11927,
+      "sha256": "6a1b8c9ea14cc5ae67700e189a7e6969db041aa4cb3838eae4d7c0ffeae7364d"
     },
     {
       "path": "selection_104_audit.tsv",
@@ -145,8 +145,8 @@
     },
     {
       "path": "SYNC.md",
-      "bytes": 1914,
-      "sha256": "eafd69aca99588216caea08facdf219747530ccb67b0d1f96de30ecd087750a2"
+      "bytes": 2417,
+      "sha256": "7703c0f710a82ecc144c634536a5994331c83558227ffb8ca3c470f85ca2372c"
     }
   ],
   "manifest_self_excluded": true

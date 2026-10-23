@@ -2,6 +2,8 @@
 
 2026-10-23。实际从main `3831cb555a7e8e3ab572e26193e41b33eb0498df`接手；按[21:16科研复核](../../docs/reviews/20261023_2116_fast_paper_scope_and_codex_tasks.md)执行。本轮只核查来源，不改变候选、分数、排序、网站或旧54条回答。
 
+从Drive单独阅读本文件时，配套文件请打开[GitHub完整材料目录](https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/tree/main/research/2026-10-23_candidate_provenance)；另有[Drive原始证据ZIP](https://drive.google.com/file/d/1zl729Uq-uRikrazwAx7x_ionBiYy7Ju3/view)。正文的相对文件链接以GitHub目录为准。
+
 **结论：找回了siDirect提交文件、104条网页原始输出、当时的逐条筛选记录和两个科学工具的输入/源码/输出/日志。104→9按旧脚本复算一致，九条序列、方向、坐标和网站导入表对得上。它们可以作为有来源的固定开发候选，不能因此称为实验有效或安全的siRNA。**
 
 ## 文件怎么用
