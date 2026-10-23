@@ -1,5 +1,7 @@
 # 执行任务与验收
 
+**2026-10-23优先任务：**[21:16范围与任务A/B](reviews/20261023_2116_fast_paper_scope_and_codex_tasks.md)。用户已放弃状态相关风险重排序；小而完整的siRNA辅助Agent文章，不微调、不扩大湿实验，TPM只注释。[A来源核查已交](../research/2026-10-23_candidate_provenance/README.md)，B小型文献库未执行，联系评审稍后讨论。下列原P0账号恢复与54条是历史执行清单，不能自动重新启动或覆盖旧失败；当前进展以WORKBOARD/STATUS为准。
+
 按优先级连续推进可做部分，不等待所有外部条件齐备；遇到依赖阻断时报告具体缺项并继续独立工作。
 
 **用户当前目标是迁移主参考文献、快速形成结果。先执行[PAPER_MIGRATION_FAST_TRACK.md](PAPER_MIGRATION_FAST_TRACK.md)。下面P1的重型新序列计算接入可并行推进，不作为现有候选Auto案例和三组开发预评估的前置条件。**

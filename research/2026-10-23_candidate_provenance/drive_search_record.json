@@ -1,0 +1,17 @@
+{
+  "date_local": "2026-10-23",
+  "record_kind": "current_operation_summary_not_historical_provider_receipt",
+  "searches": [
+    {"query": "siDirect", "result": "Older project documents found, no matching default-nine raw source used from these results"},
+    {"query": "ARPE19_candidates_20261016", "matching_files_returned": 0},
+    {"query": "ARPE19_A完成", "matching_files_returned": 0},
+    {"query": "siRNA-GPT", "item_type": "folder", "matching_folders_returned": 0}
+  ],
+  "existing_project_folder": {
+    "id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+    "name": "AI for biomedical discovery",
+    "located_via": "Parent metadata of existing project README; folder metadata and contents read before upload"
+  },
+  "historical_source_used": "Recovered local ARPE19_candidates_20261016 source directory and prior project ZIP",
+  "boundary": "Empty bounded queries do not establish absence from all Drive. Recovered ChatGPT Library receipt is not a Google Drive receipt. Current new Drive upload is recorded separately in SYNC.md."
+}

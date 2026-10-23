@@ -1,5 +1,7 @@
 # 已有结果、图表与原始评价记录
 
+2026-10-23新增：[任务A：默认九条来源核查](2026-10-23_candidate_provenance/README.md)，含原始104条设计响应、真实104→9筛选、九条序列/方向/坐标、OligoFormer/SeedMatchR旧运行及完整计数核对、原始成功/失败日志和缺项。本轮无新模型推理或新54条。用户已放弃状态相关风险重排序；旧图和旧路线保留为历史，不追溯改成当前新成果。
+
 本目录为真实产物的Git交接版，未运行的模型结果没有补造。全部文件校验见[manifest.json](manifest.json)，可运行`python scripts/inspect_research_results.py`检查。
 
 ## 2026-10-19原型与表达背景

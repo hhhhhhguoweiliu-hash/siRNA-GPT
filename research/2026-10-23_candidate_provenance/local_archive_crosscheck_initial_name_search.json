@@ -1,0 +1,582 @@
+{
+  "checked_at_utc": "2026-10-23T13:42:10.284533+00:00",
+  "prior_zip": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\deliverables\\ARPE19_candidates_20261016_v0.1.zip",
+  "comparisons": [
+    {
+      "recovered_file": "author_archive.log",
+      "prior_zip_member": "environment/author_archive.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "author_window_scan.log",
+      "prior_zip_member": "environment/author_window_scan.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "build_package.log",
+      "prior_zip_member": "environment/build_package.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "build_package_ascii.log",
+      "prior_zip_member": "environment/build_package_ascii.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "build_package_final.log",
+      "prior_zip_member": "environment/build_package_final.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "build_package_verified.log",
+      "prior_zip_member": "environment/build_package_verified.log",
+      "identical_bytes": false
+    },
+    {
+      "recovered_file": "build_reference.log",
+      "prior_zip_member": "environment/build_reference.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "build_reference.py",
+      "prior_zip_member": "scripts/build_reference.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "combine_evidence.log",
+      "prior_zip_member": "environment/combine_evidence.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "combine_evidence_final.log",
+      "prior_zip_member": "environment/combine_evidence_final.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "combine_evidence_validated.log",
+      "prior_zip_member": "environment/combine_evidence_validated.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "dsir_parse_qa.log",
+      "prior_zip_member": "environment/dsir_parse_qa.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "expression_map.log",
+      "prior_zip_member": "environment/expression_map.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "fetch.log",
+      "prior_zip_member": "environment/fetch.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "fetch_phase2.log",
+      "prior_zip_member": "environment/fetch_phase2.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "fetch_seed_code.py",
+      "prior_zip_member": "scripts/fetch_seed_code.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "IRGM_alignment_check.log",
+      "prior_zip_member": "environment/IRGM_alignment_check.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/OligoFormer/README.md",
+      "prior_zip_member": "README.md",
+      "identical_bytes": false
+    },
+    {
+      "recovered_file": "official_tools/OligoFormer/scripts/infer.py",
+      "prior_zip_member": "environment/OligoFormer_source/infer.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/OligoFormer/scripts/loader.py",
+      "prior_zip_member": "environment/OligoFormer_source/loader.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/OligoFormer/scripts/loader_infer.py",
+      "prior_zip_member": "environment/OligoFormer_source/loader_infer.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/OligoFormer/scripts/model.py",
+      "prior_zip_member": "environment/OligoFormer_source/model.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/RNA-FM/download_manifest.json",
+      "prior_zip_member": "04_candidates/tool_raw/download_manifest.json",
+      "identical_bytes": false
+    },
+    {
+      "recovered_file": "official_tools/RNA-FM/source/fm/model.py",
+      "prior_zip_member": "environment/OligoFormer_source/model.py",
+      "identical_bytes": false
+    },
+    {
+      "recovered_file": "official_tools/RNA-FM/source/README.md",
+      "prior_zip_member": "README.md",
+      "identical_bytes": false
+    },
+    {
+      "recovered_file": "official_tools/SeedMatchR_1.1.1/commit.json",
+      "prior_zip_member": "environment/SeedMatchR_1.1.1_source/commit.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/SeedMatchR_1.1.1/DESCRIPTION",
+      "prior_zip_member": "environment/SeedMatchR_1.1.1_source/DESCRIPTION",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/SeedMatchR_1.1.1/man/get_seed.Rd",
+      "prior_zip_member": "environment/SeedMatchR_1.1.1_source/man/get_seed.Rd",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/SeedMatchR_1.1.1/man/SeedMatchR.Rd",
+      "prior_zip_member": "environment/SeedMatchR_1.1.1_source/man/SeedMatchR.Rd",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/SeedMatchR_1.1.1/manifest.json",
+      "prior_zip_member": "environment/SeedMatchR_1.1.1_source/manifest.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/SeedMatchR_1.1.1/R/get_seed.R",
+      "prior_zip_member": "environment/SeedMatchR_1.1.1_source/R/get_seed.R",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/SeedMatchR_1.1.1/R/SeedMatchR.R",
+      "prior_zip_member": "environment/SeedMatchR_1.1.1_source/R/SeedMatchR.R",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "official_tools/SeedMatchR_1.1.1/tests/testthat/test-SeedMatchR.R",
+      "prior_zip_member": "environment/SeedMatchR_1.1.1_source/tests/testthat/test-SeedMatchR.R",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_cpu.log",
+      "prior_zip_member": "environment/oligo_cpu.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_cpu_retry.log",
+      "prior_zip_member": "environment/oligo_cpu_retry.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_cpu_validated.log",
+      "prior_zip_member": "environment/oligo_cpu_validated.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_import_probe.log",
+      "prior_zip_member": "environment/oligo_import_probe.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_raw/candidate.status",
+      "prior_zip_member": "04_candidates/tool_raw/OligoFormer/candidate.status",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_raw/environment_pip_freeze.txt",
+      "prior_zip_member": "04_candidates/tool_raw/OligoFormer/environment_pip_freeze.txt",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_raw/example.status",
+      "prior_zip_member": "04_candidates/tool_raw/OligoFormer/example.status",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_raw/official_example_cpu.tsv",
+      "prior_zip_member": "04_candidates/tool_raw/OligoFormer/official_example_cpu.tsv",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_raw/official_loader_parity.json",
+      "prior_zip_member": "04_candidates/tool_raw/OligoFormer/official_loader_parity.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_raw/run_manifest.json",
+      "prior_zip_member": "04_candidates/tool_raw/OligoFormer/run_manifest.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "oligo_raw/VEGFA_candidates_cpu.tsv",
+      "prior_zip_member": "04_candidates/tool_raw/OligoFormer/VEGFA_candidates_cpu.tsv",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "parse_sidirect.log",
+      "prior_zip_member": "environment/parse_sidirect.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "parse_sidirect.py",
+      "prior_zip_member": "scripts/parse_sidirect.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "pip_oligo.log",
+      "prior_zip_member": "environment/pip_oligo.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "pip_ptflops.log",
+      "prior_zip_member": "environment/pip_ptflops.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "pip_small.log",
+      "prior_zip_member": "environment/pip_small.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "pip_small_retry.log",
+      "prior_zip_member": "environment/pip_small_retry.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "prepare_official_tools.py",
+      "prior_zip_member": "scripts/prepare_official_tools.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "prepare_tools.log",
+      "prior_zip_member": "environment/prepare_tools.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "prepared/candidate_pool_summary.json",
+      "prior_zip_member": "04_candidates/reference/candidate_pool_summary.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "prepared/reference_summary.json",
+      "prior_zip_member": "04_candidates/reference/reference_summary.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "prepared/refseq_utr3_representative.fasta",
+      "prior_zip_member": "04_candidates/reference/refseq_utr3_representative.fasta",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "prepared/utr_manifest_representative.tsv",
+      "prior_zip_member": "04_candidates/reference/utr_manifest_representative.tsv",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "prepared/VEGFA_transcript_manifest.tsv",
+      "prior_zip_member": "04_candidates/reference/VEGFA_transcript_manifest.tsv",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "prepared/VEGFA_vendor_versions.fasta",
+      "prior_zip_member": "04_candidates/reference/VEGFA_vendor_versions.fasta",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "public_sources/download_manifest.json",
+      "prior_zip_member": "04_candidates/tool_raw/download_manifest.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "public_sources/download_manifest_phase2.json",
+      "prior_zip_member": "04_candidates/tool_raw/download_manifest_phase2.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "public_sources/official_tool_sources_manifest.json",
+      "prior_zip_member": "04_candidates/tool_raw/official_tool_sources_manifest.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "public_sources/oligo_commit.json",
+      "prior_zip_member": "04_candidates/tool_raw/oligo_commit.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "public_sources/rnafm_commit.json",
+      "prior_zip_member": "04_candidates/tool_raw/rnafm_commit.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "public_sources/VEGFA_vendor_versions.gb",
+      "prior_zip_member": "04_candidates/tool_raw/VEGFA_vendor_versions.gb",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "R_probe.log",
+      "prior_zip_member": "environment/R_probe.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "reference/README_GCF_000001405.40-RS_2025_08",
+      "prior_zip_member": "04_candidates/reference/README_GCF_000001405.40-RS_2025_08",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "reference/reference_download_manifest.json",
+      "prior_zip_member": "04_candidates/reference/reference_download_manifest.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "reference_download.log",
+      "prior_zip_member": "environment/reference_download.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "risk_raw/nearperfect.status",
+      "prior_zip_member": "04_candidates/tool_raw/Seed_and_search/nearperfect.status",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "risk_raw/nearperfect_author_window.status",
+      "prior_zip_member": "04_candidates/tool_raw/Seed_and_search/nearperfect_author_window.status",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "risk_raw/seed_counts_official.tsv",
+      "prior_zip_member": "04_candidates/tool_raw/Seed_and_search/seed_counts_official.tsv",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "risk_raw/seed_example.status",
+      "prior_zip_member": "04_candidates/tool_raw/Seed_and_search/seed_example.status",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "risk_raw/seed_motifs.tsv",
+      "prior_zip_member": "04_candidates/tool_raw/Seed_and_search/seed_motifs.tsv",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "risk_raw/seed_scan.status",
+      "prior_zip_member": "04_candidates/tool_raw/Seed_and_search/seed_scan.status",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "risk_raw/SeedMatchR_official_get_seed_example.txt",
+      "prior_zip_member": "04_candidates/tool_raw/Seed_and_search/SeedMatchR_official_get_seed_example.txt",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "risk_raw/sessionInfo.txt",
+      "prior_zip_member": "04_candidates/tool_raw/Seed_and_search/sessionInfo.txt",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "risk_scan.log",
+      "prior_zip_member": "environment/risk_scan.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "rnafm_download.log",
+      "prior_zip_member": "environment/rnafm_download.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "run_oligo_cpu.py",
+      "prior_zip_member": "scripts/run_oligo_cpu.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "run_seed_and_search.R",
+      "prior_zip_member": "scripts/run_seed_and_search.R",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "run_sidirect_public.py",
+      "prior_zip_member": "scripts/run_sidirect_public.py",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "seed_code.log",
+      "prior_zip_member": "environment/seed_code.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "sidirect.log",
+      "prior_zip_member": "environment/sidirect.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "sidirect_raw/official_sample_request.json",
+      "prior_zip_member": "04_candidates/tool_raw/siDirect/official_sample_request.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "sidirect_raw/official_sample_response.html",
+      "prior_zip_member": "04_candidates/tool_raw/siDirect/official_sample_response.html",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "sidirect_raw/run_manifest.json",
+      "prior_zip_member": "04_candidates/tool_raw/siDirect/run_manifest.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "sidirect_raw/VEGFA_NM003376_6_request.json",
+      "prior_zip_member": "04_candidates/tool_raw/siDirect/VEGFA_NM003376_6_request.json",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "sidirect_raw/VEGFA_NM003376_6_response.html",
+      "prior_zip_member": "04_candidates/tool_raw/siDirect/VEGFA_NM003376_6_response.html",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "sidirect_retry.log",
+      "prior_zip_member": "environment/sidirect_retry.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "sidirect_run.log",
+      "prior_zip_member": "environment/sidirect_run.log",
+      "identical_bytes": true
+    },
+    {
+      "recovered_file": "weight_alternatives.log",
+      "prior_zip_member": "environment/weight_alternatives.log",
+      "identical_bytes": true
+    }
+  ],
+  "prior_zip_sha256": "838735058de7de644ea655d59eafca31c2921e1e59e50cbb7e4a27e93269253e",
+  "prior_zip_bytes": 48379161,
+  "prior_zip_crc_pass": true,
+  "ambiguous_or_absent_members_not_claimed": 58,
+  "rnafm_source_archive_checks": [
+    {
+      "file": "official_tools/RNA-FM/source/environment.yml",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/__init__.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/axial_attention.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/constants.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/data.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/downstream/__init__.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/downstream/backbones.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/downstream/baseline.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/downstream/downstream_module.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/downstream/pairwise_predictor/__init__.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/downstream/pairwise_predictor/linear_dot_product.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/downstream/pairwise_predictor/pairwise_concat.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/downstream/weights_init.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/downstream/weights_load.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/model/__init__.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/model/esm1.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/model.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/modules.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/multihead_attention.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/pretrained.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/fm/version.py",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/LICENSE",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/README.md",
+      "same_as_pinned_source_archive": true
+    },
+    {
+      "file": "official_tools/RNA-FM/source/setup.py",
+      "same_as_pinned_source_archive": true
+    }
+  ],
+  "oct18_to_repository": [
+    {
+      "repository_file": "data/candidates.tsv",
+      "source_file": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_agent_v2_20261018\\deliverable\\04_tools\\legacy_candidate_pool_NOT_ORDER_READY.tsv",
+      "identical_bytes": true
+    },
+    {
+      "repository_file": "data/historical_scores.tsv",
+      "source_file": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_agent_v2_20261018\\deliverable\\04_tools\\VEGFA_candidates_cpu.tsv",
+      "identical_bytes": true
+    },
+    {
+      "repository_file": "data/VEGFA.fasta",
+      "source_file": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_agent_v2_20261018\\deliverable\\03_reference\\VEGFA_exact_accession_sequences.fasta",
+      "identical_bytes": true
+    }
+  ],
+  "all_compared_bytes_match": false,
+  "note": "Local copies and recorded times corroborate preservation; not independent authentication of original execution time."
+}

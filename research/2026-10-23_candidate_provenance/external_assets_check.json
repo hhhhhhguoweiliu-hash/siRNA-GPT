@@ -1,0 +1,65 @@
+[
+  {
+    "path": "official_tools/OligoFormer/model/best_model.pth",
+    "original_path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\official_tools\\OligoFormer\\model\\best_model.pth",
+    "bytes": 5804894,
+    "sha256": "8c2fb4bc847e20c63dfe69381c5dc5c341be71e65c011f4e9a4cd6fdb0e34eca",
+    "expected_sha256": "8c2fb4bc847e20c63dfe69381c5dc5c341be71e65c011f4e9a4cd6fdb0e34eca",
+    "matches_previous_manifest": true,
+    "included_in_zip": false
+  },
+  {
+    "path": "official_tools/RNA-FM/RNA-FM_pretrained.pth",
+    "original_path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\official_tools\\RNA-FM\\RNA-FM_pretrained.pth",
+    "bytes": 1194424423,
+    "sha256": "5b5d7d87b37c291ef42c140ef9edf7aea29f255fa2a4fd435f776c52e93d5e99",
+    "expected_sha256": "5b5d7d87b37c291ef42c140ef9edf7aea29f255fa2a4fd435f776c52e93d5e99",
+    "matches_previous_manifest": true,
+    "included_in_zip": false
+  },
+  {
+    "path": "official_tools/OligoFormer/scripts/model.py",
+    "original_path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\official_tools\\OligoFormer\\scripts\\model.py",
+    "bytes": 11505,
+    "sha256": "9bb055a5d08eaddd0dad7b3d8df90975f150fa2b23147b36adf0583ad015bc13",
+    "expected_sha256": "9bb055a5d08eaddd0dad7b3d8df90975f150fa2b23147b36adf0583ad015bc13",
+    "matches_previous_manifest": true,
+    "included_in_zip": true
+  },
+  {
+    "path": "official_tools/OligoFormer/scripts/infer.py",
+    "original_path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\official_tools\\OligoFormer\\scripts\\infer.py",
+    "bytes": 22032,
+    "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+    "expected_sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+    "matches_previous_manifest": true,
+    "included_in_zip": true
+  },
+  {
+    "path": "official_tools/SeedMatchR_1.1.1/R/get_seed.R",
+    "original_path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\official_tools\\SeedMatchR_1.1.1\\R\\get_seed.R",
+    "bytes": 4045,
+    "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+    "expected_sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+    "matches_previous_manifest": true,
+    "included_in_zip": true
+  },
+  {
+    "path": "official_tools/SeedMatchR_1.1.1/R/SeedMatchR.R",
+    "original_path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\official_tools\\SeedMatchR_1.1.1\\R\\SeedMatchR.R",
+    "bytes": 3514,
+    "sha256": "78e0fa70b7a43de3cd6d61f61e81deef5dda1b318a738dcb3d09decbb6972a17",
+    "expected_sha256": "78e0fa70b7a43de3cd6d61f61e81deef5dda1b318a738dcb3d09decbb6972a17",
+    "matches_previous_manifest": true,
+    "included_in_zip": true
+  },
+  {
+    "path": "prepared/refseq_utr3_representative.fasta",
+    "original_path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\prepared\\refseq_utr3_representative.fasta",
+    "bytes": 37782141,
+    "sha256": "8a7a99ecc7346c50c76e37cd24cd851ce96adb348cc447f007233e2f10aac779",
+    "expected_sha256": "8a7a99ecc7346c50c76e37cd24cd851ce96adb348cc447f007233e2f10aac779",
+    "matches_previous_manifest": true,
+    "included_in_zip": true
+  }
+]

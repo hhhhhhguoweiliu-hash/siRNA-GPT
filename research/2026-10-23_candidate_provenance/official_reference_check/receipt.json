@@ -1,0 +1,102 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/lulab/OligoFormer/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/infer.py",
+    "historical_source": "official_tools/OligoFormer/scripts/infer.py",
+    "requested_at_utc": "2026-10-23T13:39:24.914128+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/lulab/OligoFormer/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/infer.py",
+    "status": "FETCHED",
+    "bytes": 22032,
+    "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+    "saved_file": "official_tools__OligoFormer__scripts__infer.py",
+    "matches_recovered_bytes": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lulab/OligoFormer/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/model.py",
+    "historical_source": "official_tools/OligoFormer/scripts/model.py",
+    "requested_at_utc": "2026-10-23T13:39:24.915126+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/lulab/OligoFormer/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/model.py",
+    "status": "FETCHED",
+    "bytes": 11505,
+    "sha256": "9bb055a5d08eaddd0dad7b3d8df90975f150fa2b23147b36adf0583ad015bc13",
+    "saved_file": "official_tools__OligoFormer__scripts__model.py",
+    "matches_recovered_bytes": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lulab/OligoFormer/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/loader.py",
+    "historical_source": "official_tools/OligoFormer/scripts/loader.py",
+    "requested_at_utc": "2026-10-23T13:39:24.916125+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/lulab/OligoFormer/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/loader.py",
+    "status": "FETCHED",
+    "bytes": 4823,
+    "sha256": "64c4063387563896b32c151d3e6447a48248d59908d9d1673d8264e60a6349ca",
+    "saved_file": "official_tools__OligoFormer__scripts__loader.py",
+    "matches_recovered_bytes": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lulab/OligoFormer/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/loader_infer.py",
+    "historical_source": "official_tools/OligoFormer/scripts/loader_infer.py",
+    "requested_at_utc": "2026-10-23T13:39:24.917129+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/lulab/OligoFormer/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/loader_infer.py",
+    "status": "FETCHED",
+    "bytes": 2347,
+    "sha256": "a628aafd2d4892f80d88f64c0361ecee33b4eb8badb9247dc8aa478d71869631",
+    "saved_file": "official_tools__OligoFormer__scripts__loader_infer.py",
+    "matches_recovered_bytes": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ml4bio/RNA-FM/348951516e0963d22bbb33b3c9fc18c89081d38e/fm/pretrained.py",
+    "historical_source": "official_tools/RNA-FM/source/fm/pretrained.py",
+    "requested_at_utc": "2026-10-23T13:39:26.112299+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/ml4bio/RNA-FM/348951516e0963d22bbb33b3c9fc18c89081d38e/fm/pretrained.py",
+    "status": "FETCHED",
+    "bytes": 7562,
+    "sha256": "ab7271f8dbb876dbc5e2010e2d88b086088aada096f04149436d315a4f256aac",
+    "saved_file": "official_tools__RNA-FM__source__fm__pretrained.py",
+    "matches_recovered_bytes": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cran/SeedMatchR/b462d4a00520172622f9d8a5a8842d34442c2e68/R/SeedMatchR.R",
+    "historical_source": "official_tools/SeedMatchR_1.1.1/R/SeedMatchR.R",
+    "requested_at_utc": "2026-10-23T13:39:26.161338+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/cran/SeedMatchR/b462d4a00520172622f9d8a5a8842d34442c2e68/R/SeedMatchR.R",
+    "status": "FETCHED",
+    "bytes": 3514,
+    "sha256": "78e0fa70b7a43de3cd6d61f61e81deef5dda1b318a738dcb3d09decbb6972a17",
+    "saved_file": "official_tools__SeedMatchR_1.1.1__R__SeedMatchR.R",
+    "matches_recovered_bytes": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cran/SeedMatchR/b462d4a00520172622f9d8a5a8842d34442c2e68/R/get_seed.R",
+    "historical_source": "official_tools/SeedMatchR_1.1.1/R/get_seed.R",
+    "requested_at_utc": "2026-10-23T13:39:26.232239+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/cran/SeedMatchR/b462d4a00520172622f9d8a5a8842d34442c2e68/R/get_seed.R",
+    "status": "FETCHED",
+    "bytes": 4045,
+    "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+    "saved_file": "official_tools__SeedMatchR_1.1.1__R__get_seed.R",
+    "matches_recovered_bytes": true
+  },
+  {
+    "url": "https://cran.r-project.org/src/contrib/Archive/SeedMatchR/SeedMatchR_1.1.1.tar.gz",
+    "historical_source": null,
+    "requested_at_utc": "2026-10-23T13:39:26.308157+00:00",
+    "http_status": 200,
+    "final_url": "https://cran.r-project.org/src/contrib/Archive/SeedMatchR/SeedMatchR_1.1.1.tar.gz",
+    "status": "FETCHED",
+    "bytes": 634809,
+    "sha256": "3efdda14dd7d8aa870ec0e0f5af6d8016a6589fb478d670addd0bff0c1820c8d",
+    "saved_file": "SeedMatchR_1.1.1.tar.gz",
+    "release_source_comparison": {
+      "DESCRIPTION": true,
+      "R/get_seed.R": true,
+      "R/SeedMatchR.R": true
+    }
+  }
+]

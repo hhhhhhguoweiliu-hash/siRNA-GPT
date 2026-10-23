@@ -1,0 +1,153 @@
+{
+  "takeover_main": "3831cb555a7e8e3ab572e26193e41b33eb0498df",
+  "kind": "provenance_audit_not_new_scientific_inference",
+  "historical_54_raw_sha256": "55664e58cea8181046ddc73c3740b73960589380d02b95719f3c6c0e1334e505",
+  "files": [
+    {
+      "path": "audit_candidates.py",
+      "bytes": 24097,
+      "sha256": "a9851064ba75ae963d595519b13a672cd3597fdcb02f95820dfe1f7398f5e58a"
+    },
+    {
+      "path": "audit_result.json",
+      "bytes": 65935,
+      "sha256": "b4df17728115224029da0f474503ad29b92673f2c29e7223f14ee4d21c6b2fa8"
+    },
+    {
+      "path": "candidate_trace.json",
+      "bytes": 18365,
+      "sha256": "36749d834bda43266fd344a607674fbd46bf07468b0e0041df417fdddf6c7e9b"
+    },
+    {
+      "path": "candidate_trace.tsv",
+      "bytes": 7713,
+      "sha256": "b4be1113ba46590a7fcbc5d21abb70dbffc1595231cee9c59b8f5ccd25579c31"
+    },
+    {
+      "path": "check_official_sources.py",
+      "bytes": 2655,
+      "sha256": "e9fc0a84f91fc05cbac0e82f2f7a800e7df2bfb66c19915de71153c417aab31d"
+    },
+    {
+      "path": "COMMANDS.md",
+      "bytes": 3909,
+      "sha256": "6e84a792bfd0c9d6049e195085221542925c6e5c420b502c54cbc65371841712"
+    },
+    {
+      "path": "crosscheck_local_sources.py",
+      "bytes": 5256,
+      "sha256": "684cee8218bc0c23b868c812aa2e8beba8c1bd2592a542d8970d883ea1c9a7c4"
+    },
+    {
+      "path": "drive_search_record.json",
+      "bytes": 1040,
+      "sha256": "df26f22dbbb50515ec83709cc73626507ce56f9631ea17ac85c2ae1375a501bf"
+    },
+    {
+      "path": "evidence_gaps.json",
+      "bytes": 2435,
+      "sha256": "dad8c111bba806993deafe42e8636f214ab9c40a3e5f4b9c119a5077a2cf47c0"
+    },
+    {
+      "path": "EXECUTION.md",
+      "bytes": 2353,
+      "sha256": "ba9db84fd15d314ae78812245cab66d93c55a22dda4c77bd0aacb398ebaeec59"
+    },
+    {
+      "path": "external_assets_check.json",
+      "bytes": 3727,
+      "sha256": "cf3fe3e5153a3cd48e19d04c6297528dd61c28ef421f3840c85064fa74082b52"
+    },
+    {
+      "path": "historical_evidence.zip",
+      "bytes": 17076683,
+      "sha256": "7df54ac0f3529cd08837640dce7ee1428bea80cf99f2b934b9f2df95d821350f"
+    },
+    {
+      "path": "local_archive_crosscheck.json",
+      "bytes": 21285,
+      "sha256": "a9dc9d6404f12e9b95dcfd7367e32b176ec10b96bb92c3541ec40aa7ce5634ef"
+    },
+    {
+      "path": "local_archive_crosscheck_initial_name_search.json",
+      "bytes": 20840,
+      "sha256": "cf42a9ca338ec579047e64cdb339695ab5bfb4a84bd769afbdcaf7c5e24af62d"
+    },
+    {
+      "path": "make_manifest.py",
+      "bytes": 1553,
+      "sha256": "8601305bfca5e6822cca8dbadfa64f72c4fce30815f074a8598ca32f2b40249e"
+    },
+    {
+      "path": "official_reference_check/official_tools__OligoFormer__scripts__infer.py",
+      "bytes": 22032,
+      "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f"
+    },
+    {
+      "path": "official_reference_check/official_tools__OligoFormer__scripts__loader.py",
+      "bytes": 4823,
+      "sha256": "64c4063387563896b32c151d3e6447a48248d59908d9d1673d8264e60a6349ca"
+    },
+    {
+      "path": "official_reference_check/official_tools__OligoFormer__scripts__loader_infer.py",
+      "bytes": 2347,
+      "sha256": "a628aafd2d4892f80d88f64c0361ecee33b4eb8badb9247dc8aa478d71869631"
+    },
+    {
+      "path": "official_reference_check/official_tools__OligoFormer__scripts__model.py",
+      "bytes": 11505,
+      "sha256": "9bb055a5d08eaddd0dad7b3d8df90975f150fa2b23147b36adf0583ad015bc13"
+    },
+    {
+      "path": "official_reference_check/official_tools__RNA-FM__source__fm__pretrained.py",
+      "bytes": 7562,
+      "sha256": "ab7271f8dbb876dbc5e2010e2d88b086088aada096f04149436d315a4f256aac"
+    },
+    {
+      "path": "official_reference_check/official_tools__SeedMatchR_1.1.1__R__get_seed.R",
+      "bytes": 4045,
+      "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9"
+    },
+    {
+      "path": "official_reference_check/official_tools__SeedMatchR_1.1.1__R__SeedMatchR.R",
+      "bytes": 3514,
+      "sha256": "78e0fa70b7a43de3cd6d61f61e81deef5dda1b318a738dcb3d09decbb6972a17"
+    },
+    {
+      "path": "official_reference_check/receipt.json",
+      "bytes": 5287,
+      "sha256": "c3df910f45182cd12de516405206d0703c94d7e209fc56621d19f7628da01b2d"
+    },
+    {
+      "path": "official_reference_check/SeedMatchR_1.1.1.tar.gz",
+      "bytes": 634809,
+      "sha256": "3efdda14dd7d8aa870ec0e0f5af6d8016a6589fb478d670addd0bff0c1820c8d"
+    },
+    {
+      "path": "prior_package_records.zip",
+      "bytes": 26245,
+      "sha256": "bf4d97927a8e0a0297e77ad29e0b63a27f08af12eeed5f03ade8b71aeb50dd74"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11584,
+      "sha256": "487a893c8a9fed1a46daf2d3191590524cb3ec9f72b400b313a6c7970089668f"
+    },
+    {
+      "path": "selection_104_audit.tsv",
+      "bytes": 18492,
+      "sha256": "f8eef5de8b41fa9f9b97895dfdf6db9fd22553c61ed506833df531aa82e968cb"
+    },
+    {
+      "path": "source_files.tsv",
+      "bytes": 38301,
+      "sha256": "359ac29220c1172f82025a8e973780b2448cc0b0f3c509e45b36e0c264fbd1f5"
+    },
+    {
+      "path": "SYNC.md",
+      "bytes": 1914,
+      "sha256": "eafd69aca99588216caea08facdf219747530ccb67b0d1f96de30ecd087750a2"
+    }
+  ],
+  "manifest_self_excluded": true
+}

@@ -12,6 +12,8 @@
 
 ## 默认9候选
 
+2026-10-23已从原本地目录和旧交付包找回并核对：[完整来源核查](../research/2026-10-23_candidate_provenance/README.md)、[九条追溯表](../research/2026-10-23_candidate_provenance/candidate_trace.tsv)、[104条保留/排除表](../research/2026-10-23_candidate_provenance/selection_104_audit.tsv)。原siDirect2.0请求、104条HTML、逐条理由和筛选代码均保留；104→9按旧规则一致。20条固定转录本用于核心覆盖检查，不用状态TPM值筛选。旧OligoFormer输入/分数和完整SeedMatchR1.1.1输出1397880行与当前导入表一致。最初完整shell命令和siDirect旧数据库具体发布日期未找到；当前审核不冒充第三方原始运行认证。三条官方回文序列警告、适配差异及打包日志差异在报告中披露，旧数据不改。
+
 2026-10-16用人VEGFA参考NM_003376.6的siDirect 2.0结果，104条原始候选中整理出9条工作池；10月18日核对并用于Agent原型。来源字段、原始21nt双链、19nt配对核心、末端、参考覆盖保留在`data/candidates.tsv`。
 
 候选ID：VEGFA_SD_1157、2739、3119、3193、3429、3499、3500、3502、3535。不是用户有效文献siRNA；修饰未冻结、不作订购单。优先复核3499/3500来自当前程序规则，不代表新发现或验证效力。

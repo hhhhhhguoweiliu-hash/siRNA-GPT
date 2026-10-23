@@ -1,0 +1,30 @@
+{
+  "scope": "Task A provenance audit only; no state-dependent risk reranking, fine tuning or expanded wet lab",
+  "verified": [
+    "Recovered siDirect 2.0 original request and full 104-row response; input accession/sequence/strand/coordinates agree",
+    "Recovered historical working filter script and per-row exclusion record; 104-to-9 replay agrees exactly",
+    "All nine OligoFormer guides, 57-nt contexts, raw/scaled scores and official sequence flags agree across old files, stdout and current imports",
+    "Pinned scientific core sources match newly fetched official sources; local weight hashes match historical manifests",
+    "Complete 1397880-row SeedMatchR output retained; 14524 imported positive guide-mer7m8 rows match exactly",
+    "All 46867 saved guide/passenger mer7m8 positions agree with reference sequences and saved per-gene counts"
+  ],
+  "declared_not_independently_authenticated": [
+    "Original execution date/time and historical repetition success are supported by recovered local records, not independent third-party attestation",
+    "Historical filters are documented working choices, not demonstrated independent/preregistered optimal criteria"
+  ],
+  "still_missing": [
+    {"item": "Original outer shell argv, working directory and per-process exit-code capture", "available_instead": "Actual scripts, environment versions, original inputs/outputs, stdout, failure logs and run manifests; reconstructed commands labeled separately"},
+    {"item": "Precise siDirect legacy backend reference database release", "available_instead": "Recorded v2.0 endpoint, hs setting and returned vendor mismatch values"},
+    {"item": "Experimental knockdown efficacy and off-target validation for these nine candidates", "available_instead": "Computational sequence evidence only; no expanded wet lab authorized"}
+  ],
+  "preserved_difference": {
+    "file": "build_package_verified.log",
+    "old_zip_version": "empty",
+    "current_source_directory_version": "one package-completion stdout line",
+    "cause": "not independently established",
+    "action": "both versions retained; no alteration or claim of complete archive identity"
+  },
+  "new_heavy_rerun": false,
+  "reason": "Historical evidence is sufficient for scoped provenance/internal-consistency audit; repeating scientific inference would not recover the missing original command capture or validate biology",
+  "user_action_required_now": null
+}

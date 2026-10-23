@@ -1,0 +1,2655 @@
+{
+  "audit_time_utc": "2026-10-23T13:54:11.501322+00:00",
+  "python_executable": "C:\\Users\\86182\\Documents\\Codex\\python310\\python.exe",
+  "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "takeover_main": "3831cb555a7e8e3ab572e26193e41b33eb0498df",
+  "kind": "READ_ONLY_HISTORICAL_AUDIT_FILTER_REPLAY_NO_NEW_MODEL_OR_SEED_SCAN",
+  "reference_length_nt": 3609,
+  "siDirect_parameters": {
+    "uitei": "1",
+    "seedTm": "1",
+    "seedTmMax": "21.5",
+    "spe": "hs",
+    "posStart": "start",
+    "posEnd": "end",
+    "consGCmax": "4",
+    "consATmax": "4",
+    "percentGCMin": "0",
+    "percentGCMax": "100",
+    "customPattern": "NNGNNNNNNNNNNNNNNNNNNNN",
+    "excludePattern": ""
+  },
+  "raw_candidates": 104,
+  "retained": [
+    "VEGFA_SD_1157",
+    "VEGFA_SD_2739",
+    "VEGFA_SD_3119",
+    "VEGFA_SD_3193",
+    "VEGFA_SD_3429",
+    "VEGFA_SD_3499",
+    "VEGFA_SD_3500",
+    "VEGFA_SD_3502",
+    "VEGFA_SD_3535"
+  ],
+  "excluded_unique_candidates": 95,
+  "exclusion_rule_counts_overlapping": {
+    "CORE_GC_OUTSIDE_WORKING_30_65": 81,
+    "NOT_COMMON_TO_ALL_20_VENDOR_TRANSCRIPT_CORES": 19,
+    "CORE_HOMOPOLYMER_GE4": 57,
+    "SIDIRECT_LEGACY_DATABASE_MIN_MISMATCH_LT2": 39
+  },
+  "seed_raw_rows": 1397880,
+  "seed_import_positive_rows": 14524,
+  "checks_count": 520,
+  "failures": [],
+  "checks": [
+    {
+      "name": "archive_crc",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:author_archive.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:author_window_scan.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:build_package.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:build_package_ascii.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:build_package_final.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:build_package_verified.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:build_reference.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:build_reference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:combine_evidence.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:combine_evidence_final.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:combine_evidence_validated.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:CONTINUE_HERE.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:dsir_parse_qa.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:expression_map.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:fetch.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:fetch_phase2.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:fetch_seed_code.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:finalize_package.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:finalize_package_verified.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:IRGM_alignment_check.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:library_save/receipt.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/data/example.fa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/data/example_siRNA.fa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/requirements.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/flanking_mRNA_asymmetric.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/flanking_mRNA_symmetric.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/infer.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/loader.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/loader_infer.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/logger.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/main.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/metrics.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/mismatch.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/model.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/phelim.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/pita.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/RNA-FM-features.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/RNA-FM.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/targetscan.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/test.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/test_single.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/train.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/train_logger.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/OligoFormer/scripts/train_single.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/author_archive_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/download_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/environment.yml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/__init__.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/axial_attention.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/constants.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/data.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/downstream/__init__.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/downstream/backbones.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/downstream/baseline.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/downstream/downstream_module.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/downstream/pairwise_predictor/__init__.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/downstream/pairwise_predictor/linear_dot_product.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/downstream/pairwise_predictor/pairwise_concat.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/downstream/weights_init.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/downstream/weights_load.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/model/__init__.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/model/esm1.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/model.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/modules.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/multihead_attention.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/pretrained.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/fm/version.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/RNA-FM/source/setup.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/SeedMatchR_1.1.1/commit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/SeedMatchR_1.1.1/DESCRIPTION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/SeedMatchR_1.1.1/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/SeedMatchR_1.1.1/man/get_seed.Rd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/SeedMatchR_1.1.1/man/SeedMatchR.Rd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/SeedMatchR_1.1.1/manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/SeedMatchR_1.1.1/R/get_seed.R",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/SeedMatchR_1.1.1/R/SeedMatchR.R",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:official_tools/SeedMatchR_1.1.1/tests/testthat/test-SeedMatchR.R",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_cpu.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_cpu_retry.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_cpu_validated.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_import_probe.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_raw/candidate.status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_raw/environment_pip_freeze.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_raw/example.status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_raw/official_example_cpu.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_raw/official_loader_parity.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_raw/run_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:oligo_raw/VEGFA_candidates_cpu.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:parse_sidirect.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:parse_sidirect.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:pip_oligo.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:pip_ptflops.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:pip_small.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:pip_small_retry.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepare_official_tools.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepare_tools.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/candidate_core19_guides.fasta",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/candidate_pool_summary.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/candidates_all.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/candidates_working_pool.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/official_sample_parsed.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/reference_summary.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/refseq_utr3_representative.fasta",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/utr_manifest_representative.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/VEGFA_NM003376_6_parsed.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/VEGFA_transcript_manifest.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:prepared/VEGFA_vendor_versions.fasta",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:public_sources/download_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:public_sources/download_manifest_phase2.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:public_sources/official_tool_sources_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:public_sources/oligo_commit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:public_sources/rnafm_commit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:public_sources/sidirect_v2.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:public_sources/VEGFA_NM003376.gb",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:public_sources/VEGFA_vendor_versions.gb",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:R_probe.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:reference/README_GCF_000001405.40-RS_2025_08",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:reference/reference_download_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:reference_download.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/nearperfect.status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/nearperfect_author_window.status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/nearperfect_author_window_sites.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/nearperfect_sites.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/seed_counts_official.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/seed_example.status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/seed_motifs.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/seed_scan.status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/seed_sites_7merm8.tsv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/SeedMatchR_official_get_seed_example.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_raw/sessionInfo.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:risk_scan.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:rnafm_download.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:run_oligo_cpu.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:run_seed_and_search.R",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:run_sidirect_public.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:seed_code.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:sidirect.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:sidirect_raw/official_sample_request.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:sidirect_raw/official_sample_response.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:sidirect_raw/run_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:sidirect_raw/VEGFA_NM003376_6_request.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:sidirect_raw/VEGFA_NM003376_6_response.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:sidirect_retry.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:sidirect_run.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_source:weight_alternatives.log",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "submitted_sequence_genbank_fasta",
+      "passed": true,
+      "detail": {
+        "length_nt": 3609
+      }
+    },
+    {
+      "name": "fixed_20_transcripts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001171623.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001171626.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001171628.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001317010.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001025369.3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001171627.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001171625.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001204384.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001287044.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001025367.3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001171630.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001171622.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001171624.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001025370.3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001204385.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001025368.3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001033756.3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_003376.6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001025366.3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "versioned_reference:NM_001171629.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original_http_response_hash:official_sample",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original_http_response_hash:VEGFA_NM003376_6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw_104_records",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "siDirect_saved_official_sample_8_rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "parsed_104_and_selection_table_identical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nine_current_candidates_exact_fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0124",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0124",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0126",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0126",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0149",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0149",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0150",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0150",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0161",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0161",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0164",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0164",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0171",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0171",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0177",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0177",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0192",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0192",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0194",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0194",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0199",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0199",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0203",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0203",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0206",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0206",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_0278",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_0278",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_1157",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_1157",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_1447",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_1447",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_1552",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_1552",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_1555",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_1555",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_1559",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_1559",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_1588",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_1588",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_1979",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_1979",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_1980",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_1980",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2027",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2027",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2029",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2029",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2037",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2037",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2079",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2079",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2081",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2081",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2110",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2110",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2739",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2739",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2880",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2880",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2882",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2882",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2884",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2884",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2924",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2924",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2925",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2925",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2926",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2926",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2937",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2937",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2947",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2947",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2949",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2949",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2970",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2970",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2971",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2971",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2980",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2980",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2982",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2982",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2987",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2987",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_2990",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_2990",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3009",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3009",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3046",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3046",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3056",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3056",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3057",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3057",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3058",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3058",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3065",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3065",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3119",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3119",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3120",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3120",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3125",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3125",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3131",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3131",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3189",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3189",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3193",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3193",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3202",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3202",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3210",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3210",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3214",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3214",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3221",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3221",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3224",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3224",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3250",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3250",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3253",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3253",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3259",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3259",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3261",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3261",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3281",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3281",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3287",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3287",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3295",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3295",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3297",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3297",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3314",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3314",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3318",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3318",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3324",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3324",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3337",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3337",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3344",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3344",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3349",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3349",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3352",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3352",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3361",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3361",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3375",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3375",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3385",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3385",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3387",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3387",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3388",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3388",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3429",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3429",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3432",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3432",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3434",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3434",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3455",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3455",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3499",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3499",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3500",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3500",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3502",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3502",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3508",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3508",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3509",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3509",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3510",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3510",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3513",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3513",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3516",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3535",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3535",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3536",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3536",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3538",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3538",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3542",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3542",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3548",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3548",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3550",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3550",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3557",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3557",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3572",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3572",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sequence_direction_coordinates:VEGFA_SD_3573",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_filter_fields:VEGFA_SD_3573",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "104_to_nine_exact_ids_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nine_oligo_current_table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_input_context_output_log:VEGFA_SD_1157",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "official_sequence_flag:VEGFA_SD_1157",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_input_context_output_log:VEGFA_SD_2739",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "official_sequence_flag:VEGFA_SD_2739",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_input_context_output_log:VEGFA_SD_3119",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "official_sequence_flag:VEGFA_SD_3119",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_input_context_output_log:VEGFA_SD_3193",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "official_sequence_flag:VEGFA_SD_3193",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_input_context_output_log:VEGFA_SD_3429",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "official_sequence_flag:VEGFA_SD_3429",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_input_context_output_log:VEGFA_SD_3499",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "official_sequence_flag:VEGFA_SD_3499",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_input_context_output_log:VEGFA_SD_3500",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "official_sequence_flag:VEGFA_SD_3500",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_input_context_output_log:VEGFA_SD_3502",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "official_sequence_flag:VEGFA_SD_3502",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_input_context_output_log:VEGFA_SD_3535",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "official_sequence_flag:VEGFA_SD_3535",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_saved_official_example_loader_parity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_saved_official_example_input:siRNA0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oligo_saved_official_example_input:siRNA1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/data/example.fa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/data/example_siRNA.fa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/requirements.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/RNA-FM-features.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/RNA-FM.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/flanking_mRNA_asymmetric.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/flanking_mRNA_symmetric.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/infer.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/loader.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/loader_infer.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/logger.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/main.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/metrics.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/mismatch.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/model.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/phelim.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/pita.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/targetscan.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/test.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/test_single.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/train.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/train_logger.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:official_tools/OligoFormer/scripts/train_single.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pinned_download:public_sources/rnafm_commit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seed_pinned_source:R/get_seed.R",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seed_pinned_source:R/SeedMatchR.R",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seed_pinned_source:tests/testthat/test-SeedMatchR.R",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seed_pinned_source:DESCRIPTION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seed_pinned_source:LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seed_pinned_source:man/get_seed.Rd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seed_pinned_source:man/SeedMatchR.Rd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "utr_identifiers_lengths_gene_mapping",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_1157:guide:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_1157:guide:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_1157:guide:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_1157:guide:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_1157:passenger:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_1157:passenger:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_1157:passenger:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_1157:passenger:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_2739:guide:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_2739:guide:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_2739:guide:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_2739:guide:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_2739:passenger:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_2739:passenger:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_2739:passenger:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_2739:passenger:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3119:guide:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3119:guide:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3119:guide:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3119:guide:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3119:passenger:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3119:passenger:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3119:passenger:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3119:passenger:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3193:guide:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3193:guide:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3193:guide:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3193:guide:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3193:passenger:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3193:passenger:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3193:passenger:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3193:passenger:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3429:guide:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3429:guide:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3429:guide:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3429:guide:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3429:passenger:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3429:passenger:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3429:passenger:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3429:passenger:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3499:guide:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3499:guide:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3499:guide:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3499:guide:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3499:passenger:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3499:passenger:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3499:passenger:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3499:passenger:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3500:guide:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3500:guide:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3500:guide:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3500:guide:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3500:passenger:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3500:passenger:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3500:passenger:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3500:passenger:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3502:guide:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3502:guide:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3502:guide:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3502:guide:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3502:passenger:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3502:passenger:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3502:passenger:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3502:passenger:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3535:guide:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3535:guide:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3535:guide:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3535:guide:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3535:passenger:mer7m8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3535:passenger:mer8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3535:passenger:mer7A1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recorded_seed_motif:VEGFA_SD_3535:passenger:mer6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete_seed_all_72_blocks",
+      "passed": true,
+      "detail": {
+        "raw_rows": 1397880
+      }
+    },
+    {
+      "name": "all_imported_positive_seed_rows_exact",
+      "passed": true,
+      "detail": {
+        "positive_rows": 14524
+      }
+    },
+    {
+      "name": "all_saved_guide_passenger_7mer_sites_match_raw_counts",
+      "passed": true,
+      "detail": {
+        "site_rows_verified_against_fasta": 46867
+      }
+    },
+    {
+      "name": "old_54_raw_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "external_assets_match_previous_hashes",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}
