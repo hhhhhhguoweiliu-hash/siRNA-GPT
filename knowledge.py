@@ -1,4 +1,4 @@
-"""Small, versioned project-note retrieval. Not an expert-approved protocol library."""
+"""Project notes plus actual local document excerpts, with separate source kinds."""
 import hashlib,json
 
 CARDS=[
@@ -35,6 +35,15 @@ def search(query,limit=3):
         score=sum(len(t) for t in card['tags'] if t.casefold() in q)
         if score:ranked.append((score,card))
     cards=[x[1] for x in sorted(ranked,key=lambda x:-x[0])[:limit]]
-    return {'status':'OK' if cards else 'NO_RESULTS','version':VERSION,'review_status':'DRAFT_PROJECT_NOTES_NOT_EXPERT_APPROVED',
-        'cards':[dict(c) for c in cards], 'sources':[{'url':'/knowledge#'+c['id'],'title':c['title'],
-            'kind':'本地项目说明卡（待专家审核）','knowledge_id':c['id']} for c in cards]}
+    from literature import get_library
+    retrieved=get_library().search(query,limit=min(5,limit+2))
+    if retrieved.get('reason'):cards=[]
+    sources=[{'url':'/knowledge#'+c['id'],'title':c['title'],
+        'kind':'项目设置说明（待外部审核）','source_kind':'project_setting','knowledge_id':c['id']} for c in cards]
+    excerpts=[dict(s,text=c['text']) for c,s in zip(cards,sources)]
+    sources+=retrieved.get('sources',[])
+    excerpts+=retrieved.get('hits',[])
+    return {'status':'OK' if excerpts else 'NO_RESULTS','version':VERSION,'review_status':'PROJECT_NOTES_NOT_EXPERT_APPROVED_DOCUMENTS_KEEP_DECLARED_SOURCE_TYPE',
+        'cards':[dict(c) for c in cards], 'sources':sources, 'excerpts':excerpts,
+        'library_version':retrieved['version'],'query_terms':retrieved['query_terms'],
+        'retrieval':retrieved}

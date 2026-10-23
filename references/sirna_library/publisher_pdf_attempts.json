@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "sidirect",
+    "url": "https://bmcbioinformatics.biomedcentral.com/counter/pdf/10.1186/1471-2105-10-392",
+    "time_utc": "2026-10-23T14:38:29.150957+00:00",
+    "final_url": "https://link.springer.com/content/pdf/10.1186/1471-2105-10-392.pdf?error=cookies_not_supported&code=aeaf0871-7335-4682-857b-8c2310bd1281",
+    "status": "PDF_TEXT_LAYER_VERIFIED",
+    "bytes": 697982,
+    "sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd",
+    "pages": 8,
+    "file": "sidirect_publisher_paper.pdf"
+  },
+  {
+    "slug": "sidirect",
+    "url": "https://link.springer.com/content/pdf/10.1186/1471-2105-10-392.pdf",
+    "time_utc": "2026-10-23T14:38:29.154970+00:00",
+    "final_url": "https://link.springer.com/content/pdf/10.1186/1471-2105-10-392.pdf?error=cookies_not_supported&code=fc843667-1a50-4312-aa04-d9e515031bc5",
+    "status": "PDF_TEXT_LAYER_VERIFIED",
+    "bytes": 697982,
+    "sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd",
+    "pages": 8,
+    "file": "sidirect_publisher_paper.pdf"
+  },
+  {
+    "slug": "seedmatchr",
+    "url": "https://academic.oup.com/bioinformatics/advance-article-pdf/doi/10.1093/bioinformatics/btae011/55152238/btae011.pdf",
+    "time_utc": "2026-10-23T14:38:29.155969+00:00",
+    "status": "FAILED",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

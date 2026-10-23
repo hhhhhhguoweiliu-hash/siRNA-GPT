@@ -1,0 +1,93 @@
+{
+  "scope": "three tool papers, pinned official documentation and project provenance only",
+  "not_an_exhaustive_sirna_library": true,
+  "sources": [
+    {
+      "file": "oligoformer_paper_extracted_text.txt",
+      "sha256": "e2cea21b6712b85250758e8b69a9135ff579b422cbdc81606d130e3ba9e6fd1e",
+      "title": "OligoFormer: an accurate and robust prediction method for siRNA design",
+      "doi": "10.1093/bioinformatics/btae577",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11494384/",
+      "source_kind": "article_full_text",
+      "source_version": "10.1093/bioinformatics/btae577",
+      "source_note": "EXTRACTED_FULL_TEXT_NO_PDF; license not exposed in OA response"
+    },
+    {
+      "file": "seedmatchr_paper_extracted_text.txt",
+      "sha256": "2a3c9b1477964896182ff11c7c9adb70286527311979f46f2ee8f44a5a73a2e5",
+      "title": "SeedMatchR: identify off-target effects mediated by siRNA seed regions in RNA-seq experiments",
+      "doi": "10.1093/bioinformatics/btae011",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10799297/",
+      "source_kind": "article_full_text",
+      "source_version": "10.1093/bioinformatics/btae011",
+      "source_note": "EXTRACTED_FULL_TEXT_NO_PDF; license not exposed in OA response"
+    },
+    {
+      "file": "sidirect_paper_extracted_text.txt",
+      "sha256": "f9013c3f5940f6cb597e9d42195586720a044de2222b14820891542d26e2f7b3",
+      "title": "siDirect 2.0: updated software for designing functional siRNA with reduced seed-dependent off-target effect",
+      "doi": "10.1186/1471-2105-10-392",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2791777/",
+      "source_kind": "article_full_text",
+      "source_version": "10.1186/1471-2105-10-392",
+      "source_note": "EXTRACTED_FULL_TEXT_NO_PDF; license not exposed in OA response"
+    },
+    {
+      "file": "oligoformer_official_readme.txt",
+      "sha256": "fce74ce24f4c5275cdea80d09aa441e4425451f7a35894393b453357ed1841a1",
+      "title": "OligoFormer official README (pinned historical version)",
+      "source_url": "https://github.com/lulab/OligoFormer/blob/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/README.md",
+      "source_kind": "official_documentation",
+      "source_version": "e2f53ad63387bbe166bf123949151e2bc9bf6ec3",
+      "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF"
+    },
+    {
+      "file": "oligoformer_official_infer.txt",
+      "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+      "title": "OligoFormer official inference source, including score scaling and input context",
+      "source_url": "https://github.com/lulab/OligoFormer/blob/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/infer.py",
+      "source_kind": "official_source_code",
+      "source_version": "e2f53ad63387bbe166bf123949151e2bc9bf6ec3",
+      "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF"
+    },
+    {
+      "file": "seedmatchr_111_get_seed.txt",
+      "sha256": "f72c0ee41a849b5fd075fb7ca3de5014e072b5ce94796ac59e464f4add9da306",
+      "title": "SeedMatchR 1.1.1 official get_seed documentation",
+      "source_url": "https://github.com/cran/SeedMatchR/blob/b462d4a00520172622f9d8a5a8842d34442c2e68/man/get_seed.Rd",
+      "source_kind": "official_documentation",
+      "source_version": "1.1.1",
+      "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF"
+    },
+    {
+      "file": "seedmatchr_111_get_seed_source.txt",
+      "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+      "title": "SeedMatchR 1.1.1 official seed definitions source (g2-g8)",
+      "source_url": "https://github.com/cran/SeedMatchR/blob/b462d4a00520172622f9d8a5a8842d34442c2e68/R/get_seed.R",
+      "source_kind": "official_source_code",
+      "source_version": "1.1.1",
+      "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF"
+    },
+    {
+      "file": "project_candidate_provenance_20261023.txt",
+      "sha256": "6a1b8c9ea14cc5ae67700e189a7e6969db041aa4cb3838eae4d7c0ffeae7364d",
+      "title": "本项目默认九条候选来源核查（历史计算记录，不是文献结论）",
+      "source_url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/blob/1e4fe57a059fbf19cf32b4685cc249a3d297e98c/research/2026-10-23_candidate_provenance/README.md",
+      "source_kind": "project_record",
+      "source_version": "1e4fe57",
+      "source_note": "Project provenance audit of historical imports; no new inference or biological experiment"
+    },
+    {
+      "file": "sidirect_publisher_paper.pdf",
+      "sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd",
+      "title": "siDirect 2.0: updated software for designing functional siRNA with reduced seed-dependent off-target effect",
+      "doi": "10.1186/1471-2105-10-392",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2791777/",
+      "source_kind": "article_full_text",
+      "source_version": "10.1186/1471-2105-10-392",
+      "source_note": "Original publisher PDF; text layer verified; source download recorded in publisher_pdf_attempts.json",
+      "pages_file": "sidirect_publisher_paper.pdf.pages.json",
+      "pages_sha256": "846076684e8ec50185f0a8178a8422fe0f888a2a2f879f75ba5f231bd8cc39ca"
+    }
+  ]
+}

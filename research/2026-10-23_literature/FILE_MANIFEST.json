@@ -1,0 +1,255 @@
+{
+  "scope": "Task B code, source originals and development records; no real demo run yet",
+  "files": [
+    {
+      "file": "app.py",
+      "bytes": 19142,
+      "sha256": "05bf36ec57794dec0b4602c2012ad26571b4854f2f229030e9b3a690e3fc5c08"
+    },
+    {
+      "file": "cloud.py",
+      "bytes": 6006,
+      "sha256": "c8f5f85f84f5c24a68c7bc5149d20685425e65ffe62907edfae030210361c6bc"
+    },
+    {
+      "file": "conversation.py",
+      "bytes": 50688,
+      "sha256": "42b95b16de4a88ff7f3b6a9bde627f2e7a944a6e67f3b82893a9a067a7ac31d5"
+    },
+    {
+      "file": "index.html",
+      "bytes": 42397,
+      "sha256": "8fea6afc76d85b27a07c0dee0a6924ca9dd7fcba3b2d1c4c05fcd55e4a17fc5e"
+    },
+    {
+      "file": "knowledge.py",
+      "bytes": 4826,
+      "sha256": "87ceb4a48cb5373e71eafb7830e7720b42ea889f7ebf90a57c5bb883125a5187"
+    },
+    {
+      "file": "library_demo.py",
+      "bytes": 4432,
+      "sha256": "a33928072ecff18a566ac626c0a98dc1ab025652a7ea8d532f9bc3a7d542ab99"
+    },
+    {
+      "file": "library_ui.js",
+      "bytes": 4988,
+      "sha256": "d0f7e7f3af74d5fdb5ad076753abaf1c300b9a76a029bbea5d0c5cdbae9fc533"
+    },
+    {
+      "file": "literature.py",
+      "bytes": 23271,
+      "sha256": "8d0aee986db4a3c09a5ee9c92aea2a9434f33e1c1b05e5a38f10f2f4c118b675"
+    },
+    {
+      "file": "pdf_text_worker.py",
+      "bytes": 2555,
+      "sha256": "e1d9df6fbec7c153c694946a08f04e00ea9c2b0607d199102c1b80be9ba50ed1"
+    },
+    {
+      "file": "references/sirna_library/acquisition/oligoformer_fulltext.xml",
+      "bytes": 90386,
+      "sha256": "1956bc10e6641094a736d78982d2750b4385d108ee3eebb49e8957c7685467a3"
+    },
+    {
+      "file": "references/sirna_library/acquisition/seedmatchr_fulltext.xml",
+      "bytes": 50100,
+      "sha256": "146038caddf230bfb0b143cf6b4653c09c83592f5b96831e13b1e27151e55feb"
+    },
+    {
+      "file": "references/sirna_library/acquisition/sidirect_fulltext.xml",
+      "bytes": 64847,
+      "sha256": "45deba96ac99f7a9afcac6e8a3b64e82e52b156abb232a1f09979102b4996ea9"
+    },
+    {
+      "file": "references/sirna_library/acquisition_receipt.json",
+      "bytes": 2901,
+      "sha256": "9017cb555af60400582048581cb7fdef5cac4649d2a990e470eb8a160e708f46"
+    },
+    {
+      "file": "references/sirna_library/oligoformer_official_infer.txt",
+      "bytes": 22032,
+      "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f"
+    },
+    {
+      "file": "references/sirna_library/oligoformer_official_readme.txt",
+      "bytes": 9037,
+      "sha256": "fce74ce24f4c5275cdea80d09aa441e4425451f7a35894393b453357ed1841a1"
+    },
+    {
+      "file": "references/sirna_library/oligoformer_paper_extracted_text.txt",
+      "bytes": 34556,
+      "sha256": "e2cea21b6712b85250758e8b69a9135ff579b422cbdc81606d130e3ba9e6fd1e"
+    },
+    {
+      "file": "references/sirna_library/project_candidate_provenance_20261023.txt",
+      "bytes": 11927,
+      "sha256": "6a1b8c9ea14cc5ae67700e189a7e6969db041aa4cb3838eae4d7c0ffeae7364d"
+    },
+    {
+      "file": "references/sirna_library/publisher_pdf_attempts.json",
+      "bytes": 1382,
+      "sha256": "a9439ce85e3c475a4998fa25420f247a26452c66dce62f11b9f333e9e32e0c3f"
+    },
+    {
+      "file": "references/sirna_library/README.md",
+      "bytes": 2890,
+      "sha256": "f00ff3d22c4c178b8322a30e326476fe78d0d0b67966e8bd9a89d5d5745e84c5"
+    },
+    {
+      "file": "references/sirna_library/seedmatchr_111_get_seed.txt",
+      "bytes": 1816,
+      "sha256": "f72c0ee41a849b5fd075fb7ca3de5014e072b5ce94796ac59e464f4add9da306"
+    },
+    {
+      "file": "references/sirna_library/seedmatchr_111_get_seed_source.txt",
+      "bytes": 4045,
+      "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9"
+    },
+    {
+      "file": "references/sirna_library/seedmatchr_paper_extracted_text.txt",
+      "bytes": 15947,
+      "sha256": "2a3c9b1477964896182ff11c7c9adb70286527311979f46f2ee8f44a5a73a2e5"
+    },
+    {
+      "file": "references/sirna_library/sidirect_paper_extracted_text.txt",
+      "bytes": 19627,
+      "sha256": "f9013c3f5940f6cb597e9d42195586720a044de2222b14820891542d26e2f7b3"
+    },
+    {
+      "file": "references/sirna_library/sidirect_publisher_paper.pdf",
+      "bytes": 697982,
+      "sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd"
+    },
+    {
+      "file": "references/sirna_library/sidirect_publisher_paper.pdf.pages.json",
+      "bytes": 43410,
+      "sha256": "846076684e8ec50185f0a8178a8422fe0f888a2a2f879f75ba5f231bd8cc39ca"
+    },
+    {
+      "file": "references/sirna_library/sources.json",
+      "bytes": 5611,
+      "sha256": "bab3fc8132b6588d9cde45b3cd21f6047c088ff879d86e39219bb01413c7f537"
+    },
+    {
+      "file": "requirements.txt",
+      "bytes": 33,
+      "sha256": "3e30c7392df3942a470d77a3c845c0019f2307b546c10a4e35ac0a09db714e69"
+    },
+    {
+      "file": "research/2026-10-23_literature/development_protocol.json",
+      "bytes": 4544,
+      "sha256": "8ef13d3084564565e31e4e6d1c5ad5b25062ce20b9027f2dbaa56772c6211d93"
+    },
+    {
+      "file": "research/2026-10-23_literature/EXECUTION.md",
+      "bytes": 4043,
+      "sha256": "b314ee7848b1f15c8f262c49a9e6883a1efc117b43befc190812452d407ec4b5"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/citation_transport_TEST_ONLY.json",
+      "bytes": 124099,
+      "sha256": "6c0f84a94108173e71ae1d87dad75e85584eddd5c48d80d81f0059e52034cc92"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/development_checks.json",
+      "bytes": 21581,
+      "sha256": "a31ff9b6960de57e9213b3d28811ed9a4c0d2ad086b774b7038e77296023912b"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/import_records.json",
+      "bytes": 13715,
+      "sha256": "69412bdbcf08f7f99c0e5d7596b1c661d8b95e735ee14d3fe00aaca27cc23f1f"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/library_export.zip",
+      "bytes": 659406,
+      "sha256": "50cc6067fd4fdcb40cdec61ee4f56fe256cb452b87d1883321c3341a3fe2cf63"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/local_ui_search.png",
+      "bytes": 92916,
+      "sha256": "2d344ca6d24a6a84271094345839e1949fedbe6c9763de337ff37994fc0d7c68"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/no_evidence_offline_record.json",
+      "bytes": 9262,
+      "sha256": "dc53c4732a7b871966575f47c946e77867ae91aed723eb52233a1698b8fface6"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/retrieval_records.json",
+      "bytes": 333868,
+      "sha256": "d053f8f1575dac8054e99c6ba2dda76811f8cc2c1ca34988710b305c55b1f754"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/unit_checks_01.json",
+      "bytes": 212,
+      "sha256": "6df2aafccf007f3e930236536b9d0e1b779955324aac998280937e67a860b83f"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/unit_checks_01.txt",
+      "bytes": 20562,
+      "sha256": "38c2904ecc1391f32ed779c177a2dcb345c7e85043d9e841c339b3f4b80ec0cd"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/unit_checks_02.json",
+      "bytes": 212,
+      "sha256": "c102a10cfc673c12cdbd6787be9fe4b9a751800326bd1e9d8cd350e05890bbe5"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/unit_checks_02.txt",
+      "bytes": 20562,
+      "sha256": "87fddcb47f898d8451acffa913c6cfb5ddbb78bd1dbf0a1b23feba2ee6ec21ac"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/citation_transport_TEST_ONLY.json",
+      "bytes": 136262,
+      "sha256": "88a5455eff81f9f1c03ffa482bc25d827b1391568f790c712f722f2fbd635f1c"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/development_checks.json",
+      "bytes": 21730,
+      "sha256": "7fc1b06ce75fbbbf5ff9a58ecbc2cb83684d0781cc32c64533e4bbefa44ebac3"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/import_records.json",
+      "bytes": 13715,
+      "sha256": "29c5e882ea166237593715e582eb6be82b7c5d5f8bafb0171cef024ce988a369"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/library_export.zip",
+      "bytes": 659404,
+      "sha256": "b69d0167e94224a3abeb7e88ed4abe85dcfef7377507fba0c7044e365e54223f"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/no_evidence_offline_record.json",
+      "bytes": 9532,
+      "sha256": "a5865c8153b1b36311f71fbe5db3314d579c906fde37626541f2a77b84ef777a"
+    },
+    {
+      "file": "research/2026-10-23_literature/offline/verification_02/retrieval_records.json",
+      "bytes": 371440,
+      "sha256": "48900e93d67edd91c782f66ffb90f8a7e736879f5c1c74b3f8634e642771833b"
+    },
+    {
+      "file": "research/2026-10-23_literature/README.md",
+      "bytes": 5286,
+      "sha256": "28ec347ac9e52f800a09cb67e644731c5bdd067efcb0653a595f204c14db8b48"
+    },
+    {
+      "file": "research.py",
+      "bytes": 10157,
+      "sha256": "92374d857e8b8d08f972c8149efc1c533ae91a2c4c5ca6b56285c2f6eccf8f38"
+    },
+    {
+      "file": "runtime_info.py",
+      "bytes": 1316,
+      "sha256": "35678f09c6591596fc42ba1db994ff420d9eea7af270f0fc8450ac5e8283f547"
+    },
+    {
+      "file": "test_literature.py",
+      "bytes": 12136,
+      "sha256": "b526cffa98366616fdfff1977ee70ddf538debe912b1d3080e1e5452855c15fe"
+    }
+  ]
+}

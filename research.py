@@ -19,7 +19,7 @@ def schema(name, description, properties, required):
         'parameters':{'type':'object','properties':properties,'required':required,'additionalProperties':False}}}
 
 RESEARCH_TOOLS = [
-    schema('search_local_knowledge','检索版本化的本地项目说明卡。无需联网，资料未经外部专家审核，不替代原始论文。',
+    schema('search_local_knowledge','检索本地文库实际片段和项目说明卡。支持中文问题检索英文资料；PDF页码与片段链接随结果返回。项目设置、论文和计算记录分开标注，检索命中不等于结论已获验证。',
         {'query':{'type':'string'}},['query']),
     schema('search_pubmed', '用英文关键词检索 PubMed 原始文献，返回真实 PMID、题名、摘要和链接。生物机制与 siRNA 文献优先使用。',
         {'query':{'type':'string'},'limit':{'type':'integer','minimum':1,'maximum':6}}, ['query']),

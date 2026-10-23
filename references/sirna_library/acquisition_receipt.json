@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "oligoformer",
+    "pmcid": "PMC11494384",
+    "title": "OligoFormer: an accurate and robust prediction method for siRNA design",
+    "doi": "10.1093/bioinformatics/btae577",
+    "attempts": [
+      {
+        "status": "FAILED",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=11494384",
+        "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=11494384",
+        "status": "FULL_TEXT_XML_FETCHED",
+        "sha256": "1956bc10e6641094a736d78982d2750b4385d108ee3eebb49e8957c7685467a3"
+      }
+    ],
+    "requested_at_utc": "2026-10-23T14:32:54.847224+00:00",
+    "status": "EXTRACTED_FULL_TEXT_NO_PDF",
+    "file": "oligoformer_paper_extracted_text.txt",
+    "bytes": 34556,
+    "sha256": "e2cea21b6712b85250758e8b69a9135ff579b422cbdc81606d130e3ba9e6fd1e",
+    "pages": null
+  },
+  {
+    "slug": "seedmatchr",
+    "pmcid": "PMC10799297",
+    "title": "SeedMatchR: identify off-target effects mediated by siRNA seed regions in RNA-seq experiments",
+    "doi": "10.1093/bioinformatics/btae011",
+    "attempts": [
+      {
+        "status": "FAILED",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10799297",
+        "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10799297",
+        "status": "FULL_TEXT_XML_FETCHED",
+        "sha256": "146038caddf230bfb0b143cf6b4653c09c83592f5b96831e13b1e27151e55feb"
+      }
+    ],
+    "requested_at_utc": "2026-10-23T14:32:54.848225+00:00",
+    "status": "EXTRACTED_FULL_TEXT_NO_PDF",
+    "file": "seedmatchr_paper_extracted_text.txt",
+    "bytes": 15947,
+    "sha256": "2a3c9b1477964896182ff11c7c9adb70286527311979f46f2ee8f44a5a73a2e5",
+    "pages": null
+  },
+  {
+    "slug": "sidirect",
+    "pmcid": "PMC2791777",
+    "title": "siDirect 2.0: updated software for designing functional siRNA with reduced seed-dependent off-target effect",
+    "doi": "10.1186/1471-2105-10-392",
+    "attempts": [
+      {
+        "status": "FAILED",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=2791777",
+        "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=2791777",
+        "status": "FULL_TEXT_XML_FETCHED",
+        "sha256": "45deba96ac99f7a9afcac6e8a3b64e82e52b156abb232a1f09979102b4996ea9"
+      }
+    ],
+    "requested_at_utc": "2026-10-23T14:32:54.849742+00:00",
+    "status": "EXTRACTED_FULL_TEXT_NO_PDF",
+    "file": "sidirect_paper_extracted_text.txt",
+    "bytes": 19627,
+    "sha256": "f9013c3f5940f6cb597e9d42195586720a044de2222b14820891542d26e2f7b3",
+    "pages": null
+  }
+]

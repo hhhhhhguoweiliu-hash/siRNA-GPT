@@ -98,6 +98,35 @@ class Handler(BaseHTTPRequestHandler):
   if path=='/api/runtime':
    from runtime_info import manifest
    return self.send(manifest())
+  if path=='/library_ui.js':return self.send((HOME/'library_ui.js').read_bytes(),kind='application/javascript; charset=utf-8')
+  if path in ('/api/library','/api/library-export') or path.startswith(('/library/','/api/library/original/')):
+   from literature import get_library,chunks
+   library=get_library()
+   try:
+    if path=='/api/library':return self.send(library.catalogue())
+    if path=='/api/library-export':return self.send(library.export_bundle(),kind='application/zip')
+    identity=path.rsplit('/',1)[-1];doc,original,parts=library.document(identity)
+    if path.startswith('/api/library/original/'):
+     return self.send(original.read_bytes(),kind='application/pdf' if original.suffix=='.pdf' else 'text/plain; charset=utf-8')
+    esc=lambda value:html.escape(str(value),quote=True)
+    body='<meta charset="utf-8"><title>'+esc(doc['title'])+'</title><style>body{max-width:900px;margin:30px auto;padding:0 20px;font:16px/1.7 system-ui}article{border-top:1px solid #ddd;padding:20px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:15px/1.7 system-ui}small{color:#536}article:target{background:#fff6da}</style>'
+    body+='<h1>'+esc(doc['title'])+'</h1><p>'+esc(doc['source_label'])+'；来源类别按声明记录，不代表已通过科学审核。</p><p>文件SHA256：<code>'+esc(doc['sha256'])+'</code></p>'
+    body+='<p><a href="/api/library/original/'+identity+'">打开原始文件</a>'
+    if doc['source_url']:body+=' · <a href="'+esc(doc['source_url'])+'" rel="noopener noreferrer">原始来源入口</a>'
+    body+='</p><p>'+esc(doc['source_note'])+'</p><p>仅提取文字，没有识别图片或图表。文本文件没有PDF页码。</p>'
+    if doc['pages_without_text']:body+='<p>以下页没有可提取文字，未建立文字索引：'+esc(doc['pages_without_text'])+'</p>'
+    for c in parts:
+     label=('PDF第'+str(c['page'])+'页；' if c['page'] else '文本；')+'片段'+c['chunk_id']
+     body+='<article id="'+esc(c['chunk_id'])+'"><h2>'+esc(label)+'</h2>'
+     if c['page']:body+='<a href="/api/library/original/'+identity+'#page='+str(c['page'])+'">定位原PDF该页</a>'
+     body+='<pre>'+html.escape(c['text'])+'</pre><small>片段SHA256：'+esc(c['sha256'])+'</small></article>'
+    return self.send(body,kind='text/html; charset=utf-8')
+   except ValueError as e:return self.send({'error':str(e)},400)
+  if path in ('/api/library-demo','/api/library-demo-download'):
+   import library_demo
+   if path=='/api/library-demo':return self.send(dict(library_demo.STATE))
+   try:return self.send(library_demo.export_zip(),kind='application/zip')
+   except ValueError as e:return self.send({'error':str(e)},409)
   if path in ('/knowledge','/api/knowledge'):
    from knowledge import catalogue
    data=catalogue()
@@ -128,9 +157,43 @@ class Handler(BaseHTTPRequestHandler):
   if origin and origin not in ('http://127.0.0.1:'+str(self.server.server_port),'http://localhost:'+str(self.server.server_port)):return self.send({'error':'Invalid origin'},403)
   try:
    n=int(self.headers.get('Content-Length','0'))
-   if n>(16000000 if self.path=='/api/expression-upload' else 50000):return self.send({'error':'Input too large'},413)
+   maximum=34000000 if self.path in ('/api/library-upload','/api/library-import') else 16000000 if self.path=='/api/expression-upload' else 50000
+   if n<0 or n>maximum:return self.send({'error':'Input too large'},413)
    data=json.loads(self.rfile.read(n).decode('utf-8'))
    if not isinstance(data,dict):return self.send({'error':'Request must be a JSON object'},400)
+   if self.path in ('/api/library-upload','/api/library-import','/api/library-search','/api/library-rebuild'):
+    from literature import get_library,decode_upload
+    try:
+     library=get_library()
+     if self.path=='/api/library-search':return self.send(library.search(data.get('query','')))
+     with LOCK:
+      if STATE['running'] or STATE['checking_connection'] or CONVERSATION.busy:return self.send({'error':'请等待当前任务结束，再更改文库。'},409)
+      STATE['running']=True
+     try:
+      if self.path=='/api/library-upload':result=library.import_document(decode_upload(data.get('content_base64')),data.get('filename',''),data)
+      elif self.path=='/api/library-import':result=library.import_bundle(decode_upload(data.get('content_base64'),24000000))
+      else:result={'version':library.rebuild(),'status':'REBUILT'}
+      return self.send(result)
+     finally:
+      with LOCK:STATE['running']=False
+    except ValueError as e:return self.send({'error':str(e)},400)
+   if self.path=='/api/library-demo-start':
+    import library_demo
+    with LOCK:
+     if STATE['running'] or STATE['checking_connection'] or CONVERSATION.busy:return self.send({'error':'请等待当前任务结束。'},409)
+     if data.get('confirm_api_usage') is not True:return self.send({'error':'请先确认本次最多2题演示会调用模型并产生用量。'},400)
+     if library_demo.STATE.get('status')=='RUNNING':return self.send({'error':'文库演示正在运行。'},409)
+     identity='library_demo_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+__import__('uuid').uuid4().hex[:6]
+     STATE['running']=True;library_demo.STATE.update(status='RUNNING',run_id=identity,completed=0,total=2)
+    def demonstrate_once():
+     try:library_demo.run(config,identity)
+     except Exception:
+      # A setup error must release both gates; details may contain config secrets.
+      library_demo.STATE.update(status='FAILED_SETUP',run_id=identity,error='演示初始化未完成，请检查服务记录；未自动重试。')
+     finally:
+      with LOCK:STATE['running']=False
+    threading.Thread(target=demonstrate_once,daemon=True).start()
+    return self.send({'started':True,'run_id':identity,'expected_questions':2},202)
    if self.path=='/api/expression-upload':
     from expression_data import upload
     try:return self.send(upload(data.get('text'),data.get('label',''),data.get('confirmed')))

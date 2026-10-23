@@ -1,0 +1,282 @@
+[
+  {
+    "file": "oligoformer_paper_extracted_text.txt",
+    "sha256": "e2cea21b6712b85250758e8b69a9135ff579b422cbdc81606d130e3ba9e6fd1e",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "e2cea21b6712b85250758e8b",
+        "sha256": "e2cea21b6712b85250758e8b69a9135ff579b422cbdc81606d130e3ba9e6fd1e",
+        "filename": "oligoformer_paper_extracted_text.txt",
+        "title": "OligoFormer: an accurate and robust prediction method for siRNA design",
+        "doi": "10.1093/bioinformatics/btae577",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11494384/",
+        "source_kind": "article_full_text",
+        "source_label": "文献全文（文字部分）",
+        "source_note": "EXTRACTED_FULL_TEXT_NO_PDF; license not exposed in OA response",
+        "source_version": "10.1093/bioinformatics/btae577",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 34556,
+        "added_at": "2026-10-23T15:10:16.827561+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 23,
+        "url": "/library/e2cea21b6712b85250758e8b",
+        "original_url": "/api/library/original/e2cea21b6712b85250758e8b"
+      },
+      "version": "13ebcfea2055222bdf7bf4f0275ccabbd19861536bd856b8c13746143ae4fc15"
+    }
+  },
+  {
+    "file": "seedmatchr_paper_extracted_text.txt",
+    "sha256": "2a3c9b1477964896182ff11c7c9adb70286527311979f46f2ee8f44a5a73a2e5",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "2a3c9b1477964896182ff11c",
+        "sha256": "2a3c9b1477964896182ff11c7c9adb70286527311979f46f2ee8f44a5a73a2e5",
+        "filename": "seedmatchr_paper_extracted_text.txt",
+        "title": "SeedMatchR: identify off-target effects mediated by siRNA seed regions in RNA-seq experiments",
+        "doi": "10.1093/bioinformatics/btae011",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10799297/",
+        "source_kind": "article_full_text",
+        "source_label": "文献全文（文字部分）",
+        "source_note": "EXTRACTED_FULL_TEXT_NO_PDF; license not exposed in OA response",
+        "source_version": "10.1093/bioinformatics/btae011",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 15947,
+        "added_at": "2026-10-23T15:10:16.896601+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 11,
+        "url": "/library/2a3c9b1477964896182ff11c",
+        "original_url": "/api/library/original/2a3c9b1477964896182ff11c"
+      },
+      "version": "699325086aa8db4c6e93ab8e92025ff18dd4dcd7fbe87e503e9bee06a92fc51f"
+    }
+  },
+  {
+    "file": "sidirect_paper_extracted_text.txt",
+    "sha256": "f9013c3f5940f6cb597e9d42195586720a044de2222b14820891542d26e2f7b3",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "f9013c3f5940f6cb597e9d42",
+        "sha256": "f9013c3f5940f6cb597e9d42195586720a044de2222b14820891542d26e2f7b3",
+        "filename": "sidirect_paper_extracted_text.txt",
+        "title": "siDirect 2.0: updated software for designing functional siRNA with reduced seed-dependent off-target effect",
+        "doi": "10.1186/1471-2105-10-392",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2791777/",
+        "source_kind": "article_full_text",
+        "source_label": "文献全文（文字部分）",
+        "source_note": "EXTRACTED_FULL_TEXT_NO_PDF; license not exposed in OA response",
+        "source_version": "10.1186/1471-2105-10-392",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 19627,
+        "added_at": "2026-10-23T15:10:16.984397+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 14,
+        "url": "/library/f9013c3f5940f6cb597e9d42",
+        "original_url": "/api/library/original/f9013c3f5940f6cb597e9d42"
+      },
+      "version": "49fcbd518879effb03f067b6fa8a8a040ed0037be65a294bc7f8c80c290e977b"
+    }
+  },
+  {
+    "file": "oligoformer_official_readme.txt",
+    "sha256": "fce74ce24f4c5275cdea80d09aa441e4425451f7a35894393b453357ed1841a1",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "fce74ce24f4c5275cdea80d0",
+        "sha256": "fce74ce24f4c5275cdea80d09aa441e4425451f7a35894393b453357ed1841a1",
+        "filename": "oligoformer_official_readme.txt",
+        "title": "OligoFormer official README (pinned historical version)",
+        "doi": "",
+        "source_url": "https://github.com/lulab/OligoFormer/blob/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/README.md",
+        "source_kind": "official_documentation",
+        "source_label": "官方工具文档",
+        "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF",
+        "source_version": "e2f53ad63387bbe166bf123949151e2bc9bf6ec3",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 9037,
+        "added_at": "2026-10-23T15:10:17.079465+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 6,
+        "url": "/library/fce74ce24f4c5275cdea80d0",
+        "original_url": "/api/library/original/fce74ce24f4c5275cdea80d0"
+      },
+      "version": "a5a0a3014298a251a8a9136bec5b62fd10d1c87ff1dd916d595493c8dda8da87"
+    }
+  },
+  {
+    "file": "oligoformer_official_infer.txt",
+    "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "ec77cffdc9e76e478068430f",
+        "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+        "filename": "oligoformer_official_infer.txt",
+        "title": "OligoFormer official inference source, including score scaling and input context",
+        "doi": "",
+        "source_url": "https://github.com/lulab/OligoFormer/blob/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/infer.py",
+        "source_kind": "official_source_code",
+        "source_label": "官方工具源码",
+        "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF",
+        "source_version": "e2f53ad63387bbe166bf123949151e2bc9bf6ec3",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 22032,
+        "added_at": "2026-10-23T15:10:17.175230+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 15,
+        "url": "/library/ec77cffdc9e76e478068430f",
+        "original_url": "/api/library/original/ec77cffdc9e76e478068430f"
+      },
+      "version": "aab7375ec0e72138df8cc3586875a876de54b7a7ad84a4544a30df7203f1eea5"
+    }
+  },
+  {
+    "file": "seedmatchr_111_get_seed.txt",
+    "sha256": "f72c0ee41a849b5fd075fb7ca3de5014e072b5ce94796ac59e464f4add9da306",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "f72c0ee41a849b5fd075fb7c",
+        "sha256": "f72c0ee41a849b5fd075fb7ca3de5014e072b5ce94796ac59e464f4add9da306",
+        "filename": "seedmatchr_111_get_seed.txt",
+        "title": "SeedMatchR 1.1.1 official get_seed documentation",
+        "doi": "",
+        "source_url": "https://github.com/cran/SeedMatchR/blob/b462d4a00520172622f9d8a5a8842d34442c2e68/man/get_seed.Rd",
+        "source_kind": "official_documentation",
+        "source_label": "官方工具文档",
+        "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF",
+        "source_version": "1.1.1",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 1816,
+        "added_at": "2026-10-23T15:10:17.281185+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 2,
+        "url": "/library/f72c0ee41a849b5fd075fb7c",
+        "original_url": "/api/library/original/f72c0ee41a849b5fd075fb7c"
+      },
+      "version": "3d6a61db41be2f93ad1f97523da83914670625a30b8d69a35d68c8d46e174d3c"
+    }
+  },
+  {
+    "file": "seedmatchr_111_get_seed_source.txt",
+    "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "164853a2be7a6b1a7f047604",
+        "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+        "filename": "seedmatchr_111_get_seed_source.txt",
+        "title": "SeedMatchR 1.1.1 official seed definitions source (g2-g8)",
+        "doi": "",
+        "source_url": "https://github.com/cran/SeedMatchR/blob/b462d4a00520172622f9d8a5a8842d34442c2e68/R/get_seed.R",
+        "source_kind": "official_source_code",
+        "source_label": "官方工具源码",
+        "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF",
+        "source_version": "1.1.1",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 4045,
+        "added_at": "2026-10-23T15:10:17.389730+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 3,
+        "url": "/library/164853a2be7a6b1a7f047604",
+        "original_url": "/api/library/original/164853a2be7a6b1a7f047604"
+      },
+      "version": "2a1242f4c93f4e81ea4ae0a55d7d201be955aa99e8b2c130c98b0365c38831ed"
+    }
+  },
+  {
+    "file": "project_candidate_provenance_20261023.txt",
+    "sha256": "6a1b8c9ea14cc5ae67700e189a7e6969db041aa4cb3838eae4d7c0ffeae7364d",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "6a1b8c9ea14cc5ae67700e18",
+        "sha256": "6a1b8c9ea14cc5ae67700e189a7e6969db041aa4cb3838eae4d7c0ffeae7364d",
+        "filename": "project_candidate_provenance_20261023.txt",
+        "title": "本项目默认九条候选来源核查（历史计算记录，不是文献结论）",
+        "doi": "",
+        "source_url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/blob/1e4fe57a059fbf19cf32b4685cc249a3d297e98c/research/2026-10-23_candidate_provenance/README.md",
+        "source_kind": "project_record",
+        "source_label": "本地计算记录（历史来源核查）",
+        "source_note": "Project provenance audit of historical imports; no new inference or biological experiment",
+        "source_version": "1e4fe57",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 11927,
+        "added_at": "2026-10-23T15:10:17.507597+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 4,
+        "url": "/library/6a1b8c9ea14cc5ae67700e18",
+        "original_url": "/api/library/original/6a1b8c9ea14cc5ae67700e18"
+      },
+      "version": "854fd49b51f7ff43e100f581482f02d6c443e57c1342d54986c5e2923f65e63e"
+    }
+  },
+  {
+    "file": "sidirect_publisher_paper.pdf",
+    "sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "c6578cb6386d9f9b93d85be2",
+        "sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd",
+        "filename": "sidirect_publisher_paper.pdf",
+        "title": "siDirect 2.0: updated software for designing functional siRNA with reduced seed-dependent off-target effect",
+        "doi": "10.1186/1471-2105-10-392",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2791777/",
+        "source_kind": "article_full_text",
+        "source_label": "文献全文（文字部分）",
+        "source_note": "Original publisher PDF; text layer verified; source download recorded in publisher_pdf_attempts.json",
+        "source_version": "10.1186/1471-2105-10-392",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 697982,
+        "added_at": "2026-10-23T15:10:17.653295+00:00",
+        "extractor": "pypdf-6.10.0",
+        "scope": "TEXT_LAYER_ONLY_NO_OCR_NO_FIGURE_READING",
+        "pages_without_text": [],
+        "parser_warnings": "Xref table not zero-indexed. ID numbers for objects will be corrected.\r\n",
+        "page_count": 8,
+        "chunk_count": 28,
+        "url": "/library/c6578cb6386d9f9b93d85be2",
+        "original_url": "/api/library/original/c6578cb6386d9f9b93d85be2"
+      },
+      "version": "0791a478701b60dcbf93fef789f48f945720fd0396d039aa1460261c481777da"
+    }
+  }
+]

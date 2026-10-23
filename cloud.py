@@ -69,7 +69,8 @@ def application(environ,start_response):
         if path=='/api/config':return response(start_response,409,{'error':'云端配置由Render环境变量管理；请在后台更新后重新部署。'})
         try:
             n=int(environ.get('CONTENT_LENGTH') or 0)
-            if n<0 or n>(16000000 if path=='/api/expression-upload' else 50000):return response(start_response,413,{'error':'Input too large'})
+            maximum=34000000 if path in ('/api/library-upload','/api/library-import') else 16000000 if path=='/api/expression-upload' else 50000
+            if n<0 or n>maximum:return response(start_response,413,{'error':'Input too large'})
             data=json.loads(environ['wsgi.input'].read(n).decode('utf-8'))
         except (ValueError,UnicodeError,KeyError):return response(start_response,400,{'error':'Invalid JSON request'})
         if not isinstance(data,dict):return response(start_response,400,{'error':'JSON object required'})

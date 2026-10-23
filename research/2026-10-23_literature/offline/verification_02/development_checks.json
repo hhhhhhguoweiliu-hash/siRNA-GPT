@@ -1,0 +1,430 @@
+{
+  "kind": "TEN_VISIBLE_DEVELOPMENT_CHECKS_NOT_INDEPENDENT_EVALUATION",
+  "time_utc": "2026-10-23T15:32:57.619834+00:00",
+  "protocol_sha256": "8ef13d3084564565e31e4e6d1c5ad5b25062ce20b9027f2dbaa56772c6211d93",
+  "runtime": {
+    "version": "0.7-cloud",
+    "commit": "local",
+    "assets": {
+      "core.py": "d1b318fceebd6d918e5366215bec0bcfab019a1af2b08c46e015e7c2c6edf154",
+      "conversation.py": "42b95b16de4a88ff7f3b6a9bde627f2e7a944a6e67f3b82893a9a067a7ac31d5",
+      "research.py": "92374d857e8b8d08f972c8149efc1c533ae91a2c4c5ca6b56285c2f6eccf8f38",
+      "knowledge.py": "87ceb4a48cb5373e71eafb7830e7720b42ea889f7ebf90a57c5bb883125a5187",
+      "literature.py": "8d0aee986db4a3c09a5ee9c92aea2a9434f33e1c1b05e5a38f10f2f4c118b675",
+      "pdf_text_worker.py": "e1d9df6fbec7c153c694946a08f04e00ea9c2b0607d199102c1b80be9ba50ed1",
+      "library_ui.js": "d0f7e7f3af74d5fdb5ad076753abaf1c300b9a76a029bbea5d0c5cdbae9fc533",
+      "model_client.py": "3668b6add2e84ef913ac542db15981cc2d46e933fca78a804e54054b7cda0769",
+      "expression_data.py": "209d5afb92294051b6c64fc058550d99aa568a5ada5baa5d5c50668f53f20bc5",
+      "evaluate.py": "9a43c7d882c89c71ecb16a5f77630d9b9a2c363f69b70db8a93e6308abd0d0ef",
+      "paper_pilot.py": "c4b4c97b47ec568cd4b6fb908a5d503117db59f66078e26e4656d1d2a98eec0d",
+      "evaluation_protocol.py": "8486bcdc5358baa223a94e83c3c1e9533868a90f6469eca69117347d25af8f13",
+      "evaluation_cases.example.json": "31138b0927b76396144c8126f01b4f8e626e990380406e81ec01f6185f15a66c",
+      "evaluation_contract.py": "9c533a935441e16988d66d5fa3630b103c4980526da92def85ccdb7b492ced77",
+      "evaluation_rubric.json": "e41f739438a393733c7f83e0dc73385f5fc0120a051128a7043a4abf59af6676",
+      "review_package.py": "0f974ccdd6e38ba4eb56ae008514380a899949af4e45b8de81b4d21ca06d4be2",
+      "data/candidates.tsv": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853",
+      "data/historical_scores.tsv": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+      "data/VEGFA.fasta": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "data/expression.tsv.gz": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+      "data/historical_seed_matches.tsv": "3701a561a84cdf9df29108f6c235398cc377901a598293071f5724f706f2ac3c",
+      "data/provenance.json": "c2f0ff2200cbbbd79e73724db2a4673c0a356ae3dbe548380c6f0b6223c7ef18",
+      "references/sirna_library/sources.json": "bab3fc8132b6588d9cde45b3cd21f6047c088ff879d86e39219bb01413c7f537"
+    },
+    "scientific_mode": "verified_imports",
+    "knowledge_review": "retrieved_sources_not_independently_scored",
+    "literature_component": "scoped_library_v1",
+    "literature_source_manifest": "references/sirna_library/sources.json",
+    "specialized_fine_tuned_model": false,
+    "durable_cloud_storage": false
+  },
+  "library_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+  "documents": [
+    {
+      "added_at": "2026-10-23T15:32:53.969258+00:00",
+      "bytes": 4045,
+      "doi": "",
+      "extractor": "utf8-text-v1",
+      "filename": "seedmatchr_111_get_seed_source.txt",
+      "id": "164853a2be7a6b1a7f047604",
+      "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "pages_without_text": [],
+      "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+      "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+      "source_kind": "official_source_code",
+      "source_label": "官方工具源码",
+      "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF",
+      "source_url": "https://github.com/cran/SeedMatchR/blob/b462d4a00520172622f9d8a5a8842d34442c2e68/R/get_seed.R",
+      "source_version": "1.1.1",
+      "title": "SeedMatchR 1.1.1 official seed definitions source (g2-g8)",
+      "page_count": 1,
+      "chunk_count": 3,
+      "url": "/library/164853a2be7a6b1a7f047604",
+      "original_url": "/api/library/original/164853a2be7a6b1a7f047604"
+    },
+    {
+      "added_at": "2026-10-23T15:32:53.298873+00:00",
+      "bytes": 15947,
+      "doi": "10.1093/bioinformatics/btae011",
+      "extractor": "utf8-text-v1",
+      "filename": "seedmatchr_paper_extracted_text.txt",
+      "id": "2a3c9b1477964896182ff11c",
+      "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "pages_without_text": [],
+      "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+      "sha256": "2a3c9b1477964896182ff11c7c9adb70286527311979f46f2ee8f44a5a73a2e5",
+      "source_kind": "article_full_text",
+      "source_label": "文献全文（文字部分）",
+      "source_note": "EXTRACTED_FULL_TEXT_NO_PDF; license not exposed in OA response",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10799297/",
+      "source_version": "10.1093/bioinformatics/btae011",
+      "title": "SeedMatchR: identify off-target effects mediated by siRNA seed regions in RNA-seq experiments",
+      "page_count": 1,
+      "chunk_count": 11,
+      "url": "/library/2a3c9b1477964896182ff11c",
+      "original_url": "/api/library/original/2a3c9b1477964896182ff11c"
+    },
+    {
+      "added_at": "2026-10-23T15:32:54.157117+00:00",
+      "bytes": 11927,
+      "doi": "",
+      "extractor": "utf8-text-v1",
+      "filename": "project_candidate_provenance_20261023.txt",
+      "id": "6a1b8c9ea14cc5ae67700e18",
+      "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "pages_without_text": [],
+      "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+      "sha256": "6a1b8c9ea14cc5ae67700e189a7e6969db041aa4cb3838eae4d7c0ffeae7364d",
+      "source_kind": "project_record",
+      "source_label": "本地计算记录（历史来源核查）",
+      "source_note": "Project provenance audit of historical imports; no new inference or biological experiment",
+      "source_url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/blob/1e4fe57a059fbf19cf32b4685cc249a3d297e98c/research/2026-10-23_candidate_provenance/README.md",
+      "source_version": "1e4fe57",
+      "title": "本项目默认九条候选来源核查（历史计算记录，不是文献结论）",
+      "page_count": 1,
+      "chunk_count": 4,
+      "url": "/library/6a1b8c9ea14cc5ae67700e18",
+      "original_url": "/api/library/original/6a1b8c9ea14cc5ae67700e18"
+    },
+    {
+      "added_at": "2026-10-23T15:32:54.362299+00:00",
+      "bytes": 697982,
+      "doi": "10.1186/1471-2105-10-392",
+      "extractor": "pypdf-6.10.0",
+      "filename": "sidirect_publisher_paper.pdf",
+      "id": "c6578cb6386d9f9b93d85be2",
+      "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "pages_without_text": [],
+      "parser_warnings": "Xref table not zero-indexed. ID numbers for objects will be corrected.\r\n",
+      "scope": "TEXT_LAYER_ONLY_NO_OCR_NO_FIGURE_READING",
+      "sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd",
+      "source_kind": "article_full_text",
+      "source_label": "文献全文（文字部分）",
+      "source_note": "Original publisher PDF; text layer verified; source download recorded in publisher_pdf_attempts.json",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2791777/",
+      "source_version": "10.1186/1471-2105-10-392",
+      "title": "siDirect 2.0: updated software for designing functional siRNA with reduced seed-dependent off-target effect",
+      "page_count": 8,
+      "chunk_count": 28,
+      "url": "/library/c6578cb6386d9f9b93d85be2",
+      "original_url": "/api/library/original/c6578cb6386d9f9b93d85be2"
+    },
+    {
+      "added_at": "2026-10-23T15:32:53.203684+00:00",
+      "bytes": 34556,
+      "doi": "10.1093/bioinformatics/btae577",
+      "extractor": "utf8-text-v1",
+      "filename": "oligoformer_paper_extracted_text.txt",
+      "id": "e2cea21b6712b85250758e8b",
+      "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "pages_without_text": [],
+      "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+      "sha256": "e2cea21b6712b85250758e8b69a9135ff579b422cbdc81606d130e3ba9e6fd1e",
+      "source_kind": "article_full_text",
+      "source_label": "文献全文（文字部分）",
+      "source_note": "EXTRACTED_FULL_TEXT_NO_PDF; license not exposed in OA response",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11494384/",
+      "source_version": "10.1093/bioinformatics/btae577",
+      "title": "OligoFormer: an accurate and robust prediction method for siRNA design",
+      "page_count": 1,
+      "chunk_count": 23,
+      "url": "/library/e2cea21b6712b85250758e8b",
+      "original_url": "/api/library/original/e2cea21b6712b85250758e8b"
+    },
+    {
+      "added_at": "2026-10-23T15:32:53.633298+00:00",
+      "bytes": 22032,
+      "doi": "",
+      "extractor": "utf8-text-v1",
+      "filename": "oligoformer_official_infer.txt",
+      "id": "ec77cffdc9e76e478068430f",
+      "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "pages_without_text": [],
+      "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+      "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+      "source_kind": "official_source_code",
+      "source_label": "官方工具源码",
+      "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF",
+      "source_url": "https://github.com/lulab/OligoFormer/blob/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/infer.py",
+      "source_version": "e2f53ad63387bbe166bf123949151e2bc9bf6ec3",
+      "title": "OligoFormer official inference source, including score scaling and input context",
+      "page_count": 1,
+      "chunk_count": 15,
+      "url": "/library/ec77cffdc9e76e478068430f",
+      "original_url": "/api/library/original/ec77cffdc9e76e478068430f"
+    },
+    {
+      "added_at": "2026-10-23T15:32:53.806221+00:00",
+      "bytes": 1816,
+      "doi": "",
+      "extractor": "utf8-text-v1",
+      "filename": "seedmatchr_111_get_seed.txt",
+      "id": "f72c0ee41a849b5fd075fb7c",
+      "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "pages_without_text": [],
+      "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+      "sha256": "f72c0ee41a849b5fd075fb7ca3de5014e072b5ce94796ac59e464f4add9da306",
+      "source_kind": "official_documentation",
+      "source_label": "官方工具文档",
+      "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF",
+      "source_url": "https://github.com/cran/SeedMatchR/blob/b462d4a00520172622f9d8a5a8842d34442c2e68/man/get_seed.Rd",
+      "source_version": "1.1.1",
+      "title": "SeedMatchR 1.1.1 official get_seed documentation",
+      "page_count": 1,
+      "chunk_count": 2,
+      "url": "/library/f72c0ee41a849b5fd075fb7c",
+      "original_url": "/api/library/original/f72c0ee41a849b5fd075fb7c"
+    },
+    {
+      "added_at": "2026-10-23T15:32:53.398103+00:00",
+      "bytes": 19627,
+      "doi": "10.1186/1471-2105-10-392",
+      "extractor": "utf8-text-v1",
+      "filename": "sidirect_paper_extracted_text.txt",
+      "id": "f9013c3f5940f6cb597e9d42",
+      "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "pages_without_text": [],
+      "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+      "sha256": "f9013c3f5940f6cb597e9d42195586720a044de2222b14820891542d26e2f7b3",
+      "source_kind": "article_full_text",
+      "source_label": "文献全文（文字部分）",
+      "source_note": "EXTRACTED_FULL_TEXT_NO_PDF; license not exposed in OA response",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2791777/",
+      "source_version": "10.1186/1471-2105-10-392",
+      "title": "siDirect 2.0: updated software for designing functional siRNA with reduced seed-dependent off-target effect",
+      "page_count": 1,
+      "chunk_count": 14,
+      "url": "/library/f9013c3f5940f6cb597e9d42",
+      "original_url": "/api/library/original/f9013c3f5940f6cb597e9d42"
+    },
+    {
+      "added_at": "2026-10-23T15:32:53.507630+00:00",
+      "bytes": 9037,
+      "doi": "",
+      "extractor": "utf8-text-v1",
+      "filename": "oligoformer_official_readme.txt",
+      "id": "fce74ce24f4c5275cdea80d0",
+      "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "pages_without_text": [],
+      "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+      "sha256": "fce74ce24f4c5275cdea80d09aa441e4425451f7a35894393b453357ed1841a1",
+      "source_kind": "official_documentation",
+      "source_label": "官方工具文档",
+      "source_note": "Recovered historical official bytes, independently compared to pinned official sources in Task A; not a paper PDF",
+      "source_url": "https://github.com/lulab/OligoFormer/blob/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/README.md",
+      "source_version": "e2f53ad63387bbe166bf123949151e2bc9bf6ec3",
+      "title": "OligoFormer official README (pinned historical version)",
+      "page_count": 1,
+      "chunk_count": 6,
+      "url": "/library/fce74ce24f4c5275cdea80d0",
+      "original_url": "/api/library/original/fce74ce24f4c5275cdea80d0"
+    }
+  ],
+  "checks": [
+    {
+      "id": "B01",
+      "automated_check_passed": true,
+      "detail": {
+        "sources_imported_through_http": 9,
+        "pdfs": [
+          {
+            "added_at": "2026-10-23T15:32:54.362299+00:00",
+            "bytes": 697982,
+            "doi": "10.1186/1471-2105-10-392",
+            "extractor": "pypdf-6.10.0",
+            "filename": "sidirect_publisher_paper.pdf",
+            "id": "c6578cb6386d9f9b93d85be2",
+            "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+            "pages_without_text": [],
+            "parser_warnings": "Xref table not zero-indexed. ID numbers for objects will be corrected.\r\n",
+            "scope": "TEXT_LAYER_ONLY_NO_OCR_NO_FIGURE_READING",
+            "sha256": "c6578cb6386d9f9b93d85be2b4a50846b0e58c4bce370c4731f07d80ff9c0fcd",
+            "source_kind": "article_full_text",
+            "source_label": "文献全文（文字部分）",
+            "source_note": "Original publisher PDF; text layer verified; source download recorded in publisher_pdf_attempts.json",
+            "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2791777/",
+            "source_version": "10.1186/1471-2105-10-392",
+            "title": "siDirect 2.0: updated software for designing functional siRNA with reduced seed-dependent off-target effect",
+            "page_count": 8,
+            "chunk_count": 28,
+            "url": "/library/c6578cb6386d9f9b93d85be2",
+            "original_url": "/api/library/original/c6578cb6386d9f9b93d85be2"
+          }
+        ],
+        "english_source_retrieved": true,
+        "note": "OligoFormer full text is extracted XML text, without invented PDF page numbers; siDirect original PDF supplies real page-level checks."
+      },
+      "human_scientific_quality_score": null
+    },
+    {
+      "id": "B02",
+      "automated_check_passed": true,
+      "detail": {
+        "source_kinds": [
+          "official_source_code",
+          "article_full_text",
+          "article_full_text",
+          "official_source_code",
+          "official_documentation"
+        ],
+        "boundary": "Retrieval of scaling and project explanation only; no automated correctness score for a generated answer."
+      },
+      "human_scientific_quality_score": null
+    },
+    {
+      "id": "B03",
+      "automated_check_passed": true,
+      "detail": {
+        "project_coordinate_record_retrieved": true,
+        "source_kinds": [
+          "project_record",
+          "project_record",
+          "article_full_text",
+          "article_full_text",
+          "article_full_text"
+        ]
+      },
+      "human_scientific_quality_score": null
+    },
+    {
+      "id": "B04",
+      "automated_check_passed": true,
+      "detail": {
+        "retrieved_historical_definition": [
+          "/library/164853a2be7a6b1a7f047604#text-c002",
+          "/library/164853a2be7a6b1a7f047604#text-c001",
+          "/library/f72c0ee41a849b5fd075fb7c#text-c002"
+        ]
+      },
+      "human_scientific_quality_score": null
+    },
+    {
+      "id": "B05",
+      "automated_check_passed": true,
+      "detail": {
+        "project_seed_note_and_tool_source_retrieved": true,
+        "not_measured_off_target_evidence": true
+      },
+      "human_scientific_quality_score": null
+    },
+    {
+      "id": "B06",
+      "automated_check_passed": true,
+      "detail": {
+        "project_expression_source": [
+          {
+            "id": "expression",
+            "title": "常氧与缺氧 RNA-seq 的用途",
+            "tags": [
+              "RNA-seq",
+              "表达",
+              "常氧",
+              "缺氧",
+              "Hypoxia",
+              "Normoxia",
+              "状态",
+              "重复"
+            ],
+            "text": "项目基线数据为ARPE-19常氧4份、缺氧4份，缺氧为1% O₂、24小时。来源记录注明同一次培养运行、每状态4个培养容器。此处不能自动把容器数说成4次独立培养批次。当前仅将基线表达关联至候选匹配基因，不把它当作siRNA处理后的验证数据。",
+            "basis": "data/provenance.json 的 expression.tsv.gz scope；项目已确认的实验条件"
+          }
+        ],
+        "no_new_calculation": true
+      },
+      "human_scientific_quality_score": null
+    },
+    {
+      "id": "B07",
+      "automated_check_passed": true,
+      "detail": {
+        "project_record_sources": [
+          "/library/6a1b8c9ea14cc5ae67700e18#text-c001",
+          "/library/6a1b8c9ea14cc5ae67700e18#text-c003"
+        ]
+      },
+      "human_scientific_quality_score": null
+    },
+    {
+      "id": "B08",
+      "automated_check_passed": true,
+      "detail": {
+        "actual_program_answer": "判定：当前文库证据不足。\n关键结果：没有找到支持这项结论的资料，不能提供本项目未测得的数值。\n证据：本轮本地检索没有可引用片段，未进行联网补查。\n限制或下一步：请提供与问题相关的原文；导入后再核对。",
+        "model_api_calls": 0,
+        "external_search": false
+      },
+      "human_scientific_quality_score": null
+    },
+    {
+      "id": "B09",
+      "automated_check_passed": true,
+      "detail": {
+        "rejected_inputs": [
+          {
+            "filename": "TEST_ONLY_corrupt.pdf",
+            "http_status": 400,
+            "response": {
+              "error": "PDF未导入：EOF marker not found"
+            },
+            "input_sha256": "907e5b6df95c671b3f7ed8bd47b37f57775948b7854892cac12f980bc93c9c96",
+            "input_base64_TEST_ONLY": "JVBERi0xLjQKQlJPS0VOX1BERl9URVNUX09OTFk="
+          },
+          {
+            "filename": "TEST_ONLY_image_only.pdf",
+            "http_status": 400,
+            "response": {
+              "error": "PDF未导入：未提取到足够文字：可能是扫描版或图片PDF。本版不识别图片文字，请提供文字版PDF或文本。"
+            },
+            "input_sha256": "8c695a656e1de23247d459e007f7ee712cb061d9aabea3111dc9c7e14059ba6a",
+            "input_base64_TEST_ONLY": "JVBERi0xLjMKJeLjz9MKMSAwIG9iago8PAovUHJvZHVjZXIgKHB5cGRmKQo+PgplbmRvYmoKMiAwIG9iago8PAovVHlwZSAvUGFnZXMKL0NvdW50IDEKL0tpZHMgWyA0IDAgUiBdCj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAyIDAgUgo+PgplbmRvYmoKNCAwIG9iago8PAovVHlwZSAvUGFnZQovUmVzb3VyY2VzIDw8Ci9YT2JqZWN0IDw8Ci9JbTAgNSAwIFIKPj4KPj4KL01lZGlhQm94IFsgMC4wIDAuMCAxMDAgMTAwIF0KL1BhcmVudCAyIDAgUgovQ29udGVudHMgNiAwIFIKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL1R5cGUgL1hPYmplY3QKL1N1YnR5cGUgL0ltYWdlCi9XaWR0aCAxCi9IZWlnaHQgMQovQ29sb3JTcGFjZSAvRGV2aWNlUkdCCi9CaXRzUGVyQ29tcG9uZW50IDgKL0xlbmd0aCAzCj4+CnN0cmVhbQr///8KZW5kc3RyZWFtCmVuZG9iago2IDAgb2JqCjw8Ci9MZW5ndGggMzAKPj4Kc3RyZWFtCnEgMTAwIDAgMCAxMDAgMCAwIGNtIC9JbTAgRG8gUQplbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCA3CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwMDU0IDAwMDAwIG4gCjAwMDAwMDAxMTMgMDAwMDAgbiAKMDAwMDAwMDE2MiAwMDAwMCBuIAowMDAwMDAwMjk4IDAwMDAwIG4gCjAwMDAwMDA0NDMgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSA3Ci9Sb290IDMgMCBSCi9JbmZvIDEgMCBSCj4+CnN0YXJ0eHJlZgo1MjMKJSVFT0YK"
+          }
+        ],
+        "no_partial_import": true
+      },
+      "human_scientific_quality_score": null
+    },
+    {
+      "id": "B10",
+      "automated_check_passed": true,
+      "detail": {
+        "restored": {
+          "status": "IMPORTED",
+          "documents_in_bundle": 9,
+          "added": 9,
+          "version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+          "bundle_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+          "same_version": true
+        },
+        "same_B01_retrieval": true,
+        "same_all_pdf_originals_pages_fragments": true,
+        "pdf_fragments_verified": 28,
+        "all_retrieved_fragment_links_verified": true,
+        "citation_transport": "TEST_ONLY_SIMULATED_NOT_REAL_MODEL",
+        "rebuilt_index_after_database_removal": true
+      },
+      "human_scientific_quality_score": null
+    }
+  ],
+  "all_automated_checks_passed": true,
+  "real_model_api_calls": false,
+  "independent_scores": null,
+  "old_54_modified": false
+}

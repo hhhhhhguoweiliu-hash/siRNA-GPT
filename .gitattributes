@@ -1,3 +1,4 @@
 # Preserve exact evidence bytes and SHA256 across Windows/Linux checkouts.
 research/** -text
+references/sirna_library/** -text
 *.gz -text
