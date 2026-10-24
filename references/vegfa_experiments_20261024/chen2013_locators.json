@@ -1,7 +1,7 @@
 [
   {
     "locator": "xml-block-0001",
-    "xpath": "/article/abstract[1]/sec[1]/p[1]",
+    "xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[1]/p[1]",
     "original_id": null,
     "section": "Background",
     "type": "p",
@@ -9,7 +9,7 @@
   },
   {
     "locator": "xml-block-0002",
-    "xpath": "/article/abstract[1]/sec[2]/p[1]",
+    "xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[2]/p[1]",
     "original_id": null,
     "section": "Methods",
     "type": "p",
@@ -17,7 +17,7 @@
   },
   {
     "locator": "xml-block-0003",
-    "xpath": "/article/abstract[1]/sec[3]/p[1]",
+    "xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[3]/p[1]",
     "original_id": null,
     "section": "Results",
     "type": "p",
@@ -25,7 +25,7 @@
   },
   {
     "locator": "xml-block-0004",
-    "xpath": "/article/abstract[1]/sec[4]/p[1]",
+    "xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[4]/p[1]",
     "original_id": null,
     "section": "Conclusion",
     "type": "p",

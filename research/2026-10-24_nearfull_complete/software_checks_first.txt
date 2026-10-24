@@ -1,0 +1,25 @@
+test_complete_purchased_workflow_and_export (test_verified_imports.VerifiedImportTests.test_complete_purchased_workflow_and_export) ... ok
+test_context_and_coordinates_must_match (test_verified_imports.VerifiedImportTests.test_context_and_coordinates_must_match) ... ok
+test_explicit_dropdown_and_unknown_dataset (test_verified_imports.VerifiedImportTests.test_explicit_dropdown_and_unknown_dataset) ... ok
+test_matching_id_cannot_reuse_legacy_version (test_verified_imports.VerifiedImportTests.test_matching_id_cannot_reuse_legacy_version) ... ok
+test_reference_version_mismatch_stops_import (test_verified_imports.VerifiedImportTests.test_reference_version_mismatch_stops_import) ... ok
+test_wrong_sequence_or_original_chemistry_or_id_rejected (test_verified_imports.VerifiedImportTests.test_wrong_sequence_or_original_chemistry_or_id_rejected) ... ok
+test_changed_sequence_cannot_import (test_core.CoreTests.test_changed_sequence_cannot_import) ... ok
+test_complete_imported_case (test_core.CoreTests.test_complete_imported_case) ... ok
+test_duplicate_id (test_core.CoreTests.test_duplicate_id) ... ok
+test_empty_candidates (test_core.CoreTests.test_empty_candidates) ... ok
+test_invalid_bases (test_core.CoreTests.test_invalid_bases) ... ok
+test_missing_api_no_fallback (test_core.CoreTests.test_missing_api_no_fallback) ... ok
+test_missing_direction_does_not_truncate (test_core.CoreTests.test_missing_direction_does_not_truncate) ... ok
+test_no_fake_success_after_missing_tool (test_core.CoreTests.test_no_fake_success_after_missing_tool) ... ok
+test_normoxia_annotation_matches_selected_state (test_core.CoreTests.test_normoxia_annotation_matches_selected_state) ... ok
+test_protocol_early_final_is_incomplete (test_core.CoreTests.test_protocol_early_final_is_incomplete) ... ok
+test_protocol_with_explicit_stub_transport (test_core.CoreTests.test_protocol_with_explicit_stub_transport) ... ok
+test_unknown_tool_rejected (test_core.CoreTests.test_unknown_tool_rejected) ... ok
+test_unmatched_target (test_core.CoreTests.test_unmatched_target) ... ok
+test_wrong_species_stops_before_scoring (test_core.CoreTests.test_wrong_species_stops_before_scoring) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 11.038s
+
+OK

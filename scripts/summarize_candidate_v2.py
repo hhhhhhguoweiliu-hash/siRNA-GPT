@@ -108,7 +108,7 @@ def main():
   elif len(chosen)<3:chosen.append(r);r['provisional_review_basis']='PROVISIONAL_REVIEW_CANDIDATE_NOT_EXPERIMENTALLY_VALIDATED'
  table('new_65_complete_table.tsv',design);save('new_65_complete_table.json',design)
  table('purchased_siVEGF_separate.tsv',purchased);save('purchased_siVEGF_separate.json',purchased)
- save('provisional_small_trial_candidates.json',{'method':'Preregistered transparent CDS review rule; no risk-weight fusion; not a validated efficacy optimum','new_candidate_ids':[r['candidate_id'] for r in chosen],
+ save('provisional_small_trial_candidates.json',{'method':'locally prespecified transparent CDS review rule; no risk-weight fusion; not a validated efficacy optimum','new_candidate_ids':[r['candidate_id'] for r in chosen],
   'maximum_requested':3,'actual_nonoverlapping_eligible_count':len(chosen),'purchased_reference_separate':purchased[0],
   'not_a_final_synthesis_order':True,'remaining_nearfull_UTR_queries':240})
  # Preserve original literature sequence forms, without assigning scores to incompatible/target-only inputs.

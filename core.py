@@ -80,7 +80,7 @@ class Session:
   self.expression_source=dataset['receipt'] if dataset else builtin_receipt()
   save_json(self.path/'expression_source.json',self.expression_source)
   if dataset:save_json(self.path/'expression_snapshot.json',dataset)
-  self.state={};self.events=[];self.model_messages=[];self.tool_calls=0
+  self.state={};self.events=[];self.model_messages=[];self.tool_calls=0;self.verified_imports={}
   save_json(self.path/'input.json',{'task':self.task,'candidates':self.candidates,'mode':mode,'tool_mode':tool_mode})
   save_json(self.path/'run_config.json',{'provider':self.cfg.get('provider'),'model':self.cfg.get('model'),'base_url':self.cfg.get('base_url'),'api_key_saved':False,'mode':mode,'tool_mode':tool_mode,'version':VERSION,'runtime':manifest(),'started_at':now(),'rules':'no custom fusion; review flags first, score descending among unflagged; expression annotation only'})
  def emit(self,kind,message,**extra):
@@ -125,7 +125,16 @@ class Session:
    if x.get('target_gene','VEGFA')!='VEGFA':raise TaskError(cid+'：候选靶基因与任务不一致')
    passenger=x.get('passenger_paired_core_19nt_5to3')
    if passenger and passenger.upper().replace('T','U')!=revcomp(g):raise TaskError(cid+'：guide和passenger配对核心不互补')
-   rr.append({'candidate_id':cid,'guide_core19_5to3':g,'source':x.get('source') or x.get('source_tool'),'synthesis_status':x.get('synthesis_status','NOT_ORDER_READY_REVIEW_REQUIRED')})
+   from verified_imports import bind,copy_evidence
+   bound=bind(x)
+   if bound:
+    if self.tool_mode!='imported':raise TaskError('该既购证据版本仅导入已核验的本地计算，请选择读取已验证的计算结果')
+    self.verified_imports[cid]=bound
+    receipt=copy_evidence(self.path)
+   else:receipt=None
+   rr.append({'candidate_id':cid,'guide_core19_5to3':g,'source':x.get('source') or x.get('source_tool'),'synthesis_status':x.get('synthesis_status','NOT_ORDER_READY_REVIEW_REQUIRED'),
+    **({'evidence_dataset_id':bound['manifest']['dataset_id'],'evidence_manifest':receipt,'original_row1':x['original_row1'],'original_row2':x['original_row2'],
+     'strand_assignment_basis':x['strand_assignment_basis'],'original_modification':x['original_modification'],'limits':bound['manifest']['limits']} if bound else {})})
   return {'status':'LIVE_CHECKED','rows':rr,'warning':'配对核心用于计算；不自动转换为订购序列或声称已做化学修饰验证'}
  def tool_verify_target(self):
   self.require('inspect_candidates');refs=fasta(DATA/'VEGFA.fasta');rr=[]
@@ -168,10 +177,18 @@ class Session:
    return json.loads(out.read_text(encoding='utf-8'))
   old={r['candidate_id']:r for r in read_tsv(DATA/'historical_scores.tsv')};rr=[]
   for x in self.state['verify_target']['rows']:
+   if x['candidate_id'] in self.verified_imports:
+    from verified_imports import bind
+    raw=next(r for r in self.candidates if r['candidate_id']==x['candidate_id']);bound=bind(raw,x);r=bound['result']
+    rr.append({'candidate_id':x['candidate_id'],'guide_core19_5to3':x['guide_core19_5to3'],'mRNA_context_57nt':x['mRNA_context_57nt'],
+     'raw_class1':r['oligo_raw_class1'],'oligoformer_scaled_score':r['oligoformer_scaled_score'],'official_func_filter':r['official_func_filter'],
+     'evidence_dataset_id':bound['manifest']['dataset_id'],'source_commit':bound['manifest']['source_commit'],'not_N3_construct_simulation':True});continue
    r=old.get(x['candidate_id'])
    if not r or r['guide_core19_5to3']!=x['guide_core19_5to3'] or r['mRNA_context_57nt']!=x['mRNA_context_57nt']:raise TaskError('历史分数与候选序列或上下文不一致，不可导入')
    rr.append({**r,'raw_class1':float(r['raw_class1']),'oligoformer_scaled_score':float(r['oligoformer_scaled_score']),'official_func_filter':int(r['official_func_filter'])})
-  return {'status':'IMPORTED_HISTORICAL','source_sha256':sha(DATA/'historical_scores.tsv'),'rows':rr,'score_not_percent':True}
+  return {'status':'IMPORTED_VERIFIED_LOCAL' if self.verified_imports else 'IMPORTED_HISTORICAL',
+   **({'legacy_source_sha256':sha(DATA/'historical_scores.tsv')} if self.verified_imports else {'source_sha256':sha(DATA/'historical_scores.tsv')}),'rows':rr,'score_not_percent':True,
+   **({'versioned_imports':{cid:b['manifest'] for cid,b in self.verified_imports.items()}} if self.verified_imports else {})}
  def tool_match_seed(self):
   self.require('inspect_candidates')
   if self.tool_mode=='live':
@@ -181,12 +198,19 @@ class Session:
    rows=read_tsv(out);status='LIVE_EXECUTED'
   else:
    original={r['candidate_id']:canonical(r) for r in default_candidates()}
-   if any(original.get(r['candidate_id'])!=r['guide_core19_5to3'] for r in self.state['inspect_candidates']['rows']):raise TaskError('历史seed结果不能用于新序列，请选择实时模式')
+   if any(original.get(r['candidate_id'])!=r['guide_core19_5to3'] and r['candidate_id'] not in self.verified_imports for r in self.state['inspect_candidates']['rows']):raise TaskError('历史seed结果不能用于新序列，请选择实时模式')
    ids={r['candidate_id'] for r in self.state['inspect_candidates']['rows']}
    rows=[r for r in read_tsv(DATA/'historical_seed_matches.tsv') if r['candidate_id'] in ids];status='IMPORTED_HISTORICAL'
+   if self.verified_imports:
+    from verified_imports import bind,rows as imported_rows
+    for cid,b in self.verified_imports.items():
+     bind(next(r for r in self.candidates if r['candidate_id']==cid))
+     rows.extend({**r,'seed_type':'mer7m8'} for r in imported_rows('seed_pilot_02__'+cid+'__guide__counts.tsv.gz') if int(r['seed_site_count'])>0)
+    status='IMPORTED_VERIFIED_LOCAL'
   self.seed_rows=rows;write_tsv(self.path/'seed_matches.tsv',rows)
   counts={r['candidate_id']:sum(int(float(z['seed_site_count'])) for z in rows if z['candidate_id']==r['candidate_id']) for r in self.state['inspect_candidates']['rows']}
-  return {'status':status,'scope':'guide only, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target','positive_rows':len(rows),'details':'seed_matches.tsv',
+  return {'status':status,'scope':'guide only in expression join, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target','positive_rows':len(rows),'details':'seed_matches.tsv',
+      **({'supplemental_both_strand_seed_summaries':{cid:{k:v for k,v in b['result'].items() if '_seed_sites_' in k or '_matched_genes_' in k} for cid,b in self.verified_imports.items()},'evidence_dataset_ids':[b['manifest']['dataset_id'] for b in self.verified_imports.values()]} if self.verified_imports else {}),
       'counts':counts,'counts_unit':'seed sites including VEGFA, not genes','seed_site_counts_all':counts,
       'seed_site_counts_nontarget':{cid:sum(int(float(z['seed_site_count'])) for z in rows if z['candidate_id']==cid and z['gene_id']!='7422') for cid in counts}}
  def tool_query_expression(self):
@@ -241,8 +265,13 @@ class Session:
       symbol=loci.get(hit['transcript_id'],{}).get('symbol')
       if hit['transcript_id'] not in target_accessions and symbol!='VEGFA':near_hits.append(hit['transcript_id']+' ['+hit['query_kind']+']')
     if near_hits:flags.append('historical near-match <=1 mismatch needs manual review')
+   elif cid in self.verified_imports:
+    r=self.verified_imports[cid]['result']
+    for role in ['guide','passenger']:
+     for kind in ['paired_core19','sidirect_g2g20']:
+      if r[role+'_'+kind+'_mm1_non_target_gene_n'] or r[role+'_'+kind+'_mm1_unknown_mapping_transcript_n']:flags.append('verified local near-match <=1 mismatch needs manual review')
    else:flags.append('near-match scan not available for this new guide')
-   rows.append({'candidate_id':cid,'guide_core19_5to3':x['guide_core19_5to3'],'source':x['source'],'score':float(score['oligoformer_scaled_score']),'func_filter':int(score['official_func_filter']),'covered_transcripts':x['covered_transcripts'],'seed_matched_genes':expr[cid]['matched_genes'],'state_detected_matched_genes':expr[cid]['state_detected_genes'],'review_flags':'; '.join(flags),'near_match_evidence':'IMPORTED_HISTORICAL' if known else 'NOT_AVAILABLE','near_match_transcripts':';'.join(near_hits),'synthesis_status':x['synthesis_status']})
+   rows.append({'candidate_id':cid,'guide_core19_5to3':x['guide_core19_5to3'],'source':x['source'],'score':float(score['oligoformer_scaled_score']),'func_filter':int(score['official_func_filter']),'covered_transcripts':x['covered_transcripts'],'seed_matched_genes':expr[cid]['matched_genes'],'state_detected_matched_genes':expr[cid]['state_detected_genes'],'review_flags':'; '.join(flags),'near_match_evidence':'IMPORTED_HISTORICAL' if known else 'IMPORTED_VERIFIED_LOCAL' if cid in self.verified_imports else 'NOT_AVAILABLE','near_match_transcripts':';'.join(near_hits),'synthesis_status':x['synthesis_status']})
   rows.sort(key=lambda r:(bool(r['review_flags']),-r['score'],r['candidate_id']))
   eligible=[r for r in rows if not r['review_flags']]
   selected=[r['candidate_id'] for r in eligible[:self.task['top_n']]]
@@ -253,8 +282,11 @@ class Session:
   report['expression_source']=self.expression_source
   report['expression_comparison']=self.state['query_expression']['candidate_summary']
   report['expression_changes_ranking']=False
+  if self.verified_imports:
+   report['versioned_imports']={cid:{'manifest':b['manifest'],'input':b['candidate'],'both_strand_seed_and_nearfull_summary':b['result']} for cid,b in self.verified_imports.items()}
+   report['limitations'].extend(['既购两行均按5′→3′书写推导链角色，未获供应商确认；原始TT与N3保留','模型未模拟N3连接实物；分数不证明修饰/递送或实验效力','既购两链各两种近全长窗口按固定全转录本参考导入；表达关联只使用guide seed结果'])
   if not all(r['candidate_id'] in original and canonical(current[r['candidate_id']])==old[r['candidate_id']] for r in rows):
-   report['limitations'][1]='候选来源由用户提供；文献全文、完整双链及修饰信息仍需核对'
+   report['limitations'][1]='候选来源由用户提供；原始订购双链已保存，链角色及确切修饰化学仍有未确认部分'
   save_json(self.path/'report.json',report);self.render(report)
   return {'status':'COMPLETE','selected_for_review':selected,'report':'report.html','table':'candidates_ranked.tsv','rules':report['rules'],'not_order_ready':True}
  def render(self,r):
@@ -267,6 +299,9 @@ class Session:
   content+='<section><h2>优先核查候选</h2><p>'+esc('、'.join(r['selected_for_review']) or '暂无无复核提示的候选')+'</p><p>'+esc(r['rules'])+'</p><p>这是计算核查建议，尚非订购或实验有效性结论。</p></section>'
   content+='<section><h2>表达数据来源与TPM</h2><p>'+esc(self.expression_source['label'])+'；'+esc(self.expression_source['source'])+'</p><p>VEGFA常氧平均TPM '+esc(t['TPM_Normoxia_mean'])+'；缺氧平均TPM '+esc(t['TPM_Hypoxia_mean'])+'。这些是基线表达，不是敲低率，也不进入OligoFormer。</p><p>'+esc(self.expression_source['scope'])+'</p><p>检测规则：TPM≥1且至少2/4样本；仅供表达背景复核，不作安全阈值，不改变排序。下表排除目标基因VEGFA；未映射不等于不表达。</p><div class="scroll"><table><tr><th>候选</th><th>seed匹配非靶基因</th><th>常氧检测到</th><th>缺氧检测到</th><th>仅缺氧检测到</th><th>仅常氧检测到</th><th>未映射</th></tr>'+''.join('<tr>'+''.join('<td>'+esc(x[k])+'</td>' for k in ['candidate_id','matched_genes','normoxia_detected_genes','hypoxia_detected_genes','hypoxia_only_detected_genes','normoxia_only_detected_genes','unmapped_genes'])+'</tr>' for x in r['expression_comparison'])+'</table></div><p><a href="expression_comparison.tsv">下载两状态比较表</a> · <a href="seed_expression_details.tsv">下载逐基因TPM与匹配明细</a> · <a href="expression_source.json">数据来源记录</a></p></section>'
   content+='<section><h2>候选证据表</h2><div class="scroll"><table><tr>'+''.join('<th>'+k+'</th>' for k in ['顺序','候选','guide配对核心 5′→3′','模型分数 非百分比','覆盖转录本数','seed匹配基因数','其中所选状态检测到表达','待核对提示'])+'</tr>'+body+'</table></div></section>'
+  for cid,b in r.get('versioned_imports',{}).items():
+   inp=b['input'];summary=b['both_strand_seed_and_nearfull_summary']
+   content+='<section><h2>既购原件与单独计算版本</h2><p>'+esc(cid)+' · '+esc(b['manifest']['dataset_id'])+'</p><p>原第1行：'+esc(inp['original_row1'])+'；原第2行：'+esc(inp['original_row2'])+'</p><p>两行均按5′→3′书写推导第2行为guide，未获供应商确认。TT与N3原样保留；模型未模拟N3连接实物。</p><p>guide非靶seed：'+esc(summary['guide_seed_sites_non_target'])+'个位点 / '+esc(summary['guide_matched_genes_non_target'])+'个去重基因；另一链：'+esc(summary['passenger_seed_sites_non_target'])+'个位点 / '+esc(summary['passenger_matched_genes_non_target'])+'个基因。近全长4查询在固定全转录本参考中均无已映射非靶或未知映射的0/1错配命中；2错配结果详见结构化结果和原始文件。</p><p>这些是版本绑定的本地真实计算导入；本网页未重新运行重型模型或扫描。<a href="verified_import/'+esc(b['manifest']['dataset_id'])+'/manifest.json">版本与文件指纹</a></p></section>'
   if r.get('model_summary'):
    content+='<section><h2>豆包任务解读</h2><p style="white-space:pre-wrap">'+esc(r['model_summary'])+'</p><small>以上为模型生成的解读；序列、分数和证据以本报告表格及原始记录为准。</small></section>'
   content+='<section><h2>本次边界</h2><ul>'+''.join('<li>'+esc(x)+'</li>' for x in r['limitations'])+'</ul></section><p><a href="candidates_ranked.tsv">候选表</a> · <a href="seed_expression_details.tsv">匹配与表达明细</a> · <a href="events.jsonl">执行记录</a> · <a href="report.json">结构化结果</a></p></html>'

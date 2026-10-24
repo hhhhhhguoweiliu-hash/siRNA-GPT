@@ -1,7 +1,7 @@
 [
   {
     "locator": "xml-block-0001",
-    "xpath": "/article/abstract[1]/p[1]",
+    "xpath": "/article/front[1]/article-meta[1]/abstract[1]/p[1]",
     "original_id": null,
     "section": "abstract",
     "type": "p",

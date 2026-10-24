@@ -31,7 +31,10 @@ def progress(event):
  with LOCK:STATE['events'].append(event)
 def execute(payload):
  try:
-  if payload.get('candidate_text','').strip():
+  if payload.get('candidate_dataset_id'):
+   from conversation import prepare_inputs
+   candidates=prepare_inputs(payload)['candidates']
+  elif payload.get('candidate_text','').strip():
    text=payload['candidate_text'].strip()
    if text.startswith('['):candidates=json.loads(text)
    else:candidates=list(csv.DictReader(io.StringIO(text),delimiter='\t' if '\t' in text.splitlines()[0] else ','))
@@ -145,7 +148,7 @@ class Handler(BaseHTTPRequestHandler):
     memory=io.BytesIO()
     with zipfile.ZipFile(memory,'w',zipfile.ZIP_DEFLATED) as z:
      for p in target.parent.rglob('*'):
-      if p.is_file() and p.suffix in ('.json','.jsonl','.tsv','.html','.txt','.log'):z.write(p,p.relative_to(target.parent))
+      if p.is_file() and p.suffix in ('.json','.jsonl','.tsv','.html','.txt','.log','.gz'):z.write(p,p.relative_to(target.parent))
     return self.send(memory.getvalue(),kind='application/zip')
    if allowed not in target.parents or not target.is_file():return self.send({'error':'Not found'},404)
    types={'.tsv':'text/tab-separated-values; charset=utf-8','.json':'application/json; charset=utf-8','.jsonl':'text/plain; charset=utf-8','.html':'text/html; charset=utf-8','.txt':'text/plain; charset=utf-8'}

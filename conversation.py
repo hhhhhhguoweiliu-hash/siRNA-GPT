@@ -56,7 +56,11 @@ def expand_plan(names):
 
 def prepare_inputs(data):
     text = str(data.get('candidate_text', '')).strip()
-    if text:
+    if data.get('candidate_dataset_id'):
+        from verified_imports import DATASET,candidates as imported_candidates
+        if data['candidate_dataset_id']!=DATASET or text:raise ValueError('既购候选版本无效或与自定义输入冲突')
+        candidates=imported_candidates()
+    elif text:
         candidates = json.loads(text) if text.startswith('[') else list(csv.DictReader(io.StringIO(text), delimiter='\t' if '\t' in text.splitlines()[0] else ','))
     else:
         pool = {x['candidate_id']: x for x in default_candidates()}

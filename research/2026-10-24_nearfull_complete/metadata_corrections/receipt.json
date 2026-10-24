@@ -1,0 +1,781 @@
+{
+  "status": "PASS",
+  "all_90_locators": [
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0001",
+      "xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[1]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "ec1e54014cf9148d09d659ffbc43c95f5a2d1c03d9302be657a56f6650f446b8"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0002",
+      "xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[2]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "7ecd328053c7dddfe8c79a3e07372e3d740c9e1b3f97d29ace4407ec6ed7116f"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0003",
+      "xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[3]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "112bea49758db65dfb4117464f6aa43d3a23c90474496835e542314122a47084"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0004",
+      "xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[4]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "e65135863d9fbb2acd78241c2cb979a87e2641715abf33aa522f2430dda367b5"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0005",
+      "xpath": "/article/body[1]/sec[1]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "30853b8b9e6b54fcaffaf9c50eb3b293f2e8f3849c2f23ddaaae1e1399505b20"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0006",
+      "xpath": "/article/body[1]/sec[1]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "7d4075023c4ebb7e809525d954be175924c7d0fa43fc84cfc76302d07e4d20f2"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0007",
+      "xpath": "/article/body[1]/sec[1]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "59b7e0ce659b349b8c8dd5c7ec77c97ba23140959eff08ef778bf42a344f8876"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0008",
+      "xpath": "/article/body[1]/sec[1]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "47c4931b91cc648009876f93073c256217626270673e71aba40415cff5a28d9a"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0009",
+      "xpath": "/article/body[1]/sec[2]/sec[1]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "d9401dca8c1403f1c8c081717a176b75be913f6c63b36445c8ef67c37287106a"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0010",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "d2d88e9f0fad39631b769374b0625d020ad787f553a1b7343f28e1d10dd2ea8f"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0011",
+      "xpath": "/article/body[1]/sec[2]/sec[3]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "b3476bc9f49f2dbb3c3858ec69900d62fdce1906915631ee24ac36ba55dd2c3c"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0012",
+      "xpath": "/article/body[1]/sec[2]/sec[4]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "819e44aadb247444083e497a610e95c96b7541450952fef3f5f8eca5047f3356"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0013",
+      "xpath": "/article/body[1]/sec[2]/sec[4]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "65185c3be1595848e12e274442725ee684d3a396c2d56bf54f8c37df3d41d11f"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0014",
+      "xpath": "/article/body[1]/sec[2]/sec[5]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "92843426d49522a731afc29f83b8635058f89a73de27c27ad46f3c3eb273a55e"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0015",
+      "xpath": "/article/body[1]/sec[2]/sec[6]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "d0e7741798bd164cbe45231a61f13ce8cde0249ab8c461a6d830c407936a35d0"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0016",
+      "xpath": "/article/body[1]/sec[2]/sec[6]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "9db11a5a63f81d466be80a534d03c03daa41b37c6e5285418569a428e6603c7a"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0017",
+      "xpath": "/article/body[1]/sec[2]/sec[7]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "dccb0c6fab660975a50f15c0104705cf91e550d9b66ea75454808183b785f623"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0018",
+      "xpath": "/article/body[1]/sec[2]/sec[8]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "d0980743c4f06238d3ab871d6da5eb6d5869c05b0c0bfe0fbe6b541b83f3e692"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0019",
+      "xpath": "/article/body[1]/sec[2]/sec[9]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "03c53e3225861027e57a18f685d4dc389f892f782fb1822ea0070801eab26107"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0020",
+      "xpath": "/article/body[1]/sec[2]/sec[10]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "4dc5765acf8bce4bdf8683dc31af740e401d5c17b4e209ff6e7eb01aa33c51bd"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0021",
+      "xpath": "/article/body[1]/sec[2]/sec[11]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "aae3f9ca8e270b742957ced227e1b25278649492edc8894d2856ca8163915b1b"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0022",
+      "xpath": "/article/body[1]/sec[2]/sec[12]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "af8ba79287d6241adbbd3e2f8abfa9b6476482504d7e2c03ecb7dcc84331f307"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0023",
+      "xpath": "/article/body[1]/sec[3]/sec[1]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "90ec73078dbfdfaacd9bb9ac19581b41bde92423034e2a2cbe7f522e4cba4b53"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0024",
+      "xpath": "/article/body[1]/sec[3]/sec[2]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "470785aa614e98e790374e5f01d618280717d822ec28dc5e40af4592ffacf61a"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0025",
+      "xpath": "/article/body[1]/sec[3]/sec[3]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "bdae5f8d7a57ed943599fb7b8ae8cac9808ad17153f00a8cfd9ed3a5329b8165"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0026",
+      "xpath": "/article/body[1]/sec[3]/sec[4]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "f69b475016513bca7f5c52e788f26319010648815a8d036b00feb5680c8d4433"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0027",
+      "xpath": "/article/body[1]/sec[3]/sec[5]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "7c26289dbb7329d8561b145b981ba229a4c71d06518131bbae489525b153ea28"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0028",
+      "xpath": "/article/body[1]/sec[3]/sec[6]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "d01525195d49c63ae3640db45a9a9269584a6b8e14e5c129cdb51f50aad7a9c3"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0029",
+      "xpath": "/article/body[1]/sec[4]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "67235673a96f9c77bd315f349a9934af21eef3002e84dddd2d8e661fc6f1bc00"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0030",
+      "xpath": "/article/body[1]/sec[4]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "53d222b4b7bee77069763da4073c66bda62a5f4162b49460b65bd74767c1560e"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0031",
+      "xpath": "/article/body[1]/sec[4]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "c155f64d52f98fe8d7e26bb6ec50025595e311a6e450413ec93009261ca128f0"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0032",
+      "xpath": "/article/body[1]/sec[4]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "d834f92fdacd468a81ed26c46ffec203bdc482188fefb1f43fc8c1a9a347337c"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0033",
+      "xpath": "/article/body[1]/sec[4]/p[5]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "99940346c73a9b15f04606b5bd95cd8b0e72b71501c14df4f8471b37aea007e0"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0034",
+      "xpath": "/article/body[1]/sec[4]/p[6]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "35f534a3fd40255d58f3405bd4904ba47e1632ce852c28353d408e4aaa51a5eb"
+    },
+    {
+      "paper": "chen2013",
+      "locator": "xml-block-0035",
+      "xpath": "/article/body[1]/sec[4]/p[7]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "4cc9ea7f1dbb0d8a35884138418a378021737c839c9fe3fc8996f0cfdd2f2992"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0001",
+      "xpath": "/article/front[1]/article-meta[1]/abstract[1]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "b8d0dbe368965720bd09a5b504e2ecbaf8ae00513d279f1baa1d8b938747ffc3"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0002",
+      "xpath": "/article/body[1]/sec[1]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "02bf55bbb64e32b837b26ef60e4766cd9315a0dd3f6ec28b75538d3d67916384"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0003",
+      "xpath": "/article/body[1]/sec[1]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "f7f2f729548e6aad8c6b9545e71b2bd39efa00652f5b04fa251f00a0ac473fb6"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0004",
+      "xpath": "/article/body[1]/sec[1]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "cf0ed62f6a6685413ab727fec0032e672ce54fed1bb4f2cbc9e01e642bbc6c8c"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0005",
+      "xpath": "/article/body[1]/sec[1]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "c402126223c11f427c4401e4e3b9b050c0f3c569474cfd2e7acf0f28bf59d831"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0006",
+      "xpath": "/article/body[1]/sec[1]/p[5]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "47da5f34b35a7cda7917a82a1070611947ec715166e49d5e8041486f201cb2e9"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0007",
+      "xpath": "/article/body[1]/sec[1]/p[6]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "e9d5257d647b424a056f0e9eeebb7475201de9c6a3def63ffb0eef859d50bb2c"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0008",
+      "xpath": "/article/body[1]/sec[2]/sec[1]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "40de41453c329617c46878cdb2a9cbbf84ab351624a25c07afd442e84cc983b8"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0009",
+      "xpath": "/article/body[1]/sec[2]/sec[1]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "889d1942c171e5d96184601b35e661108f910f54be443b19a43000c40c2ae8ce"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0010",
+      "xpath": "/article/body[1]/sec[2]/sec[1]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "fc55dc7d1ce0f5a2f0999bc7f3d473e74c5fa526810cd91a6595a5c49b531a2b"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0011",
+      "xpath": "/article/body[1]/sec[2]/sec[1]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "14da2ecf73599b2a38fc353f229c5293380c783dc18dff47a60722f8468bdf28"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0012",
+      "xpath": "/article/body[1]/sec[2]/sec[1]/p[5]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "a45a2ff68cbc1e16912ab436063a3b64e9e0969cdcefd114bd30c45a7d6d6c23"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0013",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[1]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "9aa2d0870182b919b28ee85fea1eefb1d467be14fe12ff6f390a9004b8513b77"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0014",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[1]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "98055bf190021d678d1f4d789321bbc35568d23ec1a695374fd899ba2b2073f7"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0015",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[1]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "bb2f1d33694f154d0f410cb248d63efcbeb7b44ec910a552e2b086bcb9cde9b7"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0016",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[1]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "ef7538b7679dba48c22f0aac75ed08356651587ba5b4a5be35064a355e2503f1"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0017",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[1]/p[5]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "28c1a380cc1521a5c20cfbf28c08041f622f73f01c3a5b201e054fc3bfd03ddd"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0018",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[1]/p[6]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "e3b9675411056b94bdefe4cc7c52d997826386e77cb9408fcab4dd7efc9646ac"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0019",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[1]/p[7]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "42d169f793b36fe716a2eca13af2c3bf46e7bb441476aca408c3efd184dc3c25"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0020",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[2]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "114e37a3bff1c68a6b9c238ef76adb6b61a99c70cd37133ef6075f07acf72816"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0021",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[2]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "6776b1e7eea4cdb6570bde359d8f17b6296d804bc4b888aa384ee2f719bee6f5"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0022",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[2]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "cb280cae88e0eac43164194fbb356e78a1595ace3a170a775275ab3f0b521ac3"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0023",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[2]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "044a8d0903f20ecf1ec203ab356cf4842bee10184ddb940f2645f27374e63cbd"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0024",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[3]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "b3bd11a63affda4be203dedeee7048ae201df1a4dd575e39c1a35116ac438b26"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0025",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[3]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "d9c02da34be918109a5873bc4414ef2a88d76347fd7a0adc4c90c66e74b7d873"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0026",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[3]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "733c30b345b1c1b01827ef4561a6a28b81eb21c0e8a48f7c242b33ca846b3e2d"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0027",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[3]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "962898e29c080ad879f626eca5e67a2237a9fb61edc5819c07f0166b81bf94c6"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0028",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[4]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "cc6c219fe6107d9893063f9cdda494f21c79b7839e8ad5399b6c7e33f59c4f38"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0029",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[5]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "9f9866266b30c74eb26812bae3b14d8b8ed51f19839559d74fea7fa360ff50d7"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0030",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[5]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "88dbcd2fae709efac8afa70f747c6408b273cfe320cd140cee81a790e84b6d22"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0031",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[5]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "d841c27bb5c27c73153b2335341456d0bc5d65e18447cd4ddd2b5642f5c4f1ba"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0032",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[5]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "c7beae15f19b3d6cfbf46752b95458e6c8e8b6303f6b7abe08e0cbc68b04c2bd"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0033",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[6]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "e2db747aa4a54fb7162968c14f4117a48407cdcc7abeb5ef4f3dcec16e36afb4"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0034",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[7]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "52e16af96cf116e9523d6f2cf37ad496ef193f52b149f7029db4601a0212544e"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0035",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[8]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "7dc881fdc3b98822533bbd7787546ced0f41a58ee752284b85e620876c1135b0"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0036",
+      "xpath": "/article/body[1]/sec[2]/sec[2]/sec[9]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "c877337d0feb609a39947320596b3859e3184a5ca703fdcca1ae92c148f2b929"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0037",
+      "xpath": "/article/body[1]/sec[3]/sec[1]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "d05facb84bc3f66649fc3c728043ed8ba2cc7760fa8feb2bc6ed3622ceb400f4"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0038",
+      "xpath": "/article/body[1]/sec[3]/sec[1]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "1b9e428f0a3ac52929ff6f1b90c8b9596a2e851f6d4edb5dff4fac52b92a96d4"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0039",
+      "xpath": "/article/body[1]/sec[3]/sec[1]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "4d6ae062cc53e980c10e99dc7c4b3f459b9fd4043c6a305f09996b44d4861869"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0040",
+      "xpath": "/article/body[1]/sec[3]/sec[2]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "bd8228b32a98fc9a1f00ca5952ad927ccf0e9547f2bf499a43b97ae5f6548d06"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0041",
+      "xpath": "/article/body[1]/sec[3]/sec[2]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "969ec5448774a3ef40c779f84ae11a7ab88b2e2c485bc420728b8e95c2e7615c"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0042",
+      "xpath": "/article/body[1]/sec[3]/sec[2]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "874f787dbdf9e37efdbaadde1d816d891d646479dd8c50f0759af0f3f385ce48"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0043",
+      "xpath": "/article/body[1]/sec[3]/sec[2]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "1e7350705b00c091faae04c5f03339b93a4e1e6c5aacbd5b082c21bb17a23b6e"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0044",
+      "xpath": "/article/body[1]/sec[3]/sec[2]/p[5]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "3b8bf87afc6c5ead1c525d211e883f937878681e467795b23b644eb7450b18c7"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0045",
+      "xpath": "/article/body[1]/sec[3]/sec[2]/p[6]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "5aa0daeeb49fd9db6ca3a1ed580c9b14d19e6fdbc961d79316a52abc7b2d61ad"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0046",
+      "xpath": "/article/body[1]/sec[3]/sec[3]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "6a59630eeec136a406b0e5b6be1cc2e6db9c47410bffb085cacd3653aab46f3d"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0047",
+      "xpath": "/article/body[1]/sec[3]/sec[3]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "153a3f5c8e08eee18a65523e556fb7c66b60d6f7fe813f7a163364d693822c73"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0048",
+      "xpath": "/article/body[1]/sec[3]/sec[3]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "6c6db06d327932e591e072a70d1345c44bcf004841d937337ff0414aebcad7f7"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0049",
+      "xpath": "/article/body[1]/sec[3]/sec[3]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "4c9ea50c6f453a88c8503af6e80ef8b533296e01e6b933a1f99523feae2a5fd5"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0050",
+      "xpath": "/article/body[1]/sec[3]/sec[4]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "ae973a5a91e57742975ee05ff07978ecfb0d08eb5ee1e841e87fc8009457d4c7"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0051",
+      "xpath": "/article/body[1]/sec[3]/sec[5]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "ba428b69baf701d8940607ed21a9a0b5bf24f322496a13b9935cfe4711ef53ec"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0052",
+      "xpath": "/article/body[1]/sec[3]/sec[5]/p[2]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "b1c0ed01049391e69fdb00c5c82af84abaee6d5962e377efb9f004ac81140abc"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0053",
+      "xpath": "/article/body[1]/sec[3]/sec[5]/p[3]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "1621b5325d58ed2b0017475190a1c54f15e44d24f61b7c6cabac0394dfa72df6"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0054",
+      "xpath": "/article/body[1]/sec[3]/sec[5]/p[4]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "8da76c43af191f167871178bbe0518c8d97542a709793770ba9fbb0baa00e6d3"
+    },
+    {
+      "paper": "osipova2020",
+      "locator": "xml-block-0055",
+      "xpath": "/article/body[1]/sec[4]/p[1]",
+      "unique_original_node": true,
+      "exact_extracted_text_match": true,
+      "text_sha256": "ec22f318f0442b2f5afdf866d905c6cb20cd9935e51167d371912fb0e4ae0719"
+    }
+  ],
+  "five_path_changes": [
+    {
+      "file": "references/vegfa_experiments_20261024/chen2013_locators.json",
+      "locator": "xml-block-0001",
+      "old_xpath": "/article/abstract[1]/sec[1]/p[1]",
+      "new_xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[1]/p[1]"
+    },
+    {
+      "file": "references/vegfa_experiments_20261024/chen2013_locators.json",
+      "locator": "xml-block-0002",
+      "old_xpath": "/article/abstract[1]/sec[2]/p[1]",
+      "new_xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[2]/p[1]"
+    },
+    {
+      "file": "references/vegfa_experiments_20261024/chen2013_locators.json",
+      "locator": "xml-block-0003",
+      "old_xpath": "/article/abstract[1]/sec[3]/p[1]",
+      "new_xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[3]/p[1]"
+    },
+    {
+      "file": "references/vegfa_experiments_20261024/chen2013_locators.json",
+      "locator": "xml-block-0004",
+      "old_xpath": "/article/abstract[1]/sec[4]/p[1]",
+      "new_xpath": "/article/front[1]/article-meta[1]/abstract[1]/sec[4]/p[1]"
+    },
+    {
+      "file": "references/vegfa_experiments_20261024/osipova2020_locators.json",
+      "locator": "xml-block-0001",
+      "old_xpath": "/article/abstract[1]/p[1]",
+      "new_xpath": "/article/front[1]/article-meta[1]/abstract[1]/p[1]"
+    }
+  ],
+  "source_hashes": [
+    {
+      "file": "references/vegfa_experiments_20261024/chen2013_locators.json",
+      "before_sha256": "abfef050bc1b714dfe04abe391d8f27310a9ac83a601317e036ec29f86df7c5c",
+      "after_sha256": "7d8679adf3c59eb67a3af66ce1cb389970c1f63dc5c6440a99d4510eaf222c51",
+      "xml_sha256": "8578d7fbe4cada392d5af5a1fd5ac9a8bd5e4b7e1eb9bf524d35c4b9da21b9a1",
+      "unchanged_text_sha256": "d5b96cf156f38979f0ed413edb8d6bd47c76a31867fa28155a979e01f17638d1"
+    },
+    {
+      "file": "references/vegfa_experiments_20261024/osipova2020_locators.json",
+      "before_sha256": "dad47e2dc3e12e2e1cfcb8fc4480c716cc5489ae4ab9b29b311e029b25884887",
+      "after_sha256": "92d632bcd6d1ba2900159362421aab0e709b6c6865025eba2ba3cc4b2d8b0033",
+      "xml_sha256": "0658eab937077f7ab9917321d69462a3432605fec891143ce7d8e5ef9696b2ec",
+      "unchanged_text_sha256": "7da057ba9315a4ce17c19972968a0937b6f3e5c5a4a6304ae3c2fdb6df743427"
+    },
+    {
+      "file": "research/2026-10-24_candidate_v2/provisional_small_trial_candidates.json",
+      "before_sha256": "b848ed309fe47bc1147d73982836d1b7bd29ce499a762b3c1d0e05629c79aed1",
+      "after_sha256": "da41d9d6b22cb29b6b40a12c83520a2b3bee773547e8ae9ccbfbe7271dfbf94c",
+      "change": "derived method label only; all numeric and original execution records unchanged"
+    }
+  ],
+  "historical_before_bytes_saved_here": true,
+  "raw_xml_text_model_outputs_unchanged": true
+}

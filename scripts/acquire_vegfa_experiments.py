@@ -38,7 +38,7 @@ def main():
      walk(child,path+'/'+child.tag+'[%d]'%counts[child.tag],section)
    for tag in ('abstract','body'):
     nodes=article.findall('.//'+tag) if tag=='abstract' else article.findall('body')
-    for i,node in enumerate(nodes):walk(node,'/article/'+tag+'[%d]'%(i+1),tag)
+    for i,node in enumerate(nodes):walk(node,('/article/front[1]/article-meta[1]/' if tag=='abstract' else '/article/')+tag+'[%d]'%(i+1),tag)
    full_body=article.find('body') is not None
    scope='PMC full article XML abstract/body text and available captions/table text' if full_body else 'PMC abstract-only XML; full body not supplied'
    extracted=title+'\nDOI: '+doi+'\nSource: '+scope+'. No PDF page numbers or image reading.\n\n'

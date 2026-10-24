@@ -1,0 +1,5 @@
+candidate_id	strand_role	reference_genes	seed_sites_all	matched_genes_all	seed_sites_non_target	matched_genes_non_target	target_motif_DNA	seconds	status
+USER_PURCHASED_siVEGF	guide	19415	3540	2840	3539	2839	ACAAGAA	0.72	COMPLETED
+USER_PURCHASED_siVEGF	passenger	19415	1402	1286	1402	1286	GCTCTAT	0.560000000000001	COMPLETED
+VEGFA_SD_1552	guide	19415	6986	4349	6986	4349	TTGTTTG	0.560000000000001	COMPLETED
+VEGFA_SD_1552	passenger	19415	5756	4100	5756	4100	CTTTCTC	0.58	COMPLETED
