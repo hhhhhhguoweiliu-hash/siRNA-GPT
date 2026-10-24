@@ -1,0 +1,19 @@
+{
+  "source_filename": "sirna_browser_backups.json.crdownload",
+  "bytes": 81659,
+  "sha256": "c0c6fee35c6bcb4c8ccc4b884ce02566af4497bdfdfac2ab628b47fb5ef49754",
+  "json_valid": true,
+  "browser_save_state": "crdownload name; copied complete parsed bytes; original untouched",
+  "conversations": [
+    {
+      "id": "414e5edd47ef",
+      "messages": 6,
+      "evidence": 0,
+      "run_id": "20261020_064921_2dae59",
+      "result_status": "COMPLETE",
+      "export_status": "COMPLETED_SNAPSHOT",
+      "evidence_fields": [],
+      "previous_runs": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "source": "Existing logged-in browser Download session and evidence control",
+  "source_filename": "conversation-record (1).json.crdownload",
+  "browser_save_state": "crdownload name still present; complete JSON parsed; original left untouched",
+  "bytes": 2640,
+  "sha256": "e9968b2b55e325301c50234ba4ed78e1b206716ada2a9c100929a210678ee33f",
+  "captured_at": "2026-10-24 Asia/Shanghai",
+  "messages": 1,
+  "keys": [
+    "id",
+    "messages",
+    "events",
+    "plan",
+    "busy",
+    "phase",
+    "result",
+    "research",
+    "run_id",
+    "stop_requested",
+    "evidence_count",
+    "version",
+    "runtime",
+    "previous_runs",
+    "format_version",
+    "export_status",
+    "evidence_records"
+  ]
+}
