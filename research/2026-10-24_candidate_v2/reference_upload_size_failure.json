@@ -1,0 +1,16 @@
+{
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "HTTP error prior to action invocation. HTTPException: 413: File too large to download: 230823493 bytes exceeds the 104857600-byte limit."
+      }
+    ],
+    "structuredContent": {
+      "error": "HTTP error prior to action invocation. HTTPException: 413: File too large to download: 230823493 bytes exceeds the 104857600-byte limit.",
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  },
+  "note": "The 230823493-byte upload was rejected before invocation by the connector 100 MiB file transport limit; no full reference file was created. Routine multipart file transfer is used instead, with each part below that limit. No account/quota/security change."
+}

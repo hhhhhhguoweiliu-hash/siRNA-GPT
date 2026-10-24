@@ -1,0 +1,21 @@
+{
+  "result_commit": "9dd8831ebc28a42584ba57f288a314ccb5042b2c",
+  "readable_report_id": "1o_ELZlWMqpZl1G0zNE8_JKZzqNi7631z",
+  "readable_report_checks": {
+    "readable_report_fetched": true,
+    "has_result_commit": true,
+    "has_result_package_link": true,
+    "has_unexecuted_240": true
+  },
+  "result_drive_id": "1-KV60yR81gWsCM5BqWBRNyI0QT-tvHYu",
+  "reference_part_ids": [
+    "1N-3o47Kz6JAjWfNazXOCpSmXUDOSTsPA",
+    "1aQIQ2xTDkRsfRv1GJ0GRqiC_gnHTyQM-",
+    "154I8X_jVGFo2W03wpMDKktLAH3I8KYQx"
+  ],
+  "remote_metadata_size_and_parent_verified": true,
+  "local_part_concatenation_sha256_verified": "fec813ca97259743204e4a2fd7f80d439416645fcb017b99bc15a4caece81a15",
+  "remote_SHA256_not_provided": true,
+  "scientific_raw_results_unchanged_by_receipt_commit": true,
+  "website_deployment_not_triggered": true
+}

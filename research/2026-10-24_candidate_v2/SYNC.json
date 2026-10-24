@@ -1,0 +1,300 @@
+{
+  "result_commit": "9dd8831ebc28a42584ba57f288a314ccb5042b2c",
+  "github_branches": [
+    "main",
+    "codex/20261020-evidence-pilot"
+  ],
+  "github_checks": "Two check jobs successful for result commit",
+  "deployment_change": false,
+  "production_scientific_pool_replaced": false,
+  "result_upload": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1-KV60yR81gWsCM5BqWBRNyI0QT-tvHYu",
+      "title": "siRNA_GPT_20261024_candidate_v2_complete.zip",
+      "file_name": "siRNA_GPT_20261024_candidate_v2_complete.zip",
+      "mime_type": "application/zip",
+      "url": "https://drive.google.com/file/d/1-KV60yR81gWsCM5BqWBRNyI0QT-tvHYu/view?usp=drivesdk",
+      "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1-KV60yR81gWsCM5BqWBRNyI0QT-tvHYu",
+        "title": "siRNA_GPT_20261024_candidate_v2_complete.zip",
+        "file_name": "siRNA_GPT_20261024_candidate_v2_complete.zip",
+        "mime_type": "application/zip",
+        "url": "https://drive.google.com/file/d/1-KV60yR81gWsCM5BqWBRNyI0QT-tvHYu/view?usp=drivesdk",
+        "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+      }
+    },
+    "isError": false
+  },
+  "reference_whole_file_failed": {
+    "content": [
+      {
+        "type": "text",
+        "text": "HTTP error prior to action invocation. HTTPException: 413: File too large to download: 230823493 bytes exceeds the 104857600-byte limit."
+      }
+    ],
+    "structuredContent": {
+      "error": "HTTP error prior to action invocation. HTTPException: 413: File too large to download: 230823493 bytes exceeds the 104857600-byte limit.",
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  },
+  "reference_part_uploads": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1N-3o47Kz6JAjWfNazXOCpSmXUDOSTsPA",
+        "title": "siRNA_GPT_20261024_reference_inputs.zip.001",
+        "file_name": "siRNA_GPT_20261024_reference_inputs.zip.001",
+        "mime_type": "application/x-zip",
+        "url": "https://drive.google.com/file/d/1N-3o47Kz6JAjWfNazXOCpSmXUDOSTsPA/view?usp=drivesdk",
+        "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1N-3o47Kz6JAjWfNazXOCpSmXUDOSTsPA",
+          "title": "siRNA_GPT_20261024_reference_inputs.zip.001",
+          "file_name": "siRNA_GPT_20261024_reference_inputs.zip.001",
+          "mime_type": "application/x-zip",
+          "url": "https://drive.google.com/file/d/1N-3o47Kz6JAjWfNazXOCpSmXUDOSTsPA/view?usp=drivesdk",
+          "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+        }
+      },
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1aQIQ2xTDkRsfRv1GJ0GRqiC_gnHTyQM-",
+        "title": "siRNA_GPT_20261024_reference_inputs.zip.002",
+        "file_name": "siRNA_GPT_20261024_reference_inputs.zip.002",
+        "mime_type": "application/octet-stream",
+        "url": "https://drive.google.com/file/d/1aQIQ2xTDkRsfRv1GJ0GRqiC_gnHTyQM-/view?usp=drivesdk",
+        "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1aQIQ2xTDkRsfRv1GJ0GRqiC_gnHTyQM-",
+          "title": "siRNA_GPT_20261024_reference_inputs.zip.002",
+          "file_name": "siRNA_GPT_20261024_reference_inputs.zip.002",
+          "mime_type": "application/octet-stream",
+          "url": "https://drive.google.com/file/d/1aQIQ2xTDkRsfRv1GJ0GRqiC_gnHTyQM-/view?usp=drivesdk",
+          "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+        }
+      },
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "154I8X_jVGFo2W03wpMDKktLAH3I8KYQx",
+        "title": "siRNA_GPT_20261024_reference_inputs.zip.003",
+        "file_name": "siRNA_GPT_20261024_reference_inputs.zip.003",
+        "mime_type": "application/octet-stream",
+        "url": "https://drive.google.com/file/d/154I8X_jVGFo2W03wpMDKktLAH3I8KYQx/view?usp=drivesdk",
+        "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "154I8X_jVGFo2W03wpMDKktLAH3I8KYQx",
+          "title": "siRNA_GPT_20261024_reference_inputs.zip.003",
+          "file_name": "siRNA_GPT_20261024_reference_inputs.zip.003",
+          "mime_type": "application/octet-stream",
+          "url": "https://drive.google.com/file/d/154I8X_jVGFo2W03wpMDKktLAH3I8KYQx/view?usp=drivesdk",
+          "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+        }
+      },
+      "isError": false
+    }
+  ],
+  "metadata_verifications": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "id": "1-KV60yR81gWsCM5BqWBRNyI0QT-tvHYu",
+          "title": "siRNA_GPT_20261024_candidate_v2_complete.zip",
+          "mime_type": null,
+          "size": "19690699",
+          "url": null,
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "id": "1N-3o47Kz6JAjWfNazXOCpSmXUDOSTsPA",
+          "title": "siRNA_GPT_20261024_reference_inputs.zip.001",
+          "mime_type": null,
+          "size": "80000000",
+          "url": null,
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "id": "1aQIQ2xTDkRsfRv1GJ0GRqiC_gnHTyQM-",
+          "title": "siRNA_GPT_20261024_reference_inputs.zip.002",
+          "mime_type": null,
+          "size": "80000000",
+          "url": null,
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "id": "154I8X_jVGFo2W03wpMDKktLAH3I8KYQx",
+          "title": "siRNA_GPT_20261024_reference_inputs.zip.003",
+          "mime_type": null,
+          "size": "70823493",
+          "url": null,
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        },
+        "isError": false
+      }
+    }
+  ],
+  "readable_report_upload": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1o_ELZlWMqpZl1G0zNE8_JKZzqNi7631z",
+      "title": "siRNA_GPT_20261024_candidate_v2_交付说明.md",
+      "file_name": "siRNA_GPT_20261024_candidate_v2_交付说明.md",
+      "mime_type": "text/markdown",
+      "url": "https://drive.google.com/file/d/1o_ELZlWMqpZl1G0zNE8_JKZzqNi7631z/view?usp=drivesdk",
+      "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1o_ELZlWMqpZl1G0zNE8_JKZzqNi7631z",
+        "title": "siRNA_GPT_20261024_candidate_v2_交付说明.md",
+        "file_name": "siRNA_GPT_20261024_candidate_v2_交付说明.md",
+        "mime_type": "text/markdown",
+        "url": "https://drive.google.com/file/d/1o_ELZlWMqpZl1G0zNE8_JKZzqNi7631z/view?usp=drivesdk",
+        "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+      }
+    },
+    "isError": false
+  },
+  "verification_scope": "Remote names, sizes and parent folder checked. Local part and concatenation SHA256 checked. No remote SHA256 was provided; no claim of remote byte-hash comparison.",
+  "remaining_nearfull_queries_not_run": 240,
+  "actually_completed_nearfull_queries": 24,
+  "new_paid_QA_calls": 0
+}

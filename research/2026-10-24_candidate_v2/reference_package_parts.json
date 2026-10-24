@@ -1,0 +1,23 @@
+{
+  "full_filename": "siRNA_GPT_20261024_reference_inputs.zip",
+  "full_bytes": 230823493,
+  "full_sha256": "fec813ca97259743204e4a2fd7f80d439416645fcb017b99bc15a4caece81a15",
+  "parts_in_order": [
+    {
+      "filename": "siRNA_GPT_20261024_reference_inputs.zip.001",
+      "bytes": 80000000,
+      "sha256": "a480ed31bd1149a5ef56c671d8ae06ae7879ddd628375395c991ffbc243e0043"
+    },
+    {
+      "filename": "siRNA_GPT_20261024_reference_inputs.zip.002",
+      "bytes": 80000000,
+      "sha256": "e10ffb3de814ea468b612f7e8682d88f9c44a315a321b3e8f9ec61fd3ec0f087"
+    },
+    {
+      "filename": "siRNA_GPT_20261024_reference_inputs.zip.003",
+      "bytes": 70823493,
+      "sha256": "f4354088cd4a8bce5df7c8e7468fdf117327d550cd298f27320c37931fa80879"
+    }
+  ],
+  "merge_rule": "Concatenate raw part bytes in listed order, then compare full size/SHA256 and ZIP CRC before extracting. No data conversion."
+}
