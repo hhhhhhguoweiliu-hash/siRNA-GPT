@@ -1,0 +1,57 @@
+{
+  "results_commit": "d2751bcd8b2159b40aff737b499d6dda299848fc",
+  "main_and_task_branch_verified_equal": true,
+  "results_commit_GitHub_checks": [
+    "success",
+    "success"
+  ],
+  "online_code_commit": "03092ef5fbc2af289aaa2b7bc8d57315c050964f",
+  "online_deploy": "dep-dbea155g1s2s7395s5lg",
+  "real_Agent_run": "20261024_121627_1e50c9",
+  "drive_upload": {
+    "accepted_input": "file_uri",
+    "success": true,
+    "id": "13bMfGHNkFnicnbknOieYHa_YL1lvRQNI",
+    "title": "siRNA_GPT_20261024_nearfull_264_and_purchased_case_d2751bc.zip",
+    "file_name": "siRNA_GPT_20261024_nearfull_264_and_purchased_case_d2751bc.zip",
+    "mime_type": "application/zip",
+    "url": "https://drive.google.com/file/d/13bMfGHNkFnicnbknOieYHa_YL1lvRQNI/view?usp=drivesdk",
+    "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+    "structuredContent": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "13bMfGHNkFnicnbknOieYHa_YL1lvRQNI",
+      "title": "siRNA_GPT_20261024_nearfull_264_and_purchased_case_d2751bc.zip",
+      "file_name": "siRNA_GPT_20261024_nearfull_264_and_purchased_case_d2751bc.zip",
+      "mime_type": "application/zip",
+      "url": "https://drive.google.com/file/d/13bMfGHNkFnicnbknOieYHa_YL1lvRQNI/view?usp=drivesdk",
+      "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+    }
+  },
+  "drive_metadata_readback": {
+    "id": "13bMfGHNkFnicnbknOieYHa_YL1lvRQNI",
+    "title": "siRNA_GPT_20261024_nearfull_264_and_purchased_case_d2751bc.zip",
+    "mime_type": "application/zip",
+    "size": "3867815",
+    "url": null,
+    "file_or_folder": "file",
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "archive_bytes": 3867815,
+  "archive_files": 463,
+  "local_archive_sha256": "5a7b42ce6bb70ac7d51bb757ea1d20f2b3179504bc0a390d958643620dccaefc",
+  "local_archive_CRC_and_each_entry_sha256_verified": true,
+  "remote_sha256_verified": false,
+  "remote_verification": "Name, size, MIME type and parent folder verified; connector did not provide a remote SHA256",
+  "no_new_deployment_for_results_or_sync": true
+}

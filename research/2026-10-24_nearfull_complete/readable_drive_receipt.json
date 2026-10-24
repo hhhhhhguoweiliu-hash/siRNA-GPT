@@ -1,0 +1,43 @@
+{
+  "upload": {
+    "accepted_input": "file_uri",
+    "success": true,
+    "id": "1JKs1x9VmgZxn0bVVt2QfjJ-CUeqPu9rM",
+    "title": "siRNA_GPT_20261024_complete_264_case_delivery.md",
+    "file_name": "siRNA_GPT_20261024_complete_264_case_delivery.md",
+    "mime_type": "text/markdown",
+    "url": "https://drive.google.com/file/d/1JKs1x9VmgZxn0bVVt2QfjJ-CUeqPu9rM/view?usp=drivesdk",
+    "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+    "structuredContent": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1JKs1x9VmgZxn0bVVt2QfjJ-CUeqPu9rM",
+      "title": "siRNA_GPT_20261024_complete_264_case_delivery.md",
+      "file_name": "siRNA_GPT_20261024_complete_264_case_delivery.md",
+      "mime_type": "text/markdown",
+      "url": "https://drive.google.com/file/d/1JKs1x9VmgZxn0bVVt2QfjJ-CUeqPu9rM/view?usp=drivesdk",
+      "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+    }
+  },
+  "metadata": {
+    "id": "1JKs1x9VmgZxn0bVVt2QfjJ-CUeqPu9rM",
+    "title": "siRNA_GPT_20261024_complete_264_case_delivery.md",
+    "mime_type": "text/markdown",
+    "size": "4382",
+    "url": null,
+    "file_or_folder": "file",
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "readable_text_verified_contains_result_commit_and_39048_usage": true,
+  "remote_SHA256_verified": false
+}

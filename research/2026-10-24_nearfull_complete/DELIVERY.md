@@ -1,5 +1,7 @@
 # 本批交付与复核入口
 
+**已上传并核对：**结果提交[d2751bc](https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/commit/d2751bcd8b2159b40aff737b499d6dda299848fc)在main与原任务分支，GitHub两项检查成功。[Drive完整463文件包](https://drive.google.com/file/d/13bMfGHNkFnicnbknOieYHa_YL1lvRQNI/view?usp=drivesdk)为3867815字节，包含完整264查询原始输出、实际案例原件/纠正及文献。当地ZIP逐文件核对、CRC通过，SHA256为5a7b42ce6bb70ac7d51bb757ea1d20f2b3179504bc0a390d958643620dccaefc；远端名称/大小/父目录已核对，工具未提供远端SHA256，不能据元数据称已核对远端哈希。SYNC.json保存收据。包以d2751bc为结果版本，后续同步收据留在GitHub，不冒称包内包含尚未生成的自身上传收据。
+
 实际接手main dbb8a2d；代码接入d67f906，跨系统证据原字节修正03092ef。**网站实际部署03092ef**（dep-dbea155g1s2s7395s5lg）；之后的结果/论文/同步提交均标skip render，不把文档提交说成重新上线的代码。
 
 ## 实际完成
