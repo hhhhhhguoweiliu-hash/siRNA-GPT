@@ -1,0 +1,76 @@
+[
+  {
+    "key": "sidirect",
+    "source": "references/sirna_library/acquisition/sidirect_fulltext.xml",
+    "authors": [
+      "Naito Yuki",
+      "Yoshimura Jun",
+      "Morishita Shinichi",
+      "Ui-Tei Kumiko"
+    ],
+    "doi": [
+      "10.1186/1471-2105-10-392"
+    ],
+    "title": "siDirect 2.0: updated software for designing functional siRNA with reduced seed-dependent off-target effect"
+  },
+  {
+    "key": "oligoformer",
+    "source": "references/sirna_library/acquisition/oligoformer_fulltext.xml",
+    "authors": [
+      "Bai Yilan",
+      "Zhong Haochen",
+      "Wang Taiwei",
+      "Lu Zhi John"
+    ],
+    "doi": [
+      "10.1093/bioinformatics/btae577"
+    ],
+    "title": "OligoFormer: an accurate and robust prediction method for siRNA design"
+  },
+  {
+    "key": "seedmatchr",
+    "source": "references/sirna_library/acquisition/seedmatchr_fulltext.xml",
+    "authors": [
+      "Cazares Tareian",
+      "Higgs Richard E",
+      "Wang Jibo",
+      "Ozer Hatice Gulcin"
+    ],
+    "doi": [
+      "10.1093/bioinformatics/btae011"
+    ],
+    "title": "SeedMatchR: identify off-target effects mediated by siRNA seed regions in RNA-seq experiments"
+  },
+  {
+    "key": "chen",
+    "source": "references/vegfa_experiments_20261024/chen2013.xml",
+    "authors": [
+      "Chen Cheng-Wei",
+      "Yeh Ming-Kung",
+      "Shiau Chia-Yang",
+      "Chiang Chiao-Hsi",
+      "Lu Da-Wen"
+    ],
+    "doi": [
+      "10.2147/IJN.S39622"
+    ],
+    "title": "Efficient downregulation of VEGF in retinal pigment epithelial cells by integrin ligand-labeled liposome-mediated siRNA delivery"
+  },
+  {
+    "key": "osipova",
+    "source": "references/vegfa_experiments_20261024/osipova2020.xml",
+    "authors": [
+      "Osipova Olga",
+      "Sharoyko Vladimir",
+      "Zashikhina Natalia",
+      "Zakharova Natalya",
+      "Tennikova Tatiana",
+      "Urtti Arto",
+      "Korzhikova-Vlakh Evgenia"
+    ],
+    "doi": [
+      "10.3390/pharmaceutics12010039"
+    ],
+    "title": "Amphiphilic Polypeptides for VEGF siRNA Delivery into Retinal Epithelial Cells"
+  }
+]

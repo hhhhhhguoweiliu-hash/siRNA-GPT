@@ -1,0 +1,48 @@
+{
+  "records": 54,
+  "status_counts": [
+    {
+      "group": "agent",
+      "stored_status": "COMPLETE",
+      "count": 6
+    },
+    {
+      "group": "agent",
+      "stored_status": "FAILED",
+      "count": 2
+    },
+    {
+      "group": "agent",
+      "stored_status": "PARTIAL_COMPLETE",
+      "count": 3
+    },
+    {
+      "group": "agent",
+      "stored_status": "idle",
+      "count": 7
+    },
+    {
+      "group": "llm",
+      "stored_status": "ANSWERED_NO_TOOLS",
+      "count": 18
+    },
+    {
+      "group": "workflow",
+      "stored_status": "COMPLETE",
+      "count": 6
+    },
+    {
+      "group": "workflow",
+      "stored_status": "FAILED",
+      "count": 9
+    },
+    {
+      "group": "workflow",
+      "stored_status": "PARTIAL_COMPLETE",
+      "count": 3
+    }
+  ],
+  "new_evaluation_runs": 0,
+  "human_quality_scores": null,
+  "status_is_not_scientific_accuracy": true
+}

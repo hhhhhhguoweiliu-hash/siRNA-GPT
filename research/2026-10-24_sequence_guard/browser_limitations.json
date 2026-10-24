@@ -1,0 +1,13 @@
+{
+  "current_service_before_update": "03092ef5fbc2af289aaa2b7bc8d57315c050964f",
+  "original_case_safe_in_prior_GitHub_Drive_package": "20261024_121627_1e50c9",
+  "old_startup_report_121404_url": "NOT_FOUND_AFTER_FREE_INSTANCE_RESTART",
+  "current_startup_report_to_preserve": "20261024_151028_837bb4",
+  "automatic_current_startup_download": "ERR_BLOCKED_BY_CLIENT; no completed new download found",
+  "local_http_browser_preview": "Connection timed out; task-created preview processes stopped",
+  "file_url_preview": "Rejected by browser URL security policy; no workaround attempted after rejection",
+  "actual_visual_browser_acceptance": "PENDING_NORMAL_HTTPS_DEPLOYMENT_AFTER_REPORT_SAVE",
+  "deployment_performed_for_this_fix": false,
+  "required_user_action": "In existing logged-in Edge open https://sirna-gpt.onrender.com/runs/20261024_151028_837bb4/download.zip and finish Save; do not start a task",
+  "offline_program_and_shared_renderer_checks": "PASS; not represented as browser screenshots or new model cases"
+}

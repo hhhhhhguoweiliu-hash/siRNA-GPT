@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "compared_to": "f3c2a934a0a3bd7b29e213f49cac2ca5bd03f9b4",
+  "unchanged_paths": [
+    "data",
+    "research/2026-10-24_candidate_v2",
+    "research/2026-10-24_nearfull_complete",
+    "research/2026-10-22_fairness",
+    "research/2026-10-23_literature"
+  ],
+  "original_error_report_sha256": "59101eaf1bf77be033b2f770251d1d54a40042677f5ec0d8f2c33741c075285d",
+  "old_54_sha256": "55664e58cea8181046ddc73c3740b73960589380d02b95719f3c6c0e1334e505",
+  "no_scientific_recalculation_for_fix": true
+}
