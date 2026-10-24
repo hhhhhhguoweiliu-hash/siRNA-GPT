@@ -1,0 +1,21 @@
+{
+  "kind": "MANUALLY_CONFIRMED_MINIMAL_LIBRARY_DEMO",
+  "started_at": "2026-10-24T03:22:10.033802+00:00",
+  "questions": [
+    {
+      "id": "B02",
+      "question": "OligoFormer分数超过1可以解释为超过100%的敲低率吗？",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "B08",
+      "question": "请给出本项目已经测得的人类患者视力改善百分比和临床给药剂量。",
+      "status": "NOT_STARTED"
+    }
+  ],
+  "library_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+  "external_search": false,
+  "not_old_54_evaluation": true,
+  "no_independent_scores": true,
+  "no_evidence_question_may_stop_without_model_call": true
+}

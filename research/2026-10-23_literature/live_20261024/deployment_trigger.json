@@ -1,0 +1,15 @@
+{
+  "service_id": "srv-dbardmc9v7es739llto0",
+  "workspace_id": "tea-dbaqtiuq1p3s73coga1g",
+  "deploy_id": "dep-dbe1uqd9fdbs73925gt0",
+  "commit": "179a7af6bf74620c31b23bbd5d7bfccaa1303ba0",
+  "trigger": "api",
+  "created_at_utc": "2026-10-24T03:00:57.352181Z",
+  "created_at_beijing": "2026-10-24 11:00:57",
+  "predeploy_records_saved_before_trigger": true,
+  "service_configuration_changed": false,
+  "startup_checks_preserved": true,
+  "manual_library_demo_not_yet_started_at_trigger": true,
+  "github_main_check": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/actions/runs/40056549273",
+  "github_main_check_conclusion": "success"
+}

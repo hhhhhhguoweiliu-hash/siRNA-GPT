@@ -1,0 +1,123 @@
+{
+  "purpose": "Actual existing startup checks, separate from the manually confirmed Task B two-question demo",
+  "hasMore": false,
+  "logs": [
+    {
+      "id": "b6c31839-7c27-4ee5-af69-cfe4f026f93a",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-rsff7"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK pubmed {\"status\": \"OK\", \"source_count\": 1, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false}",
+      "timestamp": "2026-10-24T03:01:48.870600267Z"
+    },
+    {
+      "id": "981fda66-fd26-4b29-b15f-78bf941b8b5e",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-rsff7"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK web {\"status\": \"OK\", \"source_count\": 4, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"021792810909098a633002a7421b089fd65550b3782d551549e7d\", \"multi_turn_verified\": false}",
+      "timestamp": "2026-10-24T03:02:09.677680954Z"
+    },
+    {
+      "id": "cac883e4-7a80-4c21-98d2-a370a7f18c78",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-rsff7"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK model {\"status\": \"CONNECTED_TOOL_CALL_VERIFIED\", \"source_count\": 0, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"021792810905394fb87220ce050dbb1e4aff42e9a7ec1b1844d8c\", \"multi_turn_verified\": true}",
+      "timestamp": "2026-10-24T03:02:09.677697365Z"
+    },
+    {
+      "id": "ad2305b1-b2a3-4691-a8c5-6cca776f0c31",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-rsff7"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK research_conversation {\"status\": \"VERIFIED\", \"source_count\": 8, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false, \"tools\": [\"search_pubmed\"], \"source_titles\": [\"\\u5982\\u4f55\\u533a\\u5206\\u56de\\u7b54\\u4e2d\\u7684\\u8d44\\u6599\\u6765\\u6e90\", \"\\u6a21\\u578b\\u5206\\u6570\\u548c\\u5b9e\\u9a8c\\u6572\\u4f4e\\u7387\", \"OligoFormer official inference source, including score scaling and input context\"], \"answer_preview\": \"\\u771f\\u5b9e\\u9898\\u540d\\u4e3a **\\u201cOligoFormer: an accurate and robust prediction method for siRNA design.\\u201d**\\uff0c\\u53d1\\u8868\\u4e8e *Bioinformatics*\\uff082024\\uff09\\uff0cPMID: 39321261\\uff0cDOI: 10.1093/bioinformatics/btae577 [S8]\\u3002\\n\\n\\u4f9d\\u636e PubMed \\u6458\\u8981\\uff0c\\u5b83\\u4e3b\\u8981\\u8bc4\\u4f30 **siRNA efficacy\\uff08\\u6709\\u6548\\u6027/\\u6548\\u80fd\\u9884\\u6d4b\\uff09**\\uff0c\\u5e76\\u5728 siRNA \\u6548\\u80fd\\u6570\\u636e\\u96c6\\u4e0a\\u4e0e6\\u79cd\\u65b9\\u6cd5\\u6bd4\\u8f83 AUC\\u3001PRC\\u3001F1\\u3001PCC\\uff1b\\u540c\\u65f6\\u5176\\u6d41\\u7a0b\\u8fd8\\u7528 **PITA score \\u548c TargetScan score \\u9884\\u6d4b off-target effects\\uff08\\u8131\\u9776\\u6548\\u5e94\\uff09** [S8]\\u3002\\u4ee5\\u4e0a\\u4f9d\\u636e\\u7684\\u662f PubMed \\u6458\\u8981\\uff0c\\u4e0d\\u662f\\u5168\\u6587\\u9605\\u8bfb\\u7ed3\\u8bba\\u3002\\n\\n[S8] https://pubmed.ncbi.nlm.nih.gov/39321261/\"}",
+      "timestamp": "2026-10-24T03:02:29.873221525Z"
+    },
+    {
+      "id": "d1070014-be7c-4faf-bf00-2d89bcf85d69",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-rsff7"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK scientific_conversation {\"status\": \"VERIFIED\", \"source_count\": 0, \"message\": \"Full six-tool workflow with imported scientific outputs; no heavy cloud model/R rerun.\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false, \"tools\": [\"inspect_candidates\", \"verify_target\", \"score_candidates\", \"match_seed\", \"query_expression\", \"compile_report\"], \"answer_preview\": \"## \\u5224\\u5b9a\\n9\\u6761\\u9ed8\\u8ba4\\u4eba VEGFA \\u5019\\u9009\\u5747\\u5b8c\\u621019nt\\u6838\\u5fc3\\u6838\\u5bf9\\uff1b\\u5efa\\u8bae\\u4f18\\u5148\\u6838\\u67e5 **VEGFA_SD_3499** \\u548c **VEGFA_SD_3500**\\u3002\\u4e24\\u6761\\u90fd\\u65e0\\u5b98\\u65b9\\u529f\\u80fd\\u8fc7\\u6ee4\\u63d0\\u793a\\uff0c\\u6a21\\u578b\\u5206\\u6570\\u9ad8\\uff0c\\u4e14seed\\u8d1f\\u62c5\\u660e\\u663e\\u4f4e\\u4e8e\\u591a\\u6761\\u5019\\u9009\\uff1b\\u5f53\\u524d\\u5747\\u672a\\u5b8c\\u6210\\u5316\\u5b66\\u4fee\\u9970\\u51bb\\u7ed3\\uff0c\\u4e0d\\u80fd\\u76f4\\u63a5\\u4e0b\\u5355\\u3002\\n\\n## \\u5173\\u952e\\u7ed3\\u679c\\n| \\u4f18\\u5148\\u7ea7 | candidate_id | 19nt guide\\u6838\\u5fc3 | NM_003376.6\\u6838\\u5fc3\\u5750\\u6807 | OligoFormer\\u5206\\u6570 | \\u6392\\u9664VEGFA\\u540eseed\\u4f4d\\u70b9\\u6570 | \\u53bb\\u91cd\\u975e\\u9776\\u5339\\u914d\\u57fa\\u56e0 | \\u7f3a\\u6c27\\u68c0\\u51fa\\u57fa\\u56e0 |\\n|---|---|---|---:|---:|---:|---:|---:|\\n| 1 | VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501\\u20133519 | 0.9915 | 777 | 728 | 463 |\\n| 2 | VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502\\u20133520 | 0.9753 | 1547 | 1333 | 811 |\\n\\n\\u5b8c\\u6574\\u6838\\u5bf9\\u8fd8\\u663e\\u793a\\uff1a9\\u6761\\u6838\\u5fc3\\u5747\\u5728\\u53c2\\u8003\\u8f6c\\u5f55\\u672c\\u4e2d\\u5b9e\\u6d4b\\u547d\\u4e2d\\uff0c\\u5e76\\u8986\\u76d620\\u6761\\u5df2\\u5217VEGFA\\u8f6c\\u5f55\"}",
+      "timestamp": "2026-10-24T03:03:08.289124991Z"
+    }
+  ],
+  "nextEndTime": "2026-10-24T03:01:48.870600267Z",
+  "nextStartTime": "2026-10-24T03:00:57Z"
+}

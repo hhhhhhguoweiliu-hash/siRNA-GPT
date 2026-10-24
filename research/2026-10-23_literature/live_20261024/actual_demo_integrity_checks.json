@@ -1,0 +1,113 @@
+{
+  "kind": "EXECUTION_AND_SOURCE_INTEGRITY_CHECK_NOT_INDEPENDENT_QUALITY_SCORING",
+  "planned_units": 2,
+  "actual_model_exchange_records": 1,
+  "all_two_completed": true,
+  "actual_request": {
+    "model": "doubao-seed-2-1-pro-260915",
+    "stream": false,
+    "thinking": {
+      "type": "disabled"
+    },
+    "max_output_tokens": 1800
+  },
+  "actual_response_model": "doubao-seed-2-1-pro-260915",
+  "actual_response_status": "completed",
+  "incomplete_details_returned": false,
+  "incomplete_details": null,
+  "actual_usage": {
+    "input_tokens": 5927,
+    "output_tokens": 305,
+    "total_tokens": 6232,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "request_id": "021792812130660b538a17431386f9d946dfdd644798a028bf40d",
+  "actual_server_library_restored": {
+    "status": "IMPORTED",
+    "documents_in_bundle": 9,
+    "added": 9,
+    "version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "bundle_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "same_version": true
+  },
+  "same_library_version": true,
+  "rebuilt_after_removing_derived_index": true,
+  "retrieved_sources": [
+    {
+      "citation_id": "S1",
+      "url": "/knowledge#score",
+      "source_kind": "project_setting",
+      "locator": null,
+      "sha256": null,
+      "exact_text_matches_restored_source": true
+    },
+    {
+      "citation_id": "S2",
+      "url": "/library/ec77cffdc9e76e478068430f#text-c007",
+      "source_kind": "official_source_code",
+      "locator": "文本，片段text-c007",
+      "sha256": null,
+      "exact_text_matches_restored_source": true
+    },
+    {
+      "citation_id": "S3",
+      "url": "/library/e2cea21b6712b85250758e8b#text-c020",
+      "source_kind": "article_full_text",
+      "locator": "文本，片段text-c020",
+      "sha256": null,
+      "exact_text_matches_restored_source": true
+    },
+    {
+      "citation_id": "S4",
+      "url": "/library/e2cea21b6712b85250758e8b#text-c001",
+      "source_kind": "article_full_text",
+      "locator": "文本，片段text-c001",
+      "sha256": null,
+      "exact_text_matches_restored_source": true
+    },
+    {
+      "citation_id": "S5",
+      "url": "/library/ec77cffdc9e76e478068430f#text-c011",
+      "source_kind": "official_source_code",
+      "locator": "文本，片段text-c011",
+      "sha256": null,
+      "exact_text_matches_restored_source": true
+    },
+    {
+      "citation_id": "S6",
+      "url": "/library/fce74ce24f4c5275cdea80d0#text-c001",
+      "source_kind": "official_documentation",
+      "locator": "文本，片段text-c001",
+      "sha256": null,
+      "exact_text_matches_restored_source": true
+    }
+  ],
+  "short_quote_checks": [
+    {
+      "citation_id": "S1",
+      "quote": "模型分数不是实验敲低百分比",
+      "present_in_actual_excerpt": true
+    },
+    {
+      "citation_id": "S2",
+      "quote": "i*1.341",
+      "present_in_actual_excerpt": true
+    },
+    {
+      "citation_id": "S3",
+      "quote": "prediction score for each siRNA",
+      "present_in_actual_excerpt": true
+    }
+  ],
+  "unsupported_case": {
+    "model_call_count": 0,
+    "retrieved_excerpts": 0,
+    "note": "Program scope/no-evidence refusal, not a measurement of model refusal ability"
+  },
+  "independent_human_scores": null
+}

@@ -1,0 +1,52 @@
+{
+  "deployed_commit": "179a7af6bf74620c31b23bbd5d7bfccaa1303ba0",
+  "deploy_id": "dep-dbe1uqd9fdbs73925gt0",
+  "deploy_status": "live",
+  "run_id": "library_demo_20261024_032210_21c28f",
+  "questions_planned": 2,
+  "questions_completed": 2,
+  "real_model_call_count": 1,
+  "program_no_evidence_count": 1,
+  "independent_quality_scores": null,
+  "drive_bundle": {
+    "id": "1L49krexm10CeNzOZRum86XJt6xFUCVKs",
+    "title": "siRNA-GPT_TaskB_真实演示与上线完整记录_20261024.zip",
+    "mime_type": "application/zip",
+    "size": "2745213",
+    "url": null,
+    "file_or_folder": "file",
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "drive_report": {
+    "id": "15PjJHez3JLe0UOiFDC9K3M7Gh203kF8b",
+    "title": "siRNA-GPT_TaskB_真实回答与结果说明_20261024.md",
+    "mime_type": "text/markdown",
+    "size": "7744",
+    "url": null,
+    "file_or_folder": "file",
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "drive_bundle_local_sha256": "2ad3eadc774a5dd1b96a055409ded246f0fe985fa46ca0481c78a242e5a61257",
+  "drive_remote_sha256_available": false,
+  "no_new_54": true
+}

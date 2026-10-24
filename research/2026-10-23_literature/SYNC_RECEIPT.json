@@ -41,5 +41,7 @@
   "deployed_task_b": false,
   "real_model_demo_run": false,
   "blocking_step": "User to sign in to original website; preserve existing records before deployment",
-  "no_new_54_batch": true
+  "no_new_54_batch": true,
+  "as_of": "2026-10-23 historical upload receipt",
+  "current_status": "See live_20261024/README.md and DELIVERY.md; deployment and real demo completed 2026-10-24"
 }

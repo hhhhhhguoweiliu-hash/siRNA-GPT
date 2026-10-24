@@ -1,6 +1,6 @@
 # 新ChatGPT与新Codex共同接手
 
-**当前范围更新（2026-10-23）：用户已放弃状态相关风险重排序。目标是尽快完成小而完整的siRNA辅助Agent工具/应用文章，不做微调、不扩大湿实验；TPM只注释。**旧路线仅为历史，不自动恢复。先读[21:16复核](docs/reviews/20261023_2116_fast_paper_scope_and_codex_tasks.md)、[本轮候选来源核查](research/2026-10-23_candidate_provenance/README.md)及最新STATUS/WORKBOARD。任务A已完成有边界的来源审计；任务B小文献库已实现并完成本地检查，上传/部署/真实演示见[交付记录](research/2026-10-23_literature/DELIVERY.md)，独立评审联系暂缓。旧54条不改、不重跑消错，不把新功能追溯算入旧结果。以下旧时间线保留，过时下一步以本段及最新任务表为准。
+**当前范围更新（2026-10-23）：用户已放弃状态相关风险重排序。目标是尽快完成小而完整的siRNA辅助Agent工具/应用文章，不做微调、不扩大湿实验；TPM只注释。**旧路线仅为历史，不自动恢复。先读[21:16复核](docs/reviews/20261023_2116_fast_paper_scope_and_codex_tasks.md)、[本轮候选来源核查](research/2026-10-23_candidate_provenance/README.md)及最新STATUS/WORKBOARD。任务A已完成有边界的来源审计；任务B小文献库已实现、部署并完成最小两题演示（未独立科学评分），上传/部署/真实演示见[交付记录](research/2026-10-23_literature/DELIVERY.md)，独立评审联系暂缓。旧54条不改、不重跑消错，不把新功能追溯算入旧结果。以下旧时间线保留，过时下一步以本段及最新任务表为准。
 
 更新：2026-10-20，北京时间。用户目标：仿照CRISPR-GPT，把现有siRNA Agent尽快做成小而完整、能交付结果的毕业课题。先完成已支持范围的真实链路和有效评价，再补扩展。
 

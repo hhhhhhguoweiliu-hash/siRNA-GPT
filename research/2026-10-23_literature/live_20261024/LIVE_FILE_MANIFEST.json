@@ -1,0 +1,135 @@
+{
+  "raw_demo_run": "library_demo_20261024_032210_21c28f",
+  "files": [
+    {
+      "path": "actual_demo/conversation/323156d25697.json",
+      "bytes": 17504,
+      "sha256": "a11201481368126a9197f0f10c0a8caac5a2fba8452c494ad9f54ce6b87c8145"
+    },
+    {
+      "path": "actual_demo/conversation/evidence/8adf373e980643189b6f0479.json",
+      "bytes": 22134,
+      "sha256": "95b713ab6d2a1d3740f573dd99beddc27d549036f1c6964ece74abe0431fcd3b"
+    },
+    {
+      "path": "actual_demo/conversation/evidence/a5d2979154da4c80811e6e62.json",
+      "bytes": 7478,
+      "sha256": "41c188c9098843cf6c1250f01e096dfe1bb46fe187fa7f68585c68087cdbf1a8"
+    },
+    {
+      "path": "actual_demo/conversation/evidence/ef511585f2734fe999f4f28c.json",
+      "bytes": 124268,
+      "sha256": "efe66c8a74a178716ef74ee3fa77b9b9e0135f72e438d0ee3131cf8ac42e000e"
+    },
+    {
+      "path": "actual_demo/conversation_record.json",
+      "bytes": 173064,
+      "sha256": "da8e1049ae5f525321cc182ea34fad47a360f82f23885514c8dae83af8556841"
+    },
+    {
+      "path": "actual_demo/library.zip",
+      "bytes": 659405,
+      "sha256": "1748cfd2ecb5cbb01b48cbf39450aa08eeb1fa27cde615a06b414471dbfbc85c"
+    },
+    {
+      "path": "actual_demo/protocol.json",
+      "bytes": 696,
+      "sha256": "ad2e5c21dcc6539db0c994f9603aa7b8b001fa920cb05774068ecc9d82fe92d5"
+    },
+    {
+      "path": "actual_demo/results.json",
+      "bytes": 2682,
+      "sha256": "3d6e2cd57bdff53e5b367f6b98973b655cce04de8745681a55d7de9d535274e0"
+    },
+    {
+      "path": "actual_demo/status.json",
+      "bytes": 2945,
+      "sha256": "46a953a0604a599791f785c7422bfbeca55b9b58e7fe5bdee7e1094b0d8ec191"
+    },
+    {
+      "path": "actual_demo_integrity_checks.json",
+      "bytes": 3476,
+      "sha256": "f63630c847f5fb4dae15bbe9574c3f5ffc306abd0f0c324fcbffc54b4a2e7a94"
+    },
+    {
+      "path": "actual_demo_original.zip",
+      "bytes": 711727,
+      "sha256": "fe223ce2d3a174a3968b6a8594d9cded04b7861d58917f3b39608df8c17e2d83"
+    },
+    {
+      "path": "actual_demo_recovery_receipt.json",
+      "bytes": 2852,
+      "sha256": "1dc6ff744470bfaa7dc78d08d55436376924f1faf6ec113570aedb72c8bc9ce1"
+    },
+    {
+      "path": "demo_service_log_transport.json",
+      "bytes": 1061730,
+      "sha256": "5dcd1975e5990c609d64bb7f80b460bf57cf62cb249690bcdd8a8c5f6c1e8d3d"
+    },
+    {
+      "path": "deployment_trigger.json",
+      "bytes": 642,
+      "sha256": "e3362f623c4dc244d03f4b8e04dc3f63e90c662efeb7ffddf5ab3d39c035d187"
+    },
+    {
+      "path": "live_demo_complete.png",
+      "bytes": 82539,
+      "sha256": "33af05ada2a5310dba607c3ca85b43aae67d8798f22f90e86e10e22e6881501c"
+    },
+    {
+      "path": "postdeploy_startup_log_excerpt.json",
+      "bytes": 6671,
+      "sha256": "963fa6cb706bd59605a93ecd7d79a2adbe727def3f67bcbe6bd68dd2a40b53df"
+    },
+    {
+      "path": "predeploy_browser_backup_receipt.json",
+      "bytes": 582,
+      "sha256": "e428352ae55234f6764024d3690aa12190926dac4b080e084c2424ccb3d9ded9"
+    },
+    {
+      "path": "predeploy_browser_backups.json",
+      "bytes": 81659,
+      "sha256": "c0c6fee35c6bcb4c8ccc4b884ce02566af4497bdfdfac2ab628b47fb5ef49754"
+    },
+    {
+      "path": "predeploy_conversation.json",
+      "bytes": 2640,
+      "sha256": "e9968b2b55e325301c50234ba4ed78e1b206716ada2a9c100929a210678ee33f"
+    },
+    {
+      "path": "predeploy_download_receipt.json",
+      "bytes": 737,
+      "sha256": "d36948f41df3d2550ae3e4c97796985485c8e368f1144fad80cd6b3767a6edde"
+    },
+    {
+      "path": "predeploy_existing_auto.zip",
+      "bytes": 496641,
+      "sha256": "6d8c62ae4af812707bcb8139d31a5fd040b48529f0fedbaf5a115cbde1e5d226"
+    },
+    {
+      "path": "predeploy_existing_auto_receipt.json",
+      "bytes": 6056,
+      "sha256": "5dd2ecbe2e84a4f5cc2a50a37eea422f3f1accf1f25881c766f06903b448a01a"
+    },
+    {
+      "path": "predeploy_startup_log_excerpt.json",
+      "bytes": 11891,
+      "sha256": "cee929d44a9f2966c538454789b869ba8378a240c38d63c2347ce9c5fa5527d1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7744,
+      "sha256": "3158e7cbe1155e862c067a5d7698187a5b5625f05e778c349fea7be2fc233ad2"
+    },
+    {
+      "path": "runtime.json",
+      "bytes": 2585,
+      "sha256": "c6935dbcccdac35ad5250081454dad5b8637fbedb7493c09ac4441cbe163976a"
+    },
+    {
+      "path": "ui_evidence.json",
+      "bytes": 1479,
+      "sha256": "31ac8b91c8234c681d1362651a1cb55b20dc2da0a74c915df39ba00fd76ecbdf"
+    }
+  ]
+}

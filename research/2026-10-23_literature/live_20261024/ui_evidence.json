@@ -1,0 +1,29 @@
+{
+  "url": "https://sirna-gpt.onrender.com/",
+  "library_status": "9份资料 · 文库版本 b4d516450903。当前实例临时文件；重启或部署可能丢失。请导出文库并自行保存。",
+  "pdf_import_status": "原文件已经在文库中，保留首次来源声明。文字原件和片段已保存。",
+  "query": "SeedMatchR中guide的mer7m8种子匹配定义是什么，方向怎样确定？",
+  "demo_status": "两题演示已结束，请下载原始记录；不代表已完成独立评分。",
+  "retrieved_links": [
+    {
+      "text": "SeedMatchR: identify off-target effects mediated by siRNA seed regions in RNA-seq experiments · 文本，片段text-c002",
+      "url": "/library/2a3c9b1477964896182ff11c#text-c002"
+    },
+    {
+      "text": "SeedMatchR: identify off-target effects mediated by siRNA seed regions in RNA-seq experiments · 文本，片段text-c005",
+      "url": "/library/2a3c9b1477964896182ff11c#text-c005"
+    },
+    {
+      "text": "SeedMatchR 1.1.1 official seed definitions source (g2-g8) · 文本，片段text-c002",
+      "url": "/library/164853a2be7a6b1a7f047604#text-c002"
+    },
+    {
+      "text": "SeedMatchR 1.1.1 official seed definitions source (g2-g8) · 文本，片段text-c001",
+      "url": "/library/164853a2be7a6b1a7f047604#text-c001"
+    },
+    {
+      "text": "SeedMatchR 1.1.1 official get_seed documentation · 文本，片段text-c002",
+      "url": "/library/f72c0ee41a849b5fd075fb7c#text-c002"
+    }
+  ]
+}

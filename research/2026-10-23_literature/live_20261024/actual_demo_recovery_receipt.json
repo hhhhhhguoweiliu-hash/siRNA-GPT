@@ -1,0 +1,93 @@
+{
+  "run_id": "library_demo_20261024_032210_21c28f",
+  "source": "Authorized Render service log transport from manual UI demo",
+  "archive_sha256": "fe223ce2d3a174a3968b6a8594d9cded04b7861d58917f3b39608df8c17e2d83",
+  "archive_bytes": 711727,
+  "chunks_verified": 159,
+  "zip_crc_valid": true,
+  "all_two_planned_units_retained": true,
+  "status": "COMPLETE",
+  "library_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+  "results": [
+    {
+      "id": "B02",
+      "status": "COMPLETED",
+      "answer_status": "complete",
+      "model_calls": 1,
+      "usage": [
+        {
+          "input_tokens": 5927,
+          "output_tokens": 305,
+          "total_tokens": 6232,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      ],
+      "citation_check": {
+        "unknown_ids": [],
+        "has_citation": true,
+        "semantic_support": "NOT_AUTOMATICALLY_VALIDATED_REQUIRES_REVIEW"
+      }
+    },
+    {
+      "id": "B08",
+      "status": "COMPLETED",
+      "answer_status": "no_evidence",
+      "model_calls": 0,
+      "usage": [],
+      "citation_check": null
+    }
+  ],
+  "independent_human_scores": null,
+  "files": [
+    {
+      "path": "conversation/323156d25697.json",
+      "bytes": 17504,
+      "sha256": "a11201481368126a9197f0f10c0a8caac5a2fba8452c494ad9f54ce6b87c8145"
+    },
+    {
+      "path": "conversation/evidence/8adf373e980643189b6f0479.json",
+      "bytes": 22134,
+      "sha256": "95b713ab6d2a1d3740f573dd99beddc27d549036f1c6964ece74abe0431fcd3b"
+    },
+    {
+      "path": "conversation/evidence/a5d2979154da4c80811e6e62.json",
+      "bytes": 7478,
+      "sha256": "41c188c9098843cf6c1250f01e096dfe1bb46fe187fa7f68585c68087cdbf1a8"
+    },
+    {
+      "path": "conversation/evidence/ef511585f2734fe999f4f28c.json",
+      "bytes": 124268,
+      "sha256": "efe66c8a74a178716ef74ee3fa77b9b9e0135f72e438d0ee3131cf8ac42e000e"
+    },
+    {
+      "path": "conversation_record.json",
+      "bytes": 173064,
+      "sha256": "da8e1049ae5f525321cc182ea34fad47a360f82f23885514c8dae83af8556841"
+    },
+    {
+      "path": "library.zip",
+      "bytes": 659405,
+      "sha256": "1748cfd2ecb5cbb01b48cbf39450aa08eeb1fa27cde615a06b414471dbfbc85c"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 696,
+      "sha256": "ad2e5c21dcc6539db0c994f9603aa7b8b001fa920cb05774068ecc9d82fe92d5"
+    },
+    {
+      "path": "results.json",
+      "bytes": 2682,
+      "sha256": "3d6e2cd57bdff53e5b367f6b98973b655cce04de8745681a55d7de9d535274e0"
+    },
+    {
+      "path": "status.json",
+      "bytes": 2945,
+      "sha256": "46a953a0604a599791f785c7422bfbeca55b9b58e7fe5bdee7e1094b0d8ec191"
+    }
+  ]
+}

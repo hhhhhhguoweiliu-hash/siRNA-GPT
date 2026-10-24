@@ -1,0 +1,44 @@
+[
+  {
+    "id": "B02",
+    "question": "OligoFormer分数超过1可以解释为超过100%的敲低率吗？",
+    "status": "COMPLETED",
+    "started_at": "2026-10-24T03:22:10.182801+00:00",
+    "answer": "**判定：不可以。**\n\n**关键结果：**\n- OligoFormer 的输出是用于反映诱导基因敲低潜在有效性的**预测分数**，不是实测敲低百分比；分数超过 1 不能解释为“超过100%敲低率”。项目设置明确说明“模型分数不是实验敲低百分比”[S1]；论文也称输出是“prediction score … reflecting its potential effectiveness”[S3]。\n- 官方推理源码还显示输出经过线性缩放：`Y_PRED = [i*1.341 for i in Y_PRED]`，随后写入 `efficacy` 列[S2][S5]。因此该数值可能超过 1，但源码片段本身没有把这个缩放后数值定义成百分比，也没有给出 0–100% 的边界保证。\n- 若需知道实际敲低率，只能通过相应实验体系中的敲低/沉默实验测量；本项目模型分数只用于候选排序与复核，不等同实验结果[S1]。\n\n**证据：**“模型分数不是实验敲低百分比”[S1]；“prediction score for each siRNA”[S3]；“i*1.341”[S2]。\n\n**限制：**以上是项目设置说明、官方源码和论文文字片段；不能据此反推出某一具体分数对应的实际敲低百分比。",
+    "audit_id": "ef511585f2734fe999f4f28c",
+    "answer_status": "complete",
+    "citation_check": {
+      "unknown_ids": [],
+      "has_citation": true,
+      "semantic_support": "NOT_AUTOMATICALLY_VALIDATED_REQUIRES_REVIEW"
+    },
+    "model_calls": 1,
+    "usage": [
+      {
+        "input_tokens": 5927,
+        "output_tokens": 305,
+        "total_tokens": 6232,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    ],
+    "finished_at": "2026-10-24T03:22:20.519936+00:00"
+  },
+  {
+    "id": "B08",
+    "question": "请给出本项目已经测得的人类患者视力改善百分比和临床给药剂量。",
+    "status": "COMPLETED",
+    "started_at": "2026-10-24T03:22:20.524651+00:00",
+    "answer": "判定：当前文库证据不足。\n关键结果：没有找到支持这项结论的资料，不能提供本项目未测得的数值。\n证据：本轮本地检索没有可引用片段，未进行联网补查。\n限制或下一步：请提供与问题相关的原文；导入后再核对。",
+    "audit_id": "a5d2979154da4c80811e6e62",
+    "answer_status": "no_evidence",
+    "citation_check": null,
+    "model_calls": 0,
+    "usage": [],
+    "finished_at": "2026-10-24T03:22:20.552239+00:00"
+  }
+]
