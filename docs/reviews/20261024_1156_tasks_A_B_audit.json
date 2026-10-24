@@ -1,0 +1,171 @@
+{
+  "reviewed_main": "ca04a0f229ed808b4fd471616efc5886df52ad8e",
+  "task_A": {
+    "raw_rows": 104,
+    "retained": [
+      "VEGFA_SD_1157",
+      "VEGFA_SD_2739",
+      "VEGFA_SD_3119",
+      "VEGFA_SD_3193",
+      "VEGFA_SD_3429",
+      "VEGFA_SD_3499",
+      "VEGFA_SD_3500",
+      "VEGFA_SD_3502",
+      "VEGFA_SD_3535"
+    ],
+    "rule_counts_overlap": {
+      "CORE_GC_OUTSIDE_WORKING_30_65": 81,
+      "NOT_COMMON_TO_ALL_20_VENDOR_TRANSCRIPT_CORES": 19,
+      "CORE_HOMOPOLYMER_GE4": 57,
+      "SIDIRECT_LEGACY_DATABASE_MIN_MISMATCH_LT2": 39
+    },
+    "seed_rows": 1397880,
+    "saved_sites_checked": 46867,
+    "local_source_files_checked": 149,
+    "scientific_inference_rerun": false
+  },
+  "task_B": {
+    "demo_sha256": "fe223ce2d3a174a3968b6a8594d9cded04b7861d58917f3b39608df8c17e2d83",
+    "documents": 9,
+    "library_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "actual_model_calls": 1,
+    "tokens": 6232,
+    "retrieval_probes": {
+      "b04": {
+        "question": "SeedMatchR中guide的mer7m8种子匹配定义是什么，方向怎样确定？",
+        "status": "OK",
+        "reason": null,
+        "hits": [
+          {
+            "title": "SeedMatchR: identify off-target effects mediated by siRNA seed regions in RNA-seq experiments",
+            "kind": "article_full_text",
+            "chunk": "text-c002"
+          },
+          {
+            "title": "SeedMatchR: identify off-target effects mediated by siRNA seed regions in RNA-seq experiments",
+            "kind": "article_full_text",
+            "chunk": "text-c005"
+          },
+          {
+            "title": "SeedMatchR 1.1.1 official seed definitions source (g2-g8)",
+            "kind": "official_source_code",
+            "chunk": "text-c002"
+          },
+          {
+            "title": "SeedMatchR 1.1.1 official seed definitions source (g2-g8)",
+            "kind": "official_source_code",
+            "chunk": "text-c001"
+          },
+          {
+            "title": "SeedMatchR 1.1.1 official get_seed documentation",
+            "kind": "official_documentation",
+            "chunk": "text-c002"
+          }
+        ]
+      },
+      "nonclinical_missing": {
+        "question": "VEGFA_SD_3499在ARPE-19转染后第7天实测敲低率是多少？",
+        "status": "OK",
+        "reason": null,
+        "hits": [
+          {
+            "title": "本项目默认九条候选来源核查（历史计算记录，不是文献结论）",
+            "kind": "project_record",
+            "chunk": "text-c002"
+          },
+          {
+            "title": "本项目默认九条候选来源核查（历史计算记录，不是文献结论）",
+            "kind": "project_record",
+            "chunk": "text-c003"
+          },
+          {
+            "title": "OligoFormer official inference source, including score scaling and input context",
+            "kind": "official_source_code",
+            "chunk": "text-c007"
+          },
+          {
+            "title": "OligoFormer: an accurate and robust prediction method for siRNA design",
+            "kind": "article_full_text",
+            "chunk": "text-c020"
+          },
+          {
+            "title": "OligoFormer: an accurate and robust prediction method for siRNA design",
+            "kind": "article_full_text",
+            "chunk": "text-c001"
+          }
+        ]
+      },
+      "clinical_context": {
+        "question": "为什么本项目不能根据TPM证明患者疗效？",
+        "status": "NO_RESULTS",
+        "reason": "此小文库不支持本项目患者疗效或临床给药结论。",
+        "hits": []
+      },
+      "no_keywords": {
+        "question": "ZXQ987654321不存在于本文库的术语定义是什么？",
+        "status": "OK",
+        "reason": null,
+        "hits": [
+          {
+            "title": "本项目默认九条候选来源核查（历史计算记录，不是文献结论）",
+            "kind": "project_record",
+            "chunk": "text-c003"
+          },
+          {
+            "title": "本项目默认九条候选来源核查（历史计算记录，不是文献结论）",
+            "kind": "project_record",
+            "chunk": "text-c004"
+          }
+        ]
+      }
+    },
+    "new_model_calls_in_this_review": 0
+  },
+  "checks": {
+    "request_sequence_matches_reference": true,
+    "104_raw_rows": true,
+    "all_104_duplex_coordinates_valid": true,
+    "all_104_original_exclusion_reasons_equal": true,
+    "104_to_9_exact_ids_order": true,
+    "pool_rows_equal_unchanged_web_candidates": true,
+    "nine_score_rows_equal_import": true,
+    "nine_score_logs_and_scaling_equal": true,
+    "full_seed_72_complete_groups": true,
+    "positive_guide_mer7m8_subset_equal": true,
+    "all_46867_saved_mer7m8_positions_match_reference": true,
+    "demo_zip_hash_crc": true,
+    "one_actual_model_exchange": true,
+    "demo_two_records_one_model_one_program": true,
+    "demo_answer_equal_audit": true,
+    "demo_usage_matches_audit": true,
+    "actual_response_completed_settings": true,
+    "actual_response_usage": true,
+    "actual_response_text": true,
+    "library_same_nine_documents_version": true,
+    "all_five_document_excerpt_bytes_and_locators_equal": true,
+    "actual_quote_模型分数不是实验敲低百分比": true,
+    "actual_quote_prediction score for each siRNA": true,
+    "actual_quote_i*1.341": true,
+    "chinese_seed_query_retrieves_pinned_english_definition": true,
+    "export_import_rebuild_same_version": true,
+    "rebuild_retains_version": true,
+    "actual_request_question_fragments_version_equal": true,
+    "all_149_local_source_hashes_sizes_equal": true
+  },
+  "failed_checks": [],
+  "human_scores_filled": false,
+  "functional_findings": [
+    {
+      "kind": "overbroad_keyword_scope_gate_and_mislabelled_no_results",
+      "reproduced_question": "为什么本项目不能根据TPM证明患者疗效？",
+      "observed": "NO_RESULTS before FTS query; any 患者/视力改善/临床给药 substring triggers gate and removes project-note excerpts",
+      "impact": "Within-scope explanation is suppressed; B08 is a programmed scope refusal, not general model abstention or actual empty retrieval proof."
+    },
+    {
+      "kind": "ordinary_unanswerable_question_not_tested_with_real_model",
+      "reproduced_question": "VEGFA_SD_3499在ARPE-19转染后第7天实测敲低率是多少？",
+      "observed": "Related project and model passages retrieved, no new model called by this review",
+      "impact": "Existing one-question model demonstration does not verify refusal when related passages lack the requested experimental value."
+    }
+  ]
+}
