@@ -1,0 +1,19 @@
+$Guide
+23-letter RNAString object
+seq: UUAUAGAGCAAGAACACUGUUUU
+
+$Seed.Name
+[1] "mer7m8"
+
+$Seed.Seq.RNA
+7-letter RNAString object
+seq: UAUAGAG
+
+$Seed.Seq.DNA
+7-letter DNAString object
+seq: TATAGAG
+
+$Target.Seq
+7-letter DNAString object
+seq: CTCTATA
+

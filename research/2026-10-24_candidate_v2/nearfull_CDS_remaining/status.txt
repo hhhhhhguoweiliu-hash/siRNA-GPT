@@ -1,0 +1,5 @@
+mode nearfull
+planned_units 16
+completed_units 16
+worker_total_seconds 109.36
+status COMPLETE

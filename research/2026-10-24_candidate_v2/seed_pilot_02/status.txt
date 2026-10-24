@@ -1,0 +1,5 @@
+mode seed
+planned_units 4
+completed_units 4
+worker_total_seconds 9.74
+status COMPLETE

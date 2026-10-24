@@ -1,0 +1,20 @@
+{
+  "status": "RETURNED",
+  "started_utc": "2026-10-24T05:57:57.189033+00:00",
+  "finished_utc": "2026-10-24T05:58:04.436869+00:00",
+  "wall_seconds": 7.247161699997378,
+  "exit_code": 1,
+  "timeout_seconds": 180,
+  "command": [
+    "C:\\Program Files\\R\\R-4.3.1\\bin\\Rscript.exe",
+    "--vanilla",
+    "scripts/candidate_v2_match.R",
+    "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016",
+    "research/2026-10-24_candidate_v2/inputs/seed_pilot_4.tsv",
+    "research/2026-10-24_candidate_v2/seed_pilot",
+    "seed"
+  ],
+  "cwd": "C:\\00000\\ARPE RNA-seq\\sirna-gpt",
+  "log_file": "research/2026-10-24_candidate_v2/execution/seed_pilot.log",
+  "scope": "Real local official-tool execution, no API, no training, no wet experiment"
+}

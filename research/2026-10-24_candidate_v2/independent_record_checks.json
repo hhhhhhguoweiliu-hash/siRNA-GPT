@@ -1,0 +1,182 @@
+{
+  "status": "PASS",
+  "old_nine_scores": [
+    {
+      "candidate_id": "VEGFA_SD_1157",
+      "absolute_scaled_score_difference": 0.0,
+      "same_official_flag": true
+    },
+    {
+      "candidate_id": "VEGFA_SD_2739",
+      "absolute_scaled_score_difference": 0.0,
+      "same_official_flag": true
+    },
+    {
+      "candidate_id": "VEGFA_SD_3119",
+      "absolute_scaled_score_difference": 0.0,
+      "same_official_flag": true
+    },
+    {
+      "candidate_id": "VEGFA_SD_3193",
+      "absolute_scaled_score_difference": 0.0,
+      "same_official_flag": true
+    },
+    {
+      "candidate_id": "VEGFA_SD_3429",
+      "absolute_scaled_score_difference": 0.0,
+      "same_official_flag": true
+    },
+    {
+      "candidate_id": "VEGFA_SD_3499",
+      "absolute_scaled_score_difference": 0.0,
+      "same_official_flag": true
+    },
+    {
+      "candidate_id": "VEGFA_SD_3500",
+      "absolute_scaled_score_difference": 0.0,
+      "same_official_flag": true
+    },
+    {
+      "candidate_id": "VEGFA_SD_3502",
+      "absolute_scaled_score_difference": 0.0,
+      "same_official_flag": true
+    },
+    {
+      "candidate_id": "VEGFA_SD_3535",
+      "absolute_scaled_score_difference": 0.0,
+      "same_official_flag": true
+    }
+  ],
+  "old_nine_14524_positive_seed_counts_exact": true,
+  "nearfull_all_24_gene_summaries_independently_recounted": [
+    {
+      "query": "USER_PURCHASED_siVEGF__guide__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "USER_PURCHASED_siVEGF__guide__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "USER_PURCHASED_siVEGF__passenger__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "USER_PURCHASED_siVEGF__passenger__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1552__guide__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1552__guide__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1552__passenger__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1552__passenger__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1157__guide__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1157__guide__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1157__passenger__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1157__passenger__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1555__guide__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1555__guide__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1555__passenger__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1555__passenger__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1559__guide__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1559__guide__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1559__passenger__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1559__passenger__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1588__guide__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1588__guide__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1588__passenger__paired_core19__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    },
+    {
+      "query": "VEGFA_SD_1588__passenger__sidirect_g2g20__hits.tsv.gz",
+      "all_site_gene_mappings_and_0_1_2mm_summaries_match": true
+    }
+  ],
+  "protected_prior_assets": {
+    "core.py": true,
+    "data/candidates.tsv": true,
+    "data/historical_scores.tsv": true,
+    "data/historical_seed_matches.tsv": true,
+    "data/expression.tsv.gz": true,
+    "research/2026-10-22_fairness/three_arm/results.json.gz": true
+  },
+  "historical_20_transcript_TPM_verified_against_retained_vendor_table": [
+    "NM_001171628.2",
+    "NM_001025370.3",
+    "NM_001025367.3",
+    "NM_001171625.2",
+    "NM_001204384.2",
+    "NM_001171624.2",
+    "NM_001204385.2",
+    "NM_001171622.2",
+    "NM_003376.6",
+    "NM_001171630.2",
+    "NM_001171626.2",
+    "NM_001317010.2",
+    "NM_001033756.3",
+    "NM_001171629.2",
+    "NM_001025368.3",
+    "NM_001171623.2",
+    "NM_001287044.2",
+    "NM_001025366.3",
+    "NM_001025369.3",
+    "NM_001171627.2"
+  ],
+  "transcript_TPM_limit": "Historical estimated transcript quantities; not direct read coverage of the siRNA target region; no state risk reranking",
+  "new_API_calls": 0,
+  "independent_human_scores": null
+}

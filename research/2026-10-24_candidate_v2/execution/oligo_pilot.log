@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "scripts/candidate_v2_oligo.py", line 52, in <module>
+    os.chdir(out/'official_loader_qa');ds=data_process_loader_infer(df.index.values,df,'QA')
+  File "C:\Users\86182\.codex\.chatgpt-projects\g-p-6a82e08661e081919f3434650ae4f35c\analysis\ARPE19_candidates_20261016\official_tools\OligoFormer\scripts\loader.py", line 88, in __init__
+    with open('./data/infer/' + self.dataset + '/siRNA.fa') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './data/infer/QA/siRNA.fa'

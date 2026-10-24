@@ -1,0 +1,83 @@
+[
+  {
+    "candidate_id": "VEGFA_SD_1157",
+    "historical_values": {
+      "raw_class1": "0.7076764106750488",
+      "oligoformer_scaled_score": "0.9489940667152404"
+    },
+    "new_raw_class1": 0.7076764106750488,
+    "new_scaled_score": 0.9489940667152404
+  },
+  {
+    "candidate_id": "VEGFA_SD_2739",
+    "historical_values": {
+      "raw_class1": "0.6573420166969299",
+      "oligoformer_scaled_score": "0.881495644390583"
+    },
+    "new_raw_class1": 0.6573420166969299,
+    "new_scaled_score": 0.881495644390583
+  },
+  {
+    "candidate_id": "VEGFA_SD_3119",
+    "historical_values": {
+      "raw_class1": "0.6884453892707825",
+      "oligoformer_scaled_score": "0.9232052670121192"
+    },
+    "new_raw_class1": 0.6884453892707825,
+    "new_scaled_score": 0.9232052670121192
+  },
+  {
+    "candidate_id": "VEGFA_SD_3193",
+    "historical_values": {
+      "raw_class1": "0.5737422704696655",
+      "oligoformer_scaled_score": "0.7693883846998214"
+    },
+    "new_raw_class1": 0.5737422704696655,
+    "new_scaled_score": 0.7693883846998214
+  },
+  {
+    "candidate_id": "VEGFA_SD_3429",
+    "historical_values": {
+      "raw_class1": "0.7010828852653503",
+      "oligoformer_scaled_score": "0.9401521491408348"
+    },
+    "new_raw_class1": 0.7010828852653503,
+    "new_scaled_score": 0.9401521491408348
+  },
+  {
+    "candidate_id": "VEGFA_SD_3499",
+    "historical_values": {
+      "raw_class1": "0.7393843531608582",
+      "oligoformer_scaled_score": "0.9915144175887107"
+    },
+    "new_raw_class1": 0.7393843531608582,
+    "new_scaled_score": 0.9915144175887107
+  },
+  {
+    "candidate_id": "VEGFA_SD_3500",
+    "historical_values": {
+      "raw_class1": "0.7273184061050415",
+      "oligoformer_scaled_score": "0.9753339825868607"
+    },
+    "new_raw_class1": 0.7273184061050415,
+    "new_scaled_score": 0.9753339825868607
+  },
+  {
+    "candidate_id": "VEGFA_SD_3502",
+    "historical_values": {
+      "raw_class1": "0.7251685857772827",
+      "oligoformer_scaled_score": "0.9724510735273361"
+    },
+    "new_raw_class1": 0.7251685857772827,
+    "new_scaled_score": 0.9724510735273361
+  },
+  {
+    "candidate_id": "VEGFA_SD_3535",
+    "historical_values": {
+      "raw_class1": "0.7483892440795898",
+      "oligoformer_scaled_score": "1.0035899763107299"
+    },
+    "new_raw_class1": 0.7483892440795898,
+    "new_scaled_score": 1.0035899763107299
+  }
+]

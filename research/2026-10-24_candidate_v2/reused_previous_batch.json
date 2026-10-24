@@ -1,0 +1,8 @@
+{
+  "commit": "f60add9",
+  "three_papers": "references/vegfa_experiments_20261024/sources.json",
+  "actual_day7_run": "library_demo_20261024_052657_5a7974",
+  "actual_day7_original_zip_sha256": "e7b94c4e5fb956c2d9cdc314c293b0184390c7ab012d3fe46204a33276943a67",
+  "new_API_calls": 0,
+  "not_relabelled_as_new_execution": true
+}

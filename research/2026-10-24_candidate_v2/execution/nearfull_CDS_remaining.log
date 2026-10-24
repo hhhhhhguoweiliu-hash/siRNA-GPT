@@ -1,0 +1,26 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+Warning messages:
+1: package 'S4Vectors' was built under R version 4.3.2 
+2: package 'GenomeInfoDb' was built under R version 4.3.2 
+REFERENCE_LOAD_SECONDS 6.18 REFERENCE_TRANSCRIPTS 186185 
+NEARFULL_COMPLETED 1 16 VEGFA_SD_1157__guide__paired_core19 hits 28 seconds 6.22 
+NEARFULL_COMPLETED 2 16 VEGFA_SD_1157__guide__sidirect_g2g20 hits 32 seconds 5.74 
+NEARFULL_COMPLETED 3 16 VEGFA_SD_1157__passenger__paired_core19 hits 11 seconds 6.11 
+NEARFULL_COMPLETED 4 16 VEGFA_SD_1157__passenger__sidirect_g2g20 hits 2 seconds 5.35 
+NEARFULL_COMPLETED 5 16 VEGFA_SD_1555__guide__paired_core19 hits 19 seconds 5.59 
+NEARFULL_COMPLETED 6 16 VEGFA_SD_1555__guide__sidirect_g2g20 hits 23 seconds 5.45 
+NEARFULL_COMPLETED 7 16 VEGFA_SD_1555__passenger__paired_core19 hits 7 seconds 5.67 
+NEARFULL_COMPLETED 8 16 VEGFA_SD_1555__passenger__sidirect_g2g20 hits 7 seconds 5.88 
+NEARFULL_COMPLETED 9 16 VEGFA_SD_1559__guide__paired_core19 hits 44 seconds 9.73 
+NEARFULL_COMPLETED 10 16 VEGFA_SD_1559__guide__sidirect_g2g20 hits 27 seconds 8.55 
+NEARFULL_COMPLETED 11 16 VEGFA_SD_1559__passenger__paired_core19 hits 1 seconds 6.02 
+NEARFULL_COMPLETED 12 16 VEGFA_SD_1559__passenger__sidirect_g2g20 hits 0 seconds 5.48 
+NEARFULL_COMPLETED 13 16 VEGFA_SD_1588__guide__paired_core19 hits 24 seconds 5.63 
+NEARFULL_COMPLETED 14 16 VEGFA_SD_1588__guide__sidirect_g2g20 hits 29 seconds 5.68 
+NEARFULL_COMPLETED 15 16 VEGFA_SD_1588__passenger__paired_core19 hits 38 seconds 6.1 
+NEARFULL_COMPLETED 16 16 VEGFA_SD_1588__passenger__sidirect_g2g20 hits 33 seconds 5.68 
+COMPLETE nearfull 16 TOTAL_SECONDS 109.36 

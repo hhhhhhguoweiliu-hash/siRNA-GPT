@@ -1,0 +1,18 @@
+{
+  "status": "RETURNED",
+  "started_utc": "2026-10-24T05:58:12.322321+00:00",
+  "finished_utc": "2026-10-24T05:58:47.206833+00:00",
+  "wall_seconds": 34.88472360000014,
+  "exit_code": 0,
+  "timeout_seconds": 180,
+  "command": [
+    "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\oligo_env\\Scripts\\python.exe",
+    "scripts/candidate_v2_oligo.py",
+    "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016",
+    "research/2026-10-24_candidate_v2/inputs/job_pilot.json",
+    "research/2026-10-24_candidate_v2/oligo_pilot_02"
+  ],
+  "cwd": "C:\\00000\\ARPE RNA-seq\\sirna-gpt",
+  "log_file": "research/2026-10-24_candidate_v2/execution/oligo_pilot_02.log",
+  "scope": "Real local official-tool execution, no API, no training, no wet experiment"
+}

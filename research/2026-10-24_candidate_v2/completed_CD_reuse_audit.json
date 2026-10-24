@@ -1,0 +1,24 @@
+{
+  "status": "VERIFIED_REUSE_NO_NEW_API",
+  "prior_source_commit": "f60add9",
+  "prior_deployed_code": "fa62c7d",
+  "actual_original_day7_run": "library_demo_20261024_052657_5a7974",
+  "actual_original_day7_zip_sha256": "e7b94c4e5fb956c2d9cdc314c293b0184390c7ab012d3fe46204a33276943a67",
+  "new_API_calls": 0,
+  "original_model_calls": 1,
+  "original_usage_tokens": 6816,
+  "question_and_response_preserved": true,
+  "actual_request_excerpts_preserved": 8,
+  "document_excerpts_rechecked": [
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+  ],
+  "three_experimental_originals_verified": true,
+  "library_restore_rebuild_same_version": true,
+  "library_version": "ac6d351a2e992bc86dfb87db6527861752c1ec6bab07adb7e33b667052576a54",
+  "independent_human_scores": null,
+  "not_counted_as_new_demo": true
+}

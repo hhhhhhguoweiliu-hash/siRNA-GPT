@@ -1,0 +1,76 @@
+{
+  "filename": "siRNA_GPT_20261024_reference_inputs.zip",
+  "bytes": 230823493,
+  "sha256": "fec813ca97259743204e4a2fd7f80d439416645fcb017b99bc15a4caece81a15",
+  "files": 15,
+  "zip_crc_ok": true,
+  "pack_seconds": 11.193286499998067,
+  "scope": "Full retained raw NCBI reference downloads and complete prepared support tables, not wet-lab results",
+  "sources": [
+    {
+      "path": "reference/GCF_000001405.40_GRCh38.p14_rna.fna.gz",
+      "bytes": 135516534,
+      "sha256": "e214c2e0a00a5e8726487b611fc5afb166ca776b11106f1211ee7d14c095d9e2"
+    },
+    {
+      "path": "reference/GCF_000001405.40_GRCh38.p14_genomic.gff.gz",
+      "bytes": 78190483,
+      "sha256": "4920f0eae7e2197c50b67a201e06d657387137b49dd60f474b4f1d5b29334051"
+    },
+    {
+      "path": "reference/GCF_000001405.40-RS_2025_08_annotation_report.xml",
+      "bytes": 286548,
+      "sha256": "b185102752611c584dfa6aa85489968cf9773c4341fa055675860b7f34a8d284"
+    },
+    {
+      "path": "reference/reference_download_manifest.json",
+      "bytes": 2606,
+      "sha256": "6b1bd76f82a0420083477925e2d84c1843122d956017d6cf1671265d9e6e6daa"
+    },
+    {
+      "path": "reference/md5checksums.txt",
+      "bytes": 202189,
+      "sha256": "a6ad1c10ef1b48ee83c24742fa3a092a244b01615a174d470012d1ae09241e56"
+    },
+    {
+      "path": "reference/README_GCF_000001405.40-RS_2025_08",
+      "bytes": 2108,
+      "sha256": "473bdf5bd94a33433f067aa275efb855c0db664b1eaadd7f81ba6cb5f085d613"
+    },
+    {
+      "path": "prepared/refseq_all_transcript_gene_loci.tsv",
+      "bytes": 12284230,
+      "sha256": "24cadbe8302308c17850818ef11c7edead2c57fb9324b3620648f615d74d3e29"
+    },
+    {
+      "path": "prepared/refseq_utr3_representative.fasta",
+      "bytes": 37782141,
+      "sha256": "8a7a99ecc7346c50c76e37cd24cd851ce96adb348cc447f007233e2f10aac779"
+    },
+    {
+      "path": "prepared/utr_manifest_representative.tsv",
+      "bytes": 3685886,
+      "sha256": "a63dd3668d6cdb439a816c475b1cb9181183fd2bb2e76212d3a2fe0076d56aab"
+    },
+    {
+      "path": "prepared/vendor_transcript_tpm.tsv",
+      "bytes": 10229189,
+      "sha256": "ff5d08979f813b3239694530e68e746dc7eec4b132a5d3c923e4be1a18be980d"
+    },
+    {
+      "path": "prepared/VEGFA_transcript_TPM.tsv",
+      "bytes": 2186,
+      "sha256": "0aff72caabef30eb1387563d9877dc980986f7fa704a429807a0dd24ddb4b34d"
+    },
+    {
+      "path": "prepared/reference_summary.json",
+      "bytes": 578,
+      "sha256": "51bea479fec6c3103c8e9128bbb92ebce1eb7ec13919da9537eebcadb21e0ddf"
+    },
+    {
+      "path": "build_reference.py",
+      "bytes": 6861,
+      "sha256": "93aeddbbb938822ecc8bc99d3c754975a7003ff59938e56a49de7db1d4b5e9c5"
+    }
+  ]
+}

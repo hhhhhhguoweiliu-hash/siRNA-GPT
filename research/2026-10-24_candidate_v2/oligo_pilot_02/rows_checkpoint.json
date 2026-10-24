@@ -1,0 +1,24 @@
+[
+  {
+    "candidate_id": "USER_PURCHASED_siVEGF",
+    "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+    "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+    "raw_class1": 0.8366401195526123,
+    "oligoformer_scaled_score": 1.121934400320053,
+    "official_func_filter": 0,
+    "prediction_seconds": 0.5310655000000004,
+    "status": "COMPLETED_REAL_NEW_LOCAL_EXECUTION",
+    "origin": "USER_PURCHASED_SEPARATE"
+  },
+  {
+    "candidate_id": "VEGFA_SD_1552",
+    "guide_core19_5to3": "ACAAACAAAUGCUUUCUCC",
+    "mRNA_context_57nt": "UGUGGGCCUUGCUCAGAGCGGAGAAAGCAUUUGUUUGUACAAGAUCCGCAGACGUGU",
+    "raw_class1": 0.7253023982048035,
+    "oligoformer_scaled_score": 0.9726305159926414,
+    "official_func_filter": 0,
+    "prediction_seconds": 0.7875399000000058,
+    "status": "COMPLETED_REAL_NEW_LOCAL_EXECUTION",
+    "origin": "V2_DESIGN_FROM_ORIGINAL_104"
+  }
+]

@@ -1,0 +1,958 @@
+{
+  "checks": {
+    "all_104_decisions_retained": true,
+    "new_design_pool_all_65": true,
+    "purchased_separate_one": true,
+    "oligo_unique_complete_66": true,
+    "seed_unique_complete_132": true,
+    "all_seed_gene_rows_including_zeros": 2562780,
+    "all_seed_sites_verified": true,
+    "nearfull_declared_scope_complete_24": true,
+    "nearfull_unexecuted_explicit_240": true,
+    "all_scanned_nearfull_sites_rechecked": 537,
+    "old_nine_in_new_complete_pool": true,
+    "no_new_API_calls": true,
+    "independent_human_scores": null
+  },
+  "seed_units": [
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3540
+    },
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 1402
+    },
+    {
+      "candidate_id": "VEGFA_SD_1552",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6986
+    },
+    {
+      "candidate_id": "VEGFA_SD_1552",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5756
+    },
+    {
+      "candidate_id": "VEGFA_SD_0124",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4321
+    },
+    {
+      "candidate_id": "VEGFA_SD_0124",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3882
+    },
+    {
+      "candidate_id": "VEGFA_SD_0126",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4175
+    },
+    {
+      "candidate_id": "VEGFA_SD_0126",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3015
+    },
+    {
+      "candidate_id": "VEGFA_SD_0149",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5652
+    },
+    {
+      "candidate_id": "VEGFA_SD_0149",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5470
+    },
+    {
+      "candidate_id": "VEGFA_SD_0150",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6761
+    },
+    {
+      "candidate_id": "VEGFA_SD_0150",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4124
+    },
+    {
+      "candidate_id": "VEGFA_SD_0192",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 703
+    },
+    {
+      "candidate_id": "VEGFA_SD_0192",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 1840
+    },
+    {
+      "candidate_id": "VEGFA_SD_0194",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 876
+    },
+    {
+      "candidate_id": "VEGFA_SD_0194",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3339
+    },
+    {
+      "candidate_id": "VEGFA_SD_0199",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 7266
+    },
+    {
+      "candidate_id": "VEGFA_SD_0199",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 535
+    },
+    {
+      "candidate_id": "VEGFA_SD_0203",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 20904
+    },
+    {
+      "candidate_id": "VEGFA_SD_0203",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 852
+    },
+    {
+      "candidate_id": "VEGFA_SD_0278",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5397
+    },
+    {
+      "candidate_id": "VEGFA_SD_0278",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4347
+    },
+    {
+      "candidate_id": "VEGFA_SD_1157",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2197
+    },
+    {
+      "candidate_id": "VEGFA_SD_1157",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3782
+    },
+    {
+      "candidate_id": "VEGFA_SD_1555",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4052
+    },
+    {
+      "candidate_id": "VEGFA_SD_1555",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5169
+    },
+    {
+      "candidate_id": "VEGFA_SD_1559",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2098
+    },
+    {
+      "candidate_id": "VEGFA_SD_1559",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4476
+    },
+    {
+      "candidate_id": "VEGFA_SD_1588",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4835
+    },
+    {
+      "candidate_id": "VEGFA_SD_1588",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5796
+    },
+    {
+      "candidate_id": "VEGFA_SD_1979",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4392
+    },
+    {
+      "candidate_id": "VEGFA_SD_1979",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2512
+    },
+    {
+      "candidate_id": "VEGFA_SD_1980",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6336
+    },
+    {
+      "candidate_id": "VEGFA_SD_1980",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3359
+    },
+    {
+      "candidate_id": "VEGFA_SD_2739",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 1495
+    },
+    {
+      "candidate_id": "VEGFA_SD_2739",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4627
+    },
+    {
+      "candidate_id": "VEGFA_SD_2924",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5787
+    },
+    {
+      "candidate_id": "VEGFA_SD_2924",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5771
+    },
+    {
+      "candidate_id": "VEGFA_SD_2925",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6625
+    },
+    {
+      "candidate_id": "VEGFA_SD_2925",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 7270
+    },
+    {
+      "candidate_id": "VEGFA_SD_2937",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3207
+    },
+    {
+      "candidate_id": "VEGFA_SD_2937",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 10946
+    },
+    {
+      "candidate_id": "VEGFA_SD_2947",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4497
+    },
+    {
+      "candidate_id": "VEGFA_SD_2947",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3032
+    },
+    {
+      "candidate_id": "VEGFA_SD_2949",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3463
+    },
+    {
+      "candidate_id": "VEGFA_SD_2949",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 8717
+    },
+    {
+      "candidate_id": "VEGFA_SD_2970",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2299
+    },
+    {
+      "candidate_id": "VEGFA_SD_2970",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 7483
+    },
+    {
+      "candidate_id": "VEGFA_SD_2980",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2919
+    },
+    {
+      "candidate_id": "VEGFA_SD_2980",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2157
+    },
+    {
+      "candidate_id": "VEGFA_SD_2982",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6492
+    },
+    {
+      "candidate_id": "VEGFA_SD_2982",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4752
+    },
+    {
+      "candidate_id": "VEGFA_SD_2987",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 10714
+    },
+    {
+      "candidate_id": "VEGFA_SD_2987",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2300
+    },
+    {
+      "candidate_id": "VEGFA_SD_2990",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5724
+    },
+    {
+      "candidate_id": "VEGFA_SD_2990",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2436
+    },
+    {
+      "candidate_id": "VEGFA_SD_3009",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2363
+    },
+    {
+      "candidate_id": "VEGFA_SD_3009",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 9750
+    },
+    {
+      "candidate_id": "VEGFA_SD_3046",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 701
+    },
+    {
+      "candidate_id": "VEGFA_SD_3046",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5645
+    },
+    {
+      "candidate_id": "VEGFA_SD_3056",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 7802
+    },
+    {
+      "candidate_id": "VEGFA_SD_3056",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 521
+    },
+    {
+      "candidate_id": "VEGFA_SD_3057",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 8736
+    },
+    {
+      "candidate_id": "VEGFA_SD_3057",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4376
+    },
+    {
+      "candidate_id": "VEGFA_SD_3058",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 11511
+    },
+    {
+      "candidate_id": "VEGFA_SD_3058",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4188
+    },
+    {
+      "candidate_id": "VEGFA_SD_3065",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4301
+    },
+    {
+      "candidate_id": "VEGFA_SD_3065",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6432
+    },
+    {
+      "candidate_id": "VEGFA_SD_3119",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2665
+    },
+    {
+      "candidate_id": "VEGFA_SD_3119",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2276
+    },
+    {
+      "candidate_id": "VEGFA_SD_3125",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 7496
+    },
+    {
+      "candidate_id": "VEGFA_SD_3125",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3229
+    },
+    {
+      "candidate_id": "VEGFA_SD_3131",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 7032
+    },
+    {
+      "candidate_id": "VEGFA_SD_3131",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3809
+    },
+    {
+      "candidate_id": "VEGFA_SD_3193",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2386
+    },
+    {
+      "candidate_id": "VEGFA_SD_3193",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4397
+    },
+    {
+      "candidate_id": "VEGFA_SD_3202",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2853
+    },
+    {
+      "candidate_id": "VEGFA_SD_3202",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6824
+    },
+    {
+      "candidate_id": "VEGFA_SD_3210",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 1592
+    },
+    {
+      "candidate_id": "VEGFA_SD_3210",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5292
+    },
+    {
+      "candidate_id": "VEGFA_SD_3214",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2132
+    },
+    {
+      "candidate_id": "VEGFA_SD_3214",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4343
+    },
+    {
+      "candidate_id": "VEGFA_SD_3221",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 14427
+    },
+    {
+      "candidate_id": "VEGFA_SD_3221",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2699
+    },
+    {
+      "candidate_id": "VEGFA_SD_3281",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3436
+    },
+    {
+      "candidate_id": "VEGFA_SD_3281",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4465
+    },
+    {
+      "candidate_id": "VEGFA_SD_3287",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4343
+    },
+    {
+      "candidate_id": "VEGFA_SD_3287",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 13957
+    },
+    {
+      "candidate_id": "VEGFA_SD_3295",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6099
+    },
+    {
+      "candidate_id": "VEGFA_SD_3295",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4007
+    },
+    {
+      "candidate_id": "VEGFA_SD_3297",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 1641
+    },
+    {
+      "candidate_id": "VEGFA_SD_3297",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 4558
+    },
+    {
+      "candidate_id": "VEGFA_SD_3314",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 16804
+    },
+    {
+      "candidate_id": "VEGFA_SD_3314",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2101
+    },
+    {
+      "candidate_id": "VEGFA_SD_3318",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 11447
+    },
+    {
+      "candidate_id": "VEGFA_SD_3318",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2601
+    },
+    {
+      "candidate_id": "VEGFA_SD_3361",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2339
+    },
+    {
+      "candidate_id": "VEGFA_SD_3361",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3699
+    },
+    {
+      "candidate_id": "VEGFA_SD_3375",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 8396
+    },
+    {
+      "candidate_id": "VEGFA_SD_3375",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3934
+    },
+    {
+      "candidate_id": "VEGFA_SD_3385",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 14181
+    },
+    {
+      "candidate_id": "VEGFA_SD_3385",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6622
+    },
+    {
+      "candidate_id": "VEGFA_SD_3429",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 279
+    },
+    {
+      "candidate_id": "VEGFA_SD_3429",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2835
+    },
+    {
+      "candidate_id": "VEGFA_SD_3432",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5839
+    },
+    {
+      "candidate_id": "VEGFA_SD_3432",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 5181
+    },
+    {
+      "candidate_id": "VEGFA_SD_3434",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3505
+    },
+    {
+      "candidate_id": "VEGFA_SD_3434",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2591
+    },
+    {
+      "candidate_id": "VEGFA_SD_3455",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 1880
+    },
+    {
+      "candidate_id": "VEGFA_SD_3455",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 7380
+    },
+    {
+      "candidate_id": "VEGFA_SD_3499",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 778
+    },
+    {
+      "candidate_id": "VEGFA_SD_3499",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 1793
+    },
+    {
+      "candidate_id": "VEGFA_SD_3500",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 1548
+    },
+    {
+      "candidate_id": "VEGFA_SD_3500",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3809
+    },
+    {
+      "candidate_id": "VEGFA_SD_3502",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2516
+    },
+    {
+      "candidate_id": "VEGFA_SD_3502",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2870
+    },
+    {
+      "candidate_id": "VEGFA_SD_3508",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 12796
+    },
+    {
+      "candidate_id": "VEGFA_SD_3508",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 179
+    },
+    {
+      "candidate_id": "VEGFA_SD_3509",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 21800
+    },
+    {
+      "candidate_id": "VEGFA_SD_3509",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 774
+    },
+    {
+      "candidate_id": "VEGFA_SD_3510",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 20904
+    },
+    {
+      "candidate_id": "VEGFA_SD_3510",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 1941
+    },
+    {
+      "candidate_id": "VEGFA_SD_3535",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3156
+    },
+    {
+      "candidate_id": "VEGFA_SD_3535",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3458
+    },
+    {
+      "candidate_id": "VEGFA_SD_3536",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2665
+    },
+    {
+      "candidate_id": "VEGFA_SD_3536",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6206
+    },
+    {
+      "candidate_id": "VEGFA_SD_3538",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 2823
+    },
+    {
+      "candidate_id": "VEGFA_SD_3538",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 18904
+    },
+    {
+      "candidate_id": "VEGFA_SD_3542",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 3536
+    },
+    {
+      "candidate_id": "VEGFA_SD_3542",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 12892
+    },
+    {
+      "candidate_id": "VEGFA_SD_3573",
+      "strand": "guide",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6717
+    },
+    {
+      "candidate_id": "VEGFA_SD_3573",
+      "strand": "passenger",
+      "all_19415_genes_including_zeros": true,
+      "all_sites_exact_reference_matches": true,
+      "site_rows": 6426
+    }
+  ],
+  "new_design_regions": {
+    "5prime_UTR_or_boundary": 9,
+    "CDS": 5,
+    "3prime_UTR": 51
+  },
+  "total_seed_count_rows": 2562780,
+  "total_seed_site_rows": 685249,
+  "nearfull_site_rows": 537,
+  "provisional_new_ids": [
+    "VEGFA_SD_1555",
+    "VEGFA_SD_1157"
+  ],
+  "nearfull_full_264_complete": false,
+  "nearfull_current_24_scope_complete": true,
+  "no_scientific_accuracy_or_experimental_efficacy_claim": true
+}

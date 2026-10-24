@@ -1,0 +1,25 @@
+{
+  "all_65_designs_included": true,
+  "purchased_sequence_separate_marker": true,
+  "independent_quality_scores": null,
+  "no_nearfull_safety_or_accuracy_plot": true,
+  "font_regular": "C:\\Windows\\Fonts\\arial.ttf",
+  "font_bold": "C:\\Windows\\Fonts\\arialbd.ttf",
+  "pdf_fonts": [
+    {
+      "base_font": "/ELUGPM+ArialMT",
+      "embedded": true
+    },
+    {
+      "base_font": "/ELUGPM+Arial-BoldMT",
+      "embedded": true
+    }
+  ],
+  "source_new65_sha256": "873ea3dce98c02ee1e27b837ae7ce18f94325edce3993bd8a7c8b32aa2e327a5",
+  "source_purchased_sha256": "9d55e16b90d88480f04020e03f87326b84a1e624fc3ede8dc3af05c815cf375a",
+  "svg_font_families": [
+    "'Arial'"
+  ],
+  "actual_pdf_render_visually_checked": true,
+  "layout_corrected_no_clipped_legend": true
+}

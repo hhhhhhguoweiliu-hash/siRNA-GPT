@@ -1,0 +1,18 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+Warning messages:
+1: package 'S4Vectors' was built under R version 4.3.2 
+2: package 'GenomeInfoDb' was built under R version 4.3.2 
+REFERENCE_LOAD_SECONDS 8.69 REFERENCE_TRANSCRIPTS 186185 
+NEARFULL_COMPLETED 1 8 USER_PURCHASED_siVEGF__guide__paired_core19 hits 34 seconds 6.77 
+NEARFULL_COMPLETED 2 8 USER_PURCHASED_siVEGF__guide__sidirect_g2g20 hits 67 seconds 7.42 
+NEARFULL_COMPLETED 3 8 USER_PURCHASED_siVEGF__passenger__paired_core19 hits 4 seconds 5.31 
+NEARFULL_COMPLETED 4 8 USER_PURCHASED_siVEGF__passenger__sidirect_g2g20 hits 10 seconds 5.58 
+NEARFULL_COMPLETED 5 8 VEGFA_SD_1552__guide__paired_core19 hits 42 seconds 5.39 
+NEARFULL_COMPLETED 6 8 VEGFA_SD_1552__guide__sidirect_g2g20 hits 22 seconds 5.8 
+NEARFULL_COMPLETED 7 8 VEGFA_SD_1552__passenger__paired_core19 hits 20 seconds 5.7 
+NEARFULL_COMPLETED 8 8 VEGFA_SD_1552__passenger__sidirect_g2g20 hits 13 seconds 5.73 
+COMPLETE nearfull 8 TOTAL_SECONDS 62.22 

@@ -1,0 +1,22 @@
+[
+  {
+    "mrna_id": "RNA0",
+    "guide_id": "siRNA0",
+    "guide19": "UCGCAAAUUAAAUUGAACC",
+    "context57": "XXXXXXXXXXXXXXXXXXXGGUUCAAUUUAAUUUGCGAAAGAGACCUUACGGACGUG",
+    "raw_class1": 0.76157546043396,
+    "oligoformer_scaled_score": 1.0212726924419402,
+    "official_func_filter": 4,
+    "repeat_identical": true
+  },
+  {
+    "mrna_id": "RNA1",
+    "guide_id": "siRNA1",
+    "guide19": "UCUCUUUCGCACAUUAAAU",
+    "context57": "XXXXXXXACUAUAGGUUCAAUUUAAUGUGCGAAAGAGACCUUACGGACGUGGGCGCC",
+    "raw_class1": 0.6811906099319458,
+    "oligoformer_scaled_score": 0.9134766079187393,
+    "official_func_filter": 0,
+    "repeat_identical": true
+  }
+]
