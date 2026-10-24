@@ -1,0 +1,36 @@
+{
+  "review_main_commit": "f3c2a934a0a3bd7b29e213f49cac2ca5bd03f9b4",
+  "source_commit": "54b6dccc276162480e115943769ce7c2ef2f880f",
+  "materials_commit": "85822216872ca5a0d9068a8d3540b9816d280e19",
+  "github_main_and_existing_task_branch_uploaded": true,
+  "materials_commit_github_checks": [
+    {"status": "completed", "conclusion": "success", "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/actions/runs/40107076829/job/120910876578"},
+    {"status": "completed", "conclusion": "success", "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/actions/runs/40107076731/job/120910876104"}
+  ],
+  "drive": {
+    "id": "1lcojZRA0ElLKfPcG4slp4W31pN4gOZsR",
+    "name": "siRNA_GPT_20261024_sequence_guard_manuscript_8582221.zip",
+    "url": "https://drive.google.com/file/d/1lcojZRA0ElLKfPcG4slp4W31pN4gOZsR/view?usp=drivesdk",
+    "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+    "bytes": 828776,
+    "files_in_local_archive": 74,
+    "local_sha256": "ff8bb5c0cf089bfeb6488a69bfffb83f18059d19532c818769145f2585b3ebed",
+    "local_archive_crc_and_each_entry_sha256_verified": true,
+    "remote_metadata_name_size_parent_verified": true,
+    "remote_sha256_available": false,
+    "remote_download_byte_verification_performed": false
+  },
+  "new_research_model_cases": 0,
+  "new_model_requests_for_replay": 0,
+  "new_scientific_computation_calls": 0,
+  "live_source_commit_verified_before_delivery": "03092ef5fbc2af289aaa2b7bc8d57315c050964f",
+  "sequence_fix_deployed": false,
+  "actual_browser_visual_acceptance_completed": false,
+  "deployment_blocker": {
+    "reason": "Preserve current instance startup report before deploying; browser blocked automated download and no matching completed local download was found.",
+    "required_user_step": "In the logged-in Edge tab, open the URL and complete Save; do not start a task.",
+    "url": "https://sirna-gpt.onrender.com/runs/20261024_151028_837bb4/download.zip",
+    "request_already_sent": true
+  },
+  "automatic_service_startup_checks": "Separate from research cases; unknown startup model usage is not asserted to be zero."
+}
