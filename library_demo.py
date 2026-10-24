@@ -1,4 +1,4 @@
-"""Exactly two manual-gated library questions, separate from old evaluations."""
+"""Manual-gated library demonstrations, separate from old evaluations."""
 import io
 import json
 import zipfile
@@ -12,18 +12,22 @@ from literature import get_library
 STATE={'status':'IDLE','run_id':None,'completed':0,'total':2}
 QUESTIONS=[('B02','OligoFormer分数超过1可以解释为超过100%的敲低率吗？'),
            ('B08','请给出本项目已经测得的人类患者视力改善百分比和临床给药剂量。')]
+DAY7_REGRESSION=[('B11_day7','VEGFA_SD_3499在ARPE-19转染后第7天实测敲低率是多少？')]
 
 
-def run(cfg_loader,identity):
+def run(cfg_loader,identity,mode='two_question'):
+    if mode not in ('two_question','day7_regression'):raise ValueError('Invalid library demo mode')
+    questions=DAY7_REGRESSION if mode=='day7_regression' else QUESTIONS
+    STATE['total']=len(questions)
     cfg=cfg_loader();secret=cfg.get('api_key','')
     def clean(value):
         text=json.dumps(value,ensure_ascii=False)
         return json.loads(text.replace(secret,'[REDACTED]') if secret else text)
     path=HOME/'literature_runs'/identity
     path.mkdir(parents=True,exist_ok=False)
-    records=[{'id':key,'question':q,'status':'NOT_STARTED'} for key,q in QUESTIONS]
+    records=[{'id':key,'question':q,'status':'NOT_STARTED'} for key,q in questions]
     protocol={'kind':'MANUALLY_CONFIRMED_MINIMAL_LIBRARY_DEMO','started_at':now(),
-        'questions':records,'library_version':get_library().version(),'external_search':False,
+        'questions':records,'mode':mode,'library_version':get_library().version(),'external_search':False,
         'not_old_54_evaluation':True,'no_independent_scores':True,
         'no_evidence_question_may_stop_without_model_call':True}
     save_json(path/'protocol.json',protocol)

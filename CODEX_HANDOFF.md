@@ -1,5 +1,7 @@
 # Codex 接手入口
 
+**2026-10-24小批：**先读[12:15任务](docs/reviews/20261024_1215_candidate_use_and_vegfa_literature_tasks.md)、11:56 A/B复核与[12:49规则说明](docs/reviews/20261024_1249_filter_rules_and_targeted_restart.md)，再看[本轮材料与实际进度](research/2026-10-24_followup/README.md)。已购si-VEGF原件已找到，不要求重新购买；旧B08是范围停止而非实际空检索，原文保留。12:15暂列三条仅作历史讨论，先明确真实靶转录本/化学形式。当前小批无新重型计算、无湿实验、无新54条；真实单题/上传/部署以最新STATUS和交付收据为准。
+
 **2026-10-23更新：**用户已放弃状态相关风险重排序，当前是小而完整的siRNA辅助Agent工具/应用文章；不做微调、不扩大湿实验，TPM只注释。先读[最新范围与A/B任务](docs/reviews/20261023_2116_fast_paper_scope_and_codex_tasks.md)。A的[候选来源核查已交](research/2026-10-23_candidate_provenance/README.md)，含真实104→9、版本、全量旧结果与缺项；B文献库已实现、部署并完成最小两题演示（未独立科学评分），[上传、部署、真实演示状态单独记录](research/2026-10-23_literature/DELIVERY.md)。旧54条已保存，不按下面历史说明再启批消错，联系评审稍后讨论。下面是历史背景，不把旧风险路线或湿实验扩张当成当前必做项。
 
 新对话协作先看[COLLABORATION.md](COLLABORATION.md)和[共同任务表](docs/WORKBOARD.md)。两个新对话共用GitHub事实记录；Codex维护代码与状态，ChatGPT在docs/reviews/写独立复核。

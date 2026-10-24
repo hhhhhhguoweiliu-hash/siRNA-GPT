@@ -21,7 +21,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent
 FORMAT = 'sirna-small-library-v1'
-INDEX_VERSION = 'fts5-bilingual-v1'
+INDEX_VERSION = 'fts5-bilingual-v2-scope-audit'
 CHUNK_SIZE, OVERLAP = 1800, 200
 KINDS = {
     'article_full_text': '文献全文（文字部分）', 'abstract': '文献摘要',
@@ -37,6 +37,8 @@ LEXICON = [
     (['位点', '基因数', '错配'], ['matches', 'counts', 'gene', 'mismatches', 'indels']),
     (['TPM', 'RNA-seq', '表达', '未转染', '常氧', '缺氧'], ['TPM', 'RNA-seq', 'expression', 'baseline', 'untreated', 'perturbation']),
     (['来源', '历史', '重新计算', '版本'], ['historical', 'version', 'source', 'reference', 'import']),
+    (['ARPE-19', '转染', '沉默', '递送', '蛋白'], ['ARPE-19', 'transfection', 'silencing', 'delivery', 'protein', 'VEGF']),
+    (['TLR3', '序列无关', '非特异'], ['TLR3', 'target-independent', 'angiogenesis', 'mice']),
 ]
 _SINGLETON = None
 _SINGLETON_LOCK = threading.RLock()
@@ -100,8 +102,8 @@ def extract(raw, filename, use_cache=True):
             raise ValueError('PDF文件头无效，未导入。')
         # Bundled originals have a reproducible page-text cache, avoiding repeated
         # vector-graphics parsing on the small hosted instance. Verify both files.
-        seed=ROOT/'references/sirna_library'
-        if use_cache and (seed/'sources.json').exists():
+        for seed in ([ROOT/'references/sirna_library', ROOT/'references/vegfa_experiments_20261024'] if use_cache else []):
+          if (seed/'sources.json').exists():
             for source in json.loads((seed/'sources.json').read_text(encoding='utf-8'))['sources']:
                 if source.get('sha256')==digest(raw) and source.get('pages_file'):
                     cache=(seed/source['pages_file']).read_bytes()
@@ -248,10 +250,12 @@ class Library:
         terms = query_terms(query)
         with self.lock:
             version = self.rebuild()
-            # The authorized library is not a clinical dosing/outcome source.
-            if re.search(r'患者|视力改善|临床给药', query):
-                return {'status': 'NO_RESULTS', 'question': query, 'query_terms': terms, 'version': version, 'hits': [], 'sources': [],
-                        'reason': '此小文库不支持本项目患者疗效或临床给药结论。'}
+            # Gate a concrete individual-prescribing request, not the word
+            # "patient" or discussion of why project evidence is insufficient.
+            if re.search(r'(?:为|给|针对)(?:这位|该名|我的)患者.{0,12}(?:制定|开具|推荐).{0,12}(?:处方|给药方案|剂量)', query) and not re.match(r'^(?:为什么|为何|解释|请解释|如何理解)',query.strip()):
+                return {'status': 'OUT_OF_SCOPE', 'question': query, 'query_terms': terms, 'version': version, 'hits': [], 'sources': [],
+                        'retrieval_executed':False,'scope_decision':'STOP_INDIVIDUAL_PRESCRIBING_REQUEST',
+                        'reason':'当前系统不制定个体患者处方或给药方案；范围规则停止，未执行文库检索。'}
             if type(limit) is not int or not 1 <= limit <= 8:
                 raise ValueError('检索条数应为1至8。')
             expression = ' OR '.join('"'+t.replace('"','""')+'"' for t in terms)
@@ -282,6 +286,7 @@ class Library:
                 if len(hits) >= limit:
                     break
             return {'status': 'OK' if hits else 'NO_RESULTS', 'question': query, 'query_terms': terms,
+                    'retrieval_executed':True,'scope_decision':'ALLOW_EVIDENCE_RETRIEVAL',
                     'version': version, 'index_version': INDEX_VERSION, 'hits': hits,
                     'sources': [{k:h[k] for k in h if k != 'text'} for h in hits]}
 
@@ -382,6 +387,12 @@ def get_library():
     with _SINGLETON_LOCK:
         if _SINGLETON is None:
             _SINGLETON = Library(seed_root=ROOT/'references/sirna_library')
+            extra=ROOT/'references/vegfa_experiments_20261024'
+            if (extra/'sources.json').is_file():
+                for source in json.loads((extra/'sources.json').read_text(encoding='utf-8'))['sources']:
+                    raw=(extra/source['file']).read_bytes()
+                    if digest(raw)!=source['sha256']:raise ValueError('实验文献原件校验失败')
+                    _SINGLETON.import_document(raw,source['file'],source)
         return _SINGLETON
 
 

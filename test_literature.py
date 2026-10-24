@@ -73,8 +73,25 @@ class LiteratureTests(unittest.TestCase):
             c=next(c for c in parts if c['chunk_id']==h['chunk_id'])
             self.assertEqual(h['chunk_sha256'],c['sha256']);self.assertEqual(h['text'],c['text'])
 
-    def test_no_clinical_evidence(self):
-        self.assertEqual(self.lib.search('请给出本项目已经测得的人类患者视力改善百分比和临床给药剂量。')['hits'],[])
+    def test_boundary_explanation_is_retrieved(self):
+        from knowledge import search
+        with patch('literature.get_library',return_value=self.lib):r=search('为什么本项目不能根据TPM证明患者疗效？')
+        self.assertTrue(r['retrieval_executed']);self.assertIn('expression',[x['id'] for x in r['cards']])
+
+    def test_scope_stop_distinct_from_real_empty_search(self):
+        stopped=self.lib.search('请为这位患者制定临床给药方案')
+        self.assertEqual(stopped['status'],'OUT_OF_SCOPE');self.assertFalse(stopped['retrieval_executed'])
+        empty=self.lib.search('ZXQ987654321')
+        self.assertEqual(empty['status'],'NO_RESULTS');self.assertTrue(empty['retrieval_executed'])
+
+    def test_day7_question_reaches_model_with_related_evidence(self):
+        calls=[]
+        def fake(p):calls.append(p);return message_response('TEST_ONLY 未取得对应实测数据 [S1]')
+        c=Conversation(cfg_loader=lambda:{'model':'TEST','api_key':'TEST_ONLY_SECRET'},transport=fake,root=self.root/'day7_test')
+        with patch('literature.get_library',return_value=self.lib):
+            c.answer('VEGFA_SD_3499在ARPE-19转染后第7天实测敲低率是多少？',web_enabled=False,literature_only=True)
+        self.assertEqual(len(calls),1);self.assertTrue(c.current_audit['retrieval_executed'])
+        self.assertTrue(c.current_audit['retrieved_excerpts'])
 
     def test_reject_corrupt_pdf_without_partial_document(self):
         lib=self.empty('bad_pdf');before=lib.version()
@@ -127,7 +144,7 @@ class LiteratureTests(unittest.TestCase):
     def test_no_model_call_when_no_sources(self):
         called=[]
         c=Conversation(cfg_loader=lambda:{'model':'TEST','api_key':'TEST_ONLY_SECRET'},transport=lambda p:called.append(p),root=self.root/'no_answer_conversation')
-        with patch('literature.get_library',return_value=self.lib):c.answer('本项目患者视力改善多少？',web_enabled=False,literature_only=True)
+        with patch('literature.get_library',return_value=self.lib):c.answer('ZXQ987654321',web_enabled=False,literature_only=True)
         self.assertFalse(called);self.assertIn('证据不足',c.messages[-1]['text']);self.assertEqual(c.current_audit['model_call_count'],0)
 
     def test_actual_retrieved_text_and_unknown_citation_guard(self):

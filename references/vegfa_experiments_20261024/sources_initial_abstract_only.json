@@ -1,0 +1,44 @@
+{
+  "scope": "Only the three requested VEGFA-related experimental articles; no original-nine changes",
+  "sources": [
+    {
+      "file": "chen2013_text.txt",
+      "title": "Efficient downregulation of VEGF in retinal pigment epithelial cells by integrin ligand-labeled liposome-mediated siRNA delivery",
+      "doi": "10.2147/IJN.S39622",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3726441/",
+      "source_kind": "article_full_text",
+      "source_version": "Published article XML from PMC; acquired 2026-10-24",
+      "source_note": "Abstract/body paragraphs, table text and captions extracted from retained official XML; no PDF page numbers or image interpretation. XML locator map retained.",
+      "sha256": "d5b96cf156f38979f0ed413edb8d6bd47c76a31867fa28155a979e01f17638d1",
+      "original_xml_file": "chen2013.xml",
+      "original_xml_sha256": "8578d7fbe4cada392d5af5a1fd5ac9a8bd5e4b7e1eb9bf524d35c4b9da21b9a1",
+      "acquired_utc": "2026-10-24T04:56:19.292593+00:00"
+    },
+    {
+      "file": "osipova2020_text.txt",
+      "title": "Amphiphilic Polypeptides for VEGF siRNA Delivery into Retinal Epithelial Cells",
+      "doi": "10.3390/pharmaceutics12010039",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7022581/",
+      "source_kind": "article_full_text",
+      "source_version": "Published article XML from PMC; acquired 2026-10-24",
+      "source_note": "Abstract/body paragraphs, table text and captions extracted from retained official XML; no PDF page numbers or image interpretation. XML locator map retained.",
+      "sha256": "7da057ba9315a4ce17c19972968a0937b6f3e5c5a4a6304ae3c2fdb6df743427",
+      "original_xml_file": "osipova2020.xml",
+      "original_xml_sha256": "0658eab937077f7ab9917321d69462a3432605fec891143ce7d8e5ef9696b2ec",
+      "acquired_utc": "2026-10-24T04:56:21.362098+00:00"
+    },
+    {
+      "file": "kleinman2008_text.txt",
+      "title": "Sequence- and target-independent angiogenesis suppression by siRNA via TLR3",
+      "doi": "10.1038/nature06765",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2642938/",
+      "source_kind": "abstract",
+      "source_version": "Published article XML from PMC; acquired 2026-10-24",
+      "source_note": "Only the abstract was supplied by official PMC XML. Full body and figures not obtained; no PDF page numbers. Publisher read and Europe PMC full-text attempts failed.",
+      "sha256": "7394873b1fea4e3fe4f1801a206a9836facb1acdb4e22dbbc4613f666f105927",
+      "original_xml_file": "kleinman2008.xml",
+      "original_xml_sha256": "9e56d74a0e35e1cf519d7abbae521fb0ef768ebf7d656667fd1cb3a7aa20e958",
+      "acquired_utc": "2026-10-24T04:56:22.944729+00:00"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "file": "chen2013_text.txt",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "d5b96cf156f38979f0ed413e",
+        "sha256": "d5b96cf156f38979f0ed413edb8d6bd47c76a31867fa28155a979e01f17638d1",
+        "filename": "chen2013_text.txt",
+        "title": "Efficient downregulation of VEGF in retinal pigment epithelial cells by integrin ligand-labeled liposome-mediated siRNA delivery",
+        "doi": "10.2147/IJN.S39622",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3726441/",
+        "source_kind": "article_full_text",
+        "source_label": "文献全文（文字部分）",
+        "source_note": "Abstract/body paragraphs, table text and captions extracted from retained official XML; no PDF page numbers or image interpretation. XML locator map retained.",
+        "source_version": "Published article XML from PMC; acquired 2026-10-24",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 43118,
+        "added_at": "2026-10-24T05:07:14.262692+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 30,
+        "url": "/library/d5b96cf156f38979f0ed413e",
+        "original_url": "/api/library/original/d5b96cf156f38979f0ed413e"
+      },
+      "version": "86b0c8c0f2f4b2b2c52f247855950f60092556c429ef94f02b82e26126a17abf"
+    }
+  },
+  {
+    "file": "osipova2020_text.txt",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "7da057ba9315a4ce17c19972",
+        "sha256": "7da057ba9315a4ce17c19972968a0937b6f3e5c5a4a6304ae3c2fdb6df743427",
+        "filename": "osipova2020_text.txt",
+        "title": "Amphiphilic Polypeptides for VEGF siRNA Delivery into Retinal Epithelial Cells",
+        "doi": "10.3390/pharmaceutics12010039",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7022581/",
+        "source_kind": "article_full_text",
+        "source_label": "文献全文（文字部分）",
+        "source_note": "Abstract/body paragraphs, table text and captions extracted from retained official XML; no PDF page numbers or image interpretation. XML locator map retained.",
+        "source_version": "Published article XML from PMC; acquired 2026-10-24",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 45836,
+        "added_at": "2026-10-24T05:07:15.040259+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 30,
+        "url": "/library/7da057ba9315a4ce17c19972",
+        "original_url": "/api/library/original/7da057ba9315a4ce17c19972"
+      },
+      "version": "a53282aa5aadbde7ba7d0b078ad0b0f27acc2c7fb0e9f215ade5e60fb11d4b20"
+    }
+  },
+  {
+    "file": "kleinman2008_text.txt",
+    "http_status": 200,
+    "result": {
+      "status": "IMPORTED",
+      "document": {
+        "id": "7394873b1fea4e3fe4f1801a",
+        "sha256": "7394873b1fea4e3fe4f1801a206a9836facb1acdb4e22dbbc4613f666f105927",
+        "filename": "kleinman2008_text.txt",
+        "title": "Sequence- and target-independent angiogenesis suppression by siRNA via TLR3",
+        "doi": "10.1038/nature06765",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2642938/",
+        "source_kind": "abstract",
+        "source_label": "文献摘要",
+        "source_note": "Only the abstract was supplied by official PMC XML. Full body and figures not obtained; no PDF page numbers. Publisher read and Europe PMC full-text attempts failed.",
+        "source_version": "Published article XML from PMC; acquired 2026-10-24",
+        "metadata_status": "SOURCE_DECLARATION_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+        "bytes": 1827,
+        "added_at": "2026-10-24T05:07:15.774815+00:00",
+        "extractor": "utf8-text-v1",
+        "scope": "TEXT_FILE_NO_PDF_PAGE_NUMBERS",
+        "pages_without_text": [],
+        "page_count": 1,
+        "chunk_count": 2,
+        "url": "/library/7394873b1fea4e3fe4f1801a",
+        "original_url": "/api/library/original/7394873b1fea4e3fe4f1801a"
+      },
+      "version": "d45e2bb9f650057df49a87135179e9cf47beb72b417009f72c3ba04234859544"
+    }
+  }
+]

@@ -36,21 +36,24 @@ async function libraryPreview(){
   try{
     const result=await api('/api/library-search',{query:$('libraryQuery').value});
     $('librarySearchResults').replaceChildren();
-    if(!result.hits.length){$('librarySearchResults').textContent='文库中没有找到支持资料。'+(result.reason||'');return}
+    if(!result.hits.length){$('librarySearchResults').textContent=(result.status==='OUT_OF_SCOPE'?'范围规则停止，未执行文库检索。':'已执行文库检索，没有找到片段。')+(result.reason||'');return}
     for(const hit of result.hits){const row=el('div','','source');row.append(link(hit.title+' · '+hit.locator,hit.url),el('small',hit.kind),el('p',hit.text.slice(0,420)+(hit.text.length>420?'…':'')));$('librarySearchResults').append(row)}
   }catch(e){$('librarySearchResults').textContent=e.message}
 }
 async function libraryDemoRefresh(){
   try{
     const state=await api('/api/library-demo');
-    $('libraryDemoStatus').textContent=state.status==='RUNNING'?'正在运行文库演示 '+state.completed+' / 2':state.status==='COMPLETE'?'两题演示已结束，请下载原始记录；不代表已完成独立评分。':state.status==='COMPLETE_WITH_WARNINGS'?'两题已返回，其中有引用问题，请下载原始记录核对。':state.status==='IDLE'?'本次服务尚未运行两题演示。':'演示已停止：'+state.status+'，请下载已有记录，不自动重试。';
+    const count=state.total||2;
+    $('libraryDemoStatus').textContent=state.status==='RUNNING'?'正在运行文库演示 '+state.completed+' / '+count:state.status==='COMPLETE'?count+'题演示已结束，请下载原始记录；不代表已完成独立评分。':state.status==='COMPLETE_WITH_WARNINGS'?count+'题已返回，其中有引用问题，请下载原始记录核对。':state.status==='IDLE'?'本次服务尚未运行文库演示。':'演示已停止：'+state.status+'，请下载已有记录，不自动重试。';
     $('libraryDemoStart').disabled=state.status==='RUNNING';
+    $('libraryRegressionStart').disabled=state.status==='RUNNING';
     $('libraryDemoDownload').classList.toggle('hidden',['IDLE','RUNNING'].includes(state.status));
   }catch(e){$('libraryDemoStatus').textContent=e.message}
 }
 document.addEventListener('DOMContentLoaded',()=>{
   $('libraryUpload').onclick=libraryUpload;$('libraryRestore').onclick=libraryRestore;$('librarySearch').onclick=libraryPreview;
   $('libraryDemoStart').onclick=async()=>{try{await api('/api/library-demo-start',{confirm_api_usage:$('libraryUsageConfirmed').checked});await libraryDemoRefresh()}catch(e){$('libraryDemoStatus').textContent=e.message}};
+  $('libraryRegressionStart').onclick=async()=>{try{await api('/api/library-demo-start',{mode:'day7_regression',confirm_api_usage:$('libraryUsageConfirmed').checked});await libraryDemoRefresh()}catch(e){$('libraryDemoStatus').textContent=e.message}};
   $('libraryOnly').onchange=()=>{$('webEnabled').disabled=$('libraryOnly').checked;if($('libraryOnly').checked)$('webEnabled').checked=false};
   $('webEnabled').disabled=$('libraryOnly').checked;
   if($('libraryOnly').checked)$('webEnabled').checked=false;

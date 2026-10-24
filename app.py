@@ -182,18 +182,21 @@ class Handler(BaseHTTPRequestHandler):
     with LOCK:
      if STATE['running'] or STATE['checking_connection'] or CONVERSATION.busy:return self.send({'error':'请等待当前任务结束。'},409)
      if data.get('confirm_api_usage') is not True:return self.send({'error':'请先确认本次最多2题演示会调用模型并产生用量。'},400)
+     demo_mode=data.get('mode','two_question')
+     if demo_mode not in ('two_question','day7_regression'):return self.send({'error':'文库演示模式无效。'},400)
      if library_demo.STATE.get('status')=='RUNNING':return self.send({'error':'文库演示正在运行。'},409)
      identity='library_demo_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+__import__('uuid').uuid4().hex[:6]
-     STATE['running']=True;library_demo.STATE.update(status='RUNNING',run_id=identity,completed=0,total=2)
+     expected_questions=1 if demo_mode=='day7_regression' else 2
+     STATE['running']=True;library_demo.STATE.update(status='RUNNING',run_id=identity,completed=0,total=expected_questions)
     def demonstrate_once():
-     try:library_demo.run(config,identity)
+     try:library_demo.run(config,identity,demo_mode)
      except Exception:
       # A setup error must release both gates; details may contain config secrets.
       library_demo.STATE.update(status='FAILED_SETUP',run_id=identity,error='演示初始化未完成，请检查服务记录；未自动重试。')
      finally:
       with LOCK:STATE['running']=False
     threading.Thread(target=demonstrate_once,daemon=True).start()
-    return self.send({'started':True,'run_id':identity,'expected_questions':2},202)
+    return self.send({'started':True,'run_id':identity,'expected_questions':expected_questions},202)
    if self.path=='/api/expression-upload':
     from expression_data import upload
     try:return self.send(upload(data.get('text'),data.get('label',''),data.get('confirmed')))

@@ -1,0 +1,84 @@
+{
+  "source_path": "D:\\WHY\\课题\\框架核酸逻辑门放大\\purchase\\序列合成.docx",
+  "bytes": 13516,
+  "sha256": "7ce4e3cffbe91c62c81926edcc52f53f97fc57c8941085367166068f9b9c3db6",
+  "reading_method": "Original OOXML paragraphs and table cells; no visual-layout claim",
+  "blocks": [
+    {
+      "body_block_0based": 0,
+      "text": "序列合成"
+    },
+    {
+      "body_block_0based": 1,
+      "table_row_0based": 0,
+      "cells": [
+        "H1",
+        "5’– FITC-GTT GGA ATT GGG AGT AAG GGC TCT TAC TTT GCC CTT ACT CCC–NH2–-NHS-Val-Cit-PABC-BCN-N3-si-vegf 3’"
+      ]
+    },
+    {
+      "body_block_0based": 1,
+      "table_row_0based": 1,
+      "cells": [
+        "si-vegf",
+        "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）"
+      ]
+    },
+    {
+      "body_block_0based": 1,
+      "table_row_0based": 2,
+      "cells": [
+        "",
+        "UUUCUUGUCUUGCUCUAUCTT"
+      ]
+    },
+    {
+      "body_block_0based": 1,
+      "table_row_0based": 3,
+      "cells": [
+        "H2",
+        "5’si-hif-N3-BCN-PABC-Cit-Val-NHS–NH2– GCC CTT ACT CCC AAT TCC AAC GGG AGT AAG GGC AAA GTA AGA–Cy5-3’"
+      ]
+    },
+    {
+      "body_block_0based": 1,
+      "table_row_0based": 4,
+      "cells": [
+        "si-hif",
+        "AAGAGGUGGAUAUGUCUGGTT-N3（叠氮基团，用于点击化学）"
+      ]
+    },
+    {
+      "body_block_0based": 1,
+      "table_row_0based": 5,
+      "cells": [
+        "",
+        "CCAGACAUAUCCACCUCUUTT"
+      ]
+    },
+    {
+      "body_block_0based": 1,
+      "table_row_0based": 6,
+      "cells": [
+        "S1",
+        "5'-/GCC CTT ACT CCG TGC AC-PEG4-NH₂-9-cis-Retinal/-3'"
+      ]
+    },
+    {
+      "body_block_0based": 1,
+      "table_row_0based": 7,
+      "cells": [
+        "S2",
+        "5'-/c(RGDfK)-N3-DBCO-PEG4-ATG TGC ACT TCA ATT CCA AC/-3'"
+      ]
+    },
+    {
+      "body_block_0based": 2,
+      "text": "备注：最终合成的：H1-si-vegf、H2-si-hif、S1-9-cis-Retinal、S2-c(RGDfK)，其中核酸序列已确定，红色底纹为连接的siRNA，蓝色底纹为连接子，黄色底纹为NH2，用于与连接子的连接，绿色和紫色底纹为修饰荧光基团。"
+    },
+    {
+      "body_block_0based": 3,
+      "text": "文字描述：H1、H2为DNA发夹链，分别连接si-vegf、si-hif（连接位置已在表中标明），连接子选用Val-Cit-PABC，荧光使用FITC、Cy5，其余带有颜色基团都是为了能够成功连接而放的。"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "B01": {
+    "old_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "new_version": "d45e2bb9f650057df49a87135179e9cf47beb72b417009f72c3ba04234859544",
+    "old_urls": [
+      "/knowledge#score",
+      "/knowledge#sequence",
+      "/library/e2cea21b6712b85250758e8b#text-c020",
+      "/library/ec77cffdc9e76e478068430f#text-c007",
+      "/library/ec77cffdc9e76e478068430f#text-c006",
+      "/library/e2cea21b6712b85250758e8b#text-c010",
+      "/library/fce74ce24f4c5275cdea80d0#text-c001"
+    ],
+    "new_urls": [
+      "/knowledge#score",
+      "/knowledge#sequence",
+      "/library/e2cea21b6712b85250758e8b#text-c020",
+      "/library/ec77cffdc9e76e478068430f#text-c007",
+      "/library/ec77cffdc9e76e478068430f#text-c006",
+      "/library/e2cea21b6712b85250758e8b#text-c010",
+      "/library/fce74ce24f4c5275cdea80d0#text-c001"
+    ]
+  },
+  "B02": {
+    "old_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "new_version": "d45e2bb9f650057df49a87135179e9cf47beb72b417009f72c3ba04234859544",
+    "old_urls": [
+      "/knowledge#score",
+      "/library/ec77cffdc9e76e478068430f#text-c007",
+      "/library/e2cea21b6712b85250758e8b#text-c020",
+      "/library/e2cea21b6712b85250758e8b#text-c001",
+      "/library/ec77cffdc9e76e478068430f#text-c011",
+      "/library/fce74ce24f4c5275cdea80d0#text-c001"
+    ],
+    "new_urls": [
+      "/knowledge#score",
+      "/library/e2cea21b6712b85250758e8b#text-c020",
+      "/library/ec77cffdc9e76e478068430f#text-c007",
+      "/library/e2cea21b6712b85250758e8b#text-c001",
+      "/library/ec77cffdc9e76e478068430f#text-c011",
+      "/library/fce74ce24f4c5275cdea80d0#text-c001"
+    ]
+  },
+  "B03": {
+    "old_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "new_version": "d45e2bb9f650057df49a87135179e9cf47beb72b417009f72c3ba04234859544",
+    "old_urls": [
+      "/knowledge#sequence",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c002",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c001",
+      "/library/c6578cb6386d9f9b93d85be2#p0004-c006",
+      "/library/c6578cb6386d9f9b93d85be2#p0002-c003",
+      "/library/f9013c3f5940f6cb597e9d42#text-c005"
+    ],
+    "new_urls": [
+      "/knowledge#sequence",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c002",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c001",
+      "/library/c6578cb6386d9f9b93d85be2#p0002-c003",
+      "/library/f9013c3f5940f6cb597e9d42#text-c005",
+      "/library/c6578cb6386d9f9b93d85be2#p0004-c006"
+    ]
+  },
+  "B04": {
+    "old_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "new_version": "d45e2bb9f650057df49a87135179e9cf47beb72b417009f72c3ba04234859544",
+    "old_urls": [
+      "/knowledge#seed",
+      "/knowledge#sequence",
+      "/library/2a3c9b1477964896182ff11c#text-c002",
+      "/library/2a3c9b1477964896182ff11c#text-c005",
+      "/library/164853a2be7a6b1a7f047604#text-c002",
+      "/library/164853a2be7a6b1a7f047604#text-c001",
+      "/library/f72c0ee41a849b5fd075fb7c#text-c002"
+    ],
+    "new_urls": [
+      "/knowledge#seed",
+      "/knowledge#sequence",
+      "/library/2a3c9b1477964896182ff11c#text-c002",
+      "/library/2a3c9b1477964896182ff11c#text-c006",
+      "/library/164853a2be7a6b1a7f047604#text-c002",
+      "/library/164853a2be7a6b1a7f047604#text-c001",
+      "/library/f72c0ee41a849b5fd075fb7c#text-c002"
+    ]
+  },
+  "B05": {
+    "old_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "new_version": "d45e2bb9f650057df49a87135179e9cf47beb72b417009f72c3ba04234859544",
+    "old_urls": [
+      "/knowledge#seed",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c003",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c001",
+      "/library/2a3c9b1477964896182ff11c#text-c005",
+      "/library/2a3c9b1477964896182ff11c#text-c006",
+      "/library/164853a2be7a6b1a7f047604#text-c002"
+    ],
+    "new_urls": [
+      "/knowledge#seed",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c003",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c001",
+      "/library/2a3c9b1477964896182ff11c#text-c005",
+      "/library/2a3c9b1477964896182ff11c#text-c006",
+      "/library/164853a2be7a6b1a7f047604#text-c002"
+    ]
+  },
+  "B06": {
+    "old_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "new_version": "d45e2bb9f650057df49a87135179e9cf47beb72b417009f72c3ba04234859544",
+    "old_urls": [
+      "/knowledge#expression",
+      "/knowledge#sequence",
+      "/knowledge#score",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c002",
+      "/library/2a3c9b1477964896182ff11c#text-c009",
+      "/library/2a3c9b1477964896182ff11c#text-c001",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c003",
+      "/library/ec77cffdc9e76e478068430f#text-c007"
+    ],
+    "new_urls": [
+      "/knowledge#expression",
+      "/knowledge#sequence",
+      "/knowledge#score",
+      "/library/d5b96cf156f38979f0ed413e#text-c021",
+      "/library/d5b96cf156f38979f0ed413e#text-c020",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c002",
+      "/library/7da057ba9315a4ce17c19972#text-c028",
+      "/library/2a3c9b1477964896182ff11c#text-c002"
+    ]
+  },
+  "B07": {
+    "old_version": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+    "new_version": "d45e2bb9f650057df49a87135179e9cf47beb72b417009f72c3ba04234859544",
+    "old_urls": [
+      "/knowledge#seed",
+      "/knowledge#score",
+      "/knowledge#evidence",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c001",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c003",
+      "/library/ec77cffdc9e76e478068430f#text-c001",
+      "/library/ec77cffdc9e76e478068430f#text-c007",
+      "/library/fce74ce24f4c5275cdea80d0#text-c004"
+    ],
+    "new_urls": [
+      "/knowledge#seed",
+      "/knowledge#score",
+      "/knowledge#evidence",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c001",
+      "/library/6a1b8c9ea14cc5ae67700e18#text-c003",
+      "/library/ec77cffdc9e76e478068430f#text-c001",
+      "/library/ec77cffdc9e76e478068430f#text-c007",
+      "/library/fce74ce24f4c5275cdea80d0#text-c004"
+    ]
+  }
+}

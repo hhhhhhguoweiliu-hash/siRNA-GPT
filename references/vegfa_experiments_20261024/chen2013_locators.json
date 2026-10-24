@@ -1,0 +1,282 @@
+[
+  {
+    "locator": "xml-block-0001",
+    "xpath": "/article/abstract[1]/sec[1]/p[1]",
+    "original_id": null,
+    "section": "Background",
+    "type": "p",
+    "text": "The purpose of this study was to demonstrate the effectiveness of an integrin peptide ligand-labeled liposomal delivery system loaded with vascular endothelial growth factor (VEGF)-siRNA in a model study of gene therapy for retinopathy using human retinal pigment epithelial cells."
+  },
+  {
+    "locator": "xml-block-0002",
+    "xpath": "/article/abstract[1]/sec[2]/p[1]",
+    "original_id": null,
+    "section": "Methods",
+    "type": "p",
+    "text": "Arg(R)-Gly(G)-Asp(D) motif peptide conjugating polyethylene glycol modified (RGD-PEGylated) liposomes were prepared using a thin-film hydration method and optimized for surface charge, particle size, small interfering RNA (siRNA) load, and entrapment efficiency. Reverse transcriptase-polymerase chain reaction and enzyme-linked immunosorbent assays were used to determine VEGF levels in retinal pigment epithelial cells. Cytotoxicity was determined using the 3-[4, 5-dimethylthiazol-2-yl]-5-(3-carboxymethoxyphenyl)-2-(4-sulfophenyl)-2H-tetrazolium (MTS) assay and flow cytometry."
+  },
+  {
+    "locator": "xml-block-0003",
+    "xpath": "/article/abstract[1]/sec[3]/p[1]",
+    "original_id": null,
+    "section": "Results",
+    "type": "p",
+    "text": "Physicochemical properties, including particle size, zeta potential, and siRNA load, of the prepared RGD-PEGylated liposomes and their entrapment efficiency were determined to be within the following ranges: 123.8–234.1 nm, 17.31–40.09 m V, 5.27%–6.33%, and >97%, respectively. RGD-PEGylated liposome-mediated fluorescent-labeled siRNA delivery demonstrated significantly enhanced cellular uptake, and 3 mol% RGD-PEGylated liposomes (having 3β-[N-(N’, N’-dimethylaminoethane) carbamoyl] cholesterol (DC-cholesterol) DSPE and DSPE-PEG(2000)-RGD with molar ratio of 50/47/3) were shown to have better efficacy with regard to specificity for retinal pigment epithelial cells, reduced cytotoxicity, and knockdown of the target molecule."
+  },
+  {
+    "locator": "xml-block-0004",
+    "xpath": "/article/abstract[1]/sec[4]/p[1]",
+    "original_id": null,
+    "section": "Conclusion",
+    "type": "p",
+    "text": "By integrin receptor-mediated endocytosis, 3 mol% RGD-PEGylated liposomes were shown to be a suitable vector when loaded with VEGF-siRNA for efficient downregulation of VEGF in retinal pigment epithelial cells at both the protein and gene levels. This integrin ligand-modified liposomal delivery system has therapeutic potential for ocular gene therapy."
+  },
+  {
+    "locator": "xml-block-0005",
+    "xpath": "/article/body[1]/sec[1]/p[1]",
+    "original_id": null,
+    "section": "Introduction",
+    "type": "p",
+    "text": "Gene therapy provides a potential approach for the treatment of a range of acquired and inherited genetic diseases.1 By delivering a nucleotide drug to the nucleus or cytoplasm of a dysfunctional cell, an abnormal gene may be targeted, modified, and restored to its normal state.2,3 Cationic liposomes are widely used as gene delivery vehicles, and have been investigated in many human diseases, including cancer and neovascularization, which are closely associated with abnormal expression of specific genes.4 Cationic liposomes are composed of positively charged phospholipids and cholesterols which are regarded as biocompatible and biodegradable materials and are widely used for the preparation of gene carriers. However, these components are associated with significant cytotoxicity. For instance, the toxicity of cationic liposomes containing 3β-[N-(N’, N’-dimethylaminoethane) carbamoyl] cholesterol (DC-cholesterol) increases as their dimethylaminoethane content increases,5 and the cytotoxicity of nanoparticles fabricated using polyethylene glycol modified (PEGylated) polymers also increases with increasing molecular weight of PEG (550–2000).6 PEGylated liposomes are usually referred to as stealth liposomes, which escape elimination by the immune system and passively accumulate in tumor tissues via the enhanced permeability and retention effect.7 However, PEGylated liposomes also include PEG-linked lipids with PEG moieties on the liposomal surface to shield the surface charge density of cationic liposomes and reduce the extent of the interaction between PEGylated liposomes and target cells, resulting in inappropriate cellular uptake as well as poor endosomal escape of the gene carried on these liposomes. Recently, PEGylated liposomes with conjugated ligands have been widely investigated for their ability to overcome the low interaction between PEGylated liposomes and cells for targeting delivery to specific tissues or cells. Thus, a suitable ligand could be carefully selected for specific binding onto the target cell and used to develop a liposome-mediated delivery system for efficient gene delivery."
+  },
+  {
+    "locator": "xml-block-0006",
+    "xpath": "/article/body[1]/sec[1]/p[2]",
+    "original_id": null,
+    "section": "Introduction",
+    "type": "p",
+    "text": "Aberrant angiogenesis is found not only in malignancy and rheumatoid arthritis, but also in ocular neovascularization, including choroidal neovascularization and proliferative vitreoretinopathy. Retinopathy is the leading cause of visual loss, and age-related macular degeneration is the most common cause of irreversible loss of central vision.8 The wet form of age-related macular degeneration accounts for about 10% of all cases and is characterized by the development of angiogenesis beneath the retina. Vascular endothelial growth factor (VEGF) is an important stimulatory factor inducing ocular angiogenesis, and is upregulated by hypoxia.9 The signaling pathway for VEGF-A has been investigated and is used in clinical therapy to block the start of the signaling cascade. Currently, three anti-VEGF drugs, pegaptanib, ranibizumab, and bevacizumab, which can sequester VEGF, can be injected intravitreally for the treatment of retinopathies associated with angiogenesis. These drugs maintain their action for up to 6 weeks and significantly reduce ocular angiogenesis, thereby improving visual acuity.10 However, endogenous VEGF also acts as a neuroprotectant, maintaining the survival and normal function of neuronal cells in the retina.11 Long-term nonspecific neutralization of VEGF potentially increases the number of apoptotic cells in the inner and outer nuclear layers, including amacrine cells, Müller cells, and photoreceptors, leading to vision damage.12,13"
+  },
+  {
+    "locator": "xml-block-0007",
+    "xpath": "/article/body[1]/sec[1]/p[3]",
+    "original_id": null,
+    "section": "Introduction",
+    "type": "p",
+    "text": "Currently, small interfering RNA (siRNA)-based therapeutics are being widely investigated in human gene therapy. siRNA has the advantages of convenience and specificity in gene knockdown, and has gradually replaced conventional gene knockdown techniques and is now applied in target-specific gene silencing. Anti-VEGF siRNA could be delivered to retinal pigment epithelial cells to silence VEGF expression in the treatment of wet age-related macular degeneration and diseases related to ocular angiogenesis. The ability of siRNA to silence gene expression is also being explored for development of potential pharmacological agents.14 However, siRNA is a relatively large molecule with polyanionic features, so it cannot penetrate the cell membrane easily or achieve gene silencing by passive diffusion.15 Application of siRNA as a therapeutic agent still has many hurdles to overcome, including poor stability, difficulty penetrating the cell membrane and other biological barriers, and low delivery efficiency at the target site."
+  },
+  {
+    "locator": "xml-block-0008",
+    "xpath": "/article/body[1]/sec[1]/p[4]",
+    "original_id": null,
+    "section": "Introduction",
+    "type": "p",
+    "text": "Integrity of retinal pigment epithelial cells is essential for neural homeostasis of the retina. The pathological mechanism involves malfunctioning retinal pigment epithelial cells which release VEGF into the choroid, inducing choroidal neovascularization in patients with age-related macular degeneration.16,17 The VEGF concentration in retinal pigment epithelial cells/choroid was found to be about four times that in the retina in an in vivo rat study.18 In addition an in vitro study of primary retinal pigment epithelial cells demonstrated that VEGF secretion is predominantly from the basolateral side of the retinal pigment epithelial cell, and at a level about 2–7 times that secreted from the apical side, resulting in new choroidal vessels growing towards the retina.19 Therefore, retinal pigment epithelial cells could be a promising target site for reducing expression of VEGF and preventing choroidal neovascularization in age-related macular degeneration. Hence, delivery of anti-VEGF siRNA to retinal pigment epithelial cells is essential for the efficacy of antiangiogenic agents in choroidal neovascularization. The approach used to deliver siRNA specifically into retinal pigment epithelial cells also limits unwanted damage to retinal neurons. However, the bottleneck is a lack of a suitable vector to provide an optimal delivery system and achieve efficient knockdown effects at the target site.20 It has been reported that several integrin receptors are overexpressed on the surface of retinal pigment epithelial cells in ocular neovascularization.21–25 Thus, a gene vector with the ligand of the integrin receptor, such as an Arg-Gly-Asp (RGD) moiety containing peptide, could be used for specific delivery of anti-VEGF siRNA to retinal pigment epithelial cells and prevent choroidal neovascularization. The purpose of this study was to optimize a liposomal formulation for carrying VEGF-siRNA, to assess its cytotoxicity and to evaluate the knockdown efficiency of the gene vector in downregulation of VEGF. In addition, physicochemical characteristics, cell damage, and uptake of siRNA-loaded liposomal preparations by cells were investigated."
+  },
+  {
+    "locator": "xml-block-0009",
+    "xpath": "/article/body[1]/sec[2]/sec[1]/p[1]",
+    "original_id": null,
+    "section": "Chemicals",
+    "type": "p",
+    "text": "Predesigned gene-specific siRNAs for VEGF (first target sequence GGGCCTCCGAAACCATGAA, second target sequence GCAGATTATGCGGATCAAA, third target sequence AAATGTGAATGCAGACCAA) were used. Negatively controlled siRNA (NTC-siRNA) with no homology to any known mammalian gene and fluorescent-labeled negatively controlled siRNA (FAM-siRNA) was used as a control (sense: 5′-UUC-UCC-GAA-CGU-GUC-ACG-UTT-3′ and antisense: 5′-ACG-UGA-CAC-GUU-CGG-AGA-ATT-3′) and were custom-designed and ordered from Dharmacon (Lafayette, CO, USA). All lipid materials used were obtained from Avanti Polar Lipids (Alabaster, AL, USA). An RGD oligopeptide (sequence H-Gly-Arg-Gly-Asp-Ser-Pro-Lys-Cys-OH, molecular weight 818.9 Da) was custom-designed and ordered from Yao-Hong Biotechnology Inc (Taipei, Taiwan). α-cyano-4-hydroxycinnamic acid was obtained from Sigma-Aldrich (St Louis, MO, USA). The MTS reagent, ie, 3-[4, 5-dimethylthiazol-2-yl]-5-(3-carboxymethoxyphenyl)-2-(4-sulfophenyl)-2H-tetrazolium was obtained from Promega Corporation (Madison, WI, USA). Anti-integrin antibodies (αVβ3, MAB1976; αVβ5, MAB1961; α5β1, MAB1969) and fluorescein isothiocyanate secondary antibody were obtained from Chemicon International (Temecula, CA, USA). Other chemicals were pharmaceutical or reagent grade. RGD oligopeptide-conjugated 1,2-distearoyl-sn-glycero-3-phosphoethanolamine (DSPE)-PEG2000-RGD (molecular weight of PEG, 2000 Da) was synthesized using our previously reported method.26"
+  },
+  {
+    "locator": "xml-block-0010",
+    "xpath": "/article/body[1]/sec[2]/sec[2]/p[1]",
+    "original_id": null,
+    "section": "Preparation of siRNA-loaded liposomes",
+    "type": "p",
+    "text": "PEGylated liposomes containing DC-cholesterol, DSPE, and DSPE-PEG2000 carboxylate (or DSPE-PEG2000-RGD) with molar ratios of 50/49/1, 50/47/3, and 50/45/5 were prepared using a thin-film hydration method.27 Briefly, the lipids were dissolved in chloroform in a rotary bottle (total lipid content, 3.6 μmol). After evaporation, a thin lipid film was formed and dried further in a vacuum for 8 hours to remove the residual solvent. The lipid film was hydrated for 8 hours using 2.4 mL sterile phosphate-buffered solution containing VEGF-siRNA, NTC-siRNA, or FAM-siRNA. The dispersion was sonicated for 10 minutes and then extruded 10 times through a polycarbonate membrane (100 nm pore size) using a mini-extruder (Avanti Polar Lipids). The total lipid concentration of the prepared liposomes was 1.5 mM."
+  },
+  {
+    "locator": "xml-block-0011",
+    "xpath": "/article/body[1]/sec[2]/sec[3]/p[1]",
+    "original_id": null,
+    "section": "Particle size and zeta potential",
+    "type": "p",
+    "text": "The prepared siRNA-loaded liposomes were diluted to 1 mM using an appropriate volume of sterile phosphate-buffered solution (pH 7.3). The volume-average hydrodynamic diameter of the various siRNA-loaded l iposomes was determined by dynamic light scattering using a particle analyzer (LB-500, Horiba, Tokyo, Japan) at room temperature. Four measurements were performed for each sample. The surface charge of the liposomes was measured by determining the zeta potential using a zeta potential analyzer (ZetaPlus, Brookhaven Instruments, Holtsville, NY, USA) at room temperature. Four measurements were performed for each sample."
+  },
+  {
+    "locator": "xml-block-0012",
+    "xpath": "/article/body[1]/sec[2]/sec[4]/p[1]",
+    "original_id": null,
+    "section": "Entrapment efficiency",
+    "type": "p",
+    "text": "The amount of negatively controlled siRNA was quantified in the external phase to determine the entrapment efficiency in PEGylated liposomes and RGD peptide-modified PEGylated liposomes. The liposomes were spun down at 20,000 × g and 4°C for 30 minutes; the supernatants were diluted (if necessary), stained with SYBR gold dye (Molecular probes, Eugene, OR, USA) and analyzed for oligonucleotide content by measuring the intensity of fluorescence using an enzyme-linked immunosorbent assay reader (Infinite M200, Tecan Group Ltd Männedorf, Switzerland) at 537 nm against a standard curve. All the measurements were done in triplicate.28,29 The entrapment efficiency of the siRNA-loaded liposomes was calculated as the ratio of siRNA used for the preparation of the original mixture as follows:"
+  },
+  {
+    "locator": "xml-block-0013",
+    "xpath": "/article/body[1]/sec[2]/sec[4]/p[2]",
+    "original_id": null,
+    "section": "Entrapment efficiency",
+    "type": "p",
+    "text": "where siRNAt is the total amount of siRNA used for preparation of the initial mixture and siRNAf is the free siRNA amount recovered in the supernatant. siRNA loading was calculated as follows:"
+  },
+  {
+    "locator": "xml-block-0014",
+    "xpath": "/article/body[1]/sec[2]/sec[5]/p[1]",
+    "original_id": null,
+    "section": "ARPE-19 cell cultures",
+    "type": "p",
+    "text": "ARPE-19 is a spontaneously arising retinal pigment epithelial cell line derived in 1986 by Amy Aotaki-Keen from the normal eyes of a 19-year-old male who died from head trauma in a motor vehicle accident. These cells are diploid and can be carried for over 30 passages. They were obtained from the American Type Culture Collection (Manassas, VA, USA; Accession number CRL-2302) and cultured in a 1:1 mixture of Dulbecco’s modified Eagle’s medium and Ham’s F12 with 15 mM HEPES buffer, 2 mM L-glutamine, 56 mM sodium bicarbonate, and 10% fetal bovine serum. The cells were maintained at 37°C in a humidified atmosphere with 5% CO2. Cells in passages 25–32 were used in the experiments, and seeding cells were counted in a hemocytometer with trypan blue staining."
+  },
+  {
+    "locator": "xml-block-0015",
+    "xpath": "/article/body[1]/sec[2]/sec[6]/p[1]",
+    "original_id": null,
+    "section": "Cell viability",
+    "type": "p",
+    "text": "ARPE-19 cells were seeded in 96-well plates at a cell density of 1.6 × 104 cells per well and incubated for 18 hours. Before MTS assay, the cells were washed with 100 μL of phosphate-buffered solution. NTC-siRNA-loaded liposomes in 100 μL of serum-free culture medium were then added. After 8 hours, the cells were washed with 100 μL of phosphate-buffered solution, and 100 μL of the cultured medium was added. Next, the cells were incubated for 2 hours at 37°C with 20 μL of MTS. An enzyme-linked immunosorbent assay reader (Anthos 2010, Carlton, VIC, Australia) set at 490 nm was used for reading the absorbance of formazan in each well to determine the quantity of mitochondrial dehydrogenase in viable cells. The percentage of cell viability was calculated as follows:"
+  },
+  {
+    "locator": "xml-block-0016",
+    "xpath": "/article/body[1]/sec[2]/sec[6]/p[2]",
+    "original_id": null,
+    "section": "Cell viability",
+    "type": "p",
+    "text": "where ABSsample, ABScontrol, and ABSblank are the absorbance of wells exposed to the liposomal dispersions in serum-free culture medium, treated with serum-free culture medium, and treated with serum-free culture medium but without cells, respectively.30"
+  },
+  {
+    "locator": "xml-block-0017",
+    "xpath": "/article/body[1]/sec[2]/sec[7]/p[1]",
+    "original_id": null,
+    "section": "RNA isolation and semiquantitative RT-PCR of VEGF",
+    "type": "p",
+    "text": "Three VEGF-siRNAs or NTC-siRNA were transfected to ARPE-19 cells using Lipofectamine® 2000 (Invitrogen, Carlsbad, CA, USA) for screening to identify the optimal VEGF-siRNA sequence in knockdown VEGF messenger RNA (mRNA). The most effective VEGF-siRNA was used in the preparation of siRNA-loaded liposomes for the ARPE-19 cell transfection study. Expression of the VEGF gene in ARPE-19 was investigated at the mRNA level by reverse transcriptase-polymerase chain reaction (RT-PCR). Briefly, siRNA-loaded 3 mol% PEGylated liposomes or 3 mol% RGD-PEGylated liposomes in serum-free culture medium were added to the ARPE-19 cells. After 4 hours, the medium was refreshed and cells were collected at 24, 48, and 72 hours. Total RNA was isolated from ARPE-19 with TRIzol reagent (Invitrogen) following the manufacturer’s protocol. Next, 1 μg of Oligo(dT)12–18 was used to prime 2 μg of total RNA and reverse-transcribed using SuperscriptIII reverse transcriptase (Invitrogen) supplied with a first-strand synthesis system for RT-PCR. Following the PrimerBank sequence for VEGF and glyceraldehyde 3-phosphate dehydrogenase (GAPDH), the specific primers and thermocycling for the target VEGF gene were as follows: 5′- CGCAGCTACTGCCATCCAAT-3′ (forward primer) and 5′-TCGGCTTGTCACATTTTT CTTGT-3′ (reverse primer) at 94°C for 40 seconds, at 60°C for 40 seconds (30 cycles), and at 72°C for 5 minutes. The amplicon size of the PCR yield was 292 bp. Using GAPDH as a control gene, the specific primers and thermocycling for GAPDH were as follows: 5′- TGTTGCCATCAATGACCCCTT-3′ (forward primer) and 5′-CTCCACGACGTACTCAGCG-3′ (reverse primer) at 94°C for 40 seconds, at 60°C for 40 seconds (30 cycles), and at 72°C for 5 minutes. The amplicon size of the RT-PCR yield was 202 bp. RT-PCR amplification of GAPDH was routinely used as a control to assess the integrity of RNA and cDNA. Amplification reaction products (10 μL) were resolved on 1.2% Tris-borate-ethylenediaminetetraacetic acid (EDTA)-buffered agarose gels and visualized with ethidium bromide staining. The results of RT-PCR were quantified using ImageQuant software (Molecular Dynamics, Sunnyvale, CA, USA). The expression level was calculated by dividing the integrated band intensity of the experimental sample by that of the control sample."
+  },
+  {
+    "locator": "xml-block-0018",
+    "xpath": "/article/body[1]/sec[2]/sec[8]/p[1]",
+    "original_id": null,
+    "section": "Enzyme-linked immunosorbent assay of VEGF",
+    "type": "p",
+    "text": "For assessing VEGF production in the supernatant fluid of ARPE-19 cells after treatment with VEGF-siRNA-loaded or NTC-siRNA-loaded liposomes, the cells were incubated in serum-free medium at 37°C in a humidified atmosphere with 5% CO2. During an experimental period of 72 hours, the medium was collected at preset time points. After centrifuging, the supernatants were stored at −80°C. The amount of VEGF protein secreted by ARPE-19 into the culture medium was measured by enzyme-linked immunosorbent assay (R&D systems, Minneapolis, MN, USA) according to the manufacturer’s instructions. The supernatants were diluted if necessary and analyzed for VEGF content by measuring the intensity of fluorescence using an enzyme-linked immunosorbent assay reader (Infinite® 200 PRO, Tecan Group Ltd., Männedorf, Switzerland) at 450 nm against the standard curve. All measurements were done in triplicate and expressed in pg/mL."
+  },
+  {
+    "locator": "xml-block-0019",
+    "xpath": "/article/body[1]/sec[2]/sec[9]/p[1]",
+    "original_id": null,
+    "section": "Flow cytometry",
+    "type": "p",
+    "text": "ARPE-19 cells were seeded in six-well plates using Dulbecco’s modified Eagle’s medium at a density of 3 × 105 cells per well and incubated for 24 hours to achieve 75% confluence. The culture medium was removed and the cells were washed with phosphate-buffered solution before addition of siRNA-loaded liposomes in 1 mL of serum-free culture medium. After 4 hours, the cells were washed three times with phosphate-buffered solution and then detached using 0.05% trypsin and 0.02% EDTA, washed with phosphate-buffered solution, and resuspended in 0.5 mL of phosphate-buffered solution for flow cytometric assay, as described elsewhere.26,31 Cell integrity was measured using a flow cytometer (Becton Dickinson, Heidelberg, Germany). Forward and side light scatter was used to gate the desired scattered events of the normal cells and dead cells. Uptake of FAM-siRNA loaded liposomes was also measured using a flow cytometer at 488 nm excitation with a 530 nm band-pass filter in the emission path."
+  },
+  {
+    "locator": "xml-block-0020",
+    "xpath": "/article/body[1]/sec[2]/sec[10]/p[1]",
+    "original_id": null,
+    "section": "Confocal laser scanning microscopy",
+    "type": "p",
+    "text": "ARPE-19 cells were seeded in six-well plates using Dulbecco’s modified Eagle’s medium at a density of 2 × 105 cells per well and incubated for 24 hours to achieve 50% confluence. Before the uptake study, the culture medium was removed and the cells were washed with phosphate-buffered solution. Following this, the phosphate-buffered solution was removed and the prepared FAM-siRNA-loaded liposomes in 1 mL of serum-free culture medium were added. After 4 hours, the cells were washed three times with phosphate-buffered solution. The cells were then fixed with 3.7% formaldehyde for 10 minutes and washed three times in 1 mL of phosphate-buffered solution. Finally, cell permeability was increased by adding 0.1% Triton for 5 minutes and washing three times with 1 mL of phosphate-buffered solution. For cell staining, the cells were incubated in Hoechst 33342 (Invitrogen-Molecular Probes Inc., Eugene, OR, USA) for 5 minutes, which was then replaced with BODIPY®-phalloidin (Invitrogen-Molecular Probes Inc., Eugene, OR USA) for 20 minutes. A TCS SP5 confocal laser scanning microscopy imaging system (Leica, Wetzlar, Germany) was used to obtain optical images of the distribution of FAM-labeled siRNA in ARPE-19 cells."
+  },
+  {
+    "locator": "xml-block-0021",
+    "xpath": "/article/body[1]/sec[2]/sec[11]/p[1]",
+    "original_id": null,
+    "section": "Induction of integrin isoforms in ARPE-19 cells",
+    "type": "p",
+    "text": "Membrane expression of αVβ3 αVβ5 and α5β1 integrin subunits was assessed by flow cytometry and confocal laser scanning microscopy. ARPE-19 cells were seeded in six-well plates at a density of 3 × 105 cells per well using culture medium with 0, 2, or 20 ng/mL of epidermal growth factor and incubated for 24 hours, then detached from the well using 2 mM ethylenediamine tetra-acetic acid. Cells were fixed in 2% paraformaldehyde (w/v) in phosphate-buffered solution (pH 7.4) for 15 minutes, and washed by three 10-minute incubations in cold phosphate-buffered solution. Integrins were detected with a primary mouse anti-human antibody for 30 minutes at 4°C with one of the following mouse monoclonal antibodies (Chemicon) at a dilution of 1:100 (integrin αVβ3, αVβ5, or α5β1). The cells were washed and incubated in fluorescein isothiocyanate-conjugated goat anti-mouse antibody (Chemicon) at a dilution of 1:100 for 30 minutes. All washes and incubations were done in Dulbecco’s phosphate-buffered solution (without Ca2+ or Mg2+) containing 1% fetal calf serum and 1% pooled human serum (blocking solution). For the negative control, cells were incubated with blocking solution instead of primary antibody. The bound antibody was analyzed using a flow cytometer (Becton Dickinson) and BD CellQuest software."
+  },
+  {
+    "locator": "xml-block-0022",
+    "xpath": "/article/body[1]/sec[2]/sec[12]/p[1]",
+    "original_id": null,
+    "section": "Statistical analysis",
+    "type": "p",
+    "text": "The results were expressed as the mean ± standard deviation. The Student’s t-test was used to determine the statistical significance of differences between means. Results were considered to be statistically significant at P < 0.05."
+  },
+  {
+    "locator": "xml-block-0023",
+    "xpath": "/article/body[1]/sec[3]/sec[1]/p[1]",
+    "original_id": null,
+    "section": "Characterization of siRNA-loaded liposomes",
+    "type": "p",
+    "text": "The particle sizes and zeta potentials of the investigational liposomes associated with the component ratios of PEGylated lipid or RGD-PEGylated lipid are shown in Figure 1. Dynamic light scattering showed that the mean particle sizes of the non-PEGylated liposomes and the PEGylated liposomes with siRNA were small (between 123.8 ± 38.9 and 147.2 ± 48.2 nm, left panel, Figure 1A). The particle size was increased slightly by increasing the molar ratio of the PEGylated lipid. The mean particle size of the RGD-PEGylated liposomes with siRNA was larger (between 164.6 ± 57.5 nm and 234.1 ± 78.8 nm, right panel, F igure 1A). The particle sizes of the PEGylated liposomes and the RGD-PEGylated liposomes were stable during 16 days of storage at 4°C, but the size of the non-PEGylated liposomes was significantly increased (Figure 1B). The zeta potential of the non-PEGylated liposomes with siRNA was found to be strongly positive (40.09 ± 0.95 mV), but incorporating a high molar ratio of DSPE-PEG2000 resulted in a reduction in the zeta potential to 32.04 ± 2.33 mV for 1 mol% PEGylated liposomes, 28.9 ± 1.8 mV for 3 mol% PEGylated liposomes, and 25.25 ± 1.72 mV for 5 mol% PEGylated liposomes (left panel, Figure 1A). Incorporating different molar ratios of the synthesized lipid (DSPE-PEG(2000)-RGD) resulted in a significant reduction in the zeta potential to 24.92 ± 2.64 mV for 1 mol% RGD-PEGylated liposomes, to 20.39 ± 2.35 mV for 3 mol% RGD-PEGylated liposomes, and to 17.31 ± 1.07 mV for 5 mol% RGD-PEGylated liposomes (right panel, Figure 1B). The non-PEGylated liposomes, PEGylated liposomes, and RGD-PEGylated liposomes show high entrapment efficiencies of more than 97%. The siRNA loading content was 5.27% to 6.33% (Table 1)."
+  },
+  {
+    "locator": "xml-block-0024",
+    "xpath": "/article/body[1]/sec[3]/sec[2]/p[1]",
+    "original_id": null,
+    "section": "Cytotoxicity of liposomes",
+    "type": "p",
+    "text": "To avoid any potential cytotoxic effects from the various liposomal formulations, an MTS assay was performed to determine a safe concentration range for the liposomes (containing total lipid concentrations of 16.7, 50, or 150 μM) in ARPE-19 cells over 8 hours of treatment (Figure 2A). The control culture was incubated with serum-free medium alone without liposomes, setting cell viability at 100%. Treatment with 1%, 3%, or 5 mol% PEGylated liposomes showed that cell viability decreased with increasing molar ratios of the PEGylated lipid. Cell viability upon treatment with the RGD-PEGylated liposomes was significantly higher at a total lipid concentration of 50 μM than upon treatment with the PEGylated liposomes, but cell viability also decreased upon increasing the molar ratio of RGD-PEGylated lipid. The cytotoxicity of the liposomal formulations was further evaluated in ARPE-19 cells using a lipid concentration of 50 μM for 4, 8, and 12 hours (Figure 2B). In comparison with the control group, the cell viability was not significantly different after treatment for 4 hours using 50 μM of 3 mol% PEGylated liposomes or 1, 3, 5 mol% RGD-PEGylated liposomes, or after treatment for 8 hours with 1 mol% and 3 mol% RGD-PEGylated liposomes. These results indicate that RGD-PEGylated liposomes had less cytotoxicity than PEGylated liposomes in retinal pigment epithelial cells. However, treatment with 50 μM of 3 mol% PEGylated liposomes or RGD-PEGylated liposomes for 4 hours caused no noticeable cytotoxicity."
+  },
+  {
+    "locator": "xml-block-0025",
+    "xpath": "/article/body[1]/sec[3]/sec[3]/p[1]",
+    "original_id": null,
+    "section": "Cell integrity",
+    "type": "p",
+    "text": "The effect of the different liposomal formulations on cell integrity was evaluated in ARPE-19 cells after 4 hours of treatment (Figure 3). The distribution of normal cells and dead cells in the control group was 95.33% and 1.55%, respectively (Figure 3A). In cells treated with 1%, 3%, or 5 mol% PEGylated liposomes, the amount of dead cells increased from 3.87% to 7.33% as the molar ratio of the PEGylated lipid was increased (Figure 3B–D). The amount of dead cells after treatment with RGD-PEGylated liposomes was remarkably lower than after treatment with PEGylated liposomes for all formulations. However, the amount of dead cells again increased, from 2.08% to 4.65%, as the molar ratio of the RGD-PEGylated liposomes was increased (Figure 3–G). The ratios of dead cells over normal cells for various formulations were listed as follows, control: 0.019; 1 mol% PL: 0.044; 3 mol% PL: 0.055; 5 mol% PL: 0.076; 1 mol% RPL: 0.023; 3 mol% RPL: 0.033, and 5 mol% RPL: 0.038. (Figure 3A–G). Compared with the nontreatment controls, the paired t-test data were 0.001, 0.049, 0.014, 0.170, 0.007, and 0.094, respectively."
+  },
+  {
+    "locator": "xml-block-0026",
+    "xpath": "/article/body[1]/sec[3]/sec[4]/p[1]",
+    "original_id": null,
+    "section": "VEGF mRNA knockdown and protein inhibition effect",
+    "type": "p",
+    "text": "To assess the knockdown ability of VEGF-siRNA, ARPE-19 cells were treated for 48 hours with three different sequences of VEGF-siRNA combined with Lipofectamine 2000. The second VEGF-siRNA was the most efficient in knocking down VEGF mRNA expression (Figure 4), and was used to prepare VEGF-siRNA-loaded liposomes. The optimal knockdown concentration was determined using final VEGF-siRNA concentrations of 40, 80, and 160 nM (diluted in serum-free medium) for 48 hours of treatment. As shown in Figure 5A, comparison of the negative controls (3 mol% PEGylated liposomes and RGD-PEGylated liposomes carrying NTC-siRNA) against the untreated controls did not show any significant difference in efficacy with regard to silencing VEGF expression after 48 hours. However, the 3 mol% PEGylated liposomes and 3 mol% RGD-PEGylated liposomes with a VEGF-siRNA concentration of 160 nM had a significant knockdown effect (P = 0.036 and P = 0.0045, respectively). At a VEGF-siRNA concentration of 160 nM (Figure 5B), the knockdown effect was noticeable after 48 and 72 hours of treatment with RGD-PEGylated liposomes and with the siRNA/Lipofectamine complex groups, but the RGD-PEGylated liposomes had a greater knockdown effect than the PEGylated liposomes after 48 and 72 hours (P = 0.0002 and P = 0.0120, respectively). The protein inhibition effect was measured to assess the amount of VEGF released into the medium. The inhibition effect of VEGF-siRNA-loaded RGD-PEGylated liposomes was observed at 40, 80, and 160 nM after 48 hours of treatment (P = 0.0319, 0.0005, and 0.0027, respectively). However, an inhibition effect was only observed at 160 nM for PEGylated liposomes (P = 0.0051, Figure 6A). When the VEGF-siRNA concentration was fixed at 160 nM (Figure 6B), VEGF inhibition by RGD-PEGylated liposomes was similar to that of the siRNA/Lipofectamine complexes at 24, 48, and 72 hours after transfection, but the RGD-PEGylated liposomes showed greater inhibition than the PEGylated liposomes at each time point (P = 0.0055, 0.0087, and 0.0079, respectively)."
+  },
+  {
+    "locator": "xml-block-0027",
+    "xpath": "/article/body[1]/sec[3]/sec[5]/p[1]",
+    "original_id": null,
+    "section": "Confocal laser scanning microscopy",
+    "type": "p",
+    "text": "Confocal laser scanning microscopy with a three-dimensional detection method was used to identify FAM-siRNA-loaded liposomes localized within the cell and their distribution (Figure 7). Images obtained from the bottom of the coverslip to the top of the cells were recorded. The number of speckled green fluorescence images of FAM-siRNA located within the cytoplasm was counted from the Z-series images at every 1 μm of depth (Figure 7A). To determine the FAM-siRNA localized within the cell, the number of speckled green fluorescence images counted was divided by the total number of cells observed in each image. This figure was determined by the distance of the Z-axis from the bottom of the coverslip versus the number of speckled green fluorescence (FAM-siRNA) images counted in the cytoplasm of each cell. The number of speckled green fluorescence images for the sample containing 3 mol% RGD-PEGylated liposomes was greater than in that containing 3 mol% PEGylated l iposomes (Figure 7B and C). These findings suggest that the RGD-PEGylated liposomes provided better transfer of siRNA for delivery into ARPE-19 cells."
+  },
+  {
+    "locator": "xml-block-0028",
+    "xpath": "/article/body[1]/sec[3]/sec[6]/p[1]",
+    "original_id": null,
+    "section": "Induction of integrin isoforms in ARPE-19 cells",
+    "type": "p",
+    "text": "To determine the potential of the RGD-lipid conjugate to bind with the integrin receptor, the expression of multiple integrin isoforms on the cell surface was upregulated in the ARPE-19 cells by epidermal growth factor. Cell surface expression of αvβ3, αvβ5, and α5β1 was evaluated by confocal laser scanning microscopy and flow cytometry (Figure 8A–C). After treatment with 2 or 20 ng/mL of epidermal growth factor, ARPE-19 cells expressed varied integrins at various levels, with integrin α5β1 being significantly induced. Following the integrin-induced model, the efficiency of intracellular siRNA uptake was evaluated using FAM-siRNA-loaded liposomes (Figure 9). The intensity of uptake of PEGylated liposomes and RGD-PEGylated liposomes was determined by flow cytometry. The uptake intensity of RGD-PEGylated liposomes was significantly increased in ARPE-19, but not the uptake of PEGylated liposomes, in response to pretreatment with epidermal growth factor."
+  },
+  {
+    "locator": "xml-block-0029",
+    "xpath": "/article/body[1]/sec[4]/p[1]",
+    "original_id": null,
+    "section": "Discussion",
+    "type": "p",
+    "text": "siRNA is a relatively large molecule with polyanionic features, and cannot penetrate the cell membrane by passive diffusion.15 The development of siRNA as a therapeutic agent for systemic administration has faced many challenges, including poor formulation stability, difficulty penetrating biological barriers, and low delivery efficiency at the target site, resulting in poor gene silencing efficacy. Hence, an optimal gene carrier for siRNA is necessary for the application of RNA interference in the therapeutic setting. Currently, targeted liposome design is of great interest for the transport of genes into target cells. This approach has the potential to achieve greater and more selective therapeutic activity, and involves the the specific ligands on liposomal surface capable of recognizing targeted cells, binding to them, and internalization of the liposomes and encapsulated gene. For this process, various ligands, such as transferrin, folic acid peptides, or antibodies, are added at the surface of the liposome to produce active targeting liposomal systems.32,33"
+  },
+  {
+    "locator": "xml-block-0030",
+    "xpath": "/article/body[1]/sec[4]/p[2]",
+    "original_id": null,
+    "section": "Discussion",
+    "type": "p",
+    "text": "In this study, various liposomes were investigated for their efficiency in siRNA encapsulation and suitable physicochemical properties when fabricated with siRNA, cationic lipid helper lipid and PEGylated lipid or RGD-PEGylated lipid. The results show that all the liposomal formulations tested had good entrapment efficiency (above 97%), a positive surface charge of around 18–40 mV, and a mean particle size of 120–230 nm (Figure 1 and Table 1). The results also demonstrate that siRNA could be immobilized in these liposomal formulations with high entrapment efficiency, which is dependent on the presence of DC-cholesterol in the formulation. The high entrapment efficiency of siRNA in the liposomes is significantly enhanced at a +/− charge ratio of 4 between the dimethylaminoethane of the DC-cholesterol and the phosphate groups of siRNA, consistent with findings previously reported by Zhang et al.34 When the RGD-PEGylated lipid content increased the initial particle size also increased but PEGylated lipid had no influence on particle size. The content of RGD-PEGylated lipid was also found to be one of the major factors influencing the particle size of the liposome (Figure 1A). These results are consistent with our previous report.26 The particle size of the liposomes was measured at different time intervals, showing that the 3 mol% PEGylated liposomes and RGD-PEGylated liposomes maintained a stable particle size for 16 days, while the size of the non-PEGylated liposomes was significantly increased (Figure 1B)."
+  },
+  {
+    "locator": "xml-block-0031",
+    "xpath": "/article/body[1]/sec[4]/p[3]",
+    "original_id": null,
+    "section": "Discussion",
+    "type": "p",
+    "text": "The PEG moiety has been demonstrated to prevent liposome fusion and aggregation, and to stabilize the liposome dispersion during storage.35 The steric barrier created by PEG conjugation also prevents recognition by the immune system and decreases cell uptake. However, a previous study has shown that as the molecular weight of PEG in the PEGylated nanoparticles increases, the cytotoxicity also increases.6 In this study, the cytotoxicity of the liposomes was investigated further by increasing the treatment concentration and duration of the experiments. We found that a higher content of PEGylated lipid increased the cytotoxicity (Figure 2). On flow cytometry assay, we observed an increased amount of dead cells after treatment with higher concentrations of PEGylation liposomes (Figure 3). This may be due to the PEG moiety disturbing the cell membrane and disrupting the integrity of the cell, thereby inducing cytotoxicity synergistic with that of cationic lipid DC-cholesterol. A cell disconnected from its extracellular matrix can undergo apoptosis via an integrin-mediated death signal known as anoikis. Integrins are believed to mediate cell survival by activating a specific signaling pathway. Cell attachment mediated by integrins promotes cell survival by upregulation of Bcl-2. RGD motif peptide sequences are rich in extracellular matrix molecules.36 PEG molecules in the PEGylated liposome may disturb cell integrity, but use of the RGD peptide modification promotes cell survival. The biosafety of this liposome-mediated delivery system in ARPE-19 cells could be improved by using 3 mol% PEGylated liposomes and RGD-PEGylated liposomes in culture medium containing a total lipid concentration of less than 50 μM with 4 hours of incubation. Hence, a concentration of 50 μM was used in the siRNA delivery assay, gene knockdown, and protein inhibition studies."
+  },
+  {
+    "locator": "xml-block-0032",
+    "xpath": "/article/body[1]/sec[4]/p[4]",
+    "original_id": null,
+    "section": "Discussion",
+    "type": "p",
+    "text": "siRNA delivery is a multistep process involving biological barriers to penetration, cellular internalization, endosomal escape, and cytoplasm trafficking.34,37 Thus, it would be desirable to have a good indication that siRNA-loaded liposomes taken up by the cell are able to release their cargo, so studies of gene knockdown and VEGF protein inhibition were conducted. The optimal VEGF-siRNA (second sequence) was incorporated into the PEGylated l iposomes and RGD-PEGylated liposomes for the knockdown and inhibition study (Figure 4). To evaluate the gene silencing function in the siRNA-loaded liposomes, we incubated ARPE-19 cells, the major expression of which is in the eye, with 3 mol% PEGylated liposomes and RGD-PEGylated liposomes containing VEGF-siRNA at different concentrations, ranging from 40 nM to 160 nM. Inhibition of VEGF has been shown to be associated with inhibition of retinal angiogenesis. We analyzed the VEGF expression knockdown and inhibition efficiency after 24, 48, and 72 hours by RT-PCR and enzyme-linked immunosorbent assay (Figures 5 and 6). By RT-PCR assay, 3 mol% PEGylated liposomes and RGD-PEGylated liposomes with 40 or 80 nM of VEGF-siRNA did not have a knockdown effect capable of significant gene silencing. When we increased the concentration of VEGF-siRNA to 160 nM, there was a significant improvement in VEGF mRNA knockdown activity. At the same lipid concentration, 3 mol% RGD-PEGylated liposomes reached a level of knockdown activity similar to that seen in cells treated with Lipofectamine 2000 at 48 and 72 hours post treatment. Similar findings were reported by Yang et al, who used cationic lipid-assisted polyethyleneglycol–poly-L-lactic acid (PEG–PLA) nanoparticles as Plk1-siRNA carriers and showed a good knockdown effect in cancer cells when treated with an siRNA concentration above 200 nM.38 VEGF secretion from ARPE-19 cells was then evaluated after treatment with 3 mol% PEGylated liposomes and RGD-PEGylated liposomes containing VEGF-siRNA using a more sensitive enzyme-linked immunosorbent assay. A similar trend was observed, with 3 mol% RGD-PEGylated liposomes and Lipofectamine 2000 achieving good knockdown activity in cells at 24, 48 and 72 hours post treatment."
+  },
+  {
+    "locator": "xml-block-0033",
+    "xpath": "/article/body[1]/sec[4]/p[5]",
+    "original_id": null,
+    "section": "Discussion",
+    "type": "p",
+    "text": "For enhancing the liposomes and uptake of their siRNA load by retinal pigment epithelial cells, the ligand of the surface receptors of the cells was used to modify the PEGylated liposomes. Several integrin receptors are upregulated in ocular neovascularization. For example, early studies indicated that integrin αVβ3 is present in the ocular tissue of patients with age-related macular degeneration, and that integrin αVβ3 and αVβ5 are present in the vascular tissue of patients with proliferative diabetic retinopathy.21 Other reports also confirmed that integrin αVβ3, αVβ5, and α5β1 are expressed on the surface of the retinal pigment epithelial cell.22,23 RGD-containing peptides have been shown to bind specifically to αV-associated and α5- associated integrins.24,25 The surface charge on the liposome is considered to be one of the most important parameters governing uptake of nanoparticles by cells, and occurs via electrostatic interaction between oppositely charged cells and the liposomes.39,40 Our PEGylated liposomes showed decreased uptake of the liposome and its cargo gene, FAM-siRNA, and this resulted not only from the smaller positive charge on the liposome surface, but also from the ability of the PEG moiety on the liposome to prevent contact with the cell surface. These properties minimize nonspecific binding of liposomes to the cell surface.41,42 The active targeted liposome containing the RGD peptide was designed to achieve greater and more selective therapeutic activity in retinal pigment epithelial cells. This involved coupling RGD moieties capable of recognizing and binding to the integrin receptor on the retinal pigment epithelial cell, and then enhancing the cellular uptake of the liposome and its load of siRNA. The α5β1 integrin on the basolateral side of the retinal pigment epithelial cell is an important factor in the attachment of cells to Bruch’s membrane, whereas the αVβ3 and αVβ5 integrins on the apical side maintain diurnal phagocytosis of the outer segment fragment of the shed photoreceptor.23 A peptide with an RGD moiety could be used as a specific ligand for integrin αVβ3, αVβ5, or α5β1. Therefore, the synthesized DSPE-PEG-RGD was used to fabricate targeted liposomes in this study. With an exogenous siRNA, an interference mechanism is necessary for successful delivery of siRNA into the cytoplasm of the target cells. Confocal laser scanning microscopy images were used to evaluate the intracellular distribution of FAM-siRNA. Comparing the 3 mol% RGD-PEGylated liposomes with the 3 mol% PEGylated liposomes, the number of fluorescent FAM-siRNA spots localized within the cells was higher than that for the PEGylated liposomes (Figure 7)."
+  },
+  {
+    "locator": "xml-block-0034",
+    "xpath": "/article/body[1]/sec[4]/p[6]",
+    "original_id": null,
+    "section": "Discussion",
+    "type": "p",
+    "text": "Epidermal growth factor induces expression of α5-associated integrin in retinal pigment epithelial cells, and plays an important role in pathology related to proliferative vitreoretinopathy.43 To determine potential RGD-lipid conjugate binding with the integrin receptor, expression of multiple integrin isoforms on the cell surface was upregulated in retinal pigment epithelial cells by epidermal growth factor (Figure 8). In the model of integrin induction, the efficiency of intracellular FAM-siRNA uptake was evaluated by flow cytometry. Comparison of epidermal growth factor-pretreated group against untreated group, the cellular uptake intensity for 3 mol% RGD-PEGylated liposomes (measuring FAM-siRNA intensity) was significantly increased, but it was not observed for 3 mol% PEGylated liposomes (Figure 9). This result confirms that siRNA were internalized by integrin ligand-labeled liposome-mediated siRNA delivery."
+  },
+  {
+    "locator": "xml-block-0035",
+    "xpath": "/article/body[1]/sec[4]/p[7]",
+    "original_id": null,
+    "section": "Discussion",
+    "type": "p",
+    "text": "In conclusion, PEGylated liposomes modified with a RGD moiety oligopeptide are efficient carriers of siRNA for downregulating VEGF expression at the protein and gene level in retinal pigment epithelial cells via integrin receptor-mediated endocytosis, and represent a potential strategy for ocular gene therapy."
+  }
+]

@@ -1,0 +1,256 @@
+{
+  "raw_source": "originals/purchased_sequence_spec_original.docx",
+  "source_sha256": "7ce4e3cffbe91c62c81926edcc52f53f97fc57c8941085367166068f9b9c3db6",
+  "source_locator": "word/document.xml body block 1, rows 1 and 2 (zero-based)",
+  "chains": [
+    {
+      "label": "document row 1",
+      "written_sequence": "GAUAGAGCAAGACAAGAAATT",
+      "written_annotation": "-N3（叠氮基团，用于点击化学）",
+      "core19_for_alignment_only": "GATAGAGCAAGACAAGAAA",
+      "assumption": "Treat written order as 5prime-to-3prime and omit terminal TT for alignment only; chemical meaning and strand roles not assigned",
+      "exact_matches_assuming_written_direction": [
+        {
+          "accession": "NM_001171623.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171626.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171628.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001317010.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001025369.3",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171627.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171625.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001204384.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001287044.2",
+          "orientation": "as_written",
+          "start_1based": 471,
+          "end_1based": 489
+        },
+        {
+          "accession": "NM_001025367.3",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171624.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001025370.3",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001204385.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001025368.3",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001033756.3",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_003376.6",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001025366.3",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171629.2",
+          "orientation": "as_written",
+          "start_1based": 1439,
+          "end_1based": 1457
+        }
+      ]
+    },
+    {
+      "label": "document row 2",
+      "written_sequence": "UUUCUUGUCUUGCUCUAUCTT",
+      "written_annotation": null,
+      "core19_for_alignment_only": "TTTCTTGTCTTGCTCTATC",
+      "assumption": "Treat written order as 5prime-to-3prime and omit terminal TT for alignment only; chemical meaning and strand roles not assigned",
+      "exact_matches_assuming_written_direction": [
+        {
+          "accession": "NM_001171623.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171626.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171628.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001317010.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001025369.3",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171627.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171625.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001204384.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001287044.2",
+          "orientation": "reverse_complement",
+          "start_1based": 471,
+          "end_1based": 489
+        },
+        {
+          "accession": "NM_001025367.3",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171624.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001025370.3",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001204385.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001025368.3",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001033756.3",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_003376.6",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001025366.3",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        },
+        {
+          "accession": "NM_001171629.2",
+          "orientation": "reverse_complement",
+          "start_1based": 1439,
+          "end_1based": 1457
+        }
+      ]
+    }
+  ],
+  "rna19_parts_reverse_complementary": true,
+  "reference_sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+  "fixed_reference_count": 20,
+  "not_assigned": [
+    "guide/passenger roles",
+    "siRNA strand orientation confirmation",
+    "exact terminal chemistry and modification positions",
+    "supplier final specification or quality certificate"
+  ],
+  "not_performed": [
+    "efficacy prediction",
+    "seed scan",
+    "wet experiment",
+    "order placement"
+  ]
+}

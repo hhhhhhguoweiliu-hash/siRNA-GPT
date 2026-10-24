@@ -1,0 +1,25 @@
+{
+  "sequential_counts": [
+    104,
+    65,
+    20,
+    12,
+    9
+  ],
+  "all_nine_retained": true,
+  "unchanged_candidate_ids": [
+    "VEGFA_SD_1157",
+    "VEGFA_SD_2739",
+    "VEGFA_SD_3119",
+    "VEGFA_SD_3193",
+    "VEGFA_SD_3429",
+    "VEGFA_SD_3499",
+    "VEGFA_SD_3500",
+    "VEGFA_SD_3502",
+    "VEGFA_SD_3535"
+  ],
+  "CDS_count": 1,
+  "three_prime_UTR_count": 8,
+  "no_new_design_or_scoring": true,
+  "source_trace_sha256": "b4be1113ba46590a7fcbc5d21abb70dbffc1595231cee9c59b8f5ccd25579c31"
+}
