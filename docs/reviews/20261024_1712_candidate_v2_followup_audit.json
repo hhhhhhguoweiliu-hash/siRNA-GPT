@@ -1,0 +1,120 @@
+{
+  "head": "ede70e517fa0732dc7c72e4ff12a2cb61c07e603",
+  "scope": "Independent file/input/output/reference checks; no new model API call, no OligoFormer inference, no full near-match scan, no wet experiment.",
+  "counts": {
+    "seed_units": 132,
+    "gene_count_rows": 2562780,
+    "saved_seed_sites_verified": 685249,
+    "nearfull_units": 24,
+    "nearfull_saved_sites_verified": 537,
+    "historical_positive_guide_rows": 14524,
+    "all_checks": 2224
+  },
+  "findings": [
+    {
+      "type": "minor_locator_metadata",
+      "detail": [
+        {
+          "paper": "chen2013",
+          "unresolvable_recorded_xpath_blocks": [
+            "xml-block-0001",
+            "xml-block-0002",
+            "xml-block-0003",
+            "xml-block-0004"
+          ]
+        },
+        {
+          "paper": "osipova2020",
+          "unresolvable_recorded_xpath_blocks": [
+            "xml-block-0001"
+          ]
+        }
+      ],
+      "impact": "All 90 extracted blocks match original XML text; five abstract XPaths omit front/article-meta. Body sequence/experiment locators resolve."
+    },
+    {
+      "type": "biological_scope_decision",
+      "detail": "1555 matches 14/20; the six unmatched references all have nonzero historical hypoxia means and are not all negligible. This is target-coverage context only, not state-risk reranking or a predicted knockdown fraction."
+    },
+    {
+      "type": "wording",
+      "detail": "provisional_small_trial_candidates.json still uses Preregistered although WORDING_CORRECTION.md clarifies local prospective recording is not formal preregistration."
+    }
+  ],
+  "candidate_summary": [
+    {
+      "candidate_id": "VEGFA_SD_1555",
+      "guide_core19_5to3": "UGUACAAACAAAUGCUUUC",
+      "fixed_transcript_matches": "14",
+      "oligoformer_scaled_score": "0.9672560343146324",
+      "guide_seed_sites_non_target": "4051",
+      "guide_matched_genes_non_target": "3293"
+    },
+    {
+      "candidate_id": "VEGFA_SD_1157",
+      "guide_core19_5to3": "AUAGACAUCCAUGAACUUC",
+      "fixed_transcript_matches": "20",
+      "oligoformer_scaled_score": "0.9489940667152404",
+      "guide_seed_sites_non_target": "2197",
+      "guide_matched_genes_non_target": "1876"
+    },
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+      "fixed_transcript_matches": 18,
+      "oligoformer_scaled_score": 1.121934400320053,
+      "guide_seed_sites_non_target": "3539",
+      "guide_matched_genes_non_target": "2839"
+    }
+  ],
+  "live_response": {
+    "model": "doubao-seed-2-1-pro-260915",
+    "status": "completed",
+    "usage": {
+      "input_tokens": 6445,
+      "output_tokens": 371,
+      "total_tokens": 6816,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "library_version": "ac6d351a2e992bc86dfb87db6527861752c1ec6bab07adb7e33b667052576a54",
+    "model_calls": 1,
+    "claim_scope": "One targeted regression only; no general accuracy estimate."
+  },
+  "protected_old_paths": {
+    "compared": 70,
+    "changed": [],
+    "comparison_basis": "GitHub recursive trees ba13edd... vs ede70e5..."
+  },
+  "figure_checks": {
+    "visually_inspected": "figures/figure_pdf_preview.png",
+    "actual_pdf_basefonts": [
+      "ArialMT",
+      "Arial-BoldMT"
+    ],
+    "embedded_font_files": 2,
+    "scope": "Descriptive all-65 guide-score/seed plot plus separately purchased entry; no experimental accuracy claim."
+  },
+  "all_record_checks_passed": true,
+  "repository_binding": {
+    "files": 488,
+    "raw_exact": 485,
+    "LF_normalized": [
+      "app.py",
+      "conversation.py",
+      "knowledge.py"
+    ]
+  },
+  "runtime_assets_all_matched": 25,
+  "full_audit": {
+    "file": "20261024_1712_candidate_v2_followup_audit_full.json.gz",
+    "uncompressed_sha256": "27222419a1d039ebd575d676997bc16374b4fa62071d1a72bf750f8473aaa277",
+    "compressed_sha256": "49d135f8c5d6bb184675298374e8d48d83b061f36e53dd6324b66dfc0af77915",
+    "compressed_bytes": 12252,
+    "note": "Technical record checks, not scientific question accuracy or independent human scores."
+  }
+}
