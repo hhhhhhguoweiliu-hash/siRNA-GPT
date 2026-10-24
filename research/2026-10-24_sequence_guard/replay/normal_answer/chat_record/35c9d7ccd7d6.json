@@ -1,0 +1,296 @@
+{
+  "id": "35c9d7ccd7d6",
+  "messages": [
+    {
+      "id": "825886ae",
+      "role": "assistant",
+      "text": "你好，我们先从你最想解决的问题开始。你可以直接问我怎么筛、某个结果是什么意思，也可以让我核对这批VEGFA siRNA。需要计算时，我会先把步骤列出来。",
+      "time": "2026-10-24T15:08:26.500281+00:00"
+    },
+    {
+      "id": "113de88a",
+      "role": "assistant",
+      "text": "## 判定\n已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。\n\n## 关键结果\n\n| 项目 | 结果 |\n|---|---|\n| Candidate | `USER_PURCHASED_siVEGF` |\n| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |\n| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |\n| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |\n| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGAAA` |\n| 固定靶参考 | `NM_003376.6` |\n| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |\n| 参考转录本覆盖 | 20条参考中的18条 |\n| OligoFormer raw class1 | 0.8366401195526123 |\n| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |\n| official func filter | 0 |\n| guide seed位点数，含VEGFA | **3540** |\n| 排除VEGFA后的seed位点数 | **3539** |\n| 排除VEGFA后的去重seed匹配基因数 | **2839** |\n| 可映射表达表的非靶基因数 | 2836 |\n| 缺氧检出的非靶基因数 | **1595** |\n| 未映射表达表的非靶基因数 | 3；不等于不表达 |\n| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |\n\n补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。\n\n## 证据\n- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。\n- 固定靶 FASTA SHA256：`30059fb1...d9c706`。\n- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。\n- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。\n- 已生成：`report.html` 和 `candidates_ranked.tsv`。\n\n## 限制或下一步\n原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。",
+      "time": "2026-10-24T15:08:26.504274+00:00",
+      "kind": "result",
+      "run_id": "offline_sequence_replay_normal_answer",
+      "answer_validation": {
+        "version": "sequence_consistency_v1",
+        "status": "PASS",
+        "label": "模型序列检查通过",
+        "claim_count": 4,
+        "claims": [
+          {
+            "line": 9,
+            "sequence": "GAUAGAGCAAGACAAGAAATT",
+            "length": 21,
+            "expected_fields": [
+              "original_row1"
+            ],
+            "matched_verified_fields": [
+              {
+                "candidate_id": "USER_PURCHASED_siVEGF",
+                "field": "original_row1"
+              }
+            ],
+            "candidate_association": "explicit"
+          },
+          {
+            "line": 10,
+            "sequence": "UUUCUUGUCUUGCUCUAUCTT",
+            "length": 21,
+            "expected_fields": [
+              "original_row2"
+            ],
+            "matched_verified_fields": [
+              {
+                "candidate_id": "USER_PURCHASED_siVEGF",
+                "field": "original_row2"
+              }
+            ],
+            "candidate_association": "explicit"
+          },
+          {
+            "line": 11,
+            "sequence": "UUUCUUGUCUUGCUCUAUC",
+            "length": 19,
+            "expected_fields": [
+              "guide_core19_5to3"
+            ],
+            "matched_verified_fields": [
+              {
+                "candidate_id": "USER_PURCHASED_siVEGF",
+                "field": "guide_core19_5to3"
+              }
+            ],
+            "candidate_association": "explicit"
+          },
+          {
+            "line": 12,
+            "sequence": "GAUAGAGCAAGACAAGAAA",
+            "length": 19,
+            "expected_fields": [
+              "passenger_core19_5to3"
+            ],
+            "matched_verified_fields": [
+              {
+                "candidate_id": "USER_PURCHASED_siVEGF",
+                "field": "passenger_core19_5to3"
+              }
+            ],
+            "candidate_association": "explicit"
+          }
+        ],
+        "issues": [],
+        "raw_model_text_sha256": "287c2b48b590f5ea65d8458fb70ad65764737803dc79af25df6764b07f7e10d7",
+        "scope": "Checks contiguous nucleotide strings of at least 10 bases against checked input/tool fields, with role labels where explicit. Does not validate scientific conclusions, numerical claims, chemistry, or all natural-language strand statements.",
+        "is_scientific_accuracy_or_human_score": false
+      },
+      "verified_sequences": [
+        {
+          "candidate_id": "USER_PURCHASED_siVEGF",
+          "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+          "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA",
+          "guide_21nt_original": "UUUCUUGUCUUGCUCUAUCTT",
+          "passenger_21nt_original": "GAUAGAGCAAGACAAGAAATT",
+          "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+          "original_row2": "UUUCUUGUCUUGCUCUAUCTT",
+          "strand_assignment_basis": "DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles",
+          "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+          "reference_transcript": "NM_003376.6",
+          "core_start_1based": 1439,
+          "core_end_1based": 1457,
+          "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+          "design_window_23nt": "",
+          "evidence_source": "inspect_candidates; verify_target where present; unchanged original candidate fields",
+          "target_match_checked": true
+        }
+      ],
+      "model_summary_raw": "## 判定\n已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。\n\n## 关键结果\n\n| 项目 | 结果 |\n|---|---|\n| Candidate | `USER_PURCHASED_siVEGF` |\n| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |\n| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |\n| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |\n| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGAAA` |\n| 固定靶参考 | `NM_003376.6` |\n| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |\n| 参考转录本覆盖 | 20条参考中的18条 |\n| OligoFormer raw class1 | 0.8366401195526123 |\n| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |\n| official func filter | 0 |\n| guide seed位点数，含VEGFA | **3540** |\n| 排除VEGFA后的seed位点数 | **3539** |\n| 排除VEGFA后的去重seed匹配基因数 | **2839** |\n| 可映射表达表的非靶基因数 | 2836 |\n| 缺氧检出的非靶基因数 | **1595** |\n| 未映射表达表的非靶基因数 | 3；不等于不表达 |\n| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |\n\n补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。\n\n## 证据\n- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。\n- 固定靶 FASTA SHA256：`30059fb1...d9c706`。\n- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。\n- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。\n- 已生成：`report.html` 和 `candidates_ranked.tsv`。\n\n## 限制或下一步\n原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。"
+    }
+  ],
+  "events": [],
+  "plan": {
+    "tools": [
+      "inspect_candidates",
+      "verify_target",
+      "score_candidates",
+      "match_seed",
+      "query_expression",
+      "compile_report"
+    ],
+    "completed": [
+      "inspect_candidates",
+      "verify_target",
+      "score_candidates",
+      "match_seed",
+      "query_expression",
+      "compile_report"
+    ]
+  },
+  "result": {
+    "status": "COMPLETE",
+    "selected_for_review": [
+      "USER_PURCHASED_siVEGF"
+    ],
+    "report": "report.html",
+    "table": "candidates_ranked.tsv",
+    "rules": "先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。",
+    "not_order_ready": true,
+    "model_summary": "## 判定\n已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。\n\n## 关键结果\n\n| 项目 | 结果 |\n|---|---|\n| Candidate | `USER_PURCHASED_siVEGF` |\n| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |\n| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |\n| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |\n| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGAAA` |\n| 固定靶参考 | `NM_003376.6` |\n| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |\n| 参考转录本覆盖 | 20条参考中的18条 |\n| OligoFormer raw class1 | 0.8366401195526123 |\n| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |\n| official func filter | 0 |\n| guide seed位点数，含VEGFA | **3540** |\n| 排除VEGFA后的seed位点数 | **3539** |\n| 排除VEGFA后的去重seed匹配基因数 | **2839** |\n| 可映射表达表的非靶基因数 | 2836 |\n| 缺氧检出的非靶基因数 | **1595** |\n| 未映射表达表的非靶基因数 | 3；不等于不表达 |\n| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |\n\n补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。\n\n## 证据\n- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。\n- 固定靶 FASTA SHA256：`30059fb1...d9c706`。\n- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。\n- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。\n- 已生成：`report.html` 和 `candidates_ranked.tsv`。\n\n## 限制或下一步\n原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。",
+    "run_id": "offline_sequence_replay_normal_answer",
+    "model_summary_raw": "## 判定\n已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。\n\n## 关键结果\n\n| 项目 | 结果 |\n|---|---|\n| Candidate | `USER_PURCHASED_siVEGF` |\n| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |\n| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |\n| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |\n| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGAAA` |\n| 固定靶参考 | `NM_003376.6` |\n| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |\n| 参考转录本覆盖 | 20条参考中的18条 |\n| OligoFormer raw class1 | 0.8366401195526123 |\n| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |\n| official func filter | 0 |\n| guide seed位点数，含VEGFA | **3540** |\n| 排除VEGFA后的seed位点数 | **3539** |\n| 排除VEGFA后的去重seed匹配基因数 | **2839** |\n| 可映射表达表的非靶基因数 | 2836 |\n| 缺氧检出的非靶基因数 | **1595** |\n| 未映射表达表的非靶基因数 | 3；不等于不表达 |\n| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |\n\n补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。\n\n## 证据\n- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。\n- 固定靶 FASTA SHA256：`30059fb1...d9c706`。\n- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。\n- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。\n- 已生成：`report.html` 和 `candidates_ranked.tsv`。\n\n## 限制或下一步\n原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。",
+    "model_summary_display": "## 判定\n已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。\n\n## 关键结果\n\n| 项目 | 结果 |\n|---|---|\n| Candidate | `USER_PURCHASED_siVEGF` |\n| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |\n| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |\n| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |\n| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGAAA` |\n| 固定靶参考 | `NM_003376.6` |\n| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |\n| 参考转录本覆盖 | 20条参考中的18条 |\n| OligoFormer raw class1 | 0.8366401195526123 |\n| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |\n| official func filter | 0 |\n| guide seed位点数，含VEGFA | **3540** |\n| 排除VEGFA后的seed位点数 | **3539** |\n| 排除VEGFA后的去重seed匹配基因数 | **2839** |\n| 可映射表达表的非靶基因数 | 2836 |\n| 缺氧检出的非靶基因数 | **1595** |\n| 未映射表达表的非靶基因数 | 3；不等于不表达 |\n| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |\n\n补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。\n\n## 证据\n- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。\n- 固定靶 FASTA SHA256：`30059fb1...d9c706`。\n- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。\n- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。\n- 已生成：`report.html` 和 `candidates_ranked.tsv`。\n\n## 限制或下一步\n原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。",
+    "answer_validation": {
+      "version": "sequence_consistency_v1",
+      "status": "PASS",
+      "label": "模型序列检查通过",
+      "claim_count": 4,
+      "claims": [
+        {
+          "line": 9,
+          "sequence": "GAUAGAGCAAGACAAGAAATT",
+          "length": 21,
+          "expected_fields": [
+            "original_row1"
+          ],
+          "matched_verified_fields": [
+            {
+              "candidate_id": "USER_PURCHASED_siVEGF",
+              "field": "original_row1"
+            }
+          ],
+          "candidate_association": "explicit"
+        },
+        {
+          "line": 10,
+          "sequence": "UUUCUUGUCUUGCUCUAUCTT",
+          "length": 21,
+          "expected_fields": [
+            "original_row2"
+          ],
+          "matched_verified_fields": [
+            {
+              "candidate_id": "USER_PURCHASED_siVEGF",
+              "field": "original_row2"
+            }
+          ],
+          "candidate_association": "explicit"
+        },
+        {
+          "line": 11,
+          "sequence": "UUUCUUGUCUUGCUCUAUC",
+          "length": 19,
+          "expected_fields": [
+            "guide_core19_5to3"
+          ],
+          "matched_verified_fields": [
+            {
+              "candidate_id": "USER_PURCHASED_siVEGF",
+              "field": "guide_core19_5to3"
+            }
+          ],
+          "candidate_association": "explicit"
+        },
+        {
+          "line": 12,
+          "sequence": "GAUAGAGCAAGACAAGAAA",
+          "length": 19,
+          "expected_fields": [
+            "passenger_core19_5to3"
+          ],
+          "matched_verified_fields": [
+            {
+              "candidate_id": "USER_PURCHASED_siVEGF",
+              "field": "passenger_core19_5to3"
+            }
+          ],
+          "candidate_association": "explicit"
+        }
+      ],
+      "issues": [],
+      "raw_model_text_sha256": "287c2b48b590f5ea65d8458fb70ad65764737803dc79af25df6764b07f7e10d7",
+      "scope": "Checks contiguous nucleotide strings of at least 10 bases against checked input/tool fields, with role labels where explicit. Does not validate scientific conclusions, numerical claims, chemistry, or all natural-language strand statements.",
+      "is_scientific_accuracy_or_human_score": false
+    },
+    "verified_sequences": [
+      {
+        "candidate_id": "USER_PURCHASED_siVEGF",
+        "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+        "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA",
+        "guide_21nt_original": "UUUCUUGUCUUGCUCUAUCTT",
+        "passenger_21nt_original": "GAUAGAGCAAGACAAGAAATT",
+        "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+        "original_row2": "UUUCUUGUCUUGCUCUAUCTT",
+        "strand_assignment_basis": "DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles",
+        "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+        "reference_transcript": "NM_003376.6",
+        "core_start_1based": 1439,
+        "core_end_1based": 1457,
+        "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+        "design_window_23nt": "",
+        "evidence_source": "inspect_candidates; verify_target where present; unchanged original candidate fields",
+        "target_match_checked": true
+      }
+    ],
+    "answer_sequence_status": "NO_CONFLICT_DETECTED",
+    "workflow_completion_is_answer_correctness": false,
+    "record_kind": "OFFLINE_SAVED_ANSWER_REPLAY",
+    "new_model_requests": 0,
+    "new_scientific_tool_calls": 0,
+    "replay_note": "确定性正常对照：只将错误串替换为核验19位核心，不冒充当时原答"
+  },
+  "phase": "complete",
+  "research": {
+    "status": "idle",
+    "steps": [],
+    "sources": []
+  },
+  "source_registry": {},
+  "evidence_records": [],
+  "runtime": {
+    "version": "0.7-cloud",
+    "commit": "local",
+    "assets": {
+      "core.py": "e30d537b7817a57b3682238e12ac46d99f97a15ef4ac65fe12abf4e9f9be0340",
+      "conversation.py": "41225a351110bf64d034494fd26c1c524f9ff76448e50860abd215f3e38fbd9b",
+      "research.py": "92374d857e8b8d08f972c8149efc1c533ae91a2c4c5ca6b56285c2f6eccf8f38",
+      "knowledge.py": "e6399125e804571218c78bfb0ab8cd52a10c0f162ceac3c869e7a6227a807e6d",
+      "literature.py": "0e18ebeb2efa7974655c57ef6a2ad3e5699e4ad2ebb1468d420c303fe90d2093",
+      "pdf_text_worker.py": "e1d9df6fbec7c153c694946a08f04e00ea9c2b0607d199102c1b80be9ba50ed1",
+      "library_ui.js": "619e95e78e399a6e8b6ee36ca70e488a401ff6bf0bc75055426fc5eb3c0a84ca",
+      "library_demo.py": "6f5ab4dc0f749855e77faadd632da85b08f3001a7ea60cf019901730d82a7853",
+      "model_client.py": "3668b6add2e84ef913ac542db15981cc2d46e933fca78a804e54054b7cda0769",
+      "expression_data.py": "209d5afb92294051b6c64fc058550d99aa568a5ada5baa5d5c50668f53f20bc5",
+      "evaluate.py": "9a43c7d882c89c71ecb16a5f77630d9b9a2c363f69b70db8a93e6308abd0d0ef",
+      "paper_pilot.py": "c4b4c97b47ec568cd4b6fb908a5d503117db59f66078e26e4656d1d2a98eec0d",
+      "evaluation_protocol.py": "8486bcdc5358baa223a94e83c3c1e9533868a90f6469eca69117347d25af8f13",
+      "evaluation_cases.example.json": "31138b0927b76396144c8126f01b4f8e626e990380406e81ec01f6185f15a66c",
+      "evaluation_contract.py": "9c533a935441e16988d66d5fa3630b103c4980526da92def85ccdb7b492ced77",
+      "evaluation_rubric.json": "e41f739438a393733c7f83e0dc73385f5fc0120a051128a7043a4abf59af6676",
+      "review_package.py": "0f974ccdd6e38ba4eb56ae008514380a899949af4e45b8de81b4d21ca06d4be2",
+      "data/candidates.tsv": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853",
+      "data/historical_scores.tsv": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+      "data/VEGFA.fasta": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "data/expression.tsv.gz": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+      "data/historical_seed_matches.tsv": "3701a561a84cdf9df29108f6c235398cc377901a598293071f5724f706f2ac3c",
+      "data/provenance.json": "c2f0ff2200cbbbd79e73724db2a4673c0a356ae3dbe548380c6f0b6223c7ef18",
+      "references/sirna_library/sources.json": "bab3fc8132b6588d9cde45b3cd21f6047c088ff879d86e39219bb01413c7f537",
+      "references/vegfa_experiments_20261024/sources.json": "73a924f260fd21a16804444e0d4c0727ececd0dc96f88150d800c139b20c309d",
+      "verified_imports.py": "a0ced5609effc4c15c0be5d7402872b1b7ae63d44c5bbf567d61123ee9fa317b",
+      "data/purchased_sivegf_20261024_v1/manifest.json": "17d87eae5d0c36db21a3e7642777e2a83ee80df309beb0f33d9e3f00b313c687",
+      "references/vegfa_experiments_20261024/chen2013_locators.json": "7d8679adf3c59eb67a3af66ce1cb389970c1f63dc5c6440a99d4510eaf222c51",
+      "references/vegfa_experiments_20261024/osipova2020_locators.json": "92d632bcd6d1ba2900159362421aab0e709b6c6865025eba2ba3cc4b2d8b0033",
+      "sequence_validation.py": "abf4d294a9890a7960cebb11b68551f8997b3e66d18866ee8ace34064ee69137",
+      "sequence_ui.js": "4d4baaa957c0b50657ecf610544174def12ed2422ca64e75d4930c9e23e73bed"
+    },
+    "scientific_mode": "verified_imports",
+    "knowledge_review": "retrieved_sources_not_independently_scored",
+    "literature_component": "scoped_library_v1",
+    "literature_source_manifest": "references/sirna_library/sources.json",
+    "specialized_fine_tuned_model": false,
+    "durable_cloud_storage": false
+  },
+  "previous_runs": [],
+  "note": "Conversation record; API credentials are never included."
+}

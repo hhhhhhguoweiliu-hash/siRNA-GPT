@@ -1,0 +1,20 @@
+[
+  {
+    "candidate_id": "USER_PURCHASED_siVEGF",
+    "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+    "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA",
+    "guide_21nt_original": "UUUCUUGUCUUGCUCUAUCTT",
+    "passenger_21nt_original": "GAUAGAGCAAGACAAGAAATT",
+    "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+    "original_row2": "UUUCUUGUCUUGCUCUAUCTT",
+    "strand_assignment_basis": "DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles",
+    "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+    "reference_transcript": "NM_003376.6",
+    "core_start_1based": 1439,
+    "core_end_1based": 1457,
+    "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+    "design_window_23nt": "",
+    "evidence_source": "inspect_candidates; verify_target where present; unchanged original candidate fields",
+    "target_match_checked": true
+  }
+]

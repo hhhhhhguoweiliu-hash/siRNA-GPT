@@ -154,14 +154,19 @@ class PlannedSession(Session):
         if 'compile_report' in self.state:
             report = json.loads((self.path/'report.json').read_text(encoding='utf-8'))
             if summary:
-                report.update(model_summary=summary, agent_status='TEST_TRANSPORT_ONLY' if test_only else 'COMPLETED_WITH_REAL_API')
+                self.finalize_model_summary(report,summary,'TEST_TRANSPORT_ONLY' if test_only else 'COMPLETED_WITH_REAL_API')
             else: report['agent_status'] = 'FIXED_WORKFLOW_NO_LLM' if self.mode=='workflow' else 'GUIDED_TOOLS_NO_LLM'
             save_json(self.path/'report.json', report); self.render(report)
             result = {**self.state['compile_report'], 'model_summary': summary, 'run_id': self.id}
+            for key in ('model_summary_raw','model_summary_display','answer_validation','verified_sequences','answer_sequence_status','workflow_completion_is_answer_correctness'):
+                if key in report:result[key]=report[key]
         else:
             result = {'status': 'PARTIAL_COMPLETE', 'run_id': self.id, 'completed_tools': self.planned_tools,
                 'message': summary or '\n'.join(observed(n, self.state[n]) for n in self.planned_tools),
                 'note': '本次只完成所选核对任务，没有生成完整筛选报告或候选排序。'}
+            if summary:
+                from sequence_validation import answer_evidence
+                result.update(answer_evidence(summary,self.candidates,self.state))
         save_json(self.path/'result.json', result)
         return result
 
@@ -456,11 +461,12 @@ class Conversation:
             self.result = result; self.phase = 'complete' if result['status'] in ('COMPLETE', 'PARTIAL_COMPLETE') else 'incomplete'
             if self.plan: self.plan['completed'] = [n for n in self.plan['tools'] if n in self.session.state]
             if result['status'] == 'COMPLETE':
-                text = result.get('model_summary') or observed('compile_report', result)
+                text = result.get('model_summary_display') or result.get('model_summary') or observed('compile_report', result)
             elif result['status'] == 'PARTIAL_COMPLETE' and self.session.mode == 'guided':
                 text = '这次选的核对步骤都做完了，结果和原始记录已经保留下来。我们还没有做完整的候选排序；如果你想接着评分或检查seed匹配，直接告诉我就行。'
-            else: text = result.get('message', '任务未完成') + '\n' + result.get('note', '')
-            self.add('assistant', text, kind='result', run_id=self.session.id)
+            else: text = result.get('model_summary_display') or result.get('message', '任务未完成') + '\n' + result.get('note', '')
+            extra={k:result[k] for k in ('answer_validation','verified_sequences','model_summary_raw') if k in result}
+            self.add('assistant', text, kind='result', run_id=self.session.id,**extra)
             self.persist()
 
     def answer_from_library(self,text):

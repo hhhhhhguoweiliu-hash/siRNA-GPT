@@ -1,0 +1,37 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>RPE siRNA 候选报告</title><style>body{font:16px/1.7 "Microsoft YaHei",sans-serif;max-width:1250px;margin:40px auto;padding:0 28px;color:#172d3d;background:#f5f8fa}h1{font-size:30px}small{color:#527080}table{border-collapse:collapse;background:white;width:100%;font-size:13px}th,td{padding:12px;border:1px solid #d7e1e7;text-align:left;overflow-wrap:anywhere}th{background:#e6f0f4}section{margin:28px 0}a{color:#126c78}.scroll{overflow:auto}</style><h1>缺氧RPE siRNA筛选辅助 · 首份候选报告</h1><p>已保存回答离线回放 · 本次未调用模型 | offline_sequence_replay_known_error_24</p><p><strong>已保存回答的离线回放：本次没有调用模型或科学工具，不是新的真实Agent运行。</strong></p><section class="sequence-evidence" style="border:2px solid #b54735;padding:16px" data-sequence-status="FAIL"><h2>模型序列检查未通过</h2><p>关键序列由程序直接读取已核验输入和工具字段，未由模型重新生成。此项检查不等于科学回答全部正确。</p><div class="scroll"><table><tr><th>候选</th><th>引导链核心 5′→3′</th><th>另一链核心 5′→3′</th></tr><tr><td>USER_PURCHASED_siVEGF</td><td>UUUCUUGUCUUGCUCUAUC</td><td>GAUAGAGCAAGACAAGAAA</td></tr></table></div><p>原始第1行：GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）</p><p>原始第2行：UUUCUUGUCUUGCUCUAUCTT</p><p>原引导链全长：UUUCUUGUCUUGCUCUAUCTT</p><p>原另一链全长：GAUAGAGCAAGACAAGAAATT</p><p>链角色依据：DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles</p><p>原修饰说明：Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified</p><p>与核验字段不一致的序列：GAUAGAGCAAGACAAGACAAGAAA。原答未通过，不应作为序列依据。</p></section><p>关注状态：缺氧。工具模式：明确导入历史工具输出。近似匹配为历史证据。</p><section><h2>优先核查候选</h2><p>USER_PURCHASED_siVEGF</p><p>先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。</p><p>这是计算核查建议，尚非订购或实验有效性结论。</p></section><section><h2>表达数据来源与TPM</h2><p>本项目2026-10-16整理的ARPE-19基线表达表；PACKAGED_PROJECT_DATA</p><p>VEGFA常氧平均TPM 20.09929925；缺氧平均TPM 102.390068。这些是基线表达，不是敲低率，也不进入OligoFormer。</p><p>同一培养批次，每状态4皿；未转染；缺氧1% O2 24h</p><p>检测规则：TPM≥1且至少2/4样本；仅供表达背景复核，不作安全阈值，不改变排序。下表排除目标基因VEGFA；未映射不等于不表达。</p><div class="scroll"><table><tr><th>候选</th><th>seed匹配非靶基因</th><th>常氧检测到</th><th>缺氧检测到</th><th>仅缺氧检测到</th><th>仅常氧检测到</th><th>未映射</th></tr><tr><td>USER_PURCHASED_siVEGF</td><td>2839</td><td>1695</td><td>1595</td><td>23</td><td>123</td><td>3</td></tr></table></div><p>下载两状态比较表 · 下载逐基因TPM与匹配明细 · 数据来源记录</p></section><section><h2>候选证据表</h2><div class="scroll"><table><tr><th>顺序</th><th>候选</th><th>guide配对核心 5′→3′</th><th>模型分数 非百分比</th><th>覆盖转录本数</th><th>seed匹配基因数</th><th>其中所选状态检测到表达</th><th>待核对提示</th></tr><tr><td>1</td><td>USER_PURCHASED_siVEGF</td><td>UUUCUUGUCUUGCUCUAUC</td><td>1.121934400320053</td><td>18</td><td>2839</td><td>1595</td><td></td></tr></table></div></section><section><h2>既购原件与单独计算版本</h2><p>USER_PURCHASED_siVEGF · purchased_sivegf_20261024_v1</p><p>原第1行：GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）；原第2行：UUUCUUGUCUUGCUCUAUCTT</p><p>两行均按5′→3′书写推导第2行为guide，未获供应商确认。TT与N3原样保留；模型未模拟N3连接实物。</p><p>guide非靶seed：3539个位点 / 2839个去重基因；另一链：1402个位点 / 1286个基因。近全长4查询在固定全转录本参考中均无已映射非靶或未知映射的0/1错配命中；2错配结果详见结构化结果和原始文件。</p><p>这些是版本绑定的本地真实计算导入；本网页未重新运行重型模型或扫描。版本与文件指纹</p></section><section><h2>豆包任务解读（含序列检查）</h2><p style="white-space:pre-wrap">模型序列检查未通过。关键序列直接见下方已核验字段；原始模型文字单独保留，不能按错误序列写论文或订购。工具完成情况以执行记录为准。</p><details><summary>原始模型文字（原样保留，不替代核验字段）</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere">## 判定
+已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。
+
+## 关键结果
+
+| 项目 | 结果 |
+|---|---|
+| Candidate | `USER_PURCHASED_siVEGF` |
+| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |
+| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |
+| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |
+| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGACAAGAAA` |
+| 固定靶参考 | `NM_003376.6` |
+| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |
+| 参考转录本覆盖 | 20条参考中的18条 |
+| OligoFormer raw class1 | 0.8366401195526123 |
+| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |
+| official func filter | 0 |
+| guide seed位点数，含VEGFA | **3540** |
+| 排除VEGFA后的seed位点数 | **3539** |
+| 排除VEGFA后的去重seed匹配基因数 | **2839** |
+| 可映射表达表的非靶基因数 | 2836 |
+| 缺氧检出的非靶基因数 | **1595** |
+| 未映射表达表的非靶基因数 | 3；不等于不表达 |
+| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |
+
+补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。
+
+## 证据
+- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。
+- 固定靶 FASTA SHA256：`30059fb1...d9c706`。
+- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。
+- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。
+- 已生成：`report.html` 和 `candidates_ranked.tsv`。
+
+## 限制或下一步
+原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。</pre></details><small>序列一致性检查不评价全部科研结论；分数和证据以原始记录为准。</small></section><section><h2>本次边界</h2><ul><li>仅人VEGFA及当前参考</li><li>候选来源由用户提供；原始订购双链已保存，链角色及确切修饰化学仍有未确认部分</li><li>仅guide mer7m8匹配，不是全面脱靶或毒性检测</li><li>近似匹配使用经序列核对的历史结果</li><li>模型分数不是敲低百分比</li><li>待确认化学形式与成熟SOP；不作为订购单</li><li>当前推荐规则用于流程原型，尚未经生物学效力验证</li><li>既购两行均按5′→3′书写推导链角色，未获供应商确认；原始TT与N3保留</li><li>模型未模拟N3连接实物；分数不证明修饰/递送或实验效力</li><li>既购两链各两种近全长窗口按固定全转录本参考导入；表达关联只使用guide seed结果</li></ul></section><p>候选表 · 匹配与表达明细 · 执行记录 · 结构化结果</p></html><p>此页只回放序列检查显示，不产生新工具数据；真实原件保留在此前案例导出包。</p>

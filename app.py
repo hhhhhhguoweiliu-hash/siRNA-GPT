@@ -102,6 +102,13 @@ class Handler(BaseHTTPRequestHandler):
    from runtime_info import manifest
    return self.send(manifest())
   if path=='/library_ui.js':return self.send((HOME/'library_ui.js').read_bytes(),kind='application/javascript; charset=utf-8')
+  if path=='/sequence_ui.js':return self.send((HOME/'sequence_ui.js').read_bytes(),kind='application/javascript; charset=utf-8')
+  if path=='/sequence-check-replay' or path.startswith('/sequence-check-replay/'):
+   folder=HOME/'research/2026-10-24_sequence_guard/replay'
+   name='index.html' if path=='/sequence-check-replay' else path.removeprefix('/sequence-check-replay/')
+   allowed={'index.html'}|{case+'/'+file for case in ('known_error_24','wrong_base_19','normal_answer') for file in ('chat.html','report.html','report.json','result.json','answer_validation.json')}
+   if name not in allowed or not (folder/name).is_file():return self.send({'error':'Not found'},404)
+   return self.send((folder/name).read_bytes(),kind='application/json; charset=utf-8' if name.endswith('.json') else 'text/html; charset=utf-8')
   if path in ('/api/library','/api/library-export') or path.startswith(('/library/','/api/library/original/')):
    from literature import get_library,chunks
    library=get_library()

@@ -282,6 +282,10 @@ class Session:
   report['expression_source']=self.expression_source
   report['expression_comparison']=self.state['query_expression']['candidate_summary']
   report['expression_changes_ranking']=False
+  from sequence_validation import verified_rows,VERSION as sequence_check_version
+  report['verified_sequences']=verified_rows(self.candidates,self.state)
+  report['answer_validation']={'version':sequence_check_version,'status':'NO_MODEL_ANSWER','label':'已核验序列；未生成模型总结','issues':[],
+   'is_scientific_accuracy_or_human_score':False}
   if self.verified_imports:
    report['versioned_imports']={cid:{'manifest':b['manifest'],'input':b['candidate'],'both_strand_seed_and_nearfull_summary':b['result']} for cid,b in self.verified_imports.items()}
    report['limitations'].extend(['既购两行均按5′→3′书写推导链角色，未获供应商确认；原始TT与N3保留','模型未模拟N3连接实物；分数不证明修饰/递送或实验效力','既购两链各两种近全长窗口按固定全转录本参考导入；表达关联只使用guide seed结果'])
@@ -289,12 +293,26 @@ class Session:
    report['limitations'][1]='候选来源由用户提供；原始订购双链已保存，链角色及确切修饰化学仍有未确认部分'
   save_json(self.path/'report.json',report);self.render(report)
   return {'status':'COMPLETE','selected_for_review':selected,'report':'report.html','table':'candidates_ranked.tsv','rules':report['rules'],'not_order_ready':True}
+ def finalize_model_summary(self,report,text,agent_status):
+  from sequence_validation import answer_evidence
+  evidence=answer_evidence(text,self.candidates,self.state)
+  report.update(evidence,agent_status=agent_status)
+  save_json(self.path/'model_summary_raw.json',{'text':text,'sha256':evidence['answer_validation']['raw_model_text_sha256'],
+   'note':'Original generated text; not silently corrected. Read answer_validation before use.'})
+  save_json(self.path/'answer_validation.json',evidence['answer_validation'])
+  save_json(self.path/'verified_sequences.json',evidence['verified_sequences'])
+  save_json(self.path/'report.json',report);self.render(report)
+  return evidence
  def render(self,r):
   esc=lambda v:html.escape(str(v))
   t=r['expression'];mode='API Agent' if self.mode=='agent' else 'Guided tools (no LLM)' if self.mode=='guided' else '固定工具流程演示 · 未调用大模型'
+  if r.get('record_kind')=='OFFLINE_SAVED_ANSWER_REPLAY':mode='已保存回答离线回放 · 本次未调用模型'
   body=''.join('<tr>'+''.join('<td>'+esc(x[k])+'</td>' for k in ['priority','candidate_id','guide_core19_5to3','score','covered_transcripts','seed_matched_genes','state_detected_matched_genes','review_flags'])+'</tr>' for x in r['rows'])
   content='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>RPE siRNA 候选报告</title><style>body{font:16px/1.7 "Microsoft YaHei",sans-serif;max-width:1250px;margin:40px auto;padding:0 28px;color:#172d3d;background:#f5f8fa}h1{font-size:30px}small{color:#527080}table{border-collapse:collapse;background:white;width:100%;font-size:13px}th,td{padding:12px;border:1px solid #d7e1e7;text-align:left;overflow-wrap:anywhere}th{background:#e6f0f4}section{margin:28px 0}a{color:#126c78}.scroll{overflow:auto}</style>'''
   content+='<h1>缺氧RPE siRNA筛选辅助 · 首份候选报告</h1><p>'+esc(mode)+' | '+esc(self.id)+'</p>'
+  if r.get('record_kind')=='OFFLINE_SAVED_ANSWER_REPLAY':content+='<p><strong>已保存回答的离线回放：本次没有调用模型或科学工具，不是新的真实Agent运行。</strong></p>'
+  from sequence_validation import evidence_html
+  content+=evidence_html(r.get('answer_validation'),r.get('verified_sequences',[]))
   content+='<p>关注状态：'+('缺氧' if self.task['state']=='Hypoxia' else '常氧')+'。工具模式：'+('本次实时执行OligoFormer和SeedMatchR' if self.tool_mode=='live' else '明确导入历史工具输出')+'。近似匹配为历史证据。</p>'
   content+='<section><h2>优先核查候选</h2><p>'+esc('、'.join(r['selected_for_review']) or '暂无无复核提示的候选')+'</p><p>'+esc(r['rules'])+'</p><p>这是计算核查建议，尚非订购或实验有效性结论。</p></section>'
   content+='<section><h2>表达数据来源与TPM</h2><p>'+esc(self.expression_source['label'])+'；'+esc(self.expression_source['source'])+'</p><p>VEGFA常氧平均TPM '+esc(t['TPM_Normoxia_mean'])+'；缺氧平均TPM '+esc(t['TPM_Hypoxia_mean'])+'。这些是基线表达，不是敲低率，也不进入OligoFormer。</p><p>'+esc(self.expression_source['scope'])+'</p><p>检测规则：TPM≥1且至少2/4样本；仅供表达背景复核，不作安全阈值，不改变排序。下表排除目标基因VEGFA；未映射不等于不表达。</p><div class="scroll"><table><tr><th>候选</th><th>seed匹配非靶基因</th><th>常氧检测到</th><th>缺氧检测到</th><th>仅缺氧检测到</th><th>仅常氧检测到</th><th>未映射</th></tr>'+''.join('<tr>'+''.join('<td>'+esc(x[k])+'</td>' for k in ['candidate_id','matched_genes','normoxia_detected_genes','hypoxia_detected_genes','hypoxia_only_detected_genes','normoxia_only_detected_genes','unmapped_genes'])+'</tr>' for x in r['expression_comparison'])+'</table></div><p><a href="expression_comparison.tsv">下载两状态比较表</a> · <a href="seed_expression_details.tsv">下载逐基因TPM与匹配明细</a> · <a href="expression_source.json">数据来源记录</a></p></section>'
@@ -303,8 +321,12 @@ class Session:
    inp=b['input'];summary=b['both_strand_seed_and_nearfull_summary']
    content+='<section><h2>既购原件与单独计算版本</h2><p>'+esc(cid)+' · '+esc(b['manifest']['dataset_id'])+'</p><p>原第1行：'+esc(inp['original_row1'])+'；原第2行：'+esc(inp['original_row2'])+'</p><p>两行均按5′→3′书写推导第2行为guide，未获供应商确认。TT与N3原样保留；模型未模拟N3连接实物。</p><p>guide非靶seed：'+esc(summary['guide_seed_sites_non_target'])+'个位点 / '+esc(summary['guide_matched_genes_non_target'])+'个去重基因；另一链：'+esc(summary['passenger_seed_sites_non_target'])+'个位点 / '+esc(summary['passenger_matched_genes_non_target'])+'个基因。近全长4查询在固定全转录本参考中均无已映射非靶或未知映射的0/1错配命中；2错配结果详见结构化结果和原始文件。</p><p>这些是版本绑定的本地真实计算导入；本网页未重新运行重型模型或扫描。<a href="verified_import/'+esc(b['manifest']['dataset_id'])+'/manifest.json">版本与文件指纹</a></p></section>'
   if r.get('model_summary'):
-   content+='<section><h2>豆包任务解读</h2><p style="white-space:pre-wrap">'+esc(r['model_summary'])+'</p><small>以上为模型生成的解读；序列、分数和证据以本报告表格及原始记录为准。</small></section>'
+   content+='<section><h2>豆包任务解读（含序列检查）</h2><p style="white-space:pre-wrap">'+esc(r.get('model_summary_display',r['model_summary']))+'</p><details><summary>原始模型文字（原样保留，不替代核验字段）</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere">'+esc(r.get('model_summary_raw',r['model_summary']))+'</pre></details><small>序列一致性检查不评价全部科研结论；分数和证据以原始记录为准。</small></section>'
   content+='<section><h2>本次边界</h2><ul>'+''.join('<li>'+esc(x)+'</li>' for x in r['limitations'])+'</ul></section><p><a href="candidates_ranked.tsv">候选表</a> · <a href="seed_expression_details.tsv">匹配与表达明细</a> · <a href="events.jsonl">执行记录</a> · <a href="report.json">结构化结果</a></p></html>'
+  if r.get('record_kind')=='OFFLINE_SAVED_ANSWER_REPLAY':
+   import re
+   content=re.sub(r'<a [^>]*>(.*?)</a>',r'\1',content)
+   content+='<p>此页只回放序列检查显示，不产生新工具数据；真实原件保留在此前案例导出包。</p>'
   (self.path/'report.html').write_text(content,encoding='utf-8')
  def run_workflow(self):
   self.emit('started','固定工具流程；本次没有调用大模型')
@@ -335,9 +357,8 @@ class Session:
      self.emit('clarification',text or '模型未完成所有步骤');return {'status':'INCOMPLETE_OR_CLARIFICATION','message':text,'run_id':self.id}
     self.emit('completed','模型工具调用完成；数值报告以程序表格为准')
     report=json.loads((self.path/'report.json').read_text(encoding='utf-8'))
-    report.update(model_summary=text,agent_status='COMPLETED_WITH_REAL_API' if transport is None else 'TEST_TRANSPORT_ONLY')
-    save_json(self.path/'report.json',report);self.render(report)
-    return {**self.state['compile_report'],'model_summary':text}
+    evidence=self.finalize_model_summary(report,text,'COMPLETED_WITH_REAL_API' if transport is None else 'TEST_TRANSPORT_ONLY')
+    return {**self.state['compile_report'],**evidence}
    for call in calls:
     try:args=json.loads(call['function']['arguments']);result=self.call(call['function']['name'],args)
     except Exception as e:result={'status':'ERROR','message':str(e)}

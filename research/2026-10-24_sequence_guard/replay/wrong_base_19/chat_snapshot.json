@@ -1,0 +1,280 @@
+{
+  "id": "ec32dc48fdda",
+  "messages": [
+    {
+      "id": "15979101",
+      "role": "assistant",
+      "text": "你好，我们先从你最想解决的问题开始。你可以直接问我怎么筛、某个结果是什么意思，也可以让我核对这批VEGFA siRNA。需要计算时，我会先把步骤列出来。",
+      "time": "2026-10-24T15:08:26.401018+00:00"
+    },
+    {
+      "id": "9074d4e8",
+      "role": "assistant",
+      "text": "模型序列检查未通过。关键序列直接见下方已核验字段；原始模型文字单独保留，不能按错误序列写论文或订购。工具完成情况以执行记录为准。",
+      "time": "2026-10-24T15:08:26.406386+00:00",
+      "kind": "result",
+      "run_id": "offline_sequence_replay_wrong_base_19",
+      "answer_validation": {
+        "version": "sequence_consistency_v1",
+        "status": "FAIL",
+        "label": "模型序列检查未通过",
+        "claim_count": 4,
+        "claims": [
+          {
+            "line": 9,
+            "sequence": "GAUAGAGCAAGACAAGAAATT",
+            "length": 21,
+            "expected_fields": [
+              "original_row1"
+            ],
+            "matched_verified_fields": [
+              {
+                "candidate_id": "USER_PURCHASED_siVEGF",
+                "field": "original_row1"
+              }
+            ],
+            "candidate_association": "explicit"
+          },
+          {
+            "line": 10,
+            "sequence": "UUUCUUGUCUUGCUCUAUCTT",
+            "length": 21,
+            "expected_fields": [
+              "original_row2"
+            ],
+            "matched_verified_fields": [
+              {
+                "candidate_id": "USER_PURCHASED_siVEGF",
+                "field": "original_row2"
+              }
+            ],
+            "candidate_association": "explicit"
+          },
+          {
+            "line": 11,
+            "sequence": "UUUCUUGUCUUGCUCUAUC",
+            "length": 19,
+            "expected_fields": [
+              "guide_core19_5to3"
+            ],
+            "matched_verified_fields": [
+              {
+                "candidate_id": "USER_PURCHASED_siVEGF",
+                "field": "guide_core19_5to3"
+              }
+            ],
+            "candidate_association": "explicit"
+          },
+          {
+            "line": 12,
+            "sequence": "GAUAGAGCAAGACAAGAAC",
+            "length": 19,
+            "expected_fields": [
+              "passenger_core19_5to3"
+            ],
+            "matched_verified_fields": [],
+            "candidate_association": "explicit"
+          }
+        ],
+        "issues": [
+          {
+            "line": 12,
+            "sequence": "GAUAGAGCAAGACAAGAAC",
+            "length": 19,
+            "expected_fields": [
+              "passenger_core19_5to3"
+            ],
+            "matched_verified_fields": [],
+            "candidate_association": "explicit",
+            "reason": "SEQUENCE_NOT_EQUAL_TO_VERIFIED_FIELD",
+            "correct_fields": [
+              {
+                "candidate_id": "USER_PURCHASED_siVEGF",
+                "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA"
+              }
+            ]
+          }
+        ],
+        "raw_model_text_sha256": "9be239d4954dbf703e2c3ee8850cec65b6e15f7d6e1cee10c419a78043a9eae6",
+        "scope": "Checks contiguous nucleotide strings of at least 10 bases against checked input/tool fields, with role labels where explicit. Does not validate scientific conclusions, numerical claims, chemistry, or all natural-language strand statements.",
+        "is_scientific_accuracy_or_human_score": false
+      },
+      "verified_sequences": [
+        {
+          "candidate_id": "USER_PURCHASED_siVEGF",
+          "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+          "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA",
+          "guide_21nt_original": "UUUCUUGUCUUGCUCUAUCTT",
+          "passenger_21nt_original": "GAUAGAGCAAGACAAGAAATT",
+          "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+          "original_row2": "UUUCUUGUCUUGCUCUAUCTT",
+          "strand_assignment_basis": "DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles",
+          "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+          "reference_transcript": "NM_003376.6",
+          "core_start_1based": 1439,
+          "core_end_1based": 1457,
+          "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+          "design_window_23nt": "",
+          "evidence_source": "inspect_candidates; verify_target where present; unchanged original candidate fields",
+          "target_match_checked": true
+        }
+      ],
+      "model_summary_raw": "## 判定\n已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。\n\n## 关键结果\n\n| 项目 | 结果 |\n|---|---|\n| Candidate | `USER_PURCHASED_siVEGF` |\n| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |\n| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |\n| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |\n| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGAAC` |\n| 固定靶参考 | `NM_003376.6` |\n| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |\n| 参考转录本覆盖 | 20条参考中的18条 |\n| OligoFormer raw class1 | 0.8366401195526123 |\n| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |\n| official func filter | 0 |\n| guide seed位点数，含VEGFA | **3540** |\n| 排除VEGFA后的seed位点数 | **3539** |\n| 排除VEGFA后的去重seed匹配基因数 | **2839** |\n| 可映射表达表的非靶基因数 | 2836 |\n| 缺氧检出的非靶基因数 | **1595** |\n| 未映射表达表的非靶基因数 | 3；不等于不表达 |\n| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |\n\n补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。\n\n## 证据\n- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。\n- 固定靶 FASTA SHA256：`30059fb1...d9c706`。\n- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。\n- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。\n- 已生成：`report.html` 和 `candidates_ranked.tsv`。\n\n## 限制或下一步\n原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。"
+    }
+  ],
+  "events": [],
+  "plan": {
+    "tools": [
+      "inspect_candidates",
+      "verify_target",
+      "score_candidates",
+      "match_seed",
+      "query_expression",
+      "compile_report"
+    ],
+    "completed": [
+      "inspect_candidates",
+      "verify_target",
+      "score_candidates",
+      "match_seed",
+      "query_expression",
+      "compile_report"
+    ]
+  },
+  "busy": false,
+  "phase": "complete",
+  "result": {
+    "status": "COMPLETE",
+    "selected_for_review": [
+      "USER_PURCHASED_siVEGF"
+    ],
+    "report": "report.html",
+    "table": "candidates_ranked.tsv",
+    "rules": "先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。",
+    "not_order_ready": true,
+    "model_summary": "## 判定\n已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。\n\n## 关键结果\n\n| 项目 | 结果 |\n|---|---|\n| Candidate | `USER_PURCHASED_siVEGF` |\n| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |\n| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |\n| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |\n| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGAAC` |\n| 固定靶参考 | `NM_003376.6` |\n| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |\n| 参考转录本覆盖 | 20条参考中的18条 |\n| OligoFormer raw class1 | 0.8366401195526123 |\n| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |\n| official func filter | 0 |\n| guide seed位点数，含VEGFA | **3540** |\n| 排除VEGFA后的seed位点数 | **3539** |\n| 排除VEGFA后的去重seed匹配基因数 | **2839** |\n| 可映射表达表的非靶基因数 | 2836 |\n| 缺氧检出的非靶基因数 | **1595** |\n| 未映射表达表的非靶基因数 | 3；不等于不表达 |\n| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |\n\n补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。\n\n## 证据\n- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。\n- 固定靶 FASTA SHA256：`30059fb1...d9c706`。\n- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。\n- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。\n- 已生成：`report.html` 和 `candidates_ranked.tsv`。\n\n## 限制或下一步\n原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。",
+    "run_id": "offline_sequence_replay_wrong_base_19",
+    "model_summary_raw": "## 判定\n已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。\n\n## 关键结果\n\n| 项目 | 结果 |\n|---|---|\n| Candidate | `USER_PURCHASED_siVEGF` |\n| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |\n| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |\n| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |\n| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGAAC` |\n| 固定靶参考 | `NM_003376.6` |\n| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |\n| 参考转录本覆盖 | 20条参考中的18条 |\n| OligoFormer raw class1 | 0.8366401195526123 |\n| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |\n| official func filter | 0 |\n| guide seed位点数，含VEGFA | **3540** |\n| 排除VEGFA后的seed位点数 | **3539** |\n| 排除VEGFA后的去重seed匹配基因数 | **2839** |\n| 可映射表达表的非靶基因数 | 2836 |\n| 缺氧检出的非靶基因数 | **1595** |\n| 未映射表达表的非靶基因数 | 3；不等于不表达 |\n| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |\n\n补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。\n\n## 证据\n- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。\n- 固定靶 FASTA SHA256：`30059fb1...d9c706`。\n- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。\n- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。\n- 已生成：`report.html` 和 `candidates_ranked.tsv`。\n\n## 限制或下一步\n原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。",
+    "model_summary_display": "模型序列检查未通过。关键序列直接见下方已核验字段；原始模型文字单独保留，不能按错误序列写论文或订购。工具完成情况以执行记录为准。",
+    "answer_validation": {
+      "version": "sequence_consistency_v1",
+      "status": "FAIL",
+      "label": "模型序列检查未通过",
+      "claim_count": 4,
+      "claims": [
+        {
+          "line": 9,
+          "sequence": "GAUAGAGCAAGACAAGAAATT",
+          "length": 21,
+          "expected_fields": [
+            "original_row1"
+          ],
+          "matched_verified_fields": [
+            {
+              "candidate_id": "USER_PURCHASED_siVEGF",
+              "field": "original_row1"
+            }
+          ],
+          "candidate_association": "explicit"
+        },
+        {
+          "line": 10,
+          "sequence": "UUUCUUGUCUUGCUCUAUCTT",
+          "length": 21,
+          "expected_fields": [
+            "original_row2"
+          ],
+          "matched_verified_fields": [
+            {
+              "candidate_id": "USER_PURCHASED_siVEGF",
+              "field": "original_row2"
+            }
+          ],
+          "candidate_association": "explicit"
+        },
+        {
+          "line": 11,
+          "sequence": "UUUCUUGUCUUGCUCUAUC",
+          "length": 19,
+          "expected_fields": [
+            "guide_core19_5to3"
+          ],
+          "matched_verified_fields": [
+            {
+              "candidate_id": "USER_PURCHASED_siVEGF",
+              "field": "guide_core19_5to3"
+            }
+          ],
+          "candidate_association": "explicit"
+        },
+        {
+          "line": 12,
+          "sequence": "GAUAGAGCAAGACAAGAAC",
+          "length": 19,
+          "expected_fields": [
+            "passenger_core19_5to3"
+          ],
+          "matched_verified_fields": [],
+          "candidate_association": "explicit"
+        }
+      ],
+      "issues": [
+        {
+          "line": 12,
+          "sequence": "GAUAGAGCAAGACAAGAAC",
+          "length": 19,
+          "expected_fields": [
+            "passenger_core19_5to3"
+          ],
+          "matched_verified_fields": [],
+          "candidate_association": "explicit",
+          "reason": "SEQUENCE_NOT_EQUAL_TO_VERIFIED_FIELD",
+          "correct_fields": [
+            {
+              "candidate_id": "USER_PURCHASED_siVEGF",
+              "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA"
+            }
+          ]
+        }
+      ],
+      "raw_model_text_sha256": "9be239d4954dbf703e2c3ee8850cec65b6e15f7d6e1cee10c419a78043a9eae6",
+      "scope": "Checks contiguous nucleotide strings of at least 10 bases against checked input/tool fields, with role labels where explicit. Does not validate scientific conclusions, numerical claims, chemistry, or all natural-language strand statements.",
+      "is_scientific_accuracy_or_human_score": false
+    },
+    "verified_sequences": [
+      {
+        "candidate_id": "USER_PURCHASED_siVEGF",
+        "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+        "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA",
+        "guide_21nt_original": "UUUCUUGUCUUGCUCUAUCTT",
+        "passenger_21nt_original": "GAUAGAGCAAGACAAGAAATT",
+        "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+        "original_row2": "UUUCUUGUCUUGCUCUAUCTT",
+        "strand_assignment_basis": "DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles",
+        "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+        "reference_transcript": "NM_003376.6",
+        "core_start_1based": 1439,
+        "core_end_1based": 1457,
+        "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+        "design_window_23nt": "",
+        "evidence_source": "inspect_candidates; verify_target where present; unchanged original candidate fields",
+        "target_match_checked": true
+      }
+    ],
+    "answer_sequence_status": "FAILED",
+    "workflow_completion_is_answer_correctness": false,
+    "record_kind": "OFFLINE_SAVED_ANSWER_REPLAY",
+    "new_model_requests": 0,
+    "new_scientific_tool_calls": 0,
+    "replay_note": "确定性测试对照：长度19但最后一个碱基改变，不是新模型回答"
+  },
+  "research": {
+    "status": "idle",
+    "steps": [],
+    "sources": []
+  },
+  "run_id": "offline_sequence_replay_wrong_base_19",
+  "stop_requested": false,
+  "evidence_count": 0,
+  "version": "0.7-cloud"
+}

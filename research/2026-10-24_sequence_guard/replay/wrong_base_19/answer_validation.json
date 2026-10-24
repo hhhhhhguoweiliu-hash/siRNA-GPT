@@ -1,0 +1,85 @@
+{
+  "version": "sequence_consistency_v1",
+  "status": "FAIL",
+  "label": "模型序列检查未通过",
+  "claim_count": 4,
+  "claims": [
+    {
+      "line": 9,
+      "sequence": "GAUAGAGCAAGACAAGAAATT",
+      "length": 21,
+      "expected_fields": [
+        "original_row1"
+      ],
+      "matched_verified_fields": [
+        {
+          "candidate_id": "USER_PURCHASED_siVEGF",
+          "field": "original_row1"
+        }
+      ],
+      "candidate_association": "explicit"
+    },
+    {
+      "line": 10,
+      "sequence": "UUUCUUGUCUUGCUCUAUCTT",
+      "length": 21,
+      "expected_fields": [
+        "original_row2"
+      ],
+      "matched_verified_fields": [
+        {
+          "candidate_id": "USER_PURCHASED_siVEGF",
+          "field": "original_row2"
+        }
+      ],
+      "candidate_association": "explicit"
+    },
+    {
+      "line": 11,
+      "sequence": "UUUCUUGUCUUGCUCUAUC",
+      "length": 19,
+      "expected_fields": [
+        "guide_core19_5to3"
+      ],
+      "matched_verified_fields": [
+        {
+          "candidate_id": "USER_PURCHASED_siVEGF",
+          "field": "guide_core19_5to3"
+        }
+      ],
+      "candidate_association": "explicit"
+    },
+    {
+      "line": 12,
+      "sequence": "GAUAGAGCAAGACAAGAAC",
+      "length": 19,
+      "expected_fields": [
+        "passenger_core19_5to3"
+      ],
+      "matched_verified_fields": [],
+      "candidate_association": "explicit"
+    }
+  ],
+  "issues": [
+    {
+      "line": 12,
+      "sequence": "GAUAGAGCAAGACAAGAAC",
+      "length": 19,
+      "expected_fields": [
+        "passenger_core19_5to3"
+      ],
+      "matched_verified_fields": [],
+      "candidate_association": "explicit",
+      "reason": "SEQUENCE_NOT_EQUAL_TO_VERIFIED_FIELD",
+      "correct_fields": [
+        {
+          "candidate_id": "USER_PURCHASED_siVEGF",
+          "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA"
+        }
+      ]
+    }
+  ],
+  "raw_model_text_sha256": "9be239d4954dbf703e2c3ee8850cec65b6e15f7d6e1cee10c419a78043a9eae6",
+  "scope": "Checks contiguous nucleotide strings of at least 10 bases against checked input/tool fields, with role labels where explicit. Does not validate scientific conclusions, numerical claims, chemistry, or all natural-language strand statements.",
+  "is_scientific_accuracy_or_human_score": false
+}
