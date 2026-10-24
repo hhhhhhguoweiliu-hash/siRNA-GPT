@@ -8,7 +8,7 @@ import zipfile
 from pathlib import Path, PurePosixPath
 
 
-def recover(transport, output):
+def recover(transport, output, expected_ids=('B02','B08')):
     data=json.loads(transport.read_text(encoding='utf-8'))
     receipts=data['archive_receipt']['logs']
     if len(receipts)!=1:raise ValueError('Expected one archive receipt')
@@ -47,11 +47,11 @@ def recover(transport, output):
     results=json.loads((extracted/'results.json').read_text(encoding='utf-8'))
     protocol=json.loads((extracted/'protocol.json').read_text(encoding='utf-8'))
     status=json.loads((extracted/'status.json').read_text(encoding='utf-8'))
-    if [r['id'] for r in results]!=['B02','B08'] or len(protocol['questions'])!=2:
+    if [r['id'] for r in results]!=list(expected_ids) or len(protocol['questions'])!=len(expected_ids):
         raise ValueError('Unexpected planned question units')
     receipt={'run_id':meta['run_id'],'source':'Authorized Render service log transport from manual UI demo',
         'archive_sha256':meta['sha256'],'archive_bytes':len(raw),'chunks_verified':len(parts),'zip_crc_valid':True,
-        'all_two_planned_units_retained':True,'status':status['status'],'library_version':protocol['library_version'],
+        'all_planned_units_retained':True,'planned_units':len(expected_ids),'status':status['status'],'library_version':protocol['library_version'],
         'results':[{'id':r['id'],'status':r['status'],'answer_status':r.get('answer_status'),
                     'model_calls':r.get('model_calls'),'usage':r.get('usage'),'citation_check':r.get('citation_check')} for r in results],
         'independent_human_scores':None,'files':files}
@@ -63,6 +63,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--transport',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--day7',action='store_true',help='Validate the separately planned single regression question')
     args=parser.parse_args()
-    result=recover(args.transport,args.output)
+    result=recover(args.transport,args.output,('B11_day7',) if args.day7 else ('B02','B08'))
     print(json.dumps({k:v for k,v in result.items() if k!='files'},ensure_ascii=False))

@@ -1,0 +1,140 @@
+{
+  "checks": {
+    "one_planned_unit": true,
+    "one_actual_model_exchange": true,
+    "actual_retrieval_executed": true,
+    "actual_request_has_question": true,
+    "actual_request_has_all_excerpts": true,
+    "actual_library_version_aligned": true,
+    "response_complete": true,
+    "original_response_matches_exported_answer": true,
+    "explicit_missing_day7_statement": true,
+    "no_model_score_presented_as_knockdown": true,
+    "no_unknown_citation_ids": true,
+    "actual_library_restore_rebuild": true,
+    "actual_library_twelve_materials": true,
+    "all_eight_actual_excerpts_exact": true,
+    "actual_runtime_assets_match_deployed_commit": true
+  },
+  "all_pass": true,
+  "run_id": "library_demo_20261024_052657_5a7974",
+  "actual_commit": "fa62c7d63b3ded191d97d5a1738fa1b0fe5f4a62",
+  "library_version": "ac6d351a2e992bc86dfb87db6527861752c1ec6bab07adb7e33b667052576a54",
+  "model": "doubao-seed-2-1-pro-260915",
+  "request_settings": {
+    "stream": false,
+    "thinking": {
+      "type": "disabled"
+    },
+    "max_output_tokens": 1800
+  },
+  "response_status": "completed",
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 6445,
+    "output_tokens": 371,
+    "total_tokens": 6816,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "citations": [
+    {
+      "citation_id": "S1",
+      "source_kind": "project_setting",
+      "title": "当前系统能完成什么",
+      "url": "/knowledge#scope",
+      "locator": null,
+      "exact_excerpt_verified": true
+    },
+    {
+      "citation_id": "S2",
+      "source_kind": "project_setting",
+      "title": "siRNA 链方向与输入要求",
+      "url": "/knowledge#sequence",
+      "locator": null,
+      "exact_excerpt_verified": true
+    },
+    {
+      "citation_id": "S3",
+      "source_kind": "project_setting",
+      "title": "模型分数和实验敲低率",
+      "url": "/knowledge#score",
+      "locator": null,
+      "exact_excerpt_verified": true
+    },
+    {
+      "citation_id": "S4",
+      "source_kind": "article_full_text",
+      "title": "Efficient downregulation of VEGF in retinal pigment epithelial cells by integrin ligand-labeled liposome-mediated siRNA delivery",
+      "url": "/library/d5b96cf156f38979f0ed413e#text-c021",
+      "locator": "文本，片段text-c021",
+      "exact_excerpt_verified": true
+    },
+    {
+      "citation_id": "S5",
+      "source_kind": "article_full_text",
+      "title": "Efficient downregulation of VEGF in retinal pigment epithelial cells by integrin ligand-labeled liposome-mediated siRNA delivery",
+      "url": "/library/d5b96cf156f38979f0ed413e#text-c026",
+      "locator": "文本，片段text-c026",
+      "exact_excerpt_verified": true
+    },
+    {
+      "citation_id": "S6",
+      "source_kind": "project_record",
+      "title": "本项目默认九条候选来源核查（历史计算记录，不是文献结论）",
+      "url": "/library/6a1b8c9ea14cc5ae67700e18#text-c002",
+      "locator": "文本，片段text-c002",
+      "exact_excerpt_verified": true
+    },
+    {
+      "citation_id": "S7",
+      "source_kind": "article_full_text",
+      "title": "Amphiphilic Polypeptides for VEGF siRNA Delivery into Retinal Epithelial Cells",
+      "url": "/library/7da057ba9315a4ce17c19972#text-c028",
+      "locator": "文本，片段text-c028",
+      "exact_excerpt_verified": true
+    },
+    {
+      "citation_id": "S8",
+      "source_kind": "article_full_text",
+      "title": "OligoFormer: an accurate and robust prediction method for siRNA design",
+      "url": "/library/e2cea21b6712b85250758e8b#text-c020",
+      "locator": "文本，片段text-c020",
+      "exact_excerpt_verified": true
+    }
+  ],
+  "runtime_asset_comparisons": {
+    "core.py": true,
+    "conversation.py": true,
+    "research.py": true,
+    "knowledge.py": true,
+    "literature.py": true,
+    "pdf_text_worker.py": true,
+    "library_ui.js": true,
+    "library_demo.py": true,
+    "model_client.py": true,
+    "expression_data.py": true,
+    "evaluate.py": true,
+    "paper_pilot.py": true,
+    "evaluation_protocol.py": true,
+    "evaluation_cases.example.json": true,
+    "evaluation_contract.py": true,
+    "evaluation_rubric.json": true,
+    "review_package.py": true,
+    "data/candidates.tsv": true,
+    "data/historical_scores.tsv": true,
+    "data/VEGFA.fasta": true,
+    "data/expression.tsv.gz": true,
+    "data/historical_seed_matches.tsv": true,
+    "data/provenance.json": true,
+    "references/sirna_library/sources.json": true,
+    "references/vegfa_experiments_20261024/sources.json": true
+  },
+  "verification_scope": "Record completeness, source transmission and targeted missing-measurement regression; not independent scientific scoring or unseen-question accuracy",
+  "independent_human_scores": null,
+  "new_model_calls_in_this_audit": 0
+}

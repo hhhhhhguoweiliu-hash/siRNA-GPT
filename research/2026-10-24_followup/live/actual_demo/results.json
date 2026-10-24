@@ -1,0 +1,31 @@
+[
+  {
+    "id": "B11_day7",
+    "question": "VEGFA_SD_3499在ARPE-19转染后第7天实测敲低率是多少？",
+    "status": "COMPLETED",
+    "started_at": "2026-10-24T05:26:57.998610+00:00",
+    "answer": "**判定：证据不足，无法给出 VEGFA_SD_3499 在 ARPE-19 转染后第7天的实测敲低率。**\n\n**关键结果：**\n- 本项目记录仅显示 VEGFA_SD_3499 的设计窗口和19nt核心位置，并整合了历史模型计算；没有该候选的转染实验或第7天敲低数据。[S6]\n- 项目说明明确：“模型分数不是实验敲低百分比”。[S3]\n- 检索到的 ARPE-19/VEGF 文献只报告转染后 **24、48、72小时** 的检测，不是第7天，也未标明候选为 VEGFA_SD_3499。[S5]\n- 另一篇 ARPE-19 文献报告的是不同递送系统下的 VEGF 抑制比例（60%、82%、71%），同样不能等同于 VEGFA_SD_3499 第7天实测值。[S7]\n\n**证据：**\n- “例如3499：设计窗口3499–3521，核心3501–3519”，但该片段属于历史来源核查和模型记录。[S6]\n- 文献检测时间为“after 24, 48, and 72 hours”。[S5]\n\n**限制：**\n当前片段中没有“同一候选 VEGFA_SD_3499、ARPE-19、转染后第7天”的实验测量记录；不能用模型分数或其他文献的敲低比例代替。",
+    "audit_id": "055b8706f3ef4f99bad06c00",
+    "answer_status": "complete",
+    "citation_check": {
+      "unknown_ids": [],
+      "has_citation": true,
+      "semantic_support": "NOT_AUTOMATICALLY_VALIDATED_REQUIRES_REVIEW"
+    },
+    "model_calls": 1,
+    "usage": [
+      {
+        "input_tokens": 6445,
+        "output_tokens": 371,
+        "total_tokens": 6816,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    ],
+    "finished_at": "2026-10-24T05:27:11.910203+00:00"
+  }
+]

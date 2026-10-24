@@ -1,0 +1,81 @@
+{
+  "run_id": "library_demo_20261024_052657_5a7974",
+  "source": "Authorized Render service log transport from manual UI demo",
+  "archive_sha256": "e7b94c4e5fb956c2d9cdc314c293b0184390c7ab012d3fe46204a33276943a67",
+  "archive_bytes": 1285674,
+  "chunks_verified": 286,
+  "zip_crc_valid": true,
+  "all_planned_units_retained": true,
+  "planned_units": 1,
+  "status": "COMPLETE",
+  "library_version": "ac6d351a2e992bc86dfb87db6527861752c1ec6bab07adb7e33b667052576a54",
+  "results": [
+    {
+      "id": "B11_day7",
+      "status": "COMPLETED",
+      "answer_status": "complete",
+      "model_calls": 1,
+      "usage": [
+        {
+          "input_tokens": 6445,
+          "output_tokens": 371,
+          "total_tokens": 6816,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      ],
+      "citation_check": {
+        "unknown_ids": [],
+        "has_citation": true,
+        "semantic_support": "NOT_AUTOMATICALLY_VALIDATED_REQUIRES_REVIEW"
+      }
+    }
+  ],
+  "independent_human_scores": null,
+  "files": [
+    {
+      "path": "conversation/473cffba4ad3.json",
+      "bytes": 24049,
+      "sha256": "52ad75b4a93dd071dc26e162f089bc62a0c5b89c4d43b34b8ea5f602fc6a705d"
+    },
+    {
+      "path": "conversation/evidence/055b8706f3ef4f99bad06c00.json",
+      "bytes": 144150,
+      "sha256": "82614ad460cf1469f67f72bd64417dd3526e3227dce7866e0645e329a5fe317f"
+    },
+    {
+      "path": "conversation/evidence/ab7a66a9e65448cb84a145d9.json",
+      "bytes": 25343,
+      "sha256": "f9acf74f847a115a15ec5a61c23bda19ba8ad1a68feb4508a06fa626738866ed"
+    },
+    {
+      "path": "conversation_record.json",
+      "bytes": 194509,
+      "sha256": "6f18e410cf7c614dd17fbe4cb6b1e376e0d612a4df68741cc42c20b240ead70e"
+    },
+    {
+      "path": "library.zip",
+      "bytes": 1226045,
+      "sha256": "eb76100538f5eb0bfa84c457341fb67eb9978afcb93eb7719545acfffb014a15"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 555,
+      "sha256": "7cedc9b9c284d2cf21fecc14669d0793b6d479ee2b7214e443497e09ef74fb58"
+    },
+    {
+      "path": "results.json",
+      "bytes": 1888,
+      "sha256": "324995b333fb980b58cf304449c4605c9b308ed8cca316a079fbc40010948e09"
+    },
+    {
+      "path": "status.json",
+      "bytes": 2125,
+      "sha256": "a32fa8b5fdad2b307815aabc81a52baa77b445f56509e4591493f08e2381af19"
+    }
+  ]
+}

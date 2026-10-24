@@ -1,0 +1,17 @@
+{
+  "kind": "MANUALLY_CONFIRMED_MINIMAL_LIBRARY_DEMO",
+  "started_at": "2026-10-24T05:26:57.576306+00:00",
+  "questions": [
+    {
+      "id": "B11_day7",
+      "question": "VEGFA_SD_3499在ARPE-19转染后第7天实测敲低率是多少？",
+      "status": "NOT_STARTED"
+    }
+  ],
+  "mode": "day7_regression",
+  "library_version": "ac6d351a2e992bc86dfb87db6527861752c1ec6bab07adb7e33b667052576a54",
+  "external_search": false,
+  "not_old_54_evaluation": true,
+  "no_independent_scores": true,
+  "no_evidence_question_may_stop_without_model_call": true
+}

@@ -1,0 +1,134 @@
+{
+  "deployed_code_commit": "fa62c7d63b3ded191d97d5a1738fa1b0fe5f4a62",
+  "deployed_service": "srv-dbardmc9v7es739llto0",
+  "deploy_id": "dep-dbe428ei0phs73bn25m0",
+  "package_upload": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1RFfhDnBt7itb_vRW9wrIJ2ymtP-cDEnO",
+      "title": "siRNA_GPT_20261024_followup_complete.zip",
+      "file_name": "siRNA_GPT_20261024_followup_complete.zip",
+      "mime_type": "application/zip",
+      "url": "https://drive.google.com/file/d/1RFfhDnBt7itb_vRW9wrIJ2ymtP-cDEnO/view?usp=drivesdk",
+      "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1RFfhDnBt7itb_vRW9wrIJ2ymtP-cDEnO",
+        "title": "siRNA_GPT_20261024_followup_complete.zip",
+        "file_name": "siRNA_GPT_20261024_followup_complete.zip",
+        "mime_type": "application/zip",
+        "url": "https://drive.google.com/file/d/1RFfhDnBt7itb_vRW9wrIJ2ymtP-cDEnO/view?usp=drivesdk",
+        "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+      }
+    },
+    "isError": false
+  },
+  "report_upload": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1xJggPU9KRrN-zI38JynX8JGrkOFKEW5I",
+      "title": "siRNA_GPT_20261024_followup_交付说明.md",
+      "file_name": "siRNA_GPT_20261024_followup_交付说明.md",
+      "mime_type": "text/markdown",
+      "url": "https://drive.google.com/file/d/1xJggPU9KRrN-zI38JynX8JGrkOFKEW5I/view?usp=drivesdk",
+      "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1xJggPU9KRrN-zI38JynX8JGrkOFKEW5I",
+        "title": "siRNA_GPT_20261024_followup_交付说明.md",
+        "file_name": "siRNA_GPT_20261024_followup_交付说明.md",
+        "mime_type": "text/markdown",
+        "url": "https://drive.google.com/file/d/1xJggPU9KRrN-zI38JynX8JGrkOFKEW5I/view?usp=drivesdk",
+        "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+      }
+    },
+    "isError": false
+  },
+  "package_metadata_check": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "id": "1RFfhDnBt7itb_vRW9wrIJ2ymtP-cDEnO",
+        "title": "siRNA_GPT_20261024_followup_complete.zip",
+        "mime_type": null,
+        "size": "7286513",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "isError": false
+    }
+  },
+  "report_metadata_check": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "id": "1xJggPU9KRrN-zI38JynX8JGrkOFKEW5I",
+        "title": "siRNA_GPT_20261024_followup_交付说明.md",
+        "mime_type": null,
+        "size": "2221",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "isError": false
+    }
+  },
+  "local_package": {
+    "bytes": 7286513,
+    "sha256": "98130cea66223c0102cdf73c5fe51bcfa7fb38ccc53e24922da33800ede81499",
+    "zip_crc_ok": true,
+    "files": 83
+  },
+  "verification_scope": "Remote filename, size, parent folder and readable report verified; connector did not provide remote SHA256; no claim of remote byte-hash identity",
+  "source_snapshot_note": "Package is the complete pre-upload snapshot listed in SHA256_MANIFEST.json. Later receipt/status additions are in GitHub and the updated separate Drive report.",
+  "github_result_commit": "Recorded by final Git upload verification, not self-referential inside its own commit."
+}
