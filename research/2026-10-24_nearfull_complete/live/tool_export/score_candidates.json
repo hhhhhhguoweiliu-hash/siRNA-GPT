@@ -1,0 +1,58 @@
+{
+  "status": "IMPORTED_VERIFIED_LOCAL",
+  "legacy_source_sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+  "rows": [
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+      "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+      "raw_class1": 0.8366401195526123,
+      "oligoformer_scaled_score": 1.121934400320053,
+      "official_func_filter": 0,
+      "evidence_dataset_id": "purchased_sivegf_20261024_v1",
+      "source_commit": "9dd8831ebc28a42584ba57f288a314ccb5042b2c",
+      "not_N3_construct_simulation": true
+    }
+  ],
+  "score_not_percent": true,
+  "versioned_imports": {
+    "USER_PURCHASED_siVEGF": {
+      "dataset_id": "purchased_sivegf_20261024_v1",
+      "status": "VERIFIED_LOCAL_RESULTS_IMPORTED_NOT_RECOMPUTED_ON_SERVER",
+      "source_commit": "9dd8831ebc28a42584ba57f288a314ccb5042b2c",
+      "fixed_target_fasta_sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "reference_transcript": "NM_003376.6",
+      "original_docx_sha256": "7ce4e3cffbe91c62c81926edcc52f53f97fc57c8941085367166068f9b9c3db6",
+      "source_result": "research/2026-10-24_candidate_v2/purchased_siVEGF_separate.json",
+      "source_result_sha256": "9d55e16b90d88480f04020e03f87326b84a1e624fc3ede8dc3af05c815cf375a",
+      "limits": [
+        "Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed",
+        "Original TT and row1 N3 retained; exact terminal chemistry/attachment not established",
+        "Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated",
+        "Offline official computations imported by exact sequence/reference binding; no new score/seed execution"
+      ],
+      "files": {
+        "candidate.json": "6b405c74368e65d0ad84e28f9275047763231913c4e9d818d8939ebfb74edd57",
+        "input_assets.json": "e6f328892ff6f5e5d9670a7e7aa476c8027ff7755fac9654c365885460d45b92",
+        "job_all.json": "f5710b5bd2eb47f968317324e2741cfe99c80ab8cf013670abcc8de563f3a441",
+        "nearfull_pilot__sessionInfo.txt": "ce8ecab0f380a26bbc2851701e811f6297787b801e314a6d3fc85bf0834c5d2d",
+        "nearfull_pilot__summary.tsv": "a699002b665a251a85de5cc2aeecd49a4a59d2c58d59675c20735f49204d27ef",
+        "nearfull_pilot__USER_PURCHASED_siVEGF__guide__paired_core19__hits.tsv.gz": "24502073d58e0de07509b5c476dd58b449793ae9abfb0ada1a7ceb47731c2f15",
+        "nearfull_pilot__USER_PURCHASED_siVEGF__guide__sidirect_g2g20__hits.tsv.gz": "e1ca5de84dc1377a7c330c87d1d59e9ee276e90ab2402ca45f7625e61a220c02",
+        "nearfull_pilot__USER_PURCHASED_siVEGF__passenger__paired_core19__hits.tsv.gz": "bc90ec203f8e2095b31af03aad4bf97e63876c325282edcbb90cb9593a88e14e",
+        "nearfull_pilot__USER_PURCHASED_siVEGF__passenger__sidirect_g2g20__hits.tsv.gz": "75788814cd01d8e7a4d97beffb08e846f47881e4058d886ada64d5bd1e451356",
+        "oligo_pilot_02__result.json": "9c6ffac9b362a44c0d71eddab2b9a81ffe38d49186c70fcfb7a000e1a94b71c9",
+        "original_sequence_records.json": "2d8b7cc08bc2aeb790843f7d4871b3dfeefada68ba8125103e10f66ddef47dd9",
+        "seed_pilot_02__sessionInfo.txt": "ce8ecab0f380a26bbc2851701e811f6297787b801e314a6d3fc85bf0834c5d2d",
+        "seed_pilot_02__summary.tsv": "68379b66d6057db5024a5ef559d332d20d0d66d034ea7ebc77528e5ab9ec5e0a",
+        "seed_pilot_02__USER_PURCHASED_siVEGF__guide__counts.tsv.gz": "dfb8aee18d2a32cef9140d7c75af4306d3c09bcaacdcff0ae0c5442d082eb5a5",
+        "seed_pilot_02__USER_PURCHASED_siVEGF__guide__sites.tsv.gz": "aab1bbb319b39f63702409cd74a7e0b177d8e62f3413ed3062e727eec9d61a25",
+        "seed_pilot_02__USER_PURCHASED_siVEGF__passenger__counts.tsv.gz": "2faa9a13a7a3fe1f7b621b31a4b5a0e9bd0abba0f801441b4bd687d954741143",
+        "seed_pilot_02__USER_PURCHASED_siVEGF__passenger__sites.tsv.gz": "4c854bd173757e0363a72f0edb91ab162a59dd59d126baee7da827326b649ad1",
+        "successful_source_manifest.json": "f9418f5acff7a0926e842e07ed471fc56332141d38a161566fa32f1355470a83",
+        "upstream_sources.json": "6d8b91abde86afcd524f8ac127a01f063e3999165e78c3d672ef7d62f722d961",
+        "verified_local_result.json": "0f8721bd09ef22de9e4b7dd50220d12df7db399be26594a9c9ae001ba6822f19"
+      }
+    }
+  }
+}

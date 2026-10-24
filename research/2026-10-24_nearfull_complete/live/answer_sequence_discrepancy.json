@@ -1,0 +1,11 @@
+{
+  "observed_issue": "Generated final-answer passenger core is not the verified 19nt input",
+  "original_generated_text": "GAUAGAGCAAGACAAGACAAGAAA",
+  "original_generated_length": 24,
+  "correct_from_original_input": "GAUAGAGCAAGACAAGAAA",
+  "correct_length": 19,
+  "evidence": "tool_export/input.json; verified_import/purchased_sivegf_20261024_v1/candidate.json",
+  "raw_answer_unchanged": true,
+  "rerun_to_hide_error": false,
+  "independent_human_quality_score": null
+}

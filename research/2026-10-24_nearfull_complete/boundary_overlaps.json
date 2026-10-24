@@ -1,0 +1,22 @@
+[
+  {
+    "group": "168366",
+    "group_name": "",
+    "start": "6983",
+    "end": "7001",
+    "width": "19",
+    "transcript_id": "XR_007059861.1",
+    "mismatches": "2",
+    "gene_ids": "124901456",
+    "candidate_id": "VEGFA_SD_3573",
+    "strand_role": "passenger",
+    "query_kind": "sidirect_g2g20",
+    "target_pattern_DNA": "AAATTCTTTAATACAAAAT",
+    "reference_length": 7000,
+    "out_of_reference_bases": 1,
+    "observed_overlap_bases": 18,
+    "observed_overlap_mismatches": 1,
+    "classification": "RAW_BIOSTRINGS_BOUNDARY_OVERLAP_NOT_FULL_19NT",
+    "raw_evidence": "research/2026-10-24_nearfull_complete/new_240/VEGFA_SD_3573__passenger__sidirect_g2g20__hits.tsv.gz"
+  }
+]

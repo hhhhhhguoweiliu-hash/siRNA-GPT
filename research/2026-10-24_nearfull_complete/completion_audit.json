@@ -1,0 +1,2419 @@
+{
+  "status": "PASS",
+  "planned_unique": 264,
+  "old_completed_reused": 24,
+  "new_unique_completed": 240,
+  "failed": 0,
+  "not_run": 0,
+  "status_counts": {
+    "COMPLETED_WITH_HITS": 246,
+    "COMPLETED_ZERO_HITS": 18
+  },
+  "all_site_rows": 7480,
+  "new_site_rows": 6943,
+  "boundary_overlap_rows_reported_separately": 1,
+  "full_19nt_in_reference_site_rows": 7479,
+  "all_queries_checked": [
+    {
+      "key": [
+        "VEGFA_SD_0124",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 34
+    },
+    {
+      "key": [
+        "VEGFA_SD_0124",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 33
+    },
+    {
+      "key": [
+        "VEGFA_SD_0124",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_0124",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_0126",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 29
+    },
+    {
+      "key": [
+        "VEGFA_SD_0126",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_0126",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 1
+    },
+    {
+      "key": [
+        "VEGFA_SD_0126",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_0149",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 73
+    },
+    {
+      "key": [
+        "VEGFA_SD_0149",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 19
+    },
+    {
+      "key": [
+        "VEGFA_SD_0149",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_0149",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 41
+    },
+    {
+      "key": [
+        "VEGFA_SD_0150",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 102
+    },
+    {
+      "key": [
+        "VEGFA_SD_0150",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 73
+    },
+    {
+      "key": [
+        "VEGFA_SD_0150",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 41
+    },
+    {
+      "key": [
+        "VEGFA_SD_0150",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 82
+    },
+    {
+      "key": [
+        "VEGFA_SD_0192",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 21
+    },
+    {
+      "key": [
+        "VEGFA_SD_0192",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 19
+    },
+    {
+      "key": [
+        "VEGFA_SD_0192",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 2
+    },
+    {
+      "key": [
+        "VEGFA_SD_0192",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 6
+    },
+    {
+      "key": [
+        "VEGFA_SD_0194",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 19
+    },
+    {
+      "key": [
+        "VEGFA_SD_0194",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 21
+    },
+    {
+      "key": [
+        "VEGFA_SD_0194",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 6
+    },
+    {
+      "key": [
+        "VEGFA_SD_0194",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 12
+    },
+    {
+      "key": [
+        "VEGFA_SD_0199",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 26
+    },
+    {
+      "key": [
+        "VEGFA_SD_0199",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_0199",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_0199",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 74
+    },
+    {
+      "key": [
+        "VEGFA_SD_0203",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 102
+    },
+    {
+      "key": [
+        "VEGFA_SD_0203",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 136
+    },
+    {
+      "key": [
+        "VEGFA_SD_0203",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 19
+    },
+    {
+      "key": [
+        "VEGFA_SD_0203",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 29
+    },
+    {
+      "key": [
+        "VEGFA_SD_0278",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_0278",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_0278",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_0278",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 19
+    },
+    {
+      "key": [
+        "VEGFA_SD_1157",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 28
+    },
+    {
+      "key": [
+        "VEGFA_SD_1157",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 32
+    },
+    {
+      "key": [
+        "VEGFA_SD_1157",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 11
+    },
+    {
+      "key": [
+        "VEGFA_SD_1157",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 2
+    },
+    {
+      "key": [
+        "VEGFA_SD_1552",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 42
+    },
+    {
+      "key": [
+        "VEGFA_SD_1552",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_1552",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_1552",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 13
+    },
+    {
+      "key": [
+        "VEGFA_SD_1555",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 19
+    },
+    {
+      "key": [
+        "VEGFA_SD_1555",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_1555",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 7
+    },
+    {
+      "key": [
+        "VEGFA_SD_1555",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 7
+    },
+    {
+      "key": [
+        "VEGFA_SD_1559",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 44
+    },
+    {
+      "key": [
+        "VEGFA_SD_1559",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 27
+    },
+    {
+      "key": [
+        "VEGFA_SD_1559",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 1
+    },
+    {
+      "key": [
+        "VEGFA_SD_1559",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_1588",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 24
+    },
+    {
+      "key": [
+        "VEGFA_SD_1588",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 29
+    },
+    {
+      "key": [
+        "VEGFA_SD_1588",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 38
+    },
+    {
+      "key": [
+        "VEGFA_SD_1588",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 33
+    },
+    {
+      "key": [
+        "VEGFA_SD_1979",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_1979",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_1979",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 2
+    },
+    {
+      "key": [
+        "VEGFA_SD_1979",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_1980",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 45
+    },
+    {
+      "key": [
+        "VEGFA_SD_1980",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_1980",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_1980",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_2739",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_2739",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_2739",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 2
+    },
+    {
+      "key": [
+        "VEGFA_SD_2739",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 26
+    },
+    {
+      "key": [
+        "VEGFA_SD_2924",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 33
+    },
+    {
+      "key": [
+        "VEGFA_SD_2924",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 64
+    },
+    {
+      "key": [
+        "VEGFA_SD_2924",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 1
+    },
+    {
+      "key": [
+        "VEGFA_SD_2924",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 10
+    },
+    {
+      "key": [
+        "VEGFA_SD_2925",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 32
+    },
+    {
+      "key": [
+        "VEGFA_SD_2925",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 33
+    },
+    {
+      "key": [
+        "VEGFA_SD_2925",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 10
+    },
+    {
+      "key": [
+        "VEGFA_SD_2925",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 52
+    },
+    {
+      "key": [
+        "VEGFA_SD_2937",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 40
+    },
+    {
+      "key": [
+        "VEGFA_SD_2937",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 30
+    },
+    {
+      "key": [
+        "VEGFA_SD_2937",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 43
+    },
+    {
+      "key": [
+        "VEGFA_SD_2937",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 125
+    },
+    {
+      "key": [
+        "VEGFA_SD_2947",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 24
+    },
+    {
+      "key": [
+        "VEGFA_SD_2947",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 31
+    },
+    {
+      "key": [
+        "VEGFA_SD_2947",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_2947",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 7
+    },
+    {
+      "key": [
+        "VEGFA_SD_2949",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_2949",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 39
+    },
+    {
+      "key": [
+        "VEGFA_SD_2949",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 10
+    },
+    {
+      "key": [
+        "VEGFA_SD_2949",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 71
+    },
+    {
+      "key": [
+        "VEGFA_SD_2970",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 46
+    },
+    {
+      "key": [
+        "VEGFA_SD_2970",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 28
+    },
+    {
+      "key": [
+        "VEGFA_SD_2970",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 44
+    },
+    {
+      "key": [
+        "VEGFA_SD_2970",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 88
+    },
+    {
+      "key": [
+        "VEGFA_SD_2980",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_2980",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 21
+    },
+    {
+      "key": [
+        "VEGFA_SD_2980",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 1
+    },
+    {
+      "key": [
+        "VEGFA_SD_2980",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_2982",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 32
+    },
+    {
+      "key": [
+        "VEGFA_SD_2982",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_2982",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 3
+    },
+    {
+      "key": [
+        "VEGFA_SD_2982",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 11
+    },
+    {
+      "key": [
+        "VEGFA_SD_2987",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 26
+    },
+    {
+      "key": [
+        "VEGFA_SD_2987",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_2987",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_2987",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 5
+    },
+    {
+      "key": [
+        "VEGFA_SD_2990",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 34
+    },
+    {
+      "key": [
+        "VEGFA_SD_2990",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 39
+    },
+    {
+      "key": [
+        "VEGFA_SD_2990",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 11
+    },
+    {
+      "key": [
+        "VEGFA_SD_2990",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 7
+    },
+    {
+      "key": [
+        "VEGFA_SD_3009",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 26
+    },
+    {
+      "key": [
+        "VEGFA_SD_3009",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 24
+    },
+    {
+      "key": [
+        "VEGFA_SD_3009",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 2
+    },
+    {
+      "key": [
+        "VEGFA_SD_3009",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_3046",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 37
+    },
+    {
+      "key": [
+        "VEGFA_SD_3046",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3046",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_3046",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 9
+    },
+    {
+      "key": [
+        "VEGFA_SD_3056",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_3056",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_3056",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_3056",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_3057",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_3057",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_3057",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_3057",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 16
+    },
+    {
+      "key": [
+        "VEGFA_SD_3058",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 105
+    },
+    {
+      "key": [
+        "VEGFA_SD_3058",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_3058",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 16
+    },
+    {
+      "key": [
+        "VEGFA_SD_3058",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 115
+    },
+    {
+      "key": [
+        "VEGFA_SD_3065",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 27
+    },
+    {
+      "key": [
+        "VEGFA_SD_3065",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 35
+    },
+    {
+      "key": [
+        "VEGFA_SD_3065",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_3065",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_3119",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_3119",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_3119",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3119",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_3125",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 28
+    },
+    {
+      "key": [
+        "VEGFA_SD_3125",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_3125",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 31
+    },
+    {
+      "key": [
+        "VEGFA_SD_3125",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 81
+    },
+    {
+      "key": [
+        "VEGFA_SD_3131",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 56
+    },
+    {
+      "key": [
+        "VEGFA_SD_3131",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 28
+    },
+    {
+      "key": [
+        "VEGFA_SD_3131",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 18
+    },
+    {
+      "key": [
+        "VEGFA_SD_3131",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 5
+    },
+    {
+      "key": [
+        "VEGFA_SD_3193",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_3193",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 50
+    },
+    {
+      "key": [
+        "VEGFA_SD_3193",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 13
+    },
+    {
+      "key": [
+        "VEGFA_SD_3193",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 34
+    },
+    {
+      "key": [
+        "VEGFA_SD_3202",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 57
+    },
+    {
+      "key": [
+        "VEGFA_SD_3202",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 30
+    },
+    {
+      "key": [
+        "VEGFA_SD_3202",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 3
+    },
+    {
+      "key": [
+        "VEGFA_SD_3202",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_3210",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 26
+    },
+    {
+      "key": [
+        "VEGFA_SD_3210",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_3210",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 7
+    },
+    {
+      "key": [
+        "VEGFA_SD_3210",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 58
+    },
+    {
+      "key": [
+        "VEGFA_SD_3214",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_3214",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 33
+    },
+    {
+      "key": [
+        "VEGFA_SD_3214",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_3214",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 21
+    },
+    {
+      "key": [
+        "VEGFA_SD_3221",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 43
+    },
+    {
+      "key": [
+        "VEGFA_SD_3221",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 100
+    },
+    {
+      "key": [
+        "VEGFA_SD_3221",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 5
+    },
+    {
+      "key": [
+        "VEGFA_SD_3221",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 63
+    },
+    {
+      "key": [
+        "VEGFA_SD_3281",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 93
+    },
+    {
+      "key": [
+        "VEGFA_SD_3281",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 111
+    },
+    {
+      "key": [
+        "VEGFA_SD_3281",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_3281",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 30
+    },
+    {
+      "key": [
+        "VEGFA_SD_3287",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 21
+    },
+    {
+      "key": [
+        "VEGFA_SD_3287",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_3287",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3287",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 1
+    },
+    {
+      "key": [
+        "VEGFA_SD_3295",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 28
+    },
+    {
+      "key": [
+        "VEGFA_SD_3295",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 59
+    },
+    {
+      "key": [
+        "VEGFA_SD_3295",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 8
+    },
+    {
+      "key": [
+        "VEGFA_SD_3295",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 1
+    },
+    {
+      "key": [
+        "VEGFA_SD_3297",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 28
+    },
+    {
+      "key": [
+        "VEGFA_SD_3297",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 29
+    },
+    {
+      "key": [
+        "VEGFA_SD_3297",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3297",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 9
+    },
+    {
+      "key": [
+        "VEGFA_SD_3314",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 37
+    },
+    {
+      "key": [
+        "VEGFA_SD_3314",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 35
+    },
+    {
+      "key": [
+        "VEGFA_SD_3314",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 25
+    },
+    {
+      "key": [
+        "VEGFA_SD_3314",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_3318",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 61
+    },
+    {
+      "key": [
+        "VEGFA_SD_3318",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 43
+    },
+    {
+      "key": [
+        "VEGFA_SD_3318",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 2
+    },
+    {
+      "key": [
+        "VEGFA_SD_3318",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 2
+    },
+    {
+      "key": [
+        "VEGFA_SD_3361",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 24
+    },
+    {
+      "key": [
+        "VEGFA_SD_3361",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_3361",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 18
+    },
+    {
+      "key": [
+        "VEGFA_SD_3361",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 7
+    },
+    {
+      "key": [
+        "VEGFA_SD_3375",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 75
+    },
+    {
+      "key": [
+        "VEGFA_SD_3375",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 27
+    },
+    {
+      "key": [
+        "VEGFA_SD_3375",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 39
+    },
+    {
+      "key": [
+        "VEGFA_SD_3375",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 28
+    },
+    {
+      "key": [
+        "VEGFA_SD_3385",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 52
+    },
+    {
+      "key": [
+        "VEGFA_SD_3385",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 57
+    },
+    {
+      "key": [
+        "VEGFA_SD_3385",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_3385",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 96
+    },
+    {
+      "key": [
+        "VEGFA_SD_3429",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 22
+    },
+    {
+      "key": [
+        "VEGFA_SD_3429",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3429",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3429",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3432",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 28
+    },
+    {
+      "key": [
+        "VEGFA_SD_3432",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 28
+    },
+    {
+      "key": [
+        "VEGFA_SD_3432",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3432",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3434",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3434",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3434",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3434",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 7
+    },
+    {
+      "key": [
+        "VEGFA_SD_3455",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 59
+    },
+    {
+      "key": [
+        "VEGFA_SD_3455",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 30
+    },
+    {
+      "key": [
+        "VEGFA_SD_3455",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 16
+    },
+    {
+      "key": [
+        "VEGFA_SD_3455",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "VEGFA_SD_3499",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3499",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3499",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3499",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3500",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3500",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3500",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3500",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3502",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3502",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 20
+    },
+    {
+      "key": [
+        "VEGFA_SD_3502",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 9
+    },
+    {
+      "key": [
+        "VEGFA_SD_3502",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 1
+    },
+    {
+      "key": [
+        "VEGFA_SD_3508",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_3508",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_3508",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 7
+    },
+    {
+      "key": [
+        "VEGFA_SD_3508",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 33
+    },
+    {
+      "key": [
+        "VEGFA_SD_3509",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_3509",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_3509",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 33
+    },
+    {
+      "key": [
+        "VEGFA_SD_3509",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 44
+    },
+    {
+      "key": [
+        "VEGFA_SD_3510",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 34
+    },
+    {
+      "key": [
+        "VEGFA_SD_3510",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 23
+    },
+    {
+      "key": [
+        "VEGFA_SD_3510",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 44
+    },
+    {
+      "key": [
+        "VEGFA_SD_3510",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 71
+    },
+    {
+      "key": [
+        "VEGFA_SD_3535",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 91
+    },
+    {
+      "key": [
+        "VEGFA_SD_3535",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 60
+    },
+    {
+      "key": [
+        "VEGFA_SD_3535",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 0
+    },
+    {
+      "key": [
+        "VEGFA_SD_3535",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 11
+    },
+    {
+      "key": [
+        "VEGFA_SD_3536",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 26
+    },
+    {
+      "key": [
+        "VEGFA_SD_3536",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 91
+    },
+    {
+      "key": [
+        "VEGFA_SD_3536",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 11
+    },
+    {
+      "key": [
+        "VEGFA_SD_3536",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 56
+    },
+    {
+      "key": [
+        "VEGFA_SD_3538",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 37
+    },
+    {
+      "key": [
+        "VEGFA_SD_3538",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 123
+    },
+    {
+      "key": [
+        "VEGFA_SD_3538",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 17
+    },
+    {
+      "key": [
+        "VEGFA_SD_3538",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 26
+    },
+    {
+      "key": [
+        "VEGFA_SD_3542",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 35
+    },
+    {
+      "key": [
+        "VEGFA_SD_3542",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 42
+    },
+    {
+      "key": [
+        "VEGFA_SD_3542",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 6
+    },
+    {
+      "key": [
+        "VEGFA_SD_3542",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 29
+    },
+    {
+      "key": [
+        "VEGFA_SD_3573",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 71
+    },
+    {
+      "key": [
+        "VEGFA_SD_3573",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 46
+    },
+    {
+      "key": [
+        "VEGFA_SD_3573",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 14
+    },
+    {
+      "key": [
+        "VEGFA_SD_3573",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 64
+    },
+    {
+      "key": [
+        "USER_PURCHASED_siVEGF",
+        "guide",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 34
+    },
+    {
+      "key": [
+        "USER_PURCHASED_siVEGF",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 67
+    },
+    {
+      "key": [
+        "USER_PURCHASED_siVEGF",
+        "passenger",
+        "paired_core19"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 4
+    },
+    {
+      "key": [
+        "USER_PURCHASED_siVEGF",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "all_positions_mismatches_gene_mappings_and_cumulative_summaries_verified": true,
+      "site_rows": 10
+    }
+  ],
+  "reference_transcripts": 186185,
+  "versions_unchanged": true,
+  "query_parameters_unchanged": true,
+  "difference_from_old_command": "New invocation omitted --vanilla; scientific adapter, reference, parameters and loaded R/package versions independently match. No startup code was changed.",
+  "new_model_score_runs": 0,
+  "new_seed_runs": 0,
+  "source_execution": {
+    "status": "RETURNED",
+    "started_utc": "2026-10-24T11:57:05.542658+00:00",
+    "command": [
+      "C:\\Program Files\\R\\R-4.3.1\\bin\\Rscript.exe",
+      "C:\\00000\\ARPE RNA-seq\\sirna-gpt\\scripts\\candidate_v2_match.R",
+      "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016",
+      "C:\\00000\\ARPE RNA-seq\\sirna-gpt\\research\\2026-10-24_nearfull_complete\\remaining_240.tsv",
+      "C:\\00000\\ARPE RNA-seq\\sirna-gpt\\research\\2026-10-24_nearfull_complete\\new_240",
+      "nearfull"
+    ],
+    "cwd": "C:\\00000\\ARPE RNA-seq\\sirna-gpt",
+    "timeout_seconds": 7200,
+    "scope": "Exactly remaining 240; old 24 reused, no OligoFormer/seed/API execution",
+    "exit_code": 0,
+    "finished_utc": "2026-10-24T12:24:25.637293+00:00",
+    "wall_seconds": 1640.0956657999923
+  },
+  "limitations": "Full coverage of this fixed reference and these four overlapping windows is not comprehensive safety or experimental off-target validation."
+}

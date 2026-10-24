@@ -1,0 +1,18 @@
+[
+  {
+    "file": "VEGFA_SD_3573__passenger__sidirect_g2g20__hits.tsv.gz",
+    "reference_length": 7000,
+    "group": "168366",
+    "group_name": "",
+    "start": "6983",
+    "end": "7001",
+    "width": "19",
+    "transcript_id": "XR_007059861.1",
+    "mismatches": "2",
+    "gene_ids": "124901456",
+    "candidate_id": "VEGFA_SD_3573",
+    "strand_role": "passenger",
+    "query_kind": "sidirect_g2g20",
+    "target_pattern_DNA": "AAATTCTTTAATACAAAAT"
+  }
+]

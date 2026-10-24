@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\00000\ARPE RNA-seq\sirna-gpt\scripts\audit_complete_nearfull.py", line 101, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\00000\ARPE RNA-seq\sirna-gpt\scripts\audit_complete_nearfull.py", line 50, in main
+    assert len(seq)==len(p['target_pattern_DNA'])==int(h['width'])==19
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

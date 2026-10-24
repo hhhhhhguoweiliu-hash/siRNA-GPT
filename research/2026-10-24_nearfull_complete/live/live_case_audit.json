@@ -1,0 +1,177 @@
+{
+  "evidence_integrity_status": "PASS",
+  "scientific_tool_workflow": "COMPLETE",
+  "final_answer_quality": "OBSERVED_SEQUENCE_TRANSCRIPTION_ERROR_PRESERVED",
+  "run_id": "20261024_121627_1e50c9",
+  "runtime_commit": "03092ef5fbc2af289aaa2b7bc8d57315c050964f",
+  "tool_count": 6,
+  "planned_cases": 1,
+  "real_model_requests": 8,
+  "tokens": 39048,
+  "export_files": 57,
+  "verified_import_raw_files": 20,
+  "deployed_assets": [
+    {
+      "path": "core.py",
+      "git_blob_sha256": "f7cf6009b390205155af9cb1d4280a978dba8971ee4f4f3ceca7e289bdc5b883",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "conversation.py",
+      "git_blob_sha256": "6225590615542b70d7da4af5b819dfc99bd5f908cbe9a856dc60719a2a3a5362",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "research.py",
+      "git_blob_sha256": "68b5fe3da4f076e7e06331da166fa8dbeedc2bbadfecc267209b8759775c3be3",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "knowledge.py",
+      "git_blob_sha256": "e02c06895114eecdb230f44d45f98090a93c29b2dd78b01f13530619aa1c9d61",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "literature.py",
+      "git_blob_sha256": "0e18ebeb2efa7974655c57ef6a2ad3e5699e4ad2ebb1468d420c303fe90d2093",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "pdf_text_worker.py",
+      "git_blob_sha256": "e1d9df6fbec7c153c694946a08f04e00ea9c2b0607d199102c1b80be9ba50ed1",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "library_ui.js",
+      "git_blob_sha256": "619e95e78e399a6e8b6ee36ca70e488a401ff6bf0bc75055426fc5eb3c0a84ca",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "library_demo.py",
+      "git_blob_sha256": "6f5ab4dc0f749855e77faadd632da85b08f3001a7ea60cf019901730d82a7853",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "model_client.py",
+      "git_blob_sha256": "53d993531467055dfd964b85297026bfab345f2d24af0c1172733e2f7a6b7849",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "expression_data.py",
+      "git_blob_sha256": "06bbc8024c69a4fd201952b651285fc6e1e1e719fe1142f7b91eb982d49ed592",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "evaluate.py",
+      "git_blob_sha256": "ee90d16064da69df9b7e113d5009c024aa42bd8e356aaf3d0b8a0744b9830fc0",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "paper_pilot.py",
+      "git_blob_sha256": "ea59a696992e667475efef3fda0de8893e26db55ff0591d5b0b2725238e428f6",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "evaluation_protocol.py",
+      "git_blob_sha256": "8486bcdc5358baa223a94e83c3c1e9533868a90f6469eca69117347d25af8f13",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "evaluation_cases.example.json",
+      "git_blob_sha256": "0a2bae44c14aa431d407977f256c5769b0f04da4b15723a68a37d8fc2d364f86",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "evaluation_contract.py",
+      "git_blob_sha256": "9c533a935441e16988d66d5fa3630b103c4980526da92def85ccdb7b492ced77",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "evaluation_rubric.json",
+      "git_blob_sha256": "e41f739438a393733c7f83e0dc73385f5fc0120a051128a7043a4abf59af6676",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "review_package.py",
+      "git_blob_sha256": "0f974ccdd6e38ba4eb56ae008514380a899949af4e45b8de81b4d21ca06d4be2",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "data/candidates.tsv",
+      "git_blob_sha256": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "data/historical_scores.tsv",
+      "git_blob_sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "data/VEGFA.fasta",
+      "git_blob_sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "data/expression.tsv.gz",
+      "git_blob_sha256": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "data/historical_seed_matches.tsv",
+      "git_blob_sha256": "3701a561a84cdf9df29108f6c235398cc377901a598293071f5724f706f2ac3c",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "data/provenance.json",
+      "git_blob_sha256": "c2f0ff2200cbbbd79e73724db2a4673c0a356ae3dbe548380c6f0b6223c7ef18",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "references/sirna_library/sources.json",
+      "git_blob_sha256": "bab3fc8132b6588d9cde45b3cd21f6047c088ff879d86e39219bb01413c7f537",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "references/vegfa_experiments_20261024/sources.json",
+      "git_blob_sha256": "73a924f260fd21a16804444e0d4c0727ececd0dc96f88150d800c139b20c309d",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "verified_imports.py",
+      "git_blob_sha256": "a0ced5609effc4c15c0be5d7402872b1b7ae63d44c5bbf567d61123ee9fa317b",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "data/purchased_sivegf_20261024_v1/manifest.json",
+      "git_blob_sha256": "17d87eae5d0c36db21a3e7642777e2a83ee80df309beb0f33d9e3f00b313c687",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "references/vegfa_experiments_20261024/chen2013_locators.json",
+      "git_blob_sha256": "7d8679adf3c59eb67a3af66ce1cb389970c1f63dc5c6440a99d4510eaf222c51",
+      "exact_deployed_bytes_match": true
+    },
+    {
+      "path": "references/vegfa_experiments_20261024/osipova2020_locators.json",
+      "git_blob_sha256": "92d632bcd6d1ba2900159362421aab0e709b6c6865025eba2ba3cc4b2d8b0033",
+      "exact_deployed_bytes_match": true
+    }
+  ],
+  "expression_summary": {
+    "candidate_id": "USER_PURCHASED_siVEGF",
+    "seed_site_count_all": 3540,
+    "seed_site_count_nontarget": 3539,
+    "matched_genes": 2839,
+    "baseline_mapped_genes": 2836,
+    "hypoxia_detected_genes": 1595,
+    "normoxia_detected_genes": 1695,
+    "state_detected_genes": 1595,
+    "unmapped_genes": 3,
+    "hypoxia_only_detected_genes": 23,
+    "normoxia_only_detected_genes": 123
+  },
+  "old_nine_and_54_not_run_as_case": true,
+  "independent_human_quality_score": null,
+  "supplemental_error_file": "answer_sequence_discrepancy.json",
+  "original_report_sha256": "59101eaf1bf77be033b2f770251d1d54a40042677f5ec0d8f2c33741c075285d"
+}

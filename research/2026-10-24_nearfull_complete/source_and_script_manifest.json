@@ -1,0 +1,48 @@
+{
+  "source_commit_on_takeover": "dbb8a2d",
+  "case_runtime_commit": "03092ef5fbc2af289aaa2b7bc8d57315c050964f",
+  "raw_source_bytes_preserved": [
+    {
+      "source_path": "scripts/complete_nearfull_20261024.py",
+      "exact_saved_source": "executed_sources/complete_nearfull_20261024.py",
+      "sha256": "531a84a215bd6d74e12bf987b16c76cfbd6da9caab34d6354eb51a22fd69b46c"
+    },
+    {
+      "source_path": "scripts/candidate_v2_match.R",
+      "exact_saved_source": "executed_sources/candidate_v2_match.R",
+      "sha256": "71454ac243fe8a17f224f839ce54d2b6e463a90a7f6c4869ee9c6cd7f14304be"
+    },
+    {
+      "source_path": "scripts/audit_complete_nearfull.py",
+      "exact_saved_source": "executed_sources/audit_complete_nearfull.py",
+      "sha256": "4358ca6005651c72a8913a5726d3186dfa88143e6095e67c6e468c3b77d5ae40"
+    },
+    {
+      "source_path": "scripts/audit_nearfull_boundary.R",
+      "exact_saved_source": "executed_sources/audit_nearfull_boundary.R",
+      "sha256": "46a204809c60a74222069ee7a16819e3f95576980d5c8428ac32f58d31011a96"
+    },
+    {
+      "source_path": "scripts/audit_purchased_live.py",
+      "exact_saved_source": "executed_sources/audit_purchased_live.py",
+      "sha256": "03cfd14cf5c8de46c6baeebc79c7bb893055032290b1e9c0b31fcbae73bb34d7"
+    },
+    {
+      "source_path": "scripts/plot_complete_nearfull.py",
+      "exact_saved_source": "executed_sources/plot_complete_nearfull.py",
+      "sha256": "1a5e2ef5789e81feeed634382c66096a992c877eb7703f1659adce89d1cc7ab5"
+    },
+    {
+      "source_path": "scripts/fix_followup_metadata.py",
+      "exact_saved_source": "executed_sources/fix_followup_metadata.py",
+      "sha256": "0bece51219297e69229474a8390524380426cc67ddffc90b1d659b3f349c5643"
+    },
+    {
+      "source_path": "scripts/build_purchased_import.py",
+      "exact_saved_source": "executed_sources/build_purchased_import.py",
+      "sha256": "9c1ed93a36e4cffb65ea31285636ceff941c7383f54d434c05bffe1af3b4a279"
+    }
+  ],
+  "unchanged_R_scientific_worker": true,
+  "prior_reference_backup": "../2026-10-24_candidate_v2/reference_package_parts.json"
+}

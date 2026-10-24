@@ -1,0 +1,20 @@
+{
+  "id": "builtin",
+  "label": "本项目2026-10-16整理的ARPE-19基线表达表",
+  "source": "PACKAGED_PROJECT_DATA",
+  "sha256": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+  "origin": "C:\\00000\\ARPE RNA-seq\\result\\result.zip",
+  "samples": [
+    "Nor1",
+    "Nor2",
+    "Nor3",
+    "Nor4",
+    "Hyp1",
+    "Hyp2",
+    "Hyp3",
+    "Hyp4"
+  ],
+  "scope": "同一培养批次，每状态4皿；未转染；缺氧1% O2 24h",
+  "per_sample_tpm_available_in_packaged_table": false,
+  "ranking_changed": false
+}

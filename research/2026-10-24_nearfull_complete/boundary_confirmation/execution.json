@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:/Program Files/R/R-4.3.1/bin/Rscript.exe",
+    "--vanilla",
+    "scripts/audit_nearfull_boundary.R",
+    "C:\\00000\\ARPE RNA-seq\\sirna-gpt\\research\\2026-10-24_nearfull_complete\\boundary_confirmation\\actual_reference_transcript.fasta",
+    "C:\\00000\\ARPE RNA-seq\\sirna-gpt\\research\\2026-10-24_nearfull_complete\\boundary_confirmation\\actual_alignment_verification.txt",
+    "C:\\00000\\ARPE RNA-seq\\sirna-gpt\\research\\2026-10-24_nearfull_complete\\boundary_confirmation\\installed_Biostrings_2_70_1_lowlevel_help.txt"
+  ],
+  "started_utc": "2026-10-24T12:28:05.101654+00:00",
+  "finished_utc": "2026-10-24T12:28:09.082531+00:00",
+  "wall_seconds": 3.980659900000319,
+  "exit_code": 0,
+  "scope": "read-only check of one actual boundary alignment; no new full-reference scan",
+  "extracted_reference_sha256": "9c4461330079fdc7d142c214f6c4f08a910870529fe9706566d888f08e974a53"
+}

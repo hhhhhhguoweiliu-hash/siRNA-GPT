@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "pdf_fonts": [
+    {
+      "base": "/ELUGPM+ArialMT",
+      "embedded_font_file_2": true
+    },
+    {
+      "base": "/ELUGPM+Arial-BoldMT",
+      "embedded_font_file_2": true
+    }
+  ],
+  "svg_arial_present": true,
+  "actual_font_files": [
+    "C:/Windows/Fonts/arial.ttf",
+    "C:/Windows/Fonts/arialbd.ttf"
+  ],
+  "full_264_audit_required_before_plot": true
+}

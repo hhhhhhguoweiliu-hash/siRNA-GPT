@@ -1,0 +1,128 @@
+[
+  {
+    "role": "system",
+    "content": "你是工具执行助手。当前数据和计算工具仅支持人 VEGFA、ARPE-19 常氧或缺氧背景。候选为明确的19nt guide配对核心；模型分数不是敲低百分比，seed匹配不是实验脱靶。近似匹配目前来自已核对序列的历史记录；表达背景只作注释，不改变排序。可以通过独立的联网工具查文献和公开网页，但不把文献推断当作本地计算或实验结果。没有模型微调或自动实验能力。仅执行已确认计划。按依赖调用工具，参数为{}。只使用工具返回的证据。必须完成计划全部步骤再总结；遇错可停止并解释。禁止编造结果或改变工具模式。用自然、简洁的中文交流，像和同实验室的同学一起做事。先直接回应用户最关心的问题，再说明必要依据或下一步。通常用两到四句话，复杂问题再展开；少用套话、状态码和英文内部字段。结合上下文理解“这个”“继续”“为什么”，不要每次重新介绍系统或要求切换模式。缺少关键信息时只问一个明确的问题。只有需要时才说明限制，不在每条回答后重复免责声明。语言自然不等于放松事实要求：没有工具证据不能说已经计算或验证，不能编造数值或文献。最终答复统一为四部分：判定、关键结果、证据、限制或下一步。简短中文，不重复抄长输入。关键结果按需用短表：完整排序题仅列所要求候选；仅核对题保留全部候选的核对结果。无工具证据时可引用原始输入已有字段并明确来源，不得猜测缺失结果或假装新计算。异常输入指出已提供的具体序列及其问题，不再索要已经提供的碱基；不举未经计数的序列示例。19nt为本系统当前明确配对核心要求，不是所有siRNA的生物学定律。字段必须按以下含义表达，不混称脱靶数：{\"seed_site_count_all\": \"seed位点数，包含目标VEGFA时明确标注；不是基因数\", \"seed_site_count_nontarget\": \"排除VEGFA后的seed位点数\", \"matched_genes\": \"排除VEGFA后的去重seed匹配基因数\", \"baseline_mapped_genes\": \"上述非靶基因中可映射表达表的去重基因数\", \"state_detected_genes\": \"上述已映射基因中指定状态至少2/4皿TPM>=1的基因数\", \"unmapped_genes\": \"未映射表达表，不等于不表达\", \"design_window_start_1based\": \"来源记录的23nt设计窗口起点，不是19nt核心起点\", \"target_start_1based / target_end_1based\": \"原始候选表中23nt设计窗口坐标，不得改叫19nt核心坐标或未经比对声称已验证\", \"core_matches_n / all_20_transcripts_core_match\": \"原始输入已有参考覆盖注释；转述它不算本轮独立运行比对\", \"core_start_1based\": \"在明确参考转录本上实际比对所得19nt核心起点；1-based闭区间\", \"score\": \"OligoFormer模型分数，不是敲低百分比\"}"
+  },
+  {
+    "role": "user",
+    "content": "{\"planned_tools\": [\"inspect_candidates\", \"verify_target\", \"score_candidates\", \"match_seed\", \"query_expression\", \"compile_report\"], \"task\": {\"gene\": \"VEGFA\", \"species\": \"Homo sapiens\", \"state\": \"Hypoxia\", \"top_n\": 1, \"request\": \"请只对当前已选择的既购si-VEGF完成一次完整核查并生成最终报告：核对原始双链与链方向假设、固定靶参考、读取绑定版本的真实OligoFormer分数和seed结果、关联表达背景，再生成报告。保留TT和N3原文，说明模型没有模拟N3连接实物。不要混入旧九条或重新运行重型计算。\", \"expression_dataset_id\": \"builtin\"}, \"tool_mode\": \"imported\", \"input\": {\"task\": {\"gene\": \"VEGFA\", \"species\": \"Homo sapiens\", \"state\": \"Hypoxia\", \"top_n\": 1, \"request\": \"请只对当前已选择的既购si-VEGF完成一次完整核查并生成最终报告：核对原始双链与链方向假设、固定靶参考、读取绑定版本的真实OligoFormer分数和seed结果、关联表达背景，再生成报告。保留TT和N3原文，说明模型没有模拟N3连接实物。不要混入旧九条或重新运行重型计算。\", \"expression_dataset_id\": \"builtin\"}, \"candidates\": [{\"candidate_id\": \"USER_PURCHASED_siVEGF\", \"target_gene\": \"VEGFA\", \"design_transcript\": \"NM_003376.6\", \"guide_core19_5to3\": \"UUUCUUGUCUUGCUCUAUC\", \"passenger_paired_core_19nt_5to3\": \"GAUAGAGCAAGACAAGAAA\", \"guide_21nt_RNA_5to3\": \"UUUCUUGUCUUGCUCUAUCTT\", \"passenger_21nt_RNA_5to3\": \"GAUAGAGCAAGACAAGAAATT\", \"source\": \"User original synthesis DOCX, 20261024; conditional strand assignment\", \"evidence_dataset_id\": \"purchased_sivegf_20261024_v1\", \"strand_assignment_basis\": \"DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles\", \"original_modification\": \"Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified\", \"synthesis_status\": \"ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED\", \"original_row1\": \"GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）\", \"original_row2\": \"UUUCUUGUCUUGCUCUAUCTT\"}], \"tool_mode\": \"imported\"}, \"completed_tool_results\": {}}"
+  },
+  {
+    "role": "assistant",
+    "content": null,
+    "tool_calls": [
+      {
+        "id": "call_pzdfl8vc7fjr1yjqsifh9nv3",
+        "type": "function",
+        "function": {
+          "name": "inspect_candidates",
+          "arguments": "{}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_pzdfl8vc7fjr1yjqsifh9nv3",
+    "content": "{\"status\": \"LIVE_CHECKED\", \"rows\": [{\"candidate_id\": \"USER_PURCHASED_siVEGF\", \"guide_core19_5to3\": \"UUUCUUGUCUUGCUCUAUC\", \"source\": \"User original synthesis DOCX, 20261024; conditional strand assignment\", \"synthesis_status\": \"ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED\", \"evidence_dataset_id\": \"purchased_sivegf_20261024_v1\", \"evidence_manifest\": \"verified_import/purchased_sivegf_20261024_v1/manifest.json\", \"original_row1\": \"GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）\", \"original_row2\": \"UUUCUUGUCUUGCUCUAUCTT\", \"strand_assignment_basis\": \"DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles\", \"original_modification\": \"Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified\", \"limits\": [\"Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed\", \"Original TT and row1 N3 retained; exact terminal chemistry/attachment not established\", \"Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated\", \"Offline official computations imported by exact sequence/reference binding; no new score/seed execution\"]}], \"warning\": \"配对核心用于计算；不自动转换为订购序列或声称已做化学修饰验证\"}"
+  },
+  {
+    "role": "assistant",
+    "content": null,
+    "tool_calls": [
+      {
+        "id": "call_6tvssfb45z2atp1dq90432o8",
+        "type": "function",
+        "function": {
+          "name": "verify_target",
+          "arguments": "{}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_6tvssfb45z2atp1dq90432o8",
+    "content": "{\"status\": \"LIVE_EXECUTED\", \"reference_sha256\": \"30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706\", \"rows\": [{\"candidate_id\": \"USER_PURCHASED_siVEGF\", \"guide_core19_5to3\": \"UUUCUUGUCUUGCUCUAUC\", \"source\": \"User original synthesis DOCX, 20261024; conditional strand assignment\", \"synthesis_status\": \"ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED\", \"evidence_dataset_id\": \"purchased_sivegf_20261024_v1\", \"evidence_manifest\": \"verified_import/purchased_sivegf_20261024_v1/manifest.json\", \"original_row1\": \"GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）\", \"original_row2\": \"UUUCUUGUCUUGCUCUAUCTT\", \"strand_assignment_basis\": \"DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles\", \"original_modification\": \"Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified\", \"limits\": [\"Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed\", \"Original TT and row1 N3 retained; exact terminal chemistry/attachment not established\", \"Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated\", \"Offline official computations imported by exact sequence/reference binding; no new score/seed execution\"], \"reference_transcript\": \"NM_003376.6\", \"core_start_1based\": 1439, \"core_end_1based\": 1457, \"design_window_start_1based\": null, \"design_window_end_1based\": null, \"design_window_scope\": \"source 23nt design window; not 19nt core coordinates\", \"covered_transcripts\": 18, \"reference_transcript_count\": 20, \"sites\": [{\"transcript\": \"NM_001171623.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001171626.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001171628.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001317010.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001025369.3\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001171627.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001171625.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001204384.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001287044.2\", \"start_1based\": 471, \"end_1based\": 489, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001025367.3\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001171624.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001025370.3\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001204385.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001025368.3\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001033756.3\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_003376.6\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001025366.3\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}, {\"transcript\": \"NM_001171629.2\", \"start_1based\": 1439, \"end_1based\": 1457, \"coordinate_scope\": \"19nt paired core; 1-based closed interval\"}], \"mRNA_context_57nt\": \"UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA\"}], \"coverage_scope\": \"reference annotation, not measured isoform usage\"}"
+  },
+  {
+    "role": "assistant",
+    "content": null,
+    "tool_calls": [
+      {
+        "id": "call_7sm9ydxw4qyug7gr7ez86uww",
+        "type": "function",
+        "function": {
+          "name": "score_candidates",
+          "arguments": "{}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_7sm9ydxw4qyug7gr7ez86uww",
+    "content": "{\"status\": \"IMPORTED_VERIFIED_LOCAL\", \"legacy_source_sha256\": \"ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392\", \"rows\": [{\"candidate_id\": \"USER_PURCHASED_siVEGF\", \"guide_core19_5to3\": \"UUUCUUGUCUUGCUCUAUC\", \"mRNA_context_57nt\": \"UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA\", \"raw_class1\": 0.8366401195526123, \"oligoformer_scaled_score\": 1.121934400320053, \"official_func_filter\": 0, \"evidence_dataset_id\": \"purchased_sivegf_20261024_v1\", \"source_commit\": \"9dd8831ebc28a42584ba57f288a314ccb5042b2c\", \"not_N3_construct_simulation\": true}], \"score_not_percent\": true, \"versioned_imports\": {\"USER_PURCHASED_siVEGF\": {\"dataset_id\": \"purchased_sivegf_20261024_v1\", \"status\": \"VERIFIED_LOCAL_RESULTS_IMPORTED_NOT_RECOMPUTED_ON_SERVER\", \"source_commit\": \"9dd8831ebc28a42584ba57f288a314ccb5042b2c\", \"fixed_target_fasta_sha256\": \"30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706\", \"reference_transcript\": \"NM_003376.6\", \"original_docx_sha256\": \"7ce4e3cffbe91c62c81926edcc52f53f97fc57c8941085367166068f9b9c3db6\", \"source_result\": \"research/2026-10-24_candidate_v2/purchased_siVEGF_separate.json\", \"source_result_sha256\": \"9d55e16b90d88480f04020e03f87326b84a1e624fc3ede8dc3af05c815cf375a\", \"limits\": [\"Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed\", \"Original TT and row1 N3 retained; exact terminal chemistry/attachment not established\", \"Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated\", \"Offline official computations imported by exact sequence/reference binding; no new score/seed execution\"], \"files\": {\"candidate.json\": \"6b405c74368e65d0ad84e28f9275047763231913c4e9d818d8939ebfb74edd57\", \"input_assets.json\": \"e6f328892ff6f5e5d9670a7e7aa476c8027ff7755fac9654c365885460d45b92\", \"job_all.json\": \"f5710b5bd2eb47f968317324e2741cfe99c80ab8cf013670abcc8de563f3a441\", \"nearfull_pilot__sessionInfo.txt\": \"ce8ecab0f380a26bbc2851701e811f6297787b801e314a6d3fc85bf0834c5d2d\", \"nearfull_pilot__summary.tsv\": \"a699002b665a251a85de5cc2aeecd49a4a59d2c58d59675c20735f49204d27ef\", \"nearfull_pilot__USER_PURCHASED_siVEGF__guide__paired_core19__hits.tsv.gz\": \"24502073d58e0de07509b5c476dd58b449793ae9abfb0ada1a7ceb47731c2f15\", \"nearfull_pilot__USER_PURCHASED_siVEGF__guide__sidirect_g2g20__hits.tsv.gz\": \"e1ca5de84dc1377a7c330c87d1d59e9ee276e90ab2402ca45f7625e61a220c02\", \"nearfull_pilot__USER_PURCHASED_siVEGF__passenger__paired_core19__hits.tsv.gz\": \"bc90ec203f8e2095b31af03aad4bf97e63876c325282edcbb90cb9593a88e14e\", \"nearfull_pilot__USER_PURCHASED_siVEGF__passenger__sidirect_g2g20__hits.tsv.gz\": \"75788814cd01d8e7a4d97beffb08e846f47881e4058d886ada64d5bd1e451356\", \"oligo_pilot_02__result.json\": \"9c6ffac9b362a44c0d71eddab2b9a81ffe38d49186c70fcfb7a000e1a94b71c9\", \"original_sequence_records.json\": \"2d8b7cc08bc2aeb790843f7d4871b3dfeefada68ba8125103e10f66ddef47dd9\", \"seed_pilot_02__sessionInfo.txt\": \"ce8ecab0f380a26bbc2851701e811f6297787b801e314a6d3fc85bf0834c5d2d\", \"seed_pilot_02__summary.tsv\": \"68379b66d6057db5024a5ef559d332d20d0d66d034ea7ebc77528e5ab9ec5e0a\", \"seed_pilot_02__USER_PURCHASED_siVEGF__guide__counts.tsv.gz\": \"dfb8aee18d2a32cef9140d7c75af4306d3c09bcaacdcff0ae0c5442d082eb5a5\", \"seed_pilot_02__USER_PURCHASED_siVEGF__guide__sites.tsv.gz\": \"aab1bbb319b39f63702409cd74a7e0b177d8e62f3413ed3062e727eec9d61a25\", \"seed_pilot_02__USER_PURCHASED_siVEGF__passenger__counts.tsv.gz\": \"2faa9a13a7a3fe1f7b621b31a4b5a0e9bd0abba0f801441b4bd687d954741143\", \"seed_pilot_02__USER_PURCHASED_siVEGF__passenger__sites.tsv.gz\": \"4c854bd173757e0363a72f0edb91ab162a59dd59d126baee7da827326b649ad1\", \"successful_source_manifest.json\": \"f9418f5acff7a0926e842e07ed471fc56332141d38a161566fa32f1355470a83\", \"upstream_sources.json\": \"6d8b91abde86afcd524f8ac127a01f063e3999165e78c3d672ef7d62f722d961\", \"verified_local_result.json\": \"0f8721bd09ef22de9e4b7dd50220d12df7db399be26594a9c9ae001ba6822f19\"}}}}"
+  },
+  {
+    "role": "assistant",
+    "content": null,
+    "tool_calls": [
+      {
+        "id": "call_m159hm1zq313nwhw2pwllbmc",
+        "type": "function",
+        "function": {
+          "name": "match_seed",
+          "arguments": "{}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_m159hm1zq313nwhw2pwllbmc",
+    "content": "{\"status\": \"IMPORTED_VERIFIED_LOCAL\", \"scope\": \"guide only in expression join, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target\", \"positive_rows\": 2840, \"details\": \"seed_matches.tsv\", \"supplemental_both_strand_seed_summaries\": {\"USER_PURCHASED_siVEGF\": {\"guide_seed_sites_all\": \"3540\", \"guide_matched_genes_all\": \"2840\", \"guide_seed_sites_non_target\": \"3539\", \"guide_matched_genes_non_target\": \"2839\", \"passenger_seed_sites_all\": \"1402\", \"passenger_matched_genes_all\": \"1286\", \"passenger_seed_sites_non_target\": \"1402\", \"passenger_matched_genes_non_target\": \"1286\"}}, \"evidence_dataset_ids\": [\"purchased_sivegf_20261024_v1\"], \"counts\": {\"USER_PURCHASED_siVEGF\": 3540}, \"counts_unit\": \"seed sites including VEGFA, not genes\", \"seed_site_counts_all\": {\"USER_PURCHASED_siVEGF\": 3540}, \"seed_site_counts_nontarget\": {\"USER_PURCHASED_siVEGF\": 3539}}"
+  },
+  {
+    "role": "assistant",
+    "content": null,
+    "tool_calls": [
+      {
+        "id": "call_rred94a8wik2numxkpvnzv5v",
+        "type": "function",
+        "function": {
+          "name": "query_expression",
+          "arguments": "{}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_rred94a8wik2numxkpvnzv5v",
+    "content": "{\"status\": \"LIVE_JOIN_OF_BASELINE_AND_SEED\", \"target\": {\"feature_id\": \"VEGFA\", \"approved_symbol\": \"VEGFA\", \"ENTREZID\": \"7422\", \"TPM_Normoxia_mean\": \"20.09929925\", \"TPM_Hypoxia_mean\": \"102.390068\", \"Normoxia_n_TPM_ge1\": \"4\", \"Hypoxia_n_TPM_ge1\": \"4\"}, \"candidate_summary\": [{\"candidate_id\": \"USER_PURCHASED_siVEGF\", \"seed_site_count_all\": 3540, \"seed_site_count_nontarget\": 3539, \"matched_genes\": 2839, \"baseline_mapped_genes\": 2836, \"hypoxia_detected_genes\": 1595, \"normoxia_detected_genes\": 1695, \"state_detected_genes\": 1595, \"unmapped_genes\": 3, \"hypoxia_only_detected_genes\": 23, \"normoxia_only_detected_genes\": 123}], \"source\": {\"id\": \"builtin\", \"label\": \"本项目2026-10-16整理的ARPE-19基线表达表\", \"source\": \"PACKAGED_PROJECT_DATA\", \"sha256\": \"e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b\", \"origin\": \"C:\\\\00000\\\\ARPE RNA-seq\\\\result\\\\result.zip\", \"samples\": [\"Nor1\", \"Nor2\", \"Nor3\", \"Nor4\", \"Hyp1\", \"Hyp2\", \"Hyp3\", \"Hyp4\"], \"scope\": \"同一培养批次，每状态4皿；未转染；缺氧1% O2 24h\", \"per_sample_tpm_available_in_packaged_table\": false, \"ranking_changed\": false}, \"target_excluded_from_offtarget_counts\": true, \"expression_comparison\": \"expression_comparison.tsv\", \"details\": \"seed_expression_details.tsv\", \"rule\": \"TPM>=1 in >=2/4 vessels; annotation only; no risk exclusion; does not change ranking\", \"scope\": \"同一培养批次，每状态4皿；未转染；缺氧1% O2 24h; not siRNA perturbation labels\"}"
+  },
+  {
+    "role": "assistant",
+    "content": null,
+    "tool_calls": [
+      {
+        "id": "call_b5oh4yoqxc51ggpiai06i0oc",
+        "type": "function",
+        "function": {
+          "name": "compile_report",
+          "arguments": "{}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_b5oh4yoqxc51ggpiai06i0oc",
+    "content": "{\"status\": \"COMPLETE\", \"selected_for_review\": [\"USER_PURCHASED_siVEGF\"], \"report\": \"report.html\", \"table\": \"candidates_ranked.tsv\", \"rules\": \"先列出无已知复核提示的候选，组内按OligoFormer分数降序；提示候选单列待核对。表达注释不进入排名。\", \"not_order_ready\": true}"
+  },
+  {
+    "role": "assistant",
+    "content": "## 判定\n已按计划只核查当前既购 si-VEGF 这一条，未混入旧九条，也未重新运行重型 OligoFormer/seed 计算；结果为**可形成复核报告，但不是可直接下单/可确认实物链角色的最终设计**。链方向仍是条件性判断，N3 化学连接未被模型模拟。\n\n## 关键结果\n\n| 项目 | 结果 |\n|---|---|\n| Candidate | `USER_PURCHASED_siVEGF` |\n| 原始行1 | `GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）` |\n| 原始行2 | `UUUCUUGUCUUGCUCUAUCTT` |\n| 条件性 guide 核心19nt | `UUUCUUGUCUUGCUCUAUC` |\n| 条件性 passenger 核心19nt | `GAUAGAGCAAGACAAGACAAGAAA` |\n| 固定靶参考 | `NM_003376.6` |\n| 19nt核心实际比对位置 | 1439–1457，1-based闭区间 |\n| 参考转录本覆盖 | 20条参考中的18条 |\n| OligoFormer raw class1 | 0.8366401195526123 |\n| OligoFormer scaled score | **1.121934400320053**，不是敲低百分比 |\n| official func filter | 0 |\n| guide seed位点数，含VEGFA | **3540** |\n| 排除VEGFA后的seed位点数 | **3539** |\n| 排除VEGFA后的去重seed匹配基因数 | **2839** |\n| 可映射表达表的非靶基因数 | 2836 |\n| 缺氧检出的非靶基因数 | **1595** |\n| 未映射表达表的非靶基因数 | 3；不等于不表达 |\n| VEGFA缺氧表达 | 平均TPM 102.390068，4/4皿 TPM≥1 |\n\n补充：若同时记录 passenger 的注释性 seed 汇总，其全部seed位点数为1402、去重匹配基因1286；本轮表达关联的主统计按 guide。\n\n## 证据\n- 输入证据包：`purchased_sivegf_20261024_v1`；原始DOCX SHA256 为 `7ce4e3c...c3db6`。\n- 固定靶 FASTA SHA256：`30059fb1...d9c706`。\n- 分数和seed为**本地已验证官方离线结果导入**，按精确序列和参考绑定读取；source commit：`9dd8831ebc28a42584ba57f288a314ccb5042b2c`。\n- 表达背景来自内置 ARPE-19 表：缺氧1% O₂ 24h，每状态4皿，未转染；判定规则为至少2/4皿 TPM≥1。\n- 已生成：`report.html` 和 `candidates_ranked.tsv`。\n\n## 限制或下一步\n原始两行均按“5′→3′书写”假设推导链角色，且 row2 核心与参考正义链反向互补；供应商未确认实际 guide/passenger 角色。TT 和 row1 末尾 `-N3` 已保留原文，但 OligoFormer 使用的是**未修饰19nt核心加57nt上下文**，没有模拟叠氮基团、连接方式或组装后的实物构建体。建议下一步向供应商确认双链方向、N3具体连接化学与质检图谱。"
+  }
+]

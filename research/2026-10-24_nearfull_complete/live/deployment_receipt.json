@@ -1,0 +1,14 @@
+{
+  "commit": {
+    "createdAt": "2026-10-24T12:12:02Z",
+    "id": "03092ef5fbc2af289aaa2b7bc8d57315c050964f",
+    "message": "Preserve imported evidence bytes across Windows and Linux"
+  },
+  "createdAt": "2026-10-24T12:12:04.241897Z",
+  "finishedAt": "2026-10-24T12:13:15.937192Z",
+  "id": "dep-dbea155g1s2s7395s5lg",
+  "startedAt": "2026-10-24T12:12:04.213006Z",
+  "status": "live",
+  "trigger": "new_commit",
+  "updatedAt": "2026-10-24T12:13:43.840132Z"
+}

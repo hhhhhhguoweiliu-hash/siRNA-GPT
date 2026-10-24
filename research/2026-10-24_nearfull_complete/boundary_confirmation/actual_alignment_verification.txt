@@ -1,0 +1,29 @@
+Real reference transcript XR_007059861.1 length 7000; raw start 6983 end 7001
+18 observed bases, 1 observed mismatch, 1 pattern base beyond reference; neditStartingAt = 2
+No complete 19nt substring exists at that recorded interval. Raw Biostrings output retained.
+R version 4.3.1 (2023-06-16 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+
+
+locale:
+[1] C
+system code page: 65001
+
+time zone: Asia/Shanghai
+tzcode source: internal
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+[1] Biostrings_2.70.1   GenomeInfoDb_1.38.1 XVector_0.42.0     
+[4] IRanges_2.36.0      S4Vectors_0.40.2    BiocGenerics_0.48.1
+
+loaded via a namespace (and not attached):
+[1] zlibbioc_1.48.0         compiler_4.3.1          tools_4.3.1            
+[4] GenomeInfoDbData_1.2.11 RCurl_1.98-1.12         crayon_1.5.2           
+[7] bitops_1.0-7           

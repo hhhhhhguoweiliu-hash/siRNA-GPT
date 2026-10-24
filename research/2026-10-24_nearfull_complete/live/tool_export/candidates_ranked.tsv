@@ -1,0 +1,2 @@
+﻿candidate_id	guide_core19_5to3	source	score	func_filter	covered_transcripts	seed_matched_genes	state_detected_matched_genes	review_flags	near_match_evidence	near_match_transcripts	synthesis_status	priority	selected_for_review
+USER_PURCHASED_siVEGF	UUUCUUGUCUUGCUCUAUC	User original synthesis DOCX, 20261024; conditional strand assignment	1.121934400320053	0	18	2839	1595		IMPORTED_VERIFIED_LOCAL		ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED	1	True

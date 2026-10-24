@@ -1,0 +1,17 @@
+﻿scope	query	designs_with_mapped_non_target_at_most_1mm	designs_with_unknown_mapping_at_most_1mm	max_mismatches	mapped_non_target_genes
+65 designs	guide paired_core19	10	0		
+65 designs	guide sidirect_g2g20	7	0		
+65 designs	passenger paired_core19	10	0		
+65 designs	passenger sidirect_g2g20	9	0		
+Purchased siVEGF	guide paired_core19			0	0
+Purchased siVEGF	guide sidirect_g2g20			0	0
+Purchased siVEGF	passenger paired_core19			0	0
+Purchased siVEGF	passenger sidirect_g2g20			0	0
+Purchased siVEGF	guide paired_core19			1	0
+Purchased siVEGF	guide sidirect_g2g20			1	0
+Purchased siVEGF	passenger paired_core19			1	0
+Purchased siVEGF	passenger sidirect_g2g20			1	0
+Purchased siVEGF	guide paired_core19			2	1
+Purchased siVEGF	guide sidirect_g2g20			2	3
+Purchased siVEGF	passenger paired_core19			2	3
+Purchased siVEGF	passenger sidirect_g2g20			2	3

@@ -1,0 +1,329 @@
+{
+  "hasMore": false,
+  "logs": [
+    {
+      "id": "4458cfc1-bf69-4e77-baca-8c5c1d2270cb",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-w986c"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK pubmed {\"status\": \"OK\", \"source_count\": 1, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false}",
+      "timestamp": "2026-10-24T11:59:44.108116897Z"
+    },
+    {
+      "id": "d49539ae-67df-4c22-88c2-42c5eb44d7bf",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-w986c"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK web {\"status\": \"OK\", \"source_count\": 7, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"0217928431843179e13d3b3ea5f02ecc58377d19143e38dd21e62\", \"multi_turn_verified\": false}",
+      "timestamp": "2026-10-24T12:00:01.87327047Z"
+    },
+    {
+      "id": "302a8024-590e-4348-8f63-e4333188bc2c",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-w986c"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK model {\"status\": \"CONNECTED_TOOL_CALL_VERIFIED\", \"source_count\": 0, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"021792843178690981eef1a5f6531812ca0302533eb09b336ac39\", \"multi_turn_verified\": true}",
+      "timestamp": "2026-10-24T12:00:01.87328524Z"
+    },
+    {
+      "id": "ebc87f88-7a28-4577-a6be-01232be39afb",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-w986c"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK research_conversation {\"status\": \"VERIFIED\", \"source_count\": 8, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false, \"tools\": [\"search_pubmed\"], \"source_titles\": [\"\\u5982\\u4f55\\u533a\\u5206\\u56de\\u7b54\\u4e2d\\u7684\\u8d44\\u6599\\u6765\\u6e90\", \"\\u6a21\\u578b\\u5206\\u6570\\u548c\\u5b9e\\u9a8c\\u6572\\u4f4e\\u7387\", \"OligoFormer: an accurate and robust prediction method for siRNA design\"], \"answer_preview\": \"\\u771f\\u5b9e\\u9898\\u540d\\u662f **\\u201cOligoFormer: an accurate and robust prediction method for siRNA design.\\u201d**\\uff0c2024 \\u5e74\\u53d1\\u8868\\u4e8e *Bioinformatics*\\uff0cPMID: 39321261\\uff0cDOI: 10.1093/bioinformatics/btae577\\u3002[S8]\\n\\n\\u6839\\u636e PubMed \\u6458\\u8981\\uff0c\\u5b83\\u4e3b\\u8981\\u8bc4\\u4f30 **siRNA \\u7684 efficacy\\uff08\\u6548\\u80fd\\uff09\\u9884\\u6d4b**\\uff0c\\u5e76\\u5728 siRNA efficacy \\u6570\\u636e\\u96c6\\u4e0a\\u4e0e 6 \\u79cd\\u65b9\\u6cd5\\u6bd4\\u8f83 AUC\\u3001PRC\\u3001F1 \\u548c PCC\\uff1b\\u8bba\\u6587\\u8fd8\\u63d0\\u4f9b\\u6574\\u5408\\u6d41\\u7a0b\\uff0c\\u7528 **PITA score \\u548c TargetScan score \\u9884\\u6d4b\\u8131\\u9776\\u6548\\u5e94**\\u3002[S8]\\n\\n\\u5f15\\u7528\\uff1a  \\n[S8] OligoFormer: an accurate and robust prediction method for siRNA design. *Bioinformatics*. 2024. PMID: 39321261. https://pubmed.ncbi.nlm.nih.gov/39321261/\"}",
+      "timestamp": "2026-10-24T12:00:22.073657176Z"
+    },
+    {
+      "id": "636371d0-b5d3-4c85-8d99-016e44dfb17a",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-w986c"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK scientific_conversation {\"status\": \"VERIFIED\", \"source_count\": 0, \"message\": \"Full six-tool workflow with imported scientific outputs; no heavy cloud model/R rerun.\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false, \"tools\": [\"inspect_candidates\", \"verify_target\", \"match_seed\", \"score_candidates\", \"query_expression\", \"compile_report\"], \"answer_preview\": \"**\\u5224\\u5b9a**  \\n\\u9ed8\\u8ba49\\u6761\\u4eba VEGFA \\u5019\\u9009\\u5747\\u5b8c\\u6210\\u76ee\\u6807\\u4f4d\\u70b9\\u3001\\u5b98\\u65b9 OligoFormer \\u5206\\u6570\\u3001\\u5386\\u53f2 seed \\u7ed3\\u679c\\u548c ARPE-19 \\u7f3a\\u6c27\\u8868\\u8fbe\\u80cc\\u666f\\u5173\\u8054\\uff1b\\u4f18\\u5148\\u6838\\u67e5\\u76842\\u6761\\u4e3a **VEGFA_SD_3499** \\u548c **VEGFA_SD_3500**\\u3002\\n\\n**\\u5173\\u952e\\u7ed3\\u679c**\\n\\n| \\u4f18\\u5148\\u987a\\u5e8f | \\u5019\\u9009 | 19nt guide core | NM_003376.6\\u6838\\u5fc3\\u4f4d\\u7f6e | OligoFormer\\u5206\\u6570 | \\u6392\\u9664VEGFA\\u540eseed\\u4f4d\\u70b9\\u6570 | \\u53bb\\u91cd\\u975e\\u9776\\u57fa\\u56e0\\u6570 | \\u7f3a\\u6c27\\u68c0\\u51fa\\u57fa\\u56e0\\u6570 |\\n|---|---|---|---:|---:|---:|---:|---:|\\n| 1 | VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501\\u20133519 | 0.9915 | 777 | 728 | 463 |\\n| 2 | VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502\\u20133520 | 0.9753 | 1547 | 1333 | 811 |\\n\\n9\\u6761\\u6838\\u5bf9\\u7ed3\\u679c\\u4e2d\\uff0c\\u6240\\u6709\\u5019\\u9009\\u768419nt\\u6838\\u5fc3\\u5747\\u8986\\u76d620\\u6761\\u53c2\\u8003\\u8f6c\\u5f55\\u672c\\uff1bVEGFA_SD_3119\\u30013193\\u30013\"}",
+      "timestamp": "2026-10-24T12:00:58.981716927Z"
+    },
+    {
+      "id": "eba6844e-3fb8-4623-b04b-c827c22d4c16",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-5gdrt"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK pubmed {\"status\": \"OK\", \"source_count\": 1, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false}",
+      "timestamp": "2026-10-24T12:11:52.608425703Z"
+    },
+    {
+      "id": "2529c158-abd4-49ef-a818-27a577a2e4a9",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-5gdrt"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK web {\"status\": \"OK\", \"source_count\": 6, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"0217928439128383668eba1a5ab869c4433ad7bc82b08d335bb45\", \"multi_turn_verified\": false}",
+      "timestamp": "2026-10-24T12:12:16.148721906Z"
+    },
+    {
+      "id": "b5171f73-2185-463e-8a2c-479448d89e34",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-5gdrt"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK model {\"status\": \"CONNECTED_TOOL_CALL_VERIFIED\", \"source_count\": 0, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"0217928439085616be565a09cf39c914f18dfcb4ec7b34f5a324f\", \"multi_turn_verified\": true}",
+      "timestamp": "2026-10-24T12:12:16.148744338Z"
+    },
+    {
+      "id": "e75ad062-9e7b-4df9-bf8a-ee77732eb10c",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-5gdrt"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK research_conversation {\"status\": \"VERIFIED\", \"source_count\": 8, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false, \"tools\": [\"search_pubmed\"], \"source_titles\": [\"\\u5982\\u4f55\\u533a\\u5206\\u56de\\u7b54\\u4e2d\\u7684\\u8d44\\u6599\\u6765\\u6e90\", \"\\u6a21\\u578b\\u5206\\u6570\\u548c\\u5b9e\\u9a8c\\u6572\\u4f4e\\u7387\", \"OligoFormer: an accurate and robust prediction method for siRNA design\"], \"answer_preview\": \"\\u771f\\u5b9e\\u9898\\u540d\\u662f **\\u201cOligoFormer: an accurate and robust prediction method for siRNA design.\\u201d**\\uff0c\\u53d1\\u8868\\u4e8e *Bioinformatics*\\uff082024\\uff09\\uff0cPMID: **39321261**\\uff0cDOI: **10.1093/bioinformatics/btae577** [S8]\\u3002\\n\\n\\u4f9d\\u636e PubMed \\u6458\\u8981\\uff0c\\u5b83\\u8bc4\\u4f30\\u7684\\u662f **siRNA  efficacy\\uff08\\u6c89\\u9ed8\\u6548\\u80fd\\uff09\\u9884\\u6d4b\\u6027\\u80fd**\\uff0c\\u5728 siRNA efficacy \\u6570\\u636e\\u96c6\\u4e0a\\u4e0e 6 \\u79cd\\u65b9\\u6cd5\\u6bd4\\u8f83 AUC\\u3001PRC\\u3001F1\\u3001PCC\\uff1b\\u540c\\u65f6\\u63d0\\u4f9b\\u6574\\u5408 **PITA score \\u548c TargetScan score \\u7684\\u8131\\u9776\\u6548\\u5e94\\u9884\\u6d4b\\u6d41\\u7a0b** [S8]\\u3002\\u4ee5\\u4e0a\\u53ea\\u57fa\\u4e8e PubMed \\u6458\\u8981\\uff0c\\u672a\\u58f0\\u79f0\\u9605\\u8bfb\\u5168\\u6587\\u3002\\n\\n[S8] https://pubmed.ncbi.nlm.nih.gov/39321261/\"}",
+      "timestamp": "2026-10-24T12:12:36.126779746Z"
+    },
+    {
+      "id": "63833a19-4e26-4068-a57f-d22496ebc097",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-vt6j5"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK pubmed {\"status\": \"OK\", \"source_count\": 1, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false}",
+      "timestamp": "2026-10-24T12:13:11.633079511Z"
+    },
+    {
+      "id": "b80200be-1f4d-42f9-8657-8825c6d9aa8f",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-vt6j5"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK web {\"status\": \"OK\", \"source_count\": 5, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"021792843991850d28416ab7b3d3ce89f7e2f5da5e32b7295592a\", \"multi_turn_verified\": false}",
+      "timestamp": "2026-10-24T12:13:30.49743734Z"
+    },
+    {
+      "id": "5e954a2b-00a6-4f97-96a9-eb041583cc8a",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-vt6j5"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK model {\"status\": \"CONNECTED_TOOL_CALL_VERIFIED\", \"source_count\": 0, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"021792843988530817b06a784e756ea4b86a97afa590e06b1ee30\", \"multi_turn_verified\": true}",
+      "timestamp": "2026-10-24T12:13:30.49746534Z"
+    },
+    {
+      "id": "a07713a4-5a2c-48af-81dc-aa5c8302e234",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-vt6j5"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK research_conversation {\"status\": \"VERIFIED\", \"source_count\": 8, \"message\": \"\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false, \"tools\": [\"search_pubmed\"], \"source_titles\": [\"\\u5982\\u4f55\\u533a\\u5206\\u56de\\u7b54\\u4e2d\\u7684\\u8d44\\u6599\\u6765\\u6e90\", \"\\u6a21\\u578b\\u5206\\u6570\\u548c\\u5b9e\\u9a8c\\u6572\\u4f4e\\u7387\", \"OligoFormer: an accurate and robust prediction method for siRNA design\"], \"answer_preview\": \"\\u771f\\u5b9e\\u9898\\u540d\\u662f **\\u201cOligoFormer: an accurate and robust prediction method for siRNA design.\\u201d**[S8]\\n\\n\\u6839\\u636e PubMed \\u6458\\u8981\\uff0c\\u5b83\\u662f\\u7528\\u4e8e **siRNA \\u8bbe\\u8ba1**\\u7684\\u9884\\u6d4b\\u65b9\\u6cd5\\uff0c\\u8f93\\u5165 siRNA \\u4e0e mRNA \\u5e8f\\u5217\\uff0c\\u6574\\u5408\\u70ed\\u529b\\u5b66\\u53c2\\u6570\\u3001RNA-FM embedding \\u548c Oligo encoder\\uff0c\\u4e3b\\u8981\\u8bc4\\u4f30/\\u9884\\u6d4b **siRNA efficacy\\uff08\\u6c89\\u9ed8\\u6548\\u80fd\\uff09**\\uff1b\\u5176\\u6d41\\u7a0b\\u8fd8\\u7ed3\\u5408 **PITA score \\u548c TargetScan score \\u8bc4\\u4f30 off-target effects\\uff08\\u8131\\u9776\\u6548\\u5e94\\uff09**[S8]\\u3002\\u8bba\\u6587\\u8fd8\\u5728 siRNA efficacy \\u6570\\u636e\\u96c6\\u4e0a\\u4e0e6\\u79cd\\u65b9\\u6cd5\\u505a\\u57fa\\u51c6\\u6bd4\\u8f83\\uff0c\\u62a5\\u544a AUC\\u3001PRC\\u3001F1\\u3001PCC \\u7b49\\u6307\\u6807\\uff1b\\u6211\\u8fd9\\u91cc\\u4f9d\\u636e\\u7684\\u662f PubMed \\u6458\\u8981\\uff0c\\u672a\\u58f0\\u79f0\\u9605\\u8bfb\\u5168\\u6587[S8]\\u3002\\n\\n\\u5f15\\u7528\\uff1a**PMID: 39321261\\uff1bDOI: 10.1093/bioinformatics/btae577**[S8]\"}",
+      "timestamp": "2026-10-24T12:14:00.021962685Z"
+    },
+    {
+      "id": "edfd46e4-8bf6-45b8-9e42-919913885e65",
+      "labels": [
+        {
+          "name": "resource",
+          "value": "srv-dbardmc9v7es739llto0"
+        },
+        {
+          "name": "instance",
+          "value": "srv-dbardmc9v7es739llto0-vt6j5"
+        },
+        {
+          "name": "level",
+          "value": "info"
+        },
+        {
+          "name": "type",
+          "value": "app"
+        }
+      ],
+      "message": "STARTUP_CHECK scientific_conversation {\"status\": \"VERIFIED\", \"source_count\": 0, \"message\": \"Full six-tool workflow with imported scientific outputs; no heavy cloud model/R rerun.\", \"provider_code\": \"\", \"request_id\": \"\", \"multi_turn_verified\": false, \"tools\": [\"inspect_candidates\", \"verify_target\", \"match_seed\", \"score_candidates\", \"query_expression\", \"compile_report\"], \"answer_preview\": \"## \\u5224\\u5b9a\\n\\u9ed8\\u8ba49\\u6761\\u4eba VEGFA \\u5019\\u9009\\u5747\\u901a\\u8fc719nt\\u914d\\u5bf9\\u6838\\u5fc3\\u68c0\\u67e5\\u5e76\\u547d\\u4e2d20\\u6761\\u53c2\\u8003\\u8f6c\\u5f55\\u672c\\uff1b\\u7efc\\u5408\\u201c\\u65e0\\u5df2\\u77e5\\u590d\\u6838\\u63d0\\u793a + OligoFormer\\u5206\\u6570\\u201d\\u540e\\uff0c\\u4f18\\u5148\\u6838\\u67e5 **VEGFA_SD_3499** \\u548c **VEGFA_SD_3500**\\u3002\\u62a5\\u544a\\u5df2\\u751f\\u6210\\uff1a`report.html`\\uff0c\\u6392\\u5e8f\\u8868\\uff1a`candidates_ranked.tsv`\\u3002\\n\\n## \\u5173\\u952e\\u7ed3\\u679c\\n| \\u4f18\\u5148\\u7ea7 | \\u5019\\u9009 | 19nt guide\\u6838\\u5fc3 | NM_003376.6\\u6838\\u5fc3\\u5750\\u6807 | OligoFormer\\u5206\\u6570 | \\u975e\\u9776seed\\u4f4d\\u70b9\\u6570 | \\u53bb\\u91cd\\u975e\\u9776\\u57fa\\u56e0\\u6570 | \\u7f3a\\u6c27\\u68c0\\u6d4b\\u57fa\\u56e0\\u6570 |\\n|---|---|---|---:|---:|---:|---:|---:|\\n| 1 | VEGFA_SD_3499 | UGUACUACGGAAUAUCUCG | 3501\\u20133519 | 0.9915 | 777 | 728 | 463 |\\n| 2 | VEGFA_SD_3500 | AUGUACUACGGAAUAUCUC | 3502\\u20133520 | 0.9753 | 1547 | 1333 | 811 |\\n\\n\\u5168\\u90e89\\u6761\\u5b8c\\u6574\\u6838\\u5bf9\\u7ed3\\u679c\\uff1a\\n\\n| \\u5019\\u9009 | \\u5b98\\u65b9\\u529f\"}",
+      "timestamp": "2026-10-24T12:14:34.2140819Z"
+    }
+  ],
+  "nextEndTime": "2026-10-24T12:17:00Z",
+  "nextStartTime": "2026-10-24T12:14:34.214081901Z"
+}

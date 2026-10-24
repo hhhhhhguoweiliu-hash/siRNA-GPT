@@ -1,0 +1,16 @@
+[
+  {
+    "source_filename": "未确认 832947.crdownload",
+    "saved_as": "actual_tool_export_original.zip",
+    "bytes": 405299,
+    "sha256": "4a50f72e4c2f641b7d24b2e1007e42a864fea49fc8cd65e60aaed6a2968482e5",
+    "status": "CRC/JSON parse complete despite browser temporary filename"
+  },
+  {
+    "source_filename": "conversation_evidence (1).json.crdownload",
+    "saved_as": "conversation_export_original.json",
+    "bytes": 45475,
+    "sha256": "850c43eb70fef35c40b8fc9bcdc630ea6de80eb4340e56b8e736cab2d811ed6c",
+    "status": "CRC/JSON parse complete despite browser temporary filename"
+  }
+]

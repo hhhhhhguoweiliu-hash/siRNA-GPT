@@ -1,0 +1,67 @@
+[
+  {
+    "package_file": "seed_pilot_02__USER_PURCHASED_siVEGF__guide__counts.tsv.gz",
+    "source": "research/2026-10-24_candidate_v2/seed_pilot_02/USER_PURCHASED_siVEGF__guide__counts.tsv.gz",
+    "sha256": "dfb8aee18d2a32cef9140d7c75af4306d3c09bcaacdcff0ae0c5442d082eb5a5"
+  },
+  {
+    "package_file": "seed_pilot_02__USER_PURCHASED_siVEGF__guide__sites.tsv.gz",
+    "source": "research/2026-10-24_candidate_v2/seed_pilot_02/USER_PURCHASED_siVEGF__guide__sites.tsv.gz",
+    "sha256": "aab1bbb319b39f63702409cd74a7e0b177d8e62f3413ed3062e727eec9d61a25"
+  },
+  {
+    "package_file": "seed_pilot_02__USER_PURCHASED_siVEGF__passenger__counts.tsv.gz",
+    "source": "research/2026-10-24_candidate_v2/seed_pilot_02/USER_PURCHASED_siVEGF__passenger__counts.tsv.gz",
+    "sha256": "2faa9a13a7a3fe1f7b621b31a4b5a0e9bd0abba0f801441b4bd687d954741143"
+  },
+  {
+    "package_file": "seed_pilot_02__USER_PURCHASED_siVEGF__passenger__sites.tsv.gz",
+    "source": "research/2026-10-24_candidate_v2/seed_pilot_02/USER_PURCHASED_siVEGF__passenger__sites.tsv.gz",
+    "sha256": "4c854bd173757e0363a72f0edb91ab162a59dd59d126baee7da827326b649ad1"
+  },
+  {
+    "package_file": "seed_pilot_02__sessionInfo.txt",
+    "source": "research/2026-10-24_candidate_v2/seed_pilot_02/sessionInfo.txt",
+    "sha256": "ce8ecab0f380a26bbc2851701e811f6297787b801e314a6d3fc85bf0834c5d2d"
+  },
+  {
+    "package_file": "seed_pilot_02__summary.tsv",
+    "source": "research/2026-10-24_candidate_v2/seed_pilot_02/summary.tsv",
+    "sha256": "68379b66d6057db5024a5ef559d332d20d0d66d034ea7ebc77528e5ab9ec5e0a"
+  },
+  {
+    "package_file": "nearfull_pilot__USER_PURCHASED_siVEGF__guide__paired_core19__hits.tsv.gz",
+    "source": "research/2026-10-24_candidate_v2/nearfull_pilot/USER_PURCHASED_siVEGF__guide__paired_core19__hits.tsv.gz",
+    "sha256": "24502073d58e0de07509b5c476dd58b449793ae9abfb0ada1a7ceb47731c2f15"
+  },
+  {
+    "package_file": "nearfull_pilot__USER_PURCHASED_siVEGF__guide__sidirect_g2g20__hits.tsv.gz",
+    "source": "research/2026-10-24_candidate_v2/nearfull_pilot/USER_PURCHASED_siVEGF__guide__sidirect_g2g20__hits.tsv.gz",
+    "sha256": "e1ca5de84dc1377a7c330c87d1d59e9ee276e90ab2402ca45f7625e61a220c02"
+  },
+  {
+    "package_file": "nearfull_pilot__USER_PURCHASED_siVEGF__passenger__paired_core19__hits.tsv.gz",
+    "source": "research/2026-10-24_candidate_v2/nearfull_pilot/USER_PURCHASED_siVEGF__passenger__paired_core19__hits.tsv.gz",
+    "sha256": "bc90ec203f8e2095b31af03aad4bf97e63876c325282edcbb90cb9593a88e14e"
+  },
+  {
+    "package_file": "nearfull_pilot__USER_PURCHASED_siVEGF__passenger__sidirect_g2g20__hits.tsv.gz",
+    "source": "research/2026-10-24_candidate_v2/nearfull_pilot/USER_PURCHASED_siVEGF__passenger__sidirect_g2g20__hits.tsv.gz",
+    "sha256": "75788814cd01d8e7a4d97beffb08e846f47881e4058d886ada64d5bd1e451356"
+  },
+  {
+    "package_file": "nearfull_pilot__sessionInfo.txt",
+    "source": "research/2026-10-24_candidate_v2/nearfull_pilot/sessionInfo.txt",
+    "sha256": "ce8ecab0f380a26bbc2851701e811f6297787b801e314a6d3fc85bf0834c5d2d"
+  },
+  {
+    "package_file": "nearfull_pilot__summary.tsv",
+    "source": "research/2026-10-24_candidate_v2/nearfull_pilot/summary.tsv",
+    "sha256": "a699002b665a251a85de5cc2aeecd49a4a59d2c58d59675c20735f49204d27ef"
+  },
+  {
+    "package_file": "oligo_pilot_02__result.json",
+    "source": "research/2026-10-24_candidate_v2/oligo_pilot_02/result.json",
+    "sha256": "9c6ffac9b362a44c0d71eddab2b9a81ffe38d49186c70fcfb7a000e1a94b71c9"
+  }
+]

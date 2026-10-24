@@ -1,0 +1,239 @@
+{
+  "started_from_commit": "dbb8a2d",
+  "planned": 264,
+  "previously_completed_unique": 24,
+  "remaining_unique": 240,
+  "obsolete_256_already_completed": 16,
+  "same_query_parameters": {
+    "max_mismatch": 2,
+    "with_indels": false,
+    "fixed": true,
+    "windows": [
+      "paired_core19",
+      "sidirect_g2g20"
+    ],
+    "strands": [
+      "guide",
+      "passenger"
+    ]
+  },
+  "new_model_or_seed_runs": 0,
+  "previous_completed": [
+    {
+      "key": [
+        "USER_PURCHASED_siVEGF",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_pilot",
+      "raw_sha256": "e1ca5de84dc1377a7c330c87d1d59e9ee276e90ab2402ca45f7625e61a220c02"
+    },
+    {
+      "key": [
+        "USER_PURCHASED_siVEGF",
+        "guide",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_pilot",
+      "raw_sha256": "24502073d58e0de07509b5c476dd58b449793ae9abfb0ada1a7ceb47731c2f15"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1552",
+        "guide",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_pilot",
+      "raw_sha256": "d13b25ec82aec27ca5696559b2a61cdfe3ccc10811de8faf676d3e355272f8d9"
+    },
+    {
+      "key": [
+        "USER_PURCHASED_siVEGF",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_pilot",
+      "raw_sha256": "75788814cd01d8e7a4d97beffb08e846f47881e4058d886ada64d5bd1e451356"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1552",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_pilot",
+      "raw_sha256": "1ee44be11fe6eaf489a0a70a1b23b043a1ccb56d7a35f2a0e8b96bf369448bcf"
+    },
+    {
+      "key": [
+        "USER_PURCHASED_siVEGF",
+        "passenger",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_pilot",
+      "raw_sha256": "bc90ec203f8e2095b31af03aad4bf97e63876c325282edcbb90cb9593a88e14e"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1552",
+        "passenger",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_pilot",
+      "raw_sha256": "429a7c587532d56cd1a97392f6bc9d9f80ca927f3bc5ca468fcf5adbbbf52574"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1552",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_pilot",
+      "raw_sha256": "282bcab001f7355b365a5739ccdd95c3ff5368180dfec765977dffcac9b9af5c"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1559",
+        "guide",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "1331f50f0aebbf68e7e3a4919d498b3e1fe0acc1d47426fd77cefaabaad6eae4"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1559",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "04dedcf650b7865e6081d7e0a089f1fdc6430a4c45218ec4d8c28c235581d54d"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1157",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "66ed117f1ef553a689b99b4b077d34d32a1f921c0b90c94e13128a52254989c9"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1555",
+        "passenger",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "61ee153e1ec299945ed9f5e2826c3ac319052de1b5d0a48acbb1bbae5c51e9a3"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1157",
+        "guide",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "170044d0f0b06aa63c05709457cc837a7819096e97fac9fa11f9c40d0cda4f12"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1157",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "3d669aa46818a18d69fbdaeee7d545ecabe4623e042b06b503a63487c844a515"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1555",
+        "guide",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "bc7477cd71932cc511270d0380f7f4ec480f6a97b20349f5326e34289dcc21ae"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1157",
+        "passenger",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "0699c090b51cb18a79f673990e8215e1cbbf866a4ae490a54767606b769ddd79"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1555",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "7202e12a170d4cff318e1659692300d63b85c8bb5cc681c5bbdb7cf354600186"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1555",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "34cf68fdb7a827adf71f13c246d074ba25c7e9ccc4e169c0d82eb349a09822e1"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1559",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "36fb9d1d9d17049d350f9ef7af6795b3ce7a15de413f52880cf08ec58b97a7ca"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1559",
+        "passenger",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "d526d91c5160e6e7af1c3f3a7e767967c8aff721906b48cc005f0a1fc45313db"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1588",
+        "guide",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "eca16804ed3ac1936b43e063c99dc527d6bc96b95b406e387473bee83b109b6f"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1588",
+        "passenger",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "7b2bb425c07606b3d46599bcd16370d430f13a0dc727cf3ba71230b4b4daa259"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1588",
+        "passenger",
+        "paired_core19"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "80c710161ae4e252106097f6a78839bf99fc2e0042954f6ee98279076df027ec"
+    },
+    {
+      "key": [
+        "VEGFA_SD_1588",
+        "guide",
+        "sidirect_g2g20"
+      ],
+      "source_phase": "nearfull_CDS_remaining",
+      "raw_sha256": "69b9f2691de8c08dc0f67cb96c79fac9180b1c36bdbd7814e2c49985f6b43344"
+    }
+  ]
+}

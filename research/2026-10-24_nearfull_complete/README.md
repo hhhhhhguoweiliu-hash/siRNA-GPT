@@ -1,5 +1,15 @@
 # 19:37复核后：完整近全长核查与既购单例
 
+**最终实际范围：**追加240项全部完成，退出码0，耗时1640.096秒（27分20秒）；合并原24项后264项全覆盖，246项有命中、18项零命中，无失败或未运行。全部7480个原始命中已核对；其中1条仅有18位落在参考内的边缘重叠，另表保留和解释，完整19位参考内命中为7479。65条中23条有0/1错配的非靶匹配，新增范围发现21条；不据此改入池规则或声称另外42条安全。
+
+先读[完整结果及65行讨论底表](RESULTS_TABLES.md)、[英文Methods/Results初稿](PAPER_METHODS_RESULTS_DRAFT_EN.md)、[真实既购案例及必读原答纠正](live/README.md)。[completion_audit.json](completion_audit.json)验证264查询、位点/错配/基因映射/累计数；all_264_actual_states.tsv区分有命中和零命中，all_462_actual_states.tsv保留此前评分/seed的完成范围。原始Biostrings累计结果在all_264_summary.tsv；完整19位均落参考内的单独解释表在all_264_full_window_within_reference_summary.tsv，不替换原结果。
+
+[新英文描述图](figures/nearfull_complete.pdf)基于全65条和单列既购结果，真实嵌入Arial/Arial Bold，底表和图注同目录。它是序列匹配描述图，不是准确率、优越性或安全性图。字体检查和PDF实图检查已完成。
+
+**真实Agent案例完成但原答有一处序列错误：**03092ef已在原网站部署，运行20261024_121627_1e50c9实际六工具完成，8次模型请求/39048词元；57文件包、实际请求/响应、用量及29份部署资产指纹已核对。模型将另一链19位核心复述成24位；原答原样保留，另写纠正，没有为消错重跑。不要把工具完成状态当回答全对。
+
+下文保留运行启动时的说明；状态以以上最终核查和DELIVERY.md为准。
+
 接手main：dbb8a2d。以19:37复核为准，保留65条入池规则，不重新评分/seed扫描，不修改旧九条/54条。此前15分钟预算不再截断本次计算。
 
 原264计划核对24项已完成原始结果后，准确剩240项，另存运行。旧256清单含后来完成的16项，没有整份重复执行。沿用未修改的R适配器、R4.3.1/Biostrings2.70.1、固定186185转录本与基因映射、最多2错配/无插入缺失/fixed=TRUE，两链各核心1–19位及原21位链2–20位。见plan_reconciliation.json、remaining_240.tsv、input_and_reference_manifest.json和execution.json。完整范围要等退出码和completion_audit.json，运行检查点不是论文全批结果。

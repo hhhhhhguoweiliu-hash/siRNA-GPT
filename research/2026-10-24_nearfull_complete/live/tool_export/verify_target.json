@@ -1,0 +1,144 @@
+{
+  "status": "LIVE_EXECUTED",
+  "reference_sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+  "rows": [
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+      "source": "User original synthesis DOCX, 20261024; conditional strand assignment",
+      "synthesis_status": "ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED",
+      "evidence_dataset_id": "purchased_sivegf_20261024_v1",
+      "evidence_manifest": "verified_import/purchased_sivegf_20261024_v1/manifest.json",
+      "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+      "original_row2": "UUUCUUGUCUUGCUCUAUCTT",
+      "strand_assignment_basis": "DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles",
+      "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+      "limits": [
+        "Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed",
+        "Original TT and row1 N3 retained; exact terminal chemistry/attachment not established",
+        "Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated",
+        "Offline official computations imported by exact sequence/reference binding; no new score/seed execution"
+      ],
+      "reference_transcript": "NM_003376.6",
+      "core_start_1based": 1439,
+      "core_end_1based": 1457,
+      "design_window_start_1based": null,
+      "design_window_end_1based": null,
+      "design_window_scope": "source 23nt design window; not 19nt core coordinates",
+      "covered_transcripts": 18,
+      "reference_transcript_count": 20,
+      "sites": [
+        {
+          "transcript": "NM_001171623.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001171626.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001171628.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001317010.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001025369.3",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001171627.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001171625.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001204384.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001287044.2",
+          "start_1based": 471,
+          "end_1based": 489,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001025367.3",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001171624.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001025370.3",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001204385.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001025368.3",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001033756.3",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_003376.6",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001025366.3",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        },
+        {
+          "transcript": "NM_001171629.2",
+          "start_1based": 1439,
+          "end_1based": 1457,
+          "coordinate_scope": "19nt paired core; 1-based closed interval"
+        }
+      ],
+      "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA"
+    }
+  ],
+  "coverage_scope": "reference annotation, not measured isoform usage"
+}

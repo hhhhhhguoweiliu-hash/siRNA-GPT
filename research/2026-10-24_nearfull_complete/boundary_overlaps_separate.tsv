@@ -1,0 +1,2 @@
+﻿group	group_name	start	end	width	transcript_id	mismatches	gene_ids	candidate_id	strand_role	query_kind	target_pattern_DNA	reference_length	out_of_reference_bases	observed_overlap_bases	observed_overlap_mismatches	classification	raw_evidence
+168366		6983	7001	19	XR_007059861.1	2	124901456	VEGFA_SD_3573	passenger	sidirect_g2g20	AAATTCTTTAATACAAAAT	7000	1	18	1	RAW_BIOSTRINGS_BOUNDARY_OVERLAP_NOT_FULL_19NT	research/2026-10-24_nearfull_complete/new_240/VEGFA_SD_3573__passenger__sidirect_g2g20__hits.tsv.gz

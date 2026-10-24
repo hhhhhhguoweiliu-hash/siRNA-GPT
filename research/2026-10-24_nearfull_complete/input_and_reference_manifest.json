@@ -1,0 +1,31 @@
+[
+  {
+    "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\official_tools\\SeedMatchR_1.1.1\\R\\get_seed.R",
+    "bytes": 4045,
+    "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+    "matches_prior": true
+  },
+  {
+    "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\official_tools\\SeedMatchR_1.1.1\\R\\SeedMatchR.R",
+    "bytes": 3514,
+    "sha256": "78e0fa70b7a43de3cd6d61f61e81deef5dda1b318a738dcb3d09decbb6972a17",
+    "matches_prior": true
+  },
+  {
+    "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\prepared\\refseq_all_transcripts.fasta",
+    "bytes": 721956341,
+    "sha256": "c763a6e5fffde5072cb9864a64c928aabc0a5b0f16d62b221fc08cf13d4cc9fd",
+    "matches_prior": true
+  },
+  {
+    "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\prepared\\refseq_all_transcript_gene_loci.tsv",
+    "bytes": 12284230,
+    "sha256": "24cadbe8302308c17850818ef11c7edead2c57fb9324b3620648f615d74d3e29",
+    "matches_prior": true
+  },
+  {
+    "path": "C:\\00000\\ARPE RNA-seq\\sirna-gpt\\scripts\\candidate_v2_match.R",
+    "sha256": "71454ac243fe8a17f224f839ce54d2b6e463a90a7f6c4869ee9c6cd7f14304be",
+    "role": "unchanged IO adapter"
+  }
+]
