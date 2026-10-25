@@ -1,0 +1,11 @@
+{
+  "base_main": "8ba0d44410a135197b94102be2081f7bc27508eb",
+  "scientific_methods_and_session_logic_unchanged_outside_HTML_renderer": true,
+  "sequence_check_logic_unchanged_outside_HTML_renderer": true,
+  "model_prompts_and_plan_schema_unchanged": true,
+  "protected_data_references_and_history_no_diff": true,
+  "new_research_model_calls": 0,
+  "new_heavy_scientific_computations": 0,
+  "tests_use_saved_or_mock_records": true,
+  "startup_calls_are_separate_and_not_claimed_zero": true
+}

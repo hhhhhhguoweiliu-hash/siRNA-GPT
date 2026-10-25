@@ -11,12 +11,12 @@ def manifest():
         'data/candidates.tsv','data/historical_scores.tsv','data/VEGFA.fasta','data/expression.tsv.gz',
         'data/historical_seed_matches.tsv','data/provenance.json','references/sirna_library/sources.json','references/vegfa_experiments_20261024/sources.json']
     names+=['verified_imports.py','data/purchased_sivegf_20261024_v1/manifest.json','references/vegfa_experiments_20261024/chen2013_locators.json','references/vegfa_experiments_20261024/osipova2020_locators.json']
-    names+=['sequence_validation.py','sequence_ui.js']
+    names+=['sequence_validation.py','sequence_ui.js','index.html','ui_text.js','ui_labels.py']
     assets={}
     for name in names:
         p=ROOT/name
         if p.is_file():assets[name]=hashlib.sha256(p.read_bytes()).hexdigest()
     return {'version':VERSION,'commit':os.environ.get('RENDER_GIT_COMMIT','local'),
         'assets':assets,'scientific_mode':'verified_imports','knowledge_review':'retrieved_sources_not_independently_scored',
-        'literature_component':'scoped_library_v1','literature_source_manifest':'references/sirna_library/sources.json',
+        'literature_component':'scoped_library_v1','literature_source_manifest':'references/sirna_library/sources.json','interface_language':'en',
         'specialized_fine_tuned_model':False,'durable_cloud_storage':False}

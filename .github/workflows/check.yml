@@ -15,4 +15,7 @@ jobs:
           pip install -r requirements.txt
           python -m unittest discover -p 'test_*.py' -v
       - name: Check frontend syntax and browser backup states
-        run: node test_browser_backup.cjs
+        run: |
+          node test_browser_backup.cjs
+          node test_sequence_ui.cjs
+          node test_english_ui.cjs

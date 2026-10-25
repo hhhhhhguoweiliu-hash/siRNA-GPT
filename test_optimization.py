@@ -31,7 +31,7 @@ class OptimizationTests(unittest.TestCase):
   self.assertIn('score',[c['id'] for c in r['cards']]);self.assertIn('NOT_EXPERT_APPROVED',r['review_status'])
   self.assertTrue(catalogue()['sha256'])
  def test_notes_and_runtime_routes(self):
-  code,body=request('GET','/knowledge');self.assertEqual(code,200);self.assertIn('待外部专家审核'.encode(),body)
+  code,body=request('GET','/knowledge');self.assertEqual(code,200);self.assertIn(b'independent expert review is pending',body)
   code,body=request('GET','/api/runtime');r=json.loads(body)
   self.assertEqual(code,200);self.assertIn('data/historical_scores.tsv',r['assets']);self.assertNotIn('api_key',r)
  def test_scientific_failure_can_retry_without_repeating_completed_tool(self):

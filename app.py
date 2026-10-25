@@ -102,6 +102,7 @@ class Handler(BaseHTTPRequestHandler):
    from runtime_info import manifest
    return self.send(manifest())
   if path=='/library_ui.js':return self.send((HOME/'library_ui.js').read_bytes(),kind='application/javascript; charset=utf-8')
+  if path=='/ui_text.js':return self.send((HOME/'ui_text.js').read_bytes(),kind='application/javascript; charset=utf-8')
   if path=='/sequence_ui.js':return self.send((HOME/'sequence_ui.js').read_bytes(),kind='application/javascript; charset=utf-8')
   if path=='/sequence-check-replay' or path.startswith('/sequence-check-replay/'):
    folder=HOME/'research/2026-10-24_sequence_guard/replay'
@@ -118,18 +119,19 @@ class Handler(BaseHTTPRequestHandler):
     identity=path.rsplit('/',1)[-1];doc,original,parts=library.document(identity)
     if path.startswith('/api/library/original/'):
      return self.send(original.read_bytes(),kind='application/pdf' if original.suffix=='.pdf' else 'text/plain; charset=utf-8')
+    from ui_labels import ui_label
     esc=lambda value:html.escape(str(value),quote=True)
-    body='<meta charset="utf-8"><title>'+esc(doc['title'])+'</title><style>body{max-width:900px;margin:30px auto;padding:0 20px;font:16px/1.7 system-ui}article{border-top:1px solid #ddd;padding:20px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:15px/1.7 system-ui}small{color:#536}article:target{background:#fff6da}</style>'
-    body+='<h1>'+esc(doc['title'])+'</h1><p>'+esc(doc['source_label'])+'；来源类别按声明记录，不代表已通过科学审核。</p><p>文件SHA256：<code>'+esc(doc['sha256'])+'</code></p>'
-    body+='<p><a href="/api/library/original/'+identity+'">打开原始文件</a>'
-    if doc['source_url']:body+=' · <a href="'+esc(doc['source_url'])+'" rel="noopener noreferrer">原始来源入口</a>'
-    body+='</p><p>'+esc(doc['source_note'])+'</p><p>仅提取文字，没有识别图片或图表。文本文件没有PDF页码。</p>'
-    if doc['pages_without_text']:body+='<p>以下页没有可提取文字，未建立文字索引：'+esc(doc['pages_without_text'])+'</p>'
+    body='<html lang="en"><meta charset="utf-8"><title>'+esc(doc['title'])+'</title><style>body{max-width:900px;margin:30px auto;padding:0 20px;font:16px/1.7 system-ui}article{border-top:1px solid #ddd;padding:20px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:15px/1.7 system-ui}small{color:#536}article:target{background:#fff6da}</style>'
+    body+='<h1>'+esc(doc['title'])+'</h1><p>'+esc(ui_label(doc['source_label']))+'; source type is recorded as declared, not independently scientifically reviewed.</p><p>File SHA256: <code>'+esc(doc['sha256'])+'</code></p>'
+    body+='<p><a href="/api/library/original/'+identity+'">Open original file</a>'
+    if doc['source_url']:body+=' · <a href="'+esc(doc['source_url'])+'" rel="noopener noreferrer">Original source</a>'
+    body+='</p><p>'+esc(doc['source_note'])+'</p><p>Text extraction only. Images and charts were not interpreted. Text files have no PDF page numbers.</p>'
+    if doc['pages_without_text']:body+='<p>Pages with no extractable or indexed text: '+esc(doc['pages_without_text'])+'</p>'
     for c in parts:
-     label=('PDF第'+str(c['page'])+'页；' if c['page'] else '文本；')+'片段'+c['chunk_id']
+     label=('PDF p. '+str(c['page'])+' · ' if c['page'] else 'Text · ')+'Snippet '+c['chunk_id']
      body+='<article id="'+esc(c['chunk_id'])+'"><h2>'+esc(label)+'</h2>'
-     if c['page']:body+='<a href="/api/library/original/'+identity+'#page='+str(c['page'])+'">定位原PDF该页</a>'
-     body+='<pre>'+html.escape(c['text'])+'</pre><small>片段SHA256：'+esc(c['sha256'])+'</small></article>'
+     if c['page']:body+='<a href="/api/library/original/'+identity+'#page='+str(c['page'])+'">Open this page in the original PDF</a>'
+     body+='<pre>'+html.escape(c['text'])+'</pre><small>Snippet SHA256: '+esc(c['sha256'])+'</small></article>'
     return self.send(body,kind='text/html; charset=utf-8')
    except ValueError as e:return self.send({'error':str(e)},400)
   if path in ('/api/library-demo','/api/library-demo-download'):
@@ -141,10 +143,10 @@ class Handler(BaseHTTPRequestHandler):
    from knowledge import catalogue
    data=catalogue()
    if path=='/api/knowledge':return self.send(data)
-   body='<meta charset="utf-8"><title>siRNA-GPT 项目资料</title><style>body{max-width:800px;margin:40px auto;padding:0 20px;font:16px/1.8 system-ui}article{padding:20px 0;border-bottom:1px solid #ddd}small{color:#666}</style><h1>本地项目说明卡</h1><p>版本 '+html.escape(data['version'])+'；待外部专家审核。它们说明当前实现，不替代原始论文或实验验证。</p>'
+   body='<html lang="en"><meta charset="utf-8"><title>siRNA-GPT project information</title><style>body{max-width:800px;margin:40px auto;padding:0 20px;font:16px/1.8 system-ui}article{padding:20px 0;border-bottom:1px solid #ddd}small{color:#666}</style><h1>Project information cards</h1><p>Version '+html.escape(data['version'])+'; independent expert review is pending. These cards describe the implementation and do not replace original papers or experiments. Card content is shown in its original language.</p>'
    for card in data['cards']:
-    body+='<article id="'+html.escape(card['id'])+'"><h2>'+html.escape(card['title'])+'</h2><p>'+html.escape(card['text'])+'</p><small>依据：'+html.escape(card['basis'])+'</small>'
-    if card.get('original_url'):body+='<p><a href="'+html.escape(card['original_url'],quote=True)+'">原始文献入口</a></p>'
+    body+='<article id="'+html.escape(card['id'])+'"><h2>'+html.escape(card['title'])+'</h2><p>'+html.escape(card['text'])+'</p><small>Basis: '+html.escape(card['basis'])+'</small>'
+    if card.get('original_url'):body+='<p><a href="'+html.escape(card['original_url'],quote=True)+'">Original article</a></p>'
     body+='</article>'
    return self.send(body,kind='text/html; charset=utf-8')
   if path=='/api/candidate-template':return self.send('candidate_id\tguide_core19_5to3\tsource\n',kind='text/tab-separated-values; charset=utf-8')

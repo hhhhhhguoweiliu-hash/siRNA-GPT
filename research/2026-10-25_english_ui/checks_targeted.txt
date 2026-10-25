@@ -1,0 +1,17 @@
+test_home_and_labels_asset (test_english_interface.EnglishInterfaceTests.test_home_and_labels_asset) ... ok
+test_saved_report_rerender_preserves_original_model_and_values (test_english_interface.EnglishInterfaceTests.test_saved_report_rerender_preserves_original_model_and_values) ... ok
+test_source_page_chrome_retains_original_card_text (test_english_interface.EnglishInterfaceTests.test_source_page_chrome_retains_original_card_text) ... ok
+test_actual_24nt_error_is_blocked_and_raw_kept (test_sequence_validation.SequenceValidationTests.test_actual_24nt_error_is_blocked_and_raw_kept) ... ok
+test_correct_original_answer_control_not_false_blocked (test_sequence_validation.SequenceValidationTests.test_correct_original_answer_control_not_false_blocked) ... ok
+test_future_session_report_and_chat_share_one_check (test_sequence_validation.SequenceValidationTests.test_future_session_report_and_chat_share_one_check) ... ok
+test_no_checked_input_cannot_accept_claim (test_sequence_validation.SequenceValidationTests.test_no_checked_input_cannot_accept_claim) ... ok
+test_no_sequence_claim_not_claimed_as_scientific_accuracy (test_sequence_validation.SequenceValidationTests.test_no_sequence_claim_not_claimed_as_scientific_accuracy) ... ok
+test_single_base_19nt_error_is_not_accepted_by_length (test_sequence_validation.SequenceValidationTests.test_single_base_19nt_error_is_not_accepted_by_length) ... ok
+test_swapped_roles_and_21nt_labeled_core_are_rejected (test_sequence_validation.SequenceValidationTests.test_swapped_roles_and_21nt_labeled_core_are_rejected) ... ok
+test_verified_table_keeps_TT_N3_and_conditional_roles (test_sequence_validation.SequenceValidationTests.test_verified_table_keeps_TT_N3_and_conditional_roles) ... ok
+test_responses_adapter_full_tool_loop (test_responses_integration.IntegrationTests.test_responses_adapter_full_tool_loop) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.264s
+
+OK

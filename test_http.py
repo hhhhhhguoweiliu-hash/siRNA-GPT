@@ -28,5 +28,5 @@ class HTTPTests(unittest.TestCase):
   deadline=time.monotonic()+20
   while app.public_state()['running'] and time.monotonic()<deadline:time.sleep(.1)
   s=app.public_state();self.assertEqual(s['last_result']['status'],'COMPLETE')
-  status,body=request('GET','/runs/'+s['run_id']+'/report.html');self.assertEqual(status,200);self.assertIn('未调用大模型'.encode(),body)
+  status,body=request('GET','/runs/'+s['run_id']+'/report.html');self.assertEqual(status,200);self.assertIn(b'No model call',body)
 if __name__=='__main__':unittest.main(verbosity=2)

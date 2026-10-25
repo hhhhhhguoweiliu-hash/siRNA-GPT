@@ -229,7 +229,7 @@ class Conversation:
         self.runtime=manifest(); self.previous_runs=[]
         self.messages = []; self.events = []; self.plan = None; self.private = None; self.session = None
         self.busy = False; self.result = None; self.phase = 'idle'; self.research_state = {'status':'idle','steps':[],'sources':[]}
-        self.add('assistant', '你好，我们先从你最想解决的问题开始。你可以直接问我怎么筛、某个结果是什么意思，也可以让我核对这批VEGFA siRNA。需要计算时，我会先把步骤列出来。')
+        self.add('assistant', 'Welcome. Ask about the evidence or describe a VEGFA siRNA review task. When tools are needed, I will show a plan for your confirmation first.')
 
     def persist(self):
         save_json(self.root/(self.id+'.json'), {'id': self.id, 'messages': self.messages,

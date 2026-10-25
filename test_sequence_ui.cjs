@@ -13,6 +13,6 @@ for(const [name,status] of [['known_error_24','FAIL'],['wrong_base_19','FAIL'],[
  assert.equal(dom.dataset.sequenceStatus,status);assert.ok(dom.text().includes('GAUAGAGCAAGACAAGAAA'));
  assert.ok(dom.text().includes('GAUAGAGCAAGACAAGAAATT-N3'));assert.ok(dom.text().includes('CONDITIONAL'));
  assert.ok(dom.text().includes(r.model_summary_raw));assert.ok(dom.children.some(x=>x.tag==='details'));
- if(status==='FAIL')assert.ok(dom.text().includes('未通过'));else assert.ok(dom.text().includes('检查通过'));
+ if(status==='FAIL')assert.ok(dom.text().includes('Sequence check failed'));else assert.ok(dom.text().includes('Sequence check passed'));
 }
 console.log('PASS: actual shared chat renderer displays FAIL/FAIL/PASS, verified fields and separate unchanged raw text.');
