@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720"><rect width="1280" height="720" fill="white"/>
+<text x="50.000" y="57.000" font-family="Arial" font-size="31" font-weight="700" fill="#173041">Near-full checks: all 264 queries completed</text>
+<text x="50.000" y="92.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">65 designs + one purchased duplex | Four overlapping 19-nt queries per entry | Fixed 186,185-transcript reference</text>
+<line x1="50" y1="111" x2="1230" y2="111" stroke="#DCE4E8" stroke-width="1"/>
+<text x="50.000" y="159.000" font-family="Arial" font-size="22" font-weight="700" fill="#244F73">a  Designs with a non-target hit at &lt;=1 mismatch</text>
+<text x="770.000" y="159.000" font-family="Arial" font-size="22" font-weight="700" fill="#244F73">b  Purchased duplex: non-target genes</text>
+<line x1="115" y1="516.0" x2="625" y2="516.0" stroke="#DCE4E8" stroke-width="1"/>
+<text x="97.658" y="521.000" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">0</text>
+<line x1="115" y1="421.0" x2="625" y2="421.0" stroke="#DCE4E8" stroke-width="1"/>
+<text x="97.658" y="426.000" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">4</text>
+<line x1="115" y1="326.0" x2="625" y2="326.0" stroke="#DCE4E8" stroke-width="1"/>
+<text x="97.658" y="331.000" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">8</text>
+<line x1="115" y1="231.0" x2="625" y2="231.0" stroke="#DCE4E8" stroke-width="1"/>
+<text x="89.315" y="236.000" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">12</text>
+<line x1="115" y1="231" x2="115" y2="516" stroke="#60727B" stroke-width="1"/>
+<line x1="115" y1="516" x2="625" y2="516" stroke="#60727B" stroke-width="1"/>
+<text x="262.289" y="575.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">Four strand / window checks</text>
+<text x="115.000" y="211.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">Number of designs</text>
+<rect x="147" y="278.5" width="64" height="237.5" fill="#244F73" stroke="#244F73"/>
+<text x="165.652" y="265.500" font-family="Arial" font-size="24" font-weight="700" fill="#173041">10</text>
+<text x="139.867" y="547.000" font-family="Arial" font-size="16" font-weight="400" fill="#173041">Guide core</text>
+<rect x="270" y="349.75" width="64" height="166.25" fill="#244F73" stroke="#244F73"/>
+<text x="295.326" y="336.750" font-family="Arial" font-size="24" font-weight="700" fill="#173041">7</text>
+<text x="262.418" y="547.000" font-family="Arial" font-size="16" font-weight="400" fill="#173041">Guide 2-20</text>
+<rect x="393" y="278.5" width="64" height="237.5" fill="#9484B9" stroke="#9484B9"/>
+<text x="411.652" y="265.500" font-family="Arial" font-size="24" font-weight="700" fill="#173041">10</text>
+<text x="387.207" y="547.000" font-family="Arial" font-size="16" font-weight="400" fill="#173041">Other core</text>
+<rect x="516" y="302.25" width="64" height="213.75" fill="#9484B9" stroke="#9484B9"/>
+<text x="541.326" y="289.250" font-family="Arial" font-size="24" font-weight="700" fill="#173041">9</text>
+<text x="509.758" y="547.000" font-family="Arial" font-size="16" font-weight="400" fill="#173041">Other 2-20</text>
+<line x1="827" y1="516.0" x2="1187" y2="516.0" stroke="#DCE4E8" stroke-width="1"/>
+<text x="809.658" y="521.000" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">0</text>
+<line x1="827" y1="444.75" x2="1187" y2="444.75" stroke="#DCE4E8" stroke-width="1"/>
+<text x="809.658" y="449.750" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">1</text>
+<line x1="827" y1="373.5" x2="1187" y2="373.5" stroke="#DCE4E8" stroke-width="1"/>
+<text x="809.658" y="378.500" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">2</text>
+<line x1="827" y1="302.25" x2="1187" y2="302.25" stroke="#DCE4E8" stroke-width="1"/>
+<text x="809.658" y="307.250" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">3</text>
+<line x1="827" y1="231.0" x2="1187" y2="231.0" stroke="#DCE4E8" stroke-width="1"/>
+<text x="809.658" y="236.000" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">4</text>
+<line x1="827" y1="231" x2="827" y2="516" stroke="#60727B" stroke-width="1"/>
+<line x1="827" y1="516" x2="1187" y2="516" stroke="#60727B" stroke-width="1"/>
+<text x="880.878" y="575.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">Allowed mismatches (cumulative)</text>
+<text x="827.000" y="211.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">Distinct non-target genes</text>
+<text x="846.773" y="506.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">0</text>
+<text x="867.773" y="506.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">0</text>
+<text x="888.773" y="506.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">0</text>
+<text x="909.773" y="506.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">0</text>
+<text x="877.995" y="548.000" font-family="Arial" font-size="18" font-weight="400" fill="#173041">0</text>
+<text x="969.773" y="506.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">0</text>
+<text x="990.773" y="506.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">0</text>
+<text x="1011.773" y="506.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">0</text>
+<text x="1032.773" y="506.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041">0</text>
+<text x="1000.995" y="548.000" font-family="Arial" font-size="18" font-weight="400" fill="#173041">1</text>
+<rect x="1089" y="444.75" width="17" height="71.25" fill="#244F73" stroke="#244F73"/>
+<text x="1092.773" y="434.750" font-family="Arial" font-size="17" font-weight="400" fill="#173041">1</text>
+<rect x="1110" y="302.25" width="17" height="213.75" fill="#91B4CE" stroke="#91B4CE"/>
+<text x="1113.773" y="292.250" font-family="Arial" font-size="17" font-weight="400" fill="#173041">3</text>
+<rect x="1131" y="302.25" width="17" height="213.75" fill="#9484B9" stroke="#9484B9"/>
+<text x="1134.773" y="292.250" font-family="Arial" font-size="17" font-weight="400" fill="#173041">3</text>
+<rect x="1152" y="302.25" width="17" height="213.75" fill="#C8BEDD" stroke="#C8BEDD"/>
+<text x="1155.773" y="292.250" font-family="Arial" font-size="17" font-weight="400" fill="#173041">3</text>
+<text x="1123.995" y="548.000" font-family="Arial" font-size="18" font-weight="400" fill="#173041">2</text>
+<text x="56.000" y="606.000" font-family="Arial" font-size="21" font-weight="700" fill="#317C79">Union across the four checks: 23 / 65 designs (overlap allowed).</text>
+<text x="810.000" y="605.000" font-family="Arial" font-size="16" font-weight="400" fill="#60727B">Bar order: guide core, guide 2-20,</text>
+<text x="810.000" y="625.000" font-family="Arial" font-size="16" font-weight="400" fill="#60727B">other core, other 2-20.</text>
+<line x1="50" y1="632" x2="1230" y2="632" stroke="#DCE4E8" stroke-width="1"/>
+<text x="50.000" y="665.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">These overlapping queries are correlated checks, not four independent biological experiments.</text>
+<text x="50.000" y="695.000" font-family="Arial" font-size="16" font-weight="400" fill="#A84447">Sequence matches are not measured off-target effects. The other 42 designs are not certified safe.</text>
+</svg>

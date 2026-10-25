@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720"><rect width="1280" height="720" fill="white"/>
+<text x="50.000" y="57.000" font-family="Arial" font-size="31" font-weight="700" fill="#173041">One purchased si-VEGF: a recorded Agent run</text>
+<text x="50.000" y="92.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">Saved records, re-typeset | Chinese request translated | run 20261024_121627_1e50c9</text>
+<line x1="50" y1="111" x2="1230" y2="111" stroke="#DCE4E8" stroke-width="1"/>
+<text x="50.000" y="158.000" font-family="Arial" font-size="20" font-weight="700" fill="#317C79">Request</text>
+<text x="155.000" y="158.000" font-family="Arial" font-size="23" font-weight="400" fill="#173041">Review this duplex using its bound results and expression context.</text>
+<text x="50.000" y="220.000" font-family="Arial" font-size="22" font-weight="700" fill="#244F73">a  Six confirmed steps, all executed</text>
+<text x="55.000" y="271.000" font-family="Arial" font-size="19" font-weight="400" fill="#60727B">01</text>
+<text x="103.000" y="271.000" font-family="Arial" font-size="22" font-weight="400" fill="#173041">Check candidate</text>
+<text x="478.945" y="271.000" font-family="Arial" font-size="18" font-weight="400" fill="#317C79">executed</text>
+<text x="55.000" y="320.000" font-family="Arial" font-size="19" font-weight="400" fill="#60727B">02</text>
+<text x="103.000" y="320.000" font-family="Arial" font-size="22" font-weight="400" fill="#173041">Match VEGFA reference</text>
+<text x="478.945" y="320.000" font-family="Arial" font-size="18" font-weight="400" fill="#317C79">executed</text>
+<text x="55.000" y="369.000" font-family="Arial" font-size="19" font-weight="400" fill="#60727B">03</text>
+<text x="103.000" y="369.000" font-family="Arial" font-size="22" font-weight="400" fill="#173041">Read OligoFormer result</text>
+<text x="481.969" y="369.000" font-family="Arial" font-size="18" font-weight="400" fill="#317C79">imported</text>
+<text x="55.000" y="418.000" font-family="Arial" font-size="19" font-weight="400" fill="#60727B">04</text>
+<text x="103.000" y="418.000" font-family="Arial" font-size="22" font-weight="400" fill="#173041">Read seed result</text>
+<text x="481.969" y="418.000" font-family="Arial" font-size="18" font-weight="400" fill="#317C79">imported</text>
+<text x="55.000" y="467.000" font-family="Arial" font-size="19" font-weight="400" fill="#60727B">05</text>
+<text x="103.000" y="467.000" font-family="Arial" font-size="22" font-weight="400" fill="#173041">Join expression data</text>
+<text x="478.945" y="467.000" font-family="Arial" font-size="18" font-weight="400" fill="#317C79">executed</text>
+<text x="55.000" y="516.000" font-family="Arial" font-size="19" font-weight="400" fill="#60727B">06</text>
+<text x="103.000" y="516.000" font-family="Arial" font-size="22" font-weight="400" fill="#173041">Save report</text>
+<text x="478.945" y="516.000" font-family="Arial" font-size="18" font-weight="400" fill="#317C79">executed</text>
+<text x="680.000" y="220.000" font-family="Arial" font-size="22" font-weight="700" fill="#244F73">b  Verified tool fields</text>
+<text x="680.000" y="267.000" font-family="Arial" font-size="18" font-weight="400" fill="#60727B">19-nt paired cores (5&#x27;-3&#x27;; conditional roles)</text>
+<text x="680.000" y="302.000" font-family="Arial" font-size="24" font-weight="700" fill="#173041">UUUCUUGUCUUGCUCUAUC</text>
+<text x="680.000" y="337.000" font-family="Arial" font-size="24" font-weight="700" fill="#173041">GAUAGAGCAAGACAAGAAA</text>
+<text x="680.000" y="395.000" font-family="Arial" font-size="41" font-weight="700" fill="#317C79">1.1219</text>
+<text x="870.000" y="395.000" font-family="Arial" font-size="22" font-weight="400" fill="#173041">model score, not %</text>
+<text x="680.000" y="444.000" font-family="Arial" font-size="38" font-weight="700" fill="#244F73">2,839</text>
+<text x="870.000" y="444.000" font-family="Arial" font-size="20" font-weight="400" fill="#173041">non-target seed genes (guide)</text>
+<text x="680.000" y="487.000" font-family="Arial" font-size="36" font-weight="700" fill="#9484B9">18/20</text>
+<text x="870.000" y="487.000" font-family="Arial" font-size="20" font-weight="400" fill="#173041">fixed reference transcripts</text>
+<text x="50.000" y="594.000" font-family="Arial" font-size="20" font-weight="400" fill="#173041">8 model requests = 1 planning + 7 execution; 6 tools.</text>
+<text x="680.000" y="594.000" font-family="Arial" font-size="18" font-weight="400" fill="#60727B">Core-only analysis; TT/N3 not modeled.</text>
+<line x1="50" y1="632" x2="1230" y2="632" stroke="#DCE4E8" stroke-width="1"/>
+<text x="50.000" y="665.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">OligoFormer and seed results were imported from verified local computations.</text>
+<text x="50.000" y="695.000" font-family="Arial" font-size="16" font-weight="400" fill="#A84447">Raw answer retained: one 19-nt core was miscopied as 24 nt. This table uses tool evidence.</text>
+</svg>

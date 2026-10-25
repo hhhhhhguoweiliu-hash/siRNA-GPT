@@ -1,0 +1,389 @@
+[
+  {
+    "text": "A complete, traceable candidate pool",
+    "x": 50,
+    "baseline_y": 57,
+    "width": 547.81298828125,
+    "font_size": 31,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "All 65 design predictions shown | Purchased si-VEGF is a separate entry | Existing calculations re-plotted",
+    "x": 50,
+    "baseline_y": 92,
+    "width": 790.27587890625,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "a  Candidate accounting",
+    "x": 50,
+    "baseline_y": 157,
+    "width": 254.25683593749997,
+    "font_size": 22,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Original designs",
+    "x": 50,
+    "baseline_y": 218,
+    "width": 129.06738281250003,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "104",
+    "x": 312.0,
+    "baseline_y": 259,
+    "width": 38.37451171875,
+    "font_size": 23,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Reporting pool",
+    "x": 50,
+    "baseline_y": 329,
+    "width": 117.07910156250001,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "65",
+    "x": 218.25,
+    "baseline_y": 370,
+    "width": 25.5830078125,
+    "font_size": 23,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Historical subset",
+    "x": 50,
+    "baseline_y": 440,
+    "width": 132.04687500000003,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "9",
+    "x": 83.63461538461539,
+    "baseline_y": 481,
+    "width": 12.79150390625,
+    "font_size": 23,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Nested counts; not final selections.",
+    "x": 50,
+    "baseline_y": 588,
+    "width": 247.25,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "b  Score by target position",
+    "x": 420,
+    "baseline_y": 157,
+    "width": 277.4814453125,
+    "font_size": 22,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 432.65771484375,
+    "baseline_y": 525.0,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0.4",
+    "x": 420.14794921875,
+    "baseline_y": 442.1428571428571,
+    "width": 20.85205078125,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0.8",
+    "x": 420.14794921875,
+    "baseline_y": 359.2857142857143,
+    "width": 20.85205078125,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "1.2",
+    "x": 420.14794921875,
+    "baseline_y": 276.42857142857144,
+    "width": 20.85205078125,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 445.828857421875,
+    "baseline_y": 545,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "2000",
+    "x": 584.8154296875,
+    "baseline_y": 545,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "4000",
+    "x": 736.3154296875,
+    "baseline_y": 545,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Core start on NM_003376.6",
+    "x": 496.607177734375,
+    "baseline_y": 579,
+    "width": 209.78564453125003,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "OligoFormer scaled score",
+    "x": 450,
+    "baseline_y": 210,
+    "width": 194.6201171875,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "c  Score and seed annotation",
+    "x": 835,
+    "baseline_y": 157,
+    "width": 305.6259765625,
+    "font_size": 22,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 862.65771484375,
+    "baseline_y": 525.0,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "1000",
+    "x": 837.630859375,
+    "baseline_y": 492.77777777777777,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "2000",
+    "x": 837.630859375,
+    "baseline_y": 460.55555555555554,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "3000",
+    "x": 837.630859375,
+    "baseline_y": 428.3333333333333,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "4000",
+    "x": 837.630859375,
+    "baseline_y": 396.1111111111111,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "5000",
+    "x": 837.630859375,
+    "baseline_y": 363.8888888888889,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "6000",
+    "x": 837.630859375,
+    "baseline_y": 331.66666666666663,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "7000",
+    "x": 837.630859375,
+    "baseline_y": 299.44444444444446,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "8000",
+    "x": 837.630859375,
+    "baseline_y": 267.22222222222223,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "9000",
+    "x": 837.630859375,
+    "baseline_y": 235.0,
+    "width": 33.369140625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 875.828857421875,
+    "baseline_y": 545,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0.4",
+    "x": 963.8596888950893,
+    "baseline_y": 545,
+    "width": 20.85205078125,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0.8",
+    "x": 1058.1454031808037,
+    "baseline_y": 545,
+    "width": 20.85205078125,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "1.2",
+    "x": 1152.431117466518,
+    "baseline_y": 545,
+    "width": 20.85205078125,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "OligoFormer scaled score",
+    "x": 947.68994140625,
+    "baseline_y": 579,
+    "width": 194.6201171875,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Guide non-target seed genes",
+    "x": 880,
+    "baseline_y": 210,
+    "width": 220.21142578125003,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "5-UTR / boundary",
+    "x": 437,
+    "baseline_y": 612,
+    "width": 127.1640625,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "CDS",
+    "x": 687,
+    "baseline_y": 612,
+    "width": 33.78125,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "3-UTR",
+    "x": 822,
+    "baseline_y": 612,
+    "width": 47.109375,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Purchased",
+    "x": 1067,
+    "baseline_y": 612,
+    "width": 76.4921875,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Scores use the official 1.341 scale; they are not measured knockdown percentages.",
+    "x": 50,
+    "baseline_y": 665,
+    "width": 630.3115234375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Seed matches are sequence annotations. All sequence flags remain in the source table; no final wet-lab shortlist.",
+    "x": 50,
+    "baseline_y": 695,
+    "width": 798.6875,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  }
+]

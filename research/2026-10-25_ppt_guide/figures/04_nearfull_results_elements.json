@@ -1,0 +1,407 @@
+[
+  {
+    "text": "Near-full checks: all 264 queries completed",
+    "x": 50,
+    "baseline_y": 57,
+    "width": 635.75732421875,
+    "font_size": 31,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "65 designs + one purchased duplex | Four overlapping 19-nt queries per entry | Fixed 186,185-transcript reference",
+    "x": 50,
+    "baseline_y": 92,
+    "width": 859.8115234375001,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "a  Designs with a non-target hit at <=1 mismatch",
+    "x": 50,
+    "baseline_y": 159,
+    "width": 504.89355468749994,
+    "font_size": 22,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "b  Purchased duplex: non-target genes",
+    "x": 770,
+    "baseline_y": 159,
+    "width": 407.064453125,
+    "font_size": 22,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 97.65771484375,
+    "baseline_y": 521.0,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "4",
+    "x": 97.65771484375,
+    "baseline_y": 426.0,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "8",
+    "x": 97.65771484375,
+    "baseline_y": 331.0,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "12",
+    "x": 89.3154296875,
+    "baseline_y": 236.0,
+    "width": 16.6845703125,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Four strand / window checks",
+    "x": 262.2890625,
+    "baseline_y": 575,
+    "width": 215.42187500000003,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Number of designs",
+    "x": 115,
+    "baseline_y": 211,
+    "width": 142.68212890625,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "10",
+    "x": 165.65234375,
+    "baseline_y": 265.5,
+    "width": 26.6953125,
+    "font_size": 24,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Guide core",
+    "x": 139.8671875,
+    "baseline_y": 547,
+    "width": 78.265625,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "7",
+    "x": 295.326171875,
+    "baseline_y": 336.75,
+    "width": 13.34765625,
+    "font_size": 24,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Guide 2-20",
+    "x": 262.41796875,
+    "baseline_y": 547,
+    "width": 79.1640625,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "10",
+    "x": 411.65234375,
+    "baseline_y": 265.5,
+    "width": 26.6953125,
+    "font_size": 24,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Other core",
+    "x": 387.20703125,
+    "baseline_y": 547,
+    "width": 75.5859375,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "9",
+    "x": 541.326171875,
+    "baseline_y": 289.25,
+    "width": 13.34765625,
+    "font_size": 24,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Other 2-20",
+    "x": 509.7578125,
+    "baseline_y": 547,
+    "width": 76.484375,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 809.65771484375,
+    "baseline_y": 521.0,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "1",
+    "x": 809.65771484375,
+    "baseline_y": 449.75,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "2",
+    "x": 809.65771484375,
+    "baseline_y": 378.5,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "3",
+    "x": 809.65771484375,
+    "baseline_y": 307.25,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "4",
+    "x": 809.65771484375,
+    "baseline_y": 236.0,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Allowed mismatches (cumulative)",
+    "x": 880.8779296875,
+    "baseline_y": 575,
+    "width": 252.24414062500003,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Distinct non-target genes",
+    "x": 827,
+    "baseline_y": 211,
+    "width": 188.9921875,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 846.772705078125,
+    "baseline_y": 506.0,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 867.772705078125,
+    "baseline_y": 506.0,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 888.772705078125,
+    "baseline_y": 506.0,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 909.772705078125,
+    "baseline_y": 506.0,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 877.99462890625,
+    "baseline_y": 548,
+    "width": 10.010742187500002,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 969.772705078125,
+    "baseline_y": 506.0,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 990.772705078125,
+    "baseline_y": 506.0,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 1011.772705078125,
+    "baseline_y": 506.0,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 1032.772705078125,
+    "baseline_y": 506.0,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "1",
+    "x": 1000.99462890625,
+    "baseline_y": 548,
+    "width": 10.010742187500002,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "1",
+    "x": 1092.772705078125,
+    "baseline_y": 434.75,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "3",
+    "x": 1113.772705078125,
+    "baseline_y": 292.25,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "3",
+    "x": 1134.772705078125,
+    "baseline_y": 292.25,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "3",
+    "x": 1155.772705078125,
+    "baseline_y": 292.25,
+    "width": 9.45458984375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "2",
+    "x": 1123.99462890625,
+    "baseline_y": 548,
+    "width": 10.010742187500002,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Union across the four checks: 23 / 65 designs (overlap allowed).",
+    "x": 56,
+    "baseline_y": 606,
+    "width": 639.52587890625,
+    "font_size": 21,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Bar order: guide core, guide 2-20,",
+    "x": 810,
+    "baseline_y": 605,
+    "width": 239.2578125,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "other core, other 2-20.",
+    "x": 810,
+    "baseline_y": 625,
+    "width": 158.3125,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "These overlapping queries are correlated checks, not four independent biological experiments.",
+    "x": 50,
+    "baseline_y": 665,
+    "width": 710.646484375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Sequence matches are not measured off-target effects. The other 42 designs are not certified safe.",
+    "x": 50,
+    "baseline_y": 695,
+    "width": 699.953125,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  }
+]
