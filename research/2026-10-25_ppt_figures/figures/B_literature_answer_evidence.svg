@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="white"/>
+<text x="48" y="51" font-family="Arial" font-size="32" font-weight="700" fill="#162C34">An answer linked to retrieved evidence</text>
+<text x="48" y="81" font-family="Arial" font-size="18" font-weight="400" fill="#465C65">Recorded B02 query | 1 model call | 6 retrieved snippets | 6,232 tokens | code 179a7af</text>
+<text x="48" y="119" font-family="Arial" font-size="20" font-weight="700" fill="#176C72">a  User question (translated)</text>
+<text x="48" y="152" font-family="Arial" font-size="25" font-weight="700" fill="#162C34">Can an OligoFormer score above 1 mean more than 100% knockdown?</text>
+<line x1="48" y1="179" x2="1232" y2="179" stroke="#B8C7CB" stroke-width="0.8"/>
+<text x="48" y="214" font-family="Arial" font-size="22" font-weight="700" fill="#176C72">b  Evidence actually passed to the model</text>
+<text x="780" y="214" font-family="Arial" font-size="22" font-weight="700" fill="#176C72">c  Answer (translated excerpts)</text>
+<text x="48" y="253" font-family="Arial" font-size="19" font-weight="700" fill="#162C34">[S3] Article full text, text-c020</text>
+<text x="48" y="284" font-family="Arial" font-size="21" font-weight="400" fill="#162C34">&quot;The output of the model represents a prediction score</text>
+<text x="48" y="313" font-family="Arial" font-size="21" font-weight="400" fill="#162C34">for each siRNA, reflecting its potential effectiveness</text>
+<text x="48" y="342" font-family="Arial" font-size="21" font-weight="400" fill="#162C34">in inducing gene knockdown.&quot;</text>
+<text x="48" y="382" font-family="Arial" font-size="17" font-weight="400" fill="#465C65">OligoFormer, DOI: 10.1093/bioinformatics/btae577</text>
+<text x="48" y="422" font-family="Arial" font-size="19" font-weight="700" fill="#162C34">[S2] Official source code, text-c007</text>
+<text x="48" y="452" font-family="Arial" font-size="21" font-weight="400" fill="#162C34">Y_PRED = [i*1.341 for i in Y_PRED]</text>
+<text x="48" y="483" font-family="Arial" font-size="21" font-weight="400" fill="#162C34">RESULT[&#x27;efficacy&#x27;] = Y_PRED</text>
+<text x="48" y="515" font-family="Arial" font-size="17" font-weight="400" fill="#465C65">scripts/infer.py @ e2f53ad63387 (also retrieved in S5)</text>
+<text x="48" y="555" font-family="Arial" font-size="19" font-weight="700" fill="#162C34">[S1] Project setting (translated, not a paper result)</text>
+<text x="48" y="585" font-family="Arial" font-size="20" font-weight="400" fill="#162C34">&quot;The model score is not an experimental knockdown percentage.&quot;</text>
+<text x="780" y="261" font-family="Arial" font-size="32" font-weight="700" fill="#176C72">No.</text>
+<text x="780" y="302" font-family="Arial" font-size="22" font-weight="400" fill="#162C34">A score above 1 cannot mean</text>
+<text x="780" y="331" font-family="Arial" font-size="22" font-weight="400" fill="#162C34">more than 100% knockdown.</text>
+<text x="780" y="360" font-family="Arial" font-size="22" font-weight="400" fill="#162C34">[S1, S3]</text>
+<text x="780" y="410" font-family="Arial" font-size="22" font-weight="400" fill="#162C34">The output is linearly scaled</text>
+<text x="780" y="439" font-family="Arial" font-size="22" font-weight="400" fill="#162C34">by 1.341. [S2, S5]</text>
+<text x="780" y="493" font-family="Arial" font-size="21" font-weight="400" fill="#162C34">These snippets do not establish</text>
+<text x="780" y="522" font-family="Arial" font-size="21" font-weight="400" fill="#162C34">a measured knockdown percentage</text>
+<text x="780" y="551" font-family="Arial" font-size="21" font-weight="400" fill="#162C34">for a specific score.</text>
+<line x1="48" y1="611" x2="1232" y2="611" stroke="#B8C7CB" stroke-width="0.8"/>
+<text x="48" y="641" font-family="Arial" font-size="19" font-weight="400" fill="#465C65">English translations of saved Chinese records; original source quotes retained. Not a web screenshot.</text>
+<text x="48" y="669" font-family="Arial" font-size="18" font-weight="400" fill="#465C65">Text fragments, not PDF pages. Source types remain separate. No independent quality score is claimed.</text>
+<text x="48" y="695" font-family="Arial" font-size="16" font-weight="400" fill="#465C65">Run library_demo_20261024_032210_21c28f; library b4d516450903...; exact files and S1-S6 in SOURCE_MAP.md.</text>
+</svg>

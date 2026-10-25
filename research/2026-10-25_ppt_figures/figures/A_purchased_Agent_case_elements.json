@@ -1,0 +1,470 @@
+[
+  {
+    "text": "One purchased si-VEGF duplex, one recorded Agent run",
+    "x": 48,
+    "baseline_y": 51,
+    "font_size": 32,
+    "font_weight": "bold",
+    "width": 858.8125,
+    "source": null
+  },
+  {
+    "text": "Saved-record excerpts, not a web screenshot | run 20261024_121627_1e50c9 | code 03092ef",
+    "x": 48,
+    "baseline_y": 81,
+    "font_size": 17,
+    "font_weight": "normal",
+    "width": 709.1689453125,
+    "source": null
+  },
+  {
+    "text": "a  User request and confirmed plan",
+    "x": 48,
+    "baseline_y": 116,
+    "font_size": 20,
+    "font_weight": "bold",
+    "width": 334.53125,
+    "source": null
+  },
+  {
+    "text": "Review the purchased duplex, preserve TT/N3, use the bound offline results,",
+    "x": 48,
+    "baseline_y": 144,
+    "font_size": 20,
+    "font_weight": "normal",
+    "width": 679.2578125,
+    "source": "conversation_export_original.json#/messages/1/text"
+  },
+  {
+    "text": "check the reference, add expression context and produce a report. [Translated request excerpt]",
+    "x": 48,
+    "baseline_y": 170,
+    "font_size": 20,
+    "font_weight": "normal",
+    "width": 843.818359375,
+    "source": "conversation_export_original.json#/messages/1/text"
+  },
+  {
+    "text": "Confirmed plan: candidate check; reference check; score; seed; expression; report.",
+    "x": 48,
+    "baseline_y": 205,
+    "font_size": 20,
+    "font_weight": "normal",
+    "width": 735.9375,
+    "source": "conversation_export_original.json#/plan/tools"
+  },
+  {
+    "text": "8 model requests = 1 planning + 7 execution requests; 6 tool calls; 39,048 tokens.",
+    "x": 48,
+    "baseline_y": 233,
+    "font_size": 19,
+    "font_weight": "normal",
+    "width": 687.60888671875,
+    "source": "actual_model_call_summary.json"
+  },
+  {
+    "text": "b  Execution log, 12:16:27-12:17:03 UTC",
+    "x": 48,
+    "baseline_y": 281,
+    "font_size": 20,
+    "font_weight": "bold",
+    "width": 379.00390625,
+    "source": "conversation events: first model_started to final model_finished"
+  },
+  {
+    "text": "c  Evidence-derived candidate excerpt",
+    "x": 760,
+    "baseline_y": 281,
+    "font_size": 20,
+    "font_weight": "bold",
+    "width": 363.486328125,
+    "source": null
+  },
+  {
+    "text": "Call",
+    "x": 48,
+    "baseline_y": 310,
+    "font_size": 17,
+    "font_weight": "bold",
+    "width": 31.177734375000004,
+    "source": null
+  },
+  {
+    "text": "Tool name (verbatim)",
+    "x": 105,
+    "baseline_y": 310,
+    "font_size": 17,
+    "font_weight": "bold",
+    "width": 171.91748046875,
+    "source": null
+  },
+  {
+    "text": "Recorded operation",
+    "x": 340,
+    "baseline_y": 310,
+    "font_size": 17,
+    "font_weight": "bold",
+    "width": 160.57861328125,
+    "source": null
+  },
+  {
+    "text": "Tool s",
+    "x": 627,
+    "baseline_y": 310,
+    "font_size": 17,
+    "font_weight": "bold",
+    "width": 50.05371093750001,
+    "source": null
+  },
+  {
+    "text": "M1",
+    "x": 48,
+    "baseline_y": 341,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 25.004882812500004,
+    "source": "events: tool_finished 1"
+  },
+  {
+    "text": "inspect_candidates",
+    "x": 105,
+    "baseline_y": 341,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 154.10742187500003,
+    "source": "events: tool_finished 1"
+  },
+  {
+    "text": "Live input check",
+    "x": 340,
+    "baseline_y": 341,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 129.07617187500003,
+    "source": "events: tool_finished 1/status"
+  },
+  {
+    "text": "0.006",
+    "x": 627,
+    "baseline_y": 341,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 45.04394531250001,
+    "source": "events: tool_finished 1/seconds"
+  },
+  {
+    "text": "M2",
+    "x": 48,
+    "baseline_y": 370,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 25.004882812500004,
+    "source": "events: tool_finished 2"
+  },
+  {
+    "text": "verify_target",
+    "x": 105,
+    "baseline_y": 370,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 99.04394531250001,
+    "source": "events: tool_finished 2"
+  },
+  {
+    "text": "Live reference match",
+    "x": 340,
+    "baseline_y": 370,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 168.08203125000003,
+    "source": "events: tool_finished 2/status"
+  },
+  {
+    "text": "0.003",
+    "x": 627,
+    "baseline_y": 370,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 45.04394531250001,
+    "source": "events: tool_finished 2/seconds"
+  },
+  {
+    "text": "M3",
+    "x": 48,
+    "baseline_y": 399,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 25.004882812500004,
+    "source": "events: tool_finished 3"
+  },
+  {
+    "text": "score_candidates",
+    "x": 105,
+    "baseline_y": 399,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 141.09082031250003,
+    "source": "events: tool_finished 3"
+  },
+  {
+    "text": "Verified local import",
+    "x": 340,
+    "baseline_y": 399,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 158.06250000000003,
+    "source": "events: tool_finished 3/status"
+  },
+  {
+    "text": "0.002",
+    "x": 627,
+    "baseline_y": 399,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 45.04394531250001,
+    "source": "events: tool_finished 3/seconds"
+  },
+  {
+    "text": "M4",
+    "x": 48,
+    "baseline_y": 428,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 25.004882812500004,
+    "source": "events: tool_finished 4"
+  },
+  {
+    "text": "match_seed",
+    "x": 105,
+    "baseline_y": 428,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 98.05957031250001,
+    "source": "events: tool_finished 4"
+  },
+  {
+    "text": "Verified local import",
+    "x": 340,
+    "baseline_y": 428,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 158.06250000000003,
+    "source": "events: tool_finished 4/status"
+  },
+  {
+    "text": "0.536",
+    "x": 627,
+    "baseline_y": 428,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 45.04394531250001,
+    "source": "events: tool_finished 4/seconds"
+  },
+  {
+    "text": "M5",
+    "x": 48,
+    "baseline_y": 457,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 25.004882812500004,
+    "source": "events: tool_finished 5"
+  },
+  {
+    "text": "query_expression",
+    "x": 105,
+    "baseline_y": 457,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 142.08398437500003,
+    "source": "events: tool_finished 5"
+  },
+  {
+    "text": "Live baseline join",
+    "x": 340,
+    "baseline_y": 457,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 138.09375000000003,
+    "source": "events: tool_finished 5/status"
+  },
+  {
+    "text": "1.200",
+    "x": 627,
+    "baseline_y": 457,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 45.04394531250001,
+    "source": "events: tool_finished 5/seconds"
+  },
+  {
+    "text": "M6",
+    "x": 48,
+    "baseline_y": 486,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 25.004882812500004,
+    "source": "events: tool_finished 6"
+  },
+  {
+    "text": "compile_report",
+    "x": 105,
+    "baseline_y": 486,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 119.05664062500001,
+    "source": "events: tool_finished 6"
+  },
+  {
+    "text": "Report saved",
+    "x": 340,
+    "baseline_y": 486,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 107.05957031250001,
+    "source": "events: tool_finished 6/status"
+  },
+  {
+    "text": "0.127",
+    "x": 627,
+    "baseline_y": 486,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 45.04394531250001,
+    "source": "events: tool_finished 6/seconds"
+  },
+  {
+    "text": "M7: final model answer, 21.870 s; no seventh tool.",
+    "x": 48,
+    "baseline_y": 521,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 401.22949218750006,
+    "source": "conversation events: model_started/finished turn 7"
+  },
+  {
+    "text": "OligoFormer/SeedMatchR were imported, not rerun in the cloud.",
+    "x": 48,
+    "baseline_y": 550,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 512.2353515625001,
+    "source": "score_candidates.json + match_seed.json status"
+  },
+  {
+    "text": "Guide core, 19 nt (5'-3')",
+    "x": 760,
+    "baseline_y": 314,
+    "font_size": 17,
+    "font_weight": "bold",
+    "width": 186.62646484375,
+    "source": null
+  },
+  {
+    "text": "UUUCUUGUCUUGCUCUAUC",
+    "x": 760,
+    "baseline_y": 340,
+    "font_size": 20,
+    "font_weight": "normal",
+    "width": 275.546875,
+    "source": "tool_export/inspect_candidates.json#/rows/0/guide_core19_5to3"
+  },
+  {
+    "text": "Other core, 19 nt (5'-3', conditional role)",
+    "x": 760,
+    "baseline_y": 373,
+    "font_size": 17,
+    "font_weight": "bold",
+    "width": 319.80419921875,
+    "source": null
+  },
+  {
+    "text": "GAUAGAGCAAGACAAGAAA",
+    "x": 760,
+    "baseline_y": 399,
+    "font_size": 20,
+    "font_weight": "normal",
+    "width": 267.8515625,
+    "source": "tool_export/plan.json#/candidates/0/passenger_paired_core_19nt_5to3"
+  },
+  {
+    "text": "NM_003376.6: 1439-1457; coverage 18/20",
+    "x": 760,
+    "baseline_y": 432,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 343.25683593750006,
+    "source": "tool_export/verify_target.json#/rows/0"
+  },
+  {
+    "text": "OligoFormer score 1.121934 (not %)",
+    "x": 760,
+    "baseline_y": 462,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 292.13085937500006,
+    "source": "tool_export/score_candidates.json#/rows/0"
+  },
+  {
+    "text": "Guide: 3,539 non-target sites / 2,839 genes",
+    "x": 760,
+    "baseline_y": 492,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 346.23632812500006,
+    "source": "tool_export/query_expression.json#/candidate_summary/0"
+  },
+  {
+    "text": "1,595 detected in hypoxia; 3 unmapped",
+    "x": 760,
+    "baseline_y": 522,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 315.23730468750006,
+    "source": "tool_export/query_expression.json#/candidate_summary/0"
+  },
+  {
+    "text": "Conditional roles; TT/N3 retained, not simulated.",
+    "x": 760,
+    "baseline_y": 550,
+    "font_size": 17,
+    "font_weight": "normal",
+    "width": 364.736328125,
+    "source": "tool_export/inspect_candidates.json#/rows/0/limits"
+  },
+  {
+    "text": "Original answer error retained: the passenger core was written as 24 nt, not 19 nt.",
+    "x": 48,
+    "baseline_y": 599,
+    "font_size": 22,
+    "font_weight": "bold",
+    "width": 853.3701171875,
+    "source": "tool_export/report.json#/model_summary + ANSWER_CORRECTION_ZH.md"
+  },
+  {
+    "text": "Plan-to-execution gap 103.357 s (includes user wait; click time not logged); execution 36.040 s.",
+    "x": 48,
+    "baseline_y": 628,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 758.4345703125001,
+    "source": "conversation events: planner_finished to first model_started; first start to final end"
+  },
+  {
+    "text": "Planner duration not logged. Seed matches and expression are annotations, not measured siRNA effects.",
+    "x": 48,
+    "baseline_y": 655,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 841.5087890625001,
+    "source": "conversation events + tool_export/query_expression.json#/scope"
+  },
+  {
+    "text": "Sources: 2026-10-24_nearfull_complete/live/; full original paths, versions and excerpts in SOURCE_MAP.md.",
+    "x": 48,
+    "baseline_y": 686,
+    "font_size": 16,
+    "font_weight": "normal",
+    "width": 775.4921875,
+    "source": null
+  }
+]

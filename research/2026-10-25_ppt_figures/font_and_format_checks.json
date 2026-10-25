@@ -1,0 +1,44 @@
+[
+  {
+    "figure": "A_purchased_Agent_case",
+    "page_points": [
+      1280,
+      720
+    ],
+    "pdf_fonts": [
+      {
+        "basefont": "/AAAAAA+Arial-BoldMT",
+        "embedded_true_type": true
+      },
+      {
+        "basefont": "/AAAAAA+ArialMT",
+        "embedded_true_type": true
+      }
+    ],
+    "editable_svg_text_elements": 52,
+    "all_text_matches_pdf": true,
+    "all_pdf_text_show_operations_use_embedded_Arial": true,
+    "pdf_text_show_operation_count": 52
+  },
+  {
+    "figure": "B_literature_answer_evidence",
+    "page_points": [
+      1280,
+      720
+    ],
+    "pdf_fonts": [
+      {
+        "basefont": "/AAAAAA+Arial-BoldMT",
+        "embedded_true_type": true
+      },
+      {
+        "basefont": "/AAAAAA+ArialMT",
+        "embedded_true_type": true
+      }
+    ],
+    "editable_svg_text_elements": 29,
+    "all_text_matches_pdf": true,
+    "all_pdf_text_show_operations_use_embedded_Arial": true,
+    "pdf_text_show_operation_count": 29
+  }
+]

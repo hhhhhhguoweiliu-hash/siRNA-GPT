@@ -1,0 +1,24 @@
+{
+  "status": "LIVE_CHECKED",
+  "rows": [
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+      "source": "User original synthesis DOCX, 20261024; conditional strand assignment",
+      "synthesis_status": "ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED",
+      "evidence_dataset_id": "purchased_sivegf_20261024_v1",
+      "evidence_manifest": "verified_import/purchased_sivegf_20261024_v1/manifest.json",
+      "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+      "original_row2": "UUUCUUGUCUUGCUCUAUCTT",
+      "strand_assignment_basis": "DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles",
+      "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+      "limits": [
+        "Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed",
+        "Original TT and row1 N3 retained; exact terminal chemistry/attachment not established",
+        "Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated",
+        "Offline official computations imported by exact sequence/reference binding; no new score/seed execution"
+      ]
+    }
+  ],
+  "warning": "配对核心用于计算；不自动转换为订购序列或声称已做化学修饰验证"
+}

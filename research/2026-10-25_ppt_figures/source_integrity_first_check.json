@@ -1,0 +1,21 @@
+{
+  "first_check_passed": false,
+  "mismatches": [
+    {
+      "path": "docs/reviews/20261025_1040_ppt_figure_selection.md",
+      "git_bytes": 13817,
+      "local_bytes": 13889,
+      "git_sha256": "7f80247a3b4184907781113da074efc347ac87f8e0775f744831c947ca0b8286",
+      "local_sha256": "cd3e70db7bd313fe3333604c1f25f8659b3247d660ae23d5c49c0bff009164c1",
+      "identical_after_newline_normalization": true
+    },
+    {
+      "path": "docs/reviews/20261025_1040_ppt_figure_audit.json",
+      "git_bytes": 14058,
+      "local_bytes": 14523,
+      "git_sha256": "326da265bde2545cacd24074f5eab0ab7bebcb4867b81ae310b0529f96375abc",
+      "local_sha256": "ed8b602873df99653d47170925165329f024726691b932c0445b5f27fe09715e",
+      "identical_after_newline_normalization": true
+    }
+  ]
+}

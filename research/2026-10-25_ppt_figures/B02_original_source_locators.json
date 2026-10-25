@@ -1,0 +1,26 @@
+{
+  "official_code": {
+    "zip": "research\\2026-10-23_literature\\live_20261024\\actual_demo\\library.zip",
+    "entry": "originals/ec77cffdc9e76e478068430f.txt",
+    "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+    "scaling_line_numbers_1based": [
+      252,
+      385
+    ],
+    "source_url": "https://github.com/lulab/OligoFormer/blob/e2f53ad63387bbe166bf123949151e2bc9bf6ec3/scripts/infer.py",
+    "source_version": "e2f53ad63387bbe166bf123949151e2bc9bf6ec3"
+  },
+  "article": {
+    "entry": "originals/e2cea21b6712b85250758e8b.txt",
+    "sha256": "e2cea21b6712b85250758e8b69a9135ff579b422cbdc81606d130e3ba9e6fd1e",
+    "quote_start_character_0based": 30046,
+    "quote_end_character_exclusive": 30182,
+    "retrieved_chunk": "text-c020",
+    "chunk_start": 28983,
+    "chunk_end": 30781,
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11494384/",
+    "pdf_page": null
+  },
+  "all_six_passed_texts_match_saved_retrieval": true,
+  "note": "Coordinates locate saved text, not a PDF page. No new retrieval or model call."
+}

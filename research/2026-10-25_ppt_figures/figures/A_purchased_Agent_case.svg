@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="white"/>
+<text x="48" y="51" font-family="Arial" font-size="32" font-weight="700" fill="#162C34">One purchased si-VEGF duplex, one recorded Agent run</text>
+<text x="48" y="81" font-family="Arial" font-size="17" font-weight="400" fill="#465C65">Saved-record excerpts, not a web screenshot | run 20261024_121627_1e50c9 | code 03092ef</text>
+<text x="48" y="116" font-family="Arial" font-size="20" font-weight="700" fill="#176C72">a  User request and confirmed plan</text>
+<text x="48" y="144" font-family="Arial" font-size="20" font-weight="400" fill="#162C34">Review the purchased duplex, preserve TT/N3, use the bound offline results,</text>
+<text x="48" y="170" font-family="Arial" font-size="20" font-weight="400" fill="#162C34">check the reference, add expression context and produce a report. [Translated request excerpt]</text>
+<text x="48" y="205" font-family="Arial" font-size="20" font-weight="400" fill="#162C34">Confirmed plan: candidate check; reference check; score; seed; expression; report.</text>
+<text x="48" y="233" font-family="Arial" font-size="19" font-weight="400" fill="#162C34">8 model requests = 1 planning + 7 execution requests; 6 tool calls; 39,048 tokens.</text>
+<line x1="48" y1="252" x2="1232" y2="252" stroke="#B8C7CB" stroke-width="0.8"/>
+<text x="48" y="281" font-family="Arial" font-size="20" font-weight="700" fill="#176C72">b  Execution log, 12:16:27-12:17:03 UTC</text>
+<text x="760" y="281" font-family="Arial" font-size="20" font-weight="700" fill="#176C72">c  Evidence-derived candidate excerpt</text>
+<text x="48" y="310" font-family="Arial" font-size="17" font-weight="700" fill="#162C34">Call</text>
+<text x="105" y="310" font-family="Arial" font-size="17" font-weight="700" fill="#162C34">Tool name (verbatim)</text>
+<text x="340" y="310" font-family="Arial" font-size="17" font-weight="700" fill="#162C34">Recorded operation</text>
+<text x="627" y="310" font-family="Arial" font-size="17" font-weight="700" fill="#162C34">Tool s</text>
+<text x="48" y="341" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">M1</text>
+<text x="105" y="341" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">inspect_candidates</text>
+<text x="340" y="341" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">Live input check</text>
+<text x="627" y="341" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">0.006</text>
+<text x="48" y="370" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">M2</text>
+<text x="105" y="370" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">verify_target</text>
+<text x="340" y="370" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">Live reference match</text>
+<text x="627" y="370" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">0.003</text>
+<text x="48" y="399" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">M3</text>
+<text x="105" y="399" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">score_candidates</text>
+<text x="340" y="399" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">Verified local import</text>
+<text x="627" y="399" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">0.002</text>
+<text x="48" y="428" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">M4</text>
+<text x="105" y="428" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">match_seed</text>
+<text x="340" y="428" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">Verified local import</text>
+<text x="627" y="428" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">0.536</text>
+<text x="48" y="457" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">M5</text>
+<text x="105" y="457" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">query_expression</text>
+<text x="340" y="457" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">Live baseline join</text>
+<text x="627" y="457" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">1.200</text>
+<text x="48" y="486" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">M6</text>
+<text x="105" y="486" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">compile_report</text>
+<text x="340" y="486" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">Report saved</text>
+<text x="627" y="486" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">0.127</text>
+<text x="48" y="521" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">M7: final model answer, 21.870 s; no seventh tool.</text>
+<text x="48" y="550" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">OligoFormer/SeedMatchR were imported, not rerun in the cloud.</text>
+<text x="760" y="314" font-family="Arial" font-size="17" font-weight="700" fill="#162C34">Guide core, 19 nt (5&#x27;-3&#x27;)</text>
+<text x="760" y="340" font-family="Arial" font-size="20" font-weight="400" fill="#162C34">UUUCUUGUCUUGCUCUAUC</text>
+<text x="760" y="373" font-family="Arial" font-size="17" font-weight="700" fill="#162C34">Other core, 19 nt (5&#x27;-3&#x27;, conditional role)</text>
+<text x="760" y="399" font-family="Arial" font-size="20" font-weight="400" fill="#162C34">GAUAGAGCAAGACAAGAAA</text>
+<text x="760" y="432" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">NM_003376.6: 1439-1457; coverage 18/20</text>
+<text x="760" y="462" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">OligoFormer score 1.121934 (not %)</text>
+<text x="760" y="492" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">Guide: 3,539 non-target sites / 2,839 genes</text>
+<text x="760" y="522" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">1,595 detected in hypoxia; 3 unmapped</text>
+<text x="760" y="550" font-family="Arial" font-size="17" font-weight="400" fill="#162C34">Conditional roles; TT/N3 retained, not simulated.</text>
+<line x1="48" y1="570" x2="1232" y2="570" stroke="#B8C7CB" stroke-width="0.8"/>
+<text x="48" y="599" font-family="Arial" font-size="22" font-weight="700" fill="#A52E2E">Original answer error retained: the passenger core was written as 24 nt, not 19 nt.</text>
+<text x="48" y="628" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">Plan-to-execution gap 103.357 s (includes user wait; click time not logged); execution 36.040 s.</text>
+<text x="48" y="655" font-family="Arial" font-size="18" font-weight="400" fill="#162C34">Planner duration not logged. Seed matches and expression are annotations, not measured siRNA effects.</text>
+<text x="48" y="686" font-family="Arial" font-size="16" font-weight="400" fill="#465C65">Sources: 2026-10-24_nearfull_complete/live/; full original paths, versions and excerpts in SOURCE_MAP.md.</text>
+</svg>

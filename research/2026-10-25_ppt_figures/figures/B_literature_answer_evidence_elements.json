@@ -1,0 +1,263 @@
+[
+  {
+    "text": "An answer linked to retrieved evidence",
+    "x": 48,
+    "baseline_y": 51,
+    "font_size": 32,
+    "font_weight": "bold",
+    "width": 592.21875,
+    "source": null
+  },
+  {
+    "text": "Recorded B02 query | 1 model call | 6 retrieved snippets | 6,232 tokens | code 179a7af",
+    "x": 48,
+    "baseline_y": 81,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 689.1240234375001,
+    "source": null
+  },
+  {
+    "text": "a  User question (translated)",
+    "x": 48,
+    "baseline_y": 119,
+    "font_size": 20,
+    "font_weight": "bold",
+    "width": 270.05859375,
+    "source": null
+  },
+  {
+    "text": "Can an OligoFormer score above 1 mean more than 100% knockdown?",
+    "x": 48,
+    "baseline_y": 152,
+    "font_size": 25,
+    "font_weight": "bold",
+    "width": 844.677734375,
+    "source": "results.json#/B02/question"
+  },
+  {
+    "text": "b  Evidence actually passed to the model",
+    "x": 48,
+    "baseline_y": 214,
+    "font_size": 22,
+    "font_weight": "bold",
+    "width": 429.12890625,
+    "source": null
+  },
+  {
+    "text": "c  Answer (translated excerpts)",
+    "x": 780,
+    "baseline_y": 214,
+    "font_size": 22,
+    "font_weight": "bold",
+    "width": 326.455078125,
+    "source": null
+  },
+  {
+    "text": "[S3] Article full text, text-c020",
+    "x": 48,
+    "baseline_y": 253,
+    "font_size": 19,
+    "font_weight": "bold",
+    "width": 266.08349609375,
+    "source": "qa retrieved_excerpts S3"
+  },
+  {
+    "text": "\"The output of the model represents a prediction score",
+    "x": 48,
+    "baseline_y": 284,
+    "font_size": 21,
+    "font_weight": "normal",
+    "width": 505.90722656250006,
+    "source": "qa retrieved_excerpts S3 text (verbatim)"
+  },
+  {
+    "text": "for each siRNA, reflecting its potential effectiveness",
+    "x": 48,
+    "baseline_y": 313,
+    "font_size": 21,
+    "font_weight": "normal",
+    "width": 478.56005859375006,
+    "source": "qa retrieved_excerpts S3 text (verbatim)"
+  },
+  {
+    "text": "in inducing gene knockdown.\"",
+    "x": 48,
+    "baseline_y": 342,
+    "font_size": 21,
+    "font_weight": "normal",
+    "width": 277.142578125,
+    "source": "qa retrieved_excerpts S3 text (verbatim)"
+  },
+  {
+    "text": "OligoFormer, DOI: 10.1093/bioinformatics/btae577",
+    "x": 48,
+    "baseline_y": 382,
+    "font_size": 17,
+    "font_weight": "normal",
+    "width": 380.79833984375,
+    "source": "qa retrieved_excerpts S3 metadata"
+  },
+  {
+    "text": "[S2] Official source code, text-c007",
+    "x": 48,
+    "baseline_y": 422,
+    "font_size": 19,
+    "font_weight": "bold",
+    "width": 315.7265625,
+    "source": "qa retrieved_excerpts S2"
+  },
+  {
+    "text": "Y_PRED = [i*1.341 for i in Y_PRED]",
+    "x": 48,
+    "baseline_y": 452,
+    "font_size": 21,
+    "font_weight": "normal",
+    "width": 337.9072265625,
+    "source": "qa retrieved_excerpts S2 text (verbatim)"
+  },
+  {
+    "text": "RESULT['efficacy'] = Y_PRED",
+    "x": 48,
+    "baseline_y": 483,
+    "font_size": 21,
+    "font_weight": "normal",
+    "width": 281.6953125,
+    "source": "qa retrieved_excerpts S2 text (verbatim)"
+  },
+  {
+    "text": "scripts/infer.py @ e2f53ad63387 (also retrieved in S5)",
+    "x": 48,
+    "baseline_y": 515,
+    "font_size": 17,
+    "font_weight": "normal",
+    "width": 406.58056640625006,
+    "source": "qa retrieved_excerpts S2 + S5 metadata"
+  },
+  {
+    "text": "[S1] Project setting (translated, not a paper result)",
+    "x": 48,
+    "baseline_y": 555,
+    "font_size": 19,
+    "font_weight": "bold",
+    "width": 451.8623046875,
+    "source": "qa retrieved_excerpts S1"
+  },
+  {
+    "text": "\"The model score is not an experimental knockdown percentage.\"",
+    "x": 48,
+    "baseline_y": 585,
+    "font_size": 20,
+    "font_weight": "normal",
+    "width": 581.181640625,
+    "source": "qa retrieved_excerpts S1 text (translated excerpt)"
+  },
+  {
+    "text": "No.",
+    "x": 780,
+    "baseline_y": 261,
+    "font_size": 32,
+    "font_weight": "bold",
+    "width": 51.546875,
+    "source": "qa answer verdict (translated)"
+  },
+  {
+    "text": "A score above 1 cannot mean",
+    "x": 780,
+    "baseline_y": 302,
+    "font_size": 22,
+    "font_weight": "normal",
+    "width": 292.294921875,
+    "source": "qa answer key result 1 (translated excerpt)"
+  },
+  {
+    "text": "more than 100% knockdown.",
+    "x": 780,
+    "baseline_y": 331,
+    "font_size": 22,
+    "font_weight": "normal",
+    "width": 283.72265625,
+    "source": "qa answer key result 1 (translated excerpt)"
+  },
+  {
+    "text": "[S1, S3]",
+    "x": 780,
+    "baseline_y": 360,
+    "font_size": 22,
+    "font_weight": "normal",
+    "width": 78.267578125,
+    "source": "qa answer key result 1 (translated excerpt)"
+  },
+  {
+    "text": "The output is linearly scaled",
+    "x": 780,
+    "baseline_y": 410,
+    "font_size": 22,
+    "font_weight": "normal",
+    "width": 272.701171875,
+    "source": "qa answer key result 2 (translated excerpt)"
+  },
+  {
+    "text": "by 1.341. [S2, S5]",
+    "x": 780,
+    "baseline_y": 439,
+    "font_size": 22,
+    "font_weight": "normal",
+    "width": 174.8935546875,
+    "source": "qa answer key result 2 (translated excerpt)"
+  },
+  {
+    "text": "These snippets do not establish",
+    "x": 780,
+    "baseline_y": 493,
+    "font_size": 21,
+    "font_weight": "normal",
+    "width": 295.353515625,
+    "source": "qa answer limitation (translated excerpt)"
+  },
+  {
+    "text": "a measured knockdown percentage",
+    "x": 780,
+    "baseline_y": 522,
+    "font_size": 21,
+    "font_weight": "normal",
+    "width": 332.70849609375,
+    "source": "qa answer limitation (translated excerpt)"
+  },
+  {
+    "text": "for a specific score.",
+    "x": 780,
+    "baseline_y": 551,
+    "font_size": 21,
+    "font_weight": "normal",
+    "width": 180.8994140625,
+    "source": "qa answer limitation (translated excerpt)"
+  },
+  {
+    "text": "English translations of saved Chinese records; original source quotes retained. Not a web screenshot.",
+    "x": 48,
+    "baseline_y": 641,
+    "font_size": 19,
+    "font_weight": "normal",
+    "width": 855.47314453125,
+    "source": null
+  },
+  {
+    "text": "Text fragments, not PDF pages. Source types remain separate. No independent quality score is claimed.",
+    "x": 48,
+    "baseline_y": 669,
+    "font_size": 18,
+    "font_weight": "normal",
+    "width": 833.4228515625001,
+    "source": null
+  },
+  {
+    "text": "Run library_demo_20261024_032210_21c28f; library b4d516450903...; exact files and S1-S6 in SOURCE_MAP.md.",
+    "x": 48,
+    "baseline_y": 695,
+    "font_size": 16,
+    "font_weight": "normal",
+    "width": 827.1796875,
+    "source": null
+  }
+]

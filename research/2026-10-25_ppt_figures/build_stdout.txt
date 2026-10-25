@@ -1,0 +1,1 @@
+{"figures": 2, "formats": ["editable SVG", "embedded Arial PDF", "3840x2160 PNG"], "source_files": 39, "new_model_calls": 0, "new_scientific_runs": 0, "execution_seconds": 36.039587, "plan_execution_gap_seconds": 103.356955}

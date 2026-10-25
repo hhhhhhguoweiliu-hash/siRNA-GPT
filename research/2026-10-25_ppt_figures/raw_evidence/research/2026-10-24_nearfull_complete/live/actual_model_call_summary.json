@@ -1,0 +1,210 @@
+{
+  "case_only_excludes_startup_checks": true,
+  "calls": [
+    {
+      "phase": "planning",
+      "response_id": "resp_021792844078252b0569a3163ef1c14e46181870ffec997170467",
+      "model": "doubao-seed-2-1-pro-260915",
+      "created_at": 1792844079,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "actual_max_output_tokens": 1800,
+      "actual_thinking": {
+        "type": "disabled"
+      },
+      "actual_stream": false,
+      "usage": {
+        "input_tokens": 2624,
+        "output_tokens": 281,
+        "total_tokens": 2905,
+        "input_tokens_details": {
+          "cached_tokens": 1336
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "raw_record": "conversation_export_original.json#bf86f0f4d5024764bb704f42"
+    },
+    {
+      "phase": "execution",
+      "response_id": "resp_0217928441875884ab1b857f955f8c19d0609a2b480a31ea76bac",
+      "model": "doubao-seed-2-1-pro-260915",
+      "created_at": 1792844188,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "actual_max_output_tokens": 1800,
+      "actual_thinking": {
+        "type": "disabled"
+      },
+      "actual_stream": false,
+      "usage": {
+        "input_tokens": 1824,
+        "output_tokens": 21,
+        "total_tokens": 1845,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "raw_record": "tool_export/attempts/7a372161375c_turn1_response.json"
+    },
+    {
+      "phase": "execution",
+      "response_id": "resp_021792844189075ec6553b2bbb2bcb1bdf9627ab55f9f64be479a",
+      "model": "doubao-seed-2-1-pro-260915",
+      "created_at": 1792844190,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "actual_max_output_tokens": 1800,
+      "actual_thinking": {
+        "type": "disabled"
+      },
+      "actual_stream": false,
+      "usage": {
+        "input_tokens": 2298,
+        "output_tokens": 20,
+        "total_tokens": 2318,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "raw_record": "tool_export/attempts/7a372161375c_turn2_response.json"
+    },
+    {
+      "phase": "execution",
+      "response_id": "resp_021792844190901efa62bfca375794f3a9b85f4d703cfec35c46d",
+      "model": "doubao-seed-2-1-pro-260915",
+      "created_at": 1792844192,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "actual_max_output_tokens": 1800,
+      "actual_thinking": {
+        "type": "disabled"
+      },
+      "actual_stream": false,
+      "usage": {
+        "input_tokens": 4013,
+        "output_tokens": 21,
+        "total_tokens": 4034,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "raw_record": "tool_export/attempts/7a372161375c_turn3_response.json"
+    },
+    {
+      "phase": "execution",
+      "response_id": "resp_0217928441929169c7b2eaa153a36ce82f7dc9a614e7feb8d8c51",
+      "model": "doubao-seed-2-1-pro-260915",
+      "created_at": 1792844194,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "actual_max_output_tokens": 1800,
+      "actual_thinking": {
+        "type": "disabled"
+      },
+      "actual_stream": false,
+      "usage": {
+        "input_tokens": 6265,
+        "output_tokens": 21,
+        "total_tokens": 6286,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "raw_record": "tool_export/attempts/7a372161375c_turn4_response.json"
+    },
+    {
+      "phase": "execution",
+      "response_id": "resp_0217928441955096baea902239f26d786b4cc818bae24a892830d",
+      "model": "doubao-seed-2-1-pro-260915",
+      "created_at": 1792844197,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "actual_max_output_tokens": 1800,
+      "actual_thinking": {
+        "type": "disabled"
+      },
+      "actual_stream": false,
+      "usage": {
+        "input_tokens": 6610,
+        "output_tokens": 20,
+        "total_tokens": 6630,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "raw_record": "tool_export/attempts/7a372161375c_turn5_response.json"
+    },
+    {
+      "phase": "execution",
+      "response_id": "resp_0217928441991307d051a5e3144c4e0e28e20e35f01da1b91fc64",
+      "model": "doubao-seed-2-1-pro-260915",
+      "created_at": 1792844200,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "actual_max_output_tokens": 1800,
+      "actual_thinking": {
+        "type": "disabled"
+      },
+      "actual_stream": false,
+      "usage": {
+        "input_tokens": 7225,
+        "output_tokens": 20,
+        "total_tokens": 7245,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "raw_record": "tool_export/attempts/7a372161375c_turn6_response.json"
+    },
+    {
+      "phase": "execution",
+      "response_id": "resp_021792844201714152c08225118e3e35cb95e4b33922c1c1622d2",
+      "model": "doubao-seed-2-1-pro-260915",
+      "created_at": 1792844203,
+      "response_status": "completed",
+      "incomplete_details": null,
+      "actual_max_output_tokens": 1800,
+      "actual_thinking": {
+        "type": "disabled"
+      },
+      "actual_stream": false,
+      "usage": {
+        "input_tokens": 6901,
+        "output_tokens": 884,
+        "total_tokens": 7785,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "raw_record": "tool_export/attempts/7a372161375c_turn7_response.json"
+    }
+  ],
+  "total_requests": 8,
+  "total_tokens": 39048,
+  "input_tokens": 37760,
+  "output_tokens": 1288,
+  "full_actual_request_and_response_retained_in_original_exports": true
+}

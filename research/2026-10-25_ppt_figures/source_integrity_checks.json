@@ -1,0 +1,16 @@
+{
+  "source_files_verified_against_original_git_bytes": 39,
+  "all_delivered_source_copies_match_git_exact_bytes": true,
+  "working_scientific_source_files_unchanged": true,
+  "two_review_copies_read_from_git_to_avoid_checkout_CRLF": true,
+  "protected_historical_directories_unchanged": true,
+  "PNG_dimensions": [
+    3840,
+    2160
+  ],
+  "build_exit_code": 0,
+  "new_model_calls": 0,
+  "new_scientific_runs": 0,
+  "new_deployment": false,
+  "source_review_U_FFFD_count": 3170
+}

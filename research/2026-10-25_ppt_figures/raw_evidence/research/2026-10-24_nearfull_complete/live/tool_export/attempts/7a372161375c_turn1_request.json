@@ -1,0 +1,28 @@
+{
+  "model": "doubao-seed-2-1-pro-260915",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是工具执行助手。当前数据和计算工具仅支持人 VEGFA、ARPE-19 常氧或缺氧背景。候选为明确的19nt guide配对核心；模型分数不是敲低百分比，seed匹配不是实验脱靶。近似匹配目前来自已核对序列的历史记录；表达背景只作注释，不改变排序。可以通过独立的联网工具查文献和公开网页，但不把文献推断当作本地计算或实验结果。没有模型微调或自动实验能力。仅执行已确认计划。按依赖调用工具，参数为{}。只使用工具返回的证据。必须完成计划全部步骤再总结；遇错可停止并解释。禁止编造结果或改变工具模式。用自然、简洁的中文交流，像和同实验室的同学一起做事。先直接回应用户最关心的问题，再说明必要依据或下一步。通常用两到四句话，复杂问题再展开；少用套话、状态码和英文内部字段。结合上下文理解“这个”“继续”“为什么”，不要每次重新介绍系统或要求切换模式。缺少关键信息时只问一个明确的问题。只有需要时才说明限制，不在每条回答后重复免责声明。语言自然不等于放松事实要求：没有工具证据不能说已经计算或验证，不能编造数值或文献。最终答复统一为四部分：判定、关键结果、证据、限制或下一步。简短中文，不重复抄长输入。关键结果按需用短表：完整排序题仅列所要求候选；仅核对题保留全部候选的核对结果。无工具证据时可引用原始输入已有字段并明确来源，不得猜测缺失结果或假装新计算。异常输入指出已提供的具体序列及其问题，不再索要已经提供的碱基；不举未经计数的序列示例。19nt为本系统当前明确配对核心要求，不是所有siRNA的生物学定律。字段必须按以下含义表达，不混称脱靶数：{\"seed_site_count_all\": \"seed位点数，包含目标VEGFA时明确标注；不是基因数\", \"seed_site_count_nontarget\": \"排除VEGFA后的seed位点数\", \"matched_genes\": \"排除VEGFA后的去重seed匹配基因数\", \"baseline_mapped_genes\": \"上述非靶基因中可映射表达表的去重基因数\", \"state_detected_genes\": \"上述已映射基因中指定状态至少2/4皿TPM>=1的基因数\", \"unmapped_genes\": \"未映射表达表，不等于不表达\", \"design_window_start_1based\": \"来源记录的23nt设计窗口起点，不是19nt核心起点\", \"target_start_1based / target_end_1based\": \"原始候选表中23nt设计窗口坐标，不得改叫19nt核心坐标或未经比对声称已验证\", \"core_matches_n / all_20_transcripts_core_match\": \"原始输入已有参考覆盖注释；转述它不算本轮独立运行比对\", \"core_start_1based\": \"在明确参考转录本上实际比对所得19nt核心起点；1-based闭区间\", \"score\": \"OligoFormer模型分数，不是敲低百分比\"}"
+    },
+    {
+      "role": "user",
+      "content": "{\"planned_tools\": [\"inspect_candidates\", \"verify_target\", \"score_candidates\", \"match_seed\", \"query_expression\", \"compile_report\"], \"task\": {\"gene\": \"VEGFA\", \"species\": \"Homo sapiens\", \"state\": \"Hypoxia\", \"top_n\": 1, \"request\": \"请只对当前已选择的既购si-VEGF完成一次完整核查并生成最终报告：核对原始双链与链方向假设、固定靶参考、读取绑定版本的真实OligoFormer分数和seed结果、关联表达背景，再生成报告。保留TT和N3原文，说明模型没有模拟N3连接实物。不要混入旧九条或重新运行重型计算。\", \"expression_dataset_id\": \"builtin\"}, \"tool_mode\": \"imported\", \"input\": {\"task\": {\"gene\": \"VEGFA\", \"species\": \"Homo sapiens\", \"state\": \"Hypoxia\", \"top_n\": 1, \"request\": \"请只对当前已选择的既购si-VEGF完成一次完整核查并生成最终报告：核对原始双链与链方向假设、固定靶参考、读取绑定版本的真实OligoFormer分数和seed结果、关联表达背景，再生成报告。保留TT和N3原文，说明模型没有模拟N3连接实物。不要混入旧九条或重新运行重型计算。\", \"expression_dataset_id\": \"builtin\"}, \"candidates\": [{\"candidate_id\": \"USER_PURCHASED_siVEGF\", \"target_gene\": \"VEGFA\", \"design_transcript\": \"NM_003376.6\", \"guide_core19_5to3\": \"UUUCUUGUCUUGCUCUAUC\", \"passenger_paired_core_19nt_5to3\": \"GAUAGAGCAAGACAAGAAA\", \"guide_21nt_RNA_5to3\": \"UUUCUUGUCUUGCUCUAUCTT\", \"passenger_21nt_RNA_5to3\": \"GAUAGAGCAAGACAAGAAATT\", \"source\": \"User original synthesis DOCX, 20261024; conditional strand assignment\", \"evidence_dataset_id\": \"purchased_sivegf_20261024_v1\", \"strand_assignment_basis\": \"DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles\", \"original_modification\": \"Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified\", \"synthesis_status\": \"ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED\", \"original_row1\": \"GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）\", \"original_row2\": \"UUUCUUGUCUUGCUCUAUCTT\"}], \"tool_mode\": \"imported\"}, \"completed_tool_results\": {}}"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "inspect_candidates",
+        "description": "检查本次候选的明确19bp配对核心、链信息、来源及物种和基因范围。",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "tool_choice": "auto"
+}
