@@ -1,5 +1,8 @@
 {
-  "live_and_main_commit": "21da46bab0dfe7c57d7aeb2f1143a6e6cfbec610",
+  "live_commit": "21da46bab0dfe7c57d7aeb2f1143a6e6cfbec610",
+  "main_at_first_English_deployment": "21da46bab0dfe7c57d7aeb2f1143a6e6cfbec610",
+  "main_latest_observed": "10774697fb20bdc7d2c89966b92e5a27fc85cfb9",
+  "parallel_main_update_scope": "Compact PPT figures and figure guide only; no application-code change, skip render. Live service remains 21da46b.",
   "task_branch_materials_commit": "8a23e06c4b9d837a0dbc0b79e72898e753f81778",
   "task_branch": "codex/20261020-evidence-pilot",
   "live_English_main_UI_verified": true,

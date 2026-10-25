@@ -15,3 +15,5 @@ https://sirna-gpt.onrender.com/runs/20261025_033254_6171be/download.zip
 [Drive完整33文件包](https://drive.google.com/file/d/1qMovIrum3sYrI6a8I2JACOo5RC75Bjkc/view?usp=drivesdk)已在原项目目录，名称、759492字节及父目录核对通过；含当前源码、真实网页截图、检查日志、原启动报告与待部署按钮补充。包内逐文件指纹与本地CRC核对通过；本地SHA256为`5bbb9d568786e49d82be9c3aeb243663b074764b6a8633fe50164c14eda0c8c2`。Drive未提供远端SHA256，未冒称远端字节核验。详见SYNC.json。
 
 本轮没有新研究问答、旧案例重跑、54条评价或重型科学计算；原服务既有自动启动检查保留，其用量与研究案例分开，未知部分不填零。
+
+最终只读核对时，科研对话又将PPT精简图/图件说明上传main至1077469（skip render，应用代码未改）；实际线上仍21da46b。上文main=21da46b指第一次英文发布时的主分支版本，不能用来覆盖后续并行图件。英文文件按钮补充仍仅在任务分支，本执行端没有推生产main或再次部署。
