@@ -1,0 +1,1676 @@
+{
+  "reviewed_head": "8ba0d44410a135197b94102be2081f7bc27508eb",
+  "previous_review_head": "927910c74181417b2d3229e4e8a3ffeedec841bd",
+  "added_count": 64,
+  "modified": [
+    "docs/STATUS.md",
+    "docs/WORKBOARD.md"
+  ],
+  "deleted": [],
+  "figures": [
+    {
+      "name": "A_purchased_Agent_case",
+      "text_elements": 52,
+      "displayed_word_count": 239,
+      "minimum_font": 16,
+      "actual_PDF_fonts": [
+        "AAAAAA+Arial-BoldMT",
+        "AAAAAA+ArialMT"
+      ],
+      "visually_inspected": true
+    },
+    {
+      "name": "B_literature_answer_evidence",
+      "text_elements": 29,
+      "displayed_word_count": 190,
+      "minimum_font": 16,
+      "actual_PDF_fonts": [
+        "AAAAAA+Arial-BoldMT",
+        "AAAAAA+ArialMT"
+      ],
+      "visually_inspected": true
+    }
+  ],
+  "source_copies_verified": 39,
+  "current_local_remote_bindings": [
+    {
+      "path": "research/2026-10-25_ppt_figures/B02_original_source_locators.json",
+      "mode": "raw",
+      "sha256": "404718da8ce633c56edf86cb17f57aec24fee0dc165fd639e0f46e8a87657615"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/CAPTIONS_EN.md",
+      "mode": "raw",
+      "sha256": "66574fd5a6f646f8571883463e6ed241fba16ed2b8efdc13693e8b0ee42dbef6"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/DELIVERY.md",
+      "mode": "raw",
+      "sha256": "fc9888006fc633c8dcf19238aa06508d022438b39e307f67db33e193ea6fa772"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/README.md",
+      "mode": "raw",
+      "sha256": "34eac6b3fe79e096552d57ca35a9179ee86c39d7cf7388af39b91e08410060c1"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/REVIEW_RESPONSE.md",
+      "mode": "raw",
+      "sha256": "2623f3c61a9f739381cd2c238e5787ca4c176d2b08f751372b4caa4cedd14b2c"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/SOURCE_MAP.md",
+      "mode": "raw",
+      "sha256": "d3000b914a169654493b926681155938e899de4460bfce26ba41d5078a3ee5d4"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/SYNC.json",
+      "mode": "raw",
+      "sha256": "30d0a75529d2f352733e7a69e97548853b65faa0e77e7e982c0cef7ae8470e25"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/VALIDATION.md",
+      "mode": "raw",
+      "sha256": "ecef9252f96d0f83d464428d5c87270f6045003adbbc7f44115430752ccbc6bc"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/archive_local_receipt.json",
+      "mode": "raw",
+      "sha256": "54d07a8cd69ffa09938096981339636a497071fc93a57afb56efedd2b26a26b0"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/build_stderr.txt",
+      "mode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/build_stdout.txt",
+      "mode": "raw",
+      "sha256": "2342d6efb083f0a037796766e7da4e874e072e333066cce44b2af13ef31cafaa"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/evidence_checks.json",
+      "mode": "raw",
+      "sha256": "de21a128e0c898bedcada90bd6ca2a33f9ee58b5ab9349d832eedba1e7ed4ac1"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/figures/A_purchased_Agent_case.pdf",
+      "mode": "raw",
+      "sha256": "4b92d097a9a2e3b0293666b7aa3d65e0e48a8b89af2bf61a45e15958626160a6"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/figures/A_purchased_Agent_case.png",
+      "mode": "raw",
+      "sha256": "1cbefa36bc7b74811147c64d327a05ff75601a528665e2b207463b58ec21ed46"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/figures/A_purchased_Agent_case.svg",
+      "mode": "raw",
+      "sha256": "a38e3f6f1bea2cdac00f442c6daf269170d974a81a230698b92335c1cce8822e"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/figures/A_purchased_Agent_case_elements.json",
+      "mode": "raw",
+      "sha256": "19e8f709067ef4b759c014178660788931fc10c3159cb31b82bf1527b4f695d6"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/figures/B_literature_answer_evidence.pdf",
+      "mode": "raw",
+      "sha256": "61fee713f2b014711f41dfddcd51e10a8725b5f4d67582690029a7fd0d53436c"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/figures/B_literature_answer_evidence.png",
+      "mode": "raw",
+      "sha256": "3d80b0fa2f7a3ac3bf150af1ee1217fa618b65aa14250337ec800a4fdee72e7a"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/figures/B_literature_answer_evidence.svg",
+      "mode": "raw",
+      "sha256": "d521425ceec005562480e32e5be781dd29d534d7ddafec727cd809c118f0620a"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/figures/B_literature_answer_evidence_elements.json",
+      "mode": "raw",
+      "sha256": "c6fa46d30f1ac13f48cfcc03d9de3a9c4df71a0f8a1475e99881465a36615646"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/font_and_format_checks.json",
+      "mode": "raw",
+      "sha256": "54d5724204cc0ff61b4ea0fdea0d38691cd535e1708207541f05d6cf59f59c35"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/docs/reviews/20261025_1040_ppt_figure_audit.json",
+      "mode": "raw",
+      "sha256": "326da265bde2545cacd24074f5eab0ab7bebcb4867b81ae310b0529f96375abc"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/docs/reviews/20261025_1040_ppt_figure_selection.md",
+      "mode": "raw",
+      "sha256": "7f80247a3b4184907781113da074efc347ac87f8e0775f744831c947ca0b8286"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/8adf373e980643189b6f0479.json",
+      "mode": "raw",
+      "sha256": "95b713ab6d2a1d3740f573dd99beddc27d549036f1c6964ece74abe0431fcd3b"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/ef511585f2734fe999f4f28c.json",
+      "mode": "raw",
+      "sha256": "efe66c8a74a178716ef74ee3fa77b9b9e0135f72e438d0ee3131cf8ac42e000e"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/actual_demo/library.zip",
+      "mode": "raw",
+      "sha256": "1748cfd2ecb5cbb01b48cbf39450aa08eeb1fa27cde615a06b414471dbfbc85c"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/actual_demo/results.json",
+      "mode": "raw",
+      "sha256": "3d6e2cd57bdff53e5b367f6b98973b655cce04de8745681a55d7de9d535274e0"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/live_demo_complete.png",
+      "mode": "raw",
+      "sha256": "33af05ada2a5310dba607c3ca85b43aae67d8798f22f90e86e10e22e6881501c"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/ANSWER_CORRECTION_ZH.md",
+      "mode": "raw",
+      "sha256": "83d616f5d277c848fdae58af1cc1cf96eb718a25391214be2e98797156dfa427"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/actual_model_call_summary.json",
+      "mode": "raw",
+      "sha256": "a97b28e1a8dc77af666e5f30c3f944d0dd52d9940cf52e490747ba14c82f8a1b"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/case_completed.png",
+      "mode": "raw",
+      "sha256": "4da8a7cc0f896a2456557d4a5ad4348f4bfc524a293003fee1bb4158f9d2f1ff"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/conversation_export_original.json",
+      "mode": "raw",
+      "sha256": "850c43eb70fef35c40b8fc9bcdc630ea6de80eb4340e56b8e736cab2d811ed6c"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_transcript.json",
+      "mode": "raw",
+      "sha256": "1cbc0f388174967312a51bf03e463a697029590ca2fcb741888b40bcda4773c1"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_request.json",
+      "mode": "raw",
+      "sha256": "aeb9e46d695f813463a9b0a605573e07882e8854ed6e021e4b0b12439297fff6"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_response.json",
+      "mode": "raw",
+      "sha256": "612a4ff12ac7d926be78236e7dd2b1fe87aec10b4b226ee8f38cbb41e8f5ad5b"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_request.json",
+      "mode": "raw",
+      "sha256": "707081ef4df4db86bf734fe3699daf97487c6f6d928d3e7b23ad257e717b5cc0"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_response.json",
+      "mode": "raw",
+      "sha256": "f976ce9c1669702a301f8d20f4b6f58bfebff158a5061c83029de8e83d1bcfde"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_request.json",
+      "mode": "raw",
+      "sha256": "661ea6a4a601a57d10d3e86ca297401e24594d50564ce63e72af774849fb697c"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_response.json",
+      "mode": "raw",
+      "sha256": "1ada5a0546872c88fb30e9690ff3c5c472392d240393e611735d65c96c9afa8d"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_request.json",
+      "mode": "raw",
+      "sha256": "23786e874fe0f5022e3fe316b90de01b3c6c9338a2229c557f152c4a4e808c9a"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_response.json",
+      "mode": "raw",
+      "sha256": "378997b9780b132adf68c75f6d10e95d7b451d98e858483c999106b4abb80959"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_request.json",
+      "mode": "raw",
+      "sha256": "2606f0b89a702fee10efe7a99c642b0daf99856559a0720fbb9975cf379ecaa6"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_response.json",
+      "mode": "raw",
+      "sha256": "2071996dd752b1365a6ad28f49b413f8f8f4eca2c1855e503e0d1c97a5b2a7e1"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_request.json",
+      "mode": "raw",
+      "sha256": "4e9fc63dabf83c709eff781261e488876887dd79e93b1ce72a60f6a7a27c0c96"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_response.json",
+      "mode": "raw",
+      "sha256": "f3597a63adb1b2da18480ebb4e252536a1cdeb4a908a9cbaf974ba284bae2eaa"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_request.json",
+      "mode": "raw",
+      "sha256": "05082119a8a315398a369130135f4c362158e745bbf4c473f6adb26a5eab4337"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_response.json",
+      "mode": "raw",
+      "sha256": "b544c4707e737ed1d7e67271216df1dcfb8f93f98c02549168ad06ccc93bd663"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_usage.json",
+      "mode": "raw",
+      "sha256": "fc0cf0dae741c2602cfe89c1662033b5c97841531e76bdd29e34e8faf453f08c"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/events.jsonl",
+      "mode": "raw",
+      "sha256": "67cd573fd588ae6f8ffaed8404c42eeab4cfd24d79ae32b10360742af7bfe524"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/inspect_candidates.json",
+      "mode": "raw",
+      "sha256": "018dd7a2d6e2d68cd740368d015739921ca3e8db0fe2b650223af40010e5b779"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/match_seed.json",
+      "mode": "raw",
+      "sha256": "a25ecdbebb8a71925e6a8c6dbcece2cb067e768474fe487f022fcaf6aa26cd63"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/plan.json",
+      "mode": "raw",
+      "sha256": "c9a118b574c6ace05a6b442f50fa1505a00465b4e685e2dfa88720260b134ca1"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/query_expression.json",
+      "mode": "raw",
+      "sha256": "90d43248b773f3a3e9a1d5daacfd9184ef406a531d225b3fe50d9fb651f06594"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/report.json",
+      "mode": "raw",
+      "sha256": "59101eaf1bf77be033b2f770251d1d54a40042677f5ec0d8f2c33741c075285d"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/run_config.json",
+      "mode": "raw",
+      "sha256": "8a95e350b23b2d7a8ef09c8502ed4cceaf22f81bf100396ca6fef5f72220c3b6"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/score_candidates.json",
+      "mode": "raw",
+      "sha256": "2716a4dda3e73c35d42f79eb187628ebf01b6e3d3936a286104e40b5cdd14d27"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/input_assets.json",
+      "mode": "raw",
+      "sha256": "e6f328892ff6f5e5d9670a7e7aa476c8027ff7755fac9654c365885460d45b92"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/manifest.json",
+      "mode": "raw",
+      "sha256": "17d87eae5d0c36db21a3e7642777e2a83ee80df309beb0f33d9e3f00b313c687"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/seed_pilot_02__sessionInfo.txt",
+      "mode": "raw",
+      "sha256": "ce8ecab0f380a26bbc2851701e811f6297787b801e314a6d3fc85bf0834c5d2d"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/verify_target.json",
+      "mode": "raw",
+      "sha256": "d7b933317d6f8f56b1beb5971769d888cc649332048e5eef144445314386cd31"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/source_integrity_checks.json",
+      "mode": "raw",
+      "sha256": "565f9e6bf1473670cdd462ffce74e43d58473fe3d6ce35f88eee9f38061177a1"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/source_integrity_first_check.json",
+      "mode": "raw",
+      "sha256": "62c5247eb2eabe8656eb5af0fda0b15a0a90e5f27250bdee2c87e20c31b8396b"
+    },
+    {
+      "path": "research/2026-10-25_ppt_figures/source_manifest.json",
+      "mode": "raw",
+      "sha256": "614b394e6cb48ac1f33b145bead2a9a13af3ed50a7b101ce316115d7d5e839f8"
+    },
+    {
+      "path": "scripts/build_ppt_evidence_figures_20261025.py",
+      "mode": "raw",
+      "sha256": "252c5b3865ea2fbc25e71142dc5f7ac7829daf9295dfa066d02326cb0742e4a2"
+    },
+    {
+      "path": "docs/STATUS.md",
+      "mode": "raw",
+      "sha256": "7bd8fa3aeacc0596650e6f618028b58d0e246a0ff29991aefd0ef632e63dc0d5"
+    },
+    {
+      "path": "docs/WORKBOARD.md",
+      "mode": "raw",
+      "sha256": "36bba4c10ef0fd52975a2f2068089a8160f25a4b31c67dd4ee3cad406af26efe"
+    }
+  ],
+  "checks": [
+    {
+      "name": "old files changed only WORKBOARD and STATUS",
+      "pass": true,
+      "detail": [
+        "docs/STATUS.md",
+        "docs/WORKBOARD.md"
+      ]
+    },
+    {
+      "name": "no deletions",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "all additions confined to figures delivery and build script",
+      "pass": true,
+      "detail": 64
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/B02_original_source_locators.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/CAPTIONS_EN.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/DELIVERY.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/README.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/REVIEW_RESPONSE.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/SOURCE_MAP.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/SYNC.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/VALIDATION.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/archive_local_receipt.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/build_stderr.txt",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/build_stdout.txt",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/evidence_checks.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/figures/A_purchased_Agent_case.pdf",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/figures/A_purchased_Agent_case.png",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/figures/A_purchased_Agent_case.svg",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/figures/A_purchased_Agent_case_elements.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/figures/B_literature_answer_evidence.pdf",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/figures/B_literature_answer_evidence.png",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/figures/B_literature_answer_evidence.svg",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/figures/B_literature_answer_evidence_elements.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/font_and_format_checks.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/docs/reviews/20261025_1040_ppt_figure_audit.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/docs/reviews/20261025_1040_ppt_figure_selection.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/8adf373e980643189b6f0479.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/ef511585f2734fe999f4f28c.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/actual_demo/library.zip",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/actual_demo/results.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-23_literature/live_20261024/live_demo_complete.png",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/ANSWER_CORRECTION_ZH.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/actual_model_call_summary.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/case_completed.png",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/conversation_export_original.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_transcript.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_request.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_response.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_request.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_response.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_request.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_response.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_request.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_response.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_request.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_response.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_request.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_response.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_request.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_response.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_usage.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/events.jsonl",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/inspect_candidates.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/match_seed.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/plan.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/query_expression.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/report.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/run_config.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/score_candidates.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/input_assets.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/manifest.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/seed_pilot_02__sessionInfo.txt",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/raw_evidence/research/2026-10-24_nearfull_complete/live/tool_export/verify_target.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/source_integrity_checks.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/source_integrity_first_check.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding research/2026-10-25_ppt_figures/source_manifest.json",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding scripts/build_ppt_evidence_figures_20261025.py",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding docs/STATUS.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "current Git binding docs/WORKBOARD.md",
+      "pass": true,
+      "detail": "raw"
+    },
+    {
+      "name": "39 declared source files",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/conversation_export_original.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/conversation_export_original.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/conversation_export_original.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/actual_model_call_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/actual_model_call_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/actual_model_call_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/inspect_candidates.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/inspect_candidates.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/inspect_candidates.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/verify_target.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/verify_target.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/verify_target.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/score_candidates.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/score_candidates.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/score_candidates.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/match_seed.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/match_seed.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/match_seed.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/query_expression.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/query_expression.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/query_expression.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/report.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/report.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/report.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/plan.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/plan.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/plan.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-23_literature/live_20261024/actual_demo/results.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-23_literature/live_20261024/actual_demo/results.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-23_literature/live_20261024/actual_demo/results.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/ef511585f2734fe999f4f28c.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/ef511585f2734fe999f4f28c.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/ef511585f2734fe999f4f28c.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/8adf373e980643189b6f0479.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/8adf373e980643189b6f0479.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/8adf373e980643189b6f0479.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/events.jsonl",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/events.jsonl",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/events.jsonl",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/ANSWER_CORRECTION_ZH.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/ANSWER_CORRECTION_ZH.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/ANSWER_CORRECTION_ZH.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/case_completed.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/case_completed.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/case_completed.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/run_config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/run_config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/run_config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/input_assets.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/input_assets.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/input_assets.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/seed_pilot_02__sessionInfo.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/seed_pilot_02__sessionInfo.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/verified_import/purchased_sivegf_20261024_v1/seed_pilot_02__sessionInfo.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-23_literature/live_20261024/actual_demo/library.zip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-23_literature/live_20261024/actual_demo/library.zip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-23_literature/live_20261024/actual_demo/library.zip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-23_literature/live_20261024/live_demo_complete.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-23_literature/live_20261024/live_demo_complete.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-23_literature/live_20261024/live_demo_complete.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_transcript.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_transcript.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_transcript.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn1_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn2_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn3_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn4_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn5_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn6_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_request.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_turn7_response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_usage.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_usage.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main research/2026-10-24_nearfull_complete/live/tool_export/attempts/7a372161375c_usage.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash docs/reviews/20261025_1040_ppt_figure_selection.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob docs/reviews/20261025_1040_ppt_figure_selection.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main docs/reviews/20261025_1040_ppt_figure_selection.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source hash docs/reviews/20261025_1040_ppt_figure_audit.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "copied source matches prior Git blob docs/reviews/20261025_1040_ppt_figure_audit.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source unchanged on current main docs/reviews/20261025_1040_ppt_figure_audit.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A recorded model and tool counts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A model request phase separation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A exact timing values",
+      "pass": true,
+      "detail": {
+        "gap": 103.356955,
+        "span": 36.039587,
+        "last_response": 21.870299
+      }
+    },
+    {
+      "name": "A tools agree with saved plan",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 1 completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 1 model parameters",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual tool call 1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 2 completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 2 model parameters",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual tool call 2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 3 completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 3 model parameters",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual tool call 3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 4 completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 4 model parameters",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual tool call 4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 5 completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 5 model parameters",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual tool call 5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 6 completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 6 model parameters",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual tool call 6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 7 completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual response 7 model parameters",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A actual tool call 7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A planner actual response completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A planner usage same as summary",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A tokens independently summed from all actual responses",
+      "pass": true,
+      "detail": {
+        "execution": 36143,
+        "planning": 2905
+      }
+    },
+    {
+      "name": "A exact 19 nt complementary cores",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A original 24 nt error still present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A coordinate and transcript coverage",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A imported score/seed statuses",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A displayed score rounding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A seed sites and genes are separate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A expression mapping and detection counts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A no ranking change",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B answer, question and usage same as actual saved result",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B six actual retrieved snippets",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B actual request exact citation and text S1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B actual request exact citation and text S2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B actual request exact citation and text S3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B actual request exact citation and text S4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B actual request exact citation and text S5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B actual request exact citation and text S6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B paper quotation exact retrieved substring",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B code quotation in both actually retrieved source chunks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B original library ZIP CRC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B official code archived original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B article archived original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B original code line locator",
+      "pass": true,
+      "detail": [
+        252,
+        385
+      ]
+    },
+    {
+      "name": "B original paper character locator",
+      "pass": true,
+      "detail": 30046
+    },
+    {
+      "name": "B exact chunk source range S2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B exact chunk source range S3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B exact chunk source range S4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B exact chunk source range S5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SVG exact element text A_purchased_Agent_case",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SVG Arial declared A_purchased_Agent_case",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SVG 16:9 A_purchased_Agent_case",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PNG 3840x2160 A_purchased_Agent_case",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PDF actual text uses Arial only A_purchased_Agent_case",
+      "pass": true,
+      "detail": [
+        "AAAAAA+Arial-BoldMT",
+        "AAAAAA+ArialMT"
+      ]
+    },
+    {
+      "name": "PDF embedded TrueType font streams A_purchased_Agent_case",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SVG labels fit page bounds A_purchased_Agent_case",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SVG exact element text B_literature_answer_evidence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SVG Arial declared B_literature_answer_evidence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SVG 16:9 B_literature_answer_evidence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PNG 3840x2160 B_literature_answer_evidence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PDF actual text uses Arial only B_literature_answer_evidence",
+      "pass": true,
+      "detail": [
+        "AAAAAA+Arial-BoldMT",
+        "AAAAAA+ArialMT"
+      ]
+    },
+    {
+      "name": "PDF embedded TrueType font streams B_literature_answer_evidence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SVG labels fit page bounds B_literature_answer_evidence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "prior review encoding problem confirmed on remote-bound original",
+      "pass": true,
+      "detail": 3170
+    }
+  ],
+  "pass_count": 257,
+  "failed": [],
+  "scope": "Saved-data and final-file inspection only. No model call, scientific rerun, website verification, Drive download or independent human scoring."
+}
