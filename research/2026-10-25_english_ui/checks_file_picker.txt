@@ -1,0 +1,8 @@
+test_home_and_labels_asset (test_english_interface.EnglishInterfaceTests.test_home_and_labels_asset) ... ok
+test_saved_report_rerender_preserves_original_model_and_values (test_english_interface.EnglishInterfaceTests.test_saved_report_rerender_preserves_original_model_and_values) ... ok
+test_source_page_chrome_retains_original_card_text (test_english_interface.EnglishInterfaceTests.test_source_page_chrome_retains_original_card_text) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.335s
+
+OK

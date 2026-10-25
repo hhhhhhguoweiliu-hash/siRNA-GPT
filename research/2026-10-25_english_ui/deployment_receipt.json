@@ -1,0 +1,42 @@
+{
+  "service_id": "srv-dbardmc9v7es739llto0",
+  "workspace_id": "tea-dbaqtiuq1p3s73coga1g",
+  "url": "https://sirna-gpt.onrender.com/",
+  "deploy_id": "dep-dbenfu2jnfac73e0iiig",
+  "deployed_commit": "21da46bab0dfe7c57d7aeb2f1143a6e6cfbec610",
+  "status": "live",
+  "started_at_UTC": "2026-10-25T03:31:04.969061Z",
+  "finished_at_UTC": "2026-10-25T03:31:59.568787Z",
+  "code_changes_commit": "4796b12d8196229ed38d59569be1707a0add0a71",
+  "parallel_review_preserved": "7de40bd5e03c313d3cc387cbfdbb417e3646c439",
+  "github_deploy_commit_checks": [
+    {"conclusion": "success", "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/actions/runs/40158505761/job/121064884149"},
+    {"conclusion": "success", "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/actions/runs/40158505646/job/121064883939"}
+  ],
+  "browser_verified": {
+    "normal_authenticated_HTTPS": true,
+    "title": "RPE siRNA Agent · Research workspace",
+    "home_heading": "Autonomous mode",
+    "guided_heading": "Guided mode",
+    "QA_heading": "Evidence Q&A",
+    "library_summary": "Literature library",
+    "library_count": 12,
+    "source_type_labels_English": true,
+    "original_source_titles_unchanged": true,
+    "model_and_evaluation_start_buttons_not_clicked": true,
+    "screenshots": ["live_home_en.png", "live_library_en.png"],
+    "native_browser_file_input_buttons_still_OS_language": true
+  },
+  "file_picker_followup": {
+    "code_complete_and_targeted_checks_passed": true,
+    "deployed": false,
+    "reason": "Preserve current 20261025_033254_6171be startup report before the second update. Browser returned ERR_BLOCKED_BY_CLIENT, and no matching complete download was found.",
+    "manual_save_request_sent": true,
+    "url": "https://sirna-gpt.onrender.com/runs/20261025_033254_6171be/download.zip"
+  },
+  "new_research_model_cases": 0,
+  "new_heavy_scientific_calculations": 0,
+  "existing_automatic_startup_checks": "Retained; separate from research cases. Their usage is not claimed to be zero.",
+  "sequence_guard_in_deployed_code": true,
+  "live_three_case_guard_display_acceptance": false
+}

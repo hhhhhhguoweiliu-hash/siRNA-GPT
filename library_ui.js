@@ -2,7 +2,7 @@
 async function libraryRefresh(){
   try{
     const data=await api('/api/library');
-    $('libraryStatus').textContent=data.documents.length+' documents · Library version '+data.version.slice(0,12)+'.'+uiLabel(data.storage);
+    $('libraryStatus').textContent=data.documents.length+' documents · Library version '+data.version.slice(0,12)+'. '+uiLabel(data.storage);
     const rows=data.documents.map(d=>{let row=el('div','','source');row.append(link(d.title,d.url),el('small',uiSourceLabel(d)+' · '+(d.filename.endsWith('.pdf')?d.page_count+' pages':'Text; no PDF page numbers')+' · '+d.chunk_count+' snippets'));if(d.pages_without_text.length)row.append(el('small','No extractable text on pages: '+d.pages_without_text.join(', ')));return row});
     $('libraryDocuments').replaceChildren(...rows);
   }catch(e){$('libraryStatus').textContent='Library not loaded: '+e.message}
