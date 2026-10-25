@@ -1,0 +1,31 @@
+{
+  "review_base_main": "927910c74181417b2d3229e4e8a3ffeedec841bd",
+  "figure_materials_commit": "5b5f5feaf8daad04de1e26511f53f3e2d9fb6f0b",
+  "github_main_and_existing_task_branch_uploaded_and_heads_verified": true,
+  "github_checks": [
+    {"status": "completed", "conclusion": "success", "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/actions/runs/40156775579/job/121059724543"},
+    {"status": "completed", "conclusion": "success", "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/actions/runs/40156775540/job/121059724435"}
+  ],
+  "drive": {
+    "id": "1fpfVL3-L3lM43ML9mEBEp0UVGGF2B3FP",
+    "name": "siRNA_GPT_20261025_PPT_evidence_figures_5b5f5fe.zip",
+    "url": "https://drive.google.com/file/d/1fpfVL3-L3lM43ML9mEBEp0UVGGF2B3FP/view?usp=drivesdk",
+    "parent_id": "1wLVEtggMk_qtcnBqesMwxb90wyaCz83i",
+    "bytes": 2109681,
+    "files": 64,
+    "local_sha256": "00a736bbbba31a9a88381ffba5524734f1a625c0260e2fe268c0e7c54affc881",
+    "local_CRC_and_per_entry_sha256_reread_verified": true,
+    "remote_name_size_parent_verified": true,
+    "remote_sha256_available": false,
+    "remote_byte_download_verification_performed": false
+  },
+  "figures": 2,
+  "formats": ["editable SVG", "embedded Arial PDF", "3840x2160 PNG"],
+  "saved_original_source_files": 39,
+  "new_model_calls": 0,
+  "new_scientific_runs": 0,
+  "new_production_deployment": false,
+  "new_webpage_screenshots": false,
+  "user_web_operation_required_for_this_figure_batch": false,
+  "prior_sequence_guard_production_acceptance": "Not performed in this figure batch; original preservation/deployment condition remains separately documented."
+}
