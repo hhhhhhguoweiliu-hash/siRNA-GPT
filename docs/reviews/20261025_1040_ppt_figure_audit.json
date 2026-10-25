@@ -1,0 +1,466 @@
+{
+  "reviewed_commit": "eaf9b94f58e983da30ba1b06f544bce49d7160d3",
+  "scope": "figure suitability, captions and saved-evidence inspection; not rerun of scientific algorithms or independent human scoring",
+  "remote_image_format_entries_including_duplicates": 69,
+  "local_github_raw_bindings": 72,
+  "all_raw_match": true,
+  "bindings": [
+    {
+      "path": "research/2026-10-19_evaluation/figures/Audit01_infrastructure_outcomes.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_evaluation/figures/Audit02_complete_record_grid.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_evaluation/figures/Audit03_fixed_cloud_runtime.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig01_system_scope.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig02_candidate_model_scores.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig03_guide_seed_map.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig04_transcript_coverage.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig05_seed_expression_context.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig06_VEGFA_baseline_TPM.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig07_context_marker_expression.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig08_workflow_development_status.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig09_workflow_local_time.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-19_scientific/figures/Fig10_TPM_threshold_sensitivity.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_integrity_arial/paper/contact_sheet.jpg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_integrity_arial/paper/diagnostics/Figure4_development_evidence.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_integrity_arial/paper/diagnostics/Figure4_development_evidence.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_integrity_arial/paper/figures/Figure1_system_migration.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_integrity_arial/paper/figures/Figure1_system_migration.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_integrity_arial/paper/figures/Figure2_real_Auto_case.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_integrity_arial/paper/figures/Figure2_real_Auto_case.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_integrity_arial/paper/figures/Figure3_candidate_and_cell_context.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_integrity_arial/paper/figures/Figure3_candidate_and_cell_context.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_migration/paper/contact_sheet.jpg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": true
+    },
+    {
+      "path": "research/2026-10-20_migration/paper/figures/Figure1_system_migration.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_migration/paper/figures/Figure1_system_migration.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_migration/paper/figures/Figure2_real_Auto_case.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_migration/paper/figures/Figure2_real_Auto_case.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_migration/paper/figures/Figure3_candidate_and_cell_context.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_migration/paper/figures/Figure3_candidate_and_cell_context.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_migration/paper/figures/Figure4_development_evidence.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_migration/paper/figures/Figure4_development_evidence.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Audit01_infrastructure_outcomes.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Audit02_complete_record_grid.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Audit03_fixed_cloud_runtime.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig01_system_scope.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig01_system_scope.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig02_candidate_model_scores.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig02_candidate_model_scores.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig03_guide_seed_map.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig03_guide_seed_map.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig04_transcript_coverage.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig04_transcript_coverage.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig05_seed_expression_context.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig05_seed_expression_context.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig06_VEGFA_baseline_TPM.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig06_VEGFA_baseline_TPM.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig07_context_marker_expression.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig07_context_marker_expression.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig08_workflow_development_status.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig08_workflow_development_status.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig09_workflow_local_time.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig09_workflow_local_time.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig10_TPM_threshold_sensitivity.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/figures/Fig10_TPM_threshold_sensitivity.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm/figures/Dev01_execution_states.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm/figures/Dev01_execution_states.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm/figures/Dev02_per_task_latency.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/three_arm/figures/Dev02_per_task_latency.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-20_takeover/visual_qa.jpg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-23_literature/live_20261024/live_demo_complete.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": true
+    },
+    {
+      "path": "research/2026-10-23_literature/offline/local_ui_search.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": true
+    },
+    {
+      "path": "research/2026-10-24_candidate_v2/README.md",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": true
+    },
+    {
+      "path": "research/2026-10-24_candidate_v2/figures/candidate_v2_complete_predictions.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-24_candidate_v2/figures/candidate_v2_complete_predictions.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-24_candidate_v2/figures/figure_pdf_preview.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-24_followup/day7_web_completed.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": true
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/README.md",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": true
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/figures/nearfull_complete.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/figures/nearfull_complete.svg",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/figures/pdf_preview.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": false
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/case_completed.png",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": true
+    },
+    {
+      "path": "research/2026-10-24_sequence_guard/README.md",
+      "exists": true,
+      "raw_match": true,
+      "LF_match": true
+    }
+  ],
+  "visually_inspected_files": [
+    "research/2026-10-24_candidate_v2/figures/candidate_v2_complete_predictions.png",
+    "research/2026-10-24_nearfull_complete/figures/nearfull_complete.png",
+    "research/2026-10-20_takeover/figures/Fig06_VEGFA_baseline_TPM.png",
+    "research/2026-10-20_integrity_arial/paper/figures/Figure3_candidate_and_cell_context.png",
+    "research/2026-10-20_integrity_arial/paper/figures/Figure1_system_migration.png",
+    "research/2026-10-20_integrity_arial/paper/figures/Figure2_real_Auto_case.png",
+    "research/2026-10-24_nearfull_complete/live/case_completed.png",
+    "research/2026-10-23_literature/live_20261024/live_demo_complete.png",
+    "research/2026-10-23_literature/offline/local_ui_search.png",
+    "research/2026-10-24_followup/day7_web_completed.png"
+  ],
+  "priority_new_figures": [
+    "Purchased-sequence real Agent case from saved planner/tool/model evidence",
+    "Literature query -> actual retrieved passage -> source-linked original answer"
+  ],
+  "human_quality_scores_available": false,
+  "new_api_calls": 0,
+  "new_scientific_runs": 0,
+  "production_changes": false,
+  "font_note": {
+    "old_standalone_baseline_svg": "research/2026-10-20_takeover/figures/Fig06_VEGFA_baseline_TPM.svg",
+    "observed_family": "DejaVu Sans",
+    "recommended_Arial_alternative": "research/2026-10-20_integrity_arial/paper/figures/Figure3_candidate_and_cell_context.png panel a"
+  }
+}
