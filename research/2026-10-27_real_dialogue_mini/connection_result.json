@@ -1,0 +1,114 @@
+{
+  "status": "CONNECTED_TOOL_CALL_VERIFIED",
+  "provider": "doubao",
+  "model": "doubao-seed-2-0-mini-260428",
+  "seconds": 1.515,
+  "usage": {
+    "input_tokens": 484,
+    "output_tokens": 15,
+    "total_tokens": 499,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "usage_calls": [
+    {
+      "input_tokens": 484,
+      "output_tokens": 15,
+      "total_tokens": 499,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "input_tokens": 103,
+      "output_tokens": 3,
+      "total_tokens": 106,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  ],
+  "request_id": "021793052945241b9f489096afc36acf45c00ec3935d23a84db58",
+  "final_request_id": "02179305294603589d0c17fc196b3c940c12dd7ad5b500b3cdc50",
+  "checked_at": "2026-10-26T22:15:48.128468+00:00",
+  "probe_tools_executed": true,
+  "multi_turn_verified": true,
+  "note": "真实API返回正确的工具指令；完整任务仍需运行验证",
+  "transport_summary": {
+    "mode": "provider",
+    "logical_model_requests": 2,
+    "http_attempts": 2,
+    "http_retries": 0,
+    "real_model_requests": 2,
+    "synthetic_http_attempts": 0,
+    "provider_model_versions": [
+      "doubao-seed-2-0-mini-260428"
+    ],
+    "usage": [
+      {
+        "input_tokens": 484,
+        "output_tokens": 15,
+        "total_tokens": 499,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "input_tokens": 103,
+        "output_tokens": 3,
+        "total_tokens": 106,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    ],
+    "synthetic_usage": [],
+    "logical_response_usage": [
+      {
+        "input_tokens": 484,
+        "output_tokens": 15,
+        "total_tokens": 499,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "input_tokens": 103,
+        "output_tokens": 3,
+        "total_tokens": 106,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    ],
+    "usage_scope": "Physical attempts, one actual provider response per attempt; raw and normalized copies are not double counted",
+    "total_tokens": 605,
+    "known_token_subtotal": 605,
+    "usage_complete": true,
+    "configured_model": "doubao-seed-2-0-mini-260428",
+    "model_version_limit": "Actual returned model retained when supplied; missing provider version is not inferred from configured alias"
+  },
+  "scope": "Real transport/tool-call check only; not part of the 27-unit scientific development batch"
+}

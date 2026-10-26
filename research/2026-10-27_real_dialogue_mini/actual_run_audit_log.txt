@@ -1,0 +1,1 @@
+PASS: 27 actual units / 33 user rounds; 62 real provider requests and 505264 tokens verified against raw responses; all grades remain blank; complete evidence saved.

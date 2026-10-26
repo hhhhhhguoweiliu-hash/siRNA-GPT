@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE",
+  "run_id": "mini_real_20261027_061408",
+  "total": 27,
+  "completed": 27,
+  "protocol": "dialogue-v3",
+  "pending": 0,
+  "finished_at": "2026-10-26T22:18:48.685927+00:00",
+  "scientific_quality_scored": false
+}

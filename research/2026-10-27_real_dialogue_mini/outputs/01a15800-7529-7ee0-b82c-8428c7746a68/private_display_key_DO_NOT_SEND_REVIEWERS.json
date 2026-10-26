@@ -1,0 +1,218 @@
+[
+  {
+    "question_number": 1,
+    "question_name": "已有试剂的完整计算核查",
+    "case_id": "W1",
+    "display_answer": "甲",
+    "answer_id": "A004",
+    "group": "agent"
+  },
+  {
+    "question_number": 1,
+    "question_name": "已有试剂的完整计算核查",
+    "case_id": "W1",
+    "display_answer": "乙",
+    "answer_id": "A018",
+    "group": "llm"
+  },
+  {
+    "question_number": 1,
+    "question_name": "已有试剂的完整计算核查",
+    "case_id": "W1",
+    "display_answer": "丙",
+    "answer_id": "A026",
+    "group": "workflow"
+  },
+  {
+    "question_number": 2,
+    "question_name": "只核对序列与目标参考",
+    "case_id": "W2",
+    "display_answer": "甲",
+    "answer_id": "A007",
+    "group": "agent"
+  },
+  {
+    "question_number": 2,
+    "question_name": "只核对序列与目标参考",
+    "case_id": "W2",
+    "display_answer": "乙",
+    "answer_id": "A020",
+    "group": "llm"
+  },
+  {
+    "question_number": 2,
+    "question_name": "只核对序列与目标参考",
+    "case_id": "W2",
+    "display_answer": "丙",
+    "answer_id": "A027",
+    "group": "workflow"
+  },
+  {
+    "question_number": 3,
+    "question_name": "查询已有分数及其含义",
+    "case_id": "W2b",
+    "display_answer": "甲",
+    "answer_id": "A013",
+    "group": "agent"
+  },
+  {
+    "question_number": 3,
+    "question_name": "查询已有分数及其含义",
+    "case_id": "W2b",
+    "display_answer": "乙",
+    "answer_id": "A019",
+    "group": "workflow"
+  },
+  {
+    "question_number": 3,
+    "question_name": "查询已有分数及其含义",
+    "case_id": "W2b",
+    "display_answer": "丙",
+    "answer_id": "A024",
+    "group": "llm"
+  },
+  {
+    "question_number": 4,
+    "question_name": "比较高分与近似匹配警告",
+    "case_id": "W3",
+    "display_answer": "甲",
+    "answer_id": "A002",
+    "group": "agent"
+  },
+  {
+    "question_number": 4,
+    "question_name": "比较高分与近似匹配警告",
+    "case_id": "W3",
+    "display_answer": "乙",
+    "answer_id": "A005",
+    "group": "workflow"
+  },
+  {
+    "question_number": 4,
+    "question_name": "比较高分与近似匹配警告",
+    "case_id": "W3",
+    "display_answer": "丙",
+    "answer_id": "A006",
+    "group": "llm"
+  },
+  {
+    "question_number": 5,
+    "question_name": "同一问题追加新要求",
+    "case_id": "U1",
+    "display_answer": "甲",
+    "answer_id": "A001",
+    "group": "llm"
+  },
+  {
+    "question_number": 5,
+    "question_name": "同一问题追加新要求",
+    "case_id": "U1",
+    "display_answer": "乙",
+    "answer_id": "A014",
+    "group": "agent"
+  },
+  {
+    "question_number": 5,
+    "question_name": "同一问题追加新要求",
+    "case_id": "U1",
+    "display_answer": "丙",
+    "answer_id": "A021",
+    "group": "workflow"
+  },
+  {
+    "question_number": 6,
+    "question_name": "订购记录没有明确链角色",
+    "case_id": "R1",
+    "display_answer": "甲",
+    "answer_id": "A012",
+    "group": "workflow"
+  },
+  {
+    "question_number": 6,
+    "question_name": "订购记录没有明确链角色",
+    "case_id": "R1",
+    "display_answer": "乙",
+    "answer_id": "A016",
+    "group": "llm"
+  },
+  {
+    "question_number": 6,
+    "question_name": "订购记录没有明确链角色",
+    "case_id": "R1",
+    "display_answer": "丙",
+    "answer_id": "A017",
+    "group": "agent"
+  },
+  {
+    "question_number": 7,
+    "question_name": "改了序列能否沿用旧分数",
+    "case_id": "R2",
+    "display_answer": "甲",
+    "answer_id": "A008",
+    "group": "llm"
+  },
+  {
+    "question_number": 7,
+    "question_name": "改了序列能否沿用旧分数",
+    "case_id": "R2",
+    "display_answer": "乙",
+    "answer_id": "A010",
+    "group": "agent"
+  },
+  {
+    "question_number": 7,
+    "question_name": "改了序列能否沿用旧分数",
+    "case_id": "R2",
+    "display_answer": "丙",
+    "answer_id": "A023",
+    "group": "workflow"
+  },
+  {
+    "question_number": 8,
+    "question_name": "坐标声明是否与序列一致",
+    "case_id": "R3",
+    "display_answer": "甲",
+    "answer_id": "A009",
+    "group": "workflow"
+  },
+  {
+    "question_number": 8,
+    "question_name": "坐标声明是否与序列一致",
+    "case_id": "R3",
+    "display_answer": "乙",
+    "answer_id": "A015",
+    "group": "llm"
+  },
+  {
+    "question_number": 8,
+    "question_name": "坐标声明是否与序列一致",
+    "case_id": "R3",
+    "display_answer": "丙",
+    "answer_id": "A022",
+    "group": "agent"
+  },
+  {
+    "question_number": 9,
+    "question_name": "缺少本次表达表时如何处理",
+    "case_id": "R4",
+    "display_answer": "甲",
+    "answer_id": "A003",
+    "group": "llm"
+  },
+  {
+    "question_number": 9,
+    "question_name": "缺少本次表达表时如何处理",
+    "case_id": "R4",
+    "display_answer": "乙",
+    "answer_id": "A011",
+    "group": "workflow"
+  },
+  {
+    "question_number": 9,
+    "question_name": "缺少本次表达表时如何处理",
+    "case_id": "R4",
+    "display_answer": "丙",
+    "answer_id": "A025",
+    "group": "agent"
+  }
+]

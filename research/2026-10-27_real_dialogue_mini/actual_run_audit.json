@@ -1,0 +1,1389 @@
+{
+  "kind": "REAL_PROVIDER_EXECUTION_EVIDENCE_NOT_HUMAN_GRADING",
+  "model": "doubao-seed-2-0-mini-260428",
+  "run_id": "mini_real_20261027_061408",
+  "planned_units": 27,
+  "attempted_units": 27,
+  "pending_units": 0,
+  "user_round_units": 33,
+  "model_requests_in_batch": 62,
+  "provider_reported_total_tokens_in_batch": 505264,
+  "http_retries_in_batch": 0,
+  "separate_connection_check_requests": 2,
+  "separate_connection_check_tokens": 605,
+  "currency_cost": null,
+  "currency_note": "Provider-returned token counts retained; no unverified pricing conversion",
+  "software_status_counts_NOT_accuracy": {
+    "ANSWERED_NO_TOOLS": 9,
+    "COMPLETE": 4,
+    "PARTIAL_COMPLETE": 10,
+    "MODEL_ANSWER": 1,
+    "FAILED_WITH_RETAINED_PARTIAL_EVIDENCE": 3
+  },
+  "common_input_and_resources": [
+    {
+      "case_id": "W1",
+      "same_complete_common_input": true,
+      "same_tool_resource_version": true,
+      "user_rounds": 1
+    },
+    {
+      "case_id": "W2",
+      "same_complete_common_input": true,
+      "same_tool_resource_version": true,
+      "user_rounds": 1
+    },
+    {
+      "case_id": "W2b",
+      "same_complete_common_input": true,
+      "same_tool_resource_version": true,
+      "user_rounds": 1
+    },
+    {
+      "case_id": "W3",
+      "same_complete_common_input": true,
+      "same_tool_resource_version": true,
+      "user_rounds": 1
+    },
+    {
+      "case_id": "U1",
+      "same_complete_common_input": true,
+      "same_tool_resource_version": true,
+      "user_rounds": 2
+    },
+    {
+      "case_id": "R1",
+      "same_complete_common_input": true,
+      "same_tool_resource_version": true,
+      "user_rounds": 2
+    },
+    {
+      "case_id": "R2",
+      "same_complete_common_input": true,
+      "same_tool_resource_version": true,
+      "user_rounds": 1
+    },
+    {
+      "case_id": "R3",
+      "same_complete_common_input": true,
+      "same_tool_resource_version": true,
+      "user_rounds": 1
+    },
+    {
+      "case_id": "R4",
+      "same_complete_common_input": true,
+      "same_tool_resource_version": true,
+      "user_rounds": 1
+    }
+  ],
+  "requests": [
+    {
+      "answer_id": "A001",
+      "case_id": "U1",
+      "group": "llm",
+      "record": "A001/model_transport/001/http_attempt_01.json",
+      "request_id": "021793052989772682583ac3749be18cdf4b3a384433037f42416",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 3380,
+        "output_tokens": 369,
+        "total_tokens": 3749,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 3.078
+    },
+    {
+      "answer_id": "A001",
+      "case_id": "U1",
+      "group": "llm",
+      "record": "A001/model_transport/002/http_attempt_01.json",
+      "request_id": "021793052992856a6cdd8247c48d753298cd4bcf5eec90e4daecf",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 5935,
+        "output_tokens": 320,
+        "total_tokens": 6255,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 3.422
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "record": "A002/model_transport/001/http_attempt_01.json",
+      "request_id": "0217930529963634c81961e630bce638d970dc2753358732f8176",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 11448,
+        "output_tokens": 203,
+        "total_tokens": 11651,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.188
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "record": "A002/model_transport/002/http_attempt_01.json",
+      "request_id": "02179305299863039b5b0f4b57789945865e795386c3530afc06c",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 7506,
+        "output_tokens": 21,
+        "total_tokens": 7527,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.766
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "record": "A002/model_transport/003/http_attempt_01.json",
+      "request_id": "021793052999452c237340934591b89d6de6b6a9271c1b92ac8da",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 7773,
+        "output_tokens": 20,
+        "total_tokens": 7793,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.734
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "record": "A002/model_transport/004/http_attempt_01.json",
+      "request_id": "0217930530002680e23c04e8b740c94d8512f0597aa5fa65da6b9",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 10786,
+        "output_tokens": 21,
+        "total_tokens": 10807,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.812
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "record": "A002/model_transport/005/http_attempt_01.json",
+      "request_id": "021793053001159640844006c495b97e3327b5d9afec856f311ee",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 11579,
+        "output_tokens": 21,
+        "total_tokens": 11600,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 1.266
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "record": "A002/model_transport/006/http_attempt_01.json",
+      "request_id": "0217930530025463f04613060c95c0e1cb70b4f628471a92a0ad8",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 11806,
+        "output_tokens": 20,
+        "total_tokens": 11826,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.922
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "record": "A002/model_transport/007/http_attempt_01.json",
+      "request_id": "021793053003758ea9999fb310f5017a5d432d00d65dc9ad25a26",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 12558,
+        "output_tokens": 20,
+        "total_tokens": 12578,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.796
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "record": "A002/model_transport/008/http_attempt_01.json",
+      "request_id": "021793053004709efca7158d8a072a352f4e6ec3154e35a7db2a9",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 12625,
+        "output_tokens": 440,
+        "total_tokens": 13065,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 5.469
+    },
+    {
+      "answer_id": "A003",
+      "case_id": "R4",
+      "group": "llm",
+      "record": "A003/model_transport/001/http_attempt_01.json",
+      "request_id": "02179305301037978af8113c224ccdd69578c3b63d1e71a3228eb",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 1999,
+        "output_tokens": 406,
+        "total_tokens": 2405,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 4.219
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "record": "A004/model_transport/001/http_attempt_01.json",
+      "request_id": "0217930530146906cb63cadb26a6eb1a5dd8bb71cce3d7f12b4ee",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 7168,
+        "output_tokens": 246,
+        "total_tokens": 7414,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.094
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "record": "A004/model_transport/002/http_attempt_01.json",
+      "request_id": "0217930530168403f04613060c95c0e1cb70b4f628471a9eda592",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 3154,
+        "output_tokens": 21,
+        "total_tokens": 3175,
+        "input_tokens_details": {
+          "cached_tokens": 1080
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.532
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "record": "A004/model_transport/003/http_attempt_01.json",
+      "request_id": "0217930530174773f04613060c95c0e1cb70b4f628471a9885d96",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 3622,
+        "output_tokens": 20,
+        "total_tokens": 3642,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.641
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "record": "A004/model_transport/004/http_attempt_01.json",
+      "request_id": "021793053018202d6f60410e67e178f28d968f0420b51c3492a7a",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 5331,
+        "output_tokens": 21,
+        "total_tokens": 5352,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.938
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "record": "A004/model_transport/005/http_attempt_01.json",
+      "request_id": "02179305301928220244bbcebb250bf80b1bc04ef464017a60abd",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 7849,
+        "output_tokens": 21,
+        "total_tokens": 7870,
+        "input_tokens_details": {
+          "cached_tokens": 1080
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.812
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "record": "A004/model_transport/006/http_attempt_01.json",
+      "request_id": "0217930530202308878e6c95084a12b4d57c4d96cb06f1d28092a",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 8194,
+        "output_tokens": 20,
+        "total_tokens": 8214,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.719
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "record": "A004/model_transport/007/http_attempt_01.json",
+      "request_id": "0217930530212346525c18cf4d9efd868f038535426f816315899",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 8809,
+        "output_tokens": 20,
+        "total_tokens": 8829,
+        "input_tokens_details": {
+          "cached_tokens": 1080
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.75
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "record": "A004/model_transport/008/http_attempt_01.json",
+      "request_id": "021793053022119846a816464a9af9c0791e0f68a2ce03c27e06c",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 8674,
+        "output_tokens": 375,
+        "total_tokens": 9049,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 4.297
+    },
+    {
+      "answer_id": "A006",
+      "case_id": "W3",
+      "group": "llm",
+      "record": "A006/model_transport/001/http_attempt_01.json",
+      "request_id": "02179305302710148e426867c3c446aaa68159641220ac1e579cc",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 6497,
+        "output_tokens": 482,
+        "total_tokens": 6979,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 4.25
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "W2",
+      "group": "agent",
+      "record": "A007/model_transport/001/http_attempt_01.json",
+      "request_id": "02179305303151341f89ff67558dec75454d97963e9341bd01221",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 25999,
+        "output_tokens": 133,
+        "total_tokens": 26132,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 1.844
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "W2",
+      "group": "agent",
+      "record": "A007/model_transport/002/http_attempt_01.json",
+      "request_id": "0217930530334568df8e1a1401bb5aa62b5b494646ada581d2666",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 22056,
+        "output_tokens": 21,
+        "total_tokens": 22077,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.906
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "W2",
+      "group": "agent",
+      "record": "A007/model_transport/003/http_attempt_01.json",
+      "request_id": "02179305303441440d92d5266a85c14e28416df297f1b20726c7b",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 22757,
+        "output_tokens": 20,
+        "total_tokens": 22777,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.859
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "W2",
+      "group": "agent",
+      "record": "A007/model_transport/004/http_attempt_01.json",
+      "request_id": "0217930530353556cb63cadb26a6eb1a5dd8bb71cce3d7f66a07c",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 35424,
+        "output_tokens": 696,
+        "total_tokens": 36120,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 5.234
+    },
+    {
+      "answer_id": "A008",
+      "case_id": "R2",
+      "group": "llm",
+      "record": "A008/model_transport/001/http_attempt_01.json",
+      "request_id": "02179305304078839b5b0f4b57789945865e795386c35303a6e44",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 2749,
+        "output_tokens": 313,
+        "total_tokens": 3062,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 3.641
+    },
+    {
+      "answer_id": "A010",
+      "case_id": "R2",
+      "group": "agent",
+      "record": "A010/model_transport/001/http_attempt_01.json",
+      "request_id": "021793053044704640844006c495b97e3327b5d9afec856778107",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 7513,
+        "output_tokens": 308,
+        "total_tokens": 7821,
+        "input_tokens_details": {
+          "cached_tokens": 1592
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 3.453
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "record": "A013/model_transport/001/http_attempt_01.json",
+      "request_id": "021793053048828e78c31fe06d4434dfef0260629e4a08b828452",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 8087,
+        "output_tokens": 241,
+        "total_tokens": 8328,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.468
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "record": "A013/model_transport/002/http_attempt_01.json",
+      "request_id": "021793053051381b9f489096afc36acf45c00ec3935d23a69e2a4",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 4180,
+        "output_tokens": 21,
+        "total_tokens": 4201,
+        "input_tokens_details": {
+          "cached_tokens": 1080
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.734
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "record": "A013/model_transport/003/http_attempt_01.json",
+      "request_id": "0217930530521577820404c56ac6dd9ce215ba8b602495aa7f01a",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 4319,
+        "output_tokens": 20,
+        "total_tokens": 4339,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.672
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "record": "A013/model_transport/004/http_attempt_01.json",
+      "request_id": "0217930530529147093713527b8c530401a403eec8fc152a13077",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 5894,
+        "output_tokens": 21,
+        "total_tokens": 5915,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.672
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "record": "A013/model_transport/005/http_attempt_01.json",
+      "request_id": "0217930530536490e23c04e8b740c94d8512f0597aa5fa654f656",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 5940,
+        "output_tokens": 318,
+        "total_tokens": 6258,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.984
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "record": "A014/model_transport/001/http_attempt_01.json",
+      "request_id": "02179305305678058818742e03404164f2bdc6cf7ab386ac67369",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 8067,
+        "output_tokens": 214,
+        "total_tokens": 8281,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.281
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "record": "A014/model_transport/002/http_attempt_01.json",
+      "request_id": "021793053059125e78c31fe06d4434dfef0260629e4a08b6577ae",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 4147,
+        "output_tokens": 21,
+        "total_tokens": 4168,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.812
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "record": "A014/model_transport/003/http_attempt_01.json",
+      "request_id": "021793053060000b97e702619832bacb4ebf6c3ac1ede674b3183",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 4286,
+        "output_tokens": 20,
+        "total_tokens": 4306,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.812
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "record": "A014/model_transport/004/http_attempt_01.json",
+      "request_id": "021793053060875f0644a9747ad3d38d721f78a849566c6775c1c",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 5417,
+        "output_tokens": 357,
+        "total_tokens": 5774,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 3.796
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "record": "A014/model_transport/005/http_attempt_01.json",
+      "request_id": "0217930530647413f04613060c95c0e1cb70b4f628471a94ec039",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 13140,
+        "output_tokens": 206,
+        "total_tokens": 13346,
+        "input_tokens_details": {
+          "cached_tokens": 1592
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.031
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "record": "A014/model_transport/006/http_attempt_01.json",
+      "request_id": "0217930530668758878e6c95084a12b4d57c4d96cb06f1dc0db34",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 6688,
+        "output_tokens": 21,
+        "total_tokens": 6709,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.891
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "record": "A014/model_transport/007/http_attempt_01.json",
+      "request_id": "0217930530678434c81961e630bce638d970dc27533587391788a",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 6827,
+        "output_tokens": 20,
+        "total_tokens": 6847,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.719
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "record": "A014/model_transport/008/http_attempt_01.json",
+      "request_id": "0217930530685963f04613060c95c0e1cb70b4f628471a99716cf",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 8402,
+        "output_tokens": 21,
+        "total_tokens": 8423,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.688
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "record": "A014/model_transport/009/http_attempt_01.json",
+      "request_id": "021793053069343795aa3a4ba36fe885727fc31a219ca25d8048e",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 8448,
+        "output_tokens": 372,
+        "total_tokens": 8820,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 3.407
+    },
+    {
+      "answer_id": "A015",
+      "case_id": "R3",
+      "group": "llm",
+      "record": "A015/model_transport/001/http_attempt_01.json",
+      "request_id": "02179305307297148e426867c3c446aaa68159641220ac125c973",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 3738,
+        "output_tokens": 448,
+        "total_tokens": 4186,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 4.141
+    },
+    {
+      "answer_id": "A016",
+      "case_id": "R1",
+      "group": "llm",
+      "record": "A016/model_transport/001/http_attempt_01.json",
+      "request_id": "021793053077336b9f489096afc36acf45c00ec3935d23af64108",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 1260,
+        "output_tokens": 215,
+        "total_tokens": 1475,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.735
+    },
+    {
+      "answer_id": "A016",
+      "case_id": "R1",
+      "group": "llm",
+      "record": "A016/model_transport/002/http_attempt_01.json",
+      "request_id": "021793053080052bbc1b38287ece59059a49659ad58bad9e3e58d",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 2774,
+        "output_tokens": 232,
+        "total_tokens": 3006,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.5
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "record": "A017/model_transport/001/http_attempt_01.json",
+      "request_id": "0217930530827006cb63cadb26a6eb1a5dd8bb71cce3d7f116800",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 5982,
+        "output_tokens": 319,
+        "total_tokens": 6301,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 3.812
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "record": "A017/model_transport/002/http_attempt_01.json",
+      "request_id": "0217930530865957093713527b8c530401a403eec8fc1527255d0",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 8423,
+        "output_tokens": 177,
+        "total_tokens": 8600,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 1.734
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "record": "A017/model_transport/003/http_attempt_01.json",
+      "request_id": "021793053088400f0644a9747ad3d38d721f78a849566c6e8e57d",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 3615,
+        "output_tokens": 21,
+        "total_tokens": 3636,
+        "input_tokens_details": {
+          "cached_tokens": 1080
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.671
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "record": "A017/model_transport/004/http_attempt_01.json",
+      "request_id": "021793053089249846a816464a9af9c0791e0f68a2ce03c751b0f",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 4025,
+        "output_tokens": 20,
+        "total_tokens": 4045,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.797
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "record": "A017/model_transport/005/http_attempt_01.json",
+      "request_id": "02179305309004620244bbcebb250bf80b1bc04ef464017885e94",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 5734,
+        "output_tokens": 21,
+        "total_tokens": 5755,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 1.75
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "record": "A017/model_transport/006/http_attempt_01.json",
+      "request_id": "02179305309187239b5b0f4b57789945865e795386c35304d543b",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 7863,
+        "output_tokens": 225,
+        "total_tokens": 8088,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.656
+    },
+    {
+      "answer_id": "A018",
+      "case_id": "W1",
+      "group": "llm",
+      "record": "A018/model_transport/001/http_attempt_01.json",
+      "request_id": "02179305309470658818742e03404164f2bdc6cf7ab386aa83b3c",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 2331,
+        "output_tokens": 544,
+        "total_tokens": 2875,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 6.047
+    },
+    {
+      "answer_id": "A020",
+      "case_id": "W2",
+      "group": "llm",
+      "record": "A020/model_transport/001/http_attempt_01.json",
+      "request_id": "021793053101104593075d5bfc3e0cbf107ff469a4d1c91fd80bd",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 21289,
+        "output_tokens": 902,
+        "total_tokens": 22191,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 6.547
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "record": "A022/model_transport/001/http_attempt_01.json",
+      "request_id": "021793053108038bbc1b38287ece59059a49659ad58bad9b6496f",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 8503,
+        "output_tokens": 234,
+        "total_tokens": 8737,
+        "input_tokens_details": {
+          "cached_tokens": 1592
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.5
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "record": "A022/model_transport/002/http_attempt_01.json",
+      "request_id": "0217930531106220736cb0c996dcf6699b9adc2424c5dbc7c8a50",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 4561,
+        "output_tokens": 21,
+        "total_tokens": 4582,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.765
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "record": "A022/model_transport/003/http_attempt_01.json",
+      "request_id": "021793053111465b566464da517b102b4cb09cdfd60e7eefad446",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 4700,
+        "output_tokens": 20,
+        "total_tokens": 4720,
+        "input_tokens_details": {
+          "cached_tokens": 1080
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.781
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "record": "A022/model_transport/004/http_attempt_01.json",
+      "request_id": "021793053112293fd0de7354b348b065f00b895e07126b8508e5e",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 5954,
+        "output_tokens": 351,
+        "total_tokens": 6305,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 3.375
+    },
+    {
+      "answer_id": "A024",
+      "case_id": "W2b",
+      "group": "llm",
+      "record": "A024/model_transport/001/http_attempt_01.json",
+      "request_id": "021793053116036b4a50cd25f47d4bb7d101bbb29abc519362831",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 3408,
+        "output_tokens": 237,
+        "total_tokens": 3645,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.188
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "record": "A025/model_transport/001/http_attempt_01.json",
+      "request_id": "02179305311835759e4692ee8689b9dc112ef0a7e12032fea581d",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 6746,
+        "output_tokens": 294,
+        "total_tokens": 7040,
+        "input_tokens_details": {
+          "cached_tokens": 1592
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 2.859
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "record": "A025/model_transport/002/http_attempt_01.json",
+      "request_id": "021793053121292fa871229fec4115dc08043e38393b8b57e2de7",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 2822,
+        "output_tokens": 21,
+        "total_tokens": 2843,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.563
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "record": "A025/model_transport/003/http_attempt_01.json",
+      "request_id": "02179305312197475251d478e5bf6426f4e0f08f6c1b200421c1b",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 3290,
+        "output_tokens": 20,
+        "total_tokens": 3310,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 1.422
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "record": "A025/model_transport/004/http_attempt_01.json",
+      "request_id": "021793053123487031cf6218c12fc0ace26887030dd7ea8d5a684",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 4999,
+        "output_tokens": 21,
+        "total_tokens": 5020,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.766
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "record": "A025/model_transport/005/http_attempt_01.json",
+      "request_id": "021793053124290dc393452598180da55fdaf8ce594e92b9a8ca0",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 7517,
+        "output_tokens": 21,
+        "total_tokens": 7538,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.735
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "record": "A025/model_transport/006/http_attempt_01.json",
+      "request_id": "02179305312521091be90b70b1bfc3059428bd07e108b7e8ad3df",
+      "returned_model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 7862,
+        "output_tokens": 20,
+        "total_tokens": 7882,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "seconds": 0.75
+    }
+  ],
+  "raw_file_copies": [
+    {
+      "saved": "raw/model_and_tool_records_original.zip",
+      "source": "evaluation_runs/mini_real_20261027_061408.zip",
+      "bytes": 9814625,
+      "sha256": "512ab027fddd8c1ecabda20b7243a610c2f14a07a80130e832eebe083ed0c2c3"
+    },
+    {
+      "saved": "raw/anonymous_reviewer_package_original.zip",
+      "source": "evaluation_runs/mini_real_20261027_061408/reviewer_package.zip",
+      "bytes": 2031924,
+      "sha256": "0e3167519bc13c4ccee2fe2eb9d479254d498695b2ba46dc3386271eca66d66d"
+    },
+    {
+      "saved": "raw/results_original.json",
+      "source": "evaluation_runs/mini_real_20261027_061408/results.json",
+      "bytes": 3495823,
+      "sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3"
+    },
+    {
+      "saved": "raw/protocol_original.json",
+      "source": "evaluation_runs/mini_real_20261027_061408/protocol.json",
+      "bytes": 11558,
+      "sha256": "e4879f5e48f8d50edf52c1edffd503053ad3f3ad9064b4839afd82f8d361e2b2"
+    },
+    {
+      "saved": "raw/execution_status_original.json",
+      "source": "evaluation_runs/mini_real_20261027_061408/execution_status.json",
+      "bytes": 7243,
+      "sha256": "1482483dd7a1463a57f3506324657c532eb5016368f4c40ffa25d7860484941e"
+    },
+    {
+      "saved": "raw/cases_original.json",
+      "source": "evaluation_runs/mini_real_20261027_061408/cases.json",
+      "bytes": 46342,
+      "sha256": "ac64bb76aad50fcebb6302ce3c215eaba20c872ac32173be989520704adceac0"
+    },
+    {
+      "saved": "raw/analysis_plan_original.json",
+      "source": "evaluation_runs/mini_real_20261027_061408/analysis_plan.json",
+      "bytes": 8424,
+      "sha256": "eabce468e23f8e3bb1dfb48eed48bf26f86c927400d70e188e61ce141964f9a5"
+    },
+    {
+      "saved": "raw/actual_execution_original.json",
+      "source": "evaluation_runs/mini_real_20261027_061408/actual_execution.json",
+      "bytes": 3982,
+      "sha256": "8b6b96d454f8223e8b8df28d1219f45fb2fab260b7426e30a55d90c2db2af5b8"
+    },
+    {
+      "saved": "raw/private_group_key_DO_NOT_SEND_REVIEWERS.json",
+      "source": "evaluation_runs/mini_real_20261027_061408/private_group_key.json",
+      "bytes": 2688,
+      "sha256": "8d7483a2d841a1c9b8a04b921c288370974bb42f0e327f0da92e604d95aa1a60"
+    },
+    {
+      "saved": "raw/review_form_blank_matched.xlsx",
+      "source": "research/2026-10-27_evaluation_entry/planned_review_blank_27.xlsx",
+      "bytes": 13894,
+      "sha256": "c13c3e9bfa569344caba34b1ecebdb290b304302ade3fcd377e2d975dd4ab5f8"
+    }
+  ],
+  "human_scientific_scores_filled": 0,
+  "independent_unseen_tasks": false,
+  "production_website_updated": false,
+  "heavy_scientific_recomputation": false,
+  "credential_pattern_scan_files": 2893,
+  "credential_pattern_matches": 0
+}

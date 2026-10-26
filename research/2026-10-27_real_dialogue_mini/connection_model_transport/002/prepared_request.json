@@ -1,0 +1,32 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "只调用connection_probe工具，参数为空对象。不要输出其他文字。"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_darfau59v5aovs6sl6v4r0od",
+          "type": "function",
+          "function": {
+            "name": "connection_probe",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_darfau59v5aovs6sl6v4r0od",
+      "content": "{\"status\":\"OK\",\"probe\":\"connection\"}"
+    },
+    {
+      "role": "user",
+      "content": "工具返回成功，请只回答 CONNECTION_OK，不要再调用工具。"
+    }
+  ],
+  "max_tokens": 256
+}

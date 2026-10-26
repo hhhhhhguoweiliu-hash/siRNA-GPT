@@ -1,0 +1,9 @@
+{
+  "kind": "REAL_PROVIDER_RUN_NOT_TEST_TRANSPORT",
+  "started_at": "2026-10-26T22:16:31.005766+00:00",
+  "source_commit": "6c13c5788405e8ecf1aaf77144accd8108701d48",
+  "confirmation": "Explicit user instruction preserved in authorization.json; confirm_api_usage=True is passed to the same execution function used by the web confirmation endpoint",
+  "browser_button_clicked": false,
+  "production_deployed": false,
+  "plan_sha256": "938dbd9f9b351bde0bbed8bae387f72363b5c823f0ff1bb9248df0a26e053f74"
+}

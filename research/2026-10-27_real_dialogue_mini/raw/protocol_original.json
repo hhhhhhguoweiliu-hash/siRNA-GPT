@@ -1,0 +1,296 @@
+{
+  "plan": {
+    "protocol": "dialogue-v3",
+    "mode": "batch",
+    "review_status": "SEEN_DEVELOPMENT_NOT_INDEPENDENT_TEST",
+    "case_ids": [
+      "W1",
+      "W2",
+      "W2b",
+      "W3",
+      "U1",
+      "R1",
+      "R2",
+      "R3",
+      "R4"
+    ],
+    "qa_excluded_before_run": [
+      "Q1",
+      "Q2"
+    ],
+    "planned_units": 27,
+    "planned_user_round_units": 33,
+    "technical_repeats": 1,
+    "seed": 20261027,
+    "schedule": [
+      {
+        "answer_id": "A001",
+        "case_id": "U1",
+        "group": "llm",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A002",
+        "case_id": "W3",
+        "group": "agent",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A003",
+        "case_id": "R4",
+        "group": "llm",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A004",
+        "case_id": "W1",
+        "group": "agent",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A005",
+        "case_id": "W3",
+        "group": "workflow",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A006",
+        "case_id": "W3",
+        "group": "llm",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A007",
+        "case_id": "W2",
+        "group": "agent",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A008",
+        "case_id": "R2",
+        "group": "llm",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A009",
+        "case_id": "R3",
+        "group": "workflow",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A010",
+        "case_id": "R2",
+        "group": "agent",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A011",
+        "case_id": "R4",
+        "group": "workflow",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A012",
+        "case_id": "R1",
+        "group": "workflow",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A013",
+        "case_id": "W2b",
+        "group": "agent",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A014",
+        "case_id": "U1",
+        "group": "agent",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A015",
+        "case_id": "R3",
+        "group": "llm",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A016",
+        "case_id": "R1",
+        "group": "llm",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A017",
+        "case_id": "R1",
+        "group": "agent",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A018",
+        "case_id": "W1",
+        "group": "llm",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A019",
+        "case_id": "W2b",
+        "group": "workflow",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A020",
+        "case_id": "W2",
+        "group": "llm",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A021",
+        "case_id": "U1",
+        "group": "workflow",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A022",
+        "case_id": "R3",
+        "group": "agent",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A023",
+        "case_id": "R2",
+        "group": "workflow",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A024",
+        "case_id": "W2b",
+        "group": "llm",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A025",
+        "case_id": "R4",
+        "group": "agent",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A026",
+        "case_id": "W1",
+        "group": "workflow",
+        "repeat": 1
+      },
+      {
+        "answer_id": "A027",
+        "case_id": "W2",
+        "group": "workflow",
+        "repeat": 1
+      }
+    ],
+    "common_cases_sha256": "3a7d238c17c0c69197a218ae81a734303eca27b6c876949f5a7bd7f90da231cb",
+    "resources_sha256": "0c7088d0cb62ddd242720ac8b06cf1ce271877ea9f7ccd5caf8c30f0fa7d8308",
+    "fact_standards_sha256": "fad538a083fb7b25ba8e6a8acd3827ce43ad02982c9a8a05e190feed48fde2be",
+    "criteria_sha256": "46029f60bec52e0d7fd23e4b956363d9a046020b195b08e44dcc10f0e540c8be",
+    "model": "doubao-seed-2-0-mini-260428",
+    "provider": "doubao",
+    "api_mode": "responses",
+    "effective_settings": {
+      "max_output_tokens": 1800,
+      "answer_contract": "evaluation_contract.FINAL_ANSWER_STYLE / 20261022",
+      "rubric": "evaluation_rubric.json / 20261022_1310; seen development tasks",
+      "input_policy": "identical full raw candidate rows and task conditions; planner sees actual sequences",
+      "thinking": "disabled",
+      "request_timeout_seconds": 90,
+      "api_retries": 1,
+      "max_model_turns": 12,
+      "max_tool_calls": 18,
+      "case_timeout_seconds": 720,
+      "external_web_enabled": false,
+      "temperature_policy": "not explicitly set; provider default",
+      "response_policy": "provider incomplete remains a failure; never silently extend or retry for a better answer",
+      "budget_policy": "same per-request output cap for both model arms; agent can make multiple requests",
+      "round_timeout_seconds": 360,
+      "max_model_requests_per_round": 13,
+      "max_model_requests_per_case": 26,
+      "ordinary_model_requests_per_round": 1,
+      "failure_policy": "Stop remaining user rounds after execution/transport/planning/budget failure; retain NOT_EXECUTED records",
+      "timeout_enforcement": "Cooperative checks before/after calls; no claim of interrupting a blocking transport",
+      "physical_attempts_policy": "API retries belong to each logical request; real API path remains disabled"
+    },
+    "max_logical_model_requests": 154,
+    "max_http_attempts": 308,
+    "max_output_tokens_across_requests": 277200,
+    "max_output_token_parameter_sum_all_http_attempts": 554400,
+    "max_sequential_round_seconds": 11880,
+    "currency_cost": null,
+    "input_token_budget": null,
+    "actual_usage": null,
+    "budget_note": "Upper bounds, not expected usage or a price quotation; output caps are per request, input varies.",
+    "group_differences": [
+      "ordinary model: no scientific tools or web",
+      "fixed workflow: common conditions select a prespecified path, no model",
+      "Agent: plans and may call the same tools over multiple requests"
+    ],
+    "stop_policy": "Stop the batch on account block, timeout or explicit user stop; other failed cases retained. First execution failure stops later rounds of that case.",
+    "formal_unseen_task_upload_supported": false,
+    "human_quality_scored": false,
+    "plan_sha256": "938dbd9f9b351bde0bbed8bae387f72363b5c823f0ff1bb9248df0a26e053f74"
+  },
+  "runtime": {
+    "version": "0.7-cloud",
+    "commit": "local",
+    "assets": {
+      "core.py": "7245cc297807090bec4db1206605be28a18639b222daec7254c28e019072c555",
+      "conversation.py": "793cddb2ec20ba008407d41b75ad1d4b9ed1fee671410b698f843d1bd7be0a01",
+      "research.py": "92374d857e8b8d08f972c8149efc1c533ae91a2c4c5ca6b56285c2f6eccf8f38",
+      "knowledge.py": "e6399125e804571218c78bfb0ab8cd52a10c0f162ceac3c869e7a6227a807e6d",
+      "literature.py": "0e18ebeb2efa7974655c57ef6a2ad3e5699e4ad2ebb1468d420c303fe90d2093",
+      "pdf_text_worker.py": "e1d9df6fbec7c153c694946a08f04e00ea9c2b0607d199102c1b80be9ba50ed1",
+      "library_ui.js": "a4da7c85c2bed9b0c19423ba3777d19371958575370ecf14df4734e848c96df2",
+      "library_demo.py": "6f5ab4dc0f749855e77faadd632da85b08f3001a7ea60cf019901730d82a7853",
+      "model_client.py": "e400c3808fb0498a379d22e43f4c25db179e3531b3135e7a16c471e4a531931d",
+      "expression_data.py": "209d5afb92294051b6c64fc058550d99aa568a5ada5baa5d5c50668f53f20bc5",
+      "evaluate.py": "75d647cb2ef8f76cc5c6e60e0cbc6bea75b0c65e2ec3495e7a5cb129c96918c1",
+      "paper_pilot.py": "c4b4c97b47ec568cd4b6fb908a5d503117db59f66078e26e4656d1d2a98eec0d",
+      "evaluation_protocol.py": "5893f24c29735be207e9994790e9fb0512ae7645babac8095ee94e7d3d14bc80",
+      "evaluation_cases.example.json": "31138b0927b76396144c8126f01b4f8e626e990380406e81ec01f6185f15a66c",
+      "evaluation_contract.py": "b56ff9d894a45082ec95bf7c24224f5c76f5f44767e0ff8a21e7fdd30e379522",
+      "evaluation_rubric.json": "e41f739438a393733c7f83e0dc73385f5fc0120a051128a7043a4abf59af6676",
+      "review_package.py": "0f974ccdd6e38ba4eb56ae008514380a899949af4e45b8de81b4d21ca06d4be2",
+      "data/candidates.tsv": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853",
+      "data/historical_scores.tsv": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+      "data/VEGFA.fasta": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+      "data/expression.tsv.gz": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+      "data/historical_seed_matches.tsv": "3701a561a84cdf9df29108f6c235398cc377901a598293071f5724f706f2ac3c",
+      "data/provenance.json": "c2f0ff2200cbbbd79e73724db2a4673c0a356ae3dbe548380c6f0b6223c7ef18",
+      "references/sirna_library/sources.json": "bab3fc8132b6588d9cde45b3cd21f6047c088ff879d86e39219bb01413c7f537",
+      "references/vegfa_experiments_20261024/sources.json": "73a924f260fd21a16804444e0d4c0727ececd0dc96f88150d800c139b20c309d",
+      "verified_imports.py": "ee8ec343d434030e9caa61ad3c8ceded6a87a18761fc19ae6b45014520092cce",
+      "data/purchased_sivegf_20261024_v1/manifest.json": "17d87eae5d0c36db21a3e7642777e2a83ee80df309beb0f33d9e3f00b313c687",
+      "references/vegfa_experiments_20261024/chen2013_locators.json": "7d8679adf3c59eb67a3af66ce1cb389970c1f63dc5c6440a99d4510eaf222c51",
+      "references/vegfa_experiments_20261024/osipova2020_locators.json": "92d632bcd6d1ba2900159362421aab0e709b6c6865025eba2ba3cc4b2d8b0033",
+      "sequence_validation.py": "9666e707f8473f2fcc45ceaae9ca2dcd5b0cdb9f6b3f2db50569becf68b1d1d8",
+      "sequence_ui.js": "16d1d462380334e3c91b5c225242312ce4479723877272521bebf8954455bed8",
+      "index.html": "b1a54e6a4bc3ef2771cc686cbbccfc9d3c34fff716a4dd380d111c7dd6d5bd1c",
+      "ui_text.js": "791f7695754cac237a911ced7a2ac6528f0eb6f4860532383214c5d7fea4cd6d",
+      "ui_labels.py": "e107555fafa5648e9088e277e4b4f1ab14ee3c139feaf74cbe1b559631a8bee6",
+      "evaluation_dialogue.py": "054a423756c0d25ce05db19aba6351a9d419aa793048487c19ed9ea81543e6a1",
+      "data/historical_near_matches.tsv": "af0926615f20e405023109b66a4ad00620f938cb53f84a605c4cb9ed7e209e72",
+      "data/historical_IRGM_review.tsv": "cd229502a946bb2ce0646ad341042f41f2077eaefa1d2df4cf38b841c6c74def",
+      "data/utr_gene_map.tsv": "d72d9b45ae6fade48c80d17a937163cd79d51cc34f0207755c1cc73b80bac836",
+      "evaluation_transport.py": "bbec3ced206fbb14486b4d2739fcc903d49dd18b5f10d3da70239b40f958accc",
+      "dialogue_evaluation.py": "24585f606b0f3002ce90c57f9a5a5ba3df37aee2a296759f795614c328eff83b",
+      "dialogue_review.py": "c84dfc0140b0697943035b0f2e10a5037b594ca0533498971f2cad8eef804dc6",
+      "evaluation_ui.js": "965aee15197c96ab60a1510f2e55ba337edd14a8217314213ad8804dfd2c251b"
+    },
+    "scientific_mode": "verified_imports",
+    "knowledge_review": "retrieved_sources_not_independently_scored",
+    "literature_component": "scoped_library_v1",
+    "literature_source_manifest": "references/sirna_library/sources.json",
+    "interface_language": "en",
+    "specialized_fine_tuned_model": false,
+    "durable_cloud_storage": false
+  },
+  "started_at": "2026-10-26T22:16:31.206790+00:00",
+  "execution_mode": "provider",
+  "kind": "REAL_MODEL_RUN"
+}

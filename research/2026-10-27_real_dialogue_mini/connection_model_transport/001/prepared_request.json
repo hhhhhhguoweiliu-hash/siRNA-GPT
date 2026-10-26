@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "只调用connection_probe工具，参数为空对象。不要输出其他文字。"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "connection_probe",
+        "description": "连接测试，请调用此工具，参数为空对象。",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "tool_choice": {
+    "type": "function",
+    "function": {
+      "name": "connection_probe"
+    }
+  },
+  "max_tokens": 256
+}

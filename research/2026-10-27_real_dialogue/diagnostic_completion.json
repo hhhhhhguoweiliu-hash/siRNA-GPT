@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED_ACCOUNT",
+  "run_id": "real_diag_20261027_060715",
+  "total": 1,
+  "completed": 1,
+  "protocol": "dialogue-v3",
+  "pending": 0,
+  "finished_at": "2026-10-26T22:11:28.288576+00:00",
+  "scientific_quality_scored": false
+}

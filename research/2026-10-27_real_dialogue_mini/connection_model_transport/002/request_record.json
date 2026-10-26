@@ -1,0 +1,132 @@
+{
+  "mode": "provider",
+  "configured_model": "doubao-seed-2-0-mini-260428",
+  "api_mode": "responses",
+  "attempts": [
+    {
+      "attempt": 1,
+      "events": [
+        {
+          "event": "attempt_started",
+          "at_utc": "2026-10-26T22:15:47.552439+00:00",
+          "attempt": 1,
+          "url": "https://ark.cn-beijing.volces.com/api/v3/responses",
+          "request": {
+            "model": "doubao-seed-2-0-mini-260428",
+            "stream": false,
+            "thinking": {
+              "type": "disabled"
+            },
+            "max_output_tokens": 256,
+            "input": [
+              {
+                "type": "message",
+                "role": "user",
+                "content": [
+                  {
+                    "type": "input_text",
+                    "text": "只调用connection_probe工具，参数为空对象。不要输出其他文字。"
+                  }
+                ]
+              },
+              {
+                "type": "function_call",
+                "call_id": "call_darfau59v5aovs6sl6v4r0od",
+                "name": "connection_probe",
+                "arguments": "{}"
+              },
+              {
+                "type": "function_call_output",
+                "call_id": "call_darfau59v5aovs6sl6v4r0od",
+                "output": "{\"status\":\"OK\",\"probe\":\"connection\"}"
+              },
+              {
+                "type": "message",
+                "role": "user",
+                "content": [
+                  {
+                    "type": "input_text",
+                    "text": "工具返回成功，请只回答 CONNECTION_OK，不要再调用工具。"
+                  }
+                ]
+              }
+            ]
+          },
+          "timeout_seconds": 90.0
+        },
+        {
+          "event": "response_received",
+          "at_utc": "2026-10-26T22:15:48.114587+00:00",
+          "attempt": 1,
+          "seconds": 0.563,
+          "request_id": "02179305294603589d0c17fc196b3c940c12dd7ad5b500b3cdc50",
+          "response": {
+            "created_at": 1793052946,
+            "id": "resp_02179305294603589d0c17fc196b3c940c12dd7ad5b500b3cdc50",
+            "max_output_tokens": 256,
+            "model": "doubao-seed-2-0-mini-260428",
+            "object": "response",
+            "output": [
+              {
+                "type": "message",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "CONNECTION_OK"
+                  }
+                ],
+                "status": "completed",
+                "id": "msg_02179305294642600000000000000000000ffffac1838c35d66a9"
+              }
+            ],
+            "thinking": {
+              "type": "disabled"
+            },
+            "service_tier": "default",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 103,
+              "output_tokens": 3,
+              "total_tokens": 106,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "caching": {
+              "type": "disabled"
+            },
+            "store": true,
+            "expire_at": 1793312146
+          }
+        },
+        {
+          "event": "attempt_finished",
+          "at_utc": "2026-10-26T22:15:48.120467+00:00",
+          "attempt": 1,
+          "status": "SUCCEEDED",
+          "request_id": "02179305294603589d0c17fc196b3c940c12dd7ad5b500b3cdc50",
+          "seconds": 0.563
+        }
+      ],
+      "status": "SUCCEEDED"
+    }
+  ],
+  "normalized_usage": {
+    "input_tokens": 103,
+    "output_tokens": 3,
+    "total_tokens": 106,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "record_kind": "REAL_PROVIDER_REQUEST",
+  "status": "SUCCEEDED"
+}

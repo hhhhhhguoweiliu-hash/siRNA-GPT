@@ -1,0 +1,127 @@
+{
+  "id": "resp_021793052945241b9f489096afc36acf45c00ec3935d23a84db58",
+  "model": "doubao-seed-2-0-mini-260428",
+  "choices": [
+    {
+      "finish_reason": "tool_calls",
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_darfau59v5aovs6sl6v4r0od",
+            "type": "function",
+            "function": {
+              "name": "connection_probe",
+              "arguments": "{}"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "usage": {
+    "input_tokens": 484,
+    "output_tokens": 15,
+    "total_tokens": 499,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "sources": [],
+  "web_search_calls": [],
+  "_request_id": "021793052945241b9f489096afc36acf45c00ec3935d23a84db58",
+  "_request": {
+    "model": "doubao-seed-2-0-mini-260428",
+    "stream": false,
+    "thinking": {
+      "type": "disabled"
+    },
+    "max_output_tokens": 256,
+    "input": [
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "只调用connection_probe工具，参数为空对象。不要输出其他文字。"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "name": "connection_probe",
+        "description": "连接测试，请调用此工具，参数为空对象。",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
+      }
+    ],
+    "tool_choice": {
+      "type": "function",
+      "name": "connection_probe"
+    }
+  },
+  "_raw_response": {
+    "created_at": 1793052945,
+    "id": "resp_021793052945241b9f489096afc36acf45c00ec3935d23a84db58",
+    "max_output_tokens": 256,
+    "model": "doubao-seed-2-0-mini-260428",
+    "object": "response",
+    "output": [
+      {
+        "arguments": "{}",
+        "call_id": "call_darfau59v5aovs6sl6v4r0od",
+        "name": "connection_probe",
+        "type": "function_call",
+        "id": "fc_02179305294586100000000000000000000ffffac1805cb4f5a59",
+        "status": "completed"
+      }
+    ],
+    "thinking": {
+      "type": "disabled"
+    },
+    "service_tier": "default",
+    "status": "completed",
+    "tools": [
+      {
+        "name": "connection_probe",
+        "type": "function",
+        "description": "连接测试，请调用此工具，参数为空对象。",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
+      }
+    ],
+    "usage": {
+      "input_tokens": 484,
+      "output_tokens": 15,
+      "total_tokens": 499,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "caching": {
+      "type": "disabled"
+    },
+    "store": true,
+    "expire_at": 1793312145,
+    "tool_choice": {
+      "type": "function",
+      "name": "connection_probe"
+    }
+  }
+}

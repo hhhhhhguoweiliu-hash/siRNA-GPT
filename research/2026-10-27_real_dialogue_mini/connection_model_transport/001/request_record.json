@@ -1,0 +1,139 @@
+{
+  "mode": "provider",
+  "configured_model": "doubao-seed-2-0-mini-260428",
+  "api_mode": "responses",
+  "attempts": [
+    {
+      "attempt": 1,
+      "events": [
+        {
+          "event": "attempt_started",
+          "at_utc": "2026-10-26T22:15:46.622239+00:00",
+          "attempt": 1,
+          "url": "https://ark.cn-beijing.volces.com/api/v3/responses",
+          "request": {
+            "model": "doubao-seed-2-0-mini-260428",
+            "stream": false,
+            "thinking": {
+              "type": "disabled"
+            },
+            "max_output_tokens": 256,
+            "input": [
+              {
+                "type": "message",
+                "role": "user",
+                "content": [
+                  {
+                    "type": "input_text",
+                    "text": "只调用connection_probe工具，参数为空对象。不要输出其他文字。"
+                  }
+                ]
+              }
+            ],
+            "tools": [
+              {
+                "type": "function",
+                "name": "connection_probe",
+                "description": "连接测试，请调用此工具，参数为空对象。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {},
+                  "additionalProperties": false
+                }
+              }
+            ],
+            "tool_choice": {
+              "type": "function",
+              "name": "connection_probe"
+            }
+          },
+          "timeout_seconds": 90.0
+        },
+        {
+          "event": "response_received",
+          "at_utc": "2026-10-26T22:15:47.533886+00:00",
+          "attempt": 1,
+          "seconds": 0.907,
+          "request_id": "021793052945241b9f489096afc36acf45c00ec3935d23a84db58",
+          "response": {
+            "created_at": 1793052945,
+            "id": "resp_021793052945241b9f489096afc36acf45c00ec3935d23a84db58",
+            "max_output_tokens": 256,
+            "model": "doubao-seed-2-0-mini-260428",
+            "object": "response",
+            "output": [
+              {
+                "arguments": "{}",
+                "call_id": "call_darfau59v5aovs6sl6v4r0od",
+                "name": "connection_probe",
+                "type": "function_call",
+                "id": "fc_02179305294586100000000000000000000ffffac1805cb4f5a59",
+                "status": "completed"
+              }
+            ],
+            "thinking": {
+              "type": "disabled"
+            },
+            "service_tier": "default",
+            "status": "completed",
+            "tools": [
+              {
+                "name": "connection_probe",
+                "type": "function",
+                "description": "连接测试，请调用此工具，参数为空对象。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {},
+                  "additionalProperties": false
+                }
+              }
+            ],
+            "usage": {
+              "input_tokens": 484,
+              "output_tokens": 15,
+              "total_tokens": 499,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "caching": {
+              "type": "disabled"
+            },
+            "store": true,
+            "expire_at": 1793312145,
+            "tool_choice": {
+              "type": "function",
+              "name": "connection_probe"
+            }
+          }
+        },
+        {
+          "event": "attempt_finished",
+          "at_utc": "2026-10-26T22:15:47.538404+00:00",
+          "attempt": 1,
+          "status": "SUCCEEDED",
+          "request_id": "021793052945241b9f489096afc36acf45c00ec3935d23a84db58",
+          "seconds": 0.907
+        }
+      ],
+      "status": "SUCCEEDED"
+    }
+  ],
+  "normalized_usage": {
+    "input_tokens": 484,
+    "output_tokens": 15,
+    "total_tokens": 499,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "returned_model": "doubao-seed-2-0-mini-260428",
+  "record_kind": "REAL_PROVIDER_REQUEST",
+  "status": "SUCCEEDED"
+}

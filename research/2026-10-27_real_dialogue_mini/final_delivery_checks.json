@@ -1,0 +1,156 @@
+{
+  "kind": "ARTIFACT_COMPLETENESS_NOT_INDEPENDENT_SCIENTIFIC_GRADING",
+  "real_run_source_commit": "6c13c5788405e8ecf1aaf77144accd8108701d48",
+  "answer_units": 27,
+  "user_rounds": 33,
+  "source_text_comparisons": [
+    {
+      "answer_id": "A001",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A002",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A003",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A004",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A005",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A006",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A007",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A008",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A009",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A010",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A011",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A012",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A013",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A014",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A015",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A016",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A017",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A018",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A019",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A020",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A021",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A022",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A023",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A024",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A025",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A026",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    },
+    {
+      "answer_id": "A027",
+      "all_rounds_equal_original": true,
+      "anonymous_answer_exact_source_text_except_OS_line_endings": true
+    }
+  ],
+  "all_complete_question_messages_present_in_pdf": true,
+  "all_27_answer_ids_present_in_pdf": true,
+  "pdf_pages": 44,
+  "pdf_sha256": "f7cf5d0297395990b54653a704ff052a76f4363ddbc61f8f734a33d1afa4f6d7",
+  "embedded_anonymous_zip_bytes_equal": true,
+  "text_outside_page": [],
+  "visual_review": "All 44 pages rendered; six contact sheets inspected; selected pages inspected at full size",
+  "credential_pattern_scan_items": 1760,
+  "credential_pattern_matches": 0,
+  "protected_tracked_science_and_old_answers_changed": [],
+  "human_scores_filled": 0,
+  "independent_scientific_quality_verified": false,
+  "production_deployment_or_browser_acceptance": false
+}

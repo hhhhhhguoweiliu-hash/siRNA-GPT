@@ -1,0 +1,1 @@
+{"pdf": "research\\2026-10-27_real_dialogue_mini\\outputs\\01a15800-7529-7ee0-b82c-8428c7746a68\\siRNA_GPT_三组真实问答评审总册.pdf", "pages": 44, "actual_answer_units": 27, "human_scores_filled": 0}

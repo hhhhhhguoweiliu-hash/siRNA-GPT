@@ -1,0 +1,191 @@
+[
+  {
+    "answer_id": "A001",
+    "execution": "ATTEMPTED",
+    "seconds": 6.578,
+    "model_requests": 2,
+    "real_total_tokens": 10004
+  },
+  {
+    "answer_id": "A002",
+    "execution": "ATTEMPTED",
+    "seconds": 13.922,
+    "model_requests": 8,
+    "real_total_tokens": 86847
+  },
+  {
+    "answer_id": "A003",
+    "execution": "ATTEMPTED",
+    "seconds": 4.281,
+    "model_requests": 1,
+    "real_total_tokens": 2405
+  },
+  {
+    "answer_id": "A004",
+    "execution": "ATTEMPTED",
+    "seconds": 11.828,
+    "model_requests": 8,
+    "real_total_tokens": 53545
+  },
+  {
+    "answer_id": "A005",
+    "execution": "ATTEMPTED",
+    "seconds": 0.438,
+    "model_requests": 0,
+    "real_total_tokens": 0
+  },
+  {
+    "answer_id": "A006",
+    "execution": "ATTEMPTED",
+    "seconds": 4.329,
+    "model_requests": 1,
+    "real_total_tokens": 6979
+  },
+  {
+    "answer_id": "A007",
+    "execution": "ATTEMPTED",
+    "seconds": 9.203,
+    "model_requests": 4,
+    "real_total_tokens": 107106
+  },
+  {
+    "answer_id": "A008",
+    "execution": "ATTEMPTED",
+    "seconds": 3.688,
+    "model_requests": 1,
+    "real_total_tokens": 3062
+  },
+  {
+    "answer_id": "A009",
+    "execution": "ATTEMPTED",
+    "seconds": 0.062,
+    "model_requests": 0,
+    "real_total_tokens": 0
+  },
+  {
+    "answer_id": "A010",
+    "execution": "ATTEMPTED",
+    "seconds": 3.5,
+    "model_requests": 1,
+    "real_total_tokens": 7821
+  },
+  {
+    "answer_id": "A011",
+    "execution": "ATTEMPTED",
+    "seconds": 0.25,
+    "model_requests": 0,
+    "real_total_tokens": 0
+  },
+  {
+    "answer_id": "A012",
+    "execution": "ATTEMPTED",
+    "seconds": 0.141,
+    "model_requests": 0,
+    "real_total_tokens": 0
+  },
+  {
+    "answer_id": "A013",
+    "execution": "ATTEMPTED",
+    "seconds": 7.89,
+    "model_requests": 5,
+    "real_total_tokens": 29041
+  },
+  {
+    "answer_id": "A014",
+    "execution": "ATTEMPTED",
+    "seconds": 16.062,
+    "model_requests": 9,
+    "real_total_tokens": 66674
+  },
+  {
+    "answer_id": "A015",
+    "execution": "ATTEMPTED",
+    "seconds": 4.203,
+    "model_requests": 1,
+    "real_total_tokens": 4186
+  },
+  {
+    "answer_id": "A016",
+    "execution": "ATTEMPTED",
+    "seconds": 5.328,
+    "model_requests": 2,
+    "real_total_tokens": 4481
+  },
+  {
+    "answer_id": "A017",
+    "execution": "ATTEMPTED",
+    "seconds": 11.907,
+    "model_requests": 6,
+    "real_total_tokens": 36425
+  },
+  {
+    "answer_id": "A018",
+    "execution": "ATTEMPTED",
+    "seconds": 6.094,
+    "model_requests": 1,
+    "real_total_tokens": 2875
+  },
+  {
+    "answer_id": "A019",
+    "execution": "ATTEMPTED",
+    "seconds": 0.078,
+    "model_requests": 0,
+    "real_total_tokens": 0
+  },
+  {
+    "answer_id": "A020",
+    "execution": "ATTEMPTED",
+    "seconds": 6.61,
+    "model_requests": 1,
+    "real_total_tokens": 22191
+  },
+  {
+    "answer_id": "A021",
+    "execution": "ATTEMPTED",
+    "seconds": 0.141,
+    "model_requests": 0,
+    "real_total_tokens": 0
+  },
+  {
+    "answer_id": "A022",
+    "execution": "ATTEMPTED",
+    "seconds": 7.703,
+    "model_requests": 4,
+    "real_total_tokens": 24344
+  },
+  {
+    "answer_id": "A023",
+    "execution": "ATTEMPTED",
+    "seconds": 0.047,
+    "model_requests": 0,
+    "real_total_tokens": 0
+  },
+  {
+    "answer_id": "A024",
+    "execution": "ATTEMPTED",
+    "seconds": 2.234,
+    "model_requests": 1,
+    "real_total_tokens": 3645
+  },
+  {
+    "answer_id": "A025",
+    "execution": "ATTEMPTED",
+    "seconds": 7.688,
+    "model_requests": 6,
+    "real_total_tokens": 33633
+  },
+  {
+    "answer_id": "A026",
+    "execution": "ATTEMPTED",
+    "seconds": 0.562,
+    "model_requests": 0,
+    "real_total_tokens": 0
+  },
+  {
+    "answer_id": "A027",
+    "execution": "ATTEMPTED",
+    "seconds": 0.063,
+    "model_requests": 0,
+    "real_total_tokens": 0
+  }
+]

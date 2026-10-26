@@ -1,0 +1,4 @@
+First final-delivery check: AssertionError A001 comparing decoded ZIP answer.txt to Python strings.
+Cause: Windows write_text exported CRLF line endings; the model result strings use LF. No answer content was changed.
+Correction: compare answer characters with CRLF normalized to LF; keep the original ZIP bytes unchanged and independently verify their source hashes.
+This was an export-verification issue, not a provider call, model rerun, scientific failure or human score.

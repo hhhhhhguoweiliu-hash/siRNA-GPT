@@ -1,0 +1,449 @@
+[
+  {
+    "answer_id": "A001",
+    "case_id": "U1",
+    "group": "llm",
+    "repeat": 1,
+    "category": "change_request",
+    "family": "reference_score",
+    "required_fact_ids": [
+      "U1_F01",
+      "U1_F02",
+      "U1_F03",
+      "U1_F04",
+      "U1_F05",
+      "U1_F06",
+      "U1_F07"
+    ]
+  },
+  {
+    "answer_id": "A002",
+    "case_id": "W3",
+    "group": "agent",
+    "repeat": 1,
+    "category": "work",
+    "family": "score_nearmatch_conflict",
+    "required_fact_ids": [
+      "W3_F01",
+      "W3_F02",
+      "W3_F03",
+      "W3_F04",
+      "W3_F05",
+      "W3_F06",
+      "W3_F07"
+    ]
+  },
+  {
+    "answer_id": "A003",
+    "case_id": "R4",
+    "group": "llm",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "missing_expression",
+    "required_fact_ids": [
+      "R4_F01",
+      "R4_F02",
+      "R4_F03",
+      "R4_F04",
+      "R4_F05",
+      "R4_F06"
+    ]
+  },
+  {
+    "answer_id": "A004",
+    "case_id": "W1",
+    "group": "agent",
+    "repeat": 1,
+    "category": "work",
+    "family": "purchased_complete",
+    "required_fact_ids": [
+      "W1_F01",
+      "W1_F02",
+      "W1_F03",
+      "W1_F04",
+      "W1_F05",
+      "W1_F06",
+      "W1_F07",
+      "W1_F08",
+      "W1_F09",
+      "W1_F10",
+      "W1_F11",
+      "W1_F12"
+    ]
+  },
+  {
+    "answer_id": "A005",
+    "case_id": "W3",
+    "group": "workflow",
+    "repeat": 1,
+    "category": "work",
+    "family": "score_nearmatch_conflict",
+    "required_fact_ids": [
+      "W3_F01",
+      "W3_F02",
+      "W3_F03",
+      "W3_F04",
+      "W3_F05",
+      "W3_F06",
+      "W3_F07"
+    ]
+  },
+  {
+    "answer_id": "A006",
+    "case_id": "W3",
+    "group": "llm",
+    "repeat": 1,
+    "category": "work",
+    "family": "score_nearmatch_conflict",
+    "required_fact_ids": [
+      "W3_F01",
+      "W3_F02",
+      "W3_F03",
+      "W3_F04",
+      "W3_F05",
+      "W3_F06",
+      "W3_F07"
+    ]
+  },
+  {
+    "answer_id": "A007",
+    "case_id": "W2",
+    "group": "agent",
+    "repeat": 1,
+    "category": "work",
+    "family": "reference_score",
+    "required_fact_ids": [
+      "W2_F01",
+      "W2_F02",
+      "W2_F03",
+      "W2_F04",
+      "W2_F05",
+      "W2_F06",
+      "W2_F07",
+      "W2_F08",
+      "W2_F09"
+    ]
+  },
+  {
+    "answer_id": "A008",
+    "case_id": "R2",
+    "group": "llm",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "purchased_binding",
+    "required_fact_ids": [
+      "R2_F01",
+      "R2_F02",
+      "R2_F03",
+      "R2_F04",
+      "R2_F05"
+    ]
+  },
+  {
+    "answer_id": "A009",
+    "case_id": "R3",
+    "group": "workflow",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "coordinate_claim",
+    "required_fact_ids": [
+      "R3_F01",
+      "R3_F02",
+      "R3_F03",
+      "R3_F04"
+    ]
+  },
+  {
+    "answer_id": "A010",
+    "case_id": "R2",
+    "group": "agent",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "purchased_binding",
+    "required_fact_ids": [
+      "R2_F01",
+      "R2_F02",
+      "R2_F03",
+      "R2_F04",
+      "R2_F05"
+    ]
+  },
+  {
+    "answer_id": "A011",
+    "case_id": "R4",
+    "group": "workflow",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "missing_expression",
+    "required_fact_ids": [
+      "R4_F01",
+      "R4_F02",
+      "R4_F03",
+      "R4_F04",
+      "R4_F05",
+      "R4_F06"
+    ]
+  },
+  {
+    "answer_id": "A012",
+    "case_id": "R1",
+    "group": "workflow",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "purchased_complete",
+    "required_fact_ids": [
+      "R1_F01",
+      "R1_F02",
+      "R1_F03",
+      "R1_F04",
+      "R1_F05"
+    ]
+  },
+  {
+    "answer_id": "A013",
+    "case_id": "W2b",
+    "group": "agent",
+    "repeat": 1,
+    "category": "work",
+    "family": "reference_score",
+    "required_fact_ids": [
+      "W2b_F01",
+      "W2b_F02",
+      "W2b_F03",
+      "W2b_F04"
+    ]
+  },
+  {
+    "answer_id": "A014",
+    "case_id": "U1",
+    "group": "agent",
+    "repeat": 1,
+    "category": "change_request",
+    "family": "reference_score",
+    "required_fact_ids": [
+      "U1_F01",
+      "U1_F02",
+      "U1_F03",
+      "U1_F04",
+      "U1_F05",
+      "U1_F06",
+      "U1_F07"
+    ]
+  },
+  {
+    "answer_id": "A015",
+    "case_id": "R3",
+    "group": "llm",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "coordinate_claim",
+    "required_fact_ids": [
+      "R3_F01",
+      "R3_F02",
+      "R3_F03",
+      "R3_F04"
+    ]
+  },
+  {
+    "answer_id": "A016",
+    "case_id": "R1",
+    "group": "llm",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "purchased_complete",
+    "required_fact_ids": [
+      "R1_F01",
+      "R1_F02",
+      "R1_F03",
+      "R1_F04",
+      "R1_F05"
+    ]
+  },
+  {
+    "answer_id": "A017",
+    "case_id": "R1",
+    "group": "agent",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "purchased_complete",
+    "required_fact_ids": [
+      "R1_F01",
+      "R1_F02",
+      "R1_F03",
+      "R1_F04",
+      "R1_F05"
+    ]
+  },
+  {
+    "answer_id": "A018",
+    "case_id": "W1",
+    "group": "llm",
+    "repeat": 1,
+    "category": "work",
+    "family": "purchased_complete",
+    "required_fact_ids": [
+      "W1_F01",
+      "W1_F02",
+      "W1_F03",
+      "W1_F04",
+      "W1_F05",
+      "W1_F06",
+      "W1_F07",
+      "W1_F08",
+      "W1_F09",
+      "W1_F10",
+      "W1_F11",
+      "W1_F12"
+    ]
+  },
+  {
+    "answer_id": "A019",
+    "case_id": "W2b",
+    "group": "workflow",
+    "repeat": 1,
+    "category": "work",
+    "family": "reference_score",
+    "required_fact_ids": [
+      "W2b_F01",
+      "W2b_F02",
+      "W2b_F03",
+      "W2b_F04"
+    ]
+  },
+  {
+    "answer_id": "A020",
+    "case_id": "W2",
+    "group": "llm",
+    "repeat": 1,
+    "category": "work",
+    "family": "reference_score",
+    "required_fact_ids": [
+      "W2_F01",
+      "W2_F02",
+      "W2_F03",
+      "W2_F04",
+      "W2_F05",
+      "W2_F06",
+      "W2_F07",
+      "W2_F08",
+      "W2_F09"
+    ]
+  },
+  {
+    "answer_id": "A021",
+    "case_id": "U1",
+    "group": "workflow",
+    "repeat": 1,
+    "category": "change_request",
+    "family": "reference_score",
+    "required_fact_ids": [
+      "U1_F01",
+      "U1_F02",
+      "U1_F03",
+      "U1_F04",
+      "U1_F05",
+      "U1_F06",
+      "U1_F07"
+    ]
+  },
+  {
+    "answer_id": "A022",
+    "case_id": "R3",
+    "group": "agent",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "coordinate_claim",
+    "required_fact_ids": [
+      "R3_F01",
+      "R3_F02",
+      "R3_F03",
+      "R3_F04"
+    ]
+  },
+  {
+    "answer_id": "A023",
+    "case_id": "R2",
+    "group": "workflow",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "purchased_binding",
+    "required_fact_ids": [
+      "R2_F01",
+      "R2_F02",
+      "R2_F03",
+      "R2_F04",
+      "R2_F05"
+    ]
+  },
+  {
+    "answer_id": "A024",
+    "case_id": "W2b",
+    "group": "llm",
+    "repeat": 1,
+    "category": "work",
+    "family": "reference_score",
+    "required_fact_ids": [
+      "W2b_F01",
+      "W2b_F02",
+      "W2b_F03",
+      "W2b_F04"
+    ]
+  },
+  {
+    "answer_id": "A025",
+    "case_id": "R4",
+    "group": "agent",
+    "repeat": 1,
+    "category": "reliability",
+    "family": "missing_expression",
+    "required_fact_ids": [
+      "R4_F01",
+      "R4_F02",
+      "R4_F03",
+      "R4_F04",
+      "R4_F05",
+      "R4_F06"
+    ]
+  },
+  {
+    "answer_id": "A026",
+    "case_id": "W1",
+    "group": "workflow",
+    "repeat": 1,
+    "category": "work",
+    "family": "purchased_complete",
+    "required_fact_ids": [
+      "W1_F01",
+      "W1_F02",
+      "W1_F03",
+      "W1_F04",
+      "W1_F05",
+      "W1_F06",
+      "W1_F07",
+      "W1_F08",
+      "W1_F09",
+      "W1_F10",
+      "W1_F11",
+      "W1_F12"
+    ]
+  },
+  {
+    "answer_id": "A027",
+    "case_id": "W2",
+    "group": "workflow",
+    "repeat": 1,
+    "category": "work",
+    "family": "reference_score",
+    "required_fact_ids": [
+      "W2_F01",
+      "W2_F02",
+      "W2_F03",
+      "W2_F04",
+      "W2_F05",
+      "W2_F06",
+      "W2_F07",
+      "W2_F08",
+      "W2_F09"
+    ]
+  }
+]
