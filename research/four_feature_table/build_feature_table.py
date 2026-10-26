@@ -263,12 +263,12 @@ def load_hpa(hpa_zip: Path, resolve_symbol, universe_ids: set[str]):
             raise RuntimeError("No TSV member found in HPA zip")
         with z.open(members[0]) as handle:
             hpa = pd.read_csv(handle, sep="\t", dtype=str, low_memory=False)
-    required = {"Gene", "Gene name", "Cell type", "nTPM"}
+    required = {"Gene", "Gene name", "Cell type", "nCPM"}
     if not required.issubset(hpa.columns):
         raise RuntimeError(f"HPA file missing columns: {required - set(hpa.columns)}")
     hpa["Gene name"] = hpa["Gene name"].fillna("").astype(str).str.strip()
     hpa["Cell type"] = hpa["Cell type"].fillna("").astype(str).str.strip()
-    hpa["nTPM_num"] = pd.to_numeric(hpa["nTPM"], errors="coerce")
+    hpa["nCPM_num"] = pd.to_numeric(hpa["nCPM"], errors="coerce")
     resolved = hpa["Gene name"].map(resolve_symbol)
     hpa["mapped_gene_id"] = resolved.map(lambda x: x[0])
     hpa["symbol_map_status"] = resolved.map(lambda x: x[1])
@@ -276,7 +276,7 @@ def load_hpa(hpa_zip: Path, resolve_symbol, universe_ids: set[str]):
     hpa["mapped_gene_id"] = hpa["mapped_gene_id"].astype(str)
     hpa_agg = (
         hpa.groupby(["mapped_gene_id", "Cell type"], as_index=False)
-        .agg(nTPM=("nTPM_num", "median"), source_row_count=("Gene", "size"))
+        .agg(nCPM=("nCPM_num", "median"), source_row_count=("Gene", "size"))
         .rename(columns={"mapped_gene_id": "gene_id"})
     )
     rpe_name = "retinal pigment epithelial cells"
@@ -285,16 +285,16 @@ def load_hpa(hpa_zip: Path, resolve_symbol, universe_ids: set[str]):
         found = sorted(set(hpa["Cell type"].str.casefold()))
         candidates = [x for x in found if "retinal pigment" in x or x == "rpe"]
         raise RuntimeError(f"RPE cell type not found in HPA file. Candidate labels: {candidates[:20]}")
-    rpe = rpe_rows[["gene_id", "nTPM"]].rename(columns={"nTPM": "F3_RPE_nTPM"})
+    rpe = rpe_rows[["gene_id", "nCPM"]].rename(columns={"nCPM": "F3_RPE_nCPM"})
     other = hpa_agg[hpa_agg["Cell type"].str.casefold() != rpe_name].copy()
-    other = other.dropna(subset=["nTPM"])
+    other = other.dropna(subset=["nCPM"])
     if not other.empty:
-        idx = other.groupby("gene_id")["nTPM"].idxmax()
-        other_max = other.loc[idx, ["gene_id", "Cell type", "nTPM"]].rename(
-            columns={"Cell type": "F3_max_other_cell_type", "nTPM": "F3_max_other_nTPM"}
+        idx = other.groupby("gene_id")["nCPM"].idxmax()
+        other_max = other.loc[idx, ["gene_id", "Cell type", "nCPM"]].rename(
+            columns={"Cell type": "F3_max_other_cell_type", "nCPM": "F3_max_other_nCPM"}
         )
     else:
-        other_max = pd.DataFrame(columns=["gene_id", "F3_max_other_cell_type", "F3_max_other_nTPM"])
+        other_max = pd.DataFrame(columns=["gene_id", "F3_max_other_cell_type", "F3_max_other_nCPM"])
     mapped_any = set(hpa_agg["gene_id"].astype(str))
     rpe_present = set(rpe["gene_id"].astype(str))
     return rpe.merge(other_max, on="gene_id", how="outer"), mapped_any, rpe_present, len(hpa), len(hpa_agg)
@@ -439,21 +439,21 @@ def main():
     )
     table = universe.merge(hpa_features, on="gene_id", how="left")
     table["F3_raw"] = float("nan")
-    valid_f3 = table["F3_RPE_nTPM"].notna() & table["F3_max_other_nTPM"].notna()
+    valid_f3 = table["F3_RPE_nCPM"].notna() & table["F3_max_other_nCPM"].notna()
     table.loc[valid_f3, "F3_raw"] = (
-        (table.loc[valid_f3, "F3_RPE_nTPM"] + 1).div(table.loc[valid_f3, "F3_max_other_nTPM"] + 1).map(math.log2)
+        (table.loc[valid_f3, "F3_RPE_nCPM"] + 1).div(table.loc[valid_f3, "F3_max_other_nCPM"] + 1).map(math.log2)
     )
     table["F3_normalized"] = minmax_normalize(table["F3_raw"])
-    table["F3_source"] = "Human Protein Atlas v25.1 rna_single_cell_type.tsv.zip; RPE nTPM vs maximum nTPM across other HPA cell types; NCBI symbol/alias mapping"
+    table["F3_source"] = "Human Protein Atlas v25.1 rna_single_cell_type.tsv.zip; RPE nCPM vs maximum nCPM across other HPA cell types; NCBI symbol/alias mapping"
     table["F3_missing_reason"] = ""
     table.loc[~table["gene_id"].isin(hpa_mapped_any), "F3_missing_reason"] = (
         "Gene ID did not map to a record in the downloaded HPA single-cell type table; not interpreted as zero expression."
     )
-    missing_rpe = table["F3_RPE_nTPM"].isna() & table["gene_id"].isin(hpa_mapped_any)
+    missing_rpe = table["F3_RPE_nCPM"].isna() & table["gene_id"].isin(hpa_mapped_any)
     table.loc[missing_rpe, "F3_missing_reason"] = (
         "HPA record mapped for this gene, but an RPE cell-type row or numeric RPE value was absent; zero expression cannot be inferred."
     )
-    missing_other = table["F3_RPE_nTPM"].notna() & table["F3_max_other_nTPM"].isna()
+    missing_other = table["F3_RPE_nCPM"].notna() & table["F3_max_other_nCPM"].isna()
     table.loc[missing_other, "F3_missing_reason"] = (
         "RPE value available but no numeric value for other HPA cell types; specificity ratio cannot be calculated."
     )
@@ -524,7 +524,7 @@ def main():
         "F1_raw", "F1_normalized", "F1_source", "F1_missing_reason",
         "F2_raw", "F2_normalized", "F2_source", "F2_missing_reason",
         "F3_raw", "F3_normalized", "F3_source", "F3_missing_reason",
-        "F3_RPE_nTPM", "F3_max_other_nTPM", "F3_max_other_cell_type",
+        "F3_RPE_nCPM", "F3_max_other_nCPM", "F3_max_other_cell_type",
         "F4_raw", "F4_normalized", "F4_source", "F4_missing_reason",
         "F4_core_categories", "F4_GO_terms", "F4_GO_evidence_codes", "F4_Reactome_pathways",
         "F4_nonIEA_supported_categories", "F4_has_any_GO_annotation", "F4_has_any_Reactome_mapping",
@@ -552,7 +552,7 @@ def main():
         "normalization": {
             "F1": "not calculated; raw and normalized values intentionally missing",
             "F2": "not calculated; raw and normalized values intentionally missing",
-            "F3": "min-max scaling of log2((RPE nTPM + 1)/(maximum other-cell-type nTPM + 1)) over genes with a calculable raw value; if all valid values are equal, normalized value is 0.5",
+            "F3": "min-max scaling of log2((RPE nCPM + 1)/(maximum other-cell-type nCPM + 1)) over genes with a calculable raw value; if all valid values are equal, normalized value is 0.5",
             "F4": "min-max scaling of the number of the six predeclared core-function categories with GO/Reactome annotation support; if all valid values are equal, normalized value is 0.5",
         },
         "interpretation_warning": "F3/F4 are evidence-based annotation proxies, not validated probabilities of siRNA off-target toxicity and not experimentally confirmed RPE essentiality.",
@@ -582,7 +582,7 @@ def main():
     definitions = [
         {"feature": "F1", "name": "缺氧条件下功能依赖性", "raw_value": "未计算", "raw_formula": "待获得完整基因级缺氧 CRISPR 依赖效应矩阵后确定方向并计算", "normalization": "未计算", "source": FEATURE1_SOURCE, "missing_reason": FEATURE1_MISSING},
         {"feature": "F2", "name": "缺氧 ARPE-19 表达暴露", "raw_value": "未计算", "raw_formula": "待载入用户 Nor1-4/Hyp1-4 表达矩阵；本次不读取", "normalization": "未计算", "source": FEATURE2_SOURCE, "missing_reason": FEATURE2_MISSING},
-        {"feature": "F3", "name": "RPE 表达特异性", "raw_value": "log2((RPE nTPM + 1)/(max other-cell-type nTPM + 1))", "raw_formula": "HPA retinal pigment epithelial cells nTPM vs maximum across the other HPA cell types", "normalization": "min-max to [0,1] across calculable genes; equal values -> 0.5", "source": SOURCES["hpa_single_cell_type"]["url"], "missing_reason": "Only when HPA gene mapping, RPE row/value, or other-cell-type maximum is unavailable."},
+        {"feature": "F3", "name": "RPE 表达特异性", "raw_value": "log2((RPE nCPM + 1)/(max other-cell-type nCPM + 1))", "raw_formula": "HPA retinal pigment epithelial cells nCPM vs maximum across the other HPA cell types", "normalization": "min-max to [0,1] across calculable genes; equal values -> 0.5", "source": SOURCES["hpa_single_cell_type"]["url"], "missing_reason": "Only when HPA gene mapping, RPE row/value, or other-cell-type maximum is unavailable."},
         {"feature": "F4", "name": "RPE 核心功能关联", "raw_value": "0–6 distinct predeclared categories supported by GO descendants and/or exact Reactome human pathway IDs", "raw_formula": "Count distinct categories, not number of individual annotations; all supporting GO IDs/evidence codes and Reactome pathways are retained", "normalization": "min-max to [0,1] across genes with mapped GOA/Reactome annotation; equal values -> 0.5", "source": "GOA human GAF + GO basic ontology + Reactome NCBI2Reactome_All_Levels", "missing_reason": "Only if no mapped human GOA annotation and no human Reactome pathway mapping; annotation absence does not imply biological unimportance."},
     ]
     definition_df = pd.DataFrame(definitions)
@@ -699,7 +699,7 @@ One row per unique NCBI Gene ID represented in the project RefSeq transcript-to-
 ## Feature status
 - F1, hypoxia functional dependency: intentionally missing per user instruction. Not zero.
 - F2, hypoxic ARPE-19 expression exposure: intentionally missing per user instruction. Not zero.
-- F3, RPE expression specificity: HPA single-cell type nTPM, calculated as log2((RPE nTPM + 1)/(maximum nTPM among other HPA cell types + 1)); then min-max normalized across genes with values.
+- F3, RPE expression specificity: HPA single-cell type nCPM, calculated as log2((RPE nCPM + 1)/(maximum nCPM among other HPA cell types + 1)); then min-max normalized across genes with values.
 - F4, RPE core-function annotation: number of distinct predefined categories (0–6) supported by GO descendants and/or exact human Reactome pathway IDs; then min-max normalized across genes with mapped GOA or Reactome annotation.
 
 ## Important limitations
