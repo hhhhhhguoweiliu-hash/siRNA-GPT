@@ -1,0 +1,342 @@
+{
+  "kind": "LLM_READ_ONLY_EVIDENCE_REVIEW_NOT_INDEPENDENT_HUMAN_SCORES",
+  "reviewed_commit": "4244ac0d9b9f0b1e01fe46f6871fd664825a4c24",
+  "score_workbook": {
+    "submitted_sha256": "c13c3e9bfa569344caba34b1ecebdb290b304302ade3fcd377e2d975dd4ab5f8",
+    "human_fields": {
+      "评分表": {
+        "data_rows": 27,
+        "human_cells_filled": 0,
+        "filled": []
+      },
+      "逐事实": {
+        "data_rows": 177,
+        "human_cells_filled": 0,
+        "filled": []
+      },
+      "裁决": {
+        "data_rows": 27,
+        "human_cells_filled": 0,
+        "filled": []
+      }
+    },
+    "matches_real_batch_blank_byte_for_byte": true,
+    "blank_sha256": "c13c3e9bfa569344caba34b1ecebdb290b304302ade3fcd377e2d975dd4ab5f8"
+  },
+  "provider_responses": {
+    "zip_crc_bad_member": null,
+    "physical_responses": 62,
+    "unique_request_ids": 62,
+    "returned_models": {
+      "doubao-seed-2-0-mini-260428": 62
+    },
+    "status_counts": {
+      "completed": 62
+    },
+    "tokens_total": 505264,
+    "group_tokens": {
+      "llm": 59828,
+      "workflow": 0,
+      "agent": 445436
+    },
+    "attempt_numbers": {
+      "1": 62
+    }
+  },
+  "group_usage": {
+    "agent": {
+      "units": 9,
+      "real_model_requests": 51,
+      "total_tokens": 445436,
+      "usage_complete": true,
+      "tool_calls": 32,
+      "seconds_total": 89.703,
+      "seconds_median": 9.203,
+      "status_counts": {
+        "COMPLETE": 2,
+        "PARTIAL_COMPLETE": 5,
+        "MODEL_ANSWER": 1,
+        "FAILED_WITH_RETAINED_PARTIAL_EVIDENCE": 1
+      }
+    },
+    "llm": {
+      "units": 9,
+      "real_model_requests": 11,
+      "total_tokens": 59828,
+      "usage_complete": true,
+      "tool_calls": 0,
+      "seconds_total": 43.345,
+      "seconds_median": 4.329,
+      "status_counts": {
+        "ANSWERED_NO_TOOLS": 9
+      }
+    },
+    "workflow": {
+      "units": 9,
+      "real_model_requests": 0,
+      "total_tokens": 0,
+      "usage_complete": true,
+      "tool_calls": 33,
+      "seconds_total": 1.782,
+      "seconds_median": 0.141,
+      "status_counts": {
+        "COMPLETE": 2,
+        "PARTIAL_COMPLETE": 5,
+        "FAILED_WITH_RETAINED_PARTIAL_EVIDENCE": 2
+      }
+    }
+  },
+  "source_bytes_match_github": [
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/outputs/01a15800-7529-7ee0-b82c-8428c7746a68/private_display_key_DO_NOT_SEND_REVIEWERS.json",
+      "match_github_blob": true,
+      "sha256": "a4fcd60db6a7fc1132b34656e68ab15a425b5ada11e0e383880d329d1dcd579c"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/actual_execution_original.json",
+      "match_github_blob": true,
+      "sha256": "8b6b96d454f8223e8b8df28d1219f45fb2fab260b7426e30a55d90c2db2af5b8"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/analysis_plan_original.json",
+      "match_github_blob": true,
+      "sha256": "eabce468e23f8e3bb1dfb48eed48bf26f86c927400d70e188e61ce141964f9a5"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/cases_original.json",
+      "match_github_blob": true,
+      "sha256": "ac64bb76aad50fcebb6302ce3c215eaba20c872ac32173be989520704adceac0"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/execution_status_original.json",
+      "match_github_blob": true,
+      "sha256": "1482483dd7a1463a57f3506324657c532eb5016368f4c40ffa25d7860484941e"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/private_group_key_DO_NOT_SEND_REVIEWERS.json",
+      "match_github_blob": true,
+      "sha256": "8d7483a2d841a1c9b8a04b921c288370974bb42f0e327f0da92e604d95aa1a60"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/protocol_original.json",
+      "match_github_blob": true,
+      "sha256": "e4879f5e48f8d50edf52c1edffd503053ad3f3ad9064b4839afd82f8d361e2b2"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/results_original.json",
+      "match_github_blob": true,
+      "sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/review_form_blank_matched.xlsx",
+      "match_github_blob": true,
+      "sha256": "c13c3e9bfa569344caba34b1ecebdb290b304302ade3fcd377e2d975dd4ab5f8"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/outputs/01a15800-7529-7ee0-b82c-8428c7746a68/siRNA_GPT_三组真实问答评审总册.pdf",
+      "match_github_blob": true,
+      "sha256": "f7cf5d0297395990b54653a704ff052a76f4363ddbc61f8f734a33d1afa4f6d7"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/anonymous_reviewer_package_original.zip",
+      "match_github_blob": true,
+      "sha256": "0e3167519bc13c4ccee2fe2eb9d479254d498695b2ba46dc3386271eca66d66d"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/model_and_tool_records_original.zip",
+      "match_github_blob": true,
+      "sha256": "512ab027fddd8c1ecabda20b7243a610c2f14a07a80130e832eebe083ed0c2c3"
+    }
+  ],
+  "fairness": [
+    {
+      "case_id": "U1",
+      "same_common_input": true,
+      "same_resource_files_between_tool_arms": true,
+      "same_round_user_inputs": true,
+      "actual_rounds": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "case_id": "W3",
+      "same_common_input": true,
+      "same_resource_files_between_tool_arms": true,
+      "same_round_user_inputs": true,
+      "actual_rounds": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "case_id": "R4",
+      "same_common_input": true,
+      "same_resource_files_between_tool_arms": true,
+      "same_round_user_inputs": true,
+      "actual_rounds": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "case_id": "W1",
+      "same_common_input": true,
+      "same_resource_files_between_tool_arms": true,
+      "same_round_user_inputs": true,
+      "actual_rounds": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "case_id": "W2",
+      "same_common_input": true,
+      "same_resource_files_between_tool_arms": true,
+      "same_round_user_inputs": true,
+      "actual_rounds": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "case_id": "R2",
+      "same_common_input": true,
+      "same_resource_files_between_tool_arms": true,
+      "same_round_user_inputs": true,
+      "actual_rounds": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "case_id": "R3",
+      "same_common_input": true,
+      "same_resource_files_between_tool_arms": true,
+      "same_round_user_inputs": true,
+      "actual_rounds": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "case_id": "R1",
+      "same_common_input": true,
+      "same_resource_files_between_tool_arms": true,
+      "same_round_user_inputs": true,
+      "actual_rounds": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "case_id": "W2b",
+      "same_common_input": true,
+      "same_resource_files_between_tool_arms": true,
+      "same_round_user_inputs": true,
+      "actual_rounds": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "A013_false_block": {
+    "answer_id": "A013",
+    "case_id": "W2b",
+    "source_file_in_original_zip": "A013/round_1/runs/20261027_061732_1ae83c/result.json",
+    "guide_claim_equals_verified_core": true,
+    "context_claim_equals_verified_context": true,
+    "guide_length": 19,
+    "context_length": 57,
+    "wrong_expected_field_for_guide": [
+      "mRNA_context_57nt"
+    ],
+    "saved_guard_status": "FAIL",
+    "validation": {
+      "version": "sequence_consistency_v1",
+      "status": "FAIL",
+      "label": "模型序列检查未通过",
+      "claim_count": 2,
+      "claims": [
+        {
+          "line": 7,
+          "sequence": "UGUACUACGGAAUAUCUCG",
+          "length": 19,
+          "expected_fields": [
+            "mRNA_context_57nt"
+          ],
+          "matched_verified_fields": [],
+          "candidate_association": "explicit"
+        },
+        {
+          "line": 7,
+          "sequence": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG",
+          "length": 57,
+          "expected_fields": [
+            "mRNA_context_57nt"
+          ],
+          "matched_verified_fields": [
+            {
+              "candidate_id": "VEGFA_SD_3499",
+              "field": "mRNA_context_57nt"
+            }
+          ],
+          "candidate_association": "explicit"
+        }
+      ],
+      "issues": [
+        {
+          "line": 7,
+          "sequence": "UGUACUACGGAAUAUCUCG",
+          "length": 19,
+          "expected_fields": [
+            "mRNA_context_57nt"
+          ],
+          "matched_verified_fields": [],
+          "candidate_association": "explicit",
+          "reason": "SEQUENCE_NOT_EQUAL_TO_VERIFIED_FIELD",
+          "correct_fields": [
+            {
+              "candidate_id": "VEGFA_SD_3499",
+              "mRNA_context_57nt": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG"
+            }
+          ]
+        }
+      ],
+      "raw_model_text_sha256": "6654fe080e5c3612791e3fc563c6077f1ad12b7d0a4a813922e0d05cecc69242",
+      "scope": "Checks contiguous nucleotide strings of at least 10 bases against checked input/tool fields, with role labels where explicit. Does not validate scientific conclusions, numerical claims, chemistry, or all natural-language strand statements.",
+      "is_scientific_accuracy_or_human_score": false
+    },
+    "verified_fields": {
+      "candidate_id": "VEGFA_SD_3499",
+      "guide_core19_5to3": "UGUACUACGGAAUAUCUCG",
+      "passenger_core19_5to3": "CGAGAUAUUCCGUAGUACA",
+      "guide_21nt_original": "UGUACUACGGAAUAUCUCGAA",
+      "passenger_21nt_original": "CGAGAUAUUCCGUAGUACAUA",
+      "original_row1": "",
+      "original_row2": "",
+      "strand_assignment_basis": "Source-labelled roles; no new role inference by this check",
+      "original_modification": "未新增化学修饰确认",
+      "reference_transcript": "NM_003376.6",
+      "core_start_1based": 3501,
+      "core_end_1based": 3519,
+      "mRNA_context_57nt": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG",
+      "design_window_23nt": "TTCGAGATATTCCGTAGTACATA",
+      "evidence_source": "inspect_candidates; verify_target where present; unchanged original candidate fields",
+      "target_match_checked": true
+    },
+    "is_human_scientific_score": false
+  },
+  "added_model_calls": 0,
+  "added_human_scientific_scores": 0,
+  "old_results_modified": false
+}
