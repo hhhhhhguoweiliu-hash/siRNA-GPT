@@ -239,6 +239,19 @@ def main():
         pd.DataFrame(missing_rows).to_excel(writer, sheet_name="Missingness_Summary", index=False)
         pd.DataFrame([{"metric":k,"value":json.dumps(v,ensure_ascii=False) if isinstance(v,(list,dict)) else v} for k,v in qc.items()]).to_excel(writer, sheet_name="QC_Summary", index=False)
         pd.DataFrame([{"source_key":k, **{kk:vv for kk,vv in v.items()}} for k,v in manifest.get("sources",{}).items()]).to_excel(writer, sheet_name="Source_Manifest", index=False)
+    readme = """# Four-feature gene table — public-data build stage
+
+## Current feature plan
+- F1: gnomAD v4.1.1 LOEUF, a population-genetic loss-of-function constraint proxy. Lower LOEUF means stronger constraint; the normalized score is direction-reversed so larger means stronger constraint.
+- F2: private ARPE-19 baseline expression from the user's company RNA-seq result. This is deliberately populated by a local merge script and is not committed to the public repository.
+- F3: HPA RPE cell-type expression specificity.
+- F4: predeclared RPE-related GO/Reactome annotation support.
+
+## Limitations
+LOEUF is not a direct CRISPR dependency score, not RPE-specific essentiality, and not a calibrated siRNA toxicity probability. F3/F4 are annotation proxies. No composite score or weights are calculated.
+The public workflow leaves F2 missing because the RNA-seq files are private. Use the local RNA-seq merge script to populate F2 and preserve the company's DE results as auxiliary evidence.
+"""
+    (OUT / "README_four_feature_table.md").write_text(readme, encoding="utf-8")
     print(json.dumps({"gene_rows":int(len(table)),"qc_gnomad":manifest["qc_gnomad"],"source_sha256":sha256_file(SOURCE_PATH)},ensure_ascii=False,indent=2))
 
 if __name__ == "__main__":
