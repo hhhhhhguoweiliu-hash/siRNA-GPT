@@ -1,0 +1,47 @@
+# Evaluation methods: scoped draft, not completed evaluation results
+
+This text documents the implemented development interface and proposed assessment protocol as of code/artifact commit `0172402`. Domain review of task standards, real model execution and independent human ratings remain pending. The concurrent scientific review `245012425535d795d5b72225c92090728750762e` was retained after upload; it does not constitute code acceptance or human grading.
+
+## Task scope and relationship to the reference study
+
+The evaluation adapts the task-oriented, evidence-based assessment approach of [CRISPR-GPT](https://www.nature.com/articles/s41551-025-01463-z) to a narrow siRNA assistance setting: human VEGFA and the project's available ARPE-19 baseline data. It evaluates sequence and reference verification, retrieval of sequence-bound saved tool results, evidence comparison, and responses to additional user requirements. It does not test a new efficacy predictor, demonstrate experimentally optimal or safest siRNA selection, or reproduce the reference system's model fine-tuning or user-experience experiments.
+
+The primary scientific tasks concern an existing purchased reagent, scoped reference or score queries, and comparison of score and near-match evidence. A change-request task assesses the complete two-round exchange. Reliability tasks are a separate assessment category; library questions are a separate functional demonstration while equal retrieval access remains unsupported. Shared input validation is not interpreted as an Agent-specific reasoning advantage. The condition table explicitly communicates task requirements, so this design cannot simultaneously support claims about unrestricted natural-language intent interpretation.
+
+The reviewed development collection contains 11 previously seen templates. The proposed main execution schedule includes nine W/U/R templates, three configurations and one technical execution per template/configuration: 27 planned units and 33 user-round units. This corresponds to 12 work-task units, three change-request units and 12 reliability units, which must be analyzed separately. Q1/Q2 are excluded from this schedule before execution; the original 33-position development plan is preserved. Related variants share task families and scientific sources and are not independent biological samples or a newly held-out benchmark. A target number of approximately 12 future scientific scenarios is a planning suggestion, not an achieved sample size or statistical-power claim.
+
+## Comparators and evidence availability
+
+All configurations receive the same complete original inputs, stated strand assumptions, task conditions and scripted user updates. The ordinary model receives no scientific tools or external web access and is not given outputs produced later by tool-enabled configurations. Fixed workflow and Agent use the same version-bound scientific assets and tool APIs. The fixed workflow follows a declared deterministic path selected from the shared conditions; the Agent plans and may make multiple model requests. Each round starts a fresh scientific tool session while retaining that configuration's own conversation history.
+
+Comparisons with the ordinary model assess the combined contribution of scientific tools, bound data, rules and model assistance. They cannot attribute the entire difference to Agent planning. Agent versus fixed workflow addresses any additional value and cost of scheduling, explanation and adaptation under the same resource and interaction opportunities. A fixed workflow may perform equally well or better and use fewer resources; no direction of advantage is prespecified as an expected result.
+
+The current service retrieves saved official computations after sequence, context and reference-version checks. It does not rerun heavy efficacy inference or transcriptome scans for arbitrary sequences. Current task support is limited to the available bound candidate sets. Unsupported new sequences must not be presented as a fully supported cross-gene generalization experiment. Baseline normoxia/hypoxia expression provides context only and does not change ranking. Model scores are not knockdown percentages, seed/near-full matches are not experimental off-target effects, and absent warnings are not safety certification.
+
+## Planned independent assessment and reporting
+
+Before real evaluation, independent personnel should review or prepare the scientific questions, required facts, source locations, acceptable alternative conclusions and blocking severe-error definitions. Unseen task content should be held independently and not used for implementation debugging; content already used in development remains labeled seen. The current web interface has no safe unseen-task import and therefore presently supports development evaluation only.
+
+At least two actual reviewers are planned to assess the delivered answers independently. The four project dimensions—factual accuracy, evidence support, task fulfillment and handling of limitations—retain the established 0–2 scale, rather than reproducing the reference study's scale or comparing scores directly across papers. Evidence support concerns whether a source supports the adjacent claim, not whether a filename is present. Task fulfillment includes the required actions and actual deliverables across both rounds. Concise correct fixed-workflow answers may receive high ratings; length does not confer credit. No fifth brevity dimension is added after observing answers.
+
+Reviewers should receive complete anonymous answers, actual attachments and steps, full inputs, allowed resources, task-specific standards and matching scoring positions. Reference evidence is separate from evidence actually delivered by each configuration. Raw model wording and shared software validation are retained separately; later corrections do not turn an original error into a correct model statement. No hidden internal chain of thought is required. Group keys and implementation review discussions are withheld; writing style and observable steps may nevertheless reveal provenance, so complete blinding is not claimed.
+
+Review of task standards and later answer grading are separate activities. Personnel, roles, dates, versions and changes should be recorded, including overlap between task authors and graders. A single old real development case may orient reviewers but does not enter unseen evaluation or formal scores. No actual reviewer identity, review time or score has been supplied in this batch.
+
+All planned units and failures must remain available. Completion labels inconsistent with necessary facts or blocking severe errors await attributed human correction; scores are not changed automatically. Report task completion, change-request fulfillment, four rating dimensions, blocking severe errors, time and provider-returned usage with the correct category-specific denominators. Retain paired zero/negative differences and missing values. Ordinary-model versus tool-enabled differences and Agent versus fixed-workflow differences answer different questions. Do not pool reliability or non-equivalent library questions into a primary scientific completion rate, or compute comparisons from different successful subsets. Without real answers and human ratings, no completion percentage, superiority figure or effect size is available.
+
+Independent expert assessment of task deliveries would support claims about delivery quality. Claims about ease of use for novices or time saved in real operation would require additional observed user-operation data; that optional extension is not a prerequisite for the present narrow article.
+
+## Source map and verification boundary
+
+The source mapping below comes from the retained scientific review `2450124`, based on the publisher's supplement and main-text Methods. The execution agent did not independently reread that PDF in this delivery and does not assert byte identity with the user's inaccessible uploaded copy. Check citations against the original before submission; do not infer unavailable item-level ratings or reproduce the reference paper's percentage calculations.
+
+| Reference location identified by the scientific review | Adaptation in this project |
+|---|---|
+| Supplement C1/C3: task/dependency and operation/parameter checks | Assess actual required work, evidence and scope rather than software success flags |
+| Main-text gRNA design/Methods: predesigned candidate resources | Disclose version-bound result import rather than implying repeated new prediction |
+| Supplement C4/C6: anonymous expert answer assessment | Retain project-specific four 0–2 dimensions and planned two independent reviewers; not an exact scale replication |
+| Supplement C5/C7: actual user-experience assessment | Keep delivery assessment distinct from unmeasured real user experience |
+| Supplement E: planning dependencies and human handling of missing sequence information | Preserve dependencies, clarification and human confirmation without requesting hidden reasoning |
+
+Publisher supplement: [Supplementary Information](https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41551-025-01463-z/MediaObjects/41551_2025_1463_MOESM1_ESM.pdf). The review notes discrepancies between main-text and supplement counts; no single reconciled count is assumed here, and no supplementary chat archive or individual rating table is claimed to have been reproduced.

@@ -747,8 +747,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3194,
-      "sha256": "d11e580b08377682c045e19e1236cabee337bec4282b2f9f804471287b2d508d"
+      "bytes": 3481,
+      "sha256": "3508635997721aa348ee0aa20f6676e5d737f06d77b2c1fb64baab6a28d05570"
     },
     {
       "path": "test_browser_backup.cjs.txt",
@@ -834,11 +834,20 @@
       "path": "workbook_previews/saved_table_inspection.ndjson",
       "bytes": 513,
       "sha256": "a95aef78b4b0a47b275ccc8d9a81dddb5a66161edd8f45b412beb68cc2b2299b"
+    },
+    {
+      "path": "METHODS_EVALUATION_SCOPE_EN.md",
+      "bytes": 9501,
+      "sha256": "51dae43dd8817ceadb09508e92488d08562c8242b535c3793c7c163d9c243f3c"
     }
   ],
   "external_engineering_fixture": {
     "path": "tests/fixtures/dialogue_http_integration.zip",
     "bytes": 11395928,
     "sha256": "1373f4b308cd5238aa07e5e45aeb9a215f06961fa83d885bf6b64ff9cf100914"
+  },
+  "post_payload_documentation": {
+    "retained_parallel_review": "245012425535d795d5b72225c92090728750762e",
+    "code_or_scientific_data_changed": false
   }
 }
