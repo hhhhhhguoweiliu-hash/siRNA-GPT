@@ -572,6 +572,7 @@ def main():
     manifest["sources"]["project_refseq_gene_map"] = {
         "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/blob/main/data/utr_gene_map.tsv",
         "version_label": "project main-branch map copied into the research branch run",
+        "retrieved_utc": datetime.now(timezone.utc).isoformat(),
         "file": "raw_sources/utr_gene_map.tsv",
         "size_bytes": int(gene_map_copy.stat().st_size),
         "sha256": sha256_file(gene_map_copy),
