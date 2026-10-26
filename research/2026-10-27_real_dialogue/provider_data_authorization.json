@@ -1,0 +1,9 @@
+{
+  "confirmed_at_utc": "2026-10-26T22:11:16.583932+00:00",
+  "allow_send_and_run": true,
+  "provider": "Doubao / Volcengine Ark",
+  "model": "doubao-seed-2-1-pro-260915",
+  "question": "是否允许把本次题目、siRNA候选序列、链角色假设、已有计算结果及回答所需的常氧/缺氧表达摘要，发送给你一直使用的豆包／火山方舟服务（模型 doubao-seed-2-1-pro-260915），完成这次27个任务位置的真实三组运行？不会上传完整RNA-seq原始文件；会按你已同意的方案产生模型用量。",
+  "answer": "允许发送并真实运行",
+  "full_raw_RNAseq_files_in_scope": false
+}

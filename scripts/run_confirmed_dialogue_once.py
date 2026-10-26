@@ -20,6 +20,9 @@ def main():
     args=p.parse_args();authorization=json.loads(args.authorization.read_text(encoding='utf-8'))
     if authorization.get('confirm_api_usage') is not True:raise ValueError('Explicit human consent missing')
     folder=args.authorization.parent;cfg=config();plan=prepare(cfg,args.mode)[0]
+    data_consent=json.loads((folder/'provider_data_authorization.json').read_text(encoding='utf-8'))
+    if data_consent.get('allow_send_and_run') is not True or data_consent.get('model')!=cfg.get('model'):
+        raise ValueError('Explicit provider/data consent missing or model differs')
     approved=authorization['plans'][args.mode]
     if approved!=plan:raise ValueError('Prepared plan differs from the recorded authorized plan; no requests sent')
     identity=authorization['run_ids'][args.mode]

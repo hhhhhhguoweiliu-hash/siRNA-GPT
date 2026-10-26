@@ -1,0 +1,8 @@
+{
+  "time_utc": "2026-10-26T22:09:11.073955+00:00",
+  "stage": "EXEC_PROCESS_NOT_STARTED",
+  "actual_model_requests": 0,
+  "blocked_by": "AUTOMATIC_APPROVAL_REVIEW",
+  "reason": "User authorized real running and fees, but the reviewer requires explicit authorization to send the concrete research inputs to the configured Doubao/Volcengine provider.",
+  "next_action": "Await explicit user answer to the provider-and-data authorization question; do not retry through a workaround."
+}
