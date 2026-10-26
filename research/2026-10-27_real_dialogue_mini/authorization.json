@@ -1,0 +1,320 @@
+{
+  "confirmed_at_utc": "2026-10-26T22:14:08.715078+00:00",
+  "confirm_api_usage": true,
+  "user_instruction": "用户明确要求真实运行三组、承担费用，并明确允许将本批题目/序列/计算结果/表达摘要发送给豆包服务；随后提供新mini模型接入示例和对应凭证。凭证不保存。",
+  "scope": "A real official connection/tool-call check followed by the same 9 seen development templates x 3 configurations x 1 execution = 27 planned units.",
+  "run_ids": {
+    "diagnostic": "mini_diag_20261027_061408",
+    "batch": "mini_real_20261027_061408"
+  },
+  "plans": {
+    "diagnostic": {
+      "protocol": "dialogue-v3",
+      "mode": "diagnostic",
+      "review_status": "SEEN_DEVELOPMENT_NOT_INDEPENDENT_TEST",
+      "case_ids": [
+        "W2b"
+      ],
+      "qa_excluded_before_run": [
+        "Q1",
+        "Q2"
+      ],
+      "planned_units": 1,
+      "planned_user_round_units": 1,
+      "technical_repeats": 1,
+      "seed": 20261027,
+      "schedule": [
+        {
+          "answer_id": "A001",
+          "case_id": "W2b",
+          "group": "llm",
+          "repeat": 1
+        }
+      ],
+      "common_cases_sha256": "a167c3b93d7e521fa5d3d9f2e8ecaa78b78af3d087a034e4e6cf4def2b2f969f",
+      "resources_sha256": "0c7088d0cb62ddd242720ac8b06cf1ce271877ea9f7ccd5caf8c30f0fa7d8308",
+      "fact_standards_sha256": "fad538a083fb7b25ba8e6a8acd3827ce43ad02982c9a8a05e190feed48fde2be",
+      "criteria_sha256": "46029f60bec52e0d7fd23e4b956363d9a046020b195b08e44dcc10f0e540c8be",
+      "model": "doubao-seed-2-0-mini-260428",
+      "provider": "doubao",
+      "api_mode": "responses",
+      "effective_settings": {
+        "max_output_tokens": 1800,
+        "answer_contract": "evaluation_contract.FINAL_ANSWER_STYLE / 20261022",
+        "rubric": "evaluation_rubric.json / 20261022_1310; seen development tasks",
+        "input_policy": "identical full raw candidate rows and task conditions; planner sees actual sequences",
+        "thinking": "disabled",
+        "request_timeout_seconds": 90,
+        "api_retries": 1,
+        "max_model_turns": 12,
+        "max_tool_calls": 18,
+        "case_timeout_seconds": 720,
+        "external_web_enabled": false,
+        "temperature_policy": "not explicitly set; provider default",
+        "response_policy": "provider incomplete remains a failure; never silently extend or retry for a better answer",
+        "budget_policy": "same per-request output cap for both model arms; agent can make multiple requests",
+        "round_timeout_seconds": 360,
+        "max_model_requests_per_round": 13,
+        "max_model_requests_per_case": 26,
+        "ordinary_model_requests_per_round": 1,
+        "failure_policy": "Stop remaining user rounds after execution/transport/planning/budget failure; retain NOT_EXECUTED records",
+        "timeout_enforcement": "Cooperative checks before/after calls; no claim of interrupting a blocking transport",
+        "physical_attempts_policy": "API retries belong to each logical request; real API path remains disabled"
+      },
+      "max_logical_model_requests": 1,
+      "max_http_attempts": 2,
+      "max_output_tokens_across_requests": 1800,
+      "max_output_token_parameter_sum_all_http_attempts": 3600,
+      "max_sequential_round_seconds": 360,
+      "currency_cost": null,
+      "input_token_budget": null,
+      "actual_usage": null,
+      "budget_note": "Upper bounds, not expected usage or a price quotation; output caps are per request, input varies.",
+      "group_differences": [
+        "ordinary model: no scientific tools or web",
+        "fixed workflow: common conditions select a prespecified path, no model",
+        "Agent: plans and may call the same tools over multiple requests"
+      ],
+      "stop_policy": "Stop the batch on account block, timeout or explicit user stop; other failed cases retained. First execution failure stops later rounds of that case.",
+      "formal_unseen_task_upload_supported": false,
+      "human_quality_scored": false,
+      "plan_sha256": "66a0e259e690d372f3ea1f32b2a0458e645b8192aea762f4bf97ae1100fde1d3"
+    },
+    "batch": {
+      "protocol": "dialogue-v3",
+      "mode": "batch",
+      "review_status": "SEEN_DEVELOPMENT_NOT_INDEPENDENT_TEST",
+      "case_ids": [
+        "W1",
+        "W2",
+        "W2b",
+        "W3",
+        "U1",
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "qa_excluded_before_run": [
+        "Q1",
+        "Q2"
+      ],
+      "planned_units": 27,
+      "planned_user_round_units": 33,
+      "technical_repeats": 1,
+      "seed": 20261027,
+      "schedule": [
+        {
+          "answer_id": "A001",
+          "case_id": "U1",
+          "group": "llm",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A002",
+          "case_id": "W3",
+          "group": "agent",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A003",
+          "case_id": "R4",
+          "group": "llm",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A004",
+          "case_id": "W1",
+          "group": "agent",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A005",
+          "case_id": "W3",
+          "group": "workflow",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A006",
+          "case_id": "W3",
+          "group": "llm",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A007",
+          "case_id": "W2",
+          "group": "agent",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A008",
+          "case_id": "R2",
+          "group": "llm",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A009",
+          "case_id": "R3",
+          "group": "workflow",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A010",
+          "case_id": "R2",
+          "group": "agent",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A011",
+          "case_id": "R4",
+          "group": "workflow",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A012",
+          "case_id": "R1",
+          "group": "workflow",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A013",
+          "case_id": "W2b",
+          "group": "agent",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A014",
+          "case_id": "U1",
+          "group": "agent",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A015",
+          "case_id": "R3",
+          "group": "llm",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A016",
+          "case_id": "R1",
+          "group": "llm",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A017",
+          "case_id": "R1",
+          "group": "agent",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A018",
+          "case_id": "W1",
+          "group": "llm",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A019",
+          "case_id": "W2b",
+          "group": "workflow",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A020",
+          "case_id": "W2",
+          "group": "llm",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A021",
+          "case_id": "U1",
+          "group": "workflow",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A022",
+          "case_id": "R3",
+          "group": "agent",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A023",
+          "case_id": "R2",
+          "group": "workflow",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A024",
+          "case_id": "W2b",
+          "group": "llm",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A025",
+          "case_id": "R4",
+          "group": "agent",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A026",
+          "case_id": "W1",
+          "group": "workflow",
+          "repeat": 1
+        },
+        {
+          "answer_id": "A027",
+          "case_id": "W2",
+          "group": "workflow",
+          "repeat": 1
+        }
+      ],
+      "common_cases_sha256": "3a7d238c17c0c69197a218ae81a734303eca27b6c876949f5a7bd7f90da231cb",
+      "resources_sha256": "0c7088d0cb62ddd242720ac8b06cf1ce271877ea9f7ccd5caf8c30f0fa7d8308",
+      "fact_standards_sha256": "fad538a083fb7b25ba8e6a8acd3827ce43ad02982c9a8a05e190feed48fde2be",
+      "criteria_sha256": "46029f60bec52e0d7fd23e4b956363d9a046020b195b08e44dcc10f0e540c8be",
+      "model": "doubao-seed-2-0-mini-260428",
+      "provider": "doubao",
+      "api_mode": "responses",
+      "effective_settings": {
+        "max_output_tokens": 1800,
+        "answer_contract": "evaluation_contract.FINAL_ANSWER_STYLE / 20261022",
+        "rubric": "evaluation_rubric.json / 20261022_1310; seen development tasks",
+        "input_policy": "identical full raw candidate rows and task conditions; planner sees actual sequences",
+        "thinking": "disabled",
+        "request_timeout_seconds": 90,
+        "api_retries": 1,
+        "max_model_turns": 12,
+        "max_tool_calls": 18,
+        "case_timeout_seconds": 720,
+        "external_web_enabled": false,
+        "temperature_policy": "not explicitly set; provider default",
+        "response_policy": "provider incomplete remains a failure; never silently extend or retry for a better answer",
+        "budget_policy": "same per-request output cap for both model arms; agent can make multiple requests",
+        "round_timeout_seconds": 360,
+        "max_model_requests_per_round": 13,
+        "max_model_requests_per_case": 26,
+        "ordinary_model_requests_per_round": 1,
+        "failure_policy": "Stop remaining user rounds after execution/transport/planning/budget failure; retain NOT_EXECUTED records",
+        "timeout_enforcement": "Cooperative checks before/after calls; no claim of interrupting a blocking transport",
+        "physical_attempts_policy": "API retries belong to each logical request; real API path remains disabled"
+      },
+      "max_logical_model_requests": 154,
+      "max_http_attempts": 308,
+      "max_output_tokens_across_requests": 277200,
+      "max_output_token_parameter_sum_all_http_attempts": 554400,
+      "max_sequential_round_seconds": 11880,
+      "currency_cost": null,
+      "input_token_budget": null,
+      "actual_usage": null,
+      "budget_note": "Upper bounds, not expected usage or a price quotation; output caps are per request, input varies.",
+      "group_differences": [
+        "ordinary model: no scientific tools or web",
+        "fixed workflow: common conditions select a prespecified path, no model",
+        "Agent: plans and may call the same tools over multiple requests"
+      ],
+      "stop_policy": "Stop the batch on account block, timeout or explicit user stop; other failed cases retained. First execution failure stops later rounds of that case.",
+      "formal_unseen_task_upload_supported": false,
+      "human_quality_scored": false,
+      "plan_sha256": "938dbd9f9b351bde0bbed8bae387f72363b5c823f0ff1bb9248df0a26e053f74"
+    }
+  }
+}

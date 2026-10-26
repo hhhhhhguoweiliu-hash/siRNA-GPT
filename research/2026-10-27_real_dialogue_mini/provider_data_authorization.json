@@ -1,0 +1,10 @@
+{
+  "confirmed_at_utc": "2026-10-26T22:14:08.843435+00:00",
+  "allow_send_and_run": true,
+  "provider": "Doubao / Volcengine Ark",
+  "model": "doubao-seed-2-0-mini-260428",
+  "data_scope": "本批题目、siRNA候选序列、链角色假设、已有计算结果及回答所需常氧/缺氧表达摘要；不发送完整RNA-seq原始文件",
+  "earlier_explicit_answer": "允许发送并真实运行",
+  "model_change_instruction": "我现在换模型了，调用的是最便宜的那个，下面是接入示例，你看一下",
+  "credential_storage": "Standard input to a single process only, not saved to files, Git or logs"
+}
