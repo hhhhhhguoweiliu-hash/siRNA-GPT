@@ -8,6 +8,7 @@ remain missing; this script does not impute them.
 from __future__ import annotations
 
 import hashlib
+import gzip
 import json
 import math
 import os
