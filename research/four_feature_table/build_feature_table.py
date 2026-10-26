@@ -14,6 +14,7 @@ import os
 import shutil
 import sys
 import time
+import zipfile
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
