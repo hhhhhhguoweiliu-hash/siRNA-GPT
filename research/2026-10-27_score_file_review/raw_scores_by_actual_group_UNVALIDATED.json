@@ -1,0 +1,835 @@
+{
+  "source_sha256": "d6916e564f85222c6b78928eb767e1582ea23bfd869301dd4a05e3830002ee8c",
+  "score_provenance": "UNVERIFIED; no named reviewer or number in workbook; no source answer provided",
+  "reviewed_run": "mini_real_20261027_061408",
+  "score_rows": 27,
+  "scores_present": 108,
+  "score_values_valid": true,
+  "all_ids_match_actual_results": true,
+  "duplicate_ids": false,
+  "rows": [
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "question_number": 1,
+      "display_answer": "甲",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 1,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 5,
+      "completion_label_original": "部分完成",
+      "completion_explicit_complete": false,
+      "original_excel_row": 5,
+      "is_human_review_verified": false,
+      "reason_original": "数值全对（分数1.12、位点3540、去重2839、可映射2836、1695/1595）；但证据无文件SHA256，缺坐标1439-1457、未映射3、未保留两行原文、未交付报告。"
+    },
+    {
+      "answer_id": "A018",
+      "case_id": "W1",
+      "group": "llm",
+      "question_number": 1,
+      "display_answer": "乙",
+      "scores": {
+        "factual_accuracy": 1,
+        "evidence_support": 1,
+        "task_completion": 0,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 4,
+      "completion_label_original": "未交付",
+      "completion_explicit_complete": false,
+      "original_excel_row": 6,
+      "is_human_review_verified": false,
+      "reason_original": "序列与假设复述正确、无编造，但坐标/分数/seed/表达全部“暂未生成”；诚实说明无工具与假设性质，边界处理好。"
+    },
+    {
+      "answer_id": "A026",
+      "case_id": "W1",
+      "group": "workflow",
+      "question_number": 1,
+      "display_answer": "丙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 2,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 8,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 7,
+      "is_human_review_verified": false,
+      "reason_original": "坐标、覆盖、原始精度分数、SHA256、全部计数与未映射齐全，限制声明系统完整。"
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "W2",
+      "group": "agent",
+      "question_number": 2,
+      "display_answer": "甲",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 7,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 8,
+      "is_human_review_verified": false,
+      "reason_original": "9条坐标、覆盖及23/19区分全部正确；证据为verify_target但无文件细节。"
+    },
+    {
+      "answer_id": "A020",
+      "case_id": "W2",
+      "group": "llm",
+      "question_number": 2,
+      "display_answer": "乙",
+      "scores": {
+        "factual_accuracy": 0,
+        "evidence_support": 0,
+        "task_completion": 1,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 2,
+      "completion_label_original": "未交付（坐标全错）",
+      "completion_explicit_complete": false,
+      "original_excel_row": 9,
+      "is_human_review_verified": false,
+      "reason_original": "严重错误：9条19nt坐标以23nt窗口起点错位（应后移2位未做），系统性全错，却以“实际匹配坐标”呈现。"
+    },
+    {
+      "answer_id": "A027",
+      "case_id": "W2",
+      "group": "workflow",
+      "question_number": 2,
+      "display_answer": "丙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 7,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 10,
+      "is_human_review_verified": false,
+      "reason_original": "9条坐标全部正确，明确“坐标来自verify_target、不用23nt坐标代替”，边界到位。"
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "question_number": 3,
+      "display_answer": "甲",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 2,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 8,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 11,
+      "is_human_review_verified": false,
+      "reason_original": "分数原始精度、SHA256、19nt核心与57nt上下文绑定、非敲低且不可换算完整；含模型序列纠错记录。"
+    },
+    {
+      "answer_id": "A019",
+      "case_id": "W2b",
+      "group": "workflow",
+      "question_number": 3,
+      "display_answer": "乙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 2,
+        "task_completion": 2,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 7,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 12,
+      "is_human_review_verified": false,
+      "reason_original": "分数、坐标、绑定、SHA256完整；但仅说“分数不是敲低率”，未直接回答能否换算。"
+    },
+    {
+      "answer_id": "A024",
+      "case_id": "W2b",
+      "group": "llm",
+      "question_number": 3,
+      "display_answer": "丙",
+      "scores": {
+        "factual_accuracy": 1,
+        "evidence_support": 1,
+        "task_completion": 0,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 3,
+      "completion_label_original": "未交付",
+      "completion_explicit_complete": false,
+      "original_excel_row": 13,
+      "is_human_review_verified": false,
+      "reason_original": "诚实报告可见输入中无分数、正确说明非敲低；核心数值未交付。"
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "question_number": 4,
+      "display_answer": "甲",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 1,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 5,
+      "completion_label_original": "部分完成",
+      "completion_explicit_complete": false,
+      "original_excel_row": 14,
+      "is_human_review_verified": false,
+      "reason_original": "分数高低（3535>3499）、seed/表达、IRGM警告与建议均有；但缺近匹配窗口、查询序列及坐标1724-1742。"
+    },
+    {
+      "answer_id": "A005",
+      "case_id": "W3",
+      "group": "workflow",
+      "question_number": 4,
+      "display_answer": "乙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 2,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 8,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 15,
+      "is_human_review_verified": false,
+      "reason_original": "分数原始精度、SHA256、近匹配全要素（窗口/序列/坐标/IRGM/1错配）、并列警告与规则名单完整。"
+    },
+    {
+      "answer_id": "A006",
+      "case_id": "W3",
+      "group": "llm",
+      "question_number": 4,
+      "display_answer": "丙",
+      "scores": {
+        "factual_accuracy": 0,
+        "evidence_support": 0,
+        "task_completion": 0,
+        "boundary_handling": 0
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 0,
+      "completion_label_original": "未交付（严重误导）",
+      "completion_explicit_complete": false,
+      "original_excel_row": 16,
+      "is_human_review_verified": false,
+      "reason_original": "方向性错误：把“需人工核查的近匹配警告”说成“独立审核PASS、无脱靶证据”，原件无PASS；且无分数比较。"
+    },
+    {
+      "answer_id": "A001",
+      "case_id": "U1",
+      "group": "llm",
+      "question_number": 5,
+      "display_answer": "甲",
+      "scores": {
+        "factual_accuracy": 1,
+        "evidence_support": 1,
+        "task_completion": 0,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 3,
+      "completion_label_original": "未交付",
+      "completion_explicit_complete": false,
+      "original_excel_row": 17,
+      "is_human_review_verified": false,
+      "reason_original": "首轮仅给23nt窗口坐标、缺19nt实际坐标；次轮仅说非敲低、缺分数值；范围控制与诚实性尚可。"
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "question_number": 5,
+      "display_answer": "乙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 2,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 6,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 18,
+      "is_human_review_verified": false,
+      "reason_original": "首轮坐标3501-3519正确、次轮分数及复用/新增清楚；证据有“X月X日”占位符、无文件细节。"
+    },
+    {
+      "answer_id": "A021",
+      "case_id": "U1",
+      "group": "workflow",
+      "question_number": 5,
+      "display_answer": "丙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 2,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 8,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 19,
+      "is_human_review_verified": false,
+      "reason_original": "两轮坐标、原始精度分数、SHA256完整，复用/重新核对/新增标注最清晰。"
+    },
+    {
+      "answer_id": "A012",
+      "case_id": "R1",
+      "group": "workflow",
+      "question_number": 6,
+      "display_answer": "甲",
+      "scores": {
+        "factual_accuracy": 1,
+        "evidence_support": 2,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 7,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 20,
+      "is_human_review_verified": false,
+      "reason_original": "首轮判定正确但第二行抄错（多1个U）；次轮坐标、覆盖、原始精度分数、SHA256完整。"
+    },
+    {
+      "answer_id": "A016",
+      "case_id": "R1",
+      "group": "llm",
+      "question_number": 6,
+      "display_answer": "乙",
+      "scores": {
+        "factual_accuracy": 1,
+        "evidence_support": 1,
+        "task_completion": 1,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 4,
+      "completion_label_original": "部分完成",
+      "completion_explicit_complete": false,
+      "original_excel_row": 21,
+      "is_human_review_verified": false,
+      "reason_original": "首轮已知/未知清楚；次轮未交付坐标与分数值（称暂无可更新）。"
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "question_number": 6,
+      "display_answer": "丙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 2,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 6,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 22,
+      "is_human_review_verified": false,
+      "reason_original": "首轮未确认项清楚、次轮坐标覆盖（18/20）与分数交付；证据无文件细节。"
+    },
+    {
+      "answer_id": "A008",
+      "case_id": "R2",
+      "group": "llm",
+      "question_number": 7,
+      "display_answer": "甲",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 7,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 23,
+      "is_human_review_verified": false,
+      "reason_original": "旧分数不可引用（首碱基U→A），分清可用证据与需重核项，未误判生物学无效，遵守不启动新评分。"
+    },
+    {
+      "answer_id": "A010",
+      "case_id": "R2",
+      "group": "agent",
+      "question_number": 7,
+      "display_answer": "乙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 1,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 5,
+      "completion_label_original": "部分完成",
+      "completion_explicit_complete": false,
+      "original_excel_row": 24,
+      "is_human_review_verified": false,
+      "reason_original": "结论正确、可复用与需重核项基本列出；但结尾反问“是否启动”，与“不启动”指令不符。"
+    },
+    {
+      "answer_id": "A023",
+      "case_id": "R2",
+      "group": "workflow",
+      "question_number": 7,
+      "display_answer": "丙",
+      "scores": {
+        "factual_accuracy": 1,
+        "evidence_support": 1,
+        "task_completion": 0,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 3,
+      "completion_label_original": "未交付",
+      "completion_explicit_complete": false,
+      "original_excel_row": 25,
+      "is_human_review_verified": false,
+      "reason_original": "检测到新19nt与旧21nt字段矛盾并停止（合理）；但未答旧分数能否引用及可用/重核项。"
+    },
+    {
+      "answer_id": "A009",
+      "case_id": "R3",
+      "group": "workflow",
+      "question_number": 8,
+      "display_answer": "甲",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 7,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 26,
+      "is_human_review_verified": false,
+      "reason_original": "实际坐标3501-3519、越界核对（false）、保留实际匹配完整，未因坐标错误否定siRNA。"
+    },
+    {
+      "answer_id": "A015",
+      "case_id": "R3",
+      "group": "llm",
+      "question_number": 8,
+      "display_answer": "乙",
+      "scores": {
+        "factual_accuracy": 1,
+        "evidence_support": 1,
+        "task_completion": 1,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 4,
+      "completion_label_original": "部分完成",
+      "completion_explicit_complete": false,
+      "original_excel_row": 27,
+      "is_human_review_verified": false,
+      "reason_original": "23/21/19字段与声明整理正确；但未做一致性判断、未给实际坐标。"
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "question_number": 8,
+      "display_answer": "丙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 1,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 7,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 28,
+      "is_human_review_verified": false,
+      "reason_original": "参考长度3609、3610越界、实际坐标3501-3519、仍匹配20条转录本，保留靶点。"
+    },
+    {
+      "answer_id": "A003",
+      "case_id": "R4",
+      "group": "llm",
+      "question_number": 9,
+      "display_answer": "甲",
+      "scores": {
+        "factual_accuracy": 1,
+        "evidence_support": 1,
+        "task_completion": 1,
+        "boundary_handling": 1
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 4,
+      "completion_label_original": "部分完成",
+      "completion_explicit_complete": false,
+      "original_excel_row": 29,
+      "is_human_review_verified": false,
+      "reason_original": "正确拒绝回退表达、不编造TPM；但分数与seed本可完成而未完成，未区分缺表与无工具。"
+    },
+    {
+      "answer_id": "A011",
+      "case_id": "R4",
+      "group": "workflow",
+      "question_number": 9,
+      "display_answer": "乙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 2,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 8,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 30,
+      "is_human_review_verified": false,
+      "reason_original": "完成序列/参考/分数/seed（坐标、SHA256、3540位点），表达不填零，缺项说明清楚。"
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "question_number": 9,
+      "display_answer": "丙",
+      "scores": {
+        "factual_accuracy": 2,
+        "evidence_support": 2,
+        "task_completion": 2,
+        "boundary_handling": 2
+      },
+      "sum_of_four_as_in_supplied_workbook_NOT_PRIMARY_METRIC": 8,
+      "completion_label_original": "完成",
+      "completion_explicit_complete": true,
+      "original_excel_row": 31,
+      "is_human_review_verified": false,
+      "reason_original": "与A011一致，正确处理保留局部证据+禁止回退+不填零+说明缺项。"
+    }
+  ],
+  "category_descriptive_summary_NOT_VALIDATED_HUMAN_RESULTS": {
+    "work": {
+      "llm": {
+        "case_count": 4,
+        "means": {
+          "factual_accuracy": 0.5,
+          "evidence_support": 0.5,
+          "task_completion": 0.25,
+          "boundary_handling": 1.0
+        },
+        "raw_labels_complete_n": 0,
+        "raw_labels_denominator": 4,
+        "raw_labels_complete_pct": 0.0
+      },
+      "workflow": {
+        "case_count": 4,
+        "means": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 1.75,
+          "task_completion": 2.0,
+          "boundary_handling": 1.75
+        },
+        "raw_labels_complete_n": 4,
+        "raw_labels_denominator": 4,
+        "raw_labels_complete_pct": 100.0
+      },
+      "agent": {
+        "case_count": 4,
+        "means": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 1.25,
+          "task_completion": 1.5,
+          "boundary_handling": 1.5
+        },
+        "raw_labels_complete_n": 2,
+        "raw_labels_denominator": 4,
+        "raw_labels_complete_pct": 50.0
+      }
+    },
+    "change_request": {
+      "llm": {
+        "case_count": 1,
+        "means": {
+          "factual_accuracy": 1.0,
+          "evidence_support": 1.0,
+          "task_completion": 0.0,
+          "boundary_handling": 1.0
+        },
+        "raw_labels_complete_n": 0,
+        "raw_labels_denominator": 1,
+        "raw_labels_complete_pct": 0.0
+      },
+      "workflow": {
+        "case_count": 1,
+        "means": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 2.0,
+          "task_completion": 2.0,
+          "boundary_handling": 2.0
+        },
+        "raw_labels_complete_n": 1,
+        "raw_labels_denominator": 1,
+        "raw_labels_complete_pct": 100.0
+      },
+      "agent": {
+        "case_count": 1,
+        "means": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 1.0,
+          "task_completion": 2.0,
+          "boundary_handling": 1.0
+        },
+        "raw_labels_complete_n": 1,
+        "raw_labels_denominator": 1,
+        "raw_labels_complete_pct": 100.0
+      }
+    },
+    "reliability": {
+      "llm": {
+        "case_count": 4,
+        "means": {
+          "factual_accuracy": 1.25,
+          "evidence_support": 1.0,
+          "task_completion": 1.25,
+          "boundary_handling": 1.25
+        },
+        "raw_labels_complete_n": 1,
+        "raw_labels_denominator": 4,
+        "raw_labels_complete_pct": 25.0
+      },
+      "workflow": {
+        "case_count": 4,
+        "means": {
+          "factual_accuracy": 1.5,
+          "evidence_support": 1.5,
+          "task_completion": 1.5,
+          "boundary_handling": 1.75
+        },
+        "raw_labels_complete_n": 3,
+        "raw_labels_denominator": 4,
+        "raw_labels_complete_pct": 75.0
+      },
+      "agent": {
+        "case_count": 4,
+        "means": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 1.25,
+          "task_completion": 1.75,
+          "boundary_handling": 1.5
+        },
+        "raw_labels_complete_n": 3,
+        "raw_labels_denominator": 4,
+        "raw_labels_complete_pct": 75.0
+      }
+    }
+  },
+  "overall_mixed_category_arithmetic_audit_NOT_PRIMARY_METRIC": {
+    "llm": {
+      "means": {
+        "factual_accuracy": 0.8888888888888888,
+        "evidence_support": 0.7777777777777778,
+        "task_completion": 0.6666666666666666,
+        "boundary_handling": 1.1111111111111112
+      },
+      "sum_as_supplied": 31
+    },
+    "workflow": {
+      "means": {
+        "factual_accuracy": 1.7777777777777777,
+        "evidence_support": 1.6666666666666667,
+        "task_completion": 1.7777777777777777,
+        "boundary_handling": 1.7777777777777777
+      },
+      "sum_as_supplied": 63
+    },
+    "agent": {
+      "means": {
+        "factual_accuracy": 2,
+        "evidence_support": 1.2222222222222223,
+        "task_completion": 1.6666666666666667,
+        "boundary_handling": 1.4444444444444444
+      },
+      "sum_as_supplied": 57
+    }
+  },
+  "major_missing_fields": [
+    "reviewer identity/number/provenance",
+    "177 pre-specified fact judgments",
+    "unambiguous serious-error flags",
+    "adjudication of discrepancies"
+  ],
+  "serious_error_sheet": [
+    [
+      {
+        "cell": "A1",
+        "value": "会推翻完成结论的严重错误",
+        "type": "s"
+      }
+    ],
+    [
+      {
+        "cell": "A3",
+        "value": "位置",
+        "type": "s"
+      },
+      {
+        "cell": "B3",
+        "value": "严重错误",
+        "type": "s"
+      },
+      {
+        "cell": "C3",
+        "value": "影响",
+        "type": "s"
+      }
+    ],
+    [
+      {
+        "cell": "A4",
+        "value": "题2 乙 A020",
+        "type": "s"
+      },
+      {
+        "cell": "B4",
+        "value": "9条19nt坐标全部以23nt窗口起点错位（应后移2位未做）",
+        "type": "s"
+      },
+      {
+        "cell": "C4",
+        "value": "核心交付（坐标）错误，不能据此下单或写论文",
+        "type": "s"
+      }
+    ],
+    [
+      {
+        "cell": "A5",
+        "value": "题4 丙 A006",
+        "type": "s"
+      },
+      {
+        "cell": "B5",
+        "value": "把近匹配警告伪造成“独立审核PASS、无脱靶证据”",
+        "type": "s"
+      },
+      {
+        "cell": "C5",
+        "value": "方向性误导，可能让人忽视IRGM近匹配风险",
+        "type": "s"
+      }
+    ],
+    [
+      {
+        "cell": "A6",
+        "value": "题6 甲 A012",
+        "type": "s"
+      },
+      {
+        "cell": "B6",
+        "value": "首轮第二行序列抄错（多1个U）",
+        "type": "s"
+      },
+      {
+        "cell": "C6",
+        "value": "不影响“链角色未确认”结论，属事实瑕疵，次轮已用正确核心",
+        "type": "s"
+      }
+    ],
+    [
+      {
+        "cell": "A8",
+        "value": "说明：题1乙、题3丙、题5甲、题7丙等虽“未交付”，但源于无工具且诚实声明、未编造，不构成事实错误，故边界处理维度保留相应得分。",
+        "type": "s"
+      }
+    ]
+  ],
+  "formal_completion_rates": null,
+  "formal_human_quality_scores": null,
+  "formal_serious_error_rates": null,
+  "differences_by_category_RAW_UNVALIDATED": {
+    "work": {
+      "agent_minus_llm": {
+        "factual_accuracy": 1.5,
+        "evidence_support": 0.75,
+        "task_completion": 1.25,
+        "boundary_handling": 0.5
+      },
+      "workflow_minus_llm": {
+        "factual_accuracy": 1.5,
+        "evidence_support": 1.25,
+        "task_completion": 1.75,
+        "boundary_handling": 0.75
+      },
+      "agent_minus_workflow": {
+        "factual_accuracy": 0.0,
+        "evidence_support": -0.5,
+        "task_completion": -0.5,
+        "boundary_handling": -0.25
+      }
+    },
+    "change_request": {
+      "agent_minus_llm": {
+        "factual_accuracy": 1.0,
+        "evidence_support": 0.0,
+        "task_completion": 2.0,
+        "boundary_handling": 0.0
+      },
+      "workflow_minus_llm": {
+        "factual_accuracy": 1.0,
+        "evidence_support": 1.0,
+        "task_completion": 2.0,
+        "boundary_handling": 1.0
+      },
+      "agent_minus_workflow": {
+        "factual_accuracy": 0.0,
+        "evidence_support": -1.0,
+        "task_completion": 0.0,
+        "boundary_handling": -1.0
+      }
+    },
+    "reliability": {
+      "agent_minus_llm": {
+        "factual_accuracy": 0.75,
+        "evidence_support": 0.25,
+        "task_completion": 0.5,
+        "boundary_handling": 0.25
+      },
+      "workflow_minus_llm": {
+        "factual_accuracy": 0.25,
+        "evidence_support": 0.5,
+        "task_completion": 0.25,
+        "boundary_handling": 0.5
+      },
+      "agent_minus_workflow": {
+        "factual_accuracy": 0.5,
+        "evidence_support": -0.25,
+        "task_completion": 0.25,
+        "boundary_handling": -0.25
+      }
+    }
+  },
+  "cross_sheet_arithmetic_discrepancies": [
+    {
+      "answer_id": "A003",
+      "question": 9,
+      "display": "甲",
+      "sum_in_first_sheet": 4,
+      "number_in_comparison_sheet": 3
+    }
+  ],
+  "evaluation_unit_note": "Known development cases. work=4, change_request=1, reliability=4. Do not pool categories or treat repeats/variants as independent unseen tests."
+}

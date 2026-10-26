@@ -1,0 +1,43 @@
+{
+  "cross_sheet_mismatches": [
+    {
+      "answer_id": "A003",
+      "question": 9,
+      "display": "甲",
+      "sum_in_first_sheet": 4,
+      "number_in_comparison_sheet": 3
+    }
+  ],
+  "A012_raw_string": {
+    "A012_raw_second_line": "UUUCUUGUCUUGCUCUAUCTT",
+    "claimed_length": 21,
+    "input_original_second_line": "UUUCUUGUCUUGCUCUAUCTT",
+    "equal": true
+  },
+  "A012_pdf_pages": [
+    {
+      "page": 31,
+      "text": "siRNA-GPT 三种方式真实问答  尚无人工评分\n第31页\n回答甲 登记号A012\n以下是当时实际交付的全文，仅调整排版，不替原答纠错。\n第1轮实际交付\n判定：只有订购原文，尚无供应商已确认的链角色。\n关键结果：GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）\nUUUCUUGUCUUGCUCUAUCTT\n证据：本轮原始订购两行与修饰注释；没有执行科学核查。\n限制或下一步：可在明确计算链假设后继续；不自动删TT/N3，不据此生成可下单双链。\n本轮实际取得的工具步骤：没有成功完成的科学工具步骤。\n第2轮实际交付\n判定：所要求的参考及模型分数核查完成。\n关键结果：\n候选\n参考\n19nt核心起止(1-based)\n参考转录本覆盖\nUSER_PURCHASED_siVEG\nF\nNM_003376.6\n1439–1457\n18/20\n候选\n模型分数(scaled，原\n始精度)\nraw_class1\n本行来源状态\n本行实际分数来源\nUSER_PURCHASED_\nsiVEGF\n1.121934400320053\n0.836640119552612\n3\nIMPORTED_VERIFIE\nD_LOCAL\ndata/purchased_sive\ngf_20261024_v1/ver\nified_local_result.jso\nn；SHA256=0f8721\nbd09ef22de9e4b7d\nd50220d12df7db39\n9be26594a9c9ae001\nba6822f19；绑定清\n单=data/purchased_\nsivegf_20261024_v1\n/manifest.json\n证据：本轮实际完成：inspect_candidates、verify_target、score_candidates。核心坐标来自\nverify_target，不用23nt设计窗口坐标代替。每条分数的实际文件、SHA256及绑定版本见上表；不以旧资\n源指纹代替其他候选来源。\n限制或下一步：未做seed分析；未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异\n构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连\n接实物。\n轮次记录：首轮原文保留；本轮重新核对（不复用工具缓存）：；本轮新增：inspect_candidates、\nverify_target、score_candidates\n本轮实际取得的工具步骤：候选与链假设检查；固定参考匹配核对；读取序列绑定的预测分数。\n"
+    }
+  ],
+  "A004_actual_report_attachment_paths": [
+    "answers/A004/attachments/round_1/runs/20261027_061658_52d7fd/report.html"
+  ],
+  "A006_original_near_match_record": {
+    "candidate_id": "VEGFA_SD_3535",
+    "strand_role": "guide",
+    "query_definition": "AUTHOR_G2_G20_19NT",
+    "guide_window_5to3": "AUCUGUAUUUCUUUGUCGU",
+    "reverse_complement_target_pattern_DNA_5to3": "ACGACAAAGAAATACAGAT",
+    "reference_transcript": "NR_170598.1",
+    "mapped_gene": "IRGM",
+    "reference_start_1based": "1724",
+    "reference_end_1based": "1742",
+    "reference_subsequence_DNA_5to3": "AAGACAAAGAAATACAGAT",
+    "mismatch_positions_in_target_pattern_1based": "2",
+    "actual_mismatches": "1",
+    "independent_check": "PASS",
+    "interpretation": "SEQUENCE_REVIEW_FLAG_NOT_DEMONSTRATED_OFF_TARGET"
+  },
+  "human_scores_changed_by_this_review": false
+}
