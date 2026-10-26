@@ -1,0 +1,75 @@
+{
+  "kind": "TASK_BRANCH_UPLOAD_NOT_MERGE_DEPLOYMENT_OR_MODEL_RESULTS",
+  "payload_commit": "c4b2e2619388b94172f7877e3d8aaa2ca96f4bcd",
+  "review_received_commit": "f665696dd844a97d21270198f12f5bf234710f90",
+  "branch": "codex/20261020-evidence-pilot",
+  "verified_utc": "2026-10-26 18:25:07 UTC",
+  "remote_ls_remote": {
+    "task_branch": "c4b2e2619388b94172f7877e3d8aaa2ca96f4bcd",
+    "main": "2623c8601bd4b19b472fafc520b95c0cfd0a0fdb"
+  },
+  "github_connector_file_readback": {
+    "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/blob/c4b2e2619388b94172f7877e3d8aaa2ca96f4bcd/research/2026-10-27_evaluation_fixes_v2/package_checks.json",
+    "modified_date": "2026-10-26T18:24:42Z",
+    "content": {
+      "review_commit": "f665696dd844a97d21270198f12f5bf234710f90",
+      "archives": [
+        {
+          "path": "package/runtime.zip",
+          "bytes": 15065,
+          "sha256": "fc4946de60b0f7c4a3a34d3accb4a9f987fff87a61f797f231e53068122b77ff",
+          "entries": 4,
+          "crc": "PASS"
+        },
+        {
+          "path": "package/tool_resources.zip",
+          "bytes": 2382696,
+          "sha256": "8b925ede8c213a601a455232bfd29079ca64a3676cfbc1fddfa0d66ca310d627",
+          "entries": 31,
+          "crc": "PASS"
+        },
+        {
+          "path": "package/review_only.zip",
+          "bytes": 57332,
+          "sha256": "4239f89bbfaaf5f7861a979f2f1ba082697b49708308ba0a3fff3170af1134b0",
+          "entries": 16,
+          "crc": "PASS"
+        }
+      ],
+      "old_protected_paths": [
+        "data",
+        "references",
+        "evaluation_cases.example.json",
+        "evaluation_rubric.json",
+        "research/2026-10-27_evaluation_review_response",
+        "research/2026-10-22_fairness",
+        "research/2026-10-24_candidate_v2",
+        "research/2026-10-24_nearfull_complete"
+      ],
+      "old_protected_paths_changed": [],
+      "old_error_copies_byte_identical": true,
+      "test_count": 204,
+      "frontend_checks": 3,
+      "real_model_requests": 0,
+      "heavy_scientific_runs": 0,
+      "human_scores_filled": 0,
+      "deployment_started": false,
+      "runtime_answer_truth_separate": true
+    }
+  },
+  "merged_into_main": false,
+  "deployment_started": false,
+  "drive_upload": false,
+  "drive_note": "All payload files fit the existing private GitHub repository; no new Drive upload claimed.",
+  "real_model_requests": 0,
+  "heavy_scientific_runs": 0,
+  "human_scientific_scores_filled": 0,
+  "independent_human_scoring_or_scientific_acceptance": false,
+  "remaining": [
+    "Q1/Q2 equal retrieval",
+    "Real model/website usage-confirmation integration for the new dialogue pack",
+    "Independently authored or reviewed unseen tasks and fact standards",
+    "Real anonymized answers and two human reviewers"
+  ],
+  "receipt_scope": "This receipt records the already uploaded payload commit; a later receipt-only commit may advance the same task branch."
+}
