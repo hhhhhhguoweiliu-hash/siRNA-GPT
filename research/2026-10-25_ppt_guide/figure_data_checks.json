@@ -1,0 +1,37 @@
+{
+  "base_main": "7de40bd5e03c313d3cc387cbfdbb417e3646c439",
+  "source_case": "20261024_121627_1e50c9",
+  "source_case_code": "03092ef5fbc2af289aaa2b7bc8d57315c050964f",
+  "model_requests": 8,
+  "tool_calls": 6,
+  "model_tokens": 39048,
+  "historical_9_subset": 9,
+  "reporting_designs": 65,
+  "purchased_entries": 1,
+  "guide_seed_non_target_genes": 2839,
+  "B02_code": "179a7af6bf74620c31b23bbd5d7bfccaa1303ba0",
+  "B02_library": "b4d516450903cd7df6087b965f28225ee1a411689824f2b4e94301744aaf44c3",
+  "B02_all_six_excerpts_match_request": true,
+  "full_nearfull_queries": 264,
+  "design_hits_by_query": [
+    10,
+    7,
+    10,
+    9
+  ],
+  "union_design_hits_0or1mm": 23,
+  "purchased_cumulative_genes_by_threshold": [
+    96.703964,
+    145.434845,
+    78.31118,
+    89.110283
+  ],
+  "baseline_means": {
+    "Normoxia": 20.09929925,
+    "Hypoxia": 102.390068
+  },
+  "baseline_mean_ratio": 5.0942108342409,
+  "new_model_calls": 0,
+  "new_scientific_tool_runs": 0,
+  "original_files_modified": false
+}

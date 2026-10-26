@@ -1,0 +1,164 @@
+[
+  {
+    "text": "An answer supported by retrieved evidence",
+    "x": 50,
+    "baseline_y": 57,
+    "width": 642.59912109375,
+    "font_size": 31,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "B02 saved records | 1 model call | 6 retrieved excerpts | Translated question and answer excerpts",
+    "x": 50,
+    "baseline_y": 92,
+    "width": 734.22900390625,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Does a score above 1 mean more than 100% knockdown?",
+    "x": 50,
+    "baseline_y": 167,
+    "width": 796.1689453125,
+    "font_size": 29,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "a  Evidence actually passed to the model",
+    "x": 50,
+    "baseline_y": 243,
+    "width": 427.92578125,
+    "font_size": 22,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "[S3] OligoFormer article",
+    "x": 50,
+    "baseline_y": 303,
+    "width": 239.22363281250003,
+    "font_size": 21,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "\"prediction score for each siRNA\"",
+    "x": 50,
+    "baseline_y": 344,
+    "width": 369.287109375,
+    "font_size": 25,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "DOI: 10.1093/bioinformatics/btae577",
+    "x": 50,
+    "baseline_y": 379,
+    "width": 276.88916015625,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "[S2, S5] Official inference source",
+    "x": 50,
+    "baseline_y": 447,
+    "width": 327.95068359375,
+    "font_size": 21,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Y_PRED = [i*1.341 for i in Y_PRED]",
+    "x": 50,
+    "baseline_y": 490,
+    "width": 386.1796875,
+    "font_size": 24,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "scripts/infer.py @ e2f53ad63387",
+    "x": 50,
+    "baseline_y": 525,
+    "width": 245.01416015625003,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "b  Saved answer",
+    "x": 820,
+    "baseline_y": 243,
+    "width": 172.412109375,
+    "font_size": 22,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "No.",
+    "x": 820,
+    "baseline_y": 323,
+    "width": 90.20703125,
+    "font_size": 56,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Prediction score",
+    "x": 820,
+    "baseline_y": 382,
+    "width": 211.5703125,
+    "font_size": 27,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "is not measured",
+    "x": 820,
+    "baseline_y": 423,
+    "width": 192.09814453125,
+    "font_size": 27,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "knockdown. [S1, S3]",
+    "x": 820,
+    "baseline_y": 464,
+    "width": 246.1376953125,
+    "font_size": 27,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Scaled by 1.341. [S2, S5]",
+    "x": 820,
+    "baseline_y": 518,
+    "width": 225.703125,
+    "font_size": 20,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "English translations are labeled; source quotations are retained. This is not a webpage screenshot.",
+    "x": 50,
+    "baseline_y": 665,
+    "width": 742.77880859375,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "S1 is a project setting. This single question does not establish overall accuracy or Agent superiority.",
+    "x": 50,
+    "baseline_y": 695,
+    "width": 704.3671875,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  }
+]

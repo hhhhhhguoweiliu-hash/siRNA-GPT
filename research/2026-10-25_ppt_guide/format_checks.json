@@ -1,0 +1,78 @@
+{
+  "new_figures": [
+    {
+      "name": "01_agent_case_compact",
+      "words_approximately": 130,
+      "embedded_fonts_used": [
+        "/AAAAAA+Arial-BoldMT",
+        "/AAAAAA+ArialMT"
+      ],
+      "page": [
+        1280,
+        720
+      ],
+      "all_labels_in_PDF": true
+    },
+    {
+      "name": "02_literature_evidence_compact",
+      "words_approximately": 112,
+      "embedded_fonts_used": [
+        "/AAAAAA+Arial-BoldMT",
+        "/AAAAAA+ArialMT"
+      ],
+      "page": [
+        1280,
+        720
+      ],
+      "all_labels_in_PDF": true
+    },
+    {
+      "name": "03_candidate_results",
+      "words_approximately": 118,
+      "embedded_fonts_used": [
+        "/AAAAAA+Arial-BoldMT",
+        "/AAAAAA+ArialMT"
+      ],
+      "page": [
+        1280,
+        720
+      ],
+      "all_labels_in_PDF": true
+    },
+    {
+      "name": "04_nearfull_results",
+      "words_approximately": 134,
+      "embedded_fonts_used": [
+        "/AAAAAA+Arial-BoldMT",
+        "/AAAAAA+ArialMT"
+      ],
+      "page": [
+        1280,
+        720
+      ],
+      "all_labels_in_PDF": true
+    },
+    {
+      "name": "05_vegfa_baseline",
+      "words_approximately": 82,
+      "embedded_fonts_used": [
+        "/AAAAAA+Arial-BoldMT",
+        "/AAAAAA+ArialMT"
+      ],
+      "page": [
+        1280,
+        720
+      ],
+      "all_labels_in_PDF": true
+    }
+  ],
+  "guide_pages": 12,
+  "guide_fonts_embedded": [
+    "/AAAAAA+Arial-BoldMT",
+    "/AAAAAA+ArialMT",
+    "/AAAAAA+MicrosoftYaHei-0",
+    "/AAAAAB+MicrosoftYaHei-0"
+  ],
+  "chinese_text_no_replacement_characters": true,
+  "visual_inspection": "Completed: rendered 12-page contact sheet and all five core images inspected; large page 4 and 12 previews checked; corrected panel-3 legend and non-target gene label; Chinese punctuation wrapping corrected."
+}

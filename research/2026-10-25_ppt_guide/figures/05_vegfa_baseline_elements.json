@@ -1,0 +1,173 @@
+[
+  {
+    "text": "VEGFA expression in untreated ARPE-19 dishes",
+    "x": 50,
+    "baseline_y": 57,
+    "width": 711.47119140625,
+    "font_size": 31,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Same culture batch | Four dishes per condition | Hypoxia: 1% O2 for 24 h | No siRNA or transfection reagent",
+    "x": 50,
+    "baseline_y": 92,
+    "width": 813.5927734375001,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "0",
+    "x": 112.65771484375,
+    "baseline_y": 536.0,
+    "width": 8.34228515625,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "40",
+    "x": 104.3154296875,
+    "baseline_y": 453.5,
+    "width": 16.6845703125,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "80",
+    "x": 104.3154296875,
+    "baseline_y": 371.0,
+    "width": 16.6845703125,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "120",
+    "x": 95.97314453125,
+    "baseline_y": 288.5,
+    "width": 25.02685546875,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "160",
+    "x": 95.97314453125,
+    "baseline_y": 206.0,
+    "width": 25.02685546875,
+    "font_size": 15,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "",
+    "x": 445.0,
+    "baseline_y": 590,
+    "width": 0.0,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "VEGFA expression (TPM)",
+    "x": 130,
+    "baseline_y": 181,
+    "width": 196.48779296875,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Normoxia",
+    "x": 274.65234375,
+    "baseline_y": 573,
+    "width": 110.6953125,
+    "font_size": 24,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Mean 20.10 TPM",
+    "x": 257.131103515625,
+    "baseline_y": 606,
+    "width": 145.73779296875,
+    "font_size": 19,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Hypoxia",
+    "x": 593.318359375,
+    "baseline_y": 573,
+    "width": 93.36328125,
+    "font_size": 24,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Mean 102.39 TPM",
+    "x": 561.84765625,
+    "baseline_y": 606,
+    "width": 156.3046875,
+    "font_size": 19,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "5.09x",
+    "x": 895,
+    "baseline_y": 296,
+    "width": 175.17089843750003,
+    "font_size": 70,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "ratio of group means",
+    "x": 895,
+    "baseline_y": 346,
+    "width": 201.78125,
+    "font_size": 22,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Descriptive baseline",
+    "x": 895,
+    "baseline_y": 420,
+    "width": 222.44189453125,
+    "font_size": 23,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "for this culture batch.",
+    "x": 895,
+    "baseline_y": 458,
+    "width": 213.4912109375,
+    "font_size": 23,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Dots are the eight actual dish-level TPM values; horizontal lines show group means.",
+    "x": 50,
+    "baseline_y": 665,
+    "width": 631.2080078125,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "This is expression context, not siRNA knockdown, four independent culture rounds, or a treatment effect.",
+    "x": 50,
+    "baseline_y": 695,
+    "width": 740.828125,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  }
+]

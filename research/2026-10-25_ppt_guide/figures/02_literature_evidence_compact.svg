@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720"><rect width="1280" height="720" fill="white"/>
+<text x="50.000" y="57.000" font-family="Arial" font-size="31" font-weight="700" fill="#173041">An answer supported by retrieved evidence</text>
+<text x="50.000" y="92.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">B02 saved records | 1 model call | 6 retrieved excerpts | Translated question and answer excerpts</text>
+<line x1="50" y1="111" x2="1230" y2="111" stroke="#DCE4E8" stroke-width="1"/>
+<text x="50.000" y="167.000" font-family="Arial" font-size="29" font-weight="700" fill="#173041">Does a score above 1 mean more than 100% knockdown?</text>
+<text x="50.000" y="243.000" font-family="Arial" font-size="22" font-weight="700" fill="#244F73">a  Evidence actually passed to the model</text>
+<text x="50.000" y="303.000" font-family="Arial" font-size="21" font-weight="700" fill="#173041">[S3] OligoFormer article</text>
+<text x="50.000" y="344.000" font-family="Arial" font-size="25" font-weight="400" fill="#317C79">&quot;prediction score for each siRNA&quot;</text>
+<text x="50.000" y="379.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">DOI: 10.1093/bioinformatics/btae577</text>
+<text x="50.000" y="447.000" font-family="Arial" font-size="21" font-weight="700" fill="#173041">[S2, S5] Official inference source</text>
+<text x="50.000" y="490.000" font-family="Arial" font-size="24" font-weight="400" fill="#317C79">Y_PRED = [i*1.341 for i in Y_PRED]</text>
+<text x="50.000" y="525.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">scripts/infer.py @ e2f53ad63387</text>
+<text x="820.000" y="243.000" font-family="Arial" font-size="22" font-weight="700" fill="#244F73">b  Saved answer</text>
+<text x="820.000" y="323.000" font-family="Arial" font-size="56" font-weight="700" fill="#317C79">No.</text>
+<text x="820.000" y="382.000" font-family="Arial" font-size="27" font-weight="700" fill="#173041">Prediction score</text>
+<text x="820.000" y="423.000" font-family="Arial" font-size="27" font-weight="400" fill="#173041">is not measured</text>
+<text x="820.000" y="464.000" font-family="Arial" font-size="27" font-weight="400" fill="#173041">knockdown. [S1, S3]</text>
+<text x="820.000" y="518.000" font-family="Arial" font-size="20" font-weight="400" fill="#173041">Scaled by 1.341. [S2, S5]</text>
+<line x1="50" y1="632" x2="1230" y2="632" stroke="#DCE4E8" stroke-width="1"/>
+<text x="50.000" y="665.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">English translations are labeled; source quotations are retained. This is not a webpage screenshot.</text>
+<text x="50.000" y="695.000" font-family="Arial" font-size="16" font-weight="400" fill="#A84447">S1 is a project setting. This single question does not establish overall accuracy or Agent superiority.</text>
+</svg>

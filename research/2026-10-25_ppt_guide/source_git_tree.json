@@ -1,0 +1,107 @@
+{
+  "head": "7de40bd5e03c313d3cc387cbfdbb417e3646c439",
+  "tree": {
+    "tree": [
+      {
+        "path": "research/2026-10-24_nearfull_complete/live/conversation_export_original.json",
+        "type": "blob",
+        "sha": "e7c99abd51cbc8f49a071a48ed01c2781b9bc791"
+      },
+      {
+        "path": "research/2026-10-24_nearfull_complete/live/tool_export/score_candidates.json",
+        "type": "blob",
+        "sha": "1c045698567d357098f9b616651e07cc1b53c0d9"
+      },
+      {
+        "path": "research/2026-10-24_nearfull_complete/live/tool_export/query_expression.json",
+        "type": "blob",
+        "sha": "3265819ff396134366e15f43c15c097f585f3091"
+      },
+      {
+        "path": "research/2026-10-24_nearfull_complete/live/tool_export/inspect_candidates.json",
+        "type": "blob",
+        "sha": "52575ad373f77c89c667646d23e36bebf616f84c"
+      },
+      {
+        "path": "research/2026-10-24_nearfull_complete/live/tool_export/plan.json",
+        "type": "blob",
+        "sha": "29f4b2d885d05ec2a2ea262f53a40c9032d1f942"
+      },
+      {
+        "path": "research/2026-10-24_nearfull_complete/live/tool_export/report.json",
+        "type": "blob",
+        "sha": "3cccc5fd8c91d248f2fe8bc32cd1cad919d07bbb"
+      },
+      {
+        "path": "research/2026-10-24_nearfull_complete/live/actual_model_call_summary.json",
+        "type": "blob",
+        "sha": "94f75498f08fb7195a3b12770fb81d2f7907ec53"
+      },
+      {
+        "path": "research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/ef511585f2734fe999f4f28c.json",
+        "type": "blob",
+        "sha": "f2a473703e14a4653097e718be9013399319854d"
+      },
+      {
+        "path": "research/2026-10-23_literature/live_20261024/actual_demo/conversation/evidence/8adf373e980643189b6f0479.json",
+        "type": "blob",
+        "sha": "7649e23b370f5dc6f5f4d2d684dedb696665fecd"
+      },
+      {
+        "path": "research/2026-10-24_candidate_v2/new_65_complete_table.tsv",
+        "type": "blob",
+        "sha": "7ef7ab0bbe4e22d46df53b0fe76feb0d29fbe272"
+      },
+      {
+        "path": "research/2026-10-24_candidate_v2/purchased_siVEGF_separate.tsv",
+        "type": "blob",
+        "sha": "bec4765fc8394af501cdb8d1e43c85b5c89625b5"
+      },
+      {
+        "path": "research/2026-10-24_candidate_v2/all_104_decisions.tsv",
+        "type": "blob",
+        "sha": "cf3e55456d2c0d1a1f5cfdca259494c827861d0c"
+      },
+      {
+        "path": "research/2026-10-24_nearfull_complete/all_264_summary.tsv",
+        "type": "blob",
+        "sha": "2800bfbc0a0e5ce35d2211e2c6f349ec409f3b69"
+      },
+      {
+        "path": "research/2026-10-24_nearfull_complete/figures/source_data.tsv",
+        "type": "blob",
+        "sha": "c5c8100293ff9dc008f6869d432377866bb82953"
+      },
+      {
+        "path": "research/2026-10-20_integrity_arial/paper/data/VEGFA_eight_samples_TPM.tsv",
+        "type": "blob",
+        "sha": "f4a644cc55909f01a14fcffe5b7b430048c758ad"
+      },
+      {
+        "path": "research/2026-10-24_nearfull_complete/live/case_completed.png",
+        "type": "blob",
+        "sha": "6ff4c08ab5f5903ddebd84b8573fd5fde4437fcd"
+      },
+      {
+        "path": "research/2026-10-23_literature/offline/local_ui_search.png",
+        "type": "blob",
+        "sha": "e40c2226d59616805b844b8f87d9f5ba8e7b49f2"
+      },
+      {
+        "path": "research/2026-10-20_integrity_arial/paper/figures/Figure2_real_Auto_case.png",
+        "type": "blob",
+        "sha": "fa47b4f2255759e82c2a4c0bab3e102409e109f6"
+      },
+      {
+        "path": "research/2026-10-25_ppt_figures/figures/A_purchased_Agent_case.pdf",
+        "type": "blob",
+        "sha": "728c9b888912c1aa433845e9f021d83aa2478920"
+      },
+      {
+        "path": "research/2026-10-25_ppt_figures/figures/B_literature_answer_evidence.pdf",
+        "type": "blob",
+        "sha": "8fd7480eb51bda6bbebfbc9aa7671c88d16f39fc"
+      }
+    ]
+  }
+}

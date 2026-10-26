@@ -1,0 +1,335 @@
+[
+  {
+    "text": "One purchased si-VEGF: a recorded Agent run",
+    "x": 50,
+    "baseline_y": 57,
+    "width": 687.2978515625,
+    "font_size": 31,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Saved records, re-typeset | Chinese request translated | run 20261024_121627_1e50c9",
+    "x": 50,
+    "baseline_y": 92,
+    "width": 661.8876953125,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Request",
+    "x": 50,
+    "baseline_y": 158,
+    "width": 78.90625,
+    "font_size": 20,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "Review this duplex using its bound results and expression context.",
+    "x": 155,
+    "baseline_y": 158,
+    "width": 676.3212890625,
+    "font_size": 23,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "a  Six confirmed steps, all executed",
+    "x": 50,
+    "baseline_y": 220,
+    "width": 371.701171875,
+    "font_size": 22,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "01",
+    "x": 55,
+    "baseline_y": 271,
+    "width": 21.1337890625,
+    "font_size": 19,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Check candidate",
+    "x": 103,
+    "baseline_y": 271,
+    "width": 163.8828125,
+    "font_size": 22,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "executed",
+    "x": 478.9453125,
+    "baseline_y": 271,
+    "width": 73.05468750000001,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "02",
+    "x": 55,
+    "baseline_y": 320,
+    "width": 21.1337890625,
+    "font_size": 19,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Match VEGFA reference",
+    "x": 103,
+    "baseline_y": 320,
+    "width": 239.6474609375,
+    "font_size": 22,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "executed",
+    "x": 478.9453125,
+    "baseline_y": 320,
+    "width": 73.05468750000001,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "03",
+    "x": 55,
+    "baseline_y": 369,
+    "width": 21.1337890625,
+    "font_size": 19,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Read OligoFormer result",
+    "x": 103,
+    "baseline_y": 369,
+    "width": 240.861328125,
+    "font_size": 22,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "imported",
+    "x": 481.96875,
+    "baseline_y": 369,
+    "width": 70.03125000000001,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "04",
+    "x": 55,
+    "baseline_y": 418,
+    "width": 21.1337890625,
+    "font_size": 19,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Read seed result",
+    "x": 103,
+    "baseline_y": 418,
+    "width": 166.3212890625,
+    "font_size": 22,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "imported",
+    "x": 481.96875,
+    "baseline_y": 418,
+    "width": 70.03125000000001,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "05",
+    "x": 55,
+    "baseline_y": 467,
+    "width": 21.1337890625,
+    "font_size": 19,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Join expression data",
+    "x": 103,
+    "baseline_y": 467,
+    "width": 201.7919921875,
+    "font_size": 22,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "executed",
+    "x": 478.9453125,
+    "baseline_y": 467,
+    "width": 73.05468750000001,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "06",
+    "x": 55,
+    "baseline_y": 516,
+    "width": 21.1337890625,
+    "font_size": 19,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Save report",
+    "x": 103,
+    "baseline_y": 516,
+    "width": 113.7275390625,
+    "font_size": 22,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "executed",
+    "x": 478.9453125,
+    "baseline_y": 516,
+    "width": 73.05468750000001,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "b  Verified tool fields",
+    "x": 680,
+    "baseline_y": 220,
+    "width": 216.3583984375,
+    "font_size": 22,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "19-nt paired cores (5'-3'; conditional roles)",
+    "x": 680,
+    "baseline_y": 267,
+    "width": 335.03906250000006,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "UUUCUUGUCUUGCUCUAUC",
+    "x": 680,
+    "baseline_y": 302,
+    "width": 331.98046875,
+    "font_size": 24,
+    "bold": true,
+    "source": "inspect_candidates.rows[0].guide_core19_5to3"
+  },
+  {
+    "text": "GAUAGAGCAAGACAAGAAA",
+    "x": 680,
+    "baseline_y": 337,
+    "width": 335.98828125,
+    "font_size": 24,
+    "bold": true,
+    "source": "plan.candidates[0].passenger_paired_core_19nt_5to3"
+  },
+  {
+    "text": "1.1219",
+    "x": 680,
+    "baseline_y": 395,
+    "width": 125.40234375,
+    "font_size": 41,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "model score, not %",
+    "x": 870,
+    "baseline_y": 395,
+    "width": 188.310546875,
+    "font_size": 22,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "2,839",
+    "x": 680,
+    "baseline_y": 444,
+    "width": 95.0927734375,
+    "font_size": 38,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "non-target seed genes (guide)",
+    "x": 870,
+    "baseline_y": 444,
+    "width": 267.958984375,
+    "font_size": 20,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "18/20",
+    "x": 680,
+    "baseline_y": 487,
+    "width": 90.08789062500001,
+    "font_size": 36,
+    "bold": true,
+    "source": null
+  },
+  {
+    "text": "fixed reference transcripts",
+    "x": 870,
+    "baseline_y": 487,
+    "width": 230.09765625,
+    "font_size": 20,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "8 model requests = 1 planning + 7 execution; 6 tools.",
+    "x": 50,
+    "baseline_y": 594,
+    "width": 469.19921875,
+    "font_size": 20,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Core-only analysis; TT/N3 not modeled.",
+    "x": 680,
+    "baseline_y": 594,
+    "width": 317.13574218750006,
+    "font_size": 18,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "OligoFormer and seed results were imported from verified local computations.",
+    "x": 50,
+    "baseline_y": 665,
+    "width": 584.8564453125,
+    "font_size": 17,
+    "bold": false,
+    "source": null
+  },
+  {
+    "text": "Raw answer retained: one 19-nt core was miscopied as 24 nt. This table uses tool evidence.",
+    "x": 50,
+    "baseline_y": 695,
+    "width": 652.796875,
+    "font_size": 16,
+    "bold": false,
+    "source": null
+  }
+]

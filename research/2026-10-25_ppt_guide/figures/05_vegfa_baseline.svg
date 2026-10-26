@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720"><rect width="1280" height="720" fill="white"/>
+<text x="50.000" y="57.000" font-family="Arial" font-size="31" font-weight="700" fill="#173041">VEGFA expression in untreated ARPE-19 dishes</text>
+<text x="50.000" y="92.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">Same culture batch | Four dishes per condition | Hypoxia: 1% O2 for 24 h | No siRNA or transfection reagent</text>
+<line x1="50" y1="111" x2="1230" y2="111" stroke="#DCE4E8" stroke-width="1"/>
+<line x1="130" y1="531.0" x2="760" y2="531.0" stroke="#DCE4E8" stroke-width="1"/>
+<text x="112.658" y="536.000" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">0</text>
+<line x1="130" y1="448.5" x2="760" y2="448.5" stroke="#DCE4E8" stroke-width="1"/>
+<text x="104.315" y="453.500" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">40</text>
+<line x1="130" y1="366.0" x2="760" y2="366.0" stroke="#DCE4E8" stroke-width="1"/>
+<text x="104.315" y="371.000" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">80</text>
+<line x1="130" y1="283.5" x2="760" y2="283.5" stroke="#DCE4E8" stroke-width="1"/>
+<text x="95.973" y="288.500" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">120</text>
+<line x1="130" y1="201.0" x2="760" y2="201.0" stroke="#DCE4E8" stroke-width="1"/>
+<text x="95.973" y="206.000" font-family="Arial" font-size="15" font-weight="400" fill="#60727B">160</text>
+<line x1="130" y1="201" x2="130" y2="531" stroke="#60727B" stroke-width="1"/>
+<line x1="130" y1="531" x2="760" y2="531" stroke="#60727B" stroke-width="1"/>
+<text x="445.000" y="590.000" font-family="Arial" font-size="17" font-weight="400" fill="#173041"></text>
+<text x="130.000" y="181.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">VEGFA expression (TPM)</text>
+<circle cx="293" cy="491.9981930625" r="8" fill="#244F73" stroke="white" stroke-width=".8"/>
+<circle cx="318" cy="496.9438329375" r="8" fill="#244F73" stroke="white" stroke-width=".8"/>
+<circle cx="342" cy="494.8610895" r="8" fill="#244F73" stroke="white" stroke-width=".8"/>
+<circle cx="367" cy="474.3776656875" r="8" fill="#244F73" stroke="white" stroke-width=".8"/>
+<line x1="263" y1="489.545195296875" x2="397" y2="489.545195296875" stroke="#244F73" stroke-width="3"/>
+<text x="274.652" y="573.000" font-family="Arial" font-size="24" font-weight="700" fill="#173041">Normoxia</text>
+<text x="257.131" y="606.000" font-family="Arial" font-size="19" font-weight="400" fill="#244F73">Mean 20.10 TPM</text>
+<circle cx="603" cy="331.54807425" r="8" fill="#317C79" stroke="white" stroke-width=".8"/>
+<circle cx="628" cy="231.04063218750002" r="8" fill="#317C79" stroke="white" stroke-width=".8"/>
+<circle cx="652" cy="369.48319125" r="8" fill="#317C79" stroke="white" stroke-width=".8"/>
+<circle cx="677" cy="347.21004131250004" r="8" fill="#317C79" stroke="white" stroke-width=".8"/>
+<line x1="573" y1="319.82048475" x2="707" y2="319.82048475" stroke="#317C79" stroke-width="3"/>
+<text x="593.318" y="573.000" font-family="Arial" font-size="24" font-weight="700" fill="#173041">Hypoxia</text>
+<text x="561.848" y="606.000" font-family="Arial" font-size="19" font-weight="400" fill="#317C79">Mean 102.39 TPM</text>
+<text x="895.000" y="296.000" font-family="Arial" font-size="70" font-weight="700" fill="#317C79">5.09x</text>
+<text x="895.000" y="346.000" font-family="Arial" font-size="22" font-weight="400" fill="#173041">ratio of group means</text>
+<text x="895.000" y="420.000" font-family="Arial" font-size="23" font-weight="700" fill="#173041">Descriptive baseline</text>
+<text x="895.000" y="458.000" font-family="Arial" font-size="23" font-weight="400" fill="#173041">for this culture batch.</text>
+<line x1="50" y1="632" x2="1230" y2="632" stroke="#DCE4E8" stroke-width="1"/>
+<text x="50.000" y="665.000" font-family="Arial" font-size="17" font-weight="400" fill="#60727B">Dots are the eight actual dish-level TPM values; horizontal lines show group means.</text>
+<text x="50.000" y="695.000" font-family="Arial" font-size="16" font-weight="400" fill="#A84447">This is expression context, not siRNA knockdown, four independent culture rounds, or a treatment effect.</text>
+</svg>
