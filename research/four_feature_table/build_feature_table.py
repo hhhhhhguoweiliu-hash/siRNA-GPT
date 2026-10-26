@@ -527,7 +527,7 @@ def main():
         "F3_RPE_nCPM", "F3_max_other_nCPM", "F3_max_other_cell_type",
         "F4_raw", "F4_normalized", "F4_source", "F4_missing_reason",
         "F4_core_categories", "F4_GO_terms", "F4_GO_evidence_codes", "F4_Reactome_pathways",
-        "F4_nonIEA_supported_categories", "F4_has_any_GO_annotation", "F4_has_any_Reactome_mapping",
+        "F4_categories_with_nonIEA_evidence", "F4_has_any_GO_annotation", "F4_has_any_Reactome_mapping",
     ]
     table = table[ordered_cols].sort_values(["gene_id"]).reset_index(drop=True)
     table = table.rename(columns={
