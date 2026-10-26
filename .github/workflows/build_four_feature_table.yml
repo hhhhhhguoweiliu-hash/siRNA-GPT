@@ -1,0 +1,59 @@
+name: Build four-feature gene table
+
+on:
+  push:
+    branches:
+      - research/four-feature-table
+    paths:
+      - "research/four_feature_table/**"
+      - ".github/workflows/build_four_feature_table.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install data processing dependencies
+        run: python -m pip install --upgrade pandas openpyxl requests
+
+      - name: Download public annotation snapshots and build gene table
+        env:
+          FEATURE_OUT_DIR: output
+        run: python research/four_feature_table/build_feature_table.py
+
+      - name: Verify expected deliverables
+        run: |
+          test -s output/four_feature_gene_table.csv
+          test -s output/four_feature_gene_table.xlsx
+          test -s output/source_manifest.json
+          test -s output/missingness_summary.csv
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          q = json.loads(Path("output/qc_summary.json").read_text(encoding="utf-8"))
+          assert q["gene_universe_unique_NCBI_GeneIDs"] >= 10000, q
+          assert q["F3_scored_genes"] > 0, q
+          assert q["F4_scored_genes"] > 0, q
+          print("QC passed:", json.dumps(q, ensure_ascii=False))
+          PY
+
+      - name: Upload table and exact source snapshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: four-feature-gene-table-package
+          path: output/
+          if-no-files-found: error
+          retention-days: 30
