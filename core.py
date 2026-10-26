@@ -75,9 +75,11 @@ class Session:
   self.path=Path(run_root or HOME/'runs')/self.id;self.path.mkdir(parents=True)
   from expression_data import load_dataset,builtin_receipt
   identity=self.task.get('expression_dataset_id','builtin')
+  missing_user_expression=identity=='builtin' and self.task.get('allow_builtin_expression') is False
   dataset=load_dataset(identity) if identity!='builtin' else None
   self.expression_rows=dataset['rows'] if dataset else None
-  self.expression_source=dataset['receipt'] if dataset else builtin_receipt()
+  self.expression_source=({'id':None,'source':'UNAVAILABLE_USER_REQUIRED','label':'指定用户表达表尚未提供',
+   'scope':'本题禁止使用内置表达表；未填零、未回退','ranking_changed':False} if missing_user_expression else dataset['receipt'] if dataset else builtin_receipt())
   save_json(self.path/'expression_source.json',self.expression_source)
   if dataset:save_json(self.path/'expression_snapshot.json',dataset)
   self.state={};self.events=[];self.model_messages=[];self.tool_calls=0;self.verified_imports={}
@@ -155,6 +157,17 @@ class Session:
        'design_window_start_1based':raw.get('target_start_1based'),'design_window_end_1based':raw.get('target_end_1based'),
        'design_window_scope':'source 23nt design window; not 19nt core coordinates',
        'covered_transcripts':len(set(h['transcript'] for h in hits)),'reference_transcript_count':len(refs),'sites':hits,'mRNA_context_57nt':context})
+  # Explicitly supplied coordinate claims are metadata, never replacement sequences.
+  claims=self.task.get('declared_core_coordinates',[])
+  for claim in claims:
+   row=next((r for r in rr if r['candidate_id']==claim.get('candidate_id')),None)
+   if row is None:raise TaskError('坐标声明没有对应候选')
+   accession=claim.get('reference');start=claim.get('start_1based');end=claim.get('end_1based')
+   mrna=refs.get(accession);valid=bool(mrna) and type(start) is int and type(end) is int and 1<=start<=end<=len(mrna) and end-start+1==19
+   consistent=valid and mrna[start-1:end]==revcomp(row['guide_core19_5to3'])
+   row.setdefault('declared_coordinate_checks',[]).append({'supplied':claim,'reference_length_nt':len(mrna) if mrna else None,
+    'in_bounds_and_19nt':valid,'sequence_consistent':consistent,
+    'status':'CONSISTENT' if consistent else 'DECLARATION_INCONSISTENT_ACTUAL_SEQUENCE_MATCH_RETAINED'})
   return {'status':'LIVE_EXECUTED','reference_sha256':sha(DATA/'VEGFA.fasta'),'rows':rr,'coverage_scope':'reference annotation, not measured isoform usage'}
  def check_external(self,relative):
   root=Path(self.cfg['legacy_root']);manifest=json.loads((DATA/'provenance.json').read_text(encoding='utf-8'))
@@ -214,6 +227,8 @@ class Session:
       'counts':counts,'counts_unit':'seed sites including VEGFA, not genes','seed_site_counts_all':counts,
       'seed_site_counts_nontarget':{cid:sum(int(float(z['seed_site_count'])) for z in rows if z['candidate_id']==cid and z['gene_id']!='7422') for cid in counts}}
  def tool_query_expression(self):
+  if self.task.get('allow_builtin_expression') is False and self.task.get('expression_dataset_id','builtin')=='builtin':
+   raise TaskError('本题指定的用户表达表尚未提供，且禁止回退内置表达表；已有序列、参考、分数和seed结果保留，表达与完整报告未完成')
   self.require('match_seed');exp=self.expression_rows if self.expression_rows is not None else read_tsv(DATA/'expression.tsv.gz');bygene={r['ENTREZID']:r for r in exp if r['ENTREZID']}
   targets=[r for r in exp if r['approved_symbol']=='VEGFA']
   if len(targets)!=1:raise TaskError('VEGFA表达映射不唯一，需核对')
@@ -292,7 +307,7 @@ class Session:
   if not all(r['candidate_id'] in original and canonical(current[r['candidate_id']])==old[r['candidate_id']] for r in rows):
    report['limitations'][1]='候选来源由用户提供；原始订购双链已保存，链角色及确切修饰化学仍有未确认部分'
   save_json(self.path/'report.json',report);self.render(report)
-  return {'status':'COMPLETE','selected_for_review':selected,'report':'report.html','table':'candidates_ranked.tsv','rules':report['rules'],'not_order_ready':True}
+  return {'status':'COMPLETE','selected_for_review':selected,'rows':rows,'report':'report.html','table':'candidates_ranked.tsv','rules':report['rules'],'not_order_ready':True}
  def finalize_model_summary(self,report,text,agent_status):
   from sequence_validation import answer_evidence
   evidence=answer_evidence(text,self.candidates,self.state)

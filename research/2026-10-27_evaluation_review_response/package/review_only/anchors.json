@@ -1,0 +1,224 @@
+{
+  "source_review_sha256": "bb92b6f8300ddb9a668361d19ba32ca557ce72b119abe70f54a2b711dc52e188",
+  "reference_sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706",
+  "coordinates_independently_found_from_fixed_FASTA": [
+    {
+      "candidate_id": "VEGFA_SD_1157",
+      "reference": "NM_003376.6",
+      "start_1based": 1159,
+      "end_1based": 1177,
+      "covered_transcripts": 20,
+      "reference_count": 20
+    },
+    {
+      "candidate_id": "VEGFA_SD_2739",
+      "reference": "NM_003376.6",
+      "start_1based": 2741,
+      "end_1based": 2759,
+      "covered_transcripts": 20,
+      "reference_count": 20
+    },
+    {
+      "candidate_id": "VEGFA_SD_3119",
+      "reference": "NM_003376.6",
+      "start_1based": 3121,
+      "end_1based": 3139,
+      "covered_transcripts": 20,
+      "reference_count": 20
+    },
+    {
+      "candidate_id": "VEGFA_SD_3193",
+      "reference": "NM_003376.6",
+      "start_1based": 3195,
+      "end_1based": 3213,
+      "covered_transcripts": 20,
+      "reference_count": 20
+    },
+    {
+      "candidate_id": "VEGFA_SD_3429",
+      "reference": "NM_003376.6",
+      "start_1based": 3431,
+      "end_1based": 3449,
+      "covered_transcripts": 20,
+      "reference_count": 20
+    },
+    {
+      "candidate_id": "VEGFA_SD_3499",
+      "reference": "NM_003376.6",
+      "start_1based": 3501,
+      "end_1based": 3519,
+      "covered_transcripts": 20,
+      "reference_count": 20
+    },
+    {
+      "candidate_id": "VEGFA_SD_3500",
+      "reference": "NM_003376.6",
+      "start_1based": 3502,
+      "end_1based": 3520,
+      "covered_transcripts": 20,
+      "reference_count": 20
+    },
+    {
+      "candidate_id": "VEGFA_SD_3502",
+      "reference": "NM_003376.6",
+      "start_1based": 3504,
+      "end_1based": 3522,
+      "covered_transcripts": 20,
+      "reference_count": 20
+    },
+    {
+      "candidate_id": "VEGFA_SD_3535",
+      "reference": "NM_003376.6",
+      "start_1based": 3537,
+      "end_1based": 3555,
+      "covered_transcripts": 20,
+      "reference_count": 20
+    }
+  ],
+  "scores_original_rows": [
+    {
+      "candidate_id": "VEGFA_SD_1157",
+      "guide_core19_5to3": "AUAGACAUCCAUGAACUUC",
+      "design_transcript": "NM_003376.6",
+      "core_target_start_1based": "1159",
+      "mRNA_context_57nt": "AGAAUCAUCACGAAGUGGUGAAGUUCAUGGAUGUCUAUCAGCGCAGCUACUGCCAUC",
+      "matching_sites_n": "1",
+      "raw_class1": "0.7076764106750488",
+      "oligoformer_scaled_score": "0.9489940667152404",
+      "official_func_filter": "0",
+      "repeat_identical": "True",
+      "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+      "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+    },
+    {
+      "candidate_id": "VEGFA_SD_2739",
+      "guide_core19_5to3": "AGAACUAGUGGUUUCAAUG",
+      "design_transcript": "NM_003376.6",
+      "core_target_start_1based": "2741",
+      "mRNA_context_57nt": "AGGACCUAUGUCCUCACACCAUUGAAACCACUAGUUCUGUCCCCCCAGGAGACCUGG",
+      "matching_sites_n": "1",
+      "raw_class1": "0.6573420166969299",
+      "oligoformer_scaled_score": "0.881495644390583",
+      "official_func_filter": "0",
+      "repeat_identical": "True",
+      "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+      "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3119",
+      "guide_core19_5to3": "AUAUCUGUUCAAGAUAAGC",
+      "design_transcript": "NM_003376.6",
+      "core_target_start_1based": "3121",
+      "mRNA_context_57nt": "UGAUCGGUGACAGUCACUAGCUUAUCUUGAACAGAUAUUUAAUUUUGCUAACACUCA",
+      "matching_sites_n": "1",
+      "raw_class1": "0.6884453892707825",
+      "oligoformer_scaled_score": "0.9232052670121192",
+      "official_func_filter": "4",
+      "repeat_identical": "True",
+      "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+      "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3193",
+      "guide_core19_5to3": "ACCUUAUUUCAAAGGAAUG",
+      "design_transcript": "NM_003376.6",
+      "core_target_start_1based": "3195",
+      "mRNA_context_57nt": "CCCCUGGCUCCCCAGCACACAUUCCUUUGAAAUAAGGUUUCAAUAUACAUCUACAUA",
+      "matching_sites_n": "1",
+      "raw_class1": "0.5737422704696655",
+      "oligoformer_scaled_score": "0.7693883846998214",
+      "official_func_filter": "4",
+      "repeat_identical": "True",
+      "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+      "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3429",
+      "guide_core19_5to3": "UAUUACGGAUAAACAGUAG",
+      "design_transcript": "NM_003376.6",
+      "core_target_start_1based": "3431",
+      "mRNA_context_57nt": "UAUCAUUUAUUUAUUGGUGCUACUGUUUAUCCGUAAUAAUUGUGGGGAAAAGAUAUU",
+      "matching_sites_n": "1",
+      "raw_class1": "0.7010828852653503",
+      "oligoformer_scaled_score": "0.9401521491408348",
+      "official_func_filter": "0",
+      "repeat_identical": "True",
+      "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+      "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3499",
+      "guide_core19_5to3": "UGUACUACGGAAUAUCUCG",
+      "design_transcript": "NM_003376.6",
+      "core_target_start_1based": "3501",
+      "mRNA_context_57nt": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG",
+      "matching_sites_n": "1",
+      "raw_class1": "0.7393843531608582",
+      "oligoformer_scaled_score": "0.9915144175887107",
+      "official_func_filter": "0",
+      "repeat_identical": "True",
+      "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+      "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3500",
+      "guide_core19_5to3": "AUGUACUACGGAAUAUCUC",
+      "design_transcript": "NM_003376.6",
+      "core_target_start_1based": "3502",
+      "mRNA_context_57nt": "GUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACGA",
+      "matching_sites_n": "1",
+      "raw_class1": "0.7273184061050415",
+      "oligoformer_scaled_score": "0.9753339825868607",
+      "official_func_filter": "0",
+      "repeat_identical": "True",
+      "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+      "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3502",
+      "guide_core19_5to3": "AUAUGUACUACGGAAUAUC",
+      "design_transcript": "NM_003376.6",
+      "core_target_start_1based": "3504",
+      "mRNA_context_57nt": "CUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACGACA",
+      "matching_sites_n": "1",
+      "raw_class1": "0.7251685857772827",
+      "oligoformer_scaled_score": "0.9724510735273361",
+      "official_func_filter": "4",
+      "repeat_identical": "True",
+      "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+      "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+    },
+    {
+      "candidate_id": "VEGFA_SD_3535",
+      "guide_core19_5to3": "UAUCUGUAUUUCUUUGUCG",
+      "design_transcript": "NM_003376.6",
+      "core_target_start_1based": "3537",
+      "mRNA_context_57nt": "CAUAUUUAUUUUUAAACAACGACAAAGAAAUACAGAUAUAUCUUAAAAAAAAAAAAG",
+      "matching_sites_n": "1",
+      "raw_class1": "0.7483892440795898",
+      "oligoformer_scaled_score": "1.0035899763107299",
+      "official_func_filter": "0",
+      "repeat_identical": "True",
+      "adapter_mode": "CPU_EVAL_LAYER12_RAW_OFFICIAL_WEIGHTS",
+      "interpretation": "MODEL_SCORE_NOT_KNOCKDOWN_PERCENT"
+    }
+  ],
+  "supplied_IRGM_record_original": [
+    {
+      "candidate_id": "VEGFA_SD_3535",
+      "strand_role": "guide",
+      "query_definition": "AUTHOR_G2_G20_19NT",
+      "guide_window_5to3": "AUCUGUAUUUCUUUGUCGU",
+      "reverse_complement_target_pattern_DNA_5to3": "ACGACAAAGAAATACAGAT",
+      "reference_transcript": "NR_170598.1",
+      "mapped_gene": "IRGM",
+      "reference_start_1based": "1724",
+      "reference_end_1based": "1742",
+      "reference_subsequence_DNA_5to3": "AAGACAAAGAAATACAGAT",
+      "mismatch_positions_in_target_pattern_1based": "2",
+      "actual_mismatches": "1",
+      "independent_check": "PASS",
+      "interpretation": "SEQUENCE_REVIEW_FLAG_NOT_DEMONSTRATED_OFF_TARGET"
+    }
+  ]
+}

@@ -81,6 +81,13 @@ def prepare_inputs(data):
         from expression_data import load_dataset
         load_dataset(identity)
     task['expression_dataset_id']=identity
+    if 'allow_builtin_expression' in data:
+        if type(data['allow_builtin_expression']) is not bool:raise ValueError('内置表达回退条件需为布尔值')
+        task['allow_builtin_expression']=data['allow_builtin_expression']
+    if 'declared_core_coordinates' in data:
+        claims=data['declared_core_coordinates']
+        if not isinstance(claims,list) or any(not isinstance(c,dict) for c in claims):raise ValueError('坐标声明需为记录列表')
+        task['declared_core_coordinates']=claims
     # Sequence validity is checked by inspect_candidates before downstream workers.
     return {'task': task, 'candidates': candidates, 'tool_mode': data.get('tool_mode', 'live')}
 

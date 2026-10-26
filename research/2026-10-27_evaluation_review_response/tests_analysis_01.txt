@@ -1,0 +1,9 @@
+test_blank_scores_not_zero_and_incomplete_batch_cannot_be_full_comparison (test_evaluation_analysis.QuantitativeChecks.test_blank_scores_not_zero_and_incomplete_batch_cannot_be_full_comparison) ... ok
+test_human_disagreement_requires_recorded_human_resolution (test_evaluation_analysis.QuantitativeChecks.test_human_disagreement_requires_recorded_human_resolution) ... ok
+test_missing_plan_units_duplicate_ratings_and_mismatched_denominators_rejected (test_evaluation_analysis.QuantitativeChecks.test_missing_plan_units_duplicate_ratings_and_mismatched_denominators_rejected) ... ok
+test_negative_difference_zero_baseline_missing_usage_and_task_weights (test_evaluation_analysis.QuantitativeChecks.test_negative_difference_zero_baseline_missing_usage_and_task_weights) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+OK

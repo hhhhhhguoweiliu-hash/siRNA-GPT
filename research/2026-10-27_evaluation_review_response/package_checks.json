@@ -1,0 +1,64 @@
+{
+  "archives": [
+    {
+      "archive": "package/runtime.zip",
+      "entries": 4,
+      "bytes": 15271,
+      "sha256": "fc09f1e02f60ab059146c9b0fad5968270e4ace60ddc6081334a2706ac6f86f2",
+      "crc": "PASS"
+    },
+    {
+      "archive": "package/tool_resources.zip",
+      "entries": 31,
+      "bytes": 2382696,
+      "sha256": "9d7faa8cb457b4a23fe42dc0eb68948aea1cfa5d14d216426de11cec8c756537",
+      "crc": "PASS"
+    },
+    {
+      "archive": "package/review_only.zip",
+      "entries": 15,
+      "bytes": 44919,
+      "sha256": "e7815fa5df44a2a7460c2791e9e953b1daf23c57d765f53c74df87998f19ed96",
+      "crc": "PASS"
+    }
+  ],
+  "blank_workbook": {
+    "file": "package/review_only/blank_scores.xlsx",
+    "sha256": "8e8db073b3d573917e1714cdeefd217f0323b38019b8569b4f326f44d11aad42",
+    "bytes": 5924,
+    "crc": "PASS",
+    "planned_rows": 33,
+    "score_cells_empty": 132,
+    "all_297_reviewer_input_cells_empty": true,
+    "score_validation_0_to_2": true,
+    "unprotected_editable_cells": true,
+    "actual_preview_reviewed": true,
+    "native_Excel_UI_acceptance": false,
+    "authoring_process": {
+      "first_attempt": "module load failed after directory junction was denied; original log retained",
+      "dependency_junction_created_later": true,
+      "second_attempt_exit_code": -1073740791,
+      "third_attempt_exit_code": -1073740791,
+      "saved_file_independently_read_back": true,
+      "native_library_exit_failure_not_reported_as_process_success": true
+    }
+  },
+  "runtime_reviewer_materials_separate": true,
+  "reviewer_zip_contains_group_key": false,
+  "all_11_templates_have_full_inputs_and_standards": true,
+  "old_54_records_rewritten": false,
+  "tests": {
+    "Python": 192,
+    "targeted_dialogue": 8,
+    "quantitative_algorithm_synthetic_only": 4,
+    "frontend": 3
+  },
+  "frontend_commands": [
+    "node test_browser_backup.cjs",
+    "node test_sequence_ui.cjs",
+    "node test_english_ui.cjs"
+  ],
+  "frontend_tool_output_verified": true,
+  "real_model_calls": 0,
+  "deployment_started": false
+}

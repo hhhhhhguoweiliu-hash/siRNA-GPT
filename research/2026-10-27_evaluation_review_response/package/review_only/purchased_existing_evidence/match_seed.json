@@ -1,0 +1,31 @@
+{
+  "status": "IMPORTED_VERIFIED_LOCAL",
+  "scope": "guide only in expression join, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target",
+  "positive_rows": 2840,
+  "details": "seed_matches.tsv",
+  "supplemental_both_strand_seed_summaries": {
+    "USER_PURCHASED_siVEGF": {
+      "guide_seed_sites_all": "3540",
+      "guide_matched_genes_all": "2840",
+      "guide_seed_sites_non_target": "3539",
+      "guide_matched_genes_non_target": "2839",
+      "passenger_seed_sites_all": "1402",
+      "passenger_matched_genes_all": "1286",
+      "passenger_seed_sites_non_target": "1402",
+      "passenger_matched_genes_non_target": "1286"
+    }
+  },
+  "evidence_dataset_ids": [
+    "purchased_sivegf_20261024_v1"
+  ],
+  "counts": {
+    "USER_PURCHASED_siVEGF": 3540
+  },
+  "counts_unit": "seed sites including VEGFA, not genes",
+  "seed_site_counts_all": {
+    "USER_PURCHASED_siVEGF": 3540
+  },
+  "seed_site_counts_nontarget": {
+    "USER_PURCHASED_siVEGF": 3539
+  }
+}

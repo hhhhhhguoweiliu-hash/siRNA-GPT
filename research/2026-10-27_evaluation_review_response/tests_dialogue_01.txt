@@ -1,0 +1,38 @@
+test_missing_required_expression_does_not_read_builtin_join_and_keeps_partial_evidence (test_evaluation_dialogue.DevelopmentDialogueTests.test_missing_required_expression_does_not_read_builtin_join_and_keeps_partial_evidence) ... FAIL
+test_no_model_gate_qa_not_comparable_and_no_per_case_preset (test_evaluation_dialogue.DevelopmentDialogueTests.test_no_model_gate_qa_not_comparable_and_no_per_case_preset) ... ok
+test_purchased_full_report_shows_both_states_without_reranking (test_evaluation_dialogue.DevelopmentDialogueTests.test_purchased_full_report_shows_both_states_without_reranking) ... ERROR
+test_raw_docx_only_first_turn_role_assumption_only_second_and_binding_succeeds (test_evaluation_dialogue.DevelopmentDialogueTests.test_raw_docx_only_first_turn_role_assumption_only_second_and_binding_succeeds) ... FAIL
+test_single_base_change_never_receives_old_score (test_evaluation_dialogue.DevelopmentDialogueTests.test_single_base_change_never_receives_old_score) ... ok
+test_two_round_same_full_inputs_own_histories_settings_and_no_answer_leak (test_evaluation_dialogue.DevelopmentDialogueTests.test_two_round_same_full_inputs_own_histories_settings_and_no_answer_leak) ... ok
+test_workflow_score_and_all_compared_candidates_flags_and_query_window_visible (test_evaluation_dialogue.DevelopmentDialogueTests.test_workflow_score_and_all_compared_candidates_flags_and_query_window_visible) ... ok
+test_wrong_coordinate_declaration_consumed_without_losing_real_target_match (test_evaluation_dialogue.DevelopmentDialogueTests.test_wrong_coordinate_declaration_consumed_without_losing_real_target_match) ... ok
+
+======================================================================
+ERROR: test_purchased_full_report_shows_both_states_without_reranking (test_evaluation_dialogue.DevelopmentDialogueTests.test_purchased_full_report_shows_both_states_without_reranking)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\00000\ARPE RNA-seq\sirna-gpt\test_evaluation_dialogue.py", line 109, in test_purchased_full_report_shows_both_states_without_reranking
+    row = result['tool_results']['query_expression']['candidate_summary'][0]
+          ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'query_expression'
+
+======================================================================
+FAIL: test_missing_required_expression_does_not_read_builtin_join_and_keeps_partial_evidence (test_evaluation_dialogue.DevelopmentDialogueTests.test_missing_required_expression_does_not_read_builtin_join_and_keeps_partial_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\00000\ARPE RNA-seq\sirna-gpt\test_evaluation_dialogue.py", line 134, in test_missing_required_expression_does_not_read_builtin_join_and_keeps_partial_evidence
+    self.assertIn('score_candidates', result['completed_tools'])
+AssertionError: 'score_candidates' not found in []
+
+======================================================================
+FAIL: test_raw_docx_only_first_turn_role_assumption_only_second_and_binding_succeeds (test_evaluation_dialogue.DevelopmentDialogueTests.test_raw_docx_only_first_turn_role_assumption_only_second_and_binding_succeeds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\00000\ARPE RNA-seq\sirna-gpt\test_evaluation_dialogue.py", line 93, in test_raw_docx_only_first_turn_role_assumption_only_second_and_binding_succeeds
+    self.assertIn('score_candidates', second['completed_tools'])
+AssertionError: 'score_candidates' not found in []
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.756s
+
+FAILED (failures=2, errors=1)

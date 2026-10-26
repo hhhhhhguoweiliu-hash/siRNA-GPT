@@ -1,0 +1,11 @@
+{
+  "rows": 33,
+  "score_cells": 132,
+  "all_scores_blank": true,
+  "all_reviewer_fields_blank": true,
+  "source": "package/review_only/blank_scores.json",
+  "artifact_tool_inspect": "{\"kind\":\"table\",\"sheet\":\"评分表\",\"address\":\"A1:K6\",\"rows\":6,\"cols\":11,\"values\":[[\"回答编号\",\"题目ID\",\"评审人\",\"事实准确 0–2\",\"证据支持 0–2\",\"需求完成 0–2\",\"边界处理 0–2\",\"交付判定\",\"严重错误\",\"不可评分原因\",\"依据与备注\"],[\"D001\",\"Q2\",null,null,null,null,null,null,null,null,null],[\"D002\",\"W2b\",null,null,null,null,null,null,null,null,null],[\"D003\",\"R3\",null,null,null,null,null,null,null,null,null],[\"D004\",\"W2\",null,null,null,null,null,null,null,null,null],[\"D005\",\"U1\",null,null,null,null,null,null,null,null,null]]}",
+  "error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "rendered": true,
+  "native_Excel_acceptance": false
+}

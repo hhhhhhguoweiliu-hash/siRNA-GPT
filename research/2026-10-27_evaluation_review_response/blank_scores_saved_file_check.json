@@ -1,0 +1,21 @@
+{
+  "file": "package/review_only/blank_scores.xlsx",
+  "sha256": "8e8db073b3d573917e1714cdeefd217f0323b38019b8569b4f326f44d11aad42",
+  "bytes": 5924,
+  "crc": "PASS",
+  "planned_rows": 33,
+  "score_cells_empty": 132,
+  "all_297_reviewer_input_cells_empty": true,
+  "score_validation_0_to_2": true,
+  "unprotected_editable_cells": true,
+  "actual_preview_reviewed": true,
+  "native_Excel_UI_acceptance": false,
+  "authoring_process": {
+    "first_attempt": "module load failed after directory junction was denied; original log retained",
+    "dependency_junction_created_later": true,
+    "second_attempt_exit_code": -1073740791,
+    "third_attempt_exit_code": -1073740791,
+    "saved_file_independently_read_back": true,
+    "native_library_exit_failure_not_reported_as_process_success": true
+  }
+}

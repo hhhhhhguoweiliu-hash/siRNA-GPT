@@ -1,0 +1,13 @@
+test_missing_required_expression_does_not_read_builtin_join_and_keeps_partial_evidence (test_evaluation_dialogue.DevelopmentDialogueTests.test_missing_required_expression_does_not_read_builtin_join_and_keeps_partial_evidence) ... ok
+test_no_model_gate_qa_not_comparable_and_no_per_case_preset (test_evaluation_dialogue.DevelopmentDialogueTests.test_no_model_gate_qa_not_comparable_and_no_per_case_preset) ... ok
+test_purchased_full_report_shows_both_states_without_reranking (test_evaluation_dialogue.DevelopmentDialogueTests.test_purchased_full_report_shows_both_states_without_reranking) ... ok
+test_raw_docx_only_first_turn_role_assumption_only_second_and_binding_succeeds (test_evaluation_dialogue.DevelopmentDialogueTests.test_raw_docx_only_first_turn_role_assumption_only_second_and_binding_succeeds) ... ok
+test_single_base_change_never_receives_old_score (test_evaluation_dialogue.DevelopmentDialogueTests.test_single_base_change_never_receives_old_score) ... ok
+test_two_round_same_full_inputs_own_histories_settings_and_no_answer_leak (test_evaluation_dialogue.DevelopmentDialogueTests.test_two_round_same_full_inputs_own_histories_settings_and_no_answer_leak) ... ok
+test_workflow_score_and_all_compared_candidates_flags_and_query_window_visible (test_evaluation_dialogue.DevelopmentDialogueTests.test_workflow_score_and_all_compared_candidates_flags_and_query_window_visible) ... ok
+test_wrong_coordinate_declaration_consumed_without_losing_real_target_match (test_evaluation_dialogue.DevelopmentDialogueTests.test_wrong_coordinate_declaration_consumed_without_losing_real_target_match) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 4.491s
+
+OK

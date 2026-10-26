@@ -1,0 +1,79 @@
+{
+  "assets": {
+    "candidates.tsv": {
+      "source": "analysis\\ARPE19_agent_v2_20261018\\deliverable\\04_tools\\legacy_candidate_pool_NOT_ORDER_READY.tsv",
+      "sha256": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853"
+    },
+    "historical_scores.tsv": {
+      "source": "analysis\\ARPE19_agent_v2_20261018\\deliverable\\04_tools\\VEGFA_candidates_cpu.tsv",
+      "sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392"
+    },
+    "VEGFA.fasta": {
+      "source": "analysis\\ARPE19_agent_v2_20261018\\deliverable\\03_reference\\VEGFA_exact_accession_sequences.fasta",
+      "sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706"
+    },
+    "historical_official_example.tsv": {
+      "source": "analysis\\ARPE19_agent_v2_20261018\\deliverable\\04_tools\\official_example_cpu.tsv",
+      "sha256": "8b93e330fa0ebe807a87d4ca63a90c14dee6e87e686cc160a2d55162e5449f8c"
+    },
+    "expression.tsv.gz": {
+      "source": "02_background/gene_expression_background.tsv",
+      "source_sha256": "7a431e5cceee6f6dabeee3382cc2a3f14ac53c14d8fc9cd8b9dfa8e85e9220cb",
+      "rows": 43385,
+      "scope": "single culture run; 4 vessels per oxygen state; untreated baseline"
+    },
+    "historical_seed_matches.tsv": {
+      "source": "risk_raw/seed_counts_official.tsv",
+      "source_sha256": "9d33b32dfd9f946f02eac26bd3a28b44f6ff7d86a425fde6da347e313274aca6",
+      "positive_rows": 14524,
+      "guide_only": true,
+      "seed_type": "mer7m8",
+      "reference_genes": 19415,
+      "evidence": "IMPORTED_HISTORICAL_OFFICIAL_FUNCTION_OUTPUT_NOT_LIVE"
+    },
+    "historical_near_matches.tsv": {
+      "source": "risk_raw/nearperfect_sites.tsv",
+      "source_sha256": "dca2c5caff2958dc93949bf25947c1ab9c07cba6402f711e15be9be62b1612fd",
+      "implementation": "Biostrings fixed Hamming <=2 no indels; supplemental not new algorithm"
+    }
+  },
+  "external_assets": {
+    "official_tools/OligoFormer/model/best_model.pth": {
+      "sha256": "8c2fb4bc847e20c63dfe69381c5dc5c341be71e65c011f4e9a4cd6fdb0e34eca",
+      "bytes": 5804894
+    },
+    "official_tools/RNA-FM/RNA-FM_pretrained.pth": {
+      "sha256": "5b5d7d87b37c291ef42c140ef9edf7aea29f255fa2a4fd435f776c52e93d5e99",
+      "bytes": 1194424423
+    },
+    "official_tools/OligoFormer/scripts/model.py": {
+      "sha256": "9bb055a5d08eaddd0dad7b3d8df90975f150fa2b23147b36adf0583ad015bc13",
+      "bytes": 11505
+    },
+    "official_tools/OligoFormer/scripts/infer.py": {
+      "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f",
+      "bytes": 22032
+    },
+    "official_tools/SeedMatchR_1.1.1/R/get_seed.R": {
+      "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+      "bytes": 4045
+    },
+    "official_tools/SeedMatchR_1.1.1/R/SeedMatchR.R": {
+      "sha256": "78e0fa70b7a43de3cd6d61f61e81deef5dda1b318a738dcb3d09decbb6972a17",
+      "bytes": 3514
+    },
+    "prepared/refseq_utr3_representative.fasta": {
+      "sha256": "8a7a99ecc7346c50c76e37cd24cd851ce96adb348cc447f007233e2f10aac779",
+      "bytes": 37782141
+    }
+  },
+  "upstream_oligo_commit": "e2f53ad63387bbe166bf123949151e2bc9bf6ec3",
+  "seedmatchr_version": "1.1.1",
+  "limitations": [
+    "not order ready",
+    "no user literature sequences supplied",
+    "scores not knockdown percentages",
+    "baseline not siRNA response",
+    "representative UTR not actual cell APA"
+  ]
+}
