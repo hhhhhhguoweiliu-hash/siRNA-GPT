@@ -285,7 +285,7 @@ def load_hpa(hpa_zip: Path, resolve_symbol, universe_ids: set[str]):
         found = sorted(set(hpa["Cell type"].str.casefold()))
         candidates = [x for x in found if "retinal pigment" in x or x == "rpe"]
         raise RuntimeError(f"RPE cell type not found in HPA file. Candidate labels: {candidates[:20]}")
-    rpe = rpe_rows[["gene_id", "nCPM"]].rename(columns={"nTPM": "F3_RPE_nTPM"})
+    rpe = rpe_rows[["gene_id", "nTPM"]].rename(columns={"nTPM": "F3_RPE_nTPM"})
     other = hpa_agg[hpa_agg["Cell type"].str.casefold() != rpe_name].copy()
     other = other.dropna(subset=["nTPM"])
     if not other.empty:
@@ -582,7 +582,7 @@ def main():
     definitions = [
         {"feature": "F1", "name": "缺氧条件下功能依赖性", "raw_value": "未计算", "raw_formula": "待获得完整基因级缺氧 CRISPR 依赖效应矩阵后确定方向并计算", "normalization": "未计算", "source": FEATURE1_SOURCE, "missing_reason": FEATURE1_MISSING},
         {"feature": "F2", "name": "缺氧 ARPE-19 表达暴露", "raw_value": "未计算", "raw_formula": "待载入用户 Nor1-4/Hyp1-4 表达矩阵；本次不读取", "normalization": "未计算", "source": FEATURE2_SOURCE, "missing_reason": FEATURE2_MISSING},
-        {"feature": "F3", "name": "RPE 表达特异性", "raw_value": "log2((RPE nCPM + 1)/(max other-cell-type nCPM + 1))", "raw_formula": "HPA retinal pigment epithelial cells nTPM vs maximum across the other HPA cell types", "normalization": "min-max to [0,1] across calculable genes; equal values -> 0.5", "source": SOURCES["hpa_single_cell_type"]["url"], "missing_reason": "Only when HPA gene mapping, RPE row/value, or other-cell-type maximum is unavailable."},
+        {"feature": "F3", "name": "RPE 表达特异性", "raw_value": "log2((RPE nTPM + 1)/(max other-cell-type nTPM + 1))", "raw_formula": "HPA retinal pigment epithelial cells nTPM vs maximum across the other HPA cell types", "normalization": "min-max to [0,1] across calculable genes; equal values -> 0.5", "source": SOURCES["hpa_single_cell_type"]["url"], "missing_reason": "Only when HPA gene mapping, RPE row/value, or other-cell-type maximum is unavailable."},
         {"feature": "F4", "name": "RPE 核心功能关联", "raw_value": "0–6 distinct predeclared categories supported by GO descendants and/or exact Reactome human pathway IDs", "raw_formula": "Count distinct categories, not number of individual annotations; all supporting GO IDs/evidence codes and Reactome pathways are retained", "normalization": "min-max to [0,1] across genes with mapped GOA/Reactome annotation; equal values -> 0.5", "source": "GOA human GAF + GO basic ontology + Reactome NCBI2Reactome_All_Levels", "missing_reason": "Only if no mapped human GOA annotation and no human Reactome pathway mapping; annotation absence does not imply biological unimportance."},
     ]
     definition_df = pd.DataFrame(definitions)
@@ -699,7 +699,7 @@ One row per unique NCBI Gene ID represented in the project RefSeq transcript-to-
 ## Feature status
 - F1, hypoxia functional dependency: intentionally missing per user instruction. Not zero.
 - F2, hypoxic ARPE-19 expression exposure: intentionally missing per user instruction. Not zero.
-- F3, RPE expression specificity: HPA single-cell type nCPM, calculated as log2((RPE nTPM + 1)/(maximum nTPM among other HPA cell types + 1)); then min-max normalized across genes with values.
+- F3, RPE expression specificity: HPA single-cell type nTPM, calculated as log2((RPE nTPM + 1)/(maximum nTPM among other HPA cell types + 1)); then min-max normalized across genes with values.
 - F4, RPE core-function annotation: number of distinct predefined categories (0–6) supported by GO descendants and/or exact human Reactome pathway IDs; then min-max normalized across genes with mapped GOA or Reactome annotation.
 
 ## Important limitations
