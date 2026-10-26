@@ -1,0 +1,116 @@
+{
+  "kind": "PRESENTATION_PROVENANCE_CHECK_NOT_RECOMPUTATION",
+  "rows": [
+    {
+      "case_id": "W1",
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+      "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+      "oligoformer_scaled_score": 1.121934400320053,
+      "score_source": {
+        "kind": "IMPORTED_VERIFIED_LOCAL",
+        "path": "data/purchased_sivegf_20261024_v1/verified_local_result.json",
+        "sha256": "0f8721bd09ef22de9e4b7dd50220d12df7db399be26594a9c9ae001ba6822f19",
+        "value_field": "oligoformer_scaled_score",
+        "manifest_path": "data/purchased_sivegf_20261024_v1/manifest.json",
+        "manifest_sha256": "17d87eae5d0c36db21a3e7642777e2a83ee80df309beb0f33d9e3f00b313c687",
+        "dataset_id": "purchased_sivegf_20261024_v1",
+        "binding_fields": [
+          "candidate_id",
+          "guide_core19_5to3",
+          "mRNA_context_57nt"
+        ]
+      },
+      "saved_tool_record": "offline_raw_records.zip!/W1/workflow/round_1/runs/20261027_021652_f398b4/score_candidates.json",
+      "exact_id_sequence_context_value_match": true,
+      "short_answer_actual_source_visible": true
+    },
+    {
+      "case_id": "W2b",
+      "candidate_id": "VEGFA_SD_3499",
+      "guide_core19_5to3": "UGUACUACGGAAUAUCUCG",
+      "mRNA_context_57nt": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG",
+      "oligoformer_scaled_score": 0.9915144175887107,
+      "score_source": {
+        "kind": "IMPORTED_HISTORICAL",
+        "path": "data/historical_scores.tsv",
+        "sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+        "value_field": "oligoformer_scaled_score",
+        "binding_fields": [
+          "candidate_id",
+          "guide_core19_5to3",
+          "mRNA_context_57nt"
+        ]
+      },
+      "saved_tool_record": "offline_raw_records.zip!/W2b/workflow/round_1/runs/20261027_021654_fc6f1b/score_candidates.json",
+      "exact_id_sequence_context_value_match": true,
+      "short_answer_actual_source_visible": true
+    },
+    {
+      "case_id": "W3",
+      "candidate_id": "VEGFA_SD_3535",
+      "guide_core19_5to3": "UAUCUGUAUUUCUUUGUCG",
+      "mRNA_context_57nt": "CAUAUUUAUUUUUAAACAACGACAAAGAAAUACAGAUAUAUCUUAAAAAAAAAAAAG",
+      "oligoformer_scaled_score": 1.0035899763107299,
+      "score_source": {
+        "kind": "IMPORTED_HISTORICAL",
+        "path": "data/historical_scores.tsv",
+        "sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+        "value_field": "oligoformer_scaled_score",
+        "binding_fields": [
+          "candidate_id",
+          "guide_core19_5to3",
+          "mRNA_context_57nt"
+        ]
+      },
+      "saved_tool_record": "offline_raw_records.zip!/W3/workflow/round_1/runs/20261027_021655_21a4f7/score_candidates.json",
+      "exact_id_sequence_context_value_match": true,
+      "short_answer_actual_source_visible": true
+    },
+    {
+      "case_id": "W3",
+      "candidate_id": "VEGFA_SD_3499",
+      "guide_core19_5to3": "UGUACUACGGAAUAUCUCG",
+      "mRNA_context_57nt": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG",
+      "oligoformer_scaled_score": 0.9915144175887107,
+      "score_source": {
+        "kind": "IMPORTED_HISTORICAL",
+        "path": "data/historical_scores.tsv",
+        "sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392",
+        "value_field": "oligoformer_scaled_score",
+        "binding_fields": [
+          "candidate_id",
+          "guide_core19_5to3",
+          "mRNA_context_57nt"
+        ]
+      },
+      "saved_tool_record": "offline_raw_records.zip!/W3/workflow/round_1/runs/20261027_021655_21a4f7/score_candidates.json",
+      "exact_id_sequence_context_value_match": true,
+      "short_answer_actual_source_visible": true
+    },
+    {
+      "case_id": "R4",
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+      "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+      "oligoformer_scaled_score": 1.121934400320053,
+      "score_source": {
+        "kind": "IMPORTED_VERIFIED_LOCAL",
+        "path": "data/purchased_sivegf_20261024_v1/verified_local_result.json",
+        "sha256": "0f8721bd09ef22de9e4b7dd50220d12df7db399be26594a9c9ae001ba6822f19",
+        "value_field": "oligoformer_scaled_score",
+        "manifest_path": "data/purchased_sivegf_20261024_v1/manifest.json",
+        "manifest_sha256": "17d87eae5d0c36db21a3e7642777e2a83ee80df309beb0f33d9e3f00b313c687",
+        "dataset_id": "purchased_sivegf_20261024_v1",
+        "binding_fields": [
+          "candidate_id",
+          "guide_core19_5to3",
+          "mRNA_context_57nt"
+        ]
+      },
+      "saved_tool_record": "offline_raw_records.zip!/R4/workflow/round_1/runs/20261027_021659_b7def9/score_candidates.json",
+      "exact_id_sequence_context_value_match": true,
+      "short_answer_actual_source_visible": true
+    }
+  ]
+}

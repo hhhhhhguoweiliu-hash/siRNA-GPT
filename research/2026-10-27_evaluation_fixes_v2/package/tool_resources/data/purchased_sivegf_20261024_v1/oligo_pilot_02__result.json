@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETE",
+  "planned_units": 2,
+  "completed_units": 2,
+  "rows": [
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+      "mRNA_context_57nt": "UGAAUGCAGACCAAAGAAAGAUAGAGCAAGACAAGAAAAAAAAUCAGUUCGAGGAAA",
+      "raw_class1": 0.8366401195526123,
+      "oligoformer_scaled_score": 1.121934400320053,
+      "official_func_filter": 0,
+      "prediction_seconds": 0.5310655000000004,
+      "status": "COMPLETED_REAL_NEW_LOCAL_EXECUTION",
+      "origin": "USER_PURCHASED_SEPARATE"
+    },
+    {
+      "candidate_id": "VEGFA_SD_1552",
+      "guide_core19_5to3": "ACAAACAAAUGCUUUCUCC",
+      "mRNA_context_57nt": "UGUGGGCCUUGCUCAGAGCGGAGAAAGCAUUUGUUUGUACAAGAUCCGCAGACGUGU",
+      "raw_class1": 0.7253023982048035,
+      "oligoformer_scaled_score": 0.9726305159926414,
+      "official_func_filter": 0,
+      "prediction_seconds": 0.7875399000000058,
+      "status": "COMPLETED_REAL_NEW_LOCAL_EXECUTION",
+      "origin": "V2_DESIGN_FROM_ORIGINAL_104"
+    }
+  ],
+  "import_seconds": 23.5488531,
+  "weight_load_seconds": 5.525243,
+  "official_examples_seconds": 2.2143894000000017,
+  "total_worker_seconds": 32.853831899999996,
+  "started_from_job_sha256": "ce7e33f3294b4d537675c3c5269a74590529b4e05c4cdddf4d632c715764d87d",
+  "protocol_sha256": "fff143a5c844547794c05d92af5b4bed7d1043fe919ac0848ca66d42b909d92b",
+  "python": "3.8.16 (default, Mar  2 2023, 03:18:16) [MSC v.1916 64 bit (AMD64)]",
+  "torch": "2.2.1+cpu",
+  "numpy": "1.24.4",
+  "pandas": "2.0.3",
+  "cpu_threads": 2,
+  "seed": 42,
+  "compatibility": [
+    "Existing deterministic CPU adapter",
+    "explicit eval/no_grad",
+    "official RNA-FM layer12 tokens[1:1+length]",
+    "official features/model/weights unchanged",
+    "official loader equality checked"
+  ],
+  "score_interpretation": "Prediction for unmodified paired-core and reference context; not measured knockdown or modified/conjugated product efficacy",
+  "not_executed": [
+    "PITA",
+    "TargetScan",
+    "toxicity",
+    "mismatch model",
+    "training",
+    "wet experiments"
+  ]
+}

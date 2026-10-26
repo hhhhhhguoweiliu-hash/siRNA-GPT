@@ -1,0 +1,40 @@
+{
+  "review_commit": "f665696dd844a97d21270198f12f5bf234710f90",
+  "original_task_review": "3a557d481c78843c988ba972ff06ceb117aac6f5",
+  "source_review": "docs/reviews/20261027_evaluation_redesign_scientific_review.md",
+  "source_review_sha256": "bb92b6f8300ddb9a668361d19ba32ca557ce72b119abe70f54a2b711dc52e188",
+  "case_count": 11,
+  "round_counts": {
+    "W1": 1,
+    "W2": 1,
+    "W2b": 1,
+    "W3": 1,
+    "U1": 2,
+    "R1": 2,
+    "R2": 1,
+    "R3": 1,
+    "R4": 1,
+    "Q1": 1,
+    "Q2": 1
+  },
+  "source_docx": {
+    "source": "data/user_ordered_sequences/20261024/sequence_synthesis_original.docx",
+    "sha256": "7ce4e3cffbe91c62c81926edcc52f53f97fc57c8941085367166068f9b9c3db6",
+    "method": "word/document.xml table label EXACT si-vegf and following row; no sequence_records/README",
+    "source_table_rows_1based": [
+      2,
+      3
+    ],
+    "extracted_text": [
+      "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+      "UUUCUUGUCUUGCUCUAUCTT"
+    ],
+    "other_constructs_or_HIF_passed_to_runtime": false,
+    "mapping_or_derivation_records_passed_to_runtime": false
+  },
+  "three_material_classes_physically_separate": true,
+  "runtime_contains_old_answers": false,
+  "real_model_runs": 0,
+  "human_scores_filled": 0,
+  "scientific_heavy_recomputations": 0
+}

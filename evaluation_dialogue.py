@@ -94,114 +94,182 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None):
         raise ValueError('Use a new empty output directory; previous records are never overwritten')
     root.mkdir(parents=True, exist_ok=True)
     policy = access_policy(case, resources or {'files': {}})
+    settings = evaluation_settings(cfg, dialogue=True)
     save_json(root / 'resource_access.json', policy)
+    save_json(root / 'effective_settings.json', settings)
+    save_json(root / 'planned_rounds.json', {'rounds': case['rounds'], 'failure_policy': settings['failure_policy']})
     history, records, requests = [], [], []
     start = time.monotonic()
-    settings = evaluation_settings(cfg)
+    round_start, current_round = start, 1
+    stopped = False
+    def sanitized(value):
+        text = json.dumps(value, ensure_ascii=False, default=str)
+        if cfg.get('api_key'):
+            text = text.replace(cfg['api_key'], '[REDACTED]')
+        return json.loads(text)
+    def error_info(exc, stage):
+        evidence = {'stage': stage, 'exception_type': type(exc).__name__, 'message': str(exc)}
+        if hasattr(exc, 'diagnostics'):
+            evidence['diagnostics'] = exc.diagnostics()
+        partial = getattr(exc, 'response_snapshot', None)
+        if partial is not None:
+            evidence['partial_response'] = partial
+        return sanitized(evidence)
+    def budget_check():
+        now = time.monotonic()
+        if now - start > settings['case_timeout_seconds']:
+            raise TaskError('达到有效每题时限：' + str(settings['case_timeout_seconds']) + '秒；停止并保留记录')
+        if now - round_start > settings['round_timeout_seconds']:
+            raise TaskError('达到有效每轮时限：' + str(settings['round_timeout_seconds']) + '秒；停止并保留记录')
     def recorded_transport(payload):
-        if time.monotonic() - start > 720:
-            raise TaskError('达到本开发入口每题720秒上限；停止并保留已完成记录')
-        if len(requests) >= 26:
-            raise TaskError('达到本开发入口每题26个替身请求上限')
-        item = {'record_kind': 'OFFLINE_MODEL_STUB_NOT_REAL_MODEL', 'round': len(records) + 1,
+        budget_check()
+        per_round = sum(r['round'] == current_round for r in requests)
+        if per_round >= settings['max_model_requests_per_round'] or len(requests) >= settings['max_model_requests_per_case']:
+            raise TaskError('达到有效模型逻辑请求上限；后续轮次不启动')
+        item = {'record_kind': 'OFFLINE_MODEL_STUB_NOT_REAL_MODEL', 'round': current_round,
                 'payload': copy.deepcopy(payload), 'effective_settings': settings}
         requests.append(item)
         folder = root / 'test_transport' / str(len(requests)).zfill(3)
-        save_json(folder / 'prepared_request.json', item)
-        response = transport(copy.deepcopy(payload))
-        save_json(folder / 'stub_response.json', {'record_kind': item['record_kind'], 'response': response})
-        return response
+        save_json(folder / 'prepared_request.json', sanitized(item))
+        try:
+            response = transport(copy.deepcopy(payload))
+            save_json(folder / 'stub_response.json', sanitized({'record_kind': item['record_kind'], 'response': response}))
+            item['response_saved'] = True
+            budget_check()
+            return response
+        except Exception as exc:
+            item['transport_error'] = error_info(exc, 'model_transport')
+            save_json(folder / 'transport_error.json', item['transport_error'])
+            raise
     for number, spec in enumerate(case['rounds'], 1):
-        common = common_round(spec)
-        inputs = effective_input(common)
-        before = copy.deepcopy(history)
+        current_round, round_start = number, time.monotonic()
         folder = root / ('round_' + str(number))
-        save_json(folder / 'common_user_input.json', common)
-        save_json(folder / 'resolved_input.json', inputs)
-        save_json(folder / 'own_history_before.json', before)
-        # Same complete user envelope and same history policy, not equal histories:
-        # each configuration sees only its OWN previous actual output.
-        inputs['task']['own_history'] = before
+        before = copy.deepcopy(history)
+        common, inputs = None, None
         plan, state, session, error = [], {}, None, ''
-        raw_model_answer = None
-        request_start = len(requests)
-        if group == 'llm':
-            payload = {'model': cfg.get('model'), 'messages': [
-                {'role': 'system', 'content': '你是siRNA研究助手。无科学工具、无外网，不编造计算或实验结果。' + SCOPE + FINAL_ANSWER_STYLE + FIELD_INSTRUCTIONS},
-                {'role': 'user', 'content': json.dumps({'input': inputs, 'request': common['message'],
-                    'shared_user_input': common, 'own_history': before,
-                    'declared_resources': {'scientific_tools': False, 'external_web': False}}, ensure_ascii=False)}]}
-            response = recorded_transport(payload)
-            raw_model_answer = response['choices'][0]['message'].get('content') or ''
-            answer, status, answer_source = raw_model_answer, 'TEST_STUB_ANSWER', 'OFFLINE_MODEL_STUB'
-        else:
-            decision = 'ready'
-            if group == 'agent':
-                proposed, _ = propose(common['message'], inputs, before, cfg, recorded_transport,
-                    local_context={'own_history': before, 'resource_policy': policy})
-                decision, plan = proposed['decision'], proposed['tools']
-                if proposed.get('task_updates'):
-                    raise TaskError('本开发题用户条件已明确；不接受规划器改写共同条件')
-                if decision != 'ready':
-                    raw_model_answer = proposed['summary'] + ('\n' + proposed['question'] if proposed['question'] else '')
-                    answer, status, answer_source = raw_model_answer, 'TEST_STUB_' + decision.upper(), 'OFFLINE_MODEL_STUB'
+        raw_model_answer, error_record = None, None
+        update_check = {'unchanged': {}, 'conflicts': {}}
+        request_start, stage = len(requests), 'input_preparation'
+        status, answer, answer_source = 'NOT_EXECUTED', '', 'NO_ANSWER'
+        try:
+            common = common_round(spec)
+            save_json(folder / 'common_user_input.json', common)
+            save_json(folder / 'own_history_before.json', before)
+            if stopped:
+                answer_source = 'PREVIOUS_ROUND_FAILED_NO_EXECUTION'
             else:
-                plan = fixed_plan(common['conditions'])
-            if decision == 'ready' and not plan:
-                answer = ('判定：只有订购原文，尚无供应商已确认的链角色。\n关键结果：' +
-                    '\n'.join(common['user_input'].get('original_order_lines', [])) +
-                    '\n证据：本轮原始订购两行与修饰注释；没有执行科学核查。'
-                    '\n限制或下一步：可在明确计算链假设后继续；不自动删TT/N3，不据此生成可下单双链。')
-                status, answer_source = 'CLARIFICATION_NO_SCIENTIFIC_EXECUTION', 'FIXED_CONDITION_PRESENTATION'
-            elif decision == 'ready':
-                session = PlannedSession(plan, mode='workflow' if group == 'workflow' else 'agent',
-                    cfg=cfg, run_root=folder / 'runs', **inputs)
-                try:
-                    if group == 'workflow':
-                        for name in session.planned_tools:
-                            got = session.call(name, {})
-                            if got.get('status') == 'ERROR':
-                                raise TaskError(got['message'])
-                        result = session.result_for_plan()
-                        status = result['status']
-                        answer_source = 'DETERMINISTIC_EXISTING_TOOL_EVIDENCE'
+                inputs = effective_input(common)
+                save_json(folder / 'resolved_input.json', inputs)
+                inputs['task']['own_history'] = before
+                budget_check()
+                if group == 'llm':
+                    stage = 'ordinary_model'
+                    payload = {'model': cfg.get('model'), 'messages': [
+                        {'role': 'system', 'content': '你是siRNA研究助手。无科学工具、无外网，不编造计算或实验结果。' + SCOPE + FINAL_ANSWER_STYLE + FIELD_INSTRUCTIONS},
+                        {'role': 'user', 'content': json.dumps({'input': inputs, 'request': common['message'],
+                            'shared_user_input': common, 'own_history': before,
+                            'declared_resources': {'scientific_tools': False, 'external_web': False}}, ensure_ascii=False)}]}
+                    response = recorded_transport(payload)
+                    raw_model_answer = response['choices'][0]['message'].get('content') or ''
+                    answer, status, answer_source = raw_model_answer, 'TEST_STUB_ANSWER', 'OFFLINE_MODEL_STUB'
+                else:
+                    decision = 'ready'
+                    if group == 'agent':
+                        stage = 'planner'
+                        proposed, _ = propose(common['message'], inputs, before, cfg, recorded_transport,
+                            local_context={'own_history': before, 'resource_policy': policy})
+                        decision, plan = proposed['decision'], proposed['tools']
+                        stage = 'planner_update_validation'
+                        for key, value in proposed.get('task_updates', {}).items():
+                            bucket = 'unchanged' if key in inputs['task'] and inputs['task'][key] == value else 'conflicts'
+                            update_check[bucket][key] = value
+                        if update_check['conflicts']:
+                            raise TaskError('规划条件与共同输入冲突，停止且不采用改写：' + json.dumps(update_check['conflicts'], ensure_ascii=False))
+                        if decision != 'ready':
+                            raw_model_answer = proposed['summary'] + ('\n' + proposed['question'] if proposed['question'] else '')
+                            answer, status, answer_source = raw_model_answer, 'TEST_STUB_' + decision.upper(), 'OFFLINE_MODEL_STUB'
                     else:
-                        result = session.run_agent(recorded_transport)
-                        status = result['status']
-                        raw_model_answer = result.get('model_summary_raw') or result.get('model_summary') or result.get('message', '')
-                        answer_source = 'OFFLINE_MODEL_STUB_WITH_SHARED_VALIDATION'
-                except TaskError as exc:
-                    error, status = str(exc), 'FAILED_WITH_RETAINED_PARTIAL_EVIDENCE'
-                    answer_source = 'SHARED_ERROR_PRESENTATION_NOT_MODEL_REASONING'
-                state = copy.deepcopy(session.state)
-                answer = workflow_answer(inputs, state, error) if group == 'workflow' or error else result.get('model_summary_display') or raw_model_answer
-                if group == 'workflow' and number > 1:
-                    old_tools = set(records[-1]['completed_tools'])
-                    repeated = [n for n in state if n in old_tools]
-                    added = [n for n in state if n not in old_tools]
-                    answer += '\n轮次记录：首轮原文保留；本轮重新核对（不复用工具缓存）：' + '、'.join(repeated) + '；本轮新增：' + '、'.join(added)
-        history.extend([{'role': 'user', 'content': common}, {'role': 'assistant', 'content': answer}])
-        record = {'round': number, 'common_user_input': common, 'common_input_sha256': input_sha256(common),
-            'resolved_input_sha256_without_own_history': input_sha256(effective_input(common)),
+                        stage = 'fixed_plan'
+                        plan = fixed_plan(common['conditions'])
+                    if decision == 'ready' and not plan:
+                        answer = ('判定：只有订购原文，尚无供应商已确认的链角色。\n关键结果：' +
+                            '\n'.join(common['user_input'].get('original_order_lines', [])) +
+                            '\n证据：本轮原始订购两行与修饰注释；没有执行科学核查。'
+                            '\n限制或下一步：可在明确计算链假设后继续；不自动删TT/N3，不据此生成可下单双链。')
+                        status, answer_source = 'CLARIFICATION_NO_SCIENTIFIC_EXECUTION', 'FIXED_CONDITION_PRESENTATION'
+                    elif decision == 'ready':
+                        stage = 'session_initialization'
+                        session = PlannedSession(plan, mode='workflow' if group == 'workflow' else 'agent',
+                            cfg=cfg, run_root=folder / 'runs', **inputs)
+                        stage = 'fixed_tools' if group == 'workflow' else 'executor'
+                        if group == 'workflow':
+                            for name in session.planned_tools:
+                                budget_check()
+                                got = session.call(name, {})
+                                budget_check()
+                                if got.get('status') == 'ERROR':
+                                    raise TaskError(got['message'])
+                            result = session.result_for_plan()
+                            status, answer_source = result['status'], 'DETERMINISTIC_EXISTING_TOOL_EVIDENCE'
+                        else:
+                            result = session.run_agent(recorded_transport)
+                            status = result['status']
+                            raw_model_answer = result.get('model_summary_raw') or result.get('model_summary') or result.get('message', '')
+                            answer_source = 'OFFLINE_MODEL_STUB_WITH_SHARED_VALIDATION'
+                        state = copy.deepcopy(session.state)
+                        stage = 'presentation'
+                        answer = workflow_answer(inputs, state) if group == 'workflow' else result.get('model_summary_display') or raw_model_answer
+                        if group == 'workflow' and number > 1:
+                            old_tools = set(records[-1]['completed_tools'])
+                            repeated = [n for n in state if n in old_tools]
+                            added = [n for n in state if n not in old_tools]
+                            answer += '\n轮次记录：首轮原文保留；本轮重新核对（不复用工具缓存）：' + '、'.join(repeated) + '；本轮新增：' + '、'.join(added)
+                budget_check()
+        except Exception as exc:
+            error_record = error_info(exc, stage)
+            error = error_record['message']
+            save_json(folder / 'error.json', error_record)
+            state = copy.deepcopy(session.state) if session else {}
+            status = 'FAILED_WITH_RETAINED_PARTIAL_EVIDENCE'
+            answer_source = 'SHARED_ERROR_PRESENTATION_NOT_MODEL_REASONING'
+            answer = workflow_answer(inputs or {'task': {}, 'candidates': []}, state, error)
+            stopped = True
+        if status != 'NOT_EXECUTED':
+            history.extend([{'role': 'user', 'content': common or spec}, {'role': 'assistant', 'content': answer}])
+        if status in ('INCOMPLETE_OR_CLARIFICATION',):
+            stopped = True
+        record = {'round': number, 'execution': 'NOT_EXECUTED' if status == 'NOT_EXECUTED' else 'ATTEMPTED',
+            'not_executed_reason': 'PREVIOUS_ROUND_FAILED' if status == 'NOT_EXECUTED' else None,
+            'common_user_input': common or spec,
+            'common_input_sha256': input_sha256(common or spec),
+            'resolved_input_sha256_without_own_history': input_sha256({**inputs, 'task': {k: v for k, v in inputs['task'].items() if k != 'own_history'}}) if inputs else None,
             'history_before': before, 'history_after': copy.deepcopy(history),
             'status': status, 'answer': answer, 'answer_source': answer_source,
             'raw_model_answer_TEST_ONLY': raw_model_answer, 'planned_tools': plan,
             'completed_tools': list(state), 'tool_results': state, 'error': error,
-            'resource_access': policy, 'test_stub_requests': len(requests) - request_start,
+            'error_record': error_record, 'planner_task_update_check': update_check,
+            'resource_access': policy, 'effective_settings': settings,
+            'test_stub_requests': len(requests) - request_start,
             'real_model_requests': 0, 'usage_real_model': None,
+            'tool_calls': session.tool_calls if session else 0,
             'run_id': session.id if session else None,
             'delivered_files': [str(p.relative_to(root)).replace('\\', '/') for p in (session.path.rglob('*') if session else []) if p.is_file()]}
+        record = sanitized(record)
         save_json(folder / 'turn_record.json', record)
         records.append(record)
+    last = next((r for r in reversed(records) if r['execution'] == 'ATTEMPTED'), records[-1])
     result = {'group': group, 'case_id': case['id'], 'record_kind': 'OFFLINE_ACCEPTANCE_NOT_REAL_MODEL_EVALUATION',
-        'status': records[-1]['status'], 'answer': records[-1]['answer'], 'rounds': records,
+        'status': last['status'], 'answer': last['answer'], 'rounds': records,
+        'planned_rounds': len(records), 'attempted_rounds': sum(r['execution'] == 'ATTEMPTED' for r in records),
+        'pending_rounds': sum(r['execution'] == 'NOT_EXECUTED' for r in records),
         'case_input': [r['common_user_input'] for r in records], 'input_sha256': input_sha256([r['common_user_input'] for r in records]),
-        'tool_results': records[-1]['tool_results'], 'completed_tools': records[-1]['completed_tools'],
-        'tool_calls': sum(len(r['completed_tools']) + bool(r['error']) for r in records),
+        'tool_results': last['tool_results'], 'completed_tools': last['completed_tools'],
+        'tool_calls': sum(r['tool_calls'] for r in records),
         'usage': [], 'total_tokens': 0 if group == 'workflow' else None, 'usage_complete': group == 'workflow',
-        'real_model_requests': 0, 'test_stub_requests': len(requests),
-        'test_prepared_requests': requests, 'seconds': round(time.monotonic() - start, 3),
+        'real_model_requests': 0, 'test_stub_requests': len(requests), 'effective_settings': settings,
+        'test_prepared_requests': sanitized(requests), 'seconds': round(time.monotonic() - start, 3),
         'quality_scored': False, 'resource_access': policy}
+    result = sanitized(result)
     save_json(root / 'case_input.json', {'rounds': result['case_input'], 'input_sha256': result['input_sha256']})
     save_json(root / 'result.json', result)
     return result

@@ -1,0 +1,1 @@
+PASS: 10 explicit engineering scenarios retain inputs, errors, prior evidence and unexecuted rounds.

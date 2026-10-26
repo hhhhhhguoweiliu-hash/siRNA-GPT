@@ -1,0 +1,13 @@
+{
+  "kind": "PACKAGE_REBUILD_CHECK_NOT_MODEL_RESULT",
+  "same_json_content": [
+    "runtime/cases.json",
+    "runtime/resources.json",
+    "review_only/criteria.json",
+    "review_only/anchors.json",
+    "planning/budget_DRAFT_NOT_AUTHORIZATION.json",
+    "planning/private_group_key.json"
+  ],
+  "independent_rebuild_output": "_test_runs/evaluation_v2_rebuild_check",
+  "real_model_requests": 0
+}

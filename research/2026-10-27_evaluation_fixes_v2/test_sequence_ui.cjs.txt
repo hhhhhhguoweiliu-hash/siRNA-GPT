@@ -1,0 +1,1 @@
+PASS: actual shared chat renderer displays FAIL/FAIL/PASS, verified fields and separate unchanged raw text.

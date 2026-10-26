@@ -1,0 +1,12 @@
+{
+  "kind": "SYNTHETIC_CHECK_NOT_PAPER_DATA",
+  "actual_CLI_exit_codes": [
+    0,
+    0
+  ],
+  "pending_and_resolved_states_verified": true,
+  "real_template_scores_filled": 0,
+  "fixture_path": "tests/fixtures/review_import_synthetic.zip",
+  "fixture_sha256": "9246c213fb1375ab5724c2be645dd107334af6c3fcfab315ab6507f1893e717c",
+  "synthetic_values_stored_only_in_test_fixtures": true
+}

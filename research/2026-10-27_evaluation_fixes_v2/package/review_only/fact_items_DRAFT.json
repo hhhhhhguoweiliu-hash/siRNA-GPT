@@ -1,0 +1,514 @@
+{
+  "W1": [
+    {
+      "fact_id": "W1_F01",
+      "required_fact": "原序列与条件性链角色",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F02",
+      "required_fact": "参考坐标",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F03",
+      "required_fact": "固定参考覆盖",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F04",
+      "required_fact": "绑定scaled分数",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F05",
+      "required_fact": "分数含义",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F06",
+      "required_fact": "非靶seed位点",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F07",
+      "required_fact": "去重非靶基因",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F08",
+      "required_fact": "表达可映射基因",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F09",
+      "required_fact": "两状态检出计数",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F10",
+      "required_fact": "未映射基因",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F11",
+      "required_fact": "未转染基线范围",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W1_F12",
+      "required_fact": "修饰实物限制",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "W2": [
+    {
+      "fact_id": "W2_F01",
+      "required_fact": "逐条核对1157的序列/参考/核心坐标/覆盖与证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2_F02",
+      "required_fact": "逐条核对2739的序列/参考/核心坐标/覆盖与证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2_F03",
+      "required_fact": "逐条核对3119的序列/参考/核心坐标/覆盖与证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2_F04",
+      "required_fact": "逐条核对3193的序列/参考/核心坐标/覆盖与证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2_F05",
+      "required_fact": "逐条核对3429的序列/参考/核心坐标/覆盖与证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2_F06",
+      "required_fact": "逐条核对3499的序列/参考/核心坐标/覆盖与证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2_F07",
+      "required_fact": "逐条核对3500的序列/参考/核心坐标/覆盖与证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2_F08",
+      "required_fact": "逐条核对3502的序列/参考/核心坐标/覆盖与证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2_F09",
+      "required_fact": "逐条核对3535的序列/参考/核心坐标/覆盖与证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "W2b": [
+    {
+      "fact_id": "W2b_F01",
+      "required_fact": "候选版本绑定",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2b_F02",
+      "required_fact": "scaled原值及显示舍入",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2b_F03",
+      "required_fact": "分数来源",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W2b_F04",
+      "required_fact": "预测与实测区别",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "W3": [
+    {
+      "fact_id": "W3_F01",
+      "required_fact": "两候选分数",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W3_F02",
+      "required_fact": "分数高低关系",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W3_F03",
+      "required_fact": "查询窗口定义",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W3_F04",
+      "required_fact": "查询序列",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W3_F05",
+      "required_fact": "IRGM参考坐标与错配",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W3_F06",
+      "required_fact": "科学局限",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "W3_F07",
+      "required_fact": "建议目的及依据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "U1": [
+    {
+      "fact_id": "U1_F01",
+      "required_fact": "首轮序列/坐标/覆盖",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "U1_F02",
+      "required_fact": "首轮范围",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "U1_F03",
+      "required_fact": "次轮新增分数",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "U1_F04",
+      "required_fact": "分数含义",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "U1_F05",
+      "required_fact": "保留各自历史",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "U1_F06",
+      "required_fact": "证据版本与新增/重做说明",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "U1_F07",
+      "required_fact": "次轮范围",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "R1": [
+    {
+      "fact_id": "R1_F01",
+      "required_fact": "首轮原始TT/N3保留",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R1_F02",
+      "required_fact": "链角色未供应商确认",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R1_F03",
+      "required_fact": "补齐明确假设后继续",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R1_F04",
+      "required_fact": "次轮参考/分数绑定",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R1_F05",
+      "required_fact": "化学实物限制",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "R2": [
+    {
+      "fact_id": "R2_F01",
+      "required_fact": "新旧核心原样",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R2_F02",
+      "required_fact": "不迁移旧分数",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R2_F03",
+      "required_fact": "不据错误字段判生物学无效",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R2_F04",
+      "required_fact": "原订购来源保留",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R2_F05",
+      "required_fact": "需要的新核对",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "R3": [
+    {
+      "fact_id": "R3_F01",
+      "required_fact": "声明越界",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R3_F02",
+      "required_fact": "实际序列匹配坐标",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R3_F03",
+      "required_fact": "元数据与序列区分",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R3_F04",
+      "required_fact": "不改原碱基",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "R4": [
+    {
+      "fact_id": "R4_F01",
+      "required_fact": "禁止内置回退",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R4_F02",
+      "required_fact": "保留已有局部证据",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R4_F03",
+      "required_fact": "seed实际进展",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R4_F04",
+      "required_fact": "表达明确缺失",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R4_F05",
+      "required_fact": "完整报告未完成",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "R4_F06",
+      "required_fact": "所需表与来源",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "Q1": [
+    {
+      "fact_id": "Q1_F01",
+      "required_fact": "实际可定位官方引文",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "Q1_F02",
+      "required_fact": "分数定义",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "Q1_F03",
+      "required_fact": "seed位点与基因数及局限",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "Q1_F04",
+      "required_fact": "版本适用范围",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "Q1_F05",
+      "required_fact": "N3未模拟",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "Q1_F06",
+      "required_fact": "基线与处理后测量区别",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ],
+  "Q2": [
+    {
+      "fact_id": "Q2_F01",
+      "required_fact": "指定测量缺口",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "Q2_F02",
+      "required_fact": "不编数或替换本项目测量",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "Q2_F03",
+      "required_fact": "所需对应条件测量",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "Q2_F04",
+      "required_fact": "不宣称全球均无研究",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    },
+    {
+      "fact_id": "Q2_F05",
+      "required_fact": "检索/范围状态区分",
+      "answer_material": "criteria.json and anchors.json; not runtime input",
+      "tolerance": "序列与计数精确；scaled可显示四位小数但须保留原始数值及字段名；含义/建议由真人判断",
+      "human_approved_before_real_run": ""
+    }
+  ]
+}

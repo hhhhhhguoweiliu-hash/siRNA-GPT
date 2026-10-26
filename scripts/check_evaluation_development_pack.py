@@ -16,7 +16,7 @@ from evaluation_dialogue import run_dialogue, common_round, effective_input
 from evaluation_contract import input_sha256
 from test_evaluation_dialogue import test_stub
 
-BASE = ROOT / 'research/2026-10-27_evaluation_review_response'
+BASE = ROOT / 'research/2026-10-27_evaluation_fixes_v2'
 
 
 def sha(path):
@@ -130,7 +130,8 @@ def check(package, out, summary):
     assert not unchanged, unchanged
     summary.parent.mkdir(parents=True, exist_ok=True)
     payload = {'kind': 'OFFLINE_ACCEPTANCE_NOT_AGENT_PERFORMANCE_OR_HUMAN_SCORE',
-        'review_commit': '3a557d481c78843c988ba972ff06ceb117aac6f5',
+        'review_commit': 'f665696dd844a97d21270198f12f5bf234710f90',
+        'original_task_review_commit': '3a557d481c78843c988ba972ff06ceb117aac6f5',
         'latest_main_read': '2623c8601bd4b19b472fafc520b95c0cfd0a0fdb',
         'development_templates': 11, 'offline_case_configuration_units': len(results),
         'offline_round_configuration_units': sum(len(r['rounds']) for r in results),

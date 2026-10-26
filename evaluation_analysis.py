@@ -17,6 +17,18 @@ def mean(values):
     return sum(values) / len(values) if values else None
 
 
+def completion_conflicts(delivery, facts, severe):
+    """Flag contradictions; never replace a human's label or scores."""
+    if delivery != '完成':return []
+    issues=[]
+    for fact, value in facts.items():
+        if value in ('wrong','missing'):issues.append({'code':'NECESSARY_FACT_NOT_CORRECT','fact_id':fact,'value':value})
+        elif value not in ('correct',):issues.append({'code':'NECESSARY_FACT_UNSCORED','fact_id':fact})
+    if severe is True:issues.append({'code':'BLOCKING_SEVERE_ERROR_WITH_COMPLETE_LABEL'})
+    elif severe is None or severe == '':issues.append({'code':'SEVERE_ERROR_JUDGEMENT_PENDING'})
+    return issues
+
+
 def summarize(plan, execution, reviews, adjudications=(), minimum_reviewers=2):
     units = {p['answer_id']: p for p in plan}
     if not plan or len(units) != len(plan):
@@ -25,6 +37,9 @@ def summarize(plan, execution, reviews, adjudications=(), minimum_reviewers=2):
     case_groups = defaultdict(set)
     families = {}
     for p in plan:
+        facts=p['required_fact_ids']
+        if not facts or len(facts)!=len(set(facts)) or any(not isinstance(f,str) or not f for f in facts):
+            raise ValueError('预定必要事实不能为空、重复或删除；按运行前审核的计划核对')
         key = (p['case_id'], p['group'], p['repeat'])
         if key in seen or p['group'] not in GROUPS:
             raise ValueError('题/组/重复重复或组别未知')
@@ -80,14 +95,24 @@ def summarize(plan, execution, reviews, adjudications=(), minimum_reviewers=2):
         raise ValueError('裁决ID重复或不属于计划')
     if any(not d.get('adjudicator_id') or not d.get('reason') for d in decisions.values()):
         raise ValueError('分歧裁决需真人编号和依据')
+    for aid,d in decisions.items():
+        if actual[aid]['execution'] != 'ATTEMPTED':raise ValueError('不能为未运行单元填写真人裁决')
+        if d.get('delivery_judgement') not in (None,'',*DELIVERY):raise ValueError('真人裁决交付标签无效')
+        if d.get('severe_error') not in (None,'') and type(d['severe_error']) is not bool:raise ValueError('真人裁决严重错误需为布尔值')
+        if set(d.get('facts',{}))-set(units[aid]['required_fact_ids']):raise ValueError('裁决不能删除或替换预定必要事实')
+        if any(v not in (None,'','correct','wrong','missing') for v in d.get('facts',{}).values()):raise ValueError('真人事实裁决标签无效')
     rows = []
     for aid, p in units.items():
         ratings = grades[aid]
         eligible = len(ratings) >= minimum_reviewers
         def consensus(key, allowed):
             values = [r.get(key) for r in ratings if r.get(key) not in (None, '')]
-            if not eligible or len(values) != len(ratings):
-                return None
+            if not eligible:return None
+            # Explicit, attributed human correction may also fix unanimous but
+            # internally contradictory ratings. Original ratings remain intact.
+            decided=decisions.get(aid,{}).get(key)
+            if decided in allowed:return decided
+            if len(values)!=len(ratings):return None
             if len(set(values)) == 1:
                 return values[0]
             value = decisions.get(aid, {}).get(key)
@@ -99,7 +124,10 @@ def summarize(plan, execution, reviews, adjudications=(), minimum_reviewers=2):
         fact_status = {}
         for fact in p['required_fact_ids']:
             values = [r['facts'][fact] for r in ratings]
-            if eligible and all(v not in (None, '') for v in values):
+            decided=decisions.get(aid,{}).get('facts',{}).get(fact)
+            if eligible and decided in ('correct','wrong','missing'):
+                fact_status[fact]=decided
+            elif eligible and all(v not in (None, '') for v in values):
                 if len(set(values)) == 1:
                     fact_status[fact] = values[0]
                 else:
@@ -110,8 +138,12 @@ def summarize(plan, execution, reviews, adjudications=(), minimum_reviewers=2):
         quality = {k: mean([r[k] for r in ratings]) if eligible and all(r.get(k) not in (None, '') for r in ratings) else None for k in DIMENSIONS}
         fraction = (sum(v == 'correct' for v in fact_status.values()) / len(fact_status)
                     if fact_status and all(v is not None for v in fact_status.values()) else None)
+        issues=completion_conflicts(delivery,fact_status,severe)
         rows.append({**p, 'execution': actual[aid]['execution'], 'human_raters': len(ratings),
-            'delivery_judgement': delivery, 'complete': None if delivery is None else int(delivery == '完成'),
+            'delivery_judgement': delivery, 'complete': None if delivery is None or issues else int(delivery == '完成'),
+            'pending_human_consistency_check':bool(issues),'consistency_issues':issues,
+            'original_rating_consistency_issues':[{'reviewer_id':r['reviewer_id'],
+                'issues':completion_conflicts(r.get('delivery_judgement'),r['facts'],r.get('severe_error'))} for r in ratings],
             'severe_error': severe, 'facts': fact_status, 'fact_delivery_correct_fraction': fraction,
             'quality': quality, 'original_ratings': ratings, 'adjudication': decisions.get(aid),
             'seconds': actual[aid].get('seconds'), 'model_requests': actual[aid].get('model_requests'),
@@ -123,7 +155,7 @@ def summarize(plan, execution, reviews, adjudications=(), minimum_reviewers=2):
             def task_mean(key):
                 values = [r[key] for r in selected]
                 return mean(values) if all(v is not None for v in values) else None
-            quality = {k: mean([r['quality'][k] for r in selected]) if all(r['quality'][k] is not None for r in selected) else None for k in DIMENSIONS}
+            quality = {k: mean([r['quality'][k] for r in selected]) if all(r['quality'][k] is not None and not r['pending_human_consistency_check'] for r in selected) else None for k in DIMENSIONS}
             tasks.append({'case_id': cid, 'group': group, 'category': selected[0]['category'],
                 'family': selected[0]['family'], 'planned_repeats': len(selected),
                 'completion_fraction': task_mean('complete'), 'fact_delivery_correct_fraction': task_mean('fact_delivery_correct_fraction'),
@@ -146,6 +178,9 @@ def summarize(plan, execution, reviews, adjudications=(), minimum_reviewers=2):
                 'severe_error_percent': None if group_mean('severe_error_fraction') is None else 100 * group_mean('severe_error_fraction'),
                 'quality': {k: mean([t['quality'][k] for t in selected]) if not category_incomplete and all(t['quality'][k] is not None for t in selected) else None for k in DIMENSIONS},
                 'quality_task_distributions': {k: [{'case_id': t['case_id'], 'score': t['quality'][k]} for t in selected] for k in DIMENSIONS},
+                'quality_scoring_coverage':{k:{'scorable_task_count':sum(t['quality'][k] is not None for t in selected),
+                    'unscorable_task_count':sum(t['quality'][k] is None for t in selected),
+                    'total_task_count':len(selected)} for k in DIMENSIONS},
                 'completion_case_fractions': [{'case_id': t['case_id'], 'fraction': t['completion_fraction']} for t in selected]})
     paired = []
     for category in sorted({p['category'] for p in plan}):
@@ -171,6 +206,7 @@ def summarize(plan, execution, reviews, adjudications=(), minimum_reviewers=2):
         'minimum_human_reviewers_for_consensus': minimum_reviewers,
         'planned_units': len(plan), 'attempted_units': sum(e['execution'] == 'ATTEMPTED' for e in execution),
         'unfilled_rating_rows_ignored_not_zero': unfilled, 'unit_records': rows, 'task_equal_weight_records': tasks,
+        'pending_human_consistency_units':[r['answer_id'] for r in rows if r['pending_human_consistency_check']],
         'category_summaries': summaries, 'paired_differences': paired,
         'human_ratings_are_not_created_by_this_program': True,
         'notes': ['No aggregation across work/change/reliability/QA categories', 'Family variants and technical repeats are not independent tasks',

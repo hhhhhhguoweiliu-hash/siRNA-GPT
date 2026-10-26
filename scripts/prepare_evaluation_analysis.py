@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from evaluation_analysis import summarize
 
-BASE = ROOT / 'research/2026-10-27_evaluation_review_response'
+BASE = ROOT / 'research/2026-10-27_evaluation_fixes_v2'
 FACTS = {
     'W1': ['原序列与条件性链角色', '参考坐标', '固定参考覆盖', '绑定scaled分数', '分数含义', '非靶seed位点',
            '去重非靶基因', '表达可映射基因', '两状态检出计数', '未映射基因', '未转染基线范围', '修饰实物限制'],
@@ -24,8 +24,8 @@ FACTS = {
 }
 
 
-def main():
-    package = BASE / 'package'
+def main(package=None):
+    package = Path(package) if package is not None else BASE / 'package'
     cases = {c['id']: c for c in json.loads((package / 'runtime/cases.json').read_text(encoding='utf-8'))['cases']}
     units = json.loads((package / 'planning/private_group_key.json').read_text(encoding='utf-8'))
     specs = {cid: [{'fact_id': cid + '_F' + str(i).zfill(2), 'required_fact': label,
@@ -58,4 +58,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    import argparse
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--package',type=Path)
+    main(parser.parse_args().package)

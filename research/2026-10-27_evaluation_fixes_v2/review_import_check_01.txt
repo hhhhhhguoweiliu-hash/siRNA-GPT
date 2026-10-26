@@ -1,0 +1,1 @@
+PASS: two synthetic review files -> import -> pending -> attributed adjudication; real template remains blank.

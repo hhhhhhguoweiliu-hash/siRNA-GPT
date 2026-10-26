@@ -1,0 +1,142 @@
+{
+  "recorded_at": "2026-10-24T13:16:00+08:00",
+  "provenance": "User explicitly identified this local file as the purchased-sequence document and authorized upload to the existing private repository.",
+  "original": {
+    "filename": "序列合成.docx",
+    "local_path": "D:\\WHY\\课题\\框架核酸逻辑门放大\\purchase\\序列合成.docx",
+    "repository_path": "data/user_ordered_sequences/20261024/sequence_synthesis_original.docx",
+    "bytes": 13516,
+    "sha256": "7ce4e3cffbe91c62c81926edcc52f53f97fc57c8941085367166068f9b9c3db6",
+    "git_blob_sha1": "8e97f64e1abc4ade745716d6192460c758839260"
+  },
+  "reading_scope": {
+    "method": "ZIP + word/document.xml; all body paragraphs and table cells in order",
+    "formatting_preserved_in_original": true,
+    "plain_text_preserves_formatting": false,
+    "xml_features": {
+      "ins": 0,
+      "del": 0,
+      "commentRangeStart": 0,
+      "drawing": 0,
+      "pict": 0
+    }
+  },
+  "blocks": [
+    {
+      "block": 1,
+      "type": "paragraph",
+      "text": "序列合成"
+    },
+    {
+      "block": 2,
+      "type": "table",
+      "rows": [
+        [
+          "H1",
+          "5’– FITC-GTT GGA ATT GGG AGT AAG GGC TCT TAC TTT GCC CTT ACT CCC–NH2–-NHS-Val-Cit-PABC-BCN-N3-si-vegf 3’"
+        ],
+        [
+          "si-vegf",
+          "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）"
+        ],
+        [
+          "",
+          "UUUCUUGUCUUGCUCUAUCTT"
+        ],
+        [
+          "H2",
+          "5’si-hif-N3-BCN-PABC-Cit-Val-NHS–NH2– GCC CTT ACT CCC AAT TCC AAC GGG AGT AAG GGC AAA GTA AGA–Cy5-3’"
+        ],
+        [
+          "si-hif",
+          "AAGAGGUGGAUAUGUCUGGTT-N3（叠氮基团，用于点击化学）"
+        ],
+        [
+          "",
+          "CCAGACAUAUCCACCUCUUTT"
+        ],
+        [
+          "S1",
+          "5'-/GCC CTT ACT CCG TGC AC-PEG4-NH₂-9-cis-Retinal/-3'"
+        ],
+        [
+          "S2",
+          "5'-/c(RGDfK)-N3-DBCO-PEG4-ATG TGC ACT TCA ATT CCA AC/-3'"
+        ]
+      ]
+    },
+    {
+      "block": 3,
+      "type": "paragraph",
+      "text": "备注：最终合成的：H1-si-vegf、H2-si-hif、S1-9-cis-Retinal、S2-c(RGDfK)，其中核酸序列已确定，红色底纹为连接的siRNA，蓝色底纹为连接子，黄色底纹为NH2，用于与连接子的连接，绿色和紫色底纹为修饰荧光基团。"
+    },
+    {
+      "block": 4,
+      "type": "paragraph",
+      "text": "文字描述：H1、H2为DNA发夹链，分别连接si-vegf、si-hif（连接位置已在表中标明），连接子选用Val-Cit-PABC，荧光使用FITC、Cy5，其余带有颜色基团都是为了能够成功连接而放的。"
+    },
+    {
+      "block": 5,
+      "type": "paragraph",
+      "text": ""
+    }
+  ],
+  "sequence_checks": [
+    {
+      "label": "si-vegf",
+      "strand1_as_written": "GAUAGAGCAAGACAAGAAATT",
+      "strand2_as_written": "UUUCUUGUCUUGCUCUAUCTT",
+      "strand1_len": 21,
+      "strand2_len": 21,
+      "first19_reverse_complement_match": true,
+      "nine_pool_same_core_pair_ids": [],
+      "mapping": [
+        {
+          "document_strand": "first",
+          "exact_same_orientation_positions_on_NM_003376_6": [
+            1439
+          ],
+          "core_length": 19
+        },
+        {
+          "document_strand": "second",
+          "exact_same_orientation_positions_on_NM_003376_6": [],
+          "core_length": 19
+        }
+      ]
+    },
+    {
+      "label": "si-hif",
+      "strand1_as_written": "AAGAGGUGGAUAUGUCUGGTT",
+      "strand2_as_written": "CCAGACAUAUCCACCUCUUTT",
+      "strand1_len": 21,
+      "strand2_len": 21,
+      "first19_reverse_complement_match": true,
+      "nine_pool_same_core_pair_ids": [],
+      "mapping": []
+    }
+  ],
+  "derivation": {
+    "core": "Remove the two terminal TT characters only for the recorded 19-character core comparison; do not modify original synthesis strings or infer TT chemistry.",
+    "reference": "NM_003376.6 local historical GenBank previously audited",
+    "reference_local_path": "analysis/ARPE19_candidates_20261016/public_sources/VEGFA_NM003376.gb",
+    "vegfa_reference_cds_1based_inclusive": [
+      497,
+      1684
+    ],
+    "vegf_strand1_core_same_orientation_hit_1based_inclusive": [
+      1439,
+      1457
+    ],
+    "roles": "Rows were not explicitly named guide/passenger in the source. Preserve row order. Sense/antisense interpretation is derived from reference alignment with conventional 5prime-to-3prime interpretation, not a vendor confirmation."
+  },
+  "limits": {
+    "model_inference_performed": false,
+    "seed_scan_performed": false,
+    "wet_lab_validation_performed": false,
+    "hif_target_reference_verified": false,
+    "paper_source_doi_in_document": false,
+    "vendor_quality_certificate_in_document": false,
+    "sequence_modification_chemistry_independently_verified": false
+  }
+}

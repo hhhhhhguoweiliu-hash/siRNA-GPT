@@ -26,6 +26,20 @@ def input_sha256(inputs):
     return hashlib.sha256(json.dumps(inputs,ensure_ascii=False,sort_keys=True,
         separators=(',',':')).encode('utf-8')).hexdigest()
 
+def score_source_for_row(row,result):
+    """Use row-specific provenance; never label a purchased score with legacy hash."""
+    if row.get('score_source'):return row['score_source']
+    dataset=row.get('evidence_dataset_id')
+    if dataset:
+        manifest=result.get('versioned_imports',{}).get(row['candidate_id'],{})
+        return {'kind':'IMPORTED_VERIFIED_LOCAL','dataset_id':dataset,
+            'path':'data/'+dataset+'/verified_local_result.json',
+            'sha256':manifest.get('files',{}).get('verified_local_result.json'),
+            'manifest_path':'data/'+dataset+'/manifest.json','value_field':'oligoformer_scaled_score'}
+    return {'kind':'IMPORTED_HISTORICAL','path':'data/historical_scores.tsv',
+        'sha256':result.get('source_sha256') or result.get('legacy_source_sha256'),
+        'value_field':'oligoformer_scaled_score'}
+
 def workflow_answer(inputs,results,error=''):
     """Presentation of actual new workflow results; never rewrites model answers."""
     def table(headers,body):
@@ -53,8 +67,14 @@ def workflow_answer(inputs,results,error=''):
             for claim in r.get('declared_coordinate_checks',[]):
                 lines.append('用户坐标声明核对：'+json.dumps({'candidate_id':r['candidate_id'],**claim},ensure_ascii=False))
     if score_rows:
-        lines.append(table(['候选','模型分数(scaled，原始精度)','raw_class1','来源状态'],[
-            [r['candidate_id'],r['oligoformer_scaled_score'],r.get('raw_class1','未提供'),score_result.get('status','未知')] for r in score_rows if show(r)]))
+        body=[]
+        for r in score_rows:
+            if not show(r):continue
+            src=score_source_for_row(r,score_result)
+            locator=src['path']+'；SHA256='+str(src.get('sha256') or '未提供，需核对')
+            if src.get('manifest_path'):locator+='；绑定清单='+src['manifest_path']
+            body.append([r['candidate_id'],r['oligoformer_scaled_score'],r.get('raw_class1','未提供'),src['kind'],locator])
+        lines.append(table(['候选','模型分数(scaled，原始精度)','raw_class1','本行来源状态','本行实际分数来源'],body))
     if report.get('rows'):
         lines.append(table(['候选','复核警告','近匹配窗口/转录本','当前规则列为优先核查'],[
             [r['candidate_id'],r.get('review_flags') or '未见当前规则的已知提示，不代表安全',
@@ -78,7 +98,7 @@ def workflow_answer(inputs,results,error=''):
         lines.append('当前工作规则的优先核查名单：'+('、'.join(selected) or '无')+'；不是生物学最佳答案。')
     evidence='本轮实际完成：'+('、'.join(results) or '无成功科学工具')+'。'
     if target_rows:evidence+='核心坐标来自verify_target，不用23nt设计窗口坐标代替。'
-    if score_rows:evidence+='分数导入来源指纹：'+str(score_result.get('source_sha256') or score_result.get('legacy_source_sha256') or score_rows[0].get('evidence_dataset_id','未提供'))+'。'
+    if score_rows:evidence+='每条分数的实际文件、SHA256及绑定版本见上表；不以旧资源指纹代替其他候选来源。'
     if report:evidence+='交付报告：'+report.get('report','report.html')+'；全部候选底表：'+report.get('table','candidates_ranked.tsv')+'。'
     limits=[]
     if not score_rows:limits.append('未评分')

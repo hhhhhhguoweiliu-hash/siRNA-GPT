@@ -17,10 +17,12 @@ sys.path.insert(0, str(ROOT))
 from core import save_json, read_tsv, fasta, revcomp
 from evaluation_dialogue import common_round, effective_input, fixed_plan
 from evaluation_contract import input_sha256
+from evaluation_protocol import evaluation_settings
 from verified_imports import calculation_candidate, DATASET
 
 REVIEW = 'docs/reviews/20261027_evaluation_redesign_scientific_review.md'
-BASE = ROOT / 'research/2026-10-27_evaluation_review_response'
+BASE = ROOT / 'research/2026-10-27_evaluation_fixes_v2'
+MATERIAL_LABEL = 'Artificial development material, not an experimental observation'
 ASSUMPTIONS = {'rows_written_5to3': True, 'guide_row': 2,
               'guide_core19_5to3': 'UUUCUUGUCUUGCUCUAUC',
               'passenger_core19_5to3': 'GAUAGAGCAAGACAAGAAA'}
@@ -97,12 +99,12 @@ def build(out):
         'U1': [({'candidate_rows': one}, target), ({'candidate_rows': one}, score)],
         'R1': [({'original_order_lines': original}, conditions()), (purchased, {**score, 'chain_assumption_provided': True})],
         'R2': [({'candidate_rows': [changed], 'original_order_lines': original,
-                 'constructed_material': 'Artificial single-base mismatch, not an experimentally tested candidate'},
+                 'constructed_material': MATERIAL_LABEL},
                 conditions(candidate_check=True, chain_assumption_provided=True))],
         'R3': [({'candidate_rows': one, 'declared_core_coordinates': [{'candidate_id': 'VEGFA_SD_3499',
                  'reference': 'NM_003376.6', 'start_1based': 3610, 'end_1based': 3628}],
-                 'constructed_material': 'Artificial wrong core-coordinate declaration; original candidate row preserved'}, target)],
-        'R4': [({**purchased, 'constructed_material': 'User-required expression table intentionally absent; builtin fallback prohibited'},
+                 'constructed_material': MATERIAL_LABEL}, target)],
+        'R4': [({**purchased, 'constructed_material': MATERIAL_LABEL},
                 {**full, 'allow_builtin_expression': False})],
         'Q1': [({'candidate_rows': [], 'user_provided_evidence': {'software_context': {
             'OligoFormer_official_commit': 'e2f53ad63387bbe166bf123949151e2bc9bf6ec3',
@@ -126,6 +128,9 @@ def build(out):
                 'comparison_ready_offline': category != 'literature_qa'}
         cases.append(case)
         standards.append({'case_id': identity, 'category': category, 'family': family,
+            'construction_truth_REVIEW_ONLY': {'R2':'Same ID, artificial single-base change; old duplex fields may conflict',
+                'R3':'Declared core 3610-3628 is outside 3609nt reference; actual match 3501-3519',
+                'R4':'Required user expression absent; builtin fallback explicitly disallowed'}.get(identity),
             'full_question_and_judgement_standard_from_uploaded_review': section,
             'necessary_evidence': '逐项按所附完整标准核对；保留实际交付附件与原答，不用底表替原答纠错',
             'allowed_answers': '按本题明确目的判断，允许有证据的不同建议；不强制匹配程序排名或单一工具顺序',
@@ -133,7 +138,7 @@ def build(out):
                 '把seed匹配或无警告当实验脱靶/安全认证', '引用不支持结论', '把缺失填零或未获许可回退内置表达'],
             'human_scores': {'accuracy_0_2': '', 'evidence_0_2': '', 'task_fit_0_2': '', 'limits_0_2': ''}})
     runtime = out / 'runtime'
-    save_json(runtime / 'cases.json', {'schema': 'sirna-development-dialogue-v1',
+    save_json(runtime / 'cases.json', {'schema': 'sirna-development-dialogue-v2',
         'review_status': 'SEEN_DEVELOPMENT_CASES_NOT_INDEPENDENT_TESTS_NO_NEW_MODEL_EXECUTION',
         'resource_manifest_file': 'resources.json', 'conditions_definition': {
             'candidate_check': '核对已给候选/绑定', 'reference_check': '核对靶参考',
@@ -198,26 +203,35 @@ def build(out):
         'accuracy_0_2': '', 'evidence_0_2': '', 'task_fit_0_2': '', 'limits_0_2': '',
         'delivery_judgement': '', 'severe_error': '', 'unscorable_reason': '', 'notes': ''} for u in units]
     save_json(out / 'review_only/blank_scores.json', blank)
+    limits=evaluation_settings({'max_model_turns':12,'max_tool_calls':18,'max_output_tokens':1800,
+        'thinking':'disabled','request_timeout':90,'api_retries':1},dialogue=True)
     save_json(out / 'planning/budget_DRAFT_NOT_AUTHORIZATION.json', {
         'status': 'DRAFT_ONLY_NO_REAL_MODEL_RUNS', 'development_cases': len(cases),
         'offline_comparable_cases': 9, 'qa_separate_not_comparable': ['Q1', 'Q2'],
         'technical_repetitions_do_not_increase_independent_case_count': True,
         'future_real_entry': 'existing authenticated UI usage-confirmation mechanism; not yet connected for this new pack',
         'fixed_model_requests': 0, 'ordinary_model_requests_per_user_round': 1,
-        'agent_model_requests_per_round_upper_bound': 13, 'agent_model_requests_per_case_upper_bound': 26,
-        'tool_call_limit_per_round': 18, 'case_seconds_upper_bound_proposed': 720,
+        'agent_model_requests_per_round_upper_bound': limits['max_model_requests_per_round'],
+        'agent_model_requests_per_case_upper_bound': limits['max_model_requests_per_case'],
+        'tool_call_limit_per_round': limits['max_tool_calls'],
+        'case_seconds_upper_bound_proposed': limits['case_timeout_seconds'],
+        'round_seconds_upper_bound':limits['round_timeout_seconds'],
+        'settings_source':'evaluation_protocol.evaluation_settings(dialogue=True)',
+        'effective_test_settings':limits,
         'model_settings': {'model': 'same configured model for both model arms', 'thinking': 'disabled',
                            'max_output_tokens': 1800, 'request_timeout': 90, 'api_retries': 1},
         'money_cost': None, 'real_usage': None, 'human_scores': None,
         'stop_on_account_error_or_timeout': True, 'formal_unseen_12_case_set': 'NOT_CREATED; independent people required'})
-    save_json(out / 'build_receipt.json', {'review_commit': '3a557d481c78843c988ba972ff06ceb117aac6f5',
+    save_json(out / 'build_receipt.json', {'review_commit': 'f665696dd844a97d21270198f12f5bf234710f90',
+        'original_task_review': '3a557d481c78843c988ba972ff06ceb117aac6f5',
         'source_review': REVIEW, 'source_review_sha256': sha(ROOT / REVIEW), 'case_count': len(cases),
         'round_counts': {c['id']: len(c['rounds']) for c in cases}, 'source_docx': receipt,
         'three_material_classes_physically_separate': True, 'runtime_contains_old_answers': False,
         'real_model_runs': 0, 'human_scores_filled': 0, 'scientific_heavy_recomputations': 0})
     (out / 'review_only/README.md').write_text(
         '# 评审材料，未评分\n\n先读完整题干与逐题判断标准criteria.json，再按anchors和已有证据核对实际交付。'
-        'blank_scores.json及配套Excel所有评分栏留空。没有新的真实模型回答可评分；不得给测试替身填科研质量分。'
+        '填写使用review_form_blank.xlsx的评分/逐事实/裁决三表，说明见REVIEWER_INSTRUCTIONS.md；JSON空表仅作结构对照。'
+        '所有人工字段留空，没有新的真实模型回答可评分；不得给测试替身填科研质量分。'
         '组别密钥在planning/private_group_key.json，不随匿名评审包发送。原文与失败不得改写。\n', encoding='utf-8')
     (runtime / 'README.md').write_text(
         '# 共同运行输入\n\ncases.json含11个已见开发模板的全文及两轮输入；Q1/Q2单列未具备对等入口。'

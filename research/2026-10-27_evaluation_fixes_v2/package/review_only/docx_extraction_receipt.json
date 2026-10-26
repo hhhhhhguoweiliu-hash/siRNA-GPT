@@ -1,0 +1,15 @@
+{
+  "source": "data/user_ordered_sequences/20261024/sequence_synthesis_original.docx",
+  "sha256": "7ce4e3cffbe91c62c81926edcc52f53f97fc57c8941085367166068f9b9c3db6",
+  "method": "word/document.xml table label EXACT si-vegf and following row; no sequence_records/README",
+  "source_table_rows_1based": [
+    2,
+    3
+  ],
+  "extracted_text": [
+    "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+    "UUUCUUGUCUUGCUCUAUCTT"
+  ],
+  "other_constructs_or_HIF_passed_to_runtime": false,
+  "mapping_or_derivation_records_passed_to_runtime": false
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "SYNTHETIC_IMPORT_ALGORITHM_CHECK_NOT_MODEL_OR_PAPER_RESULTS",
+  "two_independent_review_files_read": true,
+  "raw_reviews_and_fact_rows_preserved": true,
+  "unscorable_and_pending_flags_preserved_as_null": true,
+  "duplicate_reviewer_id_rejected": true,
+  "pending_then_attributed_human_adjudication_flow_checked": true,
+  "synthetic_raw_files_location": "_test_runs/review_import_v2 (not paper results)",
+  "real_template": {
+    "path": "package/review_only/review_form_blank.xlsx",
+    "sha256": "e692810a6654d4d8b5959c6635e2c50f5de792004eaccacb79c227cf0364c7b3",
+    "planned_answer_rows": 33,
+    "fact_rows": 210,
+    "human_reviews_filled": 0,
+    "all_real_rates_and_differences_null": true
+  },
+  "native_Excel_UI_acceptance": false,
+  "real_model_calls": 0
+}

@@ -1,0 +1,21 @@
+{
+  "path": "package/review_only/review_form_blank.xlsx",
+  "sha256": "e692810a6654d4d8b5959c6635e2c50f5de792004eaccacb79c227cf0364c7b3",
+  "bytes": 15720,
+  "crc": "PASS",
+  "answer_rows": 33,
+  "empty_four_dimension_cells": 132,
+  "fact_rows": 210,
+  "all_human_score_fact_adjudication_fields_blank": true,
+  "formulas": 0,
+  "sheet_protection": false,
+  "imported_real_reviews": 0,
+  "native_Excel_UI_acceptance": false,
+  "actual_three_sheet_previews_reviewed": true,
+  "authoring_exit": {
+    "code": -1073740791,
+    "all_four_exports_saved_before_failure": true,
+    "saved_files_independently_read_and_imported": true,
+    "log": "workbook_build_01.txt"
+  }
+}

@@ -195,10 +195,17 @@ class Session:
     raw=next(r for r in self.candidates if r['candidate_id']==x['candidate_id']);bound=bind(raw,x);r=bound['result']
     rr.append({'candidate_id':x['candidate_id'],'guide_core19_5to3':x['guide_core19_5to3'],'mRNA_context_57nt':x['mRNA_context_57nt'],
      'raw_class1':r['oligo_raw_class1'],'oligoformer_scaled_score':r['oligoformer_scaled_score'],'official_func_filter':r['official_func_filter'],
-     'evidence_dataset_id':bound['manifest']['dataset_id'],'source_commit':bound['manifest']['source_commit'],'not_N3_construct_simulation':True});continue
+     'evidence_dataset_id':bound['manifest']['dataset_id'],'source_commit':bound['manifest']['source_commit'],'not_N3_construct_simulation':True,
+     'score_source':{'kind':'IMPORTED_VERIFIED_LOCAL','path':'data/'+bound['manifest']['dataset_id']+'/verified_local_result.json',
+      'sha256':bound['manifest']['files']['verified_local_result.json'],'value_field':'oligoformer_scaled_score',
+      'manifest_path':'data/'+bound['manifest']['dataset_id']+'/manifest.json',
+      'manifest_sha256':sha(DATA/bound['manifest']['dataset_id']/'manifest.json'),
+      'dataset_id':bound['manifest']['dataset_id'],'binding_fields':['candidate_id','guide_core19_5to3','mRNA_context_57nt']}});continue
    r=old.get(x['candidate_id'])
    if not r or r['guide_core19_5to3']!=x['guide_core19_5to3'] or r['mRNA_context_57nt']!=x['mRNA_context_57nt']:raise TaskError('历史分数与候选序列或上下文不一致，不可导入')
-   rr.append({**r,'raw_class1':float(r['raw_class1']),'oligoformer_scaled_score':float(r['oligoformer_scaled_score']),'official_func_filter':int(r['official_func_filter'])})
+   rr.append({**r,'raw_class1':float(r['raw_class1']),'oligoformer_scaled_score':float(r['oligoformer_scaled_score']),'official_func_filter':int(r['official_func_filter']),
+    'score_source':{'kind':'IMPORTED_HISTORICAL','path':'data/historical_scores.tsv','sha256':sha(DATA/'historical_scores.tsv'),
+     'value_field':'oligoformer_scaled_score','binding_fields':['candidate_id','guide_core19_5to3','mRNA_context_57nt']}})
   return {'status':'IMPORTED_VERIFIED_LOCAL' if self.verified_imports else 'IMPORTED_HISTORICAL',
    **({'legacy_source_sha256':sha(DATA/'historical_scores.tsv')} if self.verified_imports else {'source_sha256':sha(DATA/'historical_scores.tsv')}),'rows':rr,'score_not_percent':True,
    **({'versioned_imports':{cid:b['manifest'] for cid,b in self.verified_imports.items()}} if self.verified_imports else {})}
