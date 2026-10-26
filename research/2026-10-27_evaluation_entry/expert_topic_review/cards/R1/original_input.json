@@ -1,0 +1,52 @@
+{
+  "rounds": [
+    {
+      "message": "附件只有订购记录这两行和TT、N3原注释，未写guide/passenger。现在能否把它们当作供应商已确认的guide和可直接下单的双链？请指出已知和未确认部分。",
+      "user_input": {
+        "original_order_lines": [
+          "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+          "UUUCUUGUCUUGCUCUAUCTT"
+        ]
+      },
+      "conditions": {
+        "candidate_check": false,
+        "reference_check": false,
+        "score_check": false,
+        "seed_check": false,
+        "expression_check": false,
+        "report_required": false,
+        "both_expression_states": false,
+        "compare_all_requested_candidates": false,
+        "chain_assumption_provided": false,
+        "allow_builtin_expression": true
+      }
+    },
+    {
+      "message": "本轮只核查计算：假设两行均按5′→3′写，第2行为guide，核心UUUCUUGUCUUGCUCUAUC，另行核心GAUAGAGCAAGACAAGAAA；这不是新增供应商认证。请继续核对固定VEGFA参考及已有绑定分数，不做化学形式确认或新科学重算。",
+      "user_input": {
+        "original_order_lines": [
+          "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+          "UUUCUUGUCUUGCUCUAUCTT"
+        ],
+        "calculation_assumptions": {
+          "rows_written_5to3": true,
+          "guide_row": 2,
+          "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+          "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA"
+        }
+      },
+      "conditions": {
+        "candidate_check": false,
+        "reference_check": false,
+        "score_check": true,
+        "seed_check": false,
+        "expression_check": false,
+        "report_required": false,
+        "both_expression_states": false,
+        "compare_all_requested_candidates": false,
+        "chain_assumption_provided": true,
+        "allow_builtin_expression": true
+      }
+    }
+  ]
+}

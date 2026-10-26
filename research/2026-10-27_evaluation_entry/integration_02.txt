@@ -1,0 +1,2 @@
+PASS: actual run IDs and every fact row match; all human fields blank; new reviewer ZIP contains the XLSX without changing the original run package.
+PASS: full 27-unit / 33-round synthetic HTTP entry -> actual records -> anonymous cards -> matching blank XLSX; 0 real model calls or scores.

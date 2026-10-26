@@ -1,0 +1,364 @@
+{
+  "kind": "ORIENTATION_NOT_MODEL_SCORES",
+  "task_cards": 11,
+  "new_real_answers": 0,
+  "placeholder_answer_positions": 33,
+  "human_scores_filled": 0,
+  "practice_original_model_requests": 8,
+  "practice_does_not_count_as_new_run": true,
+  "checked_card_links": [
+    {
+      "from": "01_PROJECT_BRIEFING_ZH.md",
+      "target": "reference_for_judgement/REVIEWER_INSTRUCTIONS.md"
+    },
+    {
+      "from": "README.md",
+      "target": "01_PROJECT_BRIEFING_ZH.md"
+    },
+    {
+      "from": "README.md",
+      "target": "02_REVIEW_STAGES_ZH.md"
+    },
+    {
+      "from": "README.md",
+      "target": "practice/CASE_CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "reference_for_judgement/review_form_blank.xlsx"
+    },
+    {
+      "from": "README.md",
+      "target": "reference_for_judgement/REVIEWER_INSTRUCTIONS.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/W1/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/W2/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/W2b/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/W3/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/U1/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/R1/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/R2/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/R3/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/R4/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/Q1/CARD.md"
+    },
+    {
+      "from": "README.md",
+      "target": "cards/Q2/CARD.md"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_evidence/input.json"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_delivered_answer_UNCHANGED.txt"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_evidence/report.html"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "ANSWER_CORRECTION_ZH.md"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_evidence/input.json"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_evidence/inspect_candidates.json"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_evidence/verify_target.json"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_evidence/score_candidates.json"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_evidence/match_seed.json"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_evidence/query_expression.json"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_evidence/expression_source.json"
+    },
+    {
+      "from": "practice/CASE_CARD.md",
+      "target": "actual_model_call_summary.json"
+    },
+    {
+      "from": "cards/Q1/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/Q1/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/Q1/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/Q1/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/Q2/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/Q2/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/Q2/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/Q2/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/R1/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/R1/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/R1/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/R1/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/R2/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/R2/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/R2/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/R2/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/R3/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/R3/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/R3/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/R3/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/R4/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/R4/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/R4/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/R4/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/U1/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/U1/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/U1/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/U1/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/W1/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/W1/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/W1/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/W1/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/W2/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/W2/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/W2/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/W2/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/W2b/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/W2b/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/W2b/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/W2b/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/W3/CARD.md",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/W3/CARD.md",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/W3/CARD.md",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/W3/CARD.md",
+      "target": "../../reference_for_judgement/source_originals/"
+    }
+  ],
+  "practice_original_copy_fingerprints": [
+    {
+      "copy": "practice/actual_model_call_summary.json",
+      "sha256": "a97b28e1a8dc77af666e5f30c3f944d0dd52d9940cf52e490747ba14c82f8a1b"
+    },
+    {
+      "copy": "practice/ANSWER_CORRECTION_ZH.md",
+      "sha256": "83d616f5d277c848fdae58af1cc1cf96eb718a25391214be2e98797156dfa427"
+    },
+    {
+      "copy": "practice/answer_sequence_discrepancy.json",
+      "sha256": "b5dc4c7b089d6ce23a8ded0175e52835aa3edf3381dda8ad188b92456ea994b1"
+    },
+    {
+      "copy": "practice/conversation_export_original.json",
+      "sha256": "850c43eb70fef35c40b8fc9bcdc630ea6de80eb4340e56b8e736cab2d811ed6c"
+    },
+    {
+      "copy": "practice/actual_evidence/candidates_ranked.tsv",
+      "sha256": "0f40d5496f7466020623dbafbde5c4f13663c6d3e95ad1a58c6df4fe10835c99"
+    },
+    {
+      "copy": "practice/actual_evidence/expression_source.json",
+      "sha256": "3bb19534fb3edc3bedd6971ababe11d6a3a81b6346b047f16dcb3fdc6c8ec0dd"
+    },
+    {
+      "copy": "practice/actual_evidence/input.json",
+      "sha256": "f38290c089264761cfbb0d02416e340937b295432b53c7dcd9af9ad9a859484c"
+    },
+    {
+      "copy": "practice/actual_evidence/inspect_candidates.json",
+      "sha256": "018dd7a2d6e2d68cd740368d015739921ca3e8db0fe2b650223af40010e5b779"
+    },
+    {
+      "copy": "practice/actual_evidence/match_seed.json",
+      "sha256": "a25ecdbebb8a71925e6a8c6dbcece2cb067e768474fe487f022fcaf6aa26cd63"
+    },
+    {
+      "copy": "practice/actual_evidence/query_expression.json",
+      "sha256": "90d43248b773f3a3e9a1d5daacfd9184ef406a531d225b3fe50d9fb651f06594"
+    },
+    {
+      "copy": "practice/actual_evidence/report.html",
+      "sha256": "a97e0632472e488910706ad7885a5214f7a7c24608ecf00ca4cd907ffd349ceb"
+    },
+    {
+      "copy": "practice/actual_evidence/report.json",
+      "sha256": "59101eaf1bf77be033b2f770251d1d54a40042677f5ec0d8f2c33741c075285d"
+    },
+    {
+      "copy": "practice/actual_evidence/score_candidates.json",
+      "sha256": "2716a4dda3e73c35d42f79eb187628ebf01b6e3d3936a286104e40b5cdd14d27"
+    },
+    {
+      "copy": "practice/actual_evidence/verify_target.json",
+      "sha256": "d7b933317d6f8f56b1beb5971769d888cc649332048e5eef144445314386cd31"
+    }
+  ],
+  "synthetic_scores_or_stub_answers_in_expert_pack": false,
+  "practice_report_links_checked": true,
+  "extra_practice_originals_unchanged": true
+}

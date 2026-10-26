@@ -1,0 +1,23 @@
+{
+  "handoff_commit": "6c9c02639872c97e0d2aad2d47ab8512bc52f129",
+  "Python_checks": 214,
+  "frontend_checks": 4,
+  "full_HTTP_fixture_units": 27,
+  "full_HTTP_fixture_rounds": 33,
+  "real_model_calls": 0,
+  "heavy_scientific_runs": 0,
+  "human_scores_filled": 0,
+  "old_protected_paths_changed": [],
+  "old_practice_raw_answer_and_sources_unchanged": true,
+  "blank_score_cells": 108,
+  "blank_fact_rows": 177,
+  "expert_pack_contains_synthetic_responses": false,
+  "new_website_deployed": false,
+  "merged_to_main": false,
+  "native_browser_acceptance": false,
+  "native_Excel_UI_acceptance": false,
+  "workbook_authoring_exit_code": -1073740791,
+  "saved_xlsx_readback_import_and_preview_verified": true,
+  "new_tasks_independently_authored": false,
+  "human_review_personnel_supplied_in_this_batch": false
+}

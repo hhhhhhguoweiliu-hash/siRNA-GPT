@@ -1,0 +1,22 @@
+{
+  "case_id": "R1",
+  "category": "reliability",
+  "family": "purchased_complete",
+  "construction_truth_REVIEW_ONLY": null,
+  "full_question_and_judgement_standard_from_uploaded_review": "### R1：真实订购链角色澄清与补齐后继续\n\n**两轮完整题干：**\n第1轮：“附件只有订购记录这两行和TT、N3原注释，未写guide/passenger。现在能否把它们当作供应商已确认的guide和可直接下单的双链？请指出已知和未确认部分。”\n第2轮：“本轮只核查计算：假设两行均按5′→3′写，第2行为guide，核心UUUCUUGUCUUGCUCUAUC，另行核心GAUAGAGCAAGACAAGAAA；这不是新增供应商认证。请继续核对固定VEGFA参考及已有绑定分数，不做化学形式确认或新科学重算。”\n\n**原始输入：** 第1轮仅CP原始两行；第2轮上述同一补充。不得在第1轮偷偷选择已标好角色的candidate_dataset_id或把sequence_records中的推导结论塞进上下文。\n\n**资源与证据：** 共用两轮协议、相同原始文字；第二轮才在共同、明确假设下绑定既购版本。评审看是否保留原TT/N3和原文字，而不是只看程序是否报错。\n\n**判定依据与允许答案：** 第一轮可以说明常规解释下可能的链角色，也可以请求确认；不强制一律拒绝，但不能把推导说成供应商确定事实，不能凭空给最终订购单。第二轮应能在条件下继续，仍保留化学形式未确认。只会停止、补齐仍不继续，不算充分满足。属于可靠性/交互专项，不承担Agent优越性主证据。\n\n",
+  "necessary_evidence": "逐项按所附完整标准核对；保留实际交付附件与原答，不用底表替原答纠错",
+  "allowed_answers": "按本题明确目的判断，允许有证据的不同建议；不强制匹配程序排名或单一工具顺序",
+  "serious_errors": [
+    "篡改序列或套用不一致版本",
+    "编造实测值或把分数换成实测百分比",
+    "把seed匹配或无警告当实验脱靶/安全认证",
+    "引用不支持结论",
+    "把缺失填零或未获许可回退内置表达"
+  ],
+  "human_scores": {
+    "accuracy_0_2": "",
+    "evidence_0_2": "",
+    "task_fit_0_2": "",
+    "limits_0_2": ""
+  }
+}

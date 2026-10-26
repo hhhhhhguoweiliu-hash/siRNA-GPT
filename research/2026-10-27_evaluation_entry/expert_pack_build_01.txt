@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\00000\ARPE RNA-seq\sirna-gpt\scripts\build_expert_briefing_pack.py", line 153, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\00000\ARPE RNA-seq\sirna-gpt\scripts\build_expert_briefing_pack.py", line 138, in main
+    raise ValueError('Broken card link: '+p.as_posix()+' -> '+url)
+ValueError: Broken card link: C:/00000/ARPE RNA-seq/sirna-gpt/research/2026-10-27_evaluation_entry/expert_topic_review/01_PROJECT_BRIEFING_ZH.md -> ../../research/2026-10-27_evaluation_fixes_v2/REVIEW_IMPORT.md

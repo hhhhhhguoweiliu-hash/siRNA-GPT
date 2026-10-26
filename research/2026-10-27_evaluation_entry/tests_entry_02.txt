@@ -1,0 +1,15 @@
+test_account_block_preserves_all_plan_units_and_does_not_retry (test_dialogue_entry.DialogueEntryTests.test_account_block_preserves_all_plan_units_and_does_not_retry) ... ok
+test_chat_adapter_is_also_audited (test_dialogue_entry.DialogueEntryTests.test_chat_adapter_is_also_audited) ... ok
+test_incomplete_response_preserves_actual_payload_usage_and_pending_round (test_dialogue_entry.DialogueEntryTests.test_incomplete_response_preserves_actual_payload_usage_and_pending_round) ... ok
+test_plan_budget_and_review_versions_bind_before_manual_confirmation (test_dialogue_entry.DialogueEntryTests.test_plan_budget_and_review_versions_bind_before_manual_confirmation) ... ok
+test_provider_accounting_branch_uses_nonzero_counters_under_patched_network_only (test_dialogue_entry.DialogueEntryTests.test_provider_accounting_branch_uses_nonzero_counters_under_patched_network_only) ... ok
+test_provider_requires_confirmation_and_forbids_unlabelled_fixture (test_dialogue_entry.DialogueEntryTests.test_provider_requires_confirmation_and_forbids_unlabelled_fixture) ... ok
+test_request_timeout_clamped_to_remaining_budget_and_no_timeout_retry (test_dialogue_entry.DialogueEntryTests.test_request_timeout_clamped_to_remaining_budget_and_no_timeout_retry) ... ok
+test_responses_adapter_agent_planner_executor_usage_and_versions_recorded (test_dialogue_entry.DialogueEntryTests.test_responses_adapter_agent_planner_executor_usage_and_versions_recorded) ... ok
+test_retry_records_every_attempt_and_never_guesses_missing_usage (test_dialogue_entry.DialogueEntryTests.test_retry_records_every_attempt_and_never_guesses_missing_usage) ... ok
+test_web_auth_confirmation_and_current_plan_hash_required (test_dialogue_entry.DialogueEntryTests.test_web_auth_confirmation_and_current_plan_hash_required) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.817s
+
+OK

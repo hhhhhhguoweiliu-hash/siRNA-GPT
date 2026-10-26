@@ -1,0 +1,289 @@
+{
+  "scope": "Sources used in successful phases; failed adapter source bytes were not snapshotted, see EXECUTION.md",
+  "upstream_sources_modified": false,
+  "files": [
+    {
+      "path": "build_reference.py",
+      "bytes": 6861,
+      "sha256": "93aeddbbb938822ecc8bc99d3c754975a7003ff59938e56a49de7db1d4b5e9c5"
+    },
+    {
+      "path": "official_tools/OligoFormer/data/example.fa",
+      "bytes": 127,
+      "sha256": "1dabfa48d7d40d3dec46614e45b66658fc207b75b292c5f1f6d46c31f0c1a851"
+    },
+    {
+      "path": "official_tools/OligoFormer/data/example_siRNA.fa",
+      "bytes": 55,
+      "sha256": "f4e377dcef82531c1d15f4feda68ffaa8db7206f4ffbf532c38d54aaa3c128e6"
+    },
+    {
+      "path": "official_tools/OligoFormer/LICENSE",
+      "bytes": 1989,
+      "sha256": "cb6981d84dd7aa2e25348850b8e863fbd1ecef7867fe605919bcf7fded18a5b9"
+    },
+    {
+      "path": "official_tools/OligoFormer/README.md",
+      "bytes": 9037,
+      "sha256": "fce74ce24f4c5275cdea80d09aa441e4425451f7a35894393b453357ed1841a1"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/flanking_mRNA_asymmetric.py",
+      "bytes": 4413,
+      "sha256": "bf16f660c68c985c6e74e119909b4d68ddd02a032132ca9abef4c8f04ceb0cfc"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/flanking_mRNA_symmetric.py",
+      "bytes": 3785,
+      "sha256": "4255790b8a98bdff08bcb5f037626deb4915f913b674ade90e373974dd9698fc"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/infer.py",
+      "bytes": 22032,
+      "sha256": "ec77cffdc9e76e478068430f37b284f1f9d83780675c44cc6078e7ccbfd5127f"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/loader.py",
+      "bytes": 4823,
+      "sha256": "64c4063387563896b32c151d3e6447a48248d59908d9d1673d8264e60a6349ca"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/loader_infer.py",
+      "bytes": 2347,
+      "sha256": "a628aafd2d4892f80d88f64c0361ecee33b4eb8badb9247dc8aa478d71869631"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/logger.py",
+      "bytes": 2553,
+      "sha256": "1d8399921b5b038433aad47012a527eceb42f1a41834e2587b15defa7d6973ed"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/main.py",
+      "bytes": 4751,
+      "sha256": "6fbfd10b214c69776906100d0a6cfc7d1c1a196656f0c587ac6bbcfdc6f27cbb"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/metrics.py",
+      "bytes": 1363,
+      "sha256": "d9e947b5a11b33d8c51751dccc44b3c78a824d9ea83c3fca8940ec897e3ccc95"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/mismatch.py",
+      "bytes": 5360,
+      "sha256": "c317c6b53c59f5a5492ef11722f569ca7d6c07c72ac21444baca1fefe1f59669"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/model.py",
+      "bytes": 11505,
+      "sha256": "9bb055a5d08eaddd0dad7b3d8df90975f150fa2b23147b36adf0583ad015bc13"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/test.py",
+      "bytes": 5478,
+      "sha256": "111638706abc9d415dbd7b36eb6c2a8104843301c24c4f690fc4d3df68e4e10f"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/test_single.py",
+      "bytes": 5601,
+      "sha256": "3ac6000438e37f85ade38eab8ff2dfde7e3e853356e608a8fd67fa6292d725e2"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/train.py",
+      "bytes": 9353,
+      "sha256": "749b2a91784b70fab15a53bec34d13e3f3e725d18bed08f4a783be615eb1d739"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/train_logger.py",
+      "bytes": 2565,
+      "sha256": "ad1a5426676e7f7b905556dfbfb2b0bf9fc1450b6c8673915a8775cab0d68a7b"
+    },
+    {
+      "path": "official_tools/OligoFormer/scripts/train_single.py",
+      "bytes": 7355,
+      "sha256": "6f609eb61dfcae186f20c39b28d8cb43fd284e1b2f6784dd593adf138f3cb82c"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/__init__.py",
+      "bytes": 456,
+      "sha256": "6e072c16932a8b633e3a33424e93b4dd7b1bfccfae8de9f6542145660e103926"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/axial_attention.py",
+      "bytes": 8573,
+      "sha256": "f46723e906e974201182019a1890dbdd5ec69450034042cadfc7f40a9e29142e"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/constants.py",
+      "bytes": 1015,
+      "sha256": "ad0f3e5444e82bd04ef148f19d01c05602b0c70b5454626ec0f1f2d4d5f45048"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/data.py",
+      "bytes": 16093,
+      "sha256": "fdf00ab726a36abbccb9fc84a03911f31358fd76540ce1ee742f32cece12eaf0"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/downstream/__init__.py",
+      "bytes": 1473,
+      "sha256": "98bf36f1cf3fcd410ce84ac2abbdd40efea3dd49d90d167dd3de69394deb5b90"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/downstream/backbones.py",
+      "bytes": 635,
+      "sha256": "38772dae00ff9484b5f32c492a268b4fae27084fe41379702ff1c2f84e0f4243"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/downstream/baseline.py",
+      "bytes": 15479,
+      "sha256": "b9d9a94ac5d0c7e465b065b76c91bbd21d1ce41dcfc8b5052fc06a7c2a957607"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/downstream/downstream_module.py",
+      "bytes": 4673,
+      "sha256": "e4f051565cf5f82ef39cb2b6e71b747c482374ec250d74ec8389ec922fe00adb"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/downstream/pairwise_predictor/__init__.py",
+      "bytes": 2040,
+      "sha256": "e2468c7b063f578c067ddc9d24d0971e84beb5777c8941a725a2d0b8c0772927"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/downstream/pairwise_predictor/linear_dot_product.py",
+      "bytes": 3201,
+      "sha256": "91b14178f4abf41557a1183ce92e76f380624e7031c4811199043c1438a6be14"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/downstream/pairwise_predictor/pairwise_concat.py",
+      "bytes": 12008,
+      "sha256": "59998c65dd3f3357abfa0aa869eb923335f237a53ddb7d816222053beca3a85f"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/downstream/weights_init.py",
+      "bytes": 1357,
+      "sha256": "d6649605b5fec71a918df1682e3eff4fe3f7545a00075db006c3ae77a73f9dcb"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/downstream/weights_load.py",
+      "bytes": 151,
+      "sha256": "cf60594ea5662e1c679307f11b3fb99e5243cf20a247e6f3cc686cad000c9fee"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/model/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/model/esm1.py",
+      "bytes": 7443,
+      "sha256": "b01a0517e519bcb64b433e465fc4ed1f12e7e36f66befc5088e51279c87861c0"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/model.py",
+      "bytes": 16704,
+      "sha256": "eacafa9b7bad69915062a111917dc38ddd8ffdbaad1cbcbb781c218d19c9f299"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/modules.py",
+      "bytes": 13664,
+      "sha256": "c699f13d3408685517a799c53849a7a433f5285fd50f105cb960d22fc12872c5"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/multihead_attention.py",
+      "bytes": 20243,
+      "sha256": "e24ae77793d7bfc660a294f010165e37ff000e3c931b8b91dd0c523f51a1d19d"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/pretrained.py",
+      "bytes": 7562,
+      "sha256": "ab7271f8dbb876dbc5e2010e2d88b086088aada096f04149436d315a4f256aac"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/fm/version.py",
+      "bytes": 196,
+      "sha256": "706d0c35642d553601c6f00d49e62c8941bb9208df8fee571f99625294182efc"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/LICENSE",
+      "bytes": 1069,
+      "sha256": "b0809e99b532fdf51660f5a3d2a9010ed09d15aef0d131ad80fe80c2291a4fba"
+    },
+    {
+      "path": "official_tools/RNA-FM/source/README.md",
+      "bytes": 50024,
+      "sha256": "f9f1c1d62adc471661ca98b30c0250e9f3ce0cff7433830f149f5f48ea41c3da"
+    },
+    {
+      "path": "official_tools/SeedMatchR_1.1.1/DESCRIPTION",
+      "bytes": 2504,
+      "sha256": "df05b6064164c968b0966946bf67f19b861ad0b665a5a33328dba52c8a85be30"
+    },
+    {
+      "path": "official_tools/SeedMatchR_1.1.1/R/get_seed.R",
+      "bytes": 4045,
+      "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9"
+    },
+    {
+      "path": "official_tools/SeedMatchR_1.1.1/R/SeedMatchR.R",
+      "bytes": 3514,
+      "sha256": "78e0fa70b7a43de3cd6d61f61e81deef5dda1b318a738dcb3d09decbb6972a17"
+    },
+    {
+      "path": "prepared/reference_summary.json",
+      "bytes": 578,
+      "sha256": "51bea479fec6c3103c8e9128bbb92ebce1eb7ec13919da9537eebcadb21e0ddf"
+    },
+    {
+      "path": "reference/reference_download_manifest.json",
+      "bytes": 2606,
+      "sha256": "6b1bd76f82a0420083477925e2d84c1843122d956017d6cf1671265d9e6e6daa"
+    },
+    {
+      "path": "scripts/candidate_v2_oligo.py",
+      "bytes": 5625,
+      "sha256": "8359bb8c0819af4093c9ca265c95742a50bef54b758e6bac58316b3c26493623",
+      "kind": "IO_TIMING_AUDIT_ADAPTER_OR_DESCRIPTIVE_PLOT"
+    },
+    {
+      "path": "scripts/candidate_v2_match.R",
+      "bytes": 6169,
+      "sha256": "71454ac243fe8a17f224f839ce54d2b6e463a90a7f6c4869ee9c6cd7f14304be",
+      "kind": "IO_TIMING_AUDIT_ADAPTER_OR_DESCRIPTIVE_PLOT"
+    },
+    {
+      "path": "scripts/prepare_candidate_v2.py",
+      "bytes": 9268,
+      "sha256": "1e2d9a6fa2072c1a348fb39d62f3f3320dd56a49850d2f6934c0c495d3387ed3",
+      "kind": "IO_TIMING_AUDIT_ADAPTER_OR_DESCRIPTIVE_PLOT"
+    },
+    {
+      "path": "scripts/run_recorded_local.py",
+      "bytes": 1762,
+      "sha256": "6a1849cbe3a317e3818729230bc0ec9c20a05a6eaf3ba17d2f9afa4180437cbf",
+      "kind": "IO_TIMING_AUDIT_ADAPTER_OR_DESCRIPTIVE_PLOT"
+    },
+    {
+      "path": "scripts/summarize_candidate_v2.py",
+      "bytes": 11501,
+      "sha256": "be8298b5003618432dd412de2b11230187729fb347a638b80d6124879c445dc2",
+      "kind": "IO_TIMING_AUDIT_ADAPTER_OR_DESCRIPTIVE_PLOT"
+    },
+    {
+      "path": "scripts/validate_candidate_v2_records.py",
+      "bytes": 5145,
+      "sha256": "dfeaa2d212bc43cab0c3837757236cd0fe80b847c6d9a60a8f52968debc95a43",
+      "kind": "IO_TIMING_AUDIT_ADAPTER_OR_DESCRIPTIVE_PLOT"
+    },
+    {
+      "path": "scripts/verify_candidate_v2_reuse.py",
+      "bytes": 3194,
+      "sha256": "c575a63ca5c1c3b01e7f67fdca35c1c4e2da0fb2e78bf4c84779796896feee00",
+      "kind": "IO_TIMING_AUDIT_ADAPTER_OR_DESCRIPTIVE_PLOT"
+    },
+    {
+      "path": "scripts/plot_candidate_v2.py",
+      "bytes": 6367,
+      "sha256": "e2b34c39c93721a39642480fb6612eb76aa7df7f62119a8655d72340551e2808",
+      "kind": "IO_TIMING_AUDIT_ADAPTER_OR_DESCRIPTIVE_PLOT"
+    }
+  ]
+}

@@ -177,7 +177,7 @@ class PlannedSession(Session):
         save_json(self.path/'result.json', result)
         return result
 
-    def run_agent(self, transport=None):
+    def run_agent(self, transport=None,*,test_only=None):
         messages = [{'role': 'system', 'content': '你是工具执行助手。' + SCOPE +
             '仅执行已确认计划。按依赖调用工具，参数为{}。只使用工具返回的证据。'
             '必须完成计划全部步骤再总结；遇错可停止并解释。禁止编造结果或改变工具模式。' + NATURAL_STYLE + FINAL_ANSWER_STYLE + FIELD_INSTRUCTIONS},
@@ -224,7 +224,7 @@ class PlannedSession(Session):
                 text = message.get('content') or ''
                 if not all(n in self.state for n in self.planned_tools):
                     return {'status': 'INCOMPLETE_OR_CLARIFICATION', 'message': text or '计划未完成，请查看记录', 'run_id': self.id}
-                return self.result_for_plan(text, test_only=transport is not None)
+                return self.result_for_plan(text, test_only=(transport is not None) if test_only is None else test_only)
         raise TaskError('达到模型轮数上限，未完成计划')
 
 class Conversation:

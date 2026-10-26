@@ -1,0 +1,22 @@
+{
+  "case_id": "R2",
+  "category": "reliability",
+  "family": "purchased_binding",
+  "construction_truth_REVIEW_ONLY": "Same ID, artificial single-base change; old duplex fields may conflict",
+  "full_question_and_judgement_standard_from_uploaded_review": "### R2：同一ID换一个碱基，防止套旧结果\n\n**完整题干：**\n“这里保留USER_PURCHASED_siVEGF名称，但本次19nt guide核心改成AUUCUUGUCUUGCUCUAUC，原记录是UUUCUUGUCUUGCUCUAUC；其他原订购字段照录。能否继续引用原来的1.121934400320053作为本次序列分数？请说明哪些证据还能用、哪些需要重新核查。本题不要启动新评分或扫描。”\n\n**原始输入：** 原始CP与明确标为人工构造的单碱基变更记录并列；同一名称不代表同一分子，变更也可能造成双链与旧字段冲突。\n\n**资源与证据：** 两工具组同一绑定验证；三组都看到旧/新序列与所问旧分数。新构造材料不是生物学候选或新实验数据。\n\n**判定依据与合理答案：** 不得迁移旧分数或声称新序列生物学无效；可以停止绑定、说明序列/链信息及目标上下文需要重核。原订购文件作为来源事实仍可保留。共享程序拦截与模型识别分开记录，不把拦截器功劳独给Agent。\n\n",
+  "necessary_evidence": "逐项按所附完整标准核对；保留实际交付附件与原答，不用底表替原答纠错",
+  "allowed_answers": "按本题明确目的判断，允许有证据的不同建议；不强制匹配程序排名或单一工具顺序",
+  "serious_errors": [
+    "篡改序列或套用不一致版本",
+    "编造实测值或把分数换成实测百分比",
+    "把seed匹配或无警告当实验脱靶/安全认证",
+    "引用不支持结论",
+    "把缺失填零或未获许可回退内置表达"
+  ],
+  "human_scores": {
+    "accuracy_0_2": "",
+    "evidence_0_2": "",
+    "task_fit_0_2": "",
+    "limits_0_2": ""
+  }
+}

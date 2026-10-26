@@ -5,7 +5,8 @@ import {createRequire} from 'node:module';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const require=createRequire(path.join(root,'_test_runs/score_workbook/bootstrap.cjs'));
 const {Workbook,SpreadsheetFile}=require('@oai/artifact-tool');
-const payload=JSON.parse(await fs.readFile(path.join(root,'_test_runs/review_import_v2/authoring_payloads.json'),'utf8'));
+const payloadPath=process.argv[2]||path.join(root,'_test_runs/review_import_v2/authoring_payloads.json');
+const payload=JSON.parse(await fs.readFile(payloadPath,'utf8'));
 const widthMap={'评分表':[95,85,145,112,112,112,112,120,110,230,260],
  '逐事实':[95,85,145,150,500,115,300],'裁决':[95,85,145,330,120,110,150,115]};
 for(const item of payload.artifacts){
@@ -40,8 +41,10 @@ for(const item of payload.artifacts){
   }
  }
  wb.recalculate();
+ const check=await wb.inspect({kind:'table',range:"'评分表'!A1:K5",include:'values,formulas',tableMaxRows:5,tableMaxCols:11,maxChars:2500});
  await fs.mkdir(path.dirname(item.path),{recursive:true});
  await fs.mkdir(item.preview_dir,{recursive:true});
+ await fs.writeFile(path.join(item.preview_dir,'saved_table_inspection.ndjson'),check.ndjson);
  for(const [name,data] of Object.entries(item.sheets)){
   const end=String.fromCharCode(64+data[0].length)+Math.min(data.length,11);
   const picture=await wb.render({sheetName:name,range:`A1:${end}`,scale:1,format:'png'});

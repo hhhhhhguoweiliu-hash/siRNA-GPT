@@ -1,0 +1,35 @@
+{
+  "rounds": [
+    {
+      "message": "OligoFormer的scaled分数超过1、SeedMatchR的guide mer7m8匹配位点数和非靶基因数，各自能说明什么？仅用本题指定官方论文/源码及其版本给依据，标明可回查的原文片段。能否直接换算成我的ARPE-19实际敲低率、已经发生的脱靶或N3连接实物的效果？",
+      "user_input": {
+        "candidate_rows": [],
+        "user_provided_evidence": {
+          "software_context": {
+            "OligoFormer_official_commit": "e2f53ad63387bbe166bf123949151e2bc9bf6ec3",
+            "SeedMatchR_version": "1.1.1",
+            "seed_label": "mer7m8",
+            "output_field_names": [
+              "oligoformer_scaled_score",
+              "seed_site_count_nontarget",
+              "matched_genes"
+            ],
+            "expression_input_type": "untreated baseline TPM, not siRNA-treated RNA-seq"
+          }
+        }
+      },
+      "conditions": {
+        "candidate_check": false,
+        "reference_check": false,
+        "score_check": false,
+        "seed_check": false,
+        "expression_check": false,
+        "report_required": false,
+        "both_expression_states": false,
+        "compare_all_requested_candidates": false,
+        "chain_assumption_provided": false,
+        "allow_builtin_expression": true
+      }
+    }
+  ]
+}

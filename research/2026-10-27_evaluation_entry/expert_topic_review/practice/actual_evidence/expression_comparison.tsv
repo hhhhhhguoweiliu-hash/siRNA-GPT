@@ -1,0 +1,2 @@
+﻿candidate_id	seed_site_count_all	seed_site_count_nontarget	matched_genes	baseline_mapped_genes	hypoxia_detected_genes	normoxia_detected_genes	state_detected_genes	unmapped_genes	hypoxia_only_detected_genes	normoxia_only_detected_genes
+USER_PURCHASED_siVEGF	3540	3539	2839	2836	1595	1695	1595	3	23	123

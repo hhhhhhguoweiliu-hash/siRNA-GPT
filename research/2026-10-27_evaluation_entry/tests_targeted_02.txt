@@ -1,0 +1,80 @@
+test_account_block_preserves_all_plan_units_and_does_not_retry (test_dialogue_entry.DialogueEntryTests.test_account_block_preserves_all_plan_units_and_does_not_retry) ... ok
+test_chat_adapter_is_also_audited (test_dialogue_entry.DialogueEntryTests.test_chat_adapter_is_also_audited) ... ERROR
+test_incomplete_response_preserves_actual_payload_usage_and_pending_round (test_dialogue_entry.DialogueEntryTests.test_incomplete_response_preserves_actual_payload_usage_and_pending_round) ... ERROR
+test_plan_budget_and_review_versions_bind_before_manual_confirmation (test_dialogue_entry.DialogueEntryTests.test_plan_budget_and_review_versions_bind_before_manual_confirmation) ... ok
+test_provider_accounting_branch_uses_nonzero_counters_under_patched_network_only (test_dialogue_entry.DialogueEntryTests.test_provider_accounting_branch_uses_nonzero_counters_under_patched_network_only) ... ok
+test_provider_requires_confirmation_and_forbids_unlabelled_fixture (test_dialogue_entry.DialogueEntryTests.test_provider_requires_confirmation_and_forbids_unlabelled_fixture) ... ok
+test_request_timeout_clamped_to_remaining_budget_and_no_timeout_retry (test_dialogue_entry.DialogueEntryTests.test_request_timeout_clamped_to_remaining_budget_and_no_timeout_retry) ... ok
+test_responses_adapter_agent_planner_executor_usage_and_versions_recorded (test_dialogue_entry.DialogueEntryTests.test_responses_adapter_agent_planner_executor_usage_and_versions_recorded) ... ok
+test_retry_records_every_attempt_and_never_guesses_missing_usage (test_dialogue_entry.DialogueEntryTests.test_retry_records_every_attempt_and_never_guesses_missing_usage) ... ok
+test_web_auth_confirmation_and_current_plan_hash_required (test_dialogue_entry.DialogueEntryTests.test_web_auth_confirmation_and_current_plan_hash_required) ... ok
+test_empty_key_not_ready (test_model_client.ModelTests.test_empty_key_not_ready) ... ok
+test_endpoint (test_model_client.ModelTests.test_endpoint) ... ok
+test_extract_json_model (test_model_client.ModelTests.test_extract_json_model) ... ok
+test_extract_python_model (test_model_client.ModelTests.test_extract_python_model) ... ok
+test_forced_tool_conversion (test_model_client.ModelTests.test_forced_tool_conversion) ... ok
+test_full_endpoint_normalized (test_model_client.ModelTests.test_full_endpoint_normalized) ... ok
+test_history_conversion (test_model_client.ModelTests.test_history_conversion) ... ok
+test_http_401_classified_and_key_not_echoed (test_model_client.ModelTests.test_http_401_classified_and_key_not_echoed) ... ok
+test_network_block_classified (test_model_client.ModelTests.test_network_block_classified) ... ok
+test_numeric_rejected (test_model_client.ModelTests.test_numeric_rejected) ... ok
+test_probe_accepts_correct_call_only (test_model_client.ModelTests.test_probe_accepts_correct_call_only) ... ok
+test_probe_requires_function_call (test_model_client.ModelTests.test_probe_requires_function_call) ... ok
+test_real_request_shape_with_explicit_fake_opener (test_model_client.ModelTests.test_real_request_shape_with_explicit_fake_opener) ... ok
+test_response_text_conversion (test_model_client.ModelTests.test_response_text_conversion) ... ok
+test_response_tool_call_conversion (test_model_client.ModelTests.test_response_tool_call_conversion) ... ok
+test_truncated_rejected (test_model_client.ModelTests.test_truncated_rejected) ... ok
+test_wrong_host_rejected_for_ark_key (test_model_client.ModelTests.test_wrong_host_rejected_for_ark_key) ... ok
+test_missing_required_expression_does_not_read_builtin_join_and_keeps_partial_evidence (test_evaluation_dialogue.DevelopmentDialogueTests.test_missing_required_expression_does_not_read_builtin_join_and_keeps_partial_evidence) ... ok
+test_no_model_gate_qa_not_comparable_and_no_per_case_preset (test_evaluation_dialogue.DevelopmentDialogueTests.test_no_model_gate_qa_not_comparable_and_no_per_case_preset) ... ok
+test_purchased_full_report_shows_both_states_without_reranking (test_evaluation_dialogue.DevelopmentDialogueTests.test_purchased_full_report_shows_both_states_without_reranking) ... ok
+test_raw_docx_only_first_turn_role_assumption_only_second_and_binding_succeeds (test_evaluation_dialogue.DevelopmentDialogueTests.test_raw_docx_only_first_turn_role_assumption_only_second_and_binding_succeeds) ... ok
+test_single_base_change_never_receives_old_score (test_evaluation_dialogue.DevelopmentDialogueTests.test_single_base_change_never_receives_old_score) ... ok
+test_two_round_same_full_inputs_own_histories_settings_and_no_answer_leak (test_evaluation_dialogue.DevelopmentDialogueTests.test_two_round_same_full_inputs_own_histories_settings_and_no_answer_leak) ... ok
+test_workflow_score_and_all_compared_candidates_flags_and_query_window_visible (test_evaluation_dialogue.DevelopmentDialogueTests.test_workflow_score_and_all_compared_candidates_flags_and_query_window_visible) ... ok
+test_wrong_coordinate_declaration_consumed_without_losing_real_target_match (test_evaluation_dialogue.DevelopmentDialogueTests.test_wrong_coordinate_declaration_consumed_without_losing_real_target_match) ... ok
+test_attributed_human_correction_resolves_without_deleting_facts_or_rewriting_scores (test_evaluation_review_fixes.HumanReviewCorrections.test_attributed_human_correction_resolves_without_deleting_facts_or_rewriting_scores) ... ok
+test_complete_with_wrong_or_missing_necessary_facts_or_severe_error_is_pending (test_evaluation_review_fixes.HumanReviewCorrections.test_complete_with_wrong_or_missing_necessary_facts_or_severe_error_is_pending) ... ok
+test_excel_enum_mapping_missing_reasons_and_full_fact_rows (test_evaluation_review_fixes.HumanReviewCorrections.test_excel_enum_mapping_missing_reasons_and_full_fact_rows) ... ok
+test_strict_mean_missingness_explained_with_scorable_counts (test_evaluation_review_fixes.HumanReviewCorrections.test_strict_mean_missingness_explained_with_scorable_counts) ... ok
+test_budget_record_matches_case_and_round_guards (test_evaluation_review_fixes.ReviewCorrections.test_budget_record_matches_case_and_round_guards) ... ok
+test_constructed_notes_neutral_and_truth_only_in_review_material (test_evaluation_review_fixes.ReviewCorrections.test_constructed_notes_neutral_and_truth_only_in_review_material) ... ok
+test_each_reported_score_points_to_matching_actual_source_not_legacy_pointer (test_evaluation_review_fixes.ReviewCorrections.test_each_reported_score_points_to_matching_actual_source_not_legacy_pointer) ... ok
+test_invalid_common_input_and_malformed_planner_also_retain_every_round (test_evaluation_review_fixes.ReviewCorrections.test_invalid_common_input_and_malformed_planner_also_retain_every_round) ... ok
+test_mixed_score_sources_are_distinct_per_candidate (test_evaluation_review_fixes.ReviewCorrections.test_mixed_score_sources_are_distinct_per_candidate) ... ok
+test_partial_error_payload_retained_and_redacted (test_evaluation_review_fixes.ReviewCorrections.test_partial_error_payload_retained_and_redacted) ... ok
+test_redundant_planner_updates_allowed_conflicting_updates_retained_and_stopped (test_evaluation_review_fixes.ReviewCorrections.test_redundant_planner_updates_allowed_conflicting_updates_retained_and_stopped) ... ok
+test_transport_failures_all_stages_save_error_result_and_pending_round (test_evaluation_review_fixes.ReviewCorrections.test_transport_failures_all_stages_save_error_result_and_pending_round) ... ok
+test_common_structured_target_passes_to_all_preparation (test_paper_pilot.PilotTests.test_common_structured_target_passes_to_all_preparation) ... ok
+test_evaluation_web_endpoints_require_auth_and_explicit_usage_ack (test_paper_pilot.PilotTests.test_evaluation_web_endpoints_require_auth_and_explicit_usage_ack) ... ok
+test_explicit_pilot_archives_all_answers_and_runs_once (test_paper_pilot.PilotTests.test_explicit_pilot_archives_all_answers_and_runs_once) ... ok
+test_invalid_run_id_rejected (test_paper_pilot.PilotTests.test_invalid_run_id_rejected) ... ok
+
+======================================================================
+ERROR: test_chat_adapter_is_also_audited (test_dialogue_entry.DialogueEntryTests.test_chat_adapter_is_also_audited)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\00000\ARPE RNA-seq\sirna-gpt\test_dialogue_entry.py", line 111, in test_chat_adapter_is_also_audited
+    saved=json.loads((self.root/'chat/001/http_attempt_01.json').read_text())
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86182\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1028, in read_text
+    return f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xad in position 902: illegal multibyte sequence
+
+======================================================================
+ERROR: test_incomplete_response_preserves_actual_payload_usage_and_pending_round (test_dialogue_entry.DialogueEntryTests.test_incomplete_response_preserves_actual_payload_usage_and_pending_round)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\00000\ARPE RNA-seq\sirna-gpt\test_dialogue_entry.py", line 132, in test_incomplete_response_preserves_actual_payload_usage_and_pending_round
+    saved=json.loads((self.root/'partial/model_transport/001/error.json').read_text())
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86182\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1028, in read_text
+    return f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xaa in position 651: illegal multibyte sequence
+
+----------------------------------------------------------------------
+Ran 51 tests in 13.015s
+
+FAILED (errors=2)

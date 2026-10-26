@@ -1,0 +1,100 @@
+{
+  "rounds": [
+    {
+      "message": "只核对这条VEGFA_SD_3499的19nt核心、NM_003376.6实际坐标和固定参考覆盖；暂时不读分数，不做seed、表达或排名。",
+      "user_input": {
+        "candidate_rows": [
+          {
+            "source_run": "VEGFA_NM003376_6",
+            "source_tool": "siDirect_2.0",
+            "target_start_1based": "3499",
+            "target_end_1based": "3521",
+            "target_window_23nt": "TTCGAGATATTCCGTAGTACATA",
+            "guide_21nt_RNA_5to3": "UGUACUACGGAAUAUCUCGAA",
+            "passenger_21nt_RNA_5to3": "CGAGAUAUUCCGUAGUACAUA",
+            "guide_paired_core_19nt_5to3": "UGUACUACGGAAUAUCUCG",
+            "passenger_paired_core_19nt_5to3": "CGAGAUAUUCCGUAGUACA",
+            "guide_overhang_3prime": "AA",
+            "passenger_overhang_3prime": "UA",
+            "functional_rule": "U",
+            "seed_tm_guide_C": "21.3",
+            "seed_tm_passenger_C": "15.9",
+            "vendor_min_mismatches_guide_19nt_g2g20": "3",
+            "vendor_min_mismatches_passenger_19nt_g2g20": "3",
+            "candidate_id": "VEGFA_SD_3499",
+            "target_gene": "VEGFA",
+            "design_transcript": "NM_003376.6",
+            "core_matches_n": "20",
+            "core_matches_transcripts": "NM_001171623.2;NM_001171626.2;NM_001171628.2;NM_001317010.2;NM_001025369.3;NM_001171627.2;NM_001171625.2;NM_001204384.2;NM_001287044.2;NM_001025367.3;NM_001171630.2;NM_001171622.2;NM_001171624.2;NM_001025370.3;NM_001204385.2;NM_001025368.3;NM_001033756.3;NM_003376.6;NM_001025366.3;NM_001171629.2",
+            "all_20_transcripts_core_match": "True",
+            "guide_gc_pct": "42.10526315789474",
+            "working_pool_pass": "True",
+            "exclusion_reason": "NA",
+            "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+            "oligo_input_derivation": "19_BP_PAIRED_CORE_FROM_VERIFIED_AUTHOR_21NT_DUPLEX_NOT_ARBITRARY_TRUNCATION"
+          }
+        ]
+      },
+      "conditions": {
+        "candidate_check": false,
+        "reference_check": true,
+        "score_check": false,
+        "seed_check": false,
+        "expression_check": false,
+        "report_required": false,
+        "both_expression_states": false,
+        "compare_all_requested_candidates": false,
+        "chain_assumption_provided": false,
+        "allow_builtin_expression": true
+      }
+    },
+    {
+      "message": "在同一条序列和同一参考上，现在追加OligoFormer分数核查，说明是不是敲低百分比。保留首轮记录，标清复用了什么、这轮新增什么；仍不要做seed、表达或排名。",
+      "user_input": {
+        "candidate_rows": [
+          {
+            "source_run": "VEGFA_NM003376_6",
+            "source_tool": "siDirect_2.0",
+            "target_start_1based": "3499",
+            "target_end_1based": "3521",
+            "target_window_23nt": "TTCGAGATATTCCGTAGTACATA",
+            "guide_21nt_RNA_5to3": "UGUACUACGGAAUAUCUCGAA",
+            "passenger_21nt_RNA_5to3": "CGAGAUAUUCCGUAGUACAUA",
+            "guide_paired_core_19nt_5to3": "UGUACUACGGAAUAUCUCG",
+            "passenger_paired_core_19nt_5to3": "CGAGAUAUUCCGUAGUACA",
+            "guide_overhang_3prime": "AA",
+            "passenger_overhang_3prime": "UA",
+            "functional_rule": "U",
+            "seed_tm_guide_C": "21.3",
+            "seed_tm_passenger_C": "15.9",
+            "vendor_min_mismatches_guide_19nt_g2g20": "3",
+            "vendor_min_mismatches_passenger_19nt_g2g20": "3",
+            "candidate_id": "VEGFA_SD_3499",
+            "target_gene": "VEGFA",
+            "design_transcript": "NM_003376.6",
+            "core_matches_n": "20",
+            "core_matches_transcripts": "NM_001171623.2;NM_001171626.2;NM_001171628.2;NM_001317010.2;NM_001025369.3;NM_001171627.2;NM_001171625.2;NM_001204384.2;NM_001287044.2;NM_001025367.3;NM_001171630.2;NM_001171622.2;NM_001171624.2;NM_001025370.3;NM_001204385.2;NM_001025368.3;NM_001033756.3;NM_003376.6;NM_001025366.3;NM_001171629.2",
+            "all_20_transcripts_core_match": "True",
+            "guide_gc_pct": "42.10526315789474",
+            "working_pool_pass": "True",
+            "exclusion_reason": "NA",
+            "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+            "oligo_input_derivation": "19_BP_PAIRED_CORE_FROM_VERIFIED_AUTHOR_21NT_DUPLEX_NOT_ARBITRARY_TRUNCATION"
+          }
+        ]
+      },
+      "conditions": {
+        "candidate_check": false,
+        "reference_check": false,
+        "score_check": true,
+        "seed_check": false,
+        "expression_check": false,
+        "report_required": false,
+        "both_expression_states": false,
+        "compare_all_requested_candidates": false,
+        "chain_assumption_provided": false,
+        "allow_builtin_expression": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+PASS: preview never starts a model; manual acknowledgement and current plan are sent; changing task set clears acknowledgement.

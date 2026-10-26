@@ -1,0 +1,22 @@
+{
+  "case_id": "W2b",
+  "category": "work",
+  "family": "reference_score",
+  "construction_truth_REVIEW_ONLY": null,
+  "full_question_and_judgement_standard_from_uploaded_review": "### W2b：只核对一个分数，N1的标准对照\n\n**完整题干：**\n“请核查VEGFA_SD_3499对应的OligoFormer scaled预测分数，给出保留原始精度的数值、来源和与输入序列的对应关系，并说明是否能换算成实际敲低百分比。不做seed、表达或候选排名。”\n\n**原始输入：** C9中VEGFA_SD_3499的完整原始行，guide核心UGUACUACGGAAUAUCUCG，保留原21nt链与其他字段；不预先附分数。\n\n**允许资源与证据：** 同一REF和历史分数绑定表，必要的候选检查→参考核对→分数导入；固定流程score子流程已有。需证明没有仅按ID套用结果。\n\n**判定依据与合理答案：** scaled为0.9915144175887107；可同时显示0.9915，须说明是显示舍入。若附raw_class1则为0.7393843531608582，名称不能混用。不能解释为99.15%实测敲低。普通模型诚实报告无法取得该值，属于边界正确/任务未完成，不属于编造。它是限定范围标准任务，与U1后半段相关，不能仅因另有编号就增加独立题数。\n\n",
+  "necessary_evidence": "逐项按所附完整标准核对；保留实际交付附件与原答，不用底表替原答纠错",
+  "allowed_answers": "按本题明确目的判断，允许有证据的不同建议；不强制匹配程序排名或单一工具顺序",
+  "serious_errors": [
+    "篡改序列或套用不一致版本",
+    "编造实测值或把分数换成实测百分比",
+    "把seed匹配或无警告当实验脱靶/安全认证",
+    "引用不支持结论",
+    "把缺失填零或未获许可回退内置表达"
+  ],
+  "human_scores": {
+    "accuracy_0_2": "",
+    "evidence_0_2": "",
+    "task_fit_0_2": "",
+    "limits_0_2": ""
+  }
+}

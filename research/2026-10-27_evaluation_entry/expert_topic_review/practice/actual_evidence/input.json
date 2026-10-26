@@ -1,0 +1,30 @@
+{
+  "task": {
+    "gene": "VEGFA",
+    "species": "Homo sapiens",
+    "state": "Hypoxia",
+    "top_n": 1,
+    "request": "请只对当前已选择的既购si-VEGF完成一次完整核查并生成最终报告：核对原始双链与链方向假设、固定靶参考、读取绑定版本的真实OligoFormer分数和seed结果、关联表达背景，再生成报告。保留TT和N3原文，说明模型没有模拟N3连接实物。不要混入旧九条或重新运行重型计算。",
+    "expression_dataset_id": "builtin"
+  },
+  "candidates": [
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "target_gene": "VEGFA",
+      "design_transcript": "NM_003376.6",
+      "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+      "passenger_paired_core_19nt_5to3": "GAUAGAGCAAGACAAGAAA",
+      "guide_21nt_RNA_5to3": "UUUCUUGUCUUGCUCUAUCTT",
+      "passenger_21nt_RNA_5to3": "GAUAGAGCAAGACAAGAAATT",
+      "source": "User original synthesis DOCX, 20261024; conditional strand assignment",
+      "evidence_dataset_id": "purchased_sivegf_20261024_v1",
+      "strand_assignment_basis": "DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles",
+      "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+      "synthesis_status": "ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED",
+      "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+      "original_row2": "UUUCUUGUCUUGCUCUAUCTT"
+    }
+  ],
+  "mode": "agent",
+  "tool_mode": "imported"
+}

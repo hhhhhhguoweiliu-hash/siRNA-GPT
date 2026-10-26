@@ -1,0 +1,443 @@
+[
+  {
+    "answer_id": "D016",
+    "case_id": "W1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W1_F01",
+      "W1_F02",
+      "W1_F03",
+      "W1_F04",
+      "W1_F05",
+      "W1_F06",
+      "W1_F07",
+      "W1_F08",
+      "W1_F09",
+      "W1_F10",
+      "W1_F11",
+      "W1_F12"
+    ]
+  },
+  {
+    "answer_id": "D017",
+    "case_id": "W1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W1_F01",
+      "W1_F02",
+      "W1_F03",
+      "W1_F04",
+      "W1_F05",
+      "W1_F06",
+      "W1_F07",
+      "W1_F08",
+      "W1_F09",
+      "W1_F10",
+      "W1_F11",
+      "W1_F12"
+    ]
+  },
+  {
+    "answer_id": "D023",
+    "case_id": "W1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W1_F01",
+      "W1_F02",
+      "W1_F03",
+      "W1_F04",
+      "W1_F05",
+      "W1_F06",
+      "W1_F07",
+      "W1_F08",
+      "W1_F09",
+      "W1_F10",
+      "W1_F11",
+      "W1_F12"
+    ]
+  },
+  {
+    "answer_id": "D004",
+    "case_id": "W2",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W2_F01",
+      "W2_F02",
+      "W2_F03",
+      "W2_F04",
+      "W2_F05",
+      "W2_F06",
+      "W2_F07",
+      "W2_F08",
+      "W2_F09"
+    ]
+  },
+  {
+    "answer_id": "D030",
+    "case_id": "W2",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W2_F01",
+      "W2_F02",
+      "W2_F03",
+      "W2_F04",
+      "W2_F05",
+      "W2_F06",
+      "W2_F07",
+      "W2_F08",
+      "W2_F09"
+    ]
+  },
+  {
+    "answer_id": "D032",
+    "case_id": "W2",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W2_F01",
+      "W2_F02",
+      "W2_F03",
+      "W2_F04",
+      "W2_F05",
+      "W2_F06",
+      "W2_F07",
+      "W2_F08",
+      "W2_F09"
+    ]
+  },
+  {
+    "answer_id": "D002",
+    "case_id": "W2b",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W2b_F01",
+      "W2b_F02",
+      "W2b_F03",
+      "W2b_F04"
+    ]
+  },
+  {
+    "answer_id": "D024",
+    "case_id": "W2b",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W2b_F01",
+      "W2b_F02",
+      "W2b_F03",
+      "W2b_F04"
+    ]
+  },
+  {
+    "answer_id": "D029",
+    "case_id": "W2b",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W2b_F01",
+      "W2b_F02",
+      "W2b_F03",
+      "W2b_F04"
+    ]
+  },
+  {
+    "answer_id": "D006",
+    "case_id": "W3",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W3_F01",
+      "W3_F02",
+      "W3_F03",
+      "W3_F04",
+      "W3_F05",
+      "W3_F06",
+      "W3_F07"
+    ]
+  },
+  {
+    "answer_id": "D015",
+    "case_id": "W3",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W3_F01",
+      "W3_F02",
+      "W3_F03",
+      "W3_F04",
+      "W3_F05",
+      "W3_F06",
+      "W3_F07"
+    ]
+  },
+  {
+    "answer_id": "D033",
+    "case_id": "W3",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "W3_F01",
+      "W3_F02",
+      "W3_F03",
+      "W3_F04",
+      "W3_F05",
+      "W3_F06",
+      "W3_F07"
+    ]
+  },
+  {
+    "answer_id": "D005",
+    "case_id": "U1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "U1_F01",
+      "U1_F02",
+      "U1_F03",
+      "U1_F04",
+      "U1_F05",
+      "U1_F06",
+      "U1_F07"
+    ]
+  },
+  {
+    "answer_id": "D011",
+    "case_id": "U1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "U1_F01",
+      "U1_F02",
+      "U1_F03",
+      "U1_F04",
+      "U1_F05",
+      "U1_F06",
+      "U1_F07"
+    ]
+  },
+  {
+    "answer_id": "D026",
+    "case_id": "U1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "U1_F01",
+      "U1_F02",
+      "U1_F03",
+      "U1_F04",
+      "U1_F05",
+      "U1_F06",
+      "U1_F07"
+    ]
+  },
+  {
+    "answer_id": "D007",
+    "case_id": "R1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R1_F01",
+      "R1_F02",
+      "R1_F03",
+      "R1_F04",
+      "R1_F05"
+    ]
+  },
+  {
+    "answer_id": "D018",
+    "case_id": "R1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R1_F01",
+      "R1_F02",
+      "R1_F03",
+      "R1_F04",
+      "R1_F05"
+    ]
+  },
+  {
+    "answer_id": "D021",
+    "case_id": "R1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R1_F01",
+      "R1_F02",
+      "R1_F03",
+      "R1_F04",
+      "R1_F05"
+    ]
+  },
+  {
+    "answer_id": "D008",
+    "case_id": "R2",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R2_F01",
+      "R2_F02",
+      "R2_F03",
+      "R2_F04",
+      "R2_F05"
+    ]
+  },
+  {
+    "answer_id": "D009",
+    "case_id": "R2",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R2_F01",
+      "R2_F02",
+      "R2_F03",
+      "R2_F04",
+      "R2_F05"
+    ]
+  },
+  {
+    "answer_id": "D028",
+    "case_id": "R2",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R2_F01",
+      "R2_F02",
+      "R2_F03",
+      "R2_F04",
+      "R2_F05"
+    ]
+  },
+  {
+    "answer_id": "D003",
+    "case_id": "R3",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R3_F01",
+      "R3_F02",
+      "R3_F03",
+      "R3_F04"
+    ]
+  },
+  {
+    "answer_id": "D012",
+    "case_id": "R3",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R3_F01",
+      "R3_F02",
+      "R3_F03",
+      "R3_F04"
+    ]
+  },
+  {
+    "answer_id": "D022",
+    "case_id": "R3",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R3_F01",
+      "R3_F02",
+      "R3_F03",
+      "R3_F04"
+    ]
+  },
+  {
+    "answer_id": "D013",
+    "case_id": "R4",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R4_F01",
+      "R4_F02",
+      "R4_F03",
+      "R4_F04",
+      "R4_F05",
+      "R4_F06"
+    ]
+  },
+  {
+    "answer_id": "D014",
+    "case_id": "R4",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R4_F01",
+      "R4_F02",
+      "R4_F03",
+      "R4_F04",
+      "R4_F05",
+      "R4_F06"
+    ]
+  },
+  {
+    "answer_id": "D031",
+    "case_id": "R4",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "R4_F01",
+      "R4_F02",
+      "R4_F03",
+      "R4_F04",
+      "R4_F05",
+      "R4_F06"
+    ]
+  },
+  {
+    "answer_id": "D010",
+    "case_id": "Q1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "Q1_F01",
+      "Q1_F02",
+      "Q1_F03",
+      "Q1_F04",
+      "Q1_F05",
+      "Q1_F06"
+    ]
+  },
+  {
+    "answer_id": "D019",
+    "case_id": "Q1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "Q1_F01",
+      "Q1_F02",
+      "Q1_F03",
+      "Q1_F04",
+      "Q1_F05",
+      "Q1_F06"
+    ]
+  },
+  {
+    "answer_id": "D027",
+    "case_id": "Q1",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "Q1_F01",
+      "Q1_F02",
+      "Q1_F03",
+      "Q1_F04",
+      "Q1_F05",
+      "Q1_F06"
+    ]
+  },
+  {
+    "answer_id": "D001",
+    "case_id": "Q2",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "Q2_F01",
+      "Q2_F02",
+      "Q2_F03",
+      "Q2_F04",
+      "Q2_F05"
+    ]
+  },
+  {
+    "answer_id": "D020",
+    "case_id": "Q2",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "Q2_F01",
+      "Q2_F02",
+      "Q2_F03",
+      "Q2_F04",
+      "Q2_F05"
+    ]
+  },
+  {
+    "answer_id": "D025",
+    "case_id": "Q2",
+    "execution": "NOT_EXECUTED",
+    "fact_ids": [
+      "Q2_F01",
+      "Q2_F02",
+      "Q2_F03",
+      "Q2_F04",
+      "Q2_F05"
+    ]
+  }
+]

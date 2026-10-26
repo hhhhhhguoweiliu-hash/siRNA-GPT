@@ -1,0 +1,16 @@
+{
+  "candidate_id": "USER_PURCHASED_siVEGF",
+  "target_gene": "VEGFA",
+  "design_transcript": "NM_003376.6",
+  "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+  "passenger_paired_core_19nt_5to3": "GAUAGAGCAAGACAAGAAA",
+  "guide_21nt_RNA_5to3": "UUUCUUGUCUUGCUCUAUCTT",
+  "passenger_21nt_RNA_5to3": "GAUAGAGCAAGACAAGAAATT",
+  "source": "User original synthesis DOCX, 20261024; conditional strand assignment",
+  "evidence_dataset_id": "purchased_sivegf_20261024_v1",
+  "strand_assignment_basis": "DERIVED_CONDITIONAL: written order assumed 5prime-to-3prime; row2 core reverse-complements reference sense; not vendor-confirmed roles",
+  "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+  "synthesis_status": "ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED",
+  "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+  "original_row2": "UUUCUUGUCUUGCUCUAUCTT"
+}

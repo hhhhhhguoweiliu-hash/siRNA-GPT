@@ -124,8 +124,12 @@ def model_error_evidence(error,cfg,request=None):
 
 def provider_http_error(error,key):
  """Keep the provider's actual explanation and request ID; never infer an exact cause from 403 alone."""
- try:body=json.loads(error.read(12000).decode('utf-8','replace'))
- except (ValueError,OSError):body={}
+ try:
+  raw=error.read().decode('utf-8','replace')
+  try:body=json.loads(raw)
+  except ValueError:body={'raw_body_text':raw}
+ except OSError:body={}
+ snapshot=body
  if not isinstance(body,dict):body={}
  detail=body.get('error',{})
  if not isinstance(detail,dict):detail={}
@@ -142,9 +146,11 @@ def provider_http_error(error,key):
  parts=['豆包 API HTTP '+str(error.code)+' / '+code+'：'+hint]
  parts.append('服务端说明：'+message if message else '服务端未提供具体说明；不能仅凭HTTP状态码确定原因。')
  if rid:parts.append('请求ID：'+rid)
- return ModelError('\n'.join(parts),'HTTP_'+str(error.code),provider_code=code,provider_message=message,request_id=rid,http_status=error.code)
+ result=ModelError('\n'.join(parts),'HTTP_'+str(error.code),provider_code=code,provider_message=message,request_id=rid,http_status=error.code)
+ result.response_snapshot=snapshot
+ return result
 
-def request_completion(cfg,payload,opener=None):
+def request_completion(cfg,payload,opener=None,*,audit=None,remaining_seconds=None):
  if not cfg.get('api_key'):raise ModelError('本机尚未检测到API密钥。','KEY_MISSING')
  model=extract_model(cfg.get('model'))
  if not model:raise ModelError('请填写方舟模型ID或推理接入点ID。','MODEL_MISSING')
@@ -154,11 +160,23 @@ def request_completion(cfg,payload,opener=None):
  if cfg.get('api_mode')=='responses':body=responses_payload(body)
  req=urllib.request.Request(url,data=json.dumps(body,ensure_ascii=False).encode('utf-8'),headers={'Authorization':'Bearer '+cfg['api_key'],'Content-Type':'application/json'},method='POST')
  open_fn=opener or urllib.request.urlopen;retries=max(0,min(int(cfg.get('api_retries',1)),2))
+ def emit(event,**fields):
+  if audit:audit({'event':event,'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),**fields})
  for attempt in range(retries+1):
+  timeout=float(cfg.get('request_timeout',90))
+  if remaining_seconds is not None:timeout=min(timeout,remaining_seconds())
+  if timeout<=0:raise ModelError('已达到本题或本轮时限，未启动下一次HTTP请求。','NETWORK_TIMEOUT')
+  emit('attempt_started',attempt=attempt+1,url=url,request=body,timeout_seconds=timeout)
+  dispatched=time.monotonic();provider_response=None;rid=''
   try:
-   with open_fn(req,timeout=int(cfg.get('request_timeout',90))) as response:
-    data=json.load(response);rid=response.headers.get('x-request-id','')
+   with open_fn(req,timeout=timeout) as response:
+    raw=response.read().decode('utf-8','replace');rid=response.headers.get('x-request-id','')
+   try:data=json.loads(raw)
+   except ValueError:
+    error=ModelError('API返回内容不是JSON。','RESPONSE_INVALID',request_id=rid)
+    error.response_snapshot={'raw_body_text':raw};raise error
    provider_response=data
+   emit('response_received',attempt=attempt+1,seconds=round(time.monotonic()-dispatched,6),request_id=rid,response=provider_response)
    if isinstance(data,dict) and cfg.get('api_mode')=='responses':
     try:data=normalize_responses(data)
     except ModelError as error:
@@ -176,17 +194,35 @@ def request_completion(cfg,payload,opener=None):
    data['_request_id']=rid
    data['_request']=body
    data['_raw_response']=provider_response
+   emit('attempt_finished',attempt=attempt+1,status='SUCCEEDED',request_id=rid,seconds=round(time.monotonic()-dispatched,6))
    return data
   except urllib.error.HTTPError as e:
    error=provider_http_error(e,cfg['api_key'])
+   error.request_snapshot=body
+   emit('attempt_finished',attempt=attempt+1,status='HTTP_ERROR',seconds=round(time.monotonic()-dispatched,6),
+        request_id=error.request_id,response=getattr(error,'response_snapshot',None),diagnostics=error.diagnostics())
    if e.code in (429,502,503,504) and not account_blocked(error.diagnostics()) and attempt<retries:time.sleep(.5*(attempt+1));continue
    raise error from None
-  except (socket.timeout,TimeoutError):raise ModelError('模型请求超时，未自动重发以避免重复调用；可查看日志后手动重试。','NETWORK_TIMEOUT') from None
+  except (socket.timeout,TimeoutError):
+   error=ModelError('模型请求超时，未自动重发以避免重复调用；可查看日志后手动重试。','NETWORK_TIMEOUT')
+   error.request_snapshot=body
+   emit('attempt_finished',attempt=attempt+1,status='NETWORK_TIMEOUT',seconds=round(time.monotonic()-dispatched,6),diagnostics=error.diagnostics())
+   raise error from None
   except urllib.error.URLError as e:
    reason=getattr(e,'reason',e)
-   if isinstance(reason,OSError) and getattr(reason,'winerror',None)==10013:raise ModelError('当前运行环境禁止网络连接（WinError 10013）。请在本机正常启动程序后连接豆包。','NETWORK_BLOCKED') from None
-   raise ModelError('无法连接豆包API，请检查网络、代理或证书；本轮未降级为演示。','NETWORK_UNAVAILABLE') from None
-  except (ValueError,KeyError,IndexError):raise ModelError('API返回内容不是预期的JSON消息。','RESPONSE_INVALID') from None
+   blocked=isinstance(reason,OSError) and getattr(reason,'winerror',None)==10013
+   error=ModelError('当前运行环境禁止网络连接（WinError 10013）。' if blocked else '无法连接豆包API，请检查网络、代理或证书；本轮未降级为演示。','NETWORK_BLOCKED' if blocked else 'NETWORK_UNAVAILABLE')
+   error.request_snapshot=body
+   emit('attempt_finished',attempt=attempt+1,status=error.code,seconds=round(time.monotonic()-dispatched,6),diagnostics=error.diagnostics())
+   raise error from None
+  except (ModelError,ValueError,KeyError,IndexError) as exc:
+   error=exc if isinstance(exc,ModelError) else ModelError('API返回内容不是预期的JSON消息。','RESPONSE_INVALID')
+   error.request_snapshot=body
+   if not hasattr(error,'response_snapshot'):error.response_snapshot=provider_response
+   if not error.request_id:error.request_id=rid
+   emit('attempt_finished',attempt=attempt+1,status=error.code,seconds=round(time.monotonic()-dispatched,6),
+        request_id=rid,response=getattr(error,'response_snapshot',None),diagnostics=error.diagnostics())
+   raise error from None
 
 def test_connection(cfg,transport=None):
  # A real, small tool call verifies more than a text-only hello.

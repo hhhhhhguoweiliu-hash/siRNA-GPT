@@ -1,0 +1,52 @@
+{
+  "status": "LIVE_JOIN_OF_BASELINE_AND_SEED",
+  "target": {
+    "feature_id": "VEGFA",
+    "approved_symbol": "VEGFA",
+    "ENTREZID": "7422",
+    "TPM_Normoxia_mean": "20.09929925",
+    "TPM_Hypoxia_mean": "102.390068",
+    "Normoxia_n_TPM_ge1": "4",
+    "Hypoxia_n_TPM_ge1": "4"
+  },
+  "candidate_summary": [
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "seed_site_count_all": 3540,
+      "seed_site_count_nontarget": 3539,
+      "matched_genes": 2839,
+      "baseline_mapped_genes": 2836,
+      "hypoxia_detected_genes": 1595,
+      "normoxia_detected_genes": 1695,
+      "state_detected_genes": 1595,
+      "unmapped_genes": 3,
+      "hypoxia_only_detected_genes": 23,
+      "normoxia_only_detected_genes": 123
+    }
+  ],
+  "source": {
+    "id": "builtin",
+    "label": "本项目2026-10-16整理的ARPE-19基线表达表",
+    "source": "PACKAGED_PROJECT_DATA",
+    "sha256": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+    "origin": "C:\\00000\\ARPE RNA-seq\\result\\result.zip",
+    "samples": [
+      "Nor1",
+      "Nor2",
+      "Nor3",
+      "Nor4",
+      "Hyp1",
+      "Hyp2",
+      "Hyp3",
+      "Hyp4"
+    ],
+    "scope": "同一培养批次，每状态4皿；未转染；缺氧1% O2 24h",
+    "per_sample_tpm_available_in_packaged_table": false,
+    "ranking_changed": false
+  },
+  "target_excluded_from_offtarget_counts": true,
+  "expression_comparison": "expression_comparison.tsv",
+  "details": "seed_expression_details.tsv",
+  "rule": "TPM>=1 in >=2/4 vessels; annotation only; no risk exclusion; does not change ranking",
+  "scope": "同一培养批次，每状态4皿；未转染；缺氧1% O2 24h; not siRNA perturbation labels"
+}

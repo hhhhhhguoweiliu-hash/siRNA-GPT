@@ -1,0 +1,399 @@
+{
+  "kind": "STATIC_LINK_CHECK_NOT_BROWSER_ACCEPTANCE",
+  "checked_links": [
+    {
+      "from": "01_PROJECT_BRIEFING_ZH.html",
+      "target": "reference_for_judgement/REVIEWER_INSTRUCTIONS.md"
+    },
+    {
+      "from": "index.html",
+      "target": "01_PROJECT_BRIEFING_ZH.html"
+    },
+    {
+      "from": "index.html",
+      "target": "02_REVIEW_STAGES_ZH.html"
+    },
+    {
+      "from": "index.html",
+      "target": "practice/CASE_CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/W1/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/W2/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/W2b/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/W3/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/U1/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/R1/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/R2/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/R3/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/R4/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/Q1/CARD.html"
+    },
+    {
+      "from": "index.html",
+      "target": "cards/Q2/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "01_PROJECT_BRIEFING_ZH.html"
+    },
+    {
+      "from": "README.html",
+      "target": "02_REVIEW_STAGES_ZH.html"
+    },
+    {
+      "from": "README.html",
+      "target": "practice/CASE_CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "reference_for_judgement/review_form_blank.xlsx"
+    },
+    {
+      "from": "README.html",
+      "target": "reference_for_judgement/REVIEWER_INSTRUCTIONS.md"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/W1/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/W2/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/W2b/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/W3/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/U1/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/R1/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/R2/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/R3/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/R4/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/Q1/CARD.html"
+    },
+    {
+      "from": "README.html",
+      "target": "cards/Q2/CARD.html"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/input.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_delivered_answer_UNCHANGED.txt"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/report.html"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "ANSWER_CORRECTION_ZH.html"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/input.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/inspect_candidates.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/verify_target.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/score_candidates.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/match_seed.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/query_expression.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/expression_source.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_model_call_summary.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/verified_import/purchased_sivegf_20261024_v1/verified_local_result.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_evidence/verified_import/purchased_sivegf_20261024_v1/manifest.json"
+    },
+    {
+      "from": "practice/CASE_CARD.html",
+      "target": "actual_tool_export_original.zip"
+    },
+    {
+      "from": "cards/Q1/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/Q1/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/Q1/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/Q1/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/Q2/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/Q2/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/Q2/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/Q2/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/R1/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/R1/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/R1/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/R1/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/R2/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/R2/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/R2/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/R2/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/R3/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/R3/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/R3/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/R3/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/R4/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/R4/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/R4/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/R4/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/U1/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/U1/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/U1/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/U1/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/W1/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/W1/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/W1/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/W1/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/W2/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/W2/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/W2/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/W2/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/W2b/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/W2b/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/W2b/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/W2b/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "cards/W3/CARD.html",
+      "target": "original_input.json"
+    },
+    {
+      "from": "cards/W3/CARD.html",
+      "target": "../../reference_for_judgement/fact_items_DRAFT.json"
+    },
+    {
+      "from": "cards/W3/CARD.html",
+      "target": "../../reference_for_judgement/anchors.json"
+    },
+    {
+      "from": "cards/W3/CARD.html",
+      "target": "../../reference_for_judgement/source_originals/"
+    },
+    {
+      "from": "practice/actual_evidence/report.html",
+      "target": "expression_comparison.tsv"
+    },
+    {
+      "from": "practice/actual_evidence/report.html",
+      "target": "seed_expression_details.tsv"
+    },
+    {
+      "from": "practice/actual_evidence/report.html",
+      "target": "expression_source.json"
+    },
+    {
+      "from": "practice/actual_evidence/report.html",
+      "target": "verified_import/purchased_sivegf_20261024_v1/manifest.json"
+    },
+    {
+      "from": "practice/actual_evidence/report.html",
+      "target": "candidates_ranked.tsv"
+    },
+    {
+      "from": "practice/actual_evidence/report.html",
+      "target": "seed_expression_details.tsv"
+    },
+    {
+      "from": "practice/actual_evidence/report.html",
+      "target": "events.jsonl"
+    },
+    {
+      "from": "practice/actual_evidence/report.html",
+      "target": "report.json"
+    }
+  ],
+  "native_browser_acceptance": false,
+  "model_calls": 0
+}

@@ -1,0 +1,31 @@
+{
+  "rounds": [
+    {
+      "message": "我已有这份si-vegf试剂。请保留订购记录的两行与TT、N3原文。本次仅作计算核查：假设两行均按5′→3′写，第2行为guide，其19nt核心是UUUCUUGUCUUGCUCUAUC；另一行配对核心是GAUAGAGCAAGACAAGAAA。这是本次计算假设，不是供应商已确认。请核对固定人VEGFA参考，读取与该序列和参考绑定的OligoFormer结果；对guide整理seed位点、去重非靶基因、表达可映射基因、常氧和缺氧检出基因，生成可回查报告。说明这些证据能支持什么，实验前仍需确认什么。不要换成九条设计候选，不要把它称为最有效或最安全的siRNA。",
+      "user_input": {
+        "original_order_lines": [
+          "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+          "UUUCUUGUCUUGCUCUAUCTT"
+        ],
+        "calculation_assumptions": {
+          "rows_written_5to3": true,
+          "guide_row": 2,
+          "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+          "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA"
+        }
+      },
+      "conditions": {
+        "candidate_check": true,
+        "reference_check": true,
+        "score_check": true,
+        "seed_check": true,
+        "expression_check": true,
+        "report_required": true,
+        "both_expression_states": true,
+        "compare_all_requested_candidates": false,
+        "chain_assumption_provided": true,
+        "allow_builtin_expression": true
+      }
+    }
+  ]
+}

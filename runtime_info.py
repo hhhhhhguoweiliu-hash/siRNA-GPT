@@ -13,6 +13,7 @@ def manifest():
     names+=['verified_imports.py','data/purchased_sivegf_20261024_v1/manifest.json','references/vegfa_experiments_20261024/chen2013_locators.json','references/vegfa_experiments_20261024/osipova2020_locators.json']
     names+=['sequence_validation.py','sequence_ui.js','index.html','ui_text.js','ui_labels.py']
     names+=['evaluation_dialogue.py','data/historical_near_matches.tsv','data/historical_IRGM_review.tsv','data/utr_gene_map.tsv']
+    names+=['evaluation_transport.py','dialogue_evaluation.py','dialogue_review.py','evaluation_ui.js']
     assets={}
     for name in names:
         p=ROOT/name

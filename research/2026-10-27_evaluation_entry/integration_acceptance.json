@@ -1,0 +1,30 @@
+{
+  "kind": "SYNTHETIC_HTTP_INTEGRATION_NOT_MODEL_PERFORMANCE_OR_HUMAN_SCORE",
+  "configuration_units": 27,
+  "user_round_units": 33,
+  "all_plan_positions_retained": true,
+  "same_common_inputs_and_tool_resource_fingerprints": true,
+  "fixture_logical_requests": 63,
+  "fixture_http_attempts": 63,
+  "real_model_requests": 0,
+  "heavy_scientific_runs": 0,
+  "human_scientific_scores": 0,
+  "anonymous_cards_and_links_checked": true,
+  "group_key_outside_reviewer_package": true,
+  "report_attachment_links_checked": true,
+  "reuse_saved_fixture_records_for_export_fix": true,
+  "blank_xlsx_ids_and_all_facts_match_generated_cards": true,
+  "raw_fixture_artifacts": "tests/fixtures/dialogue_http_integration.zip",
+  "scope": "Actual adapter serialization and saved scientific imports, scripted HTTP responses only; no semantic quality comparison",
+  "fixture_zip_sha256": "1373f4b308cd5238aa07e5e45aeb9a215f06961fa83d885bf6b64ff9cf100914",
+  "fixture_zip_bytes": 11395928,
+  "planned_blank_workbook": {
+    "answer_rows": 27,
+    "fact_rows": 177,
+    "human_fields_all_blank": true,
+    "sha256": "c13c3e9bfa569344caba34b1ecebdb290b304302ade3fcd377e2d975dd4ab5f8",
+    "authoring_exit_code": -1073740791,
+    "saved_file_readback_and_import_passed": true,
+    "native_Excel_UI_acceptance": false
+  }
+}

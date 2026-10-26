@@ -1,0 +1,101 @@
+{
+  "rounds": [
+    {
+      "message": "请比较本题两条候选VEGFA_SD_3535和VEGFA_SD_3499：先核查谁的模型分数更高，再核对随附近匹配记录与实际使用的序列窗口。我的目的，是决定先补核哪些证据、是否已有充分依据把某条列为实验候选。请并列呈现支持证据与警告；如建议顺序，说明服务于哪个目的。允许没有唯一优先候选，不把当前程序名单当成生物学最佳答案。",
+      "user_input": {
+        "candidate_rows": [
+          {
+            "source_run": "VEGFA_NM003376_6",
+            "source_tool": "siDirect_2.0",
+            "target_start_1based": "3535",
+            "target_end_1based": "3557",
+            "target_window_23nt": "AACGACAAAGAAATACAGATATA",
+            "guide_21nt_RNA_5to3": "UAUCUGUAUUUCUUUGUCGUU",
+            "passenger_21nt_RNA_5to3": "CGACAAAGAAAUACAGAUAUA",
+            "guide_paired_core_19nt_5to3": "UAUCUGUAUUUCUUUGUCG",
+            "passenger_paired_core_19nt_5to3": "CGACAAAGAAAUACAGAUA",
+            "guide_overhang_3prime": "UU",
+            "passenger_overhang_3prime": "UA",
+            "functional_rule": "U",
+            "seed_tm_guide_C": "20.3",
+            "seed_tm_passenger_C": "19.2",
+            "vendor_min_mismatches_guide_19nt_g2g20": "2",
+            "vendor_min_mismatches_passenger_19nt_g2g20": "2",
+            "candidate_id": "VEGFA_SD_3535",
+            "target_gene": "VEGFA",
+            "design_transcript": "NM_003376.6",
+            "core_matches_n": "20",
+            "core_matches_transcripts": "NM_001171623.2;NM_001171626.2;NM_001171628.2;NM_001317010.2;NM_001025369.3;NM_001171627.2;NM_001171625.2;NM_001204384.2;NM_001287044.2;NM_001025367.3;NM_001171630.2;NM_001171622.2;NM_001171624.2;NM_001025370.3;NM_001204385.2;NM_001025368.3;NM_001033756.3;NM_003376.6;NM_001025366.3;NM_001171629.2",
+            "all_20_transcripts_core_match": "True",
+            "guide_gc_pct": "31.57894736842105",
+            "working_pool_pass": "True",
+            "exclusion_reason": "NA",
+            "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+            "oligo_input_derivation": "19_BP_PAIRED_CORE_FROM_VERIFIED_AUTHOR_21NT_DUPLEX_NOT_ARBITRARY_TRUNCATION"
+          },
+          {
+            "source_run": "VEGFA_NM003376_6",
+            "source_tool": "siDirect_2.0",
+            "target_start_1based": "3499",
+            "target_end_1based": "3521",
+            "target_window_23nt": "TTCGAGATATTCCGTAGTACATA",
+            "guide_21nt_RNA_5to3": "UGUACUACGGAAUAUCUCGAA",
+            "passenger_21nt_RNA_5to3": "CGAGAUAUUCCGUAGUACAUA",
+            "guide_paired_core_19nt_5to3": "UGUACUACGGAAUAUCUCG",
+            "passenger_paired_core_19nt_5to3": "CGAGAUAUUCCGUAGUACA",
+            "guide_overhang_3prime": "AA",
+            "passenger_overhang_3prime": "UA",
+            "functional_rule": "U",
+            "seed_tm_guide_C": "21.3",
+            "seed_tm_passenger_C": "15.9",
+            "vendor_min_mismatches_guide_19nt_g2g20": "3",
+            "vendor_min_mismatches_passenger_19nt_g2g20": "3",
+            "candidate_id": "VEGFA_SD_3499",
+            "target_gene": "VEGFA",
+            "design_transcript": "NM_003376.6",
+            "core_matches_n": "20",
+            "core_matches_transcripts": "NM_001171623.2;NM_001171626.2;NM_001171628.2;NM_001317010.2;NM_001025369.3;NM_001171627.2;NM_001171625.2;NM_001204384.2;NM_001287044.2;NM_001025367.3;NM_001171630.2;NM_001171622.2;NM_001171624.2;NM_001025370.3;NM_001204385.2;NM_001025368.3;NM_001033756.3;NM_003376.6;NM_001025366.3;NM_001171629.2",
+            "all_20_transcripts_core_match": "True",
+            "guide_gc_pct": "42.10526315789474",
+            "working_pool_pass": "True",
+            "exclusion_reason": "NA",
+            "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN",
+            "oligo_input_derivation": "19_BP_PAIRED_CORE_FROM_VERIFIED_AUTHOR_21NT_DUPLEX_NOT_ARBITRARY_TRUNCATION"
+          }
+        ],
+        "user_provided_evidence": {
+          "near_match_review": [
+            {
+              "candidate_id": "VEGFA_SD_3535",
+              "strand_role": "guide",
+              "query_definition": "AUTHOR_G2_G20_19NT",
+              "guide_window_5to3": "AUCUGUAUUUCUUUGUCGU",
+              "reverse_complement_target_pattern_DNA_5to3": "ACGACAAAGAAATACAGAT",
+              "reference_transcript": "NR_170598.1",
+              "mapped_gene": "IRGM",
+              "reference_start_1based": "1724",
+              "reference_end_1based": "1742",
+              "reference_subsequence_DNA_5to3": "AAGACAAAGAAATACAGAT",
+              "mismatch_positions_in_target_pattern_1based": "2",
+              "actual_mismatches": "1",
+              "independent_check": "PASS",
+              "interpretation": "SEQUENCE_REVIEW_FLAG_NOT_DEMONSTRATED_OFF_TARGET"
+            }
+          ]
+        }
+      },
+      "conditions": {
+        "candidate_check": true,
+        "reference_check": true,
+        "score_check": true,
+        "seed_check": true,
+        "expression_check": true,
+        "report_required": true,
+        "both_expression_states": false,
+        "compare_all_requested_candidates": true,
+        "chain_assumption_provided": false,
+        "allow_builtin_expression": true
+      }
+    }
+  ]
+}

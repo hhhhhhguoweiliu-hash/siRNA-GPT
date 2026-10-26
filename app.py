@@ -88,6 +88,17 @@ class Handler(BaseHTTPRequestHandler):
   if path=='/api/development-evaluation':
    import paper_pilot
    return self.send(dict(paper_pilot.STATE))
+  if path=='/api/development-evaluation-plan':
+   from dialogue_evaluation import preview
+   try:return self.send(preview(config))
+   except (ValueError,OSError) as e:return self.send({'error':str(e)},409)
+  if path=='/api/development-evaluation-review-download':
+   import paper_pilot
+   identity=paper_pilot.STATE.get('run_id','')
+   if not identity or paper_pilot.STATE.get('status')=='RUNNING':return self.send({'error':'No completed review package'},409)
+   file=HOME/'evaluation_runs'/identity/'reviewer_package.zip'
+   if not file.is_file():return self.send({'error':'This run has no scoring package; diagnostics are not three-arm scoring runs.'},404)
+   return self.send(file.read_bytes(),kind='application/zip')
   if path=='/api/development-evaluation-download':
    import paper_pilot
    identity=paper_pilot.STATE.get('run_id','')
@@ -104,6 +115,7 @@ class Handler(BaseHTTPRequestHandler):
   if path=='/library_ui.js':return self.send((HOME/'library_ui.js').read_bytes(),kind='application/javascript; charset=utf-8')
   if path=='/ui_text.js':return self.send((HOME/'ui_text.js').read_bytes(),kind='application/javascript; charset=utf-8')
   if path=='/sequence_ui.js':return self.send((HOME/'sequence_ui.js').read_bytes(),kind='application/javascript; charset=utf-8')
+  if path=='/evaluation_ui.js':return self.send((HOME/'evaluation_ui.js').read_bytes(),kind='application/javascript; charset=utf-8')
   if path=='/sequence-check-replay' or path.startswith('/sequence-check-replay/'):
    folder=HOME/'research/2026-10-24_sequence_guard/replay'
    name='index.html' if path=='/sequence-check-replay' else path.removeprefix('/sequence-check-replay/')
@@ -225,12 +237,27 @@ class Handler(BaseHTTPRequestHandler):
      if data.get('confirm_api_usage') is not True:return self.send({'error':'需先确认本次诊断或开发评价会调用模型并产生用量'},400)
      evaluation_mode=data.get('mode','batch')
      if evaluation_mode not in ('batch','diagnostic'):return self.send({'error':'评价模式无效'},400)
-     expected_records=1 if evaluation_mode=='diagnostic' else 54
+     protocol=data.get('protocol','legacy')
+     if protocol not in ('legacy','dialogue-v3'):return self.send({'error':'评价题包无效'},400)
+     if protocol=='dialogue-v3':
+      from dialogue_evaluation import prepare
+      try:proposed=prepare(config(),evaluation_mode)[0]
+      except (ValueError,OSError) as e:return self.send({'error':str(e)},409)
+      if data.get('plan_sha256')!=proposed['plan_sha256']:return self.send({'error':'请先查看最新待运行方案并重新确认用量；本次未启动'},409)
+      expected_records=proposed['planned_units']
+     else:expected_records=1 if evaluation_mode=='diagnostic' else 54
      identity=('diag_' if evaluation_mode=='diagnostic' else 'dev_')+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+__import__('uuid').uuid4().hex[:6]
      STATE['running']=True
      paper_pilot.STATE.update(status='RUNNING',run_id=identity,completed=0,total=expected_records)
+     paper_pilot.STOP.clear()
     def evaluate_once():
-     try:paper_pilot.run(config,identity,mode=evaluation_mode)
+     try:
+      if protocol=='dialogue-v3':
+       from dialogue_evaluation import run
+       run(config,identity,mode=evaluation_mode,confirm_api_usage=True,plan_sha256=data['plan_sha256'])
+      else:paper_pilot.run(config,identity,mode=evaluation_mode)
+     except Exception as e:
+      paper_pilot.STATE.update(status='FAILED',error=str(e))
      finally:
       with LOCK:STATE['running']=False
     threading.Thread(target=evaluate_once,daemon=True).start()

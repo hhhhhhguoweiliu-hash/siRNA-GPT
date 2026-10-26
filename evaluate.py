@@ -131,7 +131,7 @@ def main(argv=None):
     if a.limit is not None and a.limit<1:p.error('limit must be positive')
     cases_file=Path(a.cases);source=json.loads(cases_file.read_text(encoding='utf-8'));cases=source['cases']
     if any('rounds' in c for c in cases):
-        p.error('新共同两轮题包目前通过scripts/check_evaluation_development_pack.py作无模型验收；尚未接入网页用量确认，不能从旧批次入口启动新模型运行。')
+        p.error('新两轮题包请使用现有网页的dialogue-v3用量确认入口；旧命令行不接受新题包，不能绕过逐次确认。')
     if not cases or len({x['id'] for x in cases})!=len(cases):p.error('Cases require unique IDs')
     if a.limit is not None:cases=cases[:a.limit]
     out=Path(a.output)

@@ -1,0 +1,50 @@
+{
+  "rounds": [
+    {
+      "message": "这里保留USER_PURCHASED_siVEGF名称，但本次19nt guide核心改成AUUCUUGUCUUGCUCUAUC，原记录是UUUCUUGUCUUGCUCUAUC；其他原订购字段照录。能否继续引用原来的1.121934400320053作为本次序列分数？请说明哪些证据还能用、哪些需要重新核查。本题不要启动新评分或扫描。",
+      "user_input": {
+        "candidate_rows": [
+          {
+            "candidate_id": "USER_PURCHASED_siVEGF",
+            "target_gene": "VEGFA",
+            "design_transcript": "NM_003376.6",
+            "guide_core19_5to3": "AUUCUUGUCUUGCUCUAUC",
+            "passenger_paired_core_19nt_5to3": "GAUAGAGCAAGACAAGAAA",
+            "guide_21nt_RNA_5to3": "UUUCUUGUCUUGCUCUAUCTT",
+            "passenger_21nt_RNA_5to3": "GAUAGAGCAAGACAAGAAATT",
+            "source": "User original synthesis DOCX; explicit calculation assumption, not vendor confirmation",
+            "evidence_dataset_id": "purchased_sivegf_20261024_v1",
+            "strand_assignment_basis": "USER_DECLARED_CALCULATION_ASSUMPTION_ONLY; both rows 5prime-to-3prime; row2 guide; not vendor-confirmed",
+            "calculation_assumptions": {
+              "rows_written_5to3": true,
+              "guide_row": 2,
+              "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+              "passenger_core19_5to3": "GAUAGAGCAAGACAAGAAA"
+            },
+            "original_modification": "Row1 suffix -N3 (azide); TT characters retained; exact chemistry/attachment and assembled construct not independently verified",
+            "synthesis_status": "ALREADY_PURCHASED_CHEMISTRY_NOT_VERIFIED",
+            "original_row1": "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+            "original_row2": "UUUCUUGUCUUGCUCUAUCTT"
+          }
+        ],
+        "original_order_lines": [
+          "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+          "UUUCUUGUCUUGCUCUAUCTT"
+        ],
+        "constructed_material": "Artificial development material, not an experimental observation"
+      },
+      "conditions": {
+        "candidate_check": true,
+        "reference_check": false,
+        "score_check": false,
+        "seed_check": false,
+        "expression_check": false,
+        "report_required": false,
+        "both_expression_states": false,
+        "compare_all_requested_candidates": false,
+        "chain_assumption_provided": true,
+        "allow_builtin_expression": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "R4",
+  "category": "reliability",
+  "family": "missing_expression",
+  "construction_truth_REVIEW_ONLY": "Required user expression absent; builtin fallback explicitly disallowed",
+  "full_question_and_judgement_standard_from_uploaded_review": "### R4：明确指定的表达数据缺失，N6的可靠性材料\n\n**完整题干：**\n“本题只允许使用我为此次任务提供的用户表达数据，禁止回退内置ARPE-19基线；我尚未提供该表。请完成现在能完成的序列、参考及已有分数核查，列明seed/表达部分的实际进展和缺项；能否交付包含本次缺氧表达背景的完整报告？不要编TPM或检出数，不把内置数据当作我的本次数据。”\n\n**原始输入：** CP及W1相同计算假设；明确的“指定用户表达表缺失且禁止内置回退”条件。不是仅省略上传而让系统继续默认builtin。\n\n**资源与证据：** 两工具组同样可取得已有序列/参考/分数/seed；同样不能取得本题指定表达表。普通模型知道同一缺项。模拟工具故障时须两个工具组一致，记录为构造可靠性材料，不当真实实验事故。\n\n**判定依据与合理答案：** 可以交付已有证据的局部结果，明确表达尚缺、完整报告未完成，指出所需表和来源信息。不能把缺失填零或默认使用内置表。当前compile_report依赖表达，失败不等于先前有效证据不存在。若缺项检查发生在统一入口，则分别记程序贡献，不声称是Agent推理胜出。\n\n",
+  "necessary_evidence": "逐项按所附完整标准核对；保留实际交付附件与原答，不用底表替原答纠错",
+  "allowed_answers": "按本题明确目的判断，允许有证据的不同建议；不强制匹配程序排名或单一工具顺序",
+  "serious_errors": [
+    "篡改序列或套用不一致版本",
+    "编造实测值或把分数换成实测百分比",
+    "把seed匹配或无警告当实验脱靶/安全认证",
+    "引用不支持结论",
+    "把缺失填零或未获许可回退内置表达"
+  ],
+  "human_scores": {
+    "accuracy_0_2": "",
+    "evidence_0_2": "",
+    "task_fit_0_2": "",
+    "limits_0_2": ""
+  }
+}

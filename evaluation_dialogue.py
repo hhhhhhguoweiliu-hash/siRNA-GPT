@@ -1,7 +1,7 @@
-"""Shared-round development entry. Model transports here MUST be explicit test stubs.
+"""Shared-round execution; provider mode requires explicit usage confirmation.
 
-No paid API path or website launch is added. Existing scientific tools are reused
-in imported mode, with per-round cold sessions and each arm's own history only.
+Default remains offline. HTTP fixture mode uses the provider adapter without a
+network request; its responses/usage are never labelled real model evidence.
 """
 import copy
 import json
@@ -80,10 +80,18 @@ def access_policy(case, resources):
                 for i, spec in enumerate(case['rounds'])]}
 
 
-def run_dialogue(group, case, cfg, root, transport=None, resources=None):
+def run_dialogue(group, case, cfg, root, transport=None, resources=None,*,
+                 execution_mode='offline_stub',confirm_api_usage=False,http_opener=None,stop_requested=None):
     if group not in ('llm', 'workflow', 'agent'):
         raise ValueError('Unknown configuration')
-    if group != 'workflow' and transport is None:
+    if execution_mode not in ('offline_stub','provider','http_fixture'):
+        raise ValueError('Unknown execution mode')
+    if execution_mode=='provider' and (confirm_api_usage is not True or transport is not None or http_opener is not None):
+        raise ValueError('真实模型只允许已确认用量的官方适配路径，不能传入未标记替身')
+    if execution_mode=='http_fixture' and (http_opener is None or transport is not None):
+        raise ValueError('HTTP检查必须显式传入无网络替身')
+    if execution_mode=='offline_stub' and http_opener is not None:raise ValueError('Use explicit HTTP fixture mode')
+    if group != 'workflow' and transport is None and execution_mode=='offline_stub':
         raise ValueError('新两轮入口目前仅允许明确传入的无模型替身；尚未接入网页用量确认，不启动API')
     if case['category'] == 'literature_qa':
         raise ValueError('Q1/Q2资料问答尚未具备三组对等入口，单列未支持，不当作某组科研失败')
@@ -102,6 +110,7 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None):
     start = time.monotonic()
     round_start, current_round = start, 1
     stopped = False
+    audited=None
     def sanitized(value):
         text = json.dumps(value, ensure_ascii=False, default=str)
         if cfg.get('api_key'):
@@ -116,24 +125,36 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None):
             evidence['partial_response'] = partial
         return sanitized(evidence)
     def budget_check():
+        if stop_requested and stop_requested():raise TaskError('用户已要求停止；已取得的内容保留，不启动后续轮次')
         now = time.monotonic()
         if now - start > settings['case_timeout_seconds']:
             raise TaskError('达到有效每题时限：' + str(settings['case_timeout_seconds']) + '秒；停止并保留记录')
         if now - round_start > settings['round_timeout_seconds']:
             raise TaskError('达到有效每轮时限：' + str(settings['round_timeout_seconds']) + '秒；停止并保留记录')
+    def remaining_seconds():
+        budget_check()
+        return min(settings['case_timeout_seconds']-(time.monotonic()-start),
+                   settings['round_timeout_seconds']-(time.monotonic()-round_start))
+    if execution_mode!='offline_stub' and group!='workflow':
+        from evaluation_transport import RecordedTransport
+        audited=RecordedTransport(cfg,root/'model_transport',mode=execution_mode,
+            opener=http_opener,remaining_seconds=remaining_seconds)
+        transport=audited
     def recorded_transport(payload):
         budget_check()
         per_round = sum(r['round'] == current_round for r in requests)
         if per_round >= settings['max_model_requests_per_round'] or len(requests) >= settings['max_model_requests_per_case']:
             raise TaskError('达到有效模型逻辑请求上限；后续轮次不启动')
-        item = {'record_kind': 'OFFLINE_MODEL_STUB_NOT_REAL_MODEL', 'round': current_round,
+        kind={'offline_stub':'OFFLINE_MODEL_STUB_NOT_REAL_MODEL','provider':'REAL_PROVIDER_MODEL_REQUEST',
+              'http_fixture':'SYNTHETIC_HTTP_FIXTURE_NOT_MODEL_RESULT'}[execution_mode]
+        item = {'record_kind': kind, 'round': current_round,
                 'payload': copy.deepcopy(payload), 'effective_settings': settings}
         requests.append(item)
-        folder = root / 'test_transport' / str(len(requests)).zfill(3)
+        folder = root / ('test_transport' if execution_mode=='offline_stub' else 'model_requests') / str(len(requests)).zfill(3)
         save_json(folder / 'prepared_request.json', sanitized(item))
         try:
             response = transport(copy.deepcopy(payload))
-            save_json(folder / 'stub_response.json', sanitized({'record_kind': item['record_kind'], 'response': response}))
+            save_json(folder / ('stub_response.json' if execution_mode=='offline_stub' else 'response.json'), sanitized({'record_kind': item['record_kind'], 'response': response}))
             item['response_saved'] = True
             budget_check()
             return response
@@ -171,7 +192,10 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None):
                             'declared_resources': {'scientific_tools': False, 'external_web': False}}, ensure_ascii=False)}]}
                     response = recorded_transport(payload)
                     raw_model_answer = response['choices'][0]['message'].get('content') or ''
-                    answer, status, answer_source = raw_model_answer, 'TEST_STUB_ANSWER', 'OFFLINE_MODEL_STUB'
+                    if not raw_model_answer.strip():raise TaskError('模型没有返回可读回答，原响应保留；不能当作已完成科研任务')
+                    answer=raw_model_answer
+                    status='ANSWERED_NO_TOOLS' if execution_mode=='provider' else 'TEST_STUB_ANSWER'
+                    answer_source='REAL_MODEL_NO_TOOLS' if execution_mode=='provider' else 'OFFLINE_MODEL_STUB' if execution_mode=='offline_stub' else 'SYNTHETIC_HTTP_FIXTURE'
                 else:
                     decision = 'ready'
                     if group == 'agent':
@@ -187,7 +211,9 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None):
                             raise TaskError('规划条件与共同输入冲突，停止且不采用改写：' + json.dumps(update_check['conflicts'], ensure_ascii=False))
                         if decision != 'ready':
                             raw_model_answer = proposed['summary'] + ('\n' + proposed['question'] if proposed['question'] else '')
-                            answer, status, answer_source = raw_model_answer, 'TEST_STUB_' + decision.upper(), 'OFFLINE_MODEL_STUB'
+                            answer=raw_model_answer
+                            status=('MODEL_' if execution_mode=='provider' else 'TEST_STUB_')+decision.upper()
+                            answer_source='REAL_MODEL_PLANNER' if execution_mode=='provider' else 'OFFLINE_MODEL_STUB' if execution_mode=='offline_stub' else 'SYNTHETIC_HTTP_FIXTURE'
                     else:
                         stage = 'fixed_plan'
                         plan = fixed_plan(common['conditions'])
@@ -212,10 +238,11 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None):
                             result = session.result_for_plan()
                             status, answer_source = result['status'], 'DETERMINISTIC_EXISTING_TOOL_EVIDENCE'
                         else:
-                            result = session.run_agent(recorded_transport)
+                            session.cancelled=lambda:bool(stop_requested and stop_requested())
+                            result = session.run_agent(recorded_transport,test_only=execution_mode!='provider')
                             status = result['status']
                             raw_model_answer = result.get('model_summary_raw') or result.get('model_summary') or result.get('message', '')
-                            answer_source = 'OFFLINE_MODEL_STUB_WITH_SHARED_VALIDATION'
+                            answer_source = 'REAL_MODEL_WITH_SHARED_VALIDATION' if execution_mode=='provider' else 'OFFLINE_MODEL_STUB_WITH_SHARED_VALIDATION' if execution_mode=='offline_stub' else 'SYNTHETIC_HTTP_FIXTURE_WITH_SHARED_VALIDATION'
                         state = copy.deepcopy(session.state)
                         stage = 'presentation'
                         answer = workflow_answer(inputs, state) if group == 'workflow' else result.get('model_summary_display') or raw_model_answer
@@ -245,12 +272,14 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None):
             'resolved_input_sha256_without_own_history': input_sha256({**inputs, 'task': {k: v for k, v in inputs['task'].items() if k != 'own_history'}}) if inputs else None,
             'history_before': before, 'history_after': copy.deepcopy(history),
             'status': status, 'answer': answer, 'answer_source': answer_source,
-            'raw_model_answer_TEST_ONLY': raw_model_answer, 'planned_tools': plan,
+            'raw_model_answer':raw_model_answer,'raw_model_answer_TEST_ONLY':raw_model_answer if execution_mode=='offline_stub' else None, 'planned_tools': plan,
             'completed_tools': list(state), 'tool_results': state, 'error': error,
             'error_record': error_record, 'planner_task_update_check': update_check,
             'resource_access': policy, 'effective_settings': settings,
-            'test_stub_requests': len(requests) - request_start,
-            'real_model_requests': 0, 'usage_real_model': None,
+            'test_stub_requests':len(requests)-request_start if execution_mode=='offline_stub' else 0,
+            'real_model_requests':audited.summary(request_start)['real_model_requests'] if audited else 0,
+            'usage_real_model':audited.summary(request_start) if audited and execution_mode=='provider' else None,
+            'transport_summary':audited.summary(request_start) if audited else None,
             'tool_calls': session.tool_calls if session else 0,
             'run_id': session.id if session else None,
             'delivered_files': [str(p.relative_to(root)).replace('\\', '/') for p in (session.path.rglob('*') if session else []) if p.is_file()]}
@@ -258,7 +287,8 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None):
         save_json(folder / 'turn_record.json', record)
         records.append(record)
     last = next((r for r in reversed(records) if r['execution'] == 'ATTEMPTED'), records[-1])
-    result = {'group': group, 'case_id': case['id'], 'record_kind': 'OFFLINE_ACCEPTANCE_NOT_REAL_MODEL_EVALUATION',
+    result = {'group': group, 'case_id': case['id'], 'execution_mode':execution_mode,
+        'record_kind':{'offline_stub':'OFFLINE_ACCEPTANCE_NOT_REAL_MODEL_EVALUATION','provider':'REAL_EVALUATION_ATTEMPT_NOT_HUMAN_SCORED','http_fixture':'HTTP_FIXTURE_ACCEPTANCE_NOT_REAL_MODEL_EVALUATION'}[execution_mode],
         'status': last['status'], 'answer': last['answer'], 'rounds': records,
         'planned_rounds': len(records), 'attempted_rounds': sum(r['execution'] == 'ATTEMPTED' for r in records),
         'pending_rounds': sum(r['execution'] == 'NOT_EXECUTED' for r in records),
@@ -266,9 +296,16 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None):
         'tool_results': last['tool_results'], 'completed_tools': last['completed_tools'],
         'tool_calls': sum(r['tool_calls'] for r in records),
         'usage': [], 'total_tokens': 0 if group == 'workflow' else None, 'usage_complete': group == 'workflow',
-        'real_model_requests': 0, 'test_stub_requests': len(requests), 'effective_settings': settings,
-        'test_prepared_requests': sanitized(requests), 'seconds': round(time.monotonic() - start, 3),
+        'real_model_requests': 0, 'test_stub_requests':len(requests) if execution_mode=='offline_stub' else 0, 'effective_settings': settings,
+        'test_prepared_requests':sanitized(requests) if execution_mode=='offline_stub' else [],
+        'model_request_records':sanitized(requests) if execution_mode!='offline_stub' else [],'seconds': round(time.monotonic() - start, 3),
         'quality_scored': False, 'resource_access': policy}
+    if audited:
+        result.update(audited.summary())
+        result['transport_summary']=audited.summary()
+    for record in records:
+        diagnostics=(record.get('error_record') or {}).get('diagnostics')
+        if diagnostics:result['provider_error']=diagnostics;break
     result = sanitized(result)
     save_json(root / 'case_input.json', {'rounds': result['case_input'], 'input_sha256': result['input_sha256']})
     save_json(root / 'result.json', result)
