@@ -1,0 +1,236 @@
+{
+  "kind": "READ_ONLY_EXISTING_EVIDENCE_AUDIT_NOT_QUALITY_GRADING",
+  "reviewed_main": "14b1958b58b416a7322edb76f187aa4584408f4c",
+  "task_branch": "codex/20261020-evidence-pilot",
+  "audited_working_head": "da9557a8a64f979bd3243b1582b7d24523c702d2",
+  "old_distinct_development_task_count": 6,
+  "old_case_ids": [
+    "normal_hypoxia",
+    "normal_normoxia",
+    "target_only",
+    "invalid_sequence",
+    "unsupported_target",
+    "ambiguous_direction"
+  ],
+  "old_planned_and_recorded_cells": 54,
+  "old_complete_unique_6_by_3_by_3_coverage": true,
+  "old_groups": {
+    "agent": 18,
+    "workflow": 18,
+    "llm": 18
+  },
+  "old_status_counts_NOT_quality_scores": {
+    "agent:COMPLETE": 6,
+    "workflow:FAILED": 9,
+    "workflow:PARTIAL_COMPLETE": 3,
+    "agent:PARTIAL_COMPLETE": 3,
+    "llm:ANSWERED_NO_TOOLS": 18,
+    "agent:idle": 7,
+    "workflow:COMPLETE": 6,
+    "agent:FAILED": 2
+  },
+  "nine_refers_to_legacy_candidate_count": 9,
+  "legacy_highest_score_and_review_flag_same_candidate": {
+    "candidate_id": "VEGFA_SD_3535",
+    "scaled_score_NOT_knockdown_percent": "1.0035899763107299",
+    "query_definition": "AUTHOR_G2_G20_19NT",
+    "mapped_gene": "IRGM",
+    "mismatches": 1,
+    "not_experimentally_demonstrated_off_target": true
+  },
+  "purchased_case_existing_evidence": {
+    "candidate_id": "USER_PURCHASED_siVEGF",
+    "guide_core19_5to3": "UUUCUUGUCUUGCUCUAUC",
+    "reference_transcript": "NM_003376.6",
+    "fixed_reference_coverage": [
+      18,
+      20
+    ],
+    "expression_counts": {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "seed_site_count_all": 3540,
+      "seed_site_count_nontarget": 3539,
+      "matched_genes": 2839,
+      "baseline_mapped_genes": 2836,
+      "hypoxia_detected_genes": 1595,
+      "normoxia_detected_genes": 1695,
+      "state_detected_genes": 1595,
+      "unmapped_genes": 3,
+      "hypoxia_only_detected_genes": 23,
+      "normoxia_only_detected_genes": 123
+    },
+    "expression_changes_ranking": false,
+    "sample_expressed_isoform_or_target_read_coverage_checked_by_this_audit": false,
+    "physical_N3_construct_simulated": false
+  },
+  "new_design_status": "DISCUSSION_DRAFT_ONLY_NOT_RUNNABLE_FINAL_CASESET",
+  "new_problem_type_count_NOT_independent_test_sample_size": 9,
+  "new_model_calls": 0,
+  "new_scientific_computation_runs": 0,
+  "new_evaluation_runs": 0,
+  "human_quality_scores_filled": 0,
+  "deployment_attempted": false,
+  "protected_evidence_changed_from_reviewed_main": [],
+  "source_files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 5684,
+      "sha256": "9173f6490ed08214166f1b607374e77747026747a85a27f10ce8fcff6d8d7aea"
+    },
+    {
+      "path": "docs/USER_REQUIREMENTS.md",
+      "bytes": 3404,
+      "sha256": "cda94d20872338c411f2f1105ede9985c46f101f439633669603a2e31f28534f"
+    },
+    {
+      "path": "references/CRISPR-GPT/README.md",
+      "bytes": 2483,
+      "sha256": "fb554feb0482872137fcf69209eddb4fb8d5c77d4c7fa274cfaa2f407297f9cb"
+    },
+    {
+      "path": "references/CRISPR-GPT/paper_extracted_text.txt",
+      "bytes": 160722,
+      "sha256": "df7cd505fe921c97be44609e11d0e91b9db1f6fba186dfaaf74df9ddba81cb80"
+    },
+    {
+      "path": "evaluation_cases.example.json",
+      "bytes": 1375,
+      "sha256": "31138b0927b76396144c8126f01b4f8e626e990380406e81ec01f6185f15a66c"
+    },
+    {
+      "path": "evaluation_rubric.json",
+      "bytes": 3032,
+      "sha256": "e41f739438a393733c7f83e0dc73385f5fc0120a051128a7043a4abf59af6676"
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 12257,
+      "sha256": "9a43c7d882c89c71ecb16a5f77630d9b9a2c363f69b70db8a93e6308abd0d0ef"
+    },
+    {
+      "path": "research/2026-10-22_fairness/three_arm/cases.json",
+      "bytes": 1697,
+      "sha256": "0bd2597a698a8affe63a1892656d462996b5ae973f3a71ad5154c313777dadf8"
+    },
+    {
+      "path": "research/2026-10-22_fairness/three_arm/results.json.gz",
+      "bytes": 272609,
+      "sha256": "55664e58cea8181046ddc73c3740b73960589380d02b95719f3c6c0e1334e505"
+    },
+    {
+      "path": "docs/reviews/20261022_1501_full_batch_review.md",
+      "bytes": 10507,
+      "sha256": "aef66b4b0563dea49dc19498642f550f8e2e1a30893d19fa3b76b642871f3fcd"
+    },
+    {
+      "path": "docs/reviews/20261023_2116_fast_paper_scope_and_codex_tasks.md",
+      "bytes": 9305,
+      "sha256": "3fd3485345d23662e365f4ba491437bae15d027687d80846185f0af8a2df1a2b"
+    },
+    {
+      "path": "data/candidates.tsv",
+      "bytes": 6404,
+      "sha256": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853"
+    },
+    {
+      "path": "data/VEGFA.fasta",
+      "bytes": 73742,
+      "sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706"
+    },
+    {
+      "path": "data/historical_scores.tsv",
+      "bytes": 2272,
+      "sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392"
+    },
+    {
+      "path": "data/historical_near_matches.tsv",
+      "bytes": 160365,
+      "sha256": "af0926615f20e405023109b66a4ad00620f938cb53f84a605c4cb9ed7e209e72"
+    },
+    {
+      "path": "data/historical_IRGM_review.tsv",
+      "bytes": 492,
+      "sha256": "cd229502a946bb2ce0646ad341042f41f2077eaefa1d2df4cf38b841c6c74def"
+    },
+    {
+      "path": "data/user_ordered_sequences/20261024/sequence_synthesis_original.docx",
+      "bytes": 13516,
+      "sha256": "7ce4e3cffbe91c62c81926edcc52f53f97fc57c8941085367166068f9b9c3db6"
+    },
+    {
+      "path": "data/user_ordered_sequences/20261024/README.md",
+      "bytes": 3936,
+      "sha256": "344d64b24f38019d9c8456cef2543e497557d6ef356cec7fb7206958f26ce3d4"
+    },
+    {
+      "path": "data/user_ordered_sequences/20261024/sequence_records.json",
+      "bytes": 5004,
+      "sha256": "f474de47c3c1ce784d8a614f24b68ff40b10c1dda92e9ed9752cf01b9b2d87d0"
+    },
+    {
+      "path": "research/2026-10-24_candidate_v2/METHODS_EN.md",
+      "bytes": 7763,
+      "sha256": "d825377ac97c684b31b49f701705c92429815ae29f2fed5bf5de4a67376a2cd1"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/README.md",
+      "bytes": 3853,
+      "sha256": "c31fad40bb4d3baca135b4f05c16868d9e5a13261511b18bab4f2079ffa4f50e"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/tool_export/input.json",
+      "bytes": 1642,
+      "sha256": "f38290c089264761cfbb0d02416e340937b295432b53c7dcd9af9ad9a859484c"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/tool_export/inspect_candidates.json",
+      "bytes": 1490,
+      "sha256": "018dd7a2d6e2d68cd740368d015739921ca3e8db0fe2b650223af40010e5b779"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/tool_export/verify_target.json",
+      "bytes": 5585,
+      "sha256": "d7b933317d6f8f56b1beb5971769d888cc649332048e5eef144445314386cd31"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/tool_export/score_candidates.json",
+      "bytes": 4271,
+      "sha256": "2716a4dda3e73c35d42f79eb187628ebf01b6e3d3936a286104e40b5cdd14d27"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/tool_export/match_seed.json",
+      "bytes": 988,
+      "sha256": "a25ecdbebb8a71925e6a8c6dbcece2cb067e768474fe487f022fcaf6aa26cd63"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/tool_export/query_expression.json",
+      "bytes": 1690,
+      "sha256": "90d43248b773f3a3e9a1d5daacfd9184ef406a531d225b3fe50d9fb651f06594"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/tool_export/expression_source.json",
+      "bytes": 539,
+      "sha256": "3bb19534fb3edc3bedd6971ababe11d6a3a81b6346b047f16dcb3fdc6c8ec0dd"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/tool_export/compile_report.json",
+      "bytes": 328,
+      "sha256": "9118273b6b969a8ccb70d2013664dde449286855e72c44774ea4a26ed1510427"
+    },
+    {
+      "path": "research/2026-10-24_nearfull_complete/live/ANSWER_CORRECTION_ZH.md",
+      "bytes": 811,
+      "sha256": "83d616f5d277c848fdae58af1cc1cf96eb718a25391214be2e98797156dfa427"
+    },
+    {
+      "path": "research/2026-10-23_literature/development_protocol.json",
+      "bytes": 4544,
+      "sha256": "8ef13d3084564565e31e4e6d1c5ad5b25062ce20b9027f2dbaa56772c6211d93"
+    },
+    {
+      "path": "research/2026-10-24_followup/live/README.md",
+      "bytes": 2549,
+      "sha256": "4c44f9cc97f74a89d1d0b3239ea599b59fe963930b1936405fc161f542bdddde"
+    }
+  ]
+}
