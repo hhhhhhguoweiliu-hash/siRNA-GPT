@@ -63,7 +63,7 @@ CATEGORIES = {
         "go_roots": ["GO:0001523"],
         "reactome_ids": ["R-HSA-975634"],
     },
-    "photoreceptor_outer_segment_phagocytosis_proxy": {
+    "phagocytosis_particle_uptake": {
         "label": "吞噬/颗粒摄取相关",
         "go_roots": ["GO:0006909"],
         "reactome_ids": [],
@@ -94,6 +94,7 @@ FEATURE1_SOURCE = "Deferred by user: full genome-wide hypoxia CRISPR dependency 
 FEATURE1_MISSING = "Deferred by user instruction; no gene-level hypoxia CRISPR effect value was downloaded or calculated."
 FEATURE2_SOURCE = "Deferred by user: own ARPE-19 Nor1-4/Hyp1-4 expression matrix not loaded in this run."
 FEATURE2_MISSING = "Deferred by user instruction; no user RNA-seq expression matrix was loaded or calculated."
+DOWNLOAD_TIMES = {}
 
 
 def sha256_file(path: Path) -> str:
@@ -119,6 +120,7 @@ def download(url: str, path: Path, attempts: int = 4) -> None:
                 if not tmp.exists() or tmp.stat().st_size == 0:
                     raise RuntimeError("Downloaded source is empty")
                 tmp.replace(path)
+                DOWNLOAD_TIMES[path.name] = datetime.now(timezone.utc).isoformat()
                 return
         except Exception as exc:
             last_error = exc
@@ -320,7 +322,7 @@ def compute_go_annotations(gaf_path: Path, names, parents, obsolete, resolve_sym
 
     has_any_go = set()
     go_category_terms = defaultdict(lambda: defaultdict(set))
-    go_category_evidence = defaultdict(lambda: defaultdict(set))
+    go_category_evidence = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
     go_category_non_iea = defaultdict(set)
     total_rows = mapped_rows = unmapped_rows = 0
     with gzip.open(gaf_path, "rt", encoding="utf-8", errors="replace") as f:
@@ -347,7 +349,7 @@ def compute_go_annotations(gaf_path: Path, names, parents, obsolete, resolve_sym
             cats = term_categories.get(go_id, set())
             for cat in cats:
                 go_category_terms[gene_id][cat].add(go_id)
-                go_category_evidence[gene_id][cat].add(evidence)
+                go_category_evidence[gene_id][cat][go_id].add(evidence)
                 if evidence != "IEA":
                     go_category_non_iea[gene_id].add(cat)
     return has_any_go, go_category_terms, go_category_evidence, go_category_non_iea, {
@@ -373,14 +375,17 @@ def compute_reactome(mapping_path: Path, universe_ids: set[str]):
             if len(fields) < 6:
                 continue
             gene_id, path_id, url, path_name, evidence, species = fields[:6]
-            if gene_id not in universe_ids or species.strip() != "Homo sapiens":
+            if species.strip() != "Homo sapiens":
+                continue
+            if path_id in cat_by_path:
+                path_names[path_id] = path_name
+            if gene_id not in universe_ids:
                 continue
             human_rows += 1
             has_any.add(gene_id)
             mapped_rows += 1
             if path_id in cat_by_path:
                 selected_path_rows += 1
-                path_names[path_id] = path_name
                 for cat in cat_by_path[path_id]:
                     cat_paths[gene_id][cat].add(f"{path_id} | {path_name} | {evidence}")
     return has_any, cat_paths, path_names, {
@@ -472,7 +477,7 @@ def main():
             if goterms or reactpaths:
                 matched_cats.append(spec["label"])
             for go_id in goterms:
-                evs = sorted(go_evidence.get(gid, {}).get(cat, set()))
+                evs = sorted(go_evidence.get(gid, {}).get(cat, {}).get(go_id, set()))
                 go_desc.append(f"{go_id} ({names.get(go_id, 'name unavailable')})")
                 ev_desc.extend([f"{go_id}:{ev}" for ev in evs])
             react_desc.extend(reactpaths)
@@ -496,7 +501,7 @@ def main():
     table["F4_GO_terms"] = f4_go_terms
     table["F4_GO_evidence_codes"] = f4_go_evidence
     table["F4_Reactome_pathways"] = f4_reactome_paths
-    table["F4_nonIEA_supported_categories"] = f4_non_iea
+    table["F4_categories_with_nonIEA_evidence"] = f4_non_iea
     table["F4_source"] = f4_sources
     table["F4_missing_reason"] = f4_missing
     table["F4_has_any_GO_annotation"] = table["gene_id"].isin(has_any_go)
@@ -556,7 +561,7 @@ def main():
         manifest["sources"][key] = {
             "url": spec["url"],
             "version_label": spec["version"],
-            "retrieved_utc": datetime.now(timezone.utc).isoformat(),
+            "retrieved_utc": DOWNLOAD_TIMES.get(p.name, datetime.now(timezone.utc).isoformat()),
             "file": f"raw_sources/{p.name}",
             "size_bytes": int(p.stat().st_size),
             "sha256": sha256_file(p),
@@ -696,7 +701,7 @@ One row per unique NCBI Gene ID represented in the project RefSeq transcript-to-
 - F4, RPE core-function annotation: number of distinct predefined categories (0–6) supported by GO descendants and/or exact human Reactome pathway IDs; then min-max normalized across genes with mapped GOA or Reactome annotation.
 
 ## Important limitations
-F3 is a reference single-cell cell-type comparison, not expression in the user's ARPE-19 culture. F4 is annotation-based support, not proof of gene essentiality, not a knockdown effect, and not a calibrated probability of siRNA toxicity. No composite risk score or feature weights are calculated here.
+F3 is a reference single-cell cell-type comparison, not expression in the user's ARPE-19 culture. F4 is annotation-based support, not proof of gene essentiality, not a knockdown effect, and not a calibrated probability of siRNA toxicity. The non-IEA field means evidence code is not IEA; it does not automatically mean experimental evidence. No composite risk score or feature weights are calculated here.
 
 ## Reproducibility
 source_manifest.json records source URLs, retrieval time, file size and SHA-256 for every source snapshot. raw_sources/ contains the downloaded source files used for this run. The GO root terms and Reactome stable IDs are enumerated in the workbook and TSV files.
