@@ -34,6 +34,11 @@ jobs:
           FEATURE_OUT_DIR: output
         run: python research/four_feature_table/build_feature_table.py
 
+      - name: Add public gnomAD LOEUF feature
+        env:
+          FEATURE_OUT_DIR: output
+        run: python research/four_feature_table/add_gnomad_constraint.py
+
       - name: Verify expected deliverables
         run: |
           test -s output/four_feature_gene_table.csv
@@ -45,6 +50,7 @@ jobs:
           from pathlib import Path
           q = json.loads(Path("output/qc_summary.json").read_text(encoding="utf-8"))
           assert q["gene_universe_unique_NCBI_GeneIDs"] >= 10000, q
+          assert q["F1_LOEUF_scored"] > 0, q
           assert q["F3_scored_genes"] > 0, q
           assert q["F4_scored_genes"] > 0, q
           print("QC passed:", json.dumps(q, ensure_ascii=False))
