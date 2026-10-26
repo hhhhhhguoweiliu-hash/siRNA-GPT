@@ -24,7 +24,10 @@ def main():
     if args.model:cfg['model']=args.model
     if args.key_stdin:
         print('Waiting for the provided credential on standard input; it will not be echoed or saved.',flush=True)
-        cfg['api_key']=sys.stdin.readline().strip()
+        if sys.stdin.isatty():
+            import getpass
+            cfg['api_key']=getpass.getpass('API credential (not echoed): ').strip()
+        else:cfg['api_key']=sys.stdin.readline().strip()
         if not cfg['api_key']:raise ValueError('Empty credential; no requests sent')
     data_consent=json.loads((folder/'provider_data_authorization.json').read_text(encoding='utf-8'))
     if data_consent.get('allow_send_and_run') is not True or data_consent.get('model')!=cfg.get('model'):
