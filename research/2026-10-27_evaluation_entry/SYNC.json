@@ -1,0 +1,53 @@
+{
+  "kind": "TASK_BRANCH_UPLOAD_NOT_DEPLOYMENT_MODEL_RESULTS_OR_HUMAN_SCORES",
+  "payload_commit": "0172402cb9ef51bbf1e9493dec0082fe2431cbe8",
+  "handoff_commit": "6c9c02639872c97e0d2aad2d47ab8512bc52f129",
+  "branch": "codex/20261020-evidence-pilot",
+  "verified_utc": "2026-10-26 21:52:04 UTC",
+  "remote_refs": {
+    "task_branch": "0172402cb9ef51bbf1e9493dec0082fe2431cbe8",
+    "main": "2623c8601bd4b19b472fafc520b95c0cfd0a0fdb"
+  },
+  "github_connector_readback": {
+    "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/blob/0172402cb9ef51bbf1e9493dec0082fe2431cbe8/research/2026-10-27_evaluation_entry/delivery_checks.json",
+    "modified_date": "2026-10-26T21:51:30Z",
+    "content": {
+      "handoff_commit": "6c9c02639872c97e0d2aad2d47ab8512bc52f129",
+      "Python_checks": 214,
+      "frontend_checks": 4,
+      "full_HTTP_fixture_units": 27,
+      "full_HTTP_fixture_rounds": 33,
+      "real_model_calls": 0,
+      "heavy_scientific_runs": 0,
+      "human_scores_filled": 0,
+      "old_protected_paths_changed": [],
+      "old_practice_raw_answer_and_sources_unchanged": true,
+      "blank_score_cells": 108,
+      "blank_fact_rows": 177,
+      "expert_pack_contains_synthetic_responses": false,
+      "new_website_deployed": false,
+      "merged_to_main": false,
+      "native_browser_acceptance": false,
+      "native_Excel_UI_acceptance": false,
+      "workbook_authoring_exit_code": -1073740791,
+      "saved_xlsx_readback_import_and_preview_verified": true,
+      "new_tasks_independently_authored": false,
+      "human_review_personnel_supplied_in_this_batch": false
+    }
+  },
+  "merged_to_main": false,
+  "deployed": false,
+  "real_model_calls": 0,
+  "heavy_scientific_runs": 0,
+  "human_scientific_scores": 0,
+  "drive_upload": false,
+  "storage": "All delivery artifacts, including engineering fixtures, uploaded to the existing private GitHub; no Drive upload claimed.",
+  "remaining": [
+    "Production deployment and real HTTP/browser acceptance",
+    "User confirmation of actual model usage; no paid probe or batch authorized in this turn",
+    "Independent topic/fact-standard review and two actual human reviewers",
+    "Safe import of independently held unseen tasks",
+    "Q1/Q2 equal retrieval; separate from primary task evaluation"
+  ],
+  "receipt_scope": "Payload was uploaded and read back before this receipt-only commit; the final branch may advance to include the receipt."
+}
