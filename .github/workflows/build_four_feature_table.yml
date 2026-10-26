@@ -56,10 +56,17 @@ jobs:
           print("QC passed:", json.dumps(q, ensure_ascii=False))
           PY
 
-      - name: Upload table and exact source snapshots
+      - name: Upload gene table and provenance files
         uses: actions/upload-artifact@v4
         with:
           name: four-feature-gene-table-package
-          path: output/
+          path: |
+            output/four_feature_gene_table.csv
+            output/four_feature_gene_table.xlsx
+            output/feature_definitions.tsv
+            output/missingness_summary.csv
+            output/qc_summary.json
+            output/source_manifest.json
+            output/README_four_feature_table.md
           if-no-files-found: error
           retention-days: 30
