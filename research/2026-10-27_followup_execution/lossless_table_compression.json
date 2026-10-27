@@ -1,0 +1,38 @@
+[
+  {
+    "path": "research\\2026-10-27_followup_execution\\independent\\seed_gene_counts.tsv.gz",
+    "decompressed_sha256": "268b93b662b7703149a93e26acce03f6283a2a5a57177f0c6f9ab50d07572323",
+    "decompressed_bytes": 5983567,
+    "gzip_bytes": 509985
+  },
+  {
+    "path": "research\\2026-10-27_followup_execution\\independent\\seed_transcript_counts.tsv.gz",
+    "decompressed_sha256": "687d64c55d282c99eb6e2ea14a95b6a59f350e42e7bd504ca5f580036d037a69",
+    "decompressed_bytes": 8658201,
+    "gzip_bytes": 1335848
+  },
+  {
+    "path": "research\\2026-10-27_followup_execution\\independent\\expression_per_gene.tsv.gz",
+    "decompressed_sha256": "4051343f58e2a662e2b4454fd2627413834000538b9a94e42a9df06491f1a2e2",
+    "decompressed_bytes": 1849937,
+    "gzip_bytes": 667002
+  },
+  {
+    "path": "research\\2026-10-27_followup_execution\\independent_matched_mapping\\seed_gene_counts.tsv.gz",
+    "decompressed_sha256": "268b93b662b7703149a93e26acce03f6283a2a5a57177f0c6f9ab50d07572323",
+    "decompressed_bytes": 5983567,
+    "gzip_bytes": 509985
+  },
+  {
+    "path": "research\\2026-10-27_followup_execution\\independent_matched_mapping\\seed_transcript_counts.tsv.gz",
+    "decompressed_sha256": "687d64c55d282c99eb6e2ea14a95b6a59f350e42e7bd504ca5f580036d037a69",
+    "decompressed_bytes": 8658201,
+    "gzip_bytes": 1335848
+  },
+  {
+    "path": "research\\2026-10-27_followup_execution\\independent_matched_mapping\\expression_per_gene.tsv.gz",
+    "decompressed_sha256": "fbbd4138b4e5e76c6c2ac0fd186711c2ef7956d98fbe68e9f8b53b7cf895fee2",
+    "decompressed_bytes": 1848952,
+    "gzip_bytes": 666455
+  }
+]

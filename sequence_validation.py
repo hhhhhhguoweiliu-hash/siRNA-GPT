@@ -5,7 +5,7 @@ This is a limited output-integrity guard, not a scientific quality score.
 """
 import hashlib,html,re
 
-VERSION='sequence_consistency_v1'
+VERSION='sequence_consistency_v2_token_labels'
 TOKEN=re.compile(r'(?<![A-Za-z])[ACGUTNX]{10,}(?![A-Za-z])',re.I)
 CORE_FIELDS=('guide_core19_5to3','passenger_core19_5to3')
 ORIGINAL_FIELDS=('guide_21nt_original','passenger_21nt_original','original_row1','original_row2')
@@ -52,7 +52,23 @@ def _expected_fields(line):
         if full and not core:return (role+'_21nt_original',)
         return (role+'_core19_5to3',role+'_21nt_original')
     if 'context' in lower or '上下文' in line:return ('mRNA_context_57nt',)
+    if re.search(r'23\s*(?:nt|位|bp)|设计窗口|design.window',lower):return ('design_window_23nt',)
+    if core:return CORE_FIELDS
     return ()
+
+def token_fields(line,match,previous_end):
+    """Bind each claim to its own preceding label, never to its observed length.
+
+    A preceding nucleotide token ends its label's scope. This handles A013's
+    core and context on one line without making a mutated core acceptable.
+    """
+    prefix=line[previous_end:match.start()]
+    # Prefer the nearest clause; retain a shared role only for the first token.
+    clauses=re.split(r'[，,；;|]',prefix)
+    local=clauses[-1]
+    expected=_expected_fields(local)
+    if not expected and previous_end==0:expected=_expected_fields(prefix)
+    return expected
 
 def check_sequences(text,rows):
     claims=[];issues=[]
@@ -62,8 +78,10 @@ def check_sequences(text,rows):
         if not tokens:continue
         named=[r for r in rows if r['candidate_id'] in line]
         scope=named if len(named)==1 else rows
-        expected=_expected_fields(line)
+        previous_end=0
         for match in tokens:
+            expected=token_fields(line,match,previous_end)
+            previous_end=match.end()
             seq=match.group().upper();valid=[]
             for row in scope:
                 for field in expected or fields:

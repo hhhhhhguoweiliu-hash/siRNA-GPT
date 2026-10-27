@@ -1,0 +1,8 @@
+control	passed	kind
+official_example	True	SYNTHETIC_TEST_ONLY
+overlap	True	SYNTHETIC_TEST_ONLY
+negative	True	SYNTHETIC_TEST_ONLY
+N_literal_not_wildcard	True	SYNTHETIC_TEST_ONLY
+end_boundary	True	SYNTHETIC_TEST_ONLY
+no_wraparound	True	SYNTHETIC_TEST_ONLY
+direction	True	SYNTHETIC_TEST_ONLY

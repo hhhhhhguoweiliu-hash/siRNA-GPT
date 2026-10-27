@@ -1,0 +1,17 @@
+OFFLINE REPLAY ONLY; original A013 delivery remains unchanged.
+判定：所要求的参考及模型分数核查完成。
+关键结果：
+候选 | 参考 | 19nt核心起止(1-based) | 参考转录本覆盖
+--- | --- | --- | ---
+VEGFA_SD_3499 | NM_003376.6 | 3501–3519 | 20/20
+
+候选 | 模型分数(scaled，原始精度) | raw_class1 | 本行来源状态 | 本行实际分数来源
+--- | --- | --- | --- | ---
+VEGFA_SD_3499 | 0.9915144175887107 | 0.7393843531608582 | IMPORTED_HISTORICAL | data/historical_scores.tsv；SHA256=ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392
+证据：本轮实际完成：inspect_candidates、verify_target、score_candidates。核心坐标来自verify_target，不用23nt设计窗口坐标代替。每条分数的实际文件、SHA256及绑定版本见上表；不以旧资源指纹代替其他候选来源。
+限制或下一步：未做seed分析；未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达。
+已核验输入与参考字段（直接读取，不由模型复述）：
+[{"candidate_id": "VEGFA_SD_3499", "guide_core19_5to3": "UGUACUACGGAAUAUCUCG", "passenger_core19_5to3": "CGAGAUAUUCCGUAGUACA", "guide_21nt_original": "UGUACUACGGAAUAUCUCGAA", "passenger_21nt_original": "CGAGAUAUUCCGUAGUACAUA", "original_row1": "", "original_row2": "", "strand_assignment_basis": "Source-labelled roles; no new role inference by this check", "original_modification": "未新增化学修饰确认", "reference_transcript": "NM_003376.6", "core_start_1based": 3501, "core_end_1based": 3519, "mRNA_context_57nt": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG", "design_window_23nt": "TTCGAGATATTCCGTAGTACATA", "evidence_source": "inspect_candidates; verify_target where present; unchanged original candidate fields", "target_match_checked": true}]
+参考文件SHA256：30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706
+分数显示约定：上表为原始scaled值；以下6位小数只供阅读，不改原值：{"VEGFA_SD_3499": "0.991514"}
+来源日期：仅采用实际文件元数据；当前未提供来源日期，不补造日期。历史导入与本轮执行状态见各工具原记录。

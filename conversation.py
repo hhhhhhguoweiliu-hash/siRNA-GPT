@@ -174,10 +174,32 @@ class PlannedSession(Session):
             if summary:
                 from sequence_validation import answer_evidence
                 result.update(answer_evidence(summary,self.candidates,self.state))
+        from delivery import present_delivery
+        from bound_reuse import remember
+        shared=present_delivery({'task':self.task,'candidates':self.candidates},self.state,self.planned_tools,sequence_check=result.get('answer_validation'))
+        result.update(shared)
+        if 'compile_report' in self.state:
+            report.update(shared);save_json(self.path/'report.json',report);self.render(report)
+        remember(self)
         save_json(self.path/'result.json', result)
         return result
 
+    def execute_confirmed_subflow(self,budget_check=None):
+        """Execute only the already confirmed dependency closure; no case lookup."""
+        for name in self.planned_tools:
+            if getattr(self,'cancelled',lambda:False)():raise TaskCancelled('已停止后续工具调用，已完成结果保留。')
+            if budget_check:budget_check()
+            result=self.call(name,{})
+            if budget_check:budget_check()
+            if result.get('status')=='ERROR':raise TaskError(result['message'])
+        save_json(self.path/'subflow_execution.json',{'kind':'CONFIRMED_DETERMINISTIC_SUBFLOW',
+            'steps':self.planned_tools,'completed':list(self.state),'actual_scientific_tool_calls':self.tool_calls,
+            'model_calls_in_subflow':0,'quality_scored':False})
+
     def run_agent(self, transport=None,*,test_only=None):
+        # Explicit option for a new execution protocol; legacy evaluation remains
+        # cold and per-step unless this option was recorded before a new run.
+        if self.cfg.get('use_confirmed_subflow') is True:self.execute_confirmed_subflow()
         messages = [{'role': 'system', 'content': '你是工具执行助手。' + SCOPE +
             '仅执行已确认计划。按依赖调用工具，参数为{}。只使用工具返回的证据。'
             '必须完成计划全部步骤再总结；遇错可停止并解释。禁止编造结果或改变工具模式。' + NATURAL_STYLE + FINAL_ANSWER_STYLE + FIELD_INSTRUCTIONS},
@@ -233,7 +255,7 @@ class Conversation:
         self.root = Path(root or HOME/'conversations'); self.root.mkdir(exist_ok=True)
         self.lock = threading.RLock(); self.id = uuid.uuid4().hex[:12]
         self.stop_event=threading.Event(); self.source_registry={}; self.audit_refs=[]; self.current_audit=None
-        self.runtime=manifest(); self.previous_runs=[]
+        self.runtime=manifest(); self.previous_runs=[];self.previous_evidence_session=None
         self.messages = []; self.events = []; self.plan = None; self.private = None; self.session = None
         self.busy = False; self.result = None; self.phase = 'idle'; self.research_state = {'status':'idle','steps':[],'sources':[]}
         self.add('assistant', 'Welcome. Ask about the evidence or describe a VEGFA siRNA review task. When tools are needed, I will show a plan for your confirmation first.')
@@ -420,6 +442,7 @@ class Conversation:
                         self.add('assistant', proposed['summary'] + ('\n' + proposed['question'] if proposed['question'] else ''), kind='qa' if proposed['decision']=='answer' else 'clarification'); return
                     if input_error:raise TaskError(input_error)
                     if self.session:
+                        self.previous_evidence_session=self.session
                         self.previous_runs.append({'run_id':self.session.id,'task':self.session.task,'result':self.result})
                     self.result = None; self.events = [planner_event] if planner_event else []; self.session = None
                     inputs['task'].update(proposed.get('task_updates', {}))
@@ -442,6 +465,9 @@ class Conversation:
             if self.session is None:
                 self.session = self.session_factory(planned_tools=self.plan['tools'], mode='agent' if self.plan['mode']=='auto' else 'guided',
                     event=self.progress, cfg=self.cfg_loader(), **self.private)
+                if self.previous_evidence_session and isinstance(self.session,PlannedSession):
+                    from bound_reuse import reuse
+                    reuse(self.session,self.previous_evidence_session)
             self.session.cancelled=self.stop_event.is_set
             self.result=None
             if self.plan['mode'] == 'auto':

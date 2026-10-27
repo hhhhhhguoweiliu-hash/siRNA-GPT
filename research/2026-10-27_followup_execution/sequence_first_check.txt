@@ -1,0 +1,13 @@
+test_actual_24nt_error_is_blocked_and_raw_kept (test_sequence_validation.SequenceValidationTests.test_actual_24nt_error_is_blocked_and_raw_kept) ... ok
+test_correct_original_answer_control_not_false_blocked (test_sequence_validation.SequenceValidationTests.test_correct_original_answer_control_not_false_blocked) ... ok
+test_future_session_report_and_chat_share_one_check (test_sequence_validation.SequenceValidationTests.test_future_session_report_and_chat_share_one_check) ... ok
+test_no_checked_input_cannot_accept_claim (test_sequence_validation.SequenceValidationTests.test_no_checked_input_cannot_accept_claim) ... ok
+test_no_sequence_claim_not_claimed_as_scientific_accuracy (test_sequence_validation.SequenceValidationTests.test_no_sequence_claim_not_claimed_as_scientific_accuracy) ... ok
+test_single_base_19nt_error_is_not_accepted_by_length (test_sequence_validation.SequenceValidationTests.test_single_base_19nt_error_is_not_accepted_by_length) ... ok
+test_swapped_roles_and_21nt_labeled_core_are_rejected (test_sequence_validation.SequenceValidationTests.test_swapped_roles_and_21nt_labeled_core_are_rejected) ... ok
+test_verified_table_keeps_TT_N3_and_conditional_roles (test_sequence_validation.SequenceValidationTests.test_verified_table_keeps_TT_N3_and_conditional_roles) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.917s
+
+OK

@@ -1,0 +1,10 @@
+case_id,max_sum8_audit_only,winner_answer_ids,winner_groups,tie,source
+R1,8,A012,workflow,False,unchanged original score CSV; arithmetic display only
+R2,7,A008,llm,False,unchanged original score CSV; arithmetic display only
+R3,7,A022;A009,agent;workflow,True,unchanged original score CSV; arithmetic display only
+R4,8,A025;A011,agent;workflow,True,unchanged original score CSV; arithmetic display only
+U1,8,A021,workflow,False,unchanged original score CSV; arithmetic display only
+W1,8,A026,workflow,False,unchanged original score CSV; arithmetic display only
+W2,7,A007;A027,agent;workflow,True,unchanged original score CSV; arithmetic display only
+W2b,8,A013,agent,False,unchanged original score CSV; arithmetic display only
+W3,8,A005,workflow,False,unchanged original score CSV; arithmetic display only

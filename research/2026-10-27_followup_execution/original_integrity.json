@@ -1,0 +1,70 @@
+{
+  "source_commit": "4244ac0d9b9f0b1e01fe46f6871fd664825a4c24",
+  "n_answers": 27,
+  "n_rounds": 33,
+  "raw_files": [
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/actual_execution_original.json",
+      "git_blob_sha": "14bab0aa6b1f5ed2f9780c263007708d104d53b4",
+      "sha256": "8b6b96d454f8223e8b8df28d1219f45fb2fab260b7426e30a55d90c2db2af5b8",
+      "bytes": 3982
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/analysis_plan_original.json",
+      "git_blob_sha": "edbf5d2036f5c8aaa37d2bb9e98c514730e2bbfe",
+      "sha256": "eabce468e23f8e3bb1dfb48eed48bf26f86c927400d70e188e61ce141964f9a5",
+      "bytes": 8424
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/anonymous_reviewer_package_original.zip",
+      "git_blob_sha": "3ab3cff9754b5a77cdb1b1d8249b4b1df1a06f8f",
+      "sha256": "0e3167519bc13c4ccee2fe2eb9d479254d498695b2ba46dc3386271eca66d66d",
+      "bytes": 2031924
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/cases_original.json",
+      "git_blob_sha": "d29d70793d520d7247f324f8be2de302c7475a0d",
+      "sha256": "ac64bb76aad50fcebb6302ce3c215eaba20c872ac32173be989520704adceac0",
+      "bytes": 46342
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/execution_status_original.json",
+      "git_blob_sha": "f4ccbf032f19e827e54287a0d1c9a5740cc9df82",
+      "sha256": "1482483dd7a1463a57f3506324657c532eb5016368f4c40ffa25d7860484941e",
+      "bytes": 7243
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/model_and_tool_records_original.zip",
+      "git_blob_sha": "6f413bc8dfc660d81160d3bc957e8364e7b85547",
+      "sha256": "512ab027fddd8c1ecabda20b7243a610c2f14a07a80130e832eebe083ed0c2c3",
+      "bytes": 9814625
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/private_group_key_DO_NOT_SEND_REVIEWERS.json",
+      "git_blob_sha": "898132fa44a5b39d5f7dcc0d41a6fc747ab06e42",
+      "sha256": "8d7483a2d841a1c9b8a04b921c288370974bb42f0e327f0da92e604d95aa1a60",
+      "bytes": 2688
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/protocol_original.json",
+      "git_blob_sha": "f24ee8ca7b00724dfce9d8b5b0f7a6bea7c96240",
+      "sha256": "e4879f5e48f8d50edf52c1edffd503053ad3f3ad9064b4839afd82f8d361e2b2",
+      "bytes": 11558
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/results_original.json",
+      "git_blob_sha": "f0b334c3d5b1c44d4a164a1752d32df38043e480",
+      "sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3",
+      "bytes": 3495823
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/review_form_blank_matched.xlsx",
+      "git_blob_sha": "280b4efa37d31eb92e232d22fc8fb63a4c2f480f",
+      "sha256": "c13c3e9bfa569344caba34b1ecebdb290b304302ade3fcd377e2d975dd4ab5f8",
+      "bytes": 13894
+    }
+  ],
+  "all_original_raw_blobs_unchanged": true,
+  "new_model_calls": 0,
+  "new_human_ratings": 0
+}

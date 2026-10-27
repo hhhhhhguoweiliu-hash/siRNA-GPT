@@ -1,0 +1,105 @@
+{
+  "kind": "OFFLINE_SAVED_RECORD_REPLAY_NOT_NEW_MODEL_ANSWER",
+  "source_commit": "33cd2283a951ee71e8788c348ce8ea2e617b7ceb",
+  "original_answer_unchanged": true,
+  "raw_model_sha256": "6654fe080e5c3612791e3fc563c6077f1ad12b7d0a4a813922e0d05cecc69242",
+  "before": {
+    "version": "sequence_consistency_v1",
+    "status": "FAIL",
+    "label": "模型序列检查未通过",
+    "claim_count": 2,
+    "claims": [
+      {
+        "line": 7,
+        "sequence": "UGUACUACGGAAUAUCUCG",
+        "length": 19,
+        "expected_fields": [
+          "mRNA_context_57nt"
+        ],
+        "matched_verified_fields": [],
+        "candidate_association": "explicit"
+      },
+      {
+        "line": 7,
+        "sequence": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG",
+        "length": 57,
+        "expected_fields": [
+          "mRNA_context_57nt"
+        ],
+        "matched_verified_fields": [
+          {
+            "candidate_id": "VEGFA_SD_3499",
+            "field": "mRNA_context_57nt"
+          }
+        ],
+        "candidate_association": "explicit"
+      }
+    ],
+    "issues": [
+      {
+        "line": 7,
+        "sequence": "UGUACUACGGAAUAUCUCG",
+        "length": 19,
+        "expected_fields": [
+          "mRNA_context_57nt"
+        ],
+        "matched_verified_fields": [],
+        "candidate_association": "explicit",
+        "reason": "SEQUENCE_NOT_EQUAL_TO_VERIFIED_FIELD",
+        "correct_fields": [
+          {
+            "candidate_id": "VEGFA_SD_3499",
+            "mRNA_context_57nt": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG"
+          }
+        ]
+      }
+    ],
+    "raw_model_text_sha256": "6654fe080e5c3612791e3fc563c6077f1ad12b7d0a4a813922e0d05cecc69242",
+    "scope": "Checks contiguous nucleotide strings of at least 10 bases against checked input/tool fields, with role labels where explicit. Does not validate scientific conclusions, numerical claims, chemistry, or all natural-language strand statements.",
+    "is_scientific_accuracy_or_human_score": false
+  },
+  "after": {
+    "version": "sequence_consistency_v2_token_labels",
+    "status": "PASS",
+    "label": "模型序列检查通过",
+    "claim_count": 2,
+    "claims": [
+      {
+        "line": 7,
+        "sequence": "UGUACUACGGAAUAUCUCG",
+        "length": 19,
+        "expected_fields": [
+          "guide_core19_5to3",
+          "passenger_core19_5to3"
+        ],
+        "matched_verified_fields": [
+          {
+            "candidate_id": "VEGFA_SD_3499",
+            "field": "guide_core19_5to3"
+          }
+        ],
+        "candidate_association": "explicit"
+      },
+      {
+        "line": 7,
+        "sequence": "UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG",
+        "length": 57,
+        "expected_fields": [
+          "mRNA_context_57nt"
+        ],
+        "matched_verified_fields": [
+          {
+            "candidate_id": "VEGFA_SD_3499",
+            "field": "mRNA_context_57nt"
+          }
+        ],
+        "candidate_association": "explicit"
+      }
+    ],
+    "issues": [],
+    "raw_model_text_sha256": "6654fe080e5c3612791e3fc563c6077f1ad12b7d0a4a813922e0d05cecc69242",
+    "scope": "Checks contiguous nucleotide strings of at least 10 bases against checked input/tool fields, with role labels where explicit. Does not validate scientific conclusions, numerical claims, chemistry, or all natural-language strand statements.",
+    "is_scientific_accuracy_or_human_score": false
+  },
+  "new_model_calls": 0
+}

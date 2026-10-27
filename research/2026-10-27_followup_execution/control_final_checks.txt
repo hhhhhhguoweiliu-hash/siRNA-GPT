@@ -1,0 +1,12 @@
+test_confirmed_subflow_runs_only_requested_checks_and_stops_on_failure (test_followup_integrity.FollowupIntegrityTests.test_confirmed_subflow_runs_only_requested_checks_and_stops_on_failure) ... ok
+test_incremental_reuse_exact_binding_then_changed_sequence_version_parameter (test_followup_integrity.FollowupIntegrityTests.test_incremental_reuse_exact_binding_then_changed_sequence_version_parameter) ... ok
+test_metrics_missing_duplicate_unknown_and_applicability_guards (test_followup_integrity.FollowupIntegrityTests.test_metrics_missing_duplicate_unknown_and_applicability_guards) ... ok
+test_missing_requested_evidence_is_not_software_success (test_followup_integrity.FollowupIntegrityTests.test_missing_requested_evidence_is_not_software_success) ... ok
+test_saved_A013_local_labels_and_mutated_core (test_followup_integrity.FollowupIntegrityTests.test_saved_A013_local_labels_and_mutated_core) ... ok
+test_synthetic_direction_overlap_boundary_and_coordinate_length (test_followup_integrity.FollowupIntegrityTests.test_synthetic_direction_overlap_boundary_and_coordinate_length) ... ok
+test_two_arms_share_fields_placeholder_is_only_raw_diagnostic (test_followup_integrity.FollowupIntegrityTests.test_two_arms_share_fields_placeholder_is_only_raw_diagnostic) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.334s
+
+OK

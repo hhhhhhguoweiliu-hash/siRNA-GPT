@@ -1,0 +1,17 @@
+{
+  "concurrent_commit": "ab54de166d77cf2c34ee7d9a5219e8ff3e6d834b",
+  "same_bytes": {
+    "required_slots.csv": true,
+    "slot_reviews.csv": true,
+    "task_reviews.csv": true,
+    "group_map.csv": true
+  },
+  "same_parsed_labels": {
+    "required_slots.csv": true,
+    "slot_reviews.csv": true,
+    "task_reviews.csv": true,
+    "group_map.csv": true
+  },
+  "action": "fast-forward incorporated concurrent audit; did not overwrite it or old review directory",
+  "latest_summary_consistent": true
+}

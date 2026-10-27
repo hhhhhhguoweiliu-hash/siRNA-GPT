@@ -1,0 +1,121 @@
+{
+  "kind": "ORIGINAL_OFFICIAL_OUTPUT_BINDING_ONLY_NOT_NEW_PREDICTION",
+  "source_files": [
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_agent_v2_20261018\\deliverable\\04_tools\\VEGFA_candidates_cpu.tsv",
+      "sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392"
+    },
+    {
+      "path": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\data\\historical_scores.tsv",
+      "sha256": "ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392"
+    },
+    {
+      "path": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\research\\2026-10-24_candidate_v2\\oligo_pilot_02\\result.json",
+      "sha256": "9c6ffac9b362a44c0d71eddab2b9a81ffe38d49186c70fcfb7a000e1a94b71c9"
+    }
+  ],
+  "rows": [
+    {
+      "candidate_id": "VEGFA_SD_3535",
+      "checks": {
+        "guide_core19_5to3": true,
+        "mRNA_context_57nt": true,
+        "raw_class1": true,
+        "oligoformer_scaled_score": true
+      },
+      "raw_class1": 0.7483892440795898,
+      "scaled": 1.0035899763107299
+    },
+    {
+      "candidate_id": "VEGFA_SD_3499",
+      "checks": {
+        "guide_core19_5to3": true,
+        "mRNA_context_57nt": true,
+        "raw_class1": true,
+        "oligoformer_scaled_score": true
+      },
+      "raw_class1": 0.7393843531608582,
+      "scaled": 0.9915144175887107
+    },
+    {
+      "candidate_id": "USER_PURCHASED_siVEGF",
+      "checks": {
+        "guide_core19_5to3": true,
+        "mRNA_context_57nt": true,
+        "raw_class1": true,
+        "oligoformer_scaled_score": true
+      },
+      "raw_class1": 0.8366401195526123,
+      "scaled": 1.121934400320053
+    },
+    {
+      "candidate_id": "VEGFA_SD_1157",
+      "checks": {
+        "source_table_bytes_identical": true,
+        "input_core_identical": true
+      },
+      "raw_class1": 0.7076764106750488,
+      "scaled": 0.9489940667152404
+    },
+    {
+      "candidate_id": "VEGFA_SD_2739",
+      "checks": {
+        "source_table_bytes_identical": true,
+        "input_core_identical": true
+      },
+      "raw_class1": 0.6573420166969299,
+      "scaled": 0.881495644390583
+    },
+    {
+      "candidate_id": "VEGFA_SD_3119",
+      "checks": {
+        "source_table_bytes_identical": true,
+        "input_core_identical": true
+      },
+      "raw_class1": 0.6884453892707825,
+      "scaled": 0.9232052670121192
+    },
+    {
+      "candidate_id": "VEGFA_SD_3193",
+      "checks": {
+        "source_table_bytes_identical": true,
+        "input_core_identical": true
+      },
+      "raw_class1": 0.5737422704696655,
+      "scaled": 0.7693883846998214
+    },
+    {
+      "candidate_id": "VEGFA_SD_3429",
+      "checks": {
+        "source_table_bytes_identical": true,
+        "input_core_identical": true
+      },
+      "raw_class1": 0.7010828852653503,
+      "scaled": 0.9401521491408348
+    },
+    {
+      "candidate_id": "VEGFA_SD_3500",
+      "checks": {
+        "source_table_bytes_identical": true,
+        "input_core_identical": true
+      },
+      "raw_class1": 0.7273184061050415,
+      "scaled": 0.9753339825868607
+    },
+    {
+      "candidate_id": "VEGFA_SD_3502",
+      "checks": {
+        "source_table_bytes_identical": true,
+        "input_core_identical": true
+      },
+      "raw_class1": 0.7251685857772827,
+      "scaled": 0.9724510735273361
+    }
+  ],
+  "scored_candidate_ids_observed_in_old_batch": [
+    "USER_PURCHASED_siVEGF",
+    "VEGFA_SD_3499",
+    "VEGFA_SD_3535"
+  ],
+  "new_inference_runs": 0
+}

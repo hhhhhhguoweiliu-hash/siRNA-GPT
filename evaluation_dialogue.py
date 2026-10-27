@@ -229,12 +229,7 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None,*,
                             cfg=cfg, run_root=folder / 'runs', **inputs)
                         stage = 'fixed_tools' if group == 'workflow' else 'executor'
                         if group == 'workflow':
-                            for name in session.planned_tools:
-                                budget_check()
-                                got = session.call(name, {})
-                                budget_check()
-                                if got.get('status') == 'ERROR':
-                                    raise TaskError(got['message'])
+                            session.execute_confirmed_subflow(budget_check)
                             result = session.result_for_plan()
                             status, answer_source = result['status'], 'DETERMINISTIC_EXISTING_TOOL_EVIDENCE'
                         else:
@@ -242,10 +237,10 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None,*,
                             result = session.run_agent(recorded_transport,test_only=execution_mode!='provider')
                             status = result['status']
                             raw_model_answer = result.get('model_summary_raw') or result.get('model_summary') or result.get('message', '')
-                            answer_source = 'REAL_MODEL_WITH_SHARED_VALIDATION' if execution_mode=='provider' else 'OFFLINE_MODEL_STUB_WITH_SHARED_VALIDATION' if execution_mode=='offline_stub' else 'SYNTHETIC_HTTP_FIXTURE_WITH_SHARED_VALIDATION'
+                            answer_source = 'SHARED_VERIFIED_FIELD_PRESENTATION_WITH_MODEL_DIAGNOSTIC' if execution_mode=='provider' else 'OFFLINE_SHARED_PRESENTATION_MODEL_STUB' if execution_mode=='offline_stub' else 'SYNTHETIC_HTTP_FIXTURE_SHARED_PRESENTATION'
                         state = copy.deepcopy(session.state)
                         stage = 'presentation'
-                        answer = workflow_answer(inputs, state) if group == 'workflow' else result.get('model_summary_display') or raw_model_answer
+                        answer = result.get('model_summary_display') or workflow_answer(inputs,state)
                         if group == 'workflow' and number > 1:
                             old_tools = set(records[-1]['completed_tools'])
                             repeated = [n for n in state if n in old_tools]
@@ -259,7 +254,8 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None,*,
             state = copy.deepcopy(session.state) if session else {}
             status = 'FAILED_WITH_RETAINED_PARTIAL_EVIDENCE'
             answer_source = 'SHARED_ERROR_PRESENTATION_NOT_MODEL_REASONING'
-            answer = workflow_answer(inputs or {'task': {}, 'candidates': []}, state, error)
+            from delivery import present_delivery
+            answer = present_delivery(inputs or {'task': {}, 'candidates': []},state,error=error)['model_summary_display']
             stopped = True
         if status != 'NOT_EXECUTED':
             history.extend([{'role': 'user', 'content': common or spec}, {'role': 'assistant', 'content': answer}])
@@ -274,6 +270,7 @@ def run_dialogue(group, case, cfg, root, transport=None, resources=None,*,
             'status': status, 'answer': answer, 'answer_source': answer_source,
             'raw_model_answer':raw_model_answer,'raw_model_answer_TEST_ONLY':raw_model_answer if execution_mode=='offline_stub' else None, 'planned_tools': plan,
             'completed_tools': list(state), 'tool_results': state, 'error': error,
+            'delivery_audit':__import__('delivery').requirement_audit(inputs or {'task':{}},state,plan),
             'error_record': error_record, 'planner_task_update_check': update_check,
             'resource_access': policy, 'effective_settings': settings,
             'test_stub_requests':len(requests)-request_start if execution_mode=='offline_stub' else 0,

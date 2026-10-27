@@ -1,0 +1,260 @@
+2a0c335e8ab3b8da663b44e68b30bac94d15006a 2026-10-27T07:47:38+08:00 docs: review real mini batch, blank score file and sequence guard false block [skip render]
+
+A	docs/reviews/20261027_4244ac0_real_run_and_score_file_evidence.json
+A	docs/reviews/20261027_4244ac0_real_run_and_score_file_review.md
+2566adc010dc381ff81c6ca43a650a3f4752aa18 2026-10-27T07:59:22+08:00 docs: preserve submitted scores and audit group mapping and scoring evidence [skip render]
+
+A	docs/reviews/20261027_submitted_score_workbook_review.md
+A	research/2026-10-27_score_file_review/raw_score_rows_by_actual_group_UNVALIDATED.csv
+A	research/2026-10-27_score_file_review/raw_scores_by_actual_group_UNVALIDATED.json
+A	research/2026-10-27_score_file_review/scoring_issues_evidence_NOT_NEW_RATINGS.json
+A	research/2026-10-27_score_file_review/source_manifest.json
+A	research/2026-10-27_score_file_review/source_workbook_UNVERIFIED.xlsx
+d8c62afb71d2845703347e7bdba81afcbdf80438 2026-10-27T08:15:29+08:00 docs: record verified Drive upload of real answer PDF [skip render]
+
+A	research/2026-10-27_real_dialogue_mini/DRIVE_PDF_DELIVERY_20261027.md
+090c8d676a7575644b490f93cefc189fe456ee62 2026-10-27T08:19:56+08:00 docs: confirm complete_answers.pdf filename and 27 responses [skip render]
+
+M	research/2026-10-27_real_dialogue_mini/DRIVE_PDF_DELIVERY_20261027.md
+8c1009fcff2825612ae47cacee6a88d6cda98a24 2026-10-27T08:25:22+08:00 docs: deliver untouched raw outputs and verbatim answer texts on Drive [skip render]
+
+A	research/2026-10-27_real_dialogue_mini/DRIVE_RAW_OUTPUTS_DELIVERY_20261027.md
+748a71bec7043fdd9b031731c237f687009f015b 2026-10-27T09:11:05+08:00 research: preserve expert forms, audit evidence conflicts and plot unpooled results [skip render]
+
+A	docs/reviews/20261027_final_expert_score_workbook_review.md
+A	docs/reviews/20261027_two_expert_forms_and_figures_review.md
+A	research/2026-10-27_expert_figures/DELIVERY.md
+A	research/2026-10-27_expert_figures/FIGURE_LEGENDS_EN.md
+A	research/2026-10-27_expert_figures/PACKAGE_README_ZH.md
+A	research/2026-10-27_expert_figures/README.md
+A	research/2026-10-27_expert_figures/completion_as_submitted.csv
+A	research/2026-10-27_expert_figures/completion_differences_pp.csv
+A	research/2026-10-27_expert_figures/dimension_means.csv
+A	research/2026-10-27_expert_figures/expert_plot_data.xlsx
+A	research/2026-10-27_expert_figures/figure_checks.json
+A	research/2026-10-27_expert_figures/figures/fig1_standard_quality.svg
+A	research/2026-10-27_expert_figures/figures/fig2_completion_as_submitted.svg
+A	research/2026-10-27_expert_figures/figures/figS1_reliability_quality.svg
+A	research/2026-10-27_expert_figures/figures/figS2_requirement_change_quality.svg
+A	research/2026-10-27_expert_figures/file_manifest.json
+A	research/2026-10-27_expert_figures/form_B_source_checks_NOT_RATINGS.json
+A	research/2026-10-27_expert_figures/make_expert_figures.py
+A	research/2026-10-27_expert_figures/plot_data.json
+A	research/2026-10-27_expert_figures/scores_long.csv
+A	research/2026-10-27_expert_figures/siRNA_GPT_expert_figures_REVIEW_PENDING.pdf
+A	research/2026-10-27_expert_figures/source_completion_scores_original.xlsx
+A	research/2026-10-27_expert_figures/source_form_A_original.xlsx
+A	research/2026-10-27_final_score_review/README.md
+A	research/2026-10-27_final_score_review/remaining_issues_NOT_NEW_RATINGS.json
+A	research/2026-10-27_final_score_review/reproduce_score_summary.py
+A	research/2026-10-27_final_score_review/score_rows_by_actual_group.csv
+A	research/2026-10-27_final_score_review/scores_and_descriptive_summary.json
+A	research/2026-10-27_final_score_review/source_manifest.json
+A	research/2026-10-27_final_score_review/source_workbook_original.xlsx
+A	research/2026-10-27_final_score_review/workbook_checks.json
+d968520c6504c50a08069a769353632ee89985a7 2026-10-27T09:51:33+08:00 docs: clarify assisted workflow baseline and unmeasured human effort [skip render]
+
+A	docs/reviews/20261027_workflow_baseline_scope_and_manual_effort_review.md
+2d9f4511daaa62500cf86f5c35f33d14c97f742c 2026-10-27T10:18:50+08:00 research: audit additional human-confirmed expert form without changing scores [skip render]
+
+A	docs/reviews/20261027_third_human_confirmed_expert_score_review.md
+A	research/2026-10-27_third_expert_review/README.md
+A	research/2026-10-27_third_expert_review/audit_third_expert.py
+A	research/2026-10-27_third_expert_review/evidence_questions_NOT_NEW_RATINGS.json
+A	research/2026-10-27_third_expert_review/score_rows_by_actual_group.csv
+A	research/2026-10-27_third_expert_review/scores_and_comparison.json
+A	research/2026-10-27_third_expert_review/source_expert_scores_original.xlsx
+A	research/2026-10-27_third_expert_review/source_manifest.json
+A	research/2026-10-27_third_expert_review/workbook_checks.json
+30b8f8b058464c22c69df32adb8c5b707f4fa111 2026-10-27T10:32:29+08:00 research: identify duplicate scoring content and preserve submitted copy [skip render]
+
+A	docs/reviews/20261027_duplicate_score_file_review.md
+A	research/2026-10-27_duplicate_score_check/content_comparison.json
+A	research/2026-10-27_duplicate_score_check/source_completion_review_original.xlsx
+05b46d1a1ac453392c239891acd002f9e09435e3 2026-10-27T11:03:49+08:00 research: audit pasted full-score claims against unchanged original answers [skip render]
+
+A	docs/reviews/20261027_pasted_score_reason_consistency_review.md
+A	research/2026-10-27_pasted_score_review/README.md
+A	research/2026-10-27_pasted_score_review/audit_pasted_scores.py
+A	research/2026-10-27_pasted_score_review/mechanical_checks.json
+A	research/2026-10-27_pasted_score_review/original_answer_evidence_NOT_NEW_RATINGS.json
+A	research/2026-10-27_pasted_score_review/parsed_score_transcription.json
+A	research/2026-10-27_pasted_score_review/parsed_scores_and_descriptive_check.json
+A	research/2026-10-27_pasted_score_review/score_rows_by_actual_group.csv
+A	research/2026-10-27_pasted_score_review/user_pasted_score_transcription.txt
+3f692e0b252cb4ffc46ba3881defb998d2c3af98 2026-10-27T11:27:44+08:00 docs: reuse existing ratings in bar and radar figures; document metric limits [skip render]
+
+A	docs/reviews/20261027_metric_availability_and_bar_radar_review.md
+A	research/2026-10-27_bar_radar/DELIVERY.md
+A	research/2026-10-27_bar_radar/FIGURE_LEGENDS_EN.md
+A	research/2026-10-27_bar_radar/README.md
+A	research/2026-10-27_bar_radar/bar_radar_plot_data.csv
+A	research/2026-10-27_bar_radar/bar_radar_plot_data.xlsx
+A	research/2026-10-27_bar_radar/figure_checks.json
+A	research/2026-10-27_bar_radar/figures/fig1_standard_bar_radar.svg
+A	research/2026-10-27_bar_radar/figures/figS1_reliability_bar_radar.svg
+A	research/2026-10-27_bar_radar/figures/figS2_change_bar_radar.svg
+A	research/2026-10-27_bar_radar/make_bar_radar.py
+A	research/2026-10-27_bar_radar/metric_availability.json
+A	research/2026-10-27_bar_radar/siRNA_GPT_bar_radar_existing_scores_REVIEW_PENDING.pdf
+c30473d3168ccf5ce6522722f0cea857c2065037 2026-10-27T11:43:39+08:00 docs: hand off Agent fixes and define metric annotation requirements [skip render]
+
+A	docs/reviews/20261027_agent_improvement_and_metric_handoff.md
+A	research/2026-10-27_agent_improvement_handoff/README.md
+A	research/2026-10-27_agent_improvement_handoff/annotation_templates/planning_decisions.csv
+A	research/2026-10-27_agent_improvement_handoff/annotation_templates/required_slots.csv
+A	research/2026-10-27_agent_improvement_handoff/annotation_templates/slot_reviews.csv
+A	research/2026-10-27_agent_improvement_handoff/annotation_templates/task_reviews.csv
+A	research/2026-10-27_agent_improvement_handoff/metric_protocol.md
+A	research/2026-10-27_agent_improvement_handoff/metric_status.json
+bfa1a0d19f5e207fc0ef4804b14c89ae7834a965 2026-10-27T12:11:46+08:00 docs: verify evaluation objections and separate report, model and rule contributions [skip render]
+
+A	docs/reviews/20261027_three_evaluation_objections_evidence_review.md
+A	research/2026-10-27_three_objections_audit/README.md
+A	research/2026-10-27_three_objections_audit/answer_origin_by_round.csv
+A	research/2026-10-27_three_objections_audit/audit.json
+A	research/2026-10-27_three_objections_audit/audit_evaluation_claims.py
+08dbdbacabde806332397abfc905a23c07770d3b 2026-10-27T12:24:22+08:00 docs: adopt evidence fidelity scope and conditional low-cost validation plan [skip render]
+
+A	docs/reviews/20261027_evidence_fidelity_and_independent_checks_tasks.md
+A	research/2026-10-27_evidence_fidelity_plan/README.md
+A	research/2026-10-27_evidence_fidelity_plan/acceptance_plan.json
+A	research/2026-10-27_evidence_fidelity_plan/input_inventory.json
+A	research/2026-10-27_evidence_fidelity_plan/validation_results_template.csv
+b9bda8518d3128409510b2cc36ee0a03923c541a 2026-10-27T12:45:11+08:00 docs: add AI pre-review report for 27 original answers
+
+A	research/2026-10-27_ai_simulated_review/README.md
+ce8a165363b88d8656ed9fd8d656b2f272219abe 2026-10-27T12:45:15+08:00 eval: add atomic required-slot standards
+
+A	research/2026-10-27_ai_simulated_review/required_slots.csv
+2f4164af97301596be9d34bbcf09e7862bbac249 2026-10-27T12:45:18+08:00 eval: add 387 slot-level AI pre-review judgments
+
+A	research/2026-10-27_ai_simulated_review/slot_reviews.csv
+8a2040a1b3bd5006d99779232d14d09dce064877 2026-10-27T12:45:21+08:00 eval: add 27 task-level AI pre-review verdicts
+
+A	research/2026-10-27_ai_simulated_review/task_reviews.csv
+24bdf53336a53d49e7cda5010ece108047d678a1 2026-10-27T12:45:23+08:00 eval: add per-task slot metrics
+
+A	research/2026-10-27_ai_simulated_review/metrics_by_task.csv
+e2d3b2aba0751f6798cbf0cae72a63dcaeedc1c3 2026-10-27T12:45:26+08:00 eval: add group and category metric summary
+
+A	research/2026-10-27_ai_simulated_review/metrics_summary.csv
+e001567cf1122c2a98876fb5ca693cac553c9d7d 2026-10-27T12:45:30+08:00 audit: separate delivered answers, attachments and raw model outputs
+
+A	research/2026-10-27_ai_simulated_review/raw_delivery_scope.csv
+50b0880c26aefa999f2f1ba1d4c50610371f2eb8 2026-10-27T12:45:33+08:00 audit: preserve separate group mapping
+
+A	research/2026-10-27_ai_simulated_review/group_map.csv
+53359f4e74111747c2e5413628888c77942039f4 2026-10-27T12:45:35+08:00 eval: record extra errors and adjudication gaps
+
+A	research/2026-10-27_ai_simulated_review/extra_errors_and_gaps.csv
+64c933c3ded047eae2851595066cd279631dcdca 2026-10-27T12:45:38+08:00 eval: reconcile composite draft facts to atomic slots
+
+A	research/2026-10-27_ai_simulated_review/draft_reconciliation.csv
+3a0908fd931ebaca22f22deafa108727d40f70d5 2026-10-27T12:45:41+08:00 eval: mark strict planning metrics not ready
+
+A	research/2026-10-27_ai_simulated_review/planning_metrics_status.json
+efdb699f95473043e9b2f472311a60455ad09d7d 2026-10-27T12:45:47+08:00 eval: record AI preliminary metric status and denominators
+
+A	research/2026-10-27_ai_simulated_review/metrics_status.json
+a36357b00b30256b6d7cb0c2cd625cc0df672cb9 2026-10-27T12:45:50+08:00 eval: add reproducible metric calculation script
+
+A	research/2026-10-27_ai_simulated_review/metrics_calculation.py
+b64d278457eca252aab02070e3033b7bd9e6e60b 2026-10-27T12:48:43+08:00 eval: correct attachment-backed A013/A014 slot judgments
+
+M	research/2026-10-27_ai_simulated_review/slot_reviews.csv
+6e7e6a2e6020d4ccd707dd46913dedcb5c95f0c0 2026-10-27T12:48:46+08:00 eval: refresh task-level required-slot counts
+
+M	research/2026-10-27_ai_simulated_review/task_reviews.csv
+091e114ecc7c0a923b7fc72332d6e439178312a5 2026-10-27T12:50:10+08:00 eval: recompute per-task metrics after source-scope correction
+
+M	research/2026-10-27_ai_simulated_review/metrics_by_task.csv
+6bd19bd1d883fac199b11547cf7bef1e0ab954c6 2026-10-27T12:50:12+08:00 eval: recompute summary metrics after source-scope correction
+
+M	research/2026-10-27_ai_simulated_review/metrics_summary.csv
+a8289952e70ff765f9fd7af26fdf5ed391195c2c 2026-10-27T12:50:22+08:00 eval: refresh AI-preliminary status counts and metrics
+
+M	research/2026-10-27_ai_simulated_review/metrics_status.json
+cfe321f156ec6b305566afb2c984d9aaee05aaf3 2026-10-27T12:50:27+08:00 docs: correct metrics and explain attachment-vs-final-answer distinction
+
+M	research/2026-10-27_ai_simulated_review/README.md
+a5e26cd147410b18dcb266ac4ece503bf8456cb6 2026-10-27T12:51:44+08:00 eval: correct macro averages using per-task metric rows
+
+M	research/2026-10-27_ai_simulated_review/metrics_summary.csv
+77464989bd67365e47a84b951c832f0dd5e722cd 2026-10-27T12:51:47+08:00 eval: correct macro metric summary
+
+M	research/2026-10-27_ai_simulated_review/metrics_status.json
+dd32af76e6769ff6174ebd2e45bcdb732a0a0b38 2026-10-27T12:51:49+08:00 docs: correct macro metric tables
+
+M	research/2026-10-27_ai_simulated_review/README.md
+91a476b19800553c8806c9a57016052c43c27574 2026-10-27T12:53:51+08:00 audit: normalize exact answer and attachment locators
+
+M	research/2026-10-27_ai_simulated_review/slot_reviews.csv
+44398851fd55abe42aad7ba029d374142f491890 2026-10-27T12:53:53+08:00 eval: make metric calculation fully reproducible by task and category
+
+M	research/2026-10-27_ai_simulated_review/metrics_calculation.py
+4bfee0524ca010d5300e6bec034e9f3f75707089 2026-10-27T12:58:26+08:00 eval: mark A002 undisclosed near-match details as missing
+
+M	research/2026-10-27_ai_simulated_review/slot_reviews.csv
+a53515a82c65e0cfac34205619daf3b4c782a424 2026-10-27T12:58:28+08:00 eval: revise A002 task verdict after original attachment check
+
+M	research/2026-10-27_ai_simulated_review/task_reviews.csv
+dc5fb99b0c94b0e036534ad0b7f9761453530c94 2026-10-27T12:58:31+08:00 eval: recompute A002 required-slot metrics
+
+M	research/2026-10-27_ai_simulated_review/metrics_by_task.csv
+a0df0084dce0e9426c90c7d37fdf055b81f3d72e 2026-10-27T12:58:34+08:00 eval: recompute summary after A002 evidence-scope correction
+
+M	research/2026-10-27_ai_simulated_review/metrics_summary.csv
+eda55dfce4cc89f5a10307b0fe6cda18ea373e45 2026-10-27T12:58:36+08:00 eval: update AI-pre-review counts after A002 correction
+
+M	research/2026-10-27_ai_simulated_review/metrics_status.json
+4467e0d04b806c991722f8caf66d0dc20a38866b 2026-10-27T12:58:39+08:00 docs: document A002 evidence disclosure gap and updated metrics
+
+M	research/2026-10-27_ai_simulated_review/README.md
+8cf33ba5f8dbcd8f7eb40163200dedc0f958a867 2026-10-27T12:58:42+08:00 eval: add A002 missing-evidence finding
+
+M	research/2026-10-27_ai_simulated_review/extra_errors_and_gaps.csv
+7865105f890cb0d20ad10f95cdc731b59719339f 2026-10-27T13:05:16+08:00 eval: add exact score-context slots and independent standard evidence locators
+
+M	research/2026-10-27_ai_simulated_review/required_slots.csv
+71bab247d1b3e4d5d4c1aa8bab66bd60639a8046 2026-10-27T13:05:20+08:00 eval: add context-binding reviews and refine A002 mismatch evidence
+
+M	research/2026-10-27_ai_simulated_review/slot_reviews.csv
+f0e340812e9c5cf8494ccdcd1dcee9d49491e01b 2026-10-27T13:05:23+08:00 eval: refresh task slot counts after atomic slot expansion
+
+M	research/2026-10-27_ai_simulated_review/task_reviews.csv
+c246c1d6b2c86cc94c50539995bb128102f99f81 2026-10-27T13:05:25+08:00 eval: recalculate task metrics for 135 slots
+
+M	research/2026-10-27_ai_simulated_review/metrics_by_task.csv
+bfdc1dd54232f988188cf8356058927504aff7e4 2026-10-27T13:05:28+08:00 eval: recalculate summary metrics for 135 slots
+
+M	research/2026-10-27_ai_simulated_review/metrics_summary.csv
+864779dac37f5c52485a6efc527e0905f646ca83 2026-10-27T13:06:30+08:00 eval: update atomic slot and metric counts
+
+M	research/2026-10-27_ai_simulated_review/metrics_status.json
+37bab1a932b3f09fd080e6f96f47e984bf1aead9 2026-10-27T13:06:33+08:00 docs: update results after atomic standard refinement
+
+M	research/2026-10-27_ai_simulated_review/README.md
+d3ec722fc533ede0864258960c0bc35ca702000d 2026-10-27T13:06:43+08:00 eval: update draft-to-slot mapping
+
+M	research/2026-10-27_ai_simulated_review/draft_reconciliation.csv
+33cd2283a951ee71e8788c348ce8ea2e617b7ceb 2026-10-27T13:06:45+08:00 eval: refine A002 evidence disclosure finding
+
+M	research/2026-10-27_ai_simulated_review/extra_errors_and_gaps.csv
+ab54de166d77cf2c34ee7d9a5219e8ff3e6d834b 2026-10-27T13:47:57+08:00 audit: preserve full AI pre-review and correct stale metrics
+
+A	research/2026-10-27_ai_simulated_review_audit_v2/POST_REVIEW_INTEGRITY_AUDIT.md
+A	research/2026-10-27_ai_simulated_review_audit_v2/README.md
+A	research/2026-10-27_ai_simulated_review_audit_v2/draft_reconciliation.csv
+A	research/2026-10-27_ai_simulated_review_audit_v2/extra_errors_and_gaps.csv
+A	research/2026-10-27_ai_simulated_review_audit_v2/group_map.csv
+A	research/2026-10-27_ai_simulated_review_audit_v2/integrity_checks.json
+A	research/2026-10-27_ai_simulated_review_audit_v2/metrics_by_task.csv
+A	research/2026-10-27_ai_simulated_review_audit_v2/metrics_calculation.py
+A	research/2026-10-27_ai_simulated_review_audit_v2/metrics_status.json
+A	research/2026-10-27_ai_simulated_review_audit_v2/metrics_summary.csv
+A	research/2026-10-27_ai_simulated_review_audit_v2/planning_metrics_status.json
+A	research/2026-10-27_ai_simulated_review_audit_v2/raw_delivery_scope.csv
+A	research/2026-10-27_ai_simulated_review_audit_v2/required_slots.csv
+A	research/2026-10-27_ai_simulated_review_audit_v2/slot_reviews.csv
+A	research/2026-10-27_ai_simulated_review_audit_v2/task_reviews.csv

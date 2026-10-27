@@ -1,0 +1,8 @@
+First official-source audit attempt failed at build_addenda.py: assert len(seen)==10.
+The assertion incorrectly required every default candidate to have been scored in
+the original mini batch. The old batch had limited target-only tasks; candidate
+presence in input does not imply a score tool was executed for it.
+Correction: explicitly list old-batch observed scored IDs, separately compare all
+nine packaged score rows with their identical original official source table and
+candidate cores. Do not claim the old batch scored nine candidates or rerun it.
+No old answer, score, prediction or failure was changed.

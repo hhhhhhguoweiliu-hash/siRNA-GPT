@@ -1,0 +1,172 @@
+{
+  "n_original_answers": 27,
+  "n_rounds": 33,
+  "counts_by_layer": {
+    "TOOL_RECORD": {
+      "UNCHECKABLE": 266,
+      "PASS": 34
+    },
+    "DELIVERED_MAIN_ANSWER": {
+      "UNCHECKABLE": 288,
+      "PASS": 12
+    }
+  },
+  "automatic_prose_extraction": "Only explicitly labelled complete tables are parsed. Other prose remains UNCHECKABLE; no conclusion that absent parsing means a false answer.",
+  "new_quality_ratings": 0,
+  "new_model_calls": 0,
+  "controls": [
+    {
+      "name": "valid_with_overlapping_states",
+      "kind": "SYNTHETIC_TEST_ONLY",
+      "checks": [
+        {
+          "rule": "SITE_PARTITION",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2839, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "all = non + target",
+          "relation": "all = non + target",
+          "unit": "sites",
+          "status": "PASS",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        },
+        {
+          "rule": "GENE_PARTITION",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2839, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "genes = mapped + unmapped",
+          "relation": "genes = mapped + unmapped",
+          "unit": "unique genes",
+          "status": "PASS",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        },
+        {
+          "rule": "N_SUBSET_BOUND",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2839, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "N <= mapped",
+          "relation": "N <= mapped",
+          "unit": "unique genes",
+          "status": "PASS",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        },
+        {
+          "rule": "H_SUBSET_BOUND",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2839, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "H <= mapped",
+          "relation": "H <= mapped",
+          "unit": "unique genes",
+          "status": "PASS",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        },
+        {
+          "rule": "NONNEGATIVE_INTEGERS",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2839, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "all supplied counts are nonnegative integers",
+          "relation": "all supplied counts are nonnegative integers",
+          "unit": "declared field units",
+          "status": "PASS",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        }
+      ]
+    },
+    {
+      "name": "broken_gene_identity",
+      "kind": "SYNTHETIC_TEST_ONLY",
+      "checks": [
+        {
+          "rule": "SITE_PARTITION",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2840, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "all = non + target",
+          "relation": "all = non + target",
+          "unit": "sites",
+          "status": "PASS",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        },
+        {
+          "rule": "GENE_PARTITION",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2840, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "genes = mapped + unmapped",
+          "relation": "genes = mapped + unmapped",
+          "unit": "unique genes",
+          "status": "FAIL",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        },
+        {
+          "rule": "N_SUBSET_BOUND",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2840, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "N <= mapped",
+          "relation": "N <= mapped",
+          "unit": "unique genes",
+          "status": "PASS",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        },
+        {
+          "rule": "H_SUBSET_BOUND",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2840, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "H <= mapped",
+          "relation": "H <= mapped",
+          "unit": "unique genes",
+          "status": "PASS",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        },
+        {
+          "rule": "NONNEGATIVE_INTEGERS",
+          "observed": "{\"H\": 1595, \"N\": 1695, \"all\": 3540, \"genes\": 2840, \"mapped\": 2836, \"non\": 3539, \"target\": 1, \"unmapped\": 3}",
+          "expected": "all supplied counts are nonnegative integers",
+          "relation": "all supplied counts are nonnegative integers",
+          "unit": "declared field units",
+          "status": "PASS",
+          "reason": "same candidate/version and declared units only; internal consistency is not external validity"
+        }
+      ]
+    },
+    {
+      "name": "missing_fields",
+      "kind": "SYNTHETIC_TEST_ONLY",
+      "checks": [
+        {
+          "rule": "SITE_PARTITION",
+          "observed": "{}",
+          "expected": "all = non + target",
+          "relation": "all = non + target",
+          "unit": "sites",
+          "status": "UNCHECKABLE",
+          "reason": "required explicit fields absent; no reference values imputed"
+        },
+        {
+          "rule": "GENE_PARTITION",
+          "observed": "{}",
+          "expected": "genes = mapped + unmapped",
+          "relation": "genes = mapped + unmapped",
+          "unit": "unique genes",
+          "status": "UNCHECKABLE",
+          "reason": "required explicit fields absent; no reference values imputed"
+        },
+        {
+          "rule": "N_SUBSET_BOUND",
+          "observed": "{}",
+          "expected": "N <= mapped",
+          "relation": "N <= mapped",
+          "unit": "unique genes",
+          "status": "UNCHECKABLE",
+          "reason": "required explicit fields absent; no reference values imputed"
+        },
+        {
+          "rule": "H_SUBSET_BOUND",
+          "observed": "{}",
+          "expected": "H <= mapped",
+          "relation": "H <= mapped",
+          "unit": "unique genes",
+          "status": "UNCHECKABLE",
+          "reason": "required explicit fields absent; no reference values imputed"
+        },
+        {
+          "rule": "NONNEGATIVE_INTEGERS",
+          "observed": "{}",
+          "expected": "all supplied counts are nonnegative integers",
+          "relation": "all supplied counts are nonnegative integers",
+          "unit": "declared field units",
+          "status": "UNCHECKABLE",
+          "reason": "required explicit fields absent; no reference values imputed"
+        }
+      ]
+    }
+  ]
+}

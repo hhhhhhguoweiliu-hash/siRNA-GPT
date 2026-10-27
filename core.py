@@ -318,6 +318,9 @@ class Session:
  def finalize_model_summary(self,report,text,agent_status):
   from sequence_validation import answer_evidence
   evidence=answer_evidence(text,self.candidates,self.state)
+  from delivery import present_delivery
+  evidence.update(present_delivery({'task':self.task,'candidates':self.candidates},self.state,
+   getattr(self,'planned_tools',list(self.state)),sequence_check=evidence['answer_validation']))
   report.update(evidence,agent_status=agent_status)
   save_json(self.path/'model_summary_raw.json',{'text':text,'sha256':evidence['answer_validation']['raw_model_text_sha256'],
    'note':'Original generated text; not silently corrected. Read answer_validation before use.'})
@@ -345,7 +348,7 @@ class Session:
    inp=b['input'];summary=b['both_strand_seed_and_nearfull_summary']
    content+='<section><h2>Purchased sequences and bound computation version</h2><p>'+esc(cid)+' · '+esc(b['manifest']['dataset_id'])+'</p><p>Original row 1: '+esc(inp['original_row1'])+'; original row 2: '+esc(inp['original_row2'])+'</p><p>Row 2 is conditionally assigned as guide assuming both rows are written 5′→3′; the supplier has not confirmed strand roles. Original TT/N3 are retained. The physical N3-linked construct was not simulated.</p><p>Guide non-target seed matches: '+esc(summary['guide_seed_sites_non_target'])+' sites / '+esc(summary['guide_matched_genes_non_target'])+' distinct genes; other strand: '+esc(summary['passenger_seed_sites_non_target'])+' sites / '+esc(summary['passenger_matched_genes_non_target'])+' genes. All four near-full queries had no mapped non-target or unknown-mapping hits at 0/1 mismatch in the fixed transcript reference. See structured results and originals for 2-mismatch hits.</p><p>These are version-bound imports of real local computations. This webpage did not rerun heavy models or scans. <a href="verified_import/'+esc(b['manifest']['dataset_id'])+'/manifest.json">Versions and file fingerprints</a></p></section>'
   if r.get('model_summary'):
-   content+='<section><h2>Model interpretation (with sequence check)</h2><p style="white-space:pre-wrap">'+esc('The original answer failed the sequence check. Use the verified sequence table and review the unchanged model text below.' if r.get('answer_validation',{}).get('status')=='FAIL' else r.get('model_summary_display',r['model_summary']))+'</p><details><summary>Original model text (unchanged; verified fields take precedence)</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere">'+esc(r.get('model_summary_raw',r['model_summary']))+'</pre></details><small>Sequence consistency does not validate every scientific conclusion. Scores and evidence follow the original records.</small></section>'
+   content+='<section><h2>Verified tool evidence (shared presentation)</h2><p style="white-space:pre-wrap">'+esc(r.get('model_summary_display',r['model_summary']))+'</p><details><summary>Original model text (unchanged diagnostic; separate from primary delivery)</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere">'+esc(r.get('model_summary_raw',r['model_summary']))+'</pre></details><small>Sequence consistency does not validate every scientific conclusion. Scores and evidence follow the original records.</small></section>'
   content+='<section><h2>Scope and limitations</h2><ul>'+''.join('<li>'+esc_ui(x)+'</li>' for x in r['limitations'])+'</ul></section><p><a href="candidates_ranked.tsv">Candidate table</a> · <a href="seed_expression_details.tsv">Match and expression details</a> · <a href="events.jsonl">Execution records</a> · <a href="report.json">Structured results</a></p></html>'
   if r.get('record_kind')=='OFFLINE_SAVED_ANSWER_REPLAY':
    import re

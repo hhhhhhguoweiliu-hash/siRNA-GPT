@@ -1,0 +1,127 @@
+{
+  "kind": "INDEPENDENT_CODE_PATH_NOT_INDEPENDENT_BIOLOGICAL_TRUTH",
+  "started_utc": "2026-10-27T05:26:43Z",
+  "seconds": 10.273,
+  "exit_status": 0,
+  "seed_candidates": 10,
+  "reference_transcripts": 19415,
+  "seed_site_differences": 0,
+  "seed_gene_count_differences": 0,
+  "seed_transcript_count_differences": 0,
+  "expression_gene_differences": 0,
+  "expression_set_differences": 0,
+  "mapping_issues": 1,
+  "raw_tpm_duplicate_features": [],
+  "input_files": [
+    {
+      "path": "C:\\00000\\ARPE RNA-seq\\result\\result\\6_expression\\expression\\gene_tpm.xls",
+      "bytes": 3041039,
+      "sha256": "c0ef6fbcfb5ae62f3979dfa1e359dd4d046caa1a281d72ff3816fd22ad5bcdcc"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\prepared\\refseq_utr3_representative.fasta",
+      "bytes": 37782141,
+      "sha256": "8a7a99ecc7346c50c76e37cd24cd851ce96adb348cc447f007233e2f10aac779"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\prepared\\utr_manifest_representative.tsv",
+      "bytes": 3685886,
+      "sha256": "a63dd3668d6cdb439a816c475b1cb9181183fd2bb2e76212d3a2fe0076d56aab"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\official_tools\\SeedMatchR_1.1.1\\R\\get_seed.R",
+      "bytes": 4045,
+      "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\prepared\\reference_gene_baseline_map.tsv",
+      "bytes": 11786923,
+      "sha256": "83d363d8e689fbd646c9303702ebecc2187db1262d9ec90eb5fc1a4149b20d44"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\run_seed_and_search.R",
+      "bytes": 4645,
+      "sha256": "2d1f4213285cc81ee30a2b0bebddf2398e79500dabec483d662577ac576d4234"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\risk_raw\\seed_motifs.tsv",
+      "bytes": 2718,
+      "sha256": "0e8bbd5de138795bd914a9ffa808644d41d307f6ff8ba48fef541a213becabfd"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\risk_raw\\seed_counts_official.tsv",
+      "bytes": 51748471,
+      "sha256": "9d33b32dfd9f946f02eac26bd3a28b44f6ff7d86a425fde6da347e313274aca6"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\risk_raw\\seed_sites_7merm8.tsv",
+      "bytes": 5017312,
+      "sha256": "42d1ce0ad79259787a0694465c7827d2e966d0806ee047c8bd347c0aca100202"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\prepared\\candidates_working_pool.tsv",
+      "bytes": 6404,
+      "sha256": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853"
+    },
+    {
+      "path": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\siRNA-GPT-current\\data\\expression.tsv.gz",
+      "bytes": 674448,
+      "sha256": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b"
+    },
+    {
+      "path": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\siRNA-GPT-current\\data\\historical_seed_matches.tsv",
+      "bytes": 522219,
+      "sha256": "3701a561a84cdf9df29108f6c235398cc377901a598293071f5724f706f2ac3c"
+    },
+    {
+      "path": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\siRNA-GPT-current\\data\\candidates.tsv",
+      "bytes": 6404,
+      "sha256": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853"
+    },
+    {
+      "path": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\siRNA-GPT-current\\data\\purchased_sivegf_20261024_v1\\verified_local_result.json",
+      "bytes": 3757,
+      "sha256": "0f8721bd09ef22de9e4b7dd50220d12df7db399be26594a9c9ae001ba6822f19"
+    },
+    {
+      "path": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\siRNA-GPT-current\\research\\2026-10-27_real_dialogue_mini\\raw\\results_original.json",
+      "bytes": 3495823,
+      "sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3"
+    },
+    {
+      "path": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\siRNA-GPT-current\\research\\2026-10-24_candidate_v2\\inputs\\seed_pilot_4.tsv",
+      "bytes": 458,
+      "sha256": "7056e9063db5c23e568cc479b9094ffc6c913f67716bd80e1509e6d2b2562658"
+    },
+    {
+      "path": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\siRNA-GPT-current\\data\\purchased_sivegf_20261024_v1\\seed_pilot_02__USER_PURCHASED_siVEGF__guide__counts.tsv.gz",
+      "bytes": 59184,
+      "sha256": "dfb8aee18d2a32cef9140d7c75af4306d3c09bcaacdcff0ae0c5442d082eb5a5"
+    },
+    {
+      "path": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\siRNA-GPT-current\\data\\purchased_sivegf_20261024_v1\\seed_pilot_02__USER_PURCHASED_siVEGF__guide__sites.tsv.gz",
+      "bytes": 50598,
+      "sha256": "aab1bbb319b39f63702409cd74a7e0b177d8e62f3413ed3062e727eec9d61a25"
+    },
+    {
+      "path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_agent_v2_20261018\\deliverable\\02_background\\gene_expression_background.tsv",
+      "bytes": 16206948,
+      "sha256": "7a431e5cceee6f6dabeee3382cc2a3f14ac53c14d8fc9cd8b9dfa8e85e9220cb"
+    }
+  ],
+  "static_mapping": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_agent_v2_20261018\\deliverable\\02_background\\gene_expression_background.tsv",
+  "static_mapping_columns_only": true,
+  "shared_dependencies": [
+    "raw TPM measurements",
+    "static feature-to-Entrez mapping",
+    "representative UTR FASTA/manifest",
+    "official guide and mer7m8 definition"
+  ],
+  "not_performed": [
+    "independent biological measurements",
+    "independent OligoFormer inference",
+    "new model answers",
+    "human quality ratings"
+  ],
+  "production_functions_imported": false
+}
