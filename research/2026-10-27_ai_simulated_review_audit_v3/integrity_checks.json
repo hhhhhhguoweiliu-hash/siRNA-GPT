@@ -1,0 +1,176 @@
+{
+  "evaluator": "ChatGPT",
+  "review_date": "2026-10-27",
+  "audit_version": "AUDIT_V3_2026-10-27",
+  "source_branch": "codex/20261020-evidence-pilot",
+  "source_head_before_audit": "33cd2283a951ee71e8788c348ce8ea2e617b7ceb",
+  "requested_handoff_commit": "c30473d3168ccf5ce6522722f0cea857c2065037",
+  "original_review_input_snapshot": "bfa1a0d19f5e207fc0ef4804b14c89ae7834a965",
+  "original_result_json": {
+    "bytes": 3495823,
+    "sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3",
+    "git_blob_sha": "f0b334c3d5b1c44d4a164a1752d32df38043e480",
+    "records": 27,
+    "turns": 33
+  },
+  "original_tool_zip": {
+    "bytes": 9814625,
+    "sha256": "512ab027fddd8c1ecabda20b7243a610c2f14a07a80130e832eebe083ed0c2c3",
+    "members": 1550,
+    "turn_records": 33,
+    "model_response_files": 62
+  },
+  "standards": {
+    "draft_items_total": 70,
+    "active_draft_items": 59,
+    "unrun_Q1_Q2_items": 11,
+    "atomic_required_slots": 135,
+    "slot_judgements": 405,
+    "status_counts": {
+      "CORRECT": 313,
+      "WRONG": 13,
+      "MISSING": 79,
+      "UNJUDGED": 0,
+      "NOT_APPLICABLE": 0
+    }
+  },
+  "delivery_scope": {
+    "answers": 27,
+    "turns": 33,
+    "raw_model_texts_present": 21,
+    "raw_absent": 12,
+    "raw_equals_delivered": 20,
+    "raw_differs_from_delivered": 1,
+    "raw_comparison_not_applicable": 12,
+    "rounds_with_attachment_locators": 18
+  },
+  "consistencyChecks": {
+    "all_27_answer_slot_counts_match_task_reviews": true,
+    "all_12_group_category_metric_rows_recomputed_match": true,
+    "sole_pass_indicator_mismatch_in_source": "A002: task_verdict=FAIL but task_pass_indicator=1",
+    "audit_copy_correction": "A002 task_pass_indicator changed to 0",
+    "staleReadmeCorrected": [
+      "Agent 7/9 -> 6/9",
+      "130 slots -> 135",
+      "TP 129 -> 128",
+      "FN 1 -> 7",
+      "removed unsupported claim that Agent P/R/F1 were all higher"
+    ]
+  },
+  "overallMetrics": [
+    {
+      "group": "普通LLM",
+      "task_accuracy": "1/9",
+      "slots": 135,
+      "TP": 55,
+      "FP": 12,
+      "FN": 80,
+      "microP": 0.8208955224,
+      "microR": 0.4074074074,
+      "microF1": 0.5445544554,
+      "macroP": 0.9222222222,
+      "macroR": 0.4666752005,
+      "macroF1": 0.5977889375
+    },
+    {
+      "group": "固定流程",
+      "task_accuracy": "8/9",
+      "slots": 135,
+      "TP": 130,
+      "FP": 0,
+      "FN": 5,
+      "microP": 1,
+      "microR": 0.962962963,
+      "microF1": 0.9811320755,
+      "macroP": 1,
+      "macroR": 0.9305555556,
+      "macroF1": 0.9494949495
+    },
+    {
+      "group": "Agent",
+      "task_accuracy": "6/9",
+      "slots": 135,
+      "TP": 128,
+      "FP": 1,
+      "FN": 7,
+      "microP": 0.992248062,
+      "microR": 0.9481481481,
+      "microF1": 0.9696969697,
+      "macroP": 0.9907407407,
+      "macroR": 0.9351851853,
+      "macroF1": 0.9537037037
+    }
+  ],
+  "planning_metrics_status": "NOT_READY",
+  "human_approval": "PENDING",
+  "independent_blind_review": false,
+  "wet_lab_truth_available": false,
+  "original_expert_scores_modified": false,
+  "original_answers_modified": false,
+  "historical_failures_modified": false,
+  "model_batch_started": false,
+  "re_audit_source_head": "ab54de166d77cf2c34ee7d9a5219e8ff3e6d834b",
+  "main_head_at_re_audit": "2623c8601bd4b19b472fafc520b95c0cfd0a0fdb",
+  "branch_history_at_re_audit": {
+    "commits_ahead_of_handoff": 43,
+    "commits_ahead_of_main": 82,
+    "commits_behind_main": 0,
+    "source_branch_head_before_audit_commit": "ab54de166d77cf2c34ee7d9a5219e8ff3e6d834b"
+  },
+  "draft_reconciliation": {
+    "original_draft_items_total": 70,
+    "active_original_draft_items": 59,
+    "unrun_Q1_Q2_items": 11,
+    "atomic_slots_from_active_original_drafts": 126,
+    "prompt_common_slots": 8,
+    "prompt_delivery_slots": 1,
+    "atomic_required_slots": 135,
+    "required_slot_rows_mapped": 135,
+    "unmapped_required_slots": 0,
+    "reconciliation_rows": 72
+  },
+  "independent_recalculation": {
+    "reviewer": "ChatGPT",
+    "date": "2026-10-27",
+    "method": "Recomputed from slot_reviews.csv, task_reviews.csv, group_map.csv; no model calls.",
+    "checked_answers": 27,
+    "checked_turns": 33,
+    "checked_slot_judgements": 405,
+    "status_counts": {
+      "CORRECT": 313,
+      "WRONG": 13,
+      "MISSING": 79,
+      "UNJUDGED": 0,
+      "NOT_APPLICABLE": 0
+    },
+    "per_answer_slot_counts_match_task_reviews": true,
+    "all_12_group_category_metric_rows_match_recalculation": true,
+    "comparison_tolerance": 1e-9,
+    "human_confirmation": "PENDING; all labels remain AI pre-review only"
+  },
+  "newly_found_v3_issues": [
+    {
+      "issue": "Raw-output comparison miscount",
+      "old": "raw_differs_from_delivered=13",
+      "corrected": "1 actually differs (A013); 12 rounds have no raw output and are NOT_COMPARABLE."
+    },
+    {
+      "issue": "Draft-to-slot reconciliation omission",
+      "old": "W1_S27_REPORT_ARTIFACTS source_draft_fact_id=PROMPT_DELIVERY had no row in draft_reconciliation.csv",
+      "corrected": "Added a separate PROMPT_DELIVERY row for 1 slot; mapped total is 126+8+1=135."
+    },
+    {
+      "issue": "Stale meta row in extra_errors_and_gaps.csv",
+      "old": "After atomic splitting, 130 required slots are used",
+      "corrected": "135 required slots total; see reconciliation components."
+    }
+  ],
+  "human_review_limits": {
+    "pre_run_human_approval": "NOT_EVIDENCED",
+    "independent_blind_review": "NOT_PERFORMED",
+    "client_ui_attachment_clickability": "NOT_VERIFIABLE; no original client UI screenshot",
+    "binary_attachment_archive_independently_unpacked_in_this_reaudit": "NO; original ZIP remains in repository and prior review notes its archive audit; current pass checked raw JSON, source locators and evidence tables",
+    "wet_lab_truth": "NOT_AVAILABLE",
+    "strict_C1_planning_metrics": "NOT_READY"
+  }
+}

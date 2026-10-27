@@ -1,0 +1,73 @@
+case_id,draft_fact_id,draft_fact_text,included_in_current_27,atomic_slot_count,atomic_slot_ids,reconciliation_note
+W1,W1_F01,原序列与条件性链角色,YES,5,W1_S01_RAW_ROW1;W1_S02_RAW_ROW2;W1_S03_GUIDE_CORE;W1_S04_PARTNER_CORE;W1_S05_ROLE_ASSUMPTION,Composite draft item split into independently checkable atomic slots.
+W1,W1_F02,参考坐标,YES,2,W1_S06_REFERENCE;W1_S07_CORE_COORD,Composite draft item split into independently checkable atomic slots.
+W1,W1_F03,固定参考覆盖,YES,1,W1_S08_COVERAGE,Retained as a single independently checkable item.
+W1,W1_F04,绑定scaled分数,YES,7,W1_S09_SCORE;W1_S10_DATASET;W1_S11_SCORE_PATH;W1_S12_SCORE_SHA;W1_S13_MANIFEST_PATH;W1_S14_MANIFEST_SHA;W1_S28_SCORE_CONTEXT,Composite draft item split into independently checkable atomic slots.
+W1,W1_F05,分数含义,YES,1,W1_S15_SCORE_MEANING,Retained as a single independently checkable item.
+W1,W1_F06,非靶seed位点,YES,2,W1_S16_SEED_ALL;W1_S17_SEED_NONTARGET,Composite draft item split into independently checkable atomic slots.
+W1,W1_F07,去重非靶基因,YES,1,W1_S18_NONTARGET_GENES,Retained as a single independently checkable item.
+W1,W1_F08,表达可映射基因,YES,1,W1_S19_MAPPED_GENES,Retained as a single independently checkable item.
+W1,W1_F09,两状态检出计数,YES,2,W1_S20_NORM_DETECTED;W1_S21_HYPOX_DETECTED,Composite draft item split into independently checkable atomic slots.
+W1,W1_F10,未映射基因,YES,1,W1_S22_UNMAPPED,Retained as a single independently checkable item.
+W1,W1_F11,未转染基线范围,YES,3,W1_S23_BASELINE;W1_S24_HYPOX_CONDITION;W1_S25_DETECTION_RULE,Composite draft item split into independently checkable atomic slots.
+W1,W1_F12,修饰实物限制,YES,1,W1_S26_CHEMISTRY_LIMITS,Retained as a single independently checkable item.
+W2,W2_F01,逐条核对1157的序列/参考/核心坐标/覆盖与证据,YES,3,W2_1157_SEQ;W2_1157_COORD;W2_1157_COVERAGE,Composite draft item split into independently checkable atomic slots.
+W2,W2_F02,逐条核对2739的序列/参考/核心坐标/覆盖与证据,YES,3,W2_2739_SEQ;W2_2739_COORD;W2_2739_COVERAGE,Composite draft item split into independently checkable atomic slots.
+W2,W2_F03,逐条核对3119的序列/参考/核心坐标/覆盖与证据,YES,3,W2_3119_SEQ;W2_3119_COORD;W2_3119_COVERAGE,Composite draft item split into independently checkable atomic slots.
+W2,W2_F04,逐条核对3193的序列/参考/核心坐标/覆盖与证据,YES,3,W2_3193_SEQ;W2_3193_COORD;W2_3193_COVERAGE,Composite draft item split into independently checkable atomic slots.
+W2,W2_F05,逐条核对3429的序列/参考/核心坐标/覆盖与证据,YES,3,W2_3429_SEQ;W2_3429_COORD;W2_3429_COVERAGE,Composite draft item split into independently checkable atomic slots.
+W2,W2_F06,逐条核对3499的序列/参考/核心坐标/覆盖与证据,YES,3,W2_3499_SEQ;W2_3499_COORD;W2_3499_COVERAGE,Composite draft item split into independently checkable atomic slots.
+W2,W2_F07,逐条核对3500的序列/参考/核心坐标/覆盖与证据,YES,3,W2_3500_SEQ;W2_3500_COORD;W2_3500_COVERAGE,Composite draft item split into independently checkable atomic slots.
+W2,W2_F08,逐条核对3502的序列/参考/核心坐标/覆盖与证据,YES,3,W2_3502_SEQ;W2_3502_COORD;W2_3502_COVERAGE,Composite draft item split into independently checkable atomic slots.
+W2,W2_F09,逐条核对3535的序列/参考/核心坐标/覆盖与证据,YES,3,W2_3535_SEQ;W2_3535_COORD;W2_3535_COVERAGE,Composite draft item split into independently checkable atomic slots.
+W2b,W2b_F01,候选版本绑定,YES,3,W2B_CANDIDATE_ID;W2B_CORE_SEQ;W2B_CONTEXT_57NT,Composite draft item split into independently checkable atomic slots.
+W2b,W2b_F02,scaled原值及显示舍入,YES,1,W2B_SCORE,Retained as a single independently checkable item.
+W2b,W2b_F03,分数来源,YES,2,W2B_SOURCE_PATH;W2B_SOURCE_SHA,Composite draft item split into independently checkable atomic slots.
+W2b,W2b_F04,预测与实测区别,YES,1,W2B_SCORE_MEANING,Retained as a single independently checkable item.
+W3,W3_F01,两候选分数,YES,2,W3_SCORE_3535;W3_SCORE_3499,Composite draft item split into independently checkable atomic slots.
+W3,W3_F02,分数高低关系,YES,1,W3_SCORE_ORDER,Retained as a single independently checkable item.
+W3,W3_F03,查询窗口定义,YES,1,W3_QUERY_DEF,Retained as a single independently checkable item.
+W3,W3_F04,查询序列,YES,1,W3_QUERY_SEQ,Retained as a single independently checkable item.
+W3,W3_F05,IRGM参考坐标与错配,YES,4,W3_TRANSCRIPT;W3_COORD;W3_GENE;W3_MISMATCH,Composite draft item split into independently checkable atomic slots.
+W3,W3_F06,科学局限,YES,2,W3_PASS_FIELD;W3_PASS_INTERPRETATION,Composite draft item split into independently checkable atomic slots.
+W3,W3_F07,建议目的及依据,YES,1,W3_RECOMMENDATION,Retained as a single independently checkable item.
+U1,U1_F01,首轮序列/坐标/覆盖,YES,4,U1_R1_CORE_SEQ;U1_R1_CORE_COORD;U1_R1_WINDOW_COORD;U1_R1_COVERAGE,Composite draft item split into independently checkable atomic slots.
+U1,U1_F02,首轮范围,YES,1,U1_R1_SCOPE,Retained as a single independently checkable item.
+U1,U1_F03,次轮新增分数,YES,1,U1_R2_SCORE,Retained as a single independently checkable item.
+U1,U1_F04,分数含义,YES,1,U1_R2_SCORE_MEANING,Retained as a single independently checkable item.
+U1,U1_F05,保留各自历史,YES,1,U1_R2_HISTORY,Retained as a single independently checkable item.
+U1,U1_F06,证据版本与新增/重做说明,YES,2,U1_R2_BINDING;U1_R2_CONTEXT_57NT,Retained as a single independently checkable item.
+U1,U1_F07,次轮范围,YES,1,U1_R2_SCOPE,Retained as a single independently checkable item.
+R1,R1_F01,首轮原始TT/N3保留,YES,1,R1_R1_RAW_ROWS,Retained as a single independently checkable item.
+R1,R1_F02,链角色未供应商确认,YES,1,R1_R1_ROLES_UNCONFIRMED,Retained as a single independently checkable item.
+R1,R1_F03,补齐明确假设后继续,YES,2,R1_R1_NOT_ORDER_READY;R1_R2_ASSUMPTION,Composite draft item split into independently checkable atomic slots.
+R1,R1_F04,次轮参考/分数绑定,YES,8,R1_R1_KNOWN_UNKNOWN;R1_R2_COORD;R1_R2_COVERAGE;R1_R2_SCORE;R1_R2_SOURCE_PATH;R1_R2_SOURCE_SHA;R1_R2_SCORE_MEANING;R1_R2_CONTEXT_57NT,Composite draft item split into independently checkable atomic slots.
+R1,R1_F05,化学实物限制,YES,1,R1_R2_CHEMISTRY_LIMITS,Retained as a single independently checkable item.
+R2,R2_F01,新旧核心原样,YES,2,R2_OLD_CORE;R2_NEW_CORE,Composite draft item split into independently checkable atomic slots.
+R2,R2_F02,不迁移旧分数,YES,1,R2_NO_SCORE_REUSE,Retained as a single independently checkable item.
+R2,R2_F03,不据错误字段判生物学无效,YES,1,R2_NO_BIO_INVALIDITY,Retained as a single independently checkable item.
+R2,R2_F04,原订购来源保留,YES,1,R2_REUSABLE_FIELDS,Retained as a single independently checkable item.
+R2,R2_F05,需要的新核对,YES,2,R2_RECHECK_TARGET;R2_RECHECK_SCORE_COMPLEMENT,Composite draft item split into independently checkable atomic slots.
+R3,R3_F01,声明越界,YES,2,R3_DECLARED_OOB;R3_REF_LENGTH,Composite draft item split into independently checkable atomic slots.
+R3,R3_F02,实际序列匹配坐标,YES,2,R3_ACTUAL_COORD;R3_COVERAGE,Composite draft item split into independently checkable atomic slots.
+R3,R3_F03,元数据与序列区分,YES,1,R3_CANDIDATE_EXISTS,Retained as a single independently checkable item.
+R3,R3_F04,不改原碱基,YES,1,R3_NO_BASE_MUTATION,Retained as a single independently checkable item.
+R4,R4_F01,禁止内置回退,YES,2,R4_USER_TABLE_ABSENT;R4_NO_BUILTIN_FALLBACK,Composite draft item split into independently checkable atomic slots.
+R4,R4_F02,保留已有局部证据,YES,5,R4_CORE_SEQ;R4_COORD;R4_COVERAGE;R4_SCORE;R4_CONTEXT_57NT,Composite draft item split into independently checkable atomic slots.
+R4,R4_F03,seed实际进展,YES,3,R4_SEED_ALL;R4_SEED_NONTARGET;R4_GENES_NONTARGET,Composite draft item split into independently checkable atomic slots.
+R4,R4_F04,表达明确缺失,YES,1,R4_EXPRESSION_MISSING,Retained as a single independently checkable item.
+R4,R4_F05,完整报告未完成,YES,1,R4_REPORT_INCOMPLETE,Retained as a single independently checkable item.
+R4,R4_F06,所需表与来源,YES,4,R4_SOURCE_PATH;R4_SOURCE_SHA;R4_SCORE_MEANING;R4_CHEMISTRY_LIMITS,Composite draft item split into independently checkable atomic slots.
+Q1,Q1_F01,实际可定位官方引文,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q1,Q1_F02,分数定义,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q1,Q1_F03,seed位点与基因数及局限,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q1,Q1_F04,版本适用范围,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q1,Q1_F05,N3未模拟,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q1,Q1_F06,基线与处理后测量区别,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q2,Q2_F01,指定测量缺口,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q2,Q2_F02,不编数或替换本项目测量,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q2,Q2_F03,所需对应条件测量,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q2,Q2_F04,不宣称全球均无研究,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+Q2,Q2_F05,检索/范围状态区分,NO,0,,Q1/Q2 were not run in the current 27-answer batch; excluded from denominators and not judged.
+PROMPT_COMMON,PROMPT_COMMON,从原始题干提取但未被59条草案覆盖的范围/证据边界要求。,YES,8,W2_COMMON_REF;W2_COMMON_WINDOW_CORE;W2_COMMON_EVIDENCE;W2_COMMON_SCOPE;W2B_SCOPE;U1_R2_NO_PLACEHOLDER_DATE;R1_R2_NO_NEW_CALC;R2_NO_NEW_SCORE_SCAN,新增的原始题干必答要求，不冒充原59条草案的一部分。
+PROMPT_DELIVERY,PROMPT_DELIVERY,从W1原始题干提取的交付要求：提供可定位的报告与候选表附件。,YES,1,W1_S27_REPORT_ARTIFACTS,Additional atomic requirement extracted from original W1 prompt; not part of the original 59 active draft items or the eight PROMPT_COMMON slots.
