@@ -1,0 +1,547 @@
+{
+  "source_kind": "Transcription of user-pasted scores, not an original XLSX or signed expert form",
+  "saved_transcription_sha256": "45fc8c4aae3be070f22f61bceed0fdbae2f287a3015a83b12404cf32bab56ac5",
+  "reviewer_identity_and_relationship_to_prior_forms": "Not supplied in this message; no inference of an additional independent rater",
+  "new_ratings_added_or_changed_by_assistant": 0,
+  "records": [
+    {
+      "answer_id": "A004",
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：准确提取核心坐标与覆盖，给出 OligoFormer 分数 1.12，seed 与常氧/缺氧检出计数准确，明确指明两状态基线含义及 N3/TT 未模拟限制。",
+      "group": "agent",
+      "case_id": "W1",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A018",
+      "anonymous_role": "乙",
+      "scores": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "sum8_audit_only": 4,
+      "raw_compact_score_string": "10124",
+      "source_reason_segment": "部分完成：无成功科学工具步骤；未能提供 NM_003376.6 实际比对坐标与 OligoFormer 预测分数值，但如实陈述了链假设与修饰边界。",
+      "group": "llm",
+      "case_id": "W1",
+      "completion_label_as_pasted": "部分完成"
+    },
+    {
+      "answer_id": "A026",
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：字段最详尽，包含原始精度浮点数、SHA256、文件清单、两状态未映射数 (3) 及完整的 N3/TT 物理修饰与转染基线边界阐述。   第2题：只核对序列与目标参考",
+      "group": "workflow",
+      "case_id": "W1",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A007",
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：逐条准确区分 23nt 设计窗口与 19nt 实际匹配坐标（如 1159-1177 等），覆盖数 20/20 准确，严守不做打分/脱靶边界。",
+      "group": "agent",
+      "case_id": "W2",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A020",
+      "anonymous_role": "乙",
+      "scores": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sum8_audit_only": 2,
+      "raw_compact_score_string": "00112",
+      "source_reason_segment": "部分完成（含严重错误）：虽有格式输出，但直接将 23nt 设计窗口起始位置当作 19nt 核心起点（如 1157-1175，实际应为 1159-1177），未独立调用比对工具，坐标事实计算错误。",
+      "group": "llm",
+      "case_id": "W2",
+      "completion_label_as_pasted": "部分完成（含严重错误）"
+    },
+    {
+      "answer_id": "A027",
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：9 条候选核心坐标与 20/20 覆盖完全正确，工具步骤真实完成，严格收敛任务范围，未做多余排名与分析。   第3题：查询已有分数及其含义",
+      "group": "workflow",
+      "case_id": "W2",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A013",
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：保留原始高精度数值 0.9915144175887107，给出对应文件 SHA256 与 57nt mRNA 上下文，准确声明非敲低百分比。",
+      "group": "agent",
+      "case_id": "W2b",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A019",
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：结构化清晰，给出原始精度分数、raw_class1、SHA256、核心坐标 (3501-3519)，明确指出参考覆盖不代表体内异构体表达。",
+      "group": "workflow",
+      "case_id": "W2b",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A024",
+      "anonymous_role": "丙",
+      "scores": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "sum8_audit_only": 2,
+      "raw_compact_score_string": "00022",
+      "source_reason_segment": "未交付：未能调用工具读取已有历史分数库，声称输入无记录无法获取，未能完成数值交付；仅定性解释了分数含义。   第4题：比较高分与近似匹配警告",
+      "group": "llm",
+      "case_id": "W2b",
+      "completion_label_as_pasted": "未交付"
+    },
+    {
+      "answer_id": "A002",
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：正确比较两候选分数高低，列出 IRGM 错配警告、seed 匹配数与缺氧检出数，明确建议补核脱靶验证且不设唯一生物学最优。",
+      "group": "agent",
+      "case_id": "W3",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A005",
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：数据完整度最高，明确列出 AUTHOR_G2_G20_19NT 窗口定义、IRGM 坐标 (NR_170598.1:1724-1742)、原始精度分数与脱靶检出统计，边界充分。",
+      "group": "workflow",
+      "case_id": "W3",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A006",
+      "anonymous_role": "丙",
+      "scores": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "sum8_audit_only": 2,
+      "raw_compact_score_string": "10012",
+      "source_reason_segment": "未交付：无成功工具调用，直接判定“缺失数据无法完成任务”，未交付分数对比与脱靶风险并列评估。   第5题：同一问题追加新要求",
+      "group": "llm",
+      "case_id": "W3",
+      "completion_label_as_pasted": "未交付"
+    },
+    {
+      "answer_id": "A001",
+      "anonymous_role": "甲",
+      "scores": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sum8_audit_only": 2,
+      "raw_compact_score_string": "00112",
+      "source_reason_segment": "部分完成（含事实错误）：首轮把 23nt 窗口 3499-3521 误作核心坐标；次轮仅文字泛泛说明模型分数含义，未能交付实际分数值，无工具支撑。",
+      "group": "llm",
+      "case_id": "U1",
+      "completion_label_as_pasted": "部分完成（含事实错误）"
+    },
+    {
+      "answer_id": "A014",
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：两轮衔接极佳，准确复用首轮坐标 (3501-3519) 与 20 条参考，次轮增量输出分数 0.9915 并说明来源与含义，界限严密。",
+      "group": "agent",
+      "case_id": "U1",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A021",
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：规范展示轮次记录，准确输出高精度数值、来源文件哈希、区分 23nt 与 19nt 坐标，清晰交代重新核对与新增工具步骤。   第6题：订购记录没有明确链角色",
+      "group": "workflow",
+      "case_id": "U1",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A012",
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：第 1 轮明确指出尚无供应商确认链角色；第 2 轮在明确计算假设后成功完成核对，给出坐标 (1439-1457)、分数 (1.1219) 与修饰实物限制。",
+      "group": "workflow",
+      "case_id": "R1",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A016",
+      "anonymous_role": "乙",
+      "scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "sum8_audit_only": 5,
+      "raw_compact_score_string": "11125",
+      "source_reason_segment": "部分完成：第 1 轮边界把控到位；但第 2 轮未能调用科学工具检索分数与匹配，仅停留在输入信息复述上。",
+      "group": "llm",
+      "case_id": "R1",
+      "completion_label_as_pasted": "部分完成"
+    },
+    {
+      "answer_id": "A017",
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：两轮逻辑完整，第 1 轮指明互补性与角色未定；第 2 轮准确调用工具交付 18 条转录本覆盖、坐标 (1439-1457)、分数 1.1219 及各项限制说明。   第7题：改了序列能否沿用旧分数",
+      "group": "agent",
+      "case_id": "R1",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A008",
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：准确识别新核心首位碱基突变（U→A），判定旧分数不可沿用，清晰梳理可用证据（名称/转录本/修饰）与需重核证据（比对/分数/seed），未擅自评分。",
+      "group": "llm",
+      "case_id": "R2",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A010",
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：清晰阐明核心序列变更导致分数失效，分项列明可复用与需重核内容，严格遵守不启动新评分的要求。",
+      "group": "agent",
+      "case_id": "R2",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A023",
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成（正确防御中断）：底层检查工具拦截了 guide 与 passenger 不互补的异常，明确停止后续计算，保留已有输入证据，符合生信严谨性质控逻辑。   第8题：坐标声明是否与序列一致",
+      "group": "workflow",
+      "case_id": "R2",
+      "completion_label_as_pasted": "完成（正确防御中断）"
+    },
+    {
+      "answer_id": "A009",
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：结构化指明声明越界（声明 3610-3628，参考全长 3609nt，越界且不一致），同时核实其实际真实匹配坐标为 3501-3519，未否定该 siRNA 存在。",
+      "group": "workflow",
+      "case_id": "R3",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A015",
+      "anonymous_role": "乙",
+      "scores": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "sum8_audit_only": 3,
+      "raw_compact_score_string": "10113",
+      "source_reason_segment": "部分完成：无工具运行，直接说明“无法进行实际序列比对验证”，仅复述了声明字段，未能核验坐标是否越界及真实匹配位置。",
+      "group": "llm",
+      "case_id": "R3",
+      "completion_label_as_pasted": "部分完成"
+    },
+    {
+      "answer_id": "A022",
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成：分析极其到位，明确指出 NM_003376.6 全长仅 3609nt、声明 3610 超出范围，同时交付真实匹配位置 (3501-3519) 与 20 条转录本匹配事实。   第9题：缺少本次表达表时如何处理",
+      "group": "agent",
+      "case_id": "R3",
+      "completion_label_as_pasted": "完成"
+    },
+    {
+      "answer_id": "A003",
+      "anonymous_role": "甲",
+      "scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "sum8_audit_only": 5,
+      "raw_compact_score_string": "11125",
+      "source_reason_segment": "部分完成：明确指出无法交付缺氧表达完整报告且禁止回退内置基线；但未能调用工具完成已允许的序列、参考、分数核查。",
+      "group": "llm",
+      "case_id": "R4",
+      "completion_label_as_pasted": "部分完成"
+    },
+    {
+      "answer_id": "A011",
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成（严守边界拦截）：坚决不回退内置表达表，如期交付序列、参考坐标 (1439-1457)、分数 (1.1219) 和 seed 位点数 (3540)，表达部分明确留空不填零、报告未完成。",
+      "group": "workflow",
+      "case_id": "R4",
+      "completion_label_as_pasted": "完成（严守边界拦截）"
+    },
+    {
+      "answer_id": "A025",
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum8_audit_only": 8,
+      "raw_compact_score_string": "22228",
+      "source_reason_segment": "完成（严守边界拦截）：与乙一致，执行了前置全部合规工具，交付 18/20 覆盖、完整来源哈希与 seed 结果，明确终止表达关联，未伪造数据。",
+      "group": "agent",
+      "case_id": "R4",
+      "completion_label_as_pasted": "完成（严守边界拦截）"
+    }
+  ],
+  "full_score_counts_as_pasted": {
+    "llm": {
+      "n": 9,
+      "n_full_score_as_pasted": 1
+    },
+    "workflow": {
+      "n": 9,
+      "n_full_score_as_pasted": 9
+    },
+    "agent": {
+      "n": 9,
+      "n_full_score_as_pasted": 9
+    }
+  },
+  "stratified_descriptive_summary": {
+    "W_standard": {
+      "llm": {
+        "n_task_episodes": 4,
+        "dimension_means_0_to_2": {
+          "factual_accuracy": 0.5,
+          "evidence_support": 0.0,
+          "requirement_completion": 0.5,
+          "boundary_handling": 1.5
+        }
+      },
+      "workflow": {
+        "n_task_episodes": 4,
+        "dimension_means_0_to_2": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 2.0,
+          "requirement_completion": 2.0,
+          "boundary_handling": 2.0
+        }
+      },
+      "agent": {
+        "n_task_episodes": 4,
+        "dimension_means_0_to_2": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 2.0,
+          "requirement_completion": 2.0,
+          "boundary_handling": 2.0
+        }
+      }
+    },
+    "U_change": {
+      "llm": {
+        "n_task_episodes": 1,
+        "dimension_means_0_to_2": {
+          "factual_accuracy": 0.0,
+          "evidence_support": 0.0,
+          "requirement_completion": 1.0,
+          "boundary_handling": 1.0
+        }
+      },
+      "workflow": {
+        "n_task_episodes": 1,
+        "dimension_means_0_to_2": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 2.0,
+          "requirement_completion": 2.0,
+          "boundary_handling": 2.0
+        }
+      },
+      "agent": {
+        "n_task_episodes": 1,
+        "dimension_means_0_to_2": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 2.0,
+          "requirement_completion": 2.0,
+          "boundary_handling": 2.0
+        }
+      }
+    },
+    "R_reliability": {
+      "llm": {
+        "n_task_episodes": 4,
+        "dimension_means_0_to_2": {
+          "factual_accuracy": 1.25,
+          "evidence_support": 1.0,
+          "requirement_completion": 1.25,
+          "boundary_handling": 1.75
+        }
+      },
+      "workflow": {
+        "n_task_episodes": 4,
+        "dimension_means_0_to_2": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 2.0,
+          "requirement_completion": 2.0,
+          "boundary_handling": 2.0
+        }
+      },
+      "agent": {
+        "n_task_episodes": 4,
+        "dimension_means_0_to_2": {
+          "factual_accuracy": 2.0,
+          "evidence_support": 2.0,
+          "requirement_completion": 2.0,
+          "boundary_handling": 2.0
+        }
+      }
+    }
+  },
+  "accepted_primary_completion_rates": null,
+  "scientific_accuracy_percentages": null,
+  "pooled_human_metrics": null,
+  "status": "PRESERVED_SUBMITTED_OPINION_PENDING_REASON_AND_SCOPE_REVIEW"
+}

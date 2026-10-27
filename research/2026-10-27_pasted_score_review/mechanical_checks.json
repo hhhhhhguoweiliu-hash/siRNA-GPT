@@ -1,0 +1,24 @@
+{
+  "records": 27,
+  "valid_score_cells": 108,
+  "all_totals_match": true,
+  "all_answer_ids_match_real_run": true,
+  "full_score_counts_as_pasted": {
+    "llm": {
+      "n": 9,
+      "n_full_score_as_pasted": 1
+    },
+    "workflow": {
+      "n": 9,
+      "n_full_score_as_pasted": 9
+    },
+    "agent": {
+      "n": 9,
+      "n_full_score_as_pasted": 9
+    }
+  },
+  "source_transcription_hash": "45fc8c4aae3be070f22f61bceed0fdbae2f287a3015a83b12404cf32bab56ac5",
+  "new_model_calls": 0,
+  "new_or_changed_human_scores": 0,
+  "source_text_is_user_message_transcription_not_original_file": true
+}

@@ -1,0 +1,155 @@
+{
+  "is_new_rating": false,
+  "run_results_sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3",
+  "evidence": [
+    {
+      "answer_id": "A001",
+      "case_id": "U1",
+      "group": "llm",
+      "original_round_answers": [
+        {
+          "round": 1,
+          "answer": "### 判定\n仅核对VEGFA_SD_3499的19nt核心序列、NM_003376.6参考转录本匹配及固定参考覆盖，未涉及seed、表达、排名及分数相关检查，符合任务要求。\n\n### 关键结果\n1. 19nt配对核心序列（5'→3'）：UGUACUACGGAAUAUCUCG（正向guide链）、CGAGAUAUUCCGUAGUACA（反向passenger链）\n2. 设计窗口信息：23nt设计窗口对应NM_003376.6的坐标（1-based）为target_start_1based=3499、target_end_1based=3521\n3. 固定参考覆盖：匹配的转录本共20条，其中包含参考转录本NM_003376.6，且all_20_transcripts_core_match标记为True\n\n### 证据\n所有信息均来自提供的候选序列记录：\n- 候选ID：VEGFA_SD_3499\n- 设计转录本：NM_003376.6\n- target_window_23nt、guide_paired_core_19nt_5to3、passenger_paired_core_19nt_5to3字段来自候选输入\n- core_matches_transcripts字段列出的20条匹配转录本包含NM_003376.6，all_20_transcripts_core_match字段标记为True\n\n### 限制或下一步\n未开展seed、表达、分数及排名相关计算或核对，如需补充相关分析，需明确对应任务要求。",
+          "raw_model_answer": "### 判定\n仅核对VEGFA_SD_3499的19nt核心序列、NM_003376.6参考转录本匹配及固定参考覆盖，未涉及seed、表达、排名及分数相关检查，符合任务要求。\n\n### 关键结果\n1. 19nt配对核心序列（5'→3'）：UGUACUACGGAAUAUCUCG（正向guide链）、CGAGAUAUUCCGUAGUACA（反向passenger链）\n2. 设计窗口信息：23nt设计窗口对应NM_003376.6的坐标（1-based）为target_start_1based=3499、target_end_1based=3521\n3. 固定参考覆盖：匹配的转录本共20条，其中包含参考转录本NM_003376.6，且all_20_transcripts_core_match标记为True\n\n### 证据\n所有信息均来自提供的候选序列记录：\n- 候选ID：VEGFA_SD_3499\n- 设计转录本：NM_003376.6\n- target_window_23nt、guide_paired_core_19nt_5to3、passenger_paired_core_19nt_5to3字段来自候选输入\n- core_matches_transcripts字段列出的20条匹配转录本包含NM_003376.6，all_20_transcripts_core_match字段标记为True\n\n### 限制或下一步\n未开展seed、表达、分数及排名相关计算或核对，如需补充相关分析，需明确对应任务要求。"
+        },
+        {
+          "round": 2,
+          "answer": "### 判定\n仅追加核查VEGFA_SD_3499的OligoFormer分数，明确其为模型分数，不是敲低百分比；保留了首轮的19nt核心序列、NM_003376.6对应坐标及参考覆盖记录，未开展seed、表达或排名分析，符合任务要求。\n\n### 关键结果\n1. 复用内容：首轮核对的VEGFA_SD_3499的19nt配对核心序列、NM_003376.6对应23nt设计窗口坐标（target_start_1based=3499、target_end_1based=3521）、20条匹配转录本的参考覆盖记录\n2. 新增内容：明确OligoFormer分数为模型分数，与敲低百分比无对应关系\n\n### 证据\n所有信息均来自提供的候选序列记录：\n- 复用字段：guide_paired_core_19nt_5to3、passenger_paired_core_19nt_5to3、target_window_23nt、core_matches_transcripts、all_20_transcripts_core_match等\n- 新增说明：依据任务明确要求，OligoFormer分数为模型分数，非敲低百分比\n\n### 限制或下一步\n未开展seed、表达、排名相关分析，未获取本轮新增的OligoFormer具体分数值；如需补充分数数值相关分析，需明确对应任务要求。",
+          "raw_model_answer": "### 判定\n仅追加核查VEGFA_SD_3499的OligoFormer分数，明确其为模型分数，不是敲低百分比；保留了首轮的19nt核心序列、NM_003376.6对应坐标及参考覆盖记录，未开展seed、表达或排名分析，符合任务要求。\n\n### 关键结果\n1. 复用内容：首轮核对的VEGFA_SD_3499的19nt配对核心序列、NM_003376.6对应23nt设计窗口坐标（target_start_1based=3499、target_end_1based=3521）、20条匹配转录本的参考覆盖记录\n2. 新增内容：明确OligoFormer分数为模型分数，与敲低百分比无对应关系\n\n### 证据\n所有信息均来自提供的候选序列记录：\n- 复用字段：guide_paired_core_19nt_5to3、passenger_paired_core_19nt_5to3、target_window_23nt、core_matches_transcripts、all_20_transcripts_core_match等\n- 新增说明：依据任务明确要求，OligoFormer分数为模型分数，非敲低百分比\n\n### 限制或下一步\n未开展seed、表达、排名相关分析，未获取本轮新增的OligoFormer具体分数值；如需补充分数数值相关分析，需明确对应任务要求。"
+        }
+      ],
+      "round_question_texts": [
+        "只核对这条VEGFA_SD_3499的19nt核心、NM_003376.6实际坐标和固定参考覆盖；暂时不读分数，不做seed、表达或排名。",
+        "在同一条序列和同一参考上，现在追加OligoFormer分数核查，说明是不是敲低百分比。保留首轮记录，标清复用了什么、这轮新增什么；仍不要做seed、表达或排名。"
+      ],
+      "completed_tools": [],
+      "software_status_not_human_rating": "ANSWERED_NO_TOOLS"
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "original_round_answers": [
+        {
+          "round": 1,
+          "answer": "### 判定\nVEGFA_SD_3499的19nt配对核心、NM_003376.6的实际坐标及参考覆盖均完成核对，符合输入要求的检查范围。\n### 关键结果\n| 项目 | 结果 |\n|------|------|\n| 19nt配对核心（5'→3'） | UGUACUACGGAAUAUCUCG |\n| NM_003376.6上的核心实际坐标（1-based闭区间） | 3501 - 3519 |\n| 原始23nt设计窗口坐标（来源标注） | 3499 - 3521 |\n| 覆盖的转录本数量 | 20（含目标转录本NM_003376.6） |\n### 证据\n- 工具返回的核对结果显示，19nt配对核心与输入的guide_paired_core序列一致，NM_003376.6上的核心实际坐标为3501 - 3519，原始23nt设计窗口（标注来源）为3499 - 3521。\n- 该核心共覆盖20个转录本，其中包含目标转录本NM_003376.6，且输入标注的`all_20_transcripts_core_match`为True。\n### 限制\n- 仅完成输入指定的核对内容，未进行分数、seed、表达或排名相关分析；设计窗口为23nt，核心坐标为实际比对所得的19nt区间。",
+          "raw_model_answer": "### 判定\nVEGFA_SD_3499的19nt配对核心、NM_003376.6的实际坐标及参考覆盖均完成核对，符合输入要求的检查范围。\n### 关键结果\n| 项目 | 结果 |\n|------|------|\n| 19nt配对核心（5'→3'） | UGUACUACGGAAUAUCUCG |\n| NM_003376.6上的核心实际坐标（1-based闭区间） | 3501 - 3519 |\n| 原始23nt设计窗口坐标（来源标注） | 3499 - 3521 |\n| 覆盖的转录本数量 | 20（含目标转录本NM_003376.6） |\n### 证据\n- 工具返回的核对结果显示，19nt配对核心与输入的guide_paired_core序列一致，NM_003376.6上的核心实际坐标为3501 - 3519，原始23nt设计窗口（标注来源）为3499 - 3521。\n- 该核心共覆盖20个转录本，其中包含目标转录本NM_003376.6，且输入标注的`all_20_transcripts_core_match`为True。\n### 限制\n- 仅完成输入指定的核对内容，未进行分数、seed、表达或排名相关分析；设计窗口为23nt，核心坐标为实际比对所得的19nt区间。"
+        },
+        {
+          "round": 2,
+          "answer": "### 判定\n已完成VEGFA_SD_3499的追加OligoFormer分数核查，符合输入要求的“复用首轮核对记录、明确区分新增内容”的规则。\n### 关键结果\n| 项目 | 结果 |\n|------|------|\n| 复用的首轮记录（核对内容） | 19nt配对核心、NM_003376.6坐标及参考覆盖（20个转录本） |\n| 新增的OligoFormer核查结果 | 分数为`oligoformer_scaled_score`=0.9915，**不是敲低百分比** |\n| 19nt核心（NM_003376.6上） | 3501 - 3519（1-based闭区间） |\n| 原始23nt设计窗口 | 3499 - 3521 |\n### 证据\n- 复用首轮（历史）核对结果：来自2025年X月X日的工具输出，19nt核心序列为UGUACUACGGAAUAUCUCG，NM_003376.6上的实际坐标为3501-3519，覆盖20个转录本。\n- 新增分数核查结果：来自本轮`score_candidates`工具返回，明确标注`interpretation: MODEL_SCORE_NOT_KNOCKDOWN_PERCENT`，分数值为0.9915。\n### 限制\n- 仅按要求完成“复用核对记录+新增分数核查”，未进行seed、表达或排名分析；OligoFormer分数非敲低百分比，为模型衍生值。",
+          "raw_model_answer": "### 判定\n已完成VEGFA_SD_3499的追加OligoFormer分数核查，符合输入要求的“复用首轮核对记录、明确区分新增内容”的规则。\n### 关键结果\n| 项目 | 结果 |\n|------|------|\n| 复用的首轮记录（核对内容） | 19nt配对核心、NM_003376.6坐标及参考覆盖（20个转录本） |\n| 新增的OligoFormer核查结果 | 分数为`oligoformer_scaled_score`=0.9915，**不是敲低百分比** |\n| 19nt核心（NM_003376.6上） | 3501 - 3519（1-based闭区间） |\n| 原始23nt设计窗口 | 3499 - 3521 |\n### 证据\n- 复用首轮（历史）核对结果：来自2025年X月X日的工具输出，19nt核心序列为UGUACUACGGAAUAUCUCG，NM_003376.6上的实际坐标为3501-3519，覆盖20个转录本。\n- 新增分数核查结果：来自本轮`score_candidates`工具返回，明确标注`interpretation: MODEL_SCORE_NOT_KNOCKDOWN_PERCENT`，分数值为0.9915。\n### 限制\n- 仅按要求完成“复用核对记录+新增分数核查”，未进行seed、表达或排名分析；OligoFormer分数非敲低百分比，为模型衍生值。"
+        }
+      ],
+      "round_question_texts": [
+        "只核对这条VEGFA_SD_3499的19nt核心、NM_003376.6实际坐标和固定参考覆盖；暂时不读分数，不做seed、表达或排名。",
+        "在同一条序列和同一参考上，现在追加OligoFormer分数核查，说明是不是敲低百分比。保留首轮记录，标清复用了什么、这轮新增什么；仍不要做seed、表达或排名。"
+      ],
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates"
+      ],
+      "software_status_not_human_rating": "PARTIAL_COMPLETE"
+    },
+    {
+      "answer_id": "A023",
+      "case_id": "R2",
+      "group": "workflow",
+      "original_round_answers": [
+        {
+          "round": 1,
+          "answer": "判定：停止后续计算；已有局部证据保留。\n关键结果：\nUSER_PURCHASED_siVEGF：guide和passenger配对核心不互补；原始输入：[{\"candidate_id\": \"USER_PURCHASED_siVEGF\", \"guide_core19_5to3\": \"AUUCUUGUCUUGCUCUAUC\", \"guide_21nt_RNA_5to3\": \"UUUCUUGUCUUGCUCUAUCTT\"}]\n\n已完成工具：无；以下只展示实际已取得的证据。\n证据：本轮实际完成：无成功科学工具。\n限制或下一步：未评分；未做seed分析；未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",
+          "raw_model_answer": null
+        }
+      ],
+      "round_question_texts": [
+        "这里保留USER_PURCHASED_siVEGF名称，但本次19nt guide核心改成AUUCUUGUCUUGCUCUAUC，原记录是UUUCUUGUCUUGCUCUAUC；其他原订购字段照录。能否继续引用原来的1.121934400320053作为本次序列分数？请说明哪些证据还能用、哪些需要重新核查。本题不要启动新评分或扫描。"
+      ],
+      "completed_tools": [],
+      "software_status_not_human_rating": "FAILED_WITH_RETAINED_PARTIAL_EVIDENCE"
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "original_round_answers": [
+        {
+          "round": 1,
+          "answer": "模型序列检查未通过。关键序列直接见下方已核验字段；原始模型文字单独保留，不能按错误序列写论文或订购。工具完成情况以执行记录为准。",
+          "raw_model_answer": "### 判定\n已完成VEGFA_SD_3499的OligoFormer scaled分数核查，所有相关信息已通过工具验证。\n### 关键结果\nVEGFA_SD_3499对应的OligoFormer scaled预测分数为**0.9915144175887107**（保留原始精度）。\n### 证据\n1. 分数来源：历史记录文件`data/historical_scores.tsv`，SHA256为`ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392`；\n2. 与序列的对应关系：分数绑定的参数为候选ID`VEGFA_SD_3499`、19nt配对核心`UGUACUACGGAAUAUCUCG`、mRNA上下文57nt`UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG`；\n3. 官方标注：该分数**不是敲低百分比**，无法直接换算为实际敲低效果数值。\n### 限制\n无额外表达、种子位点或候选排名结果；仅基于历史导入的评分记录，未做新鲜实验预测。"
+        }
+      ],
+      "round_question_texts": [
+        "请核查VEGFA_SD_3499对应的OligoFormer scaled预测分数，给出保留原始精度的数值、来源和与输入序列的对应关系，并说明是否能换算成实际敲低百分比。不做seed、表达或候选排名。"
+      ],
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates"
+      ],
+      "software_status_not_human_rating": "PARTIAL_COMPLETE"
+    },
+    {
+      "answer_id": "A010",
+      "case_id": "R2",
+      "group": "agent",
+      "original_round_answers": [
+        {
+          "round": 1,
+          "answer": "用户询问是否可以将原序列UUUCUUGUCUUGCUCUAUC对应的分数1.121934400320053用于新修改的19nt guide核心AUUCUUGUCUUGCUCUAUC。根据现有信息，原分数是针对旧序列计算的，核心序列发生了改变，因此无法继续引用该分数。能复用的证据包括：保持USER_PURCHASED_siVEGF名称、除guide核心外的其他原订购字段（如21nt RNA序列、配对链信息、修饰、订购状态等）、原始订单的来源记录（用户合成DOCX中的明确计算假设）。需要重新核查的内容包括：新序列的模型分数是否需要重新计算（但用户要求本题不启动新评分）、新序列的序列匹配性是否与原序列存在差异、配对链和修饰信息是否仍适用。\n是否需要启动新的评分计算或序列验证工具？",
+          "raw_model_answer": "用户询问是否可以将原序列UUUCUUGUCUUGCUCUAUC对应的分数1.121934400320053用于新修改的19nt guide核心AUUCUUGUCUUGCUCUAUC。根据现有信息，原分数是针对旧序列计算的，核心序列发生了改变，因此无法继续引用该分数。能复用的证据包括：保持USER_PURCHASED_siVEGF名称、除guide核心外的其他原订购字段（如21nt RNA序列、配对链信息、修饰、订购状态等）、原始订单的来源记录（用户合成DOCX中的明确计算假设）。需要重新核查的内容包括：新序列的模型分数是否需要重新计算（但用户要求本题不启动新评分）、新序列的序列匹配性是否与原序列存在差异、配对链和修饰信息是否仍适用。\n是否需要启动新的评分计算或序列验证工具？"
+        }
+      ],
+      "round_question_texts": [
+        "这里保留USER_PURCHASED_siVEGF名称，但本次19nt guide核心改成AUUCUUGUCUUGCUCUAUC，原记录是UUUCUUGUCUUGCUCUAUC；其他原订购字段照录。能否继续引用原来的1.121934400320053作为本次序列分数？请说明哪些证据还能用、哪些需要重新核查。本题不要启动新评分或扫描。"
+      ],
+      "completed_tools": [],
+      "software_status_not_human_rating": "MODEL_ANSWER"
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "original_round_answers": [
+        {
+          "round": 1,
+          "answer": "### 判定\n声明的19nt核心坐标与NM_003376.6参考序列实际比对结果不一致，配对核心序列仍保留与目标转录本的匹配关系。\n### 关键结果\n| 项目 | 结果 |\n|------|------|\n| 实际19nt核心（NM_003376.6）坐标 | 3501–3519（1-based闭区间） |\n| 声明的19nt核心坐标 | 3610–3628（1-based闭区间） |\n| 参考转录本NM_003376.6总长度 | 3609nt |\n| 配对核心序列 | UGUACUACGGAAUAUCUCG |\n| 配对核心匹配转录本数量 | 20个 |\n### 证据\n经`verify_target`工具确认：1. NM_003376.6转录本仅3609nt，声明的坐标3610超出序列范围，不符合19nt长度要求；2. 配对核心在NM_003376.6上的实际匹配位置为3501–3519，与声明坐标不一致；3. 该核心序列仍在20个转录本（含NM_003376.6）上有匹配。\n### 限制与下一步\n当前仅核对坐标与序列一致性，未开展表达、种子区及模型评分核查；可继续按需求进行其他类型验证，或基于实际匹配坐标开展后续分析。",
+          "raw_model_answer": "### 判定\n声明的19nt核心坐标与NM_003376.6参考序列实际比对结果不一致，配对核心序列仍保留与目标转录本的匹配关系。\n### 关键结果\n| 项目 | 结果 |\n|------|------|\n| 实际19nt核心（NM_003376.6）坐标 | 3501–3519（1-based闭区间） |\n| 声明的19nt核心坐标 | 3610–3628（1-based闭区间） |\n| 参考转录本NM_003376.6总长度 | 3609nt |\n| 配对核心序列 | UGUACUACGGAAUAUCUCG |\n| 配对核心匹配转录本数量 | 20个 |\n### 证据\n经`verify_target`工具确认：1. NM_003376.6转录本仅3609nt，声明的坐标3610超出序列范围，不符合19nt长度要求；2. 配对核心在NM_003376.6上的实际匹配位置为3501–3519，与声明坐标不一致；3. 该核心序列仍在20个转录本（含NM_003376.6）上有匹配。\n### 限制与下一步\n当前仅核对坐标与序列一致性，未开展表达、种子区及模型评分核查；可继续按需求进行其他类型验证，或基于实际匹配坐标开展后续分析。"
+        }
+      ],
+      "round_question_texts": [
+        "本记录的guide核心是UGUACUACGGAAUAUCUCG，参考写NM_003376.6，并声称19nt核心坐标为3610–3628（1-based闭区间）。请检查这条坐标声明与参考/序列是否一致，指出可核实内容。不要只因坐标写错就说这条siRNA不存在或没有靶点。"
+      ],
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target"
+      ],
+      "software_status_not_human_rating": "PARTIAL_COMPLETE"
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "original_round_answers": [
+        {
+          "round": 1,
+          "answer": "### 判定\n已完成两条候选的模型分数、匹配记录、表达背景的核查，按规则生成评估报告，支持按优先顺序梳理。\n### 关键结果\n| 参数 | VEGFA_SD_3535 | VEGFA_SD_3499 |\n| --- | --- | --- |\n| OligoFormer模型分数 | 1.0036 | 0.9915 |\n| seed匹配的非靶基因数（去重） | 2602 | 728 |\n| 缺氧状态下匹配基因中TPM≥1（2/4皿）的数量 | 1561 | 463 |\n| synthesis状态 | 均未完成，修饰未解冻 | 未完成，修饰未解冻 |\n| review提示 | 有历史近匹配（IRGM transcript NR_170598.1，≤1错配）需手工核对 | 无 |\n### 证据\n1. 模型分数来源：导入的历史OligoFormer分数库，为非敲低百分比的相对评分。\n2. 匹配记录：两条候选均覆盖NM_003376.6在内的20条VEGFA转录本，19nt核心序列验证无误；VEGFA_SD_3535有历史近匹配记录（对应IRGM，错配数≤1）。\n3. 表达背景：为ARPE-19细胞、缺氧24h的基线表达（4皿），表达注释不影响排名。\n### 限制与下一步\n1. 限制：当前得分与表达为历史/基线结果，不能直接作为实验敲低效果依据；两条候选的合成状态均未准备好订购。\n2. 下一步：优先补核VEGFA_SD_3535的近匹配脱靶验证，若完成验证，可先推进合成流程准备；两条均无唯一优先候选，需结合实验设计的脱靶容忍度调整。",
+          "raw_model_answer": "### 判定\n已完成两条候选的模型分数、匹配记录、表达背景的核查，按规则生成评估报告，支持按优先顺序梳理。\n### 关键结果\n| 参数 | VEGFA_SD_3535 | VEGFA_SD_3499 |\n| --- | --- | --- |\n| OligoFormer模型分数 | 1.0036 | 0.9915 |\n| seed匹配的非靶基因数（去重） | 2602 | 728 |\n| 缺氧状态下匹配基因中TPM≥1（2/4皿）的数量 | 1561 | 463 |\n| synthesis状态 | 均未完成，修饰未解冻 | 未完成，修饰未解冻 |\n| review提示 | 有历史近匹配（IRGM transcript NR_170598.1，≤1错配）需手工核对 | 无 |\n### 证据\n1. 模型分数来源：导入的历史OligoFormer分数库，为非敲低百分比的相对评分。\n2. 匹配记录：两条候选均覆盖NM_003376.6在内的20条VEGFA转录本，19nt核心序列验证无误；VEGFA_SD_3535有历史近匹配记录（对应IRGM，错配数≤1）。\n3. 表达背景：为ARPE-19细胞、缺氧24h的基线表达（4皿），表达注释不影响排名。\n### 限制与下一步\n1. 限制：当前得分与表达为历史/基线结果，不能直接作为实验敲低效果依据；两条候选的合成状态均未准备好订购。\n2. 下一步：优先补核VEGFA_SD_3535的近匹配脱靶验证，若完成验证，可先推进合成流程准备；两条均无唯一优先候选，需结合实验设计的脱靶容忍度调整。"
+        }
+      ],
+      "round_question_texts": [
+        "请比较本题两条候选VEGFA_SD_3535和VEGFA_SD_3499：先核查谁的模型分数更高，再核对随附近匹配记录与实际使用的序列窗口。我的目的，是决定先补核哪些证据、是否已有充分依据把某条列为实验候选。请并列呈现支持证据与警告；如建议顺序，说明服务于哪个目的。允许没有唯一优先候选，不把当前程序名单当成生物学最佳答案。"
+      ],
+      "completed_tools": [
+        "inspect_candidates",
+        "verify_target",
+        "score_candidates",
+        "match_seed",
+        "query_expression",
+        "compile_report"
+      ],
+      "software_status_not_human_rating": "COMPLETE"
+    }
+  ]
+}
