@@ -11,12 +11,12 @@
   "n_draft_items_active_9_cases": 59,
   "n_draft_items_total": 70,
   "n_unrun_Q1_Q2_items": 11,
-  "n_atomic_required_slots": 130,
-  "n_slot_judgements": 390,
+  "n_atomic_required_slots": 135,
+  "n_slot_judgements": 405,
   "slot_status_counts": {
-    "CORRECT": 304,
+    "CORRECT": 313,
     "WRONG": 13,
-    "MISSING": 73,
+    "MISSING": 79,
     "UNJUDGED": 0,
     "NOT_APPLICABLE": 0
   },
@@ -29,27 +29,27 @@
     {
       "group": "普通LLM",
       "task_accuracy": "1/9",
-      "slot_n": 130,
+      "slot_n": 135,
       "TP": 55,
       "FP": 12,
-      "FN": 75,
+      "FN": 80,
       "micro_P": 0.8209,
-      "micro_R": 0.4231,
-      "micro_F1": 0.5584,
+      "micro_R": 0.4074,
+      "micro_F1": 0.5446,
       "macro_P": 0.9222,
-      "macro_R": 0.486,
-      "macro_F1": 0.6161
+      "macro_R": 0.4667,
+      "macro_F1": 0.5978
     },
     {
       "group": "固定流程",
       "task_accuracy": "8/9",
-      "slot_n": 130,
-      "TP": 125,
+      "slot_n": 135,
+      "TP": 130,
       "FP": 0,
       "FN": 5,
       "micro_P": 1,
-      "micro_R": 0.9615,
-      "micro_F1": 0.9804,
+      "micro_R": 0.963,
+      "micro_F1": 0.9811,
       "macro_P": 1,
       "macro_R": 0.9306,
       "macro_F1": 0.9495
@@ -57,16 +57,16 @@
     {
       "group": "Agent",
       "task_accuracy": "6/9",
-      "slot_n": 130,
-      "TP": 124,
+      "slot_n": 135,
+      "TP": 128,
       "FP": 1,
-      "FN": 6,
-      "micro_P": 0.992,
-      "micro_R": 0.9538,
-      "micro_F1": 0.9725,
-      "macro_P": 0.9899,
-      "macro_R": 0.9436,
-      "macro_F1": 0.9607
+      "FN": 7,
+      "micro_P": 0.9922,
+      "micro_R": 0.9481,
+      "micro_F1": 0.9697,
+      "macro_P": 0.9907,
+      "macro_R": 0.9352,
+      "macro_F1": 0.9537
     }
   ],
   "category_metrics": [
@@ -75,24 +75,24 @@
       "category": "标准任务",
       "task_accuracy": "0/4",
       "macro_P": 0.825,
-      "macro_R": 0.344,
-      "macro_F1": 0.4744
+      "macro_R": 0.3283,
+      "macro_F1": 0.4578
     },
     {
       "group": "普通LLM",
       "category": "可靠性任务",
       "task_accuracy": "1/4",
       "macro_P": 1,
-      "macro_R": 0.5904,
-      "macro_F1": 0.7174
+      "macro_R": 0.5759,
+      "macro_F1": 0.703
     },
     {
       "group": "普通LLM",
       "category": "需求变化任务",
       "task_accuracy": "0/1",
       "macro_P": 1,
-      "macro_R": 0.6364,
-      "macro_F1": 0.7778
+      "macro_R": 0.5833,
+      "macro_F1": 0.7368
     },
     {
       "group": "固定流程",
@@ -123,8 +123,8 @@
       "category": "标准任务",
       "task_accuracy": "2/4",
       "macro_P": 1,
-      "macro_R": 0.8958,
-      "macro_F1": 0.9342
+      "macro_R": 0.875,
+      "macro_F1": 0.9167
     },
     {
       "group": "Agent",
@@ -138,9 +138,9 @@
       "group": "Agent",
       "category": "需求变化任务",
       "task_accuracy": "0/1",
-      "macro_P": 0.9091,
-      "macro_R": 0.9091,
-      "macro_F1": 0.9091
+      "macro_P": 0.9167,
+      "macro_R": 0.9167,
+      "macro_F1": 0.9167
     }
   ],
   "planning_metrics_status": "NOT_READY",
