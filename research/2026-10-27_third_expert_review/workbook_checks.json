@@ -1,0 +1,16 @@
+{
+  "positions": 27,
+  "valid_score_cells": 108,
+  "unique_real_answer_ids": 27,
+  "total_scores_match": 27,
+  "question_summary_rows_match": 27,
+  "raw_completion_labels": {
+    "部分完成": 10,
+    "未完成": 2,
+    "基本完成": 15
+  },
+  "source_original_unchanged": true,
+  "source_sha256": "5731f3a5c393b1eb6538d639ff02a7de15b64662eb0f632a025362f38440fc7f",
+  "new_model_calls": 0,
+  "new_human_or_llm_ratings": 0
+}

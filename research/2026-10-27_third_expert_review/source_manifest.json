@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "source_filename": "专家评分.xlsx",
+  "source_size_bytes": 18287,
+  "source_sha256": "5731f3a5c393b1eb6538d639ff02a7de15b64662eb0f632a025362f38440fc7f",
+  "human_confirmation": "真人已逐项确认",
+  "ai_assistance_disclosed": true,
+  "one_additional_expert_as_described_by_user": true,
+  "independent_blinding_and_relationship_to_forms_A_B_not_established": true,
+  "reviewed_branch_commit": "d968520c6504c50a08069a769353632ee89985a7",
+  "real_run_evidence_commit": "4244ac0d9b9f0b1e01fe46f6871fd664825a4c24",
+  "source_modified": false,
+  "assistant_added_or_changed_scores": 0,
+  "new_model_calls": 0
+}

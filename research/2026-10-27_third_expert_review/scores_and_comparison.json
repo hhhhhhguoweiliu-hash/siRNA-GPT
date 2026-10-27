@@ -1,0 +1,2297 @@
+{
+  "status": "HUMAN_CONFIRMED_AI_ASSISTED_EXPERT_FORM_C_DESCRIPTIVE_PENDING_CLARIFICATION",
+  "source_sha256": "5731f3a5c393b1eb6538d639ff02a7de15b64662eb0f632a025362f38440fc7f",
+  "user_confirmation": "真人已逐项确认",
+  "ai_assistance_disclosed_by_file": true,
+  "number_of_experts_represented_by_this_submission_as_described_by_user": 1,
+  "independence_from_other_submissions_not_verified": true,
+  "all_cases_are_seen_development_cases": true,
+  "new_ratings_added_or_changed_by_assistant": 0,
+  "scores": [
+    {
+      "form": "C",
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "question_number": 1,
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "reasons_as_submitted": [
+        "主要 seed/表达计数与底表相符；分数仅报1.12，未保留原始精度。",
+        "只写离线核验来源，缺少精确文件/哈希及可回查报告位置。",
+        "有主要计数，但缺精确分数、未映射基因数3及清晰报告交付信息。",
+        "区分预测分数与敲低率，并提醒供应商链角色、N3/TT及实验验证限制。"
+      ],
+      "sum8_audit_only": 6,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "非严重错误；主要是精度和交付项缺失。",
+      "source_sheet": "逐份评分",
+      "source_row": 2
+    },
+    {
+      "form": "C",
+      "answer_id": "A018",
+      "case_id": "W1",
+      "group": "llm",
+      "question_number": 1,
+      "anonymous_role": "乙",
+      "scores": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "reasons_as_submitted": [
+        "保留了序列假设，但声称分数及核心计算结果未提供，未利用题目允许的既有资源。",
+        "主要引用用户输入，未给实际计算结果或可追溯来源。",
+        "未交付参考坐标、绑定分数、seed/表达统计或报告。",
+        "没有编造数值，清楚说明化学修饰和湿实验仍需确认。"
+      ],
+      "sum8_audit_only": 4,
+      "completion_label_as_submitted": "未完成",
+      "note_as_submitted": "关键计算与报告均未交付。",
+      "source_sheet": "逐份评分",
+      "source_row": 3
+    },
+    {
+      "form": "C",
+      "answer_id": "A026",
+      "case_id": "W1",
+      "group": "workflow",
+      "question_number": 1,
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "核心坐标、18/20覆盖、精确分数及seed/表达统计与底表一致。",
+        "给出导入状态、原始结果文件、SHA256、manifest和报告文件名。",
+        "完成指定核查并提供 report.html 与 candidates_ranked.tsv。",
+        "明确分数不是敲低率、seed不等于实测脱靶、表达是未转染基线，且保留链角色假设与N3/TT限制。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "仍不能替代供应商确认及湿实验；回答本身已说明。",
+      "source_sheet": "逐份评分",
+      "source_row": 4
+    },
+    {
+      "form": "C",
+      "answer_id": "A007",
+      "case_id": "W2",
+      "group": "agent",
+      "question_number": 2,
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "九条19nt核心坐标均与核对底表一致，并区分23nt窗口与19nt核心。",
+        "明确引用 verify_target 输出并给出逐条序列、坐标和覆盖。",
+        "九条候选全部按要求列出；未做分数、seed、表达或排名。",
+        "说明坐标是参考转录本注释，不等同于细胞内异构体表达。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "未见关键问题。",
+      "source_sheet": "逐份评分",
+      "source_row": 5
+    },
+    {
+      "form": "C",
+      "answer_id": "A020",
+      "case_id": "W2",
+      "group": "llm",
+      "question_number": 2,
+      "anonymous_role": "乙",
+      "scores": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "reasons_as_submitted": [
+        "把23nt设计窗口起止直接当成19nt核心起止，九条坐标整体错误。",
+        "回答承认仅依据输入字段，未进行独立比对，却把输入窗口坐标标成核心实际坐标。",
+        "列了九条记录和覆盖数，但未完成题目最关键的核心坐标核对。",
+        "虽提及未额外比对，但仍将未经验证的窗口坐标作为实际核心坐标报告。"
+      ],
+      "sum8_audit_only": 2,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "严重错误：混淆23nt设计窗口与19nt核心坐标。",
+      "source_sheet": "逐份评分",
+      "source_row": 6
+    },
+    {
+      "form": "C",
+      "answer_id": "A027",
+      "case_id": "W2",
+      "group": "workflow",
+      "question_number": 2,
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "九条核心坐标和20/20覆盖均与底表一致。",
+        "明确说明坐标来自 inspect_candidates / verify_target，且未用窗口坐标替代。",
+        "完成全部九条核对，未越界做额外排名。",
+        "明确限制：不代表细胞内转录本实际表达。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "未见关键问题。",
+      "source_sheet": "逐份评分",
+      "source_row": 7
+    },
+    {
+      "form": "C",
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "question_number": 3,
+      "anonymous_role": "甲",
+      "scores": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "reasons_as_submitted": [
+        "分数值正确，但材料同时记载序列检查未通过，又宣称所有相关信息均已验证，内部表述有冲突。",
+        "提供精确分数、历史文件路径、SHA256、候选ID、19nt核心和57nt上下文。",
+        "给出精确分数并说明不是敲低百分比，满足主要请求。",
+        "未充分解释“序列检查未通过”与“已全部验证”之间的冲突。"
+      ],
+      "sum8_audit_only": 6,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "需复核分数与序列绑定是否真正通过；不能仅凭分数值正确消除该疑点。",
+      "source_sheet": "逐份评分",
+      "source_row": 8
+    },
+    {
+      "form": "C",
+      "answer_id": "A019",
+      "case_id": "W2b",
+      "group": "workflow",
+      "question_number": 3,
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "精确分数、raw_class1、坐标和覆盖与底表一致。",
+        "给出历史文件、SHA256、导入状态及绑定候选信息。",
+        "完整提供数值、来源、序列绑定和非敲低率解释。",
+        "清楚说明未做seed、表达和排名，未声称新鲜实验预测。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "未见关键问题。",
+      "source_sheet": "逐份评分",
+      "source_row": 9
+    },
+    {
+      "form": "C",
+      "answer_id": "A024",
+      "case_id": "W2b",
+      "group": "llm",
+      "question_number": 3,
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "reasons_as_submitted": [
+        "准确指出普通输入中未直接提供分数，且分数不能换算为敲低百分比。",
+        "解释基于用户输入字段，未伪称访问历史文件。",
+        "未交付题目要求的具体数值和来源，故只能部分完成。",
+        "诚实说明数据访问限制，不编造分数。"
+      ],
+      "sum8_audit_only": 7,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "正确处理未知，但数值查询任务未完成。",
+      "source_sheet": "逐份评分",
+      "source_row": 10
+    },
+    {
+      "form": "C",
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "question_number": 4,
+      "anonymous_role": "甲",
+      "scores": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "reasons_as_submitted": [
+        "两条分数和多数seed/表达数字大体吻合；“修饰未解冻/合成状态”缺少本题证据支持。",
+        "提到IRGM及≤1错配，但没有完整列出实际查询窗口、坐标和错配细节。",
+        "比较了分数并提出复核方向，但未充分展示用户要求的窗口和近匹配证据。",
+        "说明警告不等于实测脱靶、没有唯一最佳候选；但给出合成状态等无据内容。"
+      ],
+      "sum8_audit_only": 4,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "无依据的合成/修饰状态陈述应删除或补证。",
+      "source_sheet": "逐份评分",
+      "source_row": 11
+    },
+    {
+      "form": "C",
+      "answer_id": "A005",
+      "case_id": "W3",
+      "group": "workflow",
+      "question_number": 4,
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "两条精确分数、seed计数、表达统计及IRGM一错配记录与底表一致。",
+        "列出历史匹配窗口 AUTHOR_G2_G20_19NT、序列、NR_170598.1:1724–1742、IRGM及错配数，并追溯分数来源。",
+        "完成对比、展示警告与支持证据，并区分优先复核名单和生物学最佳候选。",
+        "明确seed不是实测脱靶、表达是未转染基线、无警告不等于安全。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "近匹配记录是历史输入核查，不是本轮新扫描；回答已作说明。",
+      "source_sheet": "逐份评分",
+      "source_row": 12
+    },
+    {
+      "form": "C",
+      "answer_id": "A006",
+      "case_id": "W3",
+      "group": "llm",
+      "question_number": 4,
+      "anonymous_role": "丙",
+      "scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "reasons_as_submitted": [
+        "错误声称近匹配已独立审核通过、无脱靶证据；没有正确比较已提供的分数。",
+        "把已有近匹配记录说成缺少核心证据，且“独立审核通过”与题目给出的待复核警告冲突。",
+        "未完成两候选分数、窗口和风险证据的比较。",
+        "把“无脱靶证据”当成安全结论，越过了证据边界。"
+      ],
+      "sum8_audit_only": 0,
+      "completion_label_as_submitted": "未完成",
+      "note_as_submitted": "严重错误：把待复核的IRGM近匹配警告说成已通过审核、无脱靶证据。",
+      "source_sheet": "逐份评分",
+      "source_row": 13
+    },
+    {
+      "form": "C",
+      "answer_id": "A001",
+      "case_id": "U1",
+      "group": "llm",
+      "question_number": 5,
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "reasons_as_submitted": [
+        "正确保留核心和23nt窗口信息，且未虚构分数；但未给出实际19nt核心坐标。",
+        "主要依据输入字段；第二轮没有给分数来源。",
+        "第一轮未交付实际核心坐标，第二轮未交付新增分数，整体只部分完成。",
+        "明确分数不是敲低率，未编造分数，且未擅自做seed/表达/排名。"
+      ],
+      "sum8_audit_only": 6,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "第二轮新增分数核查没有完成。",
+      "source_sheet": "逐份评分",
+      "source_row": 14
+    },
+    {
+      "form": "C",
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "question_number": 5,
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "reasons_as_submitted": [
+        "核心坐标3501–3519、窗口3499–3521及0.9915分数均正确。",
+        "出现“2025年X月X日”占位日期，且没有给出历史分数文件/哈希，来源链不够可靠。",
+        "保留首轮并完成追加分数核查，区分复用内容和新增内容。",
+        "明确分数不是敲低百分比，但占位日期削弱来源陈述的可信度。"
+      ],
+      "sum8_audit_only": 6,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "来源日期是未替换的占位符，应修正；分数显示精度也低于原始记录。",
+      "source_sheet": "逐份评分",
+      "source_row": 15
+    },
+    {
+      "form": "C",
+      "answer_id": "A021",
+      "case_id": "U1",
+      "group": "workflow",
+      "question_number": 5,
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "坐标、20/20覆盖和精确分数与底表一致。",
+        "给出实际文件、SHA256、导入状态，并区分首轮核对与本轮新增步骤。",
+        "完整保留首轮记录并追加分数查询，未做题目禁止的分析。",
+        "说明分数不是敲低率，表达与seed未执行。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "未见关键问题。",
+      "source_sheet": "逐份评分",
+      "source_row": 16
+    },
+    {
+      "form": "C",
+      "answer_id": "A012",
+      "case_id": "R1",
+      "group": "workflow",
+      "question_number": 6,
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "链角色作为假设而非供应商确认；坐标、18/20覆盖及精确分数与底表一致。",
+        "给出分数文件、SHA256和manifest绑定清单，并报告实际核查步骤。",
+        "首轮保留原始TT/N3并指出链角色未确认；第二轮按明确假设完成参考与分数核查。",
+        "不把计算假设当成供应商认证，且明确未做seed/表达及化学实物验证。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "仍需供应商确认链角色与化学修饰；回答已明确。",
+      "source_sheet": "逐份评分",
+      "source_row": 17
+    },
+    {
+      "form": "C",
+      "answer_id": "A016",
+      "case_id": "R1",
+      "group": "llm",
+      "question_number": 6,
+      "anonymous_role": "乙",
+      "scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "reasons_as_submitted": [
+        "首轮关于链角色未确认的判断正确；第二轮错误称无法取得已有分数和参考核对结果。",
+        "主要引用用户输入，没有给出已有分数文件或绑定证据。",
+        "首轮完成，但第二轮未交付题目要求的参考坐标和既有分数。",
+        "没有伪造化学确认，明确区分供应商记录与功能验证。"
+      ],
+      "sum8_audit_only": 5,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "第二轮漏掉了可核对的已有结果。",
+      "source_sheet": "逐份评分",
+      "source_row": 18
+    },
+    {
+      "form": "C",
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "question_number": 6,
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "链角色假设、1439–1457坐标、18/20覆盖及约1.1219分数正确。",
+        "提及导入的本地验证数据，但未给出精确分数文件路径、哈希等完整溯源。",
+        "两轮均有回答；第二轮完成指定的参考和分数核查。",
+        "明确链角色仅按用户假设，未验证N3化学修饰，也未把分数说成敲低率。"
+      ],
+      "sum8_audit_only": 7,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "分数原始精度及具体文件溯源可以补强。",
+      "source_sheet": "逐份评分",
+      "source_row": 19
+    },
+    {
+      "form": "C",
+      "answer_id": "A008",
+      "case_id": "R2",
+      "group": "llm",
+      "question_number": 7,
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "正确识别新旧核心首碱基不同，旧分数不能直接迁移。",
+        "依据新旧序列和原始输入，但没有列出分数绑定文件或哈希。",
+        "回答可复用字段及需重新核查的项目，遵守不启动新评分的要求。",
+        "没有把序列变化直接说成生物学无效，也没有运行新评分。"
+      ],
+      "sum8_audit_only": 7,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "来源可追溯性一般，但核心判断正确。",
+      "source_sheet": "逐份评分",
+      "source_row": 20
+    },
+    {
+      "form": "C",
+      "answer_id": "A010",
+      "case_id": "R2",
+      "group": "agent",
+      "question_number": 7,
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "reasons_as_submitted": [
+        "正确指出旧分数只对应旧序列，不能套用到新核心。",
+        "证据主要是输入中的序列变更说明，没有给出原分数绑定记录。",
+        "列出可复用字段和需重新核查内容，未实际启动新评分。",
+        "末尾又询问是否启动工具，与本题“不启动新评分”的限定不够一致。"
+      ],
+      "sum8_audit_only": 6,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "不应在明确禁止新评分的题目末尾再次推动启动评分。",
+      "source_sheet": "逐份评分",
+      "source_row": 21
+    },
+    {
+      "form": "C",
+      "answer_id": "A023",
+      "case_id": "R2",
+      "group": "workflow",
+      "question_number": 7,
+      "anonymous_role": "丙",
+      "scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "reasons_as_submitted": [
+        "发现新19nt核心与保留的21nt原始字段不一致是有价值的，但“guide和passenger核心不互补”缺少充分展示的依据。",
+        "只列出冲突输入和无工具完成的状态，没有明确绑定旧分数的来源证据。",
+        "没有明确、完整地回答旧分数不可沿用及哪些证据仍可复用。",
+        "停止计算并保留旧证据，避免自动截短或回退；整体较谨慎。"
+      ],
+      "sum8_audit_only": 5,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "需要明确写出旧分数仅绑定旧核心，并谨慎表述“不互补”结论。",
+      "source_sheet": "逐份评分",
+      "source_row": 22
+    },
+    {
+      "form": "C",
+      "answer_id": "A009",
+      "case_id": "R3",
+      "group": "workflow",
+      "question_number": 8,
+      "anonymous_role": "甲",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "识别3610–3628越过3609nt参考长度，并给出实际坐标3501–3519。",
+        "引用verify_target结果、参考长度、序列和20条覆盖记录。",
+        "完成坐标一致性核对，并保留候选本身的目标匹配关系。",
+        "没有因坐标错误就否定siRNA或靶点存在。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "未见关键问题。",
+      "source_sheet": "逐份评分",
+      "source_row": 23
+    },
+    {
+      "form": "C",
+      "answer_id": "A015",
+      "case_id": "R3",
+      "group": "llm",
+      "question_number": 8,
+      "anonymous_role": "乙",
+      "scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "reasons_as_submitted": [
+        "正确转录了窗口和核心序列，但未利用允许的固定参考独立核对声明坐标是否越界。",
+        "只依据原始输入字段，未给实际参考比对或参考长度证据。",
+        "没有回答声明3610–3628是否与参考/序列一致这一核心问题。",
+        "没有擅自改序列或断言候选不存在，边界表述较谨慎。"
+      ],
+      "sum8_audit_only": 5,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "可用固定参考核对的题目，不应仅因未随输入附参考序列就停止。",
+      "source_sheet": "逐份评分",
+      "source_row": 24
+    },
+    {
+      "form": "C",
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "question_number": 8,
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "参考长度3609nt、声明越界、实际坐标3501–3519和20条覆盖均正确。",
+        "明确引用verify_target结果并解释声明为何无效。",
+        "完成核对并保留实际匹配关系。",
+        "明确指出坐标错误不代表siRNA不存在或没有靶点。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "未见关键问题。",
+      "source_sheet": "逐份评分",
+      "source_row": 25
+    },
+    {
+      "form": "C",
+      "answer_id": "A003",
+      "case_id": "R4",
+      "group": "llm",
+      "question_number": 9,
+      "anonymous_role": "甲",
+      "scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "reasons_as_submitted": [
+        "正确拒绝回退内置表达表，但错误称既有模型分数和seed结果均不可取得。",
+        "以用户未上传表达表为证据，但没有利用已有分数和seed记录。",
+        "没有完成当前可做的分数/seed核查，未给出实际已有seed进展。",
+        "清楚说明表达缺失、不能编TPM，并拒绝使用内置表达表。"
+      ],
+      "sum8_audit_only": 5,
+      "completion_label_as_submitted": "部分完成",
+      "note_as_submitted": "尊重表达数据约束，但把表达缺失错误扩展为分数/seed也无法核查。",
+      "source_sheet": "逐份评分",
+      "source_row": 26
+    },
+    {
+      "form": "C",
+      "answer_id": "A011",
+      "case_id": "R4",
+      "group": "workflow",
+      "question_number": 9,
+      "anonymous_role": "乙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "准确保留坐标、18/20覆盖、精确分数和seed位点数3540。",
+        "给出导入分数文件、SHA256、manifest及已执行工具步骤。",
+        "完成现有序列/参考/分数/seed核查，明确表达关联与完整报告未完成。",
+        "遵守禁止回退内置表达表，明确不填缺失值、不把部分结果称为完整报告。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "可进一步补充非靶seed去重计数（若该轮工具结果可用）；核心边界处理正确。",
+      "source_sheet": "逐份评分",
+      "source_row": 27
+    },
+    {
+      "form": "C",
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "question_number": 9,
+      "anonymous_role": "丙",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons_as_submitted": [
+        "与底表一致地报告坐标、18/20覆盖、精确分数和seed位点数3540。",
+        "给出分数文件、哈希、manifest和工具执行信息。",
+        "交付现有可核查部分，并明确表达与完整报告因缺数据无法完成。",
+        "没有回退内置表达表，也没有编造TPM或检出数。"
+      ],
+      "sum8_audit_only": 8,
+      "completion_label_as_submitted": "基本完成",
+      "note_as_submitted": "与另一份回答内容高度相似；应按原始运行记录保留，不能当作独立题目。",
+      "source_sheet": "逐份评分",
+      "source_row": 28
+    }
+  ],
+  "stratified_descriptive_summary": {
+    "W_standard": {
+      "case_ids": [
+        "W1",
+        "W2",
+        "W2b",
+        "W3"
+      ],
+      "groups": {
+        "llm": {
+          "n_task_episodes": 4,
+          "dimension_means_0_to_2": {
+            "factual_accuracy": 0.75,
+            "evidence_support": 0.75,
+            "requirement_completion": 0.5,
+            "boundary_handling": 1.25
+          },
+          "raw_completion_labels": {
+            "未完成": 2,
+            "部分完成": 2
+          }
+        },
+        "workflow": {
+          "n_task_episodes": 4,
+          "dimension_means_0_to_2": {
+            "factual_accuracy": 2.0,
+            "evidence_support": 2.0,
+            "requirement_completion": 2.0,
+            "boundary_handling": 2.0
+          },
+          "raw_completion_labels": {
+            "基本完成": 4
+          }
+        },
+        "agent": {
+          "n_task_episodes": 4,
+          "dimension_means_0_to_2": {
+            "factual_accuracy": 1.5,
+            "evidence_support": 1.5,
+            "requirement_completion": 1.5,
+            "boundary_handling": 1.5
+          },
+          "raw_completion_labels": {
+            "部分完成": 3,
+            "基本完成": 1
+          }
+        }
+      },
+      "mean_score_differences": {
+        "agent_minus_llm": {
+          "factual_accuracy": 0.75,
+          "evidence_support": 0.75,
+          "requirement_completion": 1.0,
+          "boundary_handling": 0.25
+        },
+        "workflow_minus_llm": {
+          "factual_accuracy": 1.25,
+          "evidence_support": 1.25,
+          "requirement_completion": 1.5,
+          "boundary_handling": 0.75
+        },
+        "agent_minus_workflow": {
+          "factual_accuracy": -0.5,
+          "evidence_support": -0.5,
+          "requirement_completion": -0.5,
+          "boundary_handling": -0.5
+        }
+      }
+    },
+    "U_change": {
+      "case_ids": [
+        "U1"
+      ],
+      "groups": {
+        "llm": {
+          "n_task_episodes": 1,
+          "dimension_means_0_to_2": {
+            "factual_accuracy": 2.0,
+            "evidence_support": 1.0,
+            "requirement_completion": 1.0,
+            "boundary_handling": 2.0
+          },
+          "raw_completion_labels": {
+            "部分完成": 1
+          }
+        },
+        "workflow": {
+          "n_task_episodes": 1,
+          "dimension_means_0_to_2": {
+            "factual_accuracy": 2.0,
+            "evidence_support": 2.0,
+            "requirement_completion": 2.0,
+            "boundary_handling": 2.0
+          },
+          "raw_completion_labels": {
+            "基本完成": 1
+          }
+        },
+        "agent": {
+          "n_task_episodes": 1,
+          "dimension_means_0_to_2": {
+            "factual_accuracy": 2.0,
+            "evidence_support": 1.0,
+            "requirement_completion": 2.0,
+            "boundary_handling": 1.0
+          },
+          "raw_completion_labels": {
+            "基本完成": 1
+          }
+        }
+      },
+      "mean_score_differences": {
+        "agent_minus_llm": {
+          "factual_accuracy": 0.0,
+          "evidence_support": 0.0,
+          "requirement_completion": 1.0,
+          "boundary_handling": -1.0
+        },
+        "workflow_minus_llm": {
+          "factual_accuracy": 0.0,
+          "evidence_support": 1.0,
+          "requirement_completion": 1.0,
+          "boundary_handling": 0.0
+        },
+        "agent_minus_workflow": {
+          "factual_accuracy": 0.0,
+          "evidence_support": -1.0,
+          "requirement_completion": 0.0,
+          "boundary_handling": -1.0
+        }
+      }
+    },
+    "R_reliability": {
+      "case_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "groups": {
+        "llm": {
+          "n_task_episodes": 4,
+          "dimension_means_0_to_2": {
+            "factual_accuracy": 1.25,
+            "evidence_support": 1.0,
+            "requirement_completion": 1.25,
+            "boundary_handling": 2.0
+          },
+          "raw_completion_labels": {
+            "部分完成": 3,
+            "基本完成": 1
+          }
+        },
+        "workflow": {
+          "n_task_episodes": 4,
+          "dimension_means_0_to_2": {
+            "factual_accuracy": 1.75,
+            "evidence_support": 1.75,
+            "requirement_completion": 1.75,
+            "boundary_handling": 2.0
+          },
+          "raw_completion_labels": {
+            "基本完成": 3,
+            "部分完成": 1
+          }
+        },
+        "agent": {
+          "n_task_episodes": 4,
+          "dimension_means_0_to_2": {
+            "factual_accuracy": 2.0,
+            "evidence_support": 1.5,
+            "requirement_completion": 2.0,
+            "boundary_handling": 1.75
+          },
+          "raw_completion_labels": {
+            "基本完成": 4
+          }
+        }
+      },
+      "mean_score_differences": {
+        "agent_minus_llm": {
+          "factual_accuracy": 0.75,
+          "evidence_support": 0.5,
+          "requirement_completion": 0.75,
+          "boundary_handling": -0.25
+        },
+        "workflow_minus_llm": {
+          "factual_accuracy": 0.5,
+          "evidence_support": 0.75,
+          "requirement_completion": 0.5,
+          "boundary_handling": 0.0
+        },
+        "agent_minus_workflow": {
+          "factual_accuracy": 0.25,
+          "evidence_support": -0.25,
+          "requirement_completion": 0.25,
+          "boundary_handling": -0.25
+        }
+      }
+    }
+  },
+  "comparison_with_previous_forms": [
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "previous_completion_text": "部分完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "previous_form": "B",
+      "previous_scores": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "部分完成：分数、坐标、覆盖、seed/表达多数数值有；缺未映射基因、订购两行原文及可回查报告细节",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A018",
+      "case_id": "W1",
+      "group": "llm",
+      "previous_form": "A",
+      "previous_scores": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "部分完成",
+      "form_C_completion_label": "未完成"
+    },
+    {
+      "answer_id": "A018",
+      "case_id": "W1",
+      "group": "llm",
+      "previous_form": "B",
+      "previous_scores": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "previous_completion_text": "未交付：核心序列写错，分数/坐标/seed/表达均未交付",
+      "form_C_completion_label": "未完成"
+    },
+    {
+      "answer_id": "A026",
+      "case_id": "W1",
+      "group": "workflow",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A026",
+      "case_id": "W1",
+      "group": "workflow",
+      "previous_form": "B",
+      "previous_scores": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "previous_completion_text": "部分完成：坐标、覆盖、原始精度分数、SHA/绑定清单正确；缺seed位点、去重非靶基因、表达检出计数、未映射基因",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "W2",
+      "group": "agent",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "W2",
+      "group": "agent",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "previous_completion_text": "部分完成：9条坐标和覆盖正确，但多条19nt核心序列抄写错误",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A020",
+      "case_id": "W2",
+      "group": "llm",
+      "previous_form": "A",
+      "previous_scores": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "form_C_scores": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "未完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A020",
+      "case_id": "W2",
+      "group": "llm",
+      "previous_form": "B",
+      "previous_scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "form_C_scores": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "previous_completion_text": "未交付：把23nt设计窗口起点当作19nt核心起点，9条核心坐标全错",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A027",
+      "case_id": "W2",
+      "group": "workflow",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A027",
+      "case_id": "W2",
+      "group": "workflow",
+      "previous_form": "B",
+      "previous_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成：9条19nt核心坐标与20/20覆盖正确，明确未做分数/seed/表达/排序",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "difference_C_minus_previous": [
+        -1,
+        0,
+        0,
+        -1
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "form_C_scores": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        1,
+        -1
+      ],
+      "previous_completion_text": "部分完成：分数0.9915144175887107、来源SHA、非敲低率说明正确；序列对应关系有误/开头提示模型序列检查未通过",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A019",
+      "case_id": "W2b",
+      "group": "workflow",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A019",
+      "case_id": "W2b",
+      "group": "workflow",
+      "previous_form": "B",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成：原始精度分数、raw_class、来源SHA、坐标覆盖、非敲低率说明均交付",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A024",
+      "case_id": "W2b",
+      "group": "llm",
+      "previous_form": "A",
+      "previous_scores": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "previous_completion_text": "未完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A024",
+      "case_id": "W2b",
+      "group": "llm",
+      "previous_form": "B",
+      "previous_scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "previous_completion_text": "未交付：错误声称输入无分数，未读取已有历史分数；“非最低百分比”表述错误",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "difference_C_minus_previous": [
+        -1,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "部分完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "previous_completion_text": "部分完成：分数高低、警告方向、建议目的有；缺实际查询窗口AUTHOR_G2_G20_19NT、查询序列和错配位置",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A005",
+      "case_id": "W3",
+      "group": "workflow",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A005",
+      "case_id": "W3",
+      "group": "workflow",
+      "previous_form": "B",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成：两候选分数、窗口、查询序列、IRGM/坐标/1错配、seed/表达及限制均并列呈现",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A006",
+      "case_id": "W3",
+      "group": "llm",
+      "previous_form": "A",
+      "previous_scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "form_C_scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "未完成",
+      "form_C_completion_label": "未完成"
+    },
+    {
+      "answer_id": "A006",
+      "case_id": "W3",
+      "group": "llm",
+      "previous_form": "B",
+      "previous_scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "form_C_scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "previous_completion_text": "未交付：错误称无分数/seed/表达，未比较；把近匹配审核PASS说成“无脱靶证据”有误导",
+      "form_C_completion_label": "未完成"
+    },
+    {
+      "answer_id": "A001",
+      "case_id": "U1",
+      "group": "llm",
+      "previous_form": "A",
+      "previous_scores": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "previous_completion_text": "未完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A001",
+      "case_id": "U1",
+      "group": "llm",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "部分完成：首轮缺实际19nt核心坐标3501–3519；次轮未给具体分数值",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "部分完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "difference_C_minus_previous": [
+        1,
+        0,
+        0,
+        -1
+      ],
+      "previous_completion_text": "部分完成：坐标、分数0.9915、复用/新增说明有；核心序列疑似错误，证据日期为占位符",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A021",
+      "case_id": "U1",
+      "group": "workflow",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A021",
+      "case_id": "U1",
+      "group": "workflow",
+      "previous_form": "B",
+      "previous_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成：首轮3501–3519/20/20，次轮原始精度分数、复用与新增说明正确",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A012",
+      "case_id": "R1",
+      "group": "workflow",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A012",
+      "case_id": "R1",
+      "group": "workflow",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "previous_completion_text": "部分完成：第2轮坐标1439–1457、18/20、原始精度分数正确；第1轮第二行原文抄写有误",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A016",
+      "case_id": "R1",
+      "group": "llm",
+      "previous_form": "A",
+      "previous_scores": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "previous_completion_text": "部分完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A016",
+      "case_id": "R1",
+      "group": "llm",
+      "previous_form": "B",
+      "previous_scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "previous_completion_text": "未交付：第2轮未给坐标/覆盖/分数，反而称需补充已有绑定分数",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "previous_completion_text": "部分完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "部分完成：第1轮指出未确认链角色，第2轮给18/20、1439–1457、1.1219；核心序列及“非最低百分比”表述有误",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A008",
+      "case_id": "R2",
+      "group": "llm",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A008",
+      "case_id": "R2",
+      "group": "llm",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成：正确判断旧分数不可沿用，列可用/需重核，未启动新评分；证据中序列有前后不一致",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A010",
+      "case_id": "R2",
+      "group": "agent",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "previous_completion_text": "部分完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A010",
+      "case_id": "R2",
+      "group": "agent",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "difference_C_minus_previous": [
+        1,
+        0,
+        0,
+        -1
+      ],
+      "previous_completion_text": "完成：正确判断不能沿用，列可复用字段与需重核项；核心序列引用有误且以问句结尾",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A023",
+      "case_id": "R2",
+      "group": "workflow",
+      "previous_form": "A",
+      "previous_scores": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "previous_completion_text": "未完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A023",
+      "case_id": "R2",
+      "group": "workflow",
+      "previous_form": "B",
+      "previous_scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "previous_completion_text": "未交付：未回答能否引用旧分数，核心序列错误，称配对核心不互补但无依据",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A009",
+      "case_id": "R3",
+      "group": "workflow",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A009",
+      "case_id": "R3",
+      "group": "workflow",
+      "previous_form": "B",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成：实际坐标3501–3519、覆盖20/20；声明3610–3628越界/不一致，未否定siRNA存在",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A015",
+      "case_id": "R3",
+      "group": "llm",
+      "previous_form": "A",
+      "previous_scores": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "previous_completion_text": "部分完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A015",
+      "case_id": "R3",
+      "group": "llm",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "previous_completion_text": "未交付：只说无法比对，未核对声明越界与实际坐标；核心序列有误",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成：长度3609、声明越界、实际3501–3519、仍匹配20条均正确；核心序列抄写有误",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A003",
+      "case_id": "R4",
+      "group": "llm",
+      "previous_form": "A",
+      "previous_scores": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "previous_completion_text": "部分完成",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A003",
+      "case_id": "R4",
+      "group": "llm",
+      "previous_form": "B",
+      "previous_scores": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "form_C_scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "previous_completion_text": "未交付：错误称无分数、seed无法计算；未完成可完成的分数/seed核查",
+      "form_C_completion_label": "部分完成"
+    },
+    {
+      "answer_id": "A011",
+      "case_id": "R4",
+      "group": "workflow",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A011",
+      "case_id": "R4",
+      "group": "workflow",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成（可完成部分）：保留坐标/覆盖/原始精度分数/SHA/seed 3540，明确表达缺失、禁止回退、不填零、完整报告不能交付",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "previous_form": "A",
+      "previous_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成",
+      "form_C_completion_label": "基本完成"
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "previous_form": "B",
+      "previous_scores": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "form_C_scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "difference_C_minus_previous": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "previous_completion_text": "完成（可完成部分）：同乙，坐标/分数/seed与缺项说明完整；核心序列末尾有差异",
+      "form_C_completion_label": "基本完成"
+    }
+  ],
+  "accepted_primary_completion_rates": null,
+  "completion_rate_pending_reason": "The submitted labels 基本完成/部分完成/未完成 are preserved; do not silently map 基本完成 to the original protocol label 完成. Remaining evidence and delivery-scope issues are not adjudicated.",
+  "required_fact_accuracy": null
+}

@@ -1,0 +1,97 @@
+{
+  "is_new_rating": false,
+  "issues": [
+    {
+      "answer_id": "A002",
+      "kind": "SOURCE_EXISTS_INTERPRETATION_NEEDS_REVIEW",
+      "workbook_cells": [
+        "逐份评分!F11",
+        "逐份评分!L11",
+        "逐份评分!O11",
+        "重点问题!E10"
+      ],
+      "rating_claim": "修饰未解冻/合成状态缺少本题证据支持",
+      "original_input_records": [
+        {
+          "candidate_id": "VEGFA_SD_3535",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        },
+        {
+          "candidate_id": "VEGFA_SD_3499",
+          "synthesis_status": "NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"
+        }
+      ],
+      "source_path": "results_original.json[A002].case_input[0].user_input.candidate_rows[*].synthesis_status",
+      "interpretation": "The input contains NOT_ORDER_READY_MODIFICATIONS_UNFROZEN. This is not fabricated from no input, but it does not prove that physical synthesis was attempted or incomplete. Separate source existence, translation and scope. The original expert decides whether scores stay or change.",
+      "assistant_score_change": null
+    },
+    {
+      "answer_id": "A006",
+      "kind": "RECORD_VALIDATION_VS_SAFETY_INTERPRETATION",
+      "workbook_cells": [
+        "逐份评分!F13",
+        "逐份评分!H13",
+        "逐份评分!O13",
+        "重点问题!E3"
+      ],
+      "actual_input_record": {
+        "candidate_id": "VEGFA_SD_3535",
+        "strand_role": "guide",
+        "query_definition": "AUTHOR_G2_G20_19NT",
+        "guide_window_5to3": "AUCUGUAUUUCUUUGUCGU",
+        "reverse_complement_target_pattern_DNA_5to3": "ACGACAAAGAAATACAGAT",
+        "reference_transcript": "NR_170598.1",
+        "mapped_gene": "IRGM",
+        "reference_start_1based": "1724",
+        "reference_end_1based": "1742",
+        "reference_subsequence_DNA_5to3": "AAGACAAAGAAATACAGAT",
+        "mismatch_positions_in_target_pattern_1based": "2",
+        "actual_mismatches": "1",
+        "independent_check": "PASS",
+        "interpretation": "SEQUENCE_REVIEW_FLAG_NOT_DEMONSTRATED_OFF_TARGET"
+      },
+      "actual_answer_lines": [
+        "2. 仅存在VEGFA_SD_3535的1条near匹配记录：映射至IRGM基因、仅1个错配、审核状态通过。",
+        "2. 输入提供的near匹配审核结果：VEGFA_SD_3535的near匹配记录经独立审核通过（independent_check:PASS），无脱靶证据。"
+      ],
+      "interpretation": "PASS is in shared input and validates the match-record check; it is not a safety clearance. No experimental off-target observation is provided. The expert may criticize omission or unsafe interpretation, but should not treat the existence of PASS as invented.",
+      "assistant_score_change": null
+    },
+    {
+      "answer_id": "A013",
+      "kind": "SOFTWARE_FALSE_ALARM_ALREADY_INDEPENDENTLY_CHECKED",
+      "workbook_cells": [
+        "逐份评分!F8",
+        "逐份评分!L8",
+        "重点问题!E4"
+      ],
+      "delivered_answer": "模型序列检查未通过。关键序列直接见下方已核验字段；原始模型文字单独保留，不能按错误序列写论文或订购。工具完成情况以执行记录为准。",
+      "raw_model_answer": "### 判定\n已完成VEGFA_SD_3499的OligoFormer scaled分数核查，所有相关信息已通过工具验证。\n### 关键结果\nVEGFA_SD_3499对应的OligoFormer scaled预测分数为**0.9915144175887107**（保留原始精度）。\n### 证据\n1. 分数来源：历史记录文件`data/historical_scores.tsv`，SHA256为`ef91800094f711e5358c5bab3e5415fd60256056a7479b24b8be674c16e3d392`；\n2. 与序列的对应关系：分数绑定的参数为候选ID`VEGFA_SD_3499`、19nt配对核心`UGUACUACGGAAUAUCUCG`、mRNA上下文57nt`UGUCUCUAGUGCAGUUUUUCGAGAUAUUCCGUAGUACAUAUUUAUUUUUAAACAACG`；\n3. 官方标注：该分数**不是敲低百分比**，无法直接换算为实际敲低效果数值。\n### 限制\n无额外表达、种子位点或候选排名结果；仅基于历史导入的评分记录，未做新鲜实验预测。",
+      "prior_evidence": "docs/reviews/20261027_4244ac0_real_run_and_score_file_review.md and corresponding evidence JSON; A013 sequence_consistency_v1 associated the 19nt core with 57nt field on the same line.",
+      "interpretation": "The system/model presentation conflict is real, but the inspected core and context match verified fields. Preserve both original texts and distinguish software false alarm from a wrong model sequence; do not automatically treat either software status or correct raw text as the human completion verdict.",
+      "assistant_score_change": null
+    },
+    {
+      "answer_id": "A022",
+      "kind": "MINOR_LENGTH_EXPLANATION_OMITTED_FROM_REVIEW",
+      "actual_length": 19,
+      "reference_length": 3609,
+      "answer_excerpt": [
+        "经`verify_target`工具确认：1. NM_003376.6转录本仅3609nt，声明的坐标3610超出序列范围，不符合19nt长度要求；2. 配对核心在NM_003376.6上的实际匹配位置为3501–3519，与声明坐标不一致；3. 该核心序列仍在20个转录本（含NM_003376.6）上有匹配。"
+      ],
+      "interpretation": "The position is out of bounds while interval length is 19; the expert can decide if this wording defect changes a dimension score.",
+      "assistant_score_change": null
+    },
+    {
+      "answer_ids": [
+        "A004",
+        "A018",
+        "A003",
+        "A015"
+      ],
+      "kind": "SCORING_SCOPE_AND_GROUP_RESOURCE_INTERPRETATION",
+      "interpretation": "Count delivered attachments consistently for all groups. Ordinary LLM had no scientific tools/reference-file access: missed deliverables can remain missed, but do not characterize lack of an unavailable tool as refusal to use an available tool. Common scientific assets and task-condition preparation are separate from per-request human effort.",
+      "assistant_score_change": null
+    }
+  ]
+}
