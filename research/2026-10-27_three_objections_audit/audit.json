@@ -1,0 +1,86 @@
+{
+  "reviewed_branch_head": "c30473d3168ccf5ce6522722f0cea857c2065037",
+  "run_id": "mini_real_20261027_061408",
+  "runtime_source_commit": "6c13c5788405e8ecf1aaf77144accd8108701d48",
+  "raw_results_commit": "4244ac0d9b9f0b1e01fe46f6871fd664825a4c24",
+  "raw_results_sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3",
+  "original_reviewer_zip_sha256": "0e3167519bc13c4ccee2fe2eb9d479254d498695b2ba46dc3386271eca66d66d",
+  "n_original_answers": 27,
+  "n_user_rounds": 33,
+  "R4": {
+    "answer_files_byte_identical": true,
+    "exported_files": {
+      "answers/A011/answer.txt": {
+        "bytes": 1900,
+        "sha256": "5a8410ffa0b37136a59af3a60a000ef63356c306f530fa6585c6c9c94e3fa5b7"
+      },
+      "answers/A011/raw_model_answer.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "answers/A013/answer.txt": {
+        "bytes": 201,
+        "sha256": "f52f59e2c1f81164b1bde13b238acf1c79f712dc4f246efaea9ec585c9c67ee2"
+      },
+      "answers/A013/raw_model_answer.txt": {
+        "bytes": 844,
+        "sha256": "1288bc5d1adf958f1cd43b795adfc383ef708c9111407417e180170fabd9ac96"
+      },
+      "answers/A025/answer.txt": {
+        "bytes": 1900,
+        "sha256": "5a8410ffa0b37136a59af3a60a000ef63356c306f530fa6585c6c9c94e3fa5b7"
+      },
+      "answers/A025/raw_model_answer.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "export_process_differences": [
+      {
+        "path": "/rounds/0/error_record/stage",
+        "a": "fixed_tools",
+        "b": "executor"
+      }
+    ],
+    "actual_model_requests": {
+      "A011": 0,
+      "A025": 6
+    },
+    "actual_answer_sources": {
+      "A011": "SHARED_ERROR_PRESENTATION_NOT_MODEL_REASONING",
+      "A025": "SHARED_ERROR_PRESENTATION_NOT_MODEL_REASONING"
+    }
+  },
+  "A013": {
+    "actual_delivered_body": "模型序列检查未通过。关键序列直接见下方已核验字段；原始模型文字单独保留，不能按错误序列写论文或订购。工具完成情况以执行记录为准。",
+    "tool_record_scaled_value": 0.9915144175887107,
+    "body_contains_scaled_value": false,
+    "raw_model_contains_scaled_value": true,
+    "source": "REAL_MODEL_WITH_SHARED_VALIDATION",
+    "score_changes_by_assistant": null
+  },
+  "round_source_counts_by_group": {
+    "llm": {
+      "REAL_MODEL_NO_TOOLS": 11
+    },
+    "workflow": {
+      "DETERMINISTIC_EXISTING_TOOL_EVIDENCE": 8,
+      "SHARED_ERROR_PRESENTATION_NOT_MODEL_REASONING": 2,
+      "FIXED_CONDITION_PRESENTATION": 1
+    },
+    "agent": {
+      "REAL_MODEL_WITH_SHARED_VALIDATION": 8,
+      "REAL_MODEL_PLANNER": 2,
+      "SHARED_ERROR_PRESENTATION_NOT_MODEL_REASONING": 1
+    }
+  },
+  "agent_rounds": {
+    "n": 11,
+    "raw_text_equal_to_delivered": 9,
+    "raw_text_differs_from_delivered": 2
+  },
+  "new_quality_ratings": 0,
+  "new_model_calls": 0,
+  "originals_modified": false,
+  "scope": "Deterministic provenance and equality audit, not independent scientific or human scoring"
+}
