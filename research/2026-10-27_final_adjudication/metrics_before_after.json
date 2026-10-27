@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0",
+  "created_on": "2026-10-27",
+  "record_type": "retrospective_adjudication_overlay_metrics",
+  "status": "project_confirmed",
+  "source_branch": "codex/20261020-evidence-pilot",
+  "source_head": "14f11f8eb649ce923271ba65bf8a5c8a08d9e72e",
+  "target_branch": "codex/20261027-final-adjudication-overlay",
+  "project_confirmation": "项目方确认：本表13项裁决已逐项复核，结论与最终裁决一致。",
+  "scope": {
+    "task_episodes": 27,
+    "dispute_units": 13,
+    "seen_development_tasks": true,
+    "independent_unseen_test_performed": false,
+    "preregistered_review_protocol": false,
+    "new_model_runs": 0,
+    "raw_answer_records_modified": false,
+    "historical_score_sheets_modified": false,
+    "original_slot_records_modified": false
+  },
+  "overall_task_verdicts": {
+    "before": {
+      "PASS": 15,
+      "FAIL": 12,
+      "pass_rate": 0.555556
+    },
+    "after": {
+      "PASS": 17,
+      "FAIL": 10,
+      "pass_rate": 0.62963
+    }
+  },
+  "group_task_verdicts": {
+    "llm": {
+      "n": 9,
+      "before": {
+        "PASS": 1,
+        "FAIL": 8
+      },
+      "after": {
+        "PASS": 0,
+        "FAIL": 9
+      },
+      "pass_rate_before": 0.111111,
+      "pass_rate_after": 0
+    },
+    "agent": {
+      "n": 9,
+      "before": {
+        "PASS": 6,
+        "FAIL": 3
+      },
+      "after": {
+        "PASS": 9,
+        "FAIL": 0
+      },
+      "pass_rate_before": 0.666667,
+      "pass_rate_after": 1
+    },
+    "workflow": {
+      "n": 9,
+      "before": {
+        "PASS": 8,
+        "FAIL": 1
+      },
+      "after": {
+        "PASS": 8,
+        "FAIL": 1
+      },
+      "pass_rate_before": 0.888889,
+      "pass_rate_after": 0.888889
+    }
+  },
+  "changed_task_verdicts": [
+    {
+      "answer_id": "A013",
+      "before": "FAIL",
+      "after": "PASS",
+      "decision": "B"
+    },
+    {
+      "answer_id": "A014",
+      "before": "FAIL",
+      "after": "PASS",
+      "decision": "B"
+    },
+    {
+      "answer_id": "A002",
+      "before": "FAIL",
+      "after": "PASS",
+      "decision": "B"
+    },
+    {
+      "answer_id": "A008",
+      "before": "PASS",
+      "after": "FAIL",
+      "decision": "C"
+    }
+  ],
+  "all_task_labels": [
+    {
+      "answer_id": "A001",
+      "case_id": "U1",
+      "group": "llm",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "FAIL",
+      "changed": false
+    },
+    {
+      "answer_id": "A002",
+      "case_id": "W3",
+      "group": "agent",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "PASS",
+      "changed": true
+    },
+    {
+      "answer_id": "A003",
+      "case_id": "R4",
+      "group": "llm",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "FAIL",
+      "changed": false
+    },
+    {
+      "answer_id": "A004",
+      "case_id": "W1",
+      "group": "agent",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A005",
+      "case_id": "W3",
+      "group": "workflow",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A006",
+      "case_id": "W3",
+      "group": "llm",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "FAIL",
+      "changed": false
+    },
+    {
+      "answer_id": "A007",
+      "case_id": "W2",
+      "group": "agent",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A008",
+      "case_id": "R2",
+      "group": "llm",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "FAIL",
+      "changed": true
+    },
+    {
+      "answer_id": "A009",
+      "case_id": "R3",
+      "group": "workflow",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A010",
+      "case_id": "R2",
+      "group": "agent",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A011",
+      "case_id": "R4",
+      "group": "workflow",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A012",
+      "case_id": "R1",
+      "group": "workflow",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A013",
+      "case_id": "W2b",
+      "group": "agent",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "PASS",
+      "changed": true
+    },
+    {
+      "answer_id": "A014",
+      "case_id": "U1",
+      "group": "agent",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "PASS",
+      "changed": true
+    },
+    {
+      "answer_id": "A015",
+      "case_id": "R3",
+      "group": "llm",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "FAIL",
+      "changed": false
+    },
+    {
+      "answer_id": "A016",
+      "case_id": "R1",
+      "group": "llm",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "FAIL",
+      "changed": false
+    },
+    {
+      "answer_id": "A017",
+      "case_id": "R1",
+      "group": "agent",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A018",
+      "case_id": "W1",
+      "group": "llm",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "FAIL",
+      "changed": false
+    },
+    {
+      "answer_id": "A019",
+      "case_id": "W2b",
+      "group": "workflow",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A020",
+      "case_id": "W2",
+      "group": "llm",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "FAIL",
+      "changed": false
+    },
+    {
+      "answer_id": "A021",
+      "case_id": "U1",
+      "group": "workflow",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A022",
+      "case_id": "R3",
+      "group": "agent",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A023",
+      "case_id": "R2",
+      "group": "workflow",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "FAIL",
+      "changed": false
+    },
+    {
+      "answer_id": "A024",
+      "case_id": "W2b",
+      "group": "llm",
+      "original_verdict": "FAIL",
+      "adjudicated_verdict": "FAIL",
+      "changed": false
+    },
+    {
+      "answer_id": "A025",
+      "case_id": "R4",
+      "group": "agent",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A026",
+      "case_id": "W1",
+      "group": "workflow",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    },
+    {
+      "answer_id": "A027",
+      "case_id": "W2",
+      "group": "workflow",
+      "original_verdict": "PASS",
+      "adjudicated_verdict": "PASS",
+      "changed": false
+    }
+  ],
+  "slot_review_status_counts_unchanged": {
+    "total": 405,
+    "counts": {
+      "MISSING": 79,
+      "CORRECT": 313,
+      "WRONG": 13
+    },
+    "proportions": {
+      "MISSING": 0.195062,
+      "CORRECT": 0.77284,
+      "WRONG": 0.032099
+    }
+  },
+  "score_impact": {
+    "dimension_scores_changed": 0,
+    "score_sheet_A_modified": false,
+    "score_sheet_C_modified": false,
+    "mean_dimension_scores_changed": false,
+    "mean_sum8_changed": false,
+    "note": "两份现有评分表保持独立且不变。裁决覆盖层只调整整题标签；原评分表的维度分数与提交时的完成标签不覆盖。"
+  },
+  "existing_score_sheet_A_summary_unchanged": {
+    "agent": {
+      "n": 9,
+      "labels_as_submitted": {
+        "部分完成": 5,
+        "完成": 4
+      },
+      "sum8_total": 57,
+      "dimension_means_0_to_2": {
+        "factual_accuracy": 2,
+        "evidence_support": 1.222222,
+        "requirement_completion": 1.666667,
+        "boundary_handling": 1.444444
+      },
+      "mean_sum8": 6.333333
+    },
+    "llm": {
+      "n": 9,
+      "labels_as_submitted": {
+        "部分完成": 4,
+        "完成": 1,
+        "未完成": 4
+      },
+      "sum8_total": 31,
+      "dimension_means_0_to_2": {
+        "factual_accuracy": 0.888889,
+        "evidence_support": 0.777778,
+        "requirement_completion": 0.666667,
+        "boundary_handling": 1.111111
+      },
+      "mean_sum8": 3.444444
+    },
+    "workflow": {
+      "n": 9,
+      "labels_as_submitted": {
+        "完成": 8,
+        "未完成": 1
+      },
+      "sum8_total": 64,
+      "dimension_means_0_to_2": {
+        "factual_accuracy": 1.888889,
+        "evidence_support": 1.666667,
+        "requirement_completion": 1.777778,
+        "boundary_handling": 1.777778
+      },
+      "mean_sum8": 7.111111
+    }
+  },
+  "existing_score_sheet_C_summary_unchanged": {
+    "agent": {
+      "n": 9,
+      "labels_as_submitted": {
+        "基本完成": 6,
+        "部分完成": 3
+      },
+      "sum8_total": 59,
+      "dimension_means_0_to_2": {
+        "factual_accuracy": 1.777778,
+        "evidence_support": 1.444444,
+        "requirement_completion": 1.777778,
+        "boundary_handling": 1.555556
+      },
+      "mean_sum8": 6.555556
+    },
+    "llm": {
+      "n": 9,
+      "labels_as_submitted": {
+        "部分完成": 6,
+        "基本完成": 1,
+        "未完成": 2
+      },
+      "sum8_total": 41,
+      "dimension_means_0_to_2": {
+        "factual_accuracy": 1.111111,
+        "evidence_support": 0.888889,
+        "requirement_completion": 0.888889,
+        "boundary_handling": 1.666667
+      },
+      "mean_sum8": 4.555556
+    },
+    "workflow": {
+      "n": 9,
+      "labels_as_submitted": {
+        "基本完成": 8,
+        "部分完成": 1
+      },
+      "sum8_total": 69,
+      "dimension_means_0_to_2": {
+        "factual_accuracy": 1.888889,
+        "evidence_support": 1.888889,
+        "requirement_completion": 1.888889,
+        "boundary_handling": 2
+      },
+      "mean_sum8": 7.666667
+    }
+  },
+  "source_record_blob_shas": {
+    "whole_task_review_table": "936f8ae4cf65c363ffb2e417abb65daf76ddc34e",
+    "slot_review_table": "4f2fd1b16d88a4922a6ed426ac65d3cf3d96e080",
+    "required_slots_table": "6e3f73d39624de082f804da5188c9cb31b34d5ff",
+    "pending_dispute_list": "855d2ad934a685dabe62a3982672f23f5e3fac06",
+    "score_sheet_A": "d8013c609a4479a66943678881d7b0fba1ff63e4",
+    "score_sheet_C": "dc9a0cbf4089295e3446deb08eab8bed60aee510"
+  },
+  "original_answers_blob_sha": "f0b334c3d5b1c44d4a164a1752d32df38043e480",
+  "original_answers_sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3",
+  "score_sheet_A_source_sha256": "1463b5641298bee179b7c05b9f8b08697afdf856a055c57af7411ea9c995b675",
+  "score_sheet_C_source_sha256": "5731f3a5c393b1eb6538d639ff02a7de15b64662eb0f632a025362f38440fc7f",
+  "invariants": {
+    "total_tasks": 27,
+    "total_slots": 405,
+    "task_verdicts_before_sum": 27,
+    "task_verdicts_after_sum": 27,
+    "slot_statuses_sum": 405,
+    "decision_rows": 13
+  }
+}
