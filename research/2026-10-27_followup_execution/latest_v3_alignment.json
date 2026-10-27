@@ -1,0 +1,246 @@
+{
+  "concurrent_commit": "f92adcdbaf89a34010e1ad00d31c2954a77355a7",
+  "merge_commit": "601431d008106b8f11d75fa02f244d147c2d2a43",
+  "primary_implementation_commit": "e02708125b91dd8cdcb63f64f0a0c80725689db7",
+  "same_primary_labels": {
+    "required_slots.csv": true,
+    "slot_reviews.csv": true,
+    "task_reviews.csv": true,
+    "group_map.csv": true
+  },
+  "summary_rows_checked": [
+    {
+      "group": "llm",
+      "category": "STANDARD_TASK",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "llm",
+      "category": "RELIABILITY",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "llm",
+      "category": "REQUIREMENT_CHANGE",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "llm",
+      "category": "OVERALL",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "workflow",
+      "category": "STANDARD_TASK",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "workflow",
+      "category": "RELIABILITY",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "workflow",
+      "category": "REQUIREMENT_CHANGE",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "workflow",
+      "category": "OVERALL",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "agent",
+      "category": "STANDARD_TASK",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "agent",
+      "category": "RELIABILITY",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "agent",
+      "category": "REQUIREMENT_CHANGE",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    },
+    {
+      "group": "agent",
+      "category": "OVERALL",
+      "checks": {
+        "task_pass": true,
+        "task_total": true,
+        "required_slots_n": true,
+        "TP": true,
+        "FP": true,
+        "FN": true,
+        "micro_required_slot_precision": true,
+        "micro_required_slot_recall": true,
+        "micro_required_slot_f1": true,
+        "macro_required_slot_precision": true,
+        "macro_required_slot_recall": true,
+        "macro_required_slot_f1": true
+      }
+    }
+  ],
+  "raw_comparison_counts": {
+    "EQUAL": 20,
+    "NOT_COMPARABLE": 12,
+    "DIFFERENT": 1
+  },
+  "raw_difference_ids": [
+    "A013"
+  ],
+  "standard_reconciliation": "v3 documents 126 original-draft slots + 8 prompt-common + 1 prompt-delivery = 135; no slot label was changed",
+  "new_quality_labels": 0,
+  "new_model_calls": 0,
+  "source_hashes": {
+    "required_slots.csv": "d7792006b421dff52e882e66fb40d74f44dd43d444aede0998b05854b0e3bb87",
+    "slot_reviews.csv": "7d6ed0a42aa00c16fd31c51997ddd1e94e6f387a4a03dbcb711ff72d551d349c",
+    "task_reviews.csv": "bd29cf3178d83a21ab8f9ca622291c46a48aa7588681ec787e33b47365bf4d23",
+    "group_map.csv": "46407de43528d9591c7b85ad8d731e06f019bab98c46091e65a87d7336287207"
+  }
+}
