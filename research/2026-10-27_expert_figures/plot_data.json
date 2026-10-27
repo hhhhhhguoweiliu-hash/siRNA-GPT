@@ -1,0 +1,1738 @@
+{
+  "rows": [
+    {
+      "form": "A",
+      "answer_id": "A004",
+      "group": "agent",
+      "case_id": "W1",
+      "scores": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "completion_text": "部分完成",
+      "source_sheet": "评分总表",
+      "source_row": 2,
+      "reason": null,
+      "completion": "partial",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A018",
+      "group": "llm",
+      "case_id": "W1",
+      "scores": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "completion_text": "部分完成",
+      "source_sheet": "评分总表",
+      "source_row": 3,
+      "reason": null,
+      "completion": "partial",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A026",
+      "group": "workflow",
+      "case_id": "W1",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 4,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A007",
+      "group": "agent",
+      "case_id": "W2",
+      "scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 5,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A020",
+      "group": "llm",
+      "case_id": "W2",
+      "scores": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "completion_text": "未完成",
+      "source_sheet": "评分总表",
+      "source_row": 6,
+      "reason": null,
+      "completion": "not_completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A027",
+      "group": "workflow",
+      "case_id": "W2",
+      "scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 7,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A013",
+      "group": "agent",
+      "case_id": "W2b",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 8,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A019",
+      "group": "workflow",
+      "case_id": "W2b",
+      "scores": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 9,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A024",
+      "group": "llm",
+      "case_id": "W2b",
+      "scores": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "completion_text": "未完成",
+      "source_sheet": "评分总表",
+      "source_row": 10,
+      "reason": null,
+      "completion": "not_completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A002",
+      "group": "agent",
+      "case_id": "W3",
+      "scores": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "completion_text": "部分完成",
+      "source_sheet": "评分总表",
+      "source_row": 11,
+      "reason": null,
+      "completion": "partial",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A005",
+      "group": "workflow",
+      "case_id": "W3",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 12,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A006",
+      "group": "llm",
+      "case_id": "W3",
+      "scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "completion_text": "未完成",
+      "source_sheet": "评分总表",
+      "source_row": 13,
+      "reason": null,
+      "completion": "not_completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "A",
+      "answer_id": "A001",
+      "group": "llm",
+      "case_id": "U1",
+      "scores": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "completion_text": "未完成",
+      "source_sheet": "评分总表",
+      "source_row": 14,
+      "reason": null,
+      "completion": "not_completed",
+      "stratum": "Requirement change"
+    },
+    {
+      "form": "A",
+      "answer_id": "A014",
+      "group": "agent",
+      "case_id": "U1",
+      "scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "completion_text": "部分完成",
+      "source_sheet": "评分总表",
+      "source_row": 15,
+      "reason": null,
+      "completion": "partial",
+      "stratum": "Requirement change"
+    },
+    {
+      "form": "A",
+      "answer_id": "A021",
+      "group": "workflow",
+      "case_id": "U1",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 16,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Requirement change"
+    },
+    {
+      "form": "A",
+      "answer_id": "A012",
+      "group": "workflow",
+      "case_id": "R1",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 17,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A016",
+      "group": "llm",
+      "case_id": "R1",
+      "scores": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "completion_text": "部分完成",
+      "source_sheet": "评分总表",
+      "source_row": 18,
+      "reason": null,
+      "completion": "partial",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A017",
+      "group": "agent",
+      "case_id": "R1",
+      "scores": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "completion_text": "部分完成",
+      "source_sheet": "评分总表",
+      "source_row": 19,
+      "reason": null,
+      "completion": "partial",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A008",
+      "group": "llm",
+      "case_id": "R2",
+      "scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 20,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A010",
+      "group": "agent",
+      "case_id": "R2",
+      "scores": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "completion_text": "部分完成",
+      "source_sheet": "评分总表",
+      "source_row": 21,
+      "reason": null,
+      "completion": "partial",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A023",
+      "group": "workflow",
+      "case_id": "R2",
+      "scores": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "completion_text": "未完成",
+      "source_sheet": "评分总表",
+      "source_row": 22,
+      "reason": null,
+      "completion": "not_completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A009",
+      "group": "workflow",
+      "case_id": "R3",
+      "scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 23,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A015",
+      "group": "llm",
+      "case_id": "R3",
+      "scores": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "completion_text": "部分完成",
+      "source_sheet": "评分总表",
+      "source_row": 24,
+      "reason": null,
+      "completion": "partial",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A022",
+      "group": "agent",
+      "case_id": "R3",
+      "scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 25,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A003",
+      "group": "llm",
+      "case_id": "R4",
+      "scores": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "completion_text": "部分完成",
+      "source_sheet": "评分总表",
+      "source_row": 26,
+      "reason": null,
+      "completion": "partial",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A011",
+      "group": "workflow",
+      "case_id": "R4",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 27,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "A",
+      "answer_id": "A025",
+      "group": "agent",
+      "case_id": "R4",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成",
+      "source_sheet": "评分总表",
+      "source_row": 28,
+      "reason": null,
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A004",
+      "group": "agent",
+      "case_id": "W1",
+      "scores": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "completion_text": "部分完成：分数、坐标、覆盖、seed/表达多数数值有；缺未映射基因、订购两行原文及可回查报告细节",
+      "source_sheet": "Sheet1",
+      "source_row": 2,
+      "reason": "无；证据链偏弱",
+      "completion": "partial",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A018",
+      "group": "llm",
+      "case_id": "W1",
+      "scores": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "completion_text": "未交付：核心序列写错，分数/坐标/seed/表达均未交付",
+      "source_sheet": "Sheet1",
+      "source_row": 3,
+      "reason": "有：guide核心及第二行序列错误，且遗漏已有分数",
+      "completion": "not_completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A026",
+      "group": "workflow",
+      "case_id": "W1",
+      "scores": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "completion_text": "部分完成：坐标、覆盖、原始精度分数、SHA/绑定清单正确；缺seed位点、去重非靶基因、表达检出计数、未映射基因",
+      "source_sheet": "Sheet1",
+      "source_row": 4,
+      "reason": "无；程序声称完成但关键数值未展示",
+      "completion": "partial",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A007",
+      "group": "agent",
+      "case_id": "W2",
+      "scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "completion_text": "部分完成：9条坐标和覆盖正确，但多条19nt核心序列抄写错误",
+      "source_sheet": "Sheet1",
+      "source_row": 5,
+      "reason": "有：核心序列多处错误，影响“逐条核对序列”",
+      "completion": "partial",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A020",
+      "group": "llm",
+      "case_id": "W2",
+      "scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "completion_text": "未交付：把23nt设计窗口起点当作19nt核心起点，9条核心坐标全错",
+      "source_sheet": "Sheet1",
+      "source_row": 6,
+      "reason": "有：核心坐标系统性错误",
+      "completion": "not_completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A027",
+      "group": "workflow",
+      "case_id": "W2",
+      "scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "完成：9条19nt核心坐标与20/20覆盖正确，明确未做分数/seed/表达/排序",
+      "source_sheet": "Sheet1",
+      "source_row": 7,
+      "reason": "无；证据仅列工具名，细节偏少",
+      "completion": "completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A013",
+      "group": "agent",
+      "case_id": "W2b",
+      "scores": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "completion_text": "部分完成：分数0.9915144175887107、来源SHA、非敲低率说明正确；序列对应关系有误/开头提示模型序列检查未通过",
+      "source_sheet": "Sheet1",
+      "source_row": 8,
+      "reason": "无严重推翻；序列上下文有误",
+      "completion": "partial",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A019",
+      "group": "workflow",
+      "case_id": "W2b",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成：原始精度分数、raw_class、来源SHA、坐标覆盖、非敲低率说明均交付",
+      "source_sheet": "Sheet1",
+      "source_row": 9,
+      "reason": "无",
+      "completion": "completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A024",
+      "group": "llm",
+      "case_id": "W2b",
+      "scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "completion_text": "未交付：错误声称输入无分数，未读取已有历史分数；“非最低百分比”表述错误",
+      "source_sheet": "Sheet1",
+      "source_row": 10,
+      "reason": "有：遗漏已有分数并误述分数含义",
+      "completion": "not_completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A002",
+      "group": "agent",
+      "case_id": "W3",
+      "scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "completion_text": "部分完成：分数高低、警告方向、建议目的有；缺实际查询窗口AUTHOR_G2_G20_19NT、查询序列和错配位置",
+      "source_sheet": "Sheet1",
+      "source_row": 11,
+      "reason": "无；关键近匹配窗口缺项",
+      "completion": "partial",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A005",
+      "group": "workflow",
+      "case_id": "W3",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成：两候选分数、窗口、查询序列、IRGM/坐标/1错配、seed/表达及限制均并列呈现",
+      "source_sheet": "Sheet1",
+      "source_row": 12,
+      "reason": "无",
+      "completion": "completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A006",
+      "group": "llm",
+      "case_id": "W3",
+      "scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "completion_text": "未交付：错误称无分数/seed/表达，未比较；把近匹配审核PASS说成“无脱靶证据”有误导",
+      "source_sheet": "Sheet1",
+      "source_row": 13,
+      "reason": "有：遗漏已有分数且安全暗示不当",
+      "completion": "not_completed",
+      "stratum": "Standard tasks"
+    },
+    {
+      "form": "B",
+      "answer_id": "A001",
+      "group": "llm",
+      "case_id": "U1",
+      "scores": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "completion_text": "部分完成：首轮缺实际19nt核心坐标3501–3519；次轮未给具体分数值",
+      "source_sheet": "Sheet1",
+      "source_row": 14,
+      "reason": "无严重推翻；关键数值缺项",
+      "completion": "partial",
+      "stratum": "Requirement change"
+    },
+    {
+      "form": "B",
+      "answer_id": "A014",
+      "group": "agent",
+      "case_id": "U1",
+      "scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "部分完成：坐标、分数0.9915、复用/新增说明有；核心序列疑似错误，证据日期为占位符",
+      "source_sheet": "Sheet1",
+      "source_row": 15,
+      "reason": "有：核心序列抄写疑误；证据不规范",
+      "completion": "partial",
+      "stratum": "Requirement change"
+    },
+    {
+      "form": "B",
+      "answer_id": "A021",
+      "group": "workflow",
+      "case_id": "U1",
+      "scores": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "完成：首轮3501–3519/20/20，次轮原始精度分数、复用与新增说明正确",
+      "source_sheet": "Sheet1",
+      "source_row": 16,
+      "reason": "无；未列SHA细节",
+      "completion": "completed",
+      "stratum": "Requirement change"
+    },
+    {
+      "form": "B",
+      "answer_id": "A012",
+      "group": "workflow",
+      "case_id": "R1",
+      "scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "部分完成：第2轮坐标1439–1457、18/20、原始精度分数正确；第1轮第二行原文抄写有误",
+      "source_sheet": "Sheet1",
+      "source_row": 17,
+      "reason": "有：第1轮订购原文序列错误",
+      "completion": "partial",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A016",
+      "group": "llm",
+      "case_id": "R1",
+      "scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "completion_text": "未交付：第2轮未给坐标/覆盖/分数，反而称需补充已有绑定分数",
+      "source_sheet": "Sheet1",
+      "source_row": 18,
+      "reason": "有：遗漏已有绑定分数",
+      "completion": "not_completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A017",
+      "group": "agent",
+      "case_id": "R1",
+      "scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "部分完成：第1轮指出未确认链角色，第2轮给18/20、1439–1457、1.1219；核心序列及“非最低百分比”表述有误",
+      "source_sheet": "Sheet1",
+      "source_row": 19,
+      "reason": "有：核心序列错误、分数含义措辞错误",
+      "completion": "partial",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A008",
+      "group": "llm",
+      "case_id": "R2",
+      "scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "完成：正确判断旧分数不可沿用，列可用/需重核，未启动新评分；证据中序列有前后不一致",
+      "source_sheet": "Sheet1",
+      "source_row": 20,
+      "reason": "无严重推翻；序列笔误",
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A010",
+      "group": "agent",
+      "case_id": "R2",
+      "scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "completion_text": "完成：正确判断不能沿用，列可复用字段与需重核项；核心序列引用有误且以问句结尾",
+      "source_sheet": "Sheet1",
+      "source_row": 21,
+      "reason": "无严重推翻；表述不够确定",
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A023",
+      "group": "workflow",
+      "case_id": "R2",
+      "scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "completion_text": "未交付：未回答能否引用旧分数，核心序列错误，称配对核心不互补但无依据",
+      "source_sheet": "Sheet1",
+      "source_row": 22,
+      "reason": "有：遗漏核心问题且序列错误",
+      "completion": "not_completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A009",
+      "group": "workflow",
+      "case_id": "R3",
+      "scores": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成：实际坐标3501–3519、覆盖20/20；声明3610–3628越界/不一致，未否定siRNA存在",
+      "source_sheet": "Sheet1",
+      "source_row": 23,
+      "reason": "无",
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A015",
+      "group": "llm",
+      "case_id": "R3",
+      "scores": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "completion_text": "未交付：只说无法比对，未核对声明越界与实际坐标；核心序列有误",
+      "source_sheet": "Sheet1",
+      "source_row": 24,
+      "reason": "有：未完成坐标一致性核查",
+      "completion": "not_completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A022",
+      "group": "agent",
+      "case_id": "R3",
+      "scores": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成：长度3609、声明越界、实际3501–3519、仍匹配20条均正确；核心序列抄写有误",
+      "source_sheet": "Sheet1",
+      "source_row": 25,
+      "reason": "有抄写错误，但不推翻坐标结论",
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A003",
+      "group": "llm",
+      "case_id": "R4",
+      "scores": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "completion_text": "未交付：错误称无分数、seed无法计算；未完成可完成的分数/seed核查",
+      "source_sheet": "Sheet1",
+      "source_row": 26,
+      "reason": "有：遗漏已有分数和seed结果",
+      "completion": "not_completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A011",
+      "group": "workflow",
+      "case_id": "R4",
+      "scores": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成（可完成部分）：保留坐标/覆盖/原始精度分数/SHA/seed 3540，明确表达缺失、禁止回退、不填零、完整报告不能交付",
+      "source_sheet": "Sheet1",
+      "source_row": 27,
+      "reason": "无严重推翻；核心序列抄写有差异",
+      "completion": "completed",
+      "stratum": "Reliability"
+    },
+    {
+      "form": "B",
+      "answer_id": "A025",
+      "group": "agent",
+      "case_id": "R4",
+      "scores": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "completion_text": "完成（可完成部分）：同乙，坐标/分数/seed与缺项说明完整；核心序列末尾有差异",
+      "source_sheet": "Sheet1",
+      "source_row": 28,
+      "reason": "无严重推翻；核心序列抄写有差异",
+      "completion": "completed",
+      "stratum": "Reliability"
+    }
+  ],
+  "means": [
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 0.5
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 0.5
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 0.25
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 1.0
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 1.75
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 1.75
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 1.25
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 1.5
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 1.5
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "dimension": "factual_accuracy",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "dimension": "evidence_support",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "dimension": "requirement_completion",
+      "n": 1,
+      "mean": 0.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "dimension": "boundary_handling",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "dimension": "factual_accuracy",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "dimension": "evidence_support",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "dimension": "requirement_completion",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "dimension": "boundary_handling",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "dimension": "factual_accuracy",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "dimension": "evidence_support",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "dimension": "requirement_completion",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "dimension": "boundary_handling",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "llm",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 1.25
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "llm",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 1.0
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "llm",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 1.25
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "llm",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 1.25
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 1.75
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 1.5
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 1.5
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 1.75
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "agent",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 2.0
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "agent",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 1.25
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "agent",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 1.75
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "agent",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 1.5
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 0.0
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 0.0
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 0.0
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 1.25
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 1.75
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 1.75
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 1.25
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 1.25
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 1.0
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "dimension": "factual_accuracy",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "dimension": "evidence_support",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "dimension": "requirement_completion",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "dimension": "boundary_handling",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "dimension": "factual_accuracy",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "dimension": "evidence_support",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "dimension": "requirement_completion",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "dimension": "boundary_handling",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "dimension": "factual_accuracy",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "dimension": "evidence_support",
+      "n": 1,
+      "mean": 1.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "dimension": "requirement_completion",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "dimension": "boundary_handling",
+      "n": 1,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "llm",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 0.5
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "llm",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 0.5
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "llm",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 0.5
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "llm",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 1.5
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 1.0
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 1.25
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 1.5
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 1.75
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "agent",
+      "dimension": "factual_accuracy",
+      "n": 4,
+      "mean": 1.0
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "agent",
+      "dimension": "evidence_support",
+      "n": 4,
+      "mean": 1.5
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "agent",
+      "dimension": "requirement_completion",
+      "n": 4,
+      "mean": 2.0
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "agent",
+      "dimension": "boundary_handling",
+      "n": 4,
+      "mean": 2.0
+    }
+  ],
+  "completion": [
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "n": 4,
+      "completed": 0,
+      "partial": 1,
+      "not_completed": 3,
+      "percent": 0.0
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "n": 4,
+      "completed": 4,
+      "partial": 0,
+      "not_completed": 0,
+      "percent": 100.0
+    },
+    {
+      "form": "A",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "n": 4,
+      "completed": 2,
+      "partial": 2,
+      "not_completed": 0,
+      "percent": 50.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "n": 1,
+      "completed": 0,
+      "partial": 0,
+      "not_completed": 1,
+      "percent": 0.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "n": 1,
+      "completed": 1,
+      "partial": 0,
+      "not_completed": 0,
+      "percent": 100.0
+    },
+    {
+      "form": "A",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "n": 1,
+      "completed": 0,
+      "partial": 1,
+      "not_completed": 0,
+      "percent": 0.0
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "llm",
+      "n": 4,
+      "completed": 1,
+      "partial": 3,
+      "not_completed": 0,
+      "percent": 25.0
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "n": 4,
+      "completed": 3,
+      "partial": 0,
+      "not_completed": 1,
+      "percent": 75.0
+    },
+    {
+      "form": "A",
+      "stratum": "Reliability",
+      "group": "agent",
+      "n": 4,
+      "completed": 2,
+      "partial": 2,
+      "not_completed": 0,
+      "percent": 50.0
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "llm",
+      "n": 4,
+      "completed": 0,
+      "partial": 0,
+      "not_completed": 4,
+      "percent": 0.0
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "workflow",
+      "n": 4,
+      "completed": 3,
+      "partial": 1,
+      "not_completed": 0,
+      "percent": 75.0
+    },
+    {
+      "form": "B",
+      "stratum": "Standard tasks",
+      "group": "agent",
+      "n": 4,
+      "completed": 0,
+      "partial": 4,
+      "not_completed": 0,
+      "percent": 0.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "llm",
+      "n": 1,
+      "completed": 0,
+      "partial": 1,
+      "not_completed": 0,
+      "percent": 0.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "workflow",
+      "n": 1,
+      "completed": 1,
+      "partial": 0,
+      "not_completed": 0,
+      "percent": 100.0
+    },
+    {
+      "form": "B",
+      "stratum": "Requirement change",
+      "group": "agent",
+      "n": 1,
+      "completed": 0,
+      "partial": 1,
+      "not_completed": 0,
+      "percent": 0.0
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "llm",
+      "n": 4,
+      "completed": 1,
+      "partial": 0,
+      "not_completed": 3,
+      "percent": 25.0
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "workflow",
+      "n": 4,
+      "completed": 2,
+      "partial": 1,
+      "not_completed": 1,
+      "percent": 50.0
+    },
+    {
+      "form": "B",
+      "stratum": "Reliability",
+      "group": "agent",
+      "n": 4,
+      "completed": 3,
+      "partial": 1,
+      "not_completed": 0,
+      "percent": 75.0
+    }
+  ],
+  "source_status": "USER_SUBMITTED_EXPERT_FORMS_UNADJUDICATED",
+  "form_relationship": "not clarified; never pooled"
+}

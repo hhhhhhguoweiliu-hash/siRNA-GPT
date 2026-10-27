@@ -1,0 +1,52 @@
+{
+  "answer_ids_match_all_27_real_positions": true,
+  "valid_score_cells": 108,
+  "reason_rows_match": 27,
+  "dimension_reason_rows_match": 108,
+  "total_formulas_checked": 27,
+  "comparison_totals_match_all_nine_rows": true,
+  "tie_labels_omit_other_tied_winners": [
+    {
+      "question_number": 2,
+      "cell": "I3",
+      "submitted_winner": "甲",
+      "all_tied_roles": [
+        "甲",
+        "丙"
+      ],
+      "all_tied_answer_ids": [
+        "A007",
+        "A027"
+      ]
+    },
+    {
+      "question_number": 8,
+      "cell": "I9",
+      "submitted_winner": "甲",
+      "all_tied_roles": [
+        "甲",
+        "丙"
+      ],
+      "all_tied_answer_ids": [
+        "A009",
+        "A022"
+      ]
+    },
+    {
+      "question_number": 9,
+      "cell": "I10",
+      "submitted_winner": "乙",
+      "all_tied_roles": [
+        "乙",
+        "丙"
+      ],
+      "all_tied_answer_ids": [
+        "A011",
+        "A025"
+      ]
+    }
+  ],
+  "formula_note": "openpyxl does not calculate Excel formulas; totals were independently added from submitted scores. Cached values were not invented.",
+  "source_workbook_was_modified": false,
+  "previous_workbook_sha256": "d6916e564f85222c6b78928eb767e1582ea23bfd869301dd4a05e3830002ee8c"
+}

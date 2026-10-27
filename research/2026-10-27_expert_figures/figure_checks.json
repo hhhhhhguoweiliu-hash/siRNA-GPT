@@ -1,0 +1,78 @@
+{
+  "source_A_sha256": "1463b5641298bee179b7c05b9f8b08697afdf856a055c57af7411ea9c995b675",
+  "source_B_sha256": "97759996c7a8a2805e914fac6ee09d85428e35ff7e22a00de2bfa5318c84bcf4",
+  "forms": 2,
+  "independent_raters_assumed": false,
+  "scores_preserved": 216,
+  "full_answer_positions_per_form": 27,
+  "new_scores_or_adjudications": 0,
+  "font_file": "C:\\Windows\\Fonts\\arialbd.ttf",
+  "all_plot_text_font": "Arial Bold",
+  "png_dpi": 600,
+  "pdf_font_embedding": [
+    {
+      "file": "fig1_standard_quality.pdf",
+      "fonts": [
+        {
+          "name": "/Helvetica",
+          "embedded": false
+        },
+        {
+          "name": "/AAAAAA+Arial-BoldMT",
+          "embedded": true
+        }
+      ]
+    },
+    {
+      "file": "fig2_completion_as_submitted.pdf",
+      "fonts": [
+        {
+          "name": "/Helvetica",
+          "embedded": false
+        },
+        {
+          "name": "/AAAAAA+Arial-BoldMT",
+          "embedded": true
+        }
+      ]
+    },
+    {
+      "file": "figS1_reliability_quality.pdf",
+      "fonts": [
+        {
+          "name": "/Helvetica",
+          "embedded": false
+        },
+        {
+          "name": "/AAAAAA+Arial-BoldMT",
+          "embedded": true
+        }
+      ]
+    },
+    {
+      "file": "figS2_requirement_change_quality.pdf",
+      "fonts": [
+        {
+          "name": "/Helvetica",
+          "embedded": false
+        },
+        {
+          "name": "/AAAAAA+Arial-BoldMT",
+          "embedded": true
+        }
+      ]
+    }
+  ],
+  "complete_by_form_group": {
+    "A": {
+      "llm": 1,
+      "workflow": 8,
+      "agent": 4
+    },
+    "B": {
+      "llm": 1,
+      "workflow": 6,
+      "agent": 3
+    }
+  }
+}

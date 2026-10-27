@@ -1,0 +1,71 @@
+{
+  "is_new_rating": false,
+  "source_sha256": "1463b5641298bee179b7c05b9f8b08697afdf856a055c57af7411ea9c995b675",
+  "remaining_issues": [
+    {
+      "answer_id": "A006",
+      "cells": [
+        "评分理由!F13",
+        "严重错误!E2",
+        "逐维度评分理由!F46",
+        "逐维度评分理由!F47"
+      ],
+      "issue": "PASS is explicitly present in shared W3 input; the rating reason must distinguish interpretation of a sequence warning from fabrication.",
+      "input_path": "case_input[0].user_input.user_provided_evidence.near_match_review[0]",
+      "actual_input": {
+        "independent_check": "PASS",
+        "interpretation": "SEQUENCE_REVIEW_FLAG_NOT_DEMONSTRATED_OFF_TARGET"
+      },
+      "score_change_by_assistant": null
+    },
+    {
+      "answer_id": "A022",
+      "issue": "Out-of-bounds conclusion is correct; original answer also incorrectly says coordinates 3610-3628 fail the 19nt length requirement, although closed-interval length is 19.",
+      "actual_length": 19,
+      "reference_length": 3609,
+      "score_change_by_assistant": null
+    },
+    {
+      "answer_ids": [
+        "A004",
+        "A013"
+      ],
+      "issue": "Document a consistent whole-delivery scoring scope, including attachments; distinguish readable main answer, true raw model answer, structured evidence and software false alarm.",
+      "score_change_by_assistant": null
+    },
+    {
+      "answer_id": "A003",
+      "issue": "The ordinary model had no science tool access. Missing required deliverables may be judged missing, but cannot be described as refusing an available tool.",
+      "score_change_by_assistant": null
+    },
+    {
+      "sheet": "严重错误",
+      "issue": "Mixes missing deliveries and potentially invalidating mistakes. Do not convert nine listed rows into a severe-error or hallucination rate.",
+      "score_change_by_assistant": null
+    }
+  ],
+  "mechanical_tie_labels": [
+    {
+      "cell": "各题得分对照!I3",
+      "expected_tied_answer_ids": [
+        "A007",
+        "A027"
+      ]
+    },
+    {
+      "cell": "各题得分对照!I9",
+      "expected_tied_answer_ids": [
+        "A009",
+        "A022"
+      ]
+    },
+    {
+      "cell": "各题得分对照!I10",
+      "expected_tied_answer_ids": [
+        "A011",
+        "A025"
+      ]
+    }
+  ],
+  "accepted_primary_metrics": null
+}

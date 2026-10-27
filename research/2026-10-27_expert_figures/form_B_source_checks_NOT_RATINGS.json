@@ -1,0 +1,44 @@
+[
+  {
+    "answer_id": "A018",
+    "original_order_lines_both_present_exactly": true,
+    "original_lines": [
+      "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+      "UUUCUUGUCUUGCUCUAUCTT"
+    ]
+  },
+  {
+    "answer_id": "A012",
+    "original_order_lines_both_present_exactly": true,
+    "original_lines": [
+      "GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）",
+      "UUUCUUGUCUUGCUCUAUCTT"
+    ]
+  },
+  {
+    "answer_id": "A007",
+    "n_cores": 9,
+    "all_nine_input_cores_present_exactly_in_answer": true
+  },
+  {
+    "answer_id": "A026",
+    "direct_answer_count_line": [
+      "USER_PURCHASED_siVEGF | 3540 | 3539 | 2839 | 2836 | 1695 | 1595 | 3"
+    ]
+  },
+  {
+    "answer_id": "A024",
+    "claimed_phrase_non_lowest_percent_present": false,
+    "actual_knockdown_definition_lines": [
+      "输入提供的VEGFA_SD_3499候选的字段中，无OligoFormer scaled预测分数的相关记录，无法获取该数值、来源及与输入序列的对应关系；OligoFormer模型分数并非敲低百分比，无法直接换算为实际敲低百分比。",
+      "依据用户提供的输入数据（来源：shared_user_input→user_input→candidate_rows，候选ID：VEGFA_SD_3499），该候选的所有字段中未包含OligoFormer scaled预测分数的相关信息，且模型分数定义明确为非敲低百分比的预测分数。"
+    ]
+  },
+  {
+    "answer_id": "A017",
+    "claimed_phrase_non_lowest_percent_present": false,
+    "actual_knockdown_definition_lines": [
+      "关键结果：核查的候选siRNA（ID：USER_PURCHASED_siVEGF）的guide核心19nt序列为UUUCUUGUCUUGCUCUAUC；该核心匹配VEGFA的NM_003376.6转录本及17种其他转录本的1439-1457位19nt区域；OligoFormer模型分数为1.1219，分数非敲低百分比。"
+    ]
+  }
+]

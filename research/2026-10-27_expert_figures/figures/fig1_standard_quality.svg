@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="85.0909090909091mm" viewBox="0 0 1100 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="42" y="36.0" font-family="Arial" font-weight="700" font-size="26" text-anchor="start" fill="#262626">Expert assessment: standard tasks</text>
+<text x="42" y="58.0" font-family="Arial" font-weight="700" font-size="15" text-anchor="start" fill="#666666">Two submitted forms shown separately</text>
+<rect x="300" y="77" width="20" height="14" fill="#8295B3" stroke="#8295B3" stroke-width=".65"/>
+<text x="329" y="91.0" font-family="Arial" font-weight="700" font-size="17" text-anchor="start" fill="#262626">LLM</text>
+<rect x="505" y="77" width="20" height="14" fill="#E6B77C" stroke="#E6B77C" stroke-width=".65"/>
+<text x="534" y="91.0" font-family="Arial" font-weight="700" font-size="17" text-anchor="start" fill="#262626">Fixed workflow</text>
+<rect x="795" y="77" width="20" height="14" fill="#A44958" stroke="#A44958" stroke-width=".65"/>
+<text x="824" y="91.0" font-family="Arial" font-weight="700" font-size="17" text-anchor="start" fill="#262626">Agent</text>
+<text x="38" y="131.0" font-family="Arial" font-weight="700" font-size="23" text-anchor="start" fill="#262626">a</text>
+<text x="306.0" y="131.0" font-family="Arial" font-weight="700" font-size="21" text-anchor="middle" fill="#262626">Form A</text>
+<line x1="86" y1="380.0" x2="526" y2="380.0" stroke="#E7E7E7" stroke-width="0.75"/>
+<line x1="81" y1="380.0" x2="86" y2="380.0" stroke="#262626" stroke-width="1"/>
+<text x="74" y="385.0" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">0</text>
+<line x1="86" y1="267.5" x2="526" y2="267.5" stroke="#E7E7E7" stroke-width="0.75"/>
+<line x1="81" y1="267.5" x2="86" y2="267.5" stroke="#262626" stroke-width="1"/>
+<text x="74" y="272.5" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">1</text>
+<line x1="86" y1="155.0" x2="526" y2="155.0" stroke="#E7E7E7" stroke-width="0.75"/>
+<line x1="81" y1="155.0" x2="86" y2="155.0" stroke="#262626" stroke-width="1"/>
+<text x="74" y="160.0" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">2</text>
+<line x1="86" y1="155" x2="86" y2="380" stroke="#262626" stroke-width="1"/>
+<line x1="86" y1="380" x2="526" y2="380" stroke="#262626" stroke-width="1"/>
+<text x="37" y="267.5" font-family="Arial" font-weight="700" font-size="17" text-anchor="middle" fill="#262626" transform="rotate(-90 37 267.5)">Expert score (0–2)</text>
+<rect x="104.0" y="323.75" width="20" height="56.25" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="108.45" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="112.15" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="115.85" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="119.55" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="131.0" y="155.0" width="20" height="225.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="135.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="139.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="142.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="146.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="158.0" y="155.0" width="20" height="225.0" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="162.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="166.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="169.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="173.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="141.0" y="409.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Factual</text>
+<text x="141.0" y="427.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">accuracy</text>
+<rect x="214.0" y="323.75" width="20" height="56.25" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="218.45" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="222.15" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="225.85" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="229.55" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="241.0" y="183.125" width="20" height="196.875" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="245.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="249.15" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="252.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="256.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="268.0" y="239.375" width="20" height="140.625" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="272.45" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="276.15" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="279.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="283.55" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="251.0" y="409.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Evidence</text>
+<text x="251.0" y="427.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">support</text>
+<rect x="324.0" y="351.875" width="20" height="28.125" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="328.45" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="332.15" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="335.85" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="339.55" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="351.0" y="155.0" width="20" height="225.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="355.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="359.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="362.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="366.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="378.0" y="211.25" width="20" height="168.75" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="382.45" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="386.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="389.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="393.55" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="361.0" y="409.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Requirement</text>
+<text x="361.0" y="427.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">completion</text>
+<rect x="434.0" y="267.5" width="20" height="112.5" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="438.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="442.15" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="445.85" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="449.55" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="461.0" y="183.125" width="20" height="196.875" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="465.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="469.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="472.85" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="476.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="488.0" y="211.25" width="20" height="168.75" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="492.45" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="496.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="499.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="503.55" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="471.0" y="409.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Boundary</text>
+<text x="471.0" y="427.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">handling</text>
+<text x="588" y="131.0" font-family="Arial" font-weight="700" font-size="23" text-anchor="start" fill="#262626">b</text>
+<text x="856.0" y="131.0" font-family="Arial" font-weight="700" font-size="21" text-anchor="middle" fill="#262626">Form B</text>
+<line x1="636" y1="380.0" x2="1076" y2="380.0" stroke="#E7E7E7" stroke-width="0.75"/>
+<line x1="631" y1="380.0" x2="636" y2="380.0" stroke="#262626" stroke-width="1"/>
+<text x="624" y="385.0" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">0</text>
+<line x1="636" y1="267.5" x2="1076" y2="267.5" stroke="#E7E7E7" stroke-width="0.75"/>
+<line x1="631" y1="267.5" x2="636" y2="267.5" stroke="#262626" stroke-width="1"/>
+<text x="624" y="272.5" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">1</text>
+<line x1="636" y1="155.0" x2="1076" y2="155.0" stroke="#E7E7E7" stroke-width="0.75"/>
+<line x1="631" y1="155.0" x2="636" y2="155.0" stroke="#262626" stroke-width="1"/>
+<text x="624" y="160.0" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">2</text>
+<line x1="636" y1="155" x2="636" y2="380" stroke="#262626" stroke-width="1"/>
+<line x1="636" y1="380" x2="1076" y2="380" stroke="#262626" stroke-width="1"/>
+<text x="587" y="267.5" font-family="Arial" font-weight="700" font-size="17" text-anchor="middle" fill="#262626" transform="rotate(-90 587 267.5)">Expert score (0–2)</text>
+<rect x="654.0" y="380.0" width="20" height="0.0" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="658.45" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="662.15" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="665.85" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="669.55" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="681.0" y="155.0" width="20" height="225.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="685.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="689.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="692.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="696.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="708.0" y="239.375" width="20" height="140.625" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="712.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="716.15" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="719.85" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="723.55" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="691.0" y="409.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Factual</text>
+<text x="691.0" y="427.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">accuracy</text>
+<rect x="764.0" y="380.0" width="20" height="0.0" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="768.45" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="772.15" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="775.85" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="779.55" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="791.0" y="183.125" width="20" height="196.875" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="795.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="799.15" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="802.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="806.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="818.0" y="239.375" width="20" height="140.625" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="822.45" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="826.15" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="829.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="833.55" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="801.0" y="409.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Evidence</text>
+<text x="801.0" y="427.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">support</text>
+<rect x="874.0" y="380.0" width="20" height="0.0" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="878.45" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="882.15" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="885.85" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="889.55" cy="380.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="901.0" y="183.125" width="20" height="196.875" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="905.45" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="909.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="912.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="916.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="928.0" y="267.5" width="20" height="112.5" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="932.45" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="936.15" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="939.85" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="943.55" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="911.0" y="409.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Requirement</text>
+<text x="911.0" y="427.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">completion</text>
+<rect x="984.0" y="239.375" width="20" height="140.625" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="988.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="992.15" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="995.85" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="999.55" cy="267.5" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="1011.0" y="155.0" width="20" height="225.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="1015.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="1019.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="1022.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="1026.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="1038.0" y="155.0" width="20" height="225.0" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="1042.45" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="1046.15" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="1049.85" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<circle cx="1053.55" cy="155.0" r="2.8" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="1021.0" y="409.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Boundary</text>
+<text x="1021.0" y="427.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">handling</text>
+<text x="42" y="467.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="start" fill="#262626">Dots: all task scores; bars: means. n = 4 task episode(s) per group.</text>
+<text x="42" y="494.0" font-family="Arial" font-weight="700" font-size="14" text-anchor="start" fill="#777777">Seen development cases. Rating–evidence discrepancies remain unresolved; forms are not pooled.</text>
+</svg>

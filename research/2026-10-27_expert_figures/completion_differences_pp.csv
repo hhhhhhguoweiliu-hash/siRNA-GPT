@@ -1,0 +1,19 @@
+﻿form,stratum,comparison,n_each,percentage_point_difference,status
+A,Standard tasks,agent_minus_llm,4,50.0,AS_SUBMITTED_NOT_ADJUDICATED
+A,Standard tasks,workflow_minus_llm,4,100.0,AS_SUBMITTED_NOT_ADJUDICATED
+A,Standard tasks,agent_minus_workflow,4,-50.0,AS_SUBMITTED_NOT_ADJUDICATED
+A,Requirement change,agent_minus_llm,1,0.0,AS_SUBMITTED_NOT_ADJUDICATED
+A,Requirement change,workflow_minus_llm,1,100.0,AS_SUBMITTED_NOT_ADJUDICATED
+A,Requirement change,agent_minus_workflow,1,-100.0,AS_SUBMITTED_NOT_ADJUDICATED
+A,Reliability,agent_minus_llm,4,25.0,AS_SUBMITTED_NOT_ADJUDICATED
+A,Reliability,workflow_minus_llm,4,50.0,AS_SUBMITTED_NOT_ADJUDICATED
+A,Reliability,agent_minus_workflow,4,-25.0,AS_SUBMITTED_NOT_ADJUDICATED
+B,Standard tasks,agent_minus_llm,4,0.0,AS_SUBMITTED_NOT_ADJUDICATED
+B,Standard tasks,workflow_minus_llm,4,75.0,AS_SUBMITTED_NOT_ADJUDICATED
+B,Standard tasks,agent_minus_workflow,4,-75.0,AS_SUBMITTED_NOT_ADJUDICATED
+B,Requirement change,agent_minus_llm,1,0.0,AS_SUBMITTED_NOT_ADJUDICATED
+B,Requirement change,workflow_minus_llm,1,100.0,AS_SUBMITTED_NOT_ADJUDICATED
+B,Requirement change,agent_minus_workflow,1,-100.0,AS_SUBMITTED_NOT_ADJUDICATED
+B,Reliability,agent_minus_llm,4,50.0,AS_SUBMITTED_NOT_ADJUDICATED
+B,Reliability,workflow_minus_llm,4,25.0,AS_SUBMITTED_NOT_ADJUDICATED
+B,Reliability,agent_minus_workflow,4,25.0,AS_SUBMITTED_NOT_ADJUDICATED

@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-27",
+  "reviewed_commit": "8c1009fcff2825612ae47cacee6a88d6cda98a24",
+  "run_evidence_commit": "4244ac0d9b9f0b1e01fe46f6871fd664825a4c24",
+  "status": "REVIEW_PENDING",
+  "new_expert_scores_entered": 0,
+  "new_model_calls": 0,
+  "files": [
+    {
+      "path": "completion_as_submitted.csv",
+      "size": 739,
+      "sha256": "5bd63d355e11ce71ee031b305028564e9ca985144f30f7c7b413aa24db7dcde5"
+    },
+    {
+      "path": "completion_differences_pp.csv",
+      "size": 1391,
+      "sha256": "c4aa3e0641b50d0c436b3e4a7eb267a72a181f2ce63af9288162e7e4bc21a439"
+    },
+    {
+      "path": "dimension_means.csv",
+      "size": 3616,
+      "sha256": "55a077bfb5a1dd7fe8295bd919084e35e56905304658346bba3287838bacb4ec"
+    },
+    {
+      "path": "expert_plot_data.xlsx",
+      "size": 18925,
+      "sha256": "0f337c80f85b0554ac23c5a710ab256101b01ba7e4c907cc5776760349c67cd4"
+    },
+    {
+      "path": "figure_checks.json",
+      "size": 1755,
+      "sha256": "15b2eb38b52a55dfc31f83834566a2d91f7ec85e7dc9981c71252a1b0f4383ff"
+    },
+    {
+      "path": "FIGURE_LEGENDS_EN.md",
+      "size": 3026,
+      "sha256": "b7072fc4311869ab458686158a4eb671f6b5fef3e845f393ce9fe8f1d9b8bef1"
+    },
+    {
+      "path": "figures/fig1_standard_quality.pdf",
+      "size": 42424,
+      "sha256": "4b8a1cb79de315155b9689de47e3bebd1a4c72c970bb740fd583f75d4f84a89c"
+    },
+    {
+      "path": "figures/fig1_standard_quality.png",
+      "size": 168976,
+      "sha256": "9365c6eccc2ebff4fc370e23fa02838985d5b72ffb9f26368a34e1b2d498518b"
+    },
+    {
+      "path": "figures/fig1_standard_quality.svg",
+      "size": 17990,
+      "sha256": "566d1a39b600dee916a8699e168aedb239aaf3d98cef8d374ed18a43601ac03d"
+    },
+    {
+      "path": "figures/fig2_completion_as_submitted.pdf",
+      "size": 35731,
+      "sha256": "4a233af825b25bc889e1155cdfb93aeed3442e28918a1cd71e691ae2acd9cd00"
+    },
+    {
+      "path": "figures/fig2_completion_as_submitted.png",
+      "size": 277786,
+      "sha256": "ef0ac3835a8c9fa2c7536f8fc5d55fbec531db67c7b8edf68ebc695d586b384d"
+    },
+    {
+      "path": "figures/fig2_completion_as_submitted.svg",
+      "size": 18425,
+      "sha256": "2adbd87dab280cfea0fbabfef8884658253b3dc88adee9dc6f358f200790acd8"
+    },
+    {
+      "path": "figures/figS1_reliability_quality.pdf",
+      "size": 42429,
+      "sha256": "e9ff2a28ddacf30514da95a4a680fe8f58d4ca20096292e7c355d553b2577a2c"
+    },
+    {
+      "path": "figures/figS1_reliability_quality.png",
+      "size": 168987,
+      "sha256": "883e40cb370ee4dac7ca396d522b0256738a57e32d5fc0c767cd347bc212a3d0"
+    },
+    {
+      "path": "figures/figS1_reliability_quality.svg",
+      "size": 18003,
+      "sha256": "5062cce4cb6cad7e7775be64484e59fd773c0169fe2efae1beb76a1f75cfc5c1"
+    },
+    {
+      "path": "figures/figS2_requirement_change_quality.pdf",
+      "size": 36997,
+      "sha256": "b686c38a672b1f4ab398cf843451673469cd2cbf2be898cacc0d3d984d109f7b"
+    },
+    {
+      "path": "figures/figS2_requirement_change_quality.png",
+      "size": 168728,
+      "sha256": "89997be99daca358b2c5f07a46a4f4ee233640ed311114c3aaa33950942624c4"
+    },
+    {
+      "path": "figures/figS2_requirement_change_quality.svg",
+      "size": 11303,
+      "sha256": "f8b371d8c293923d50a5ebd00f92495959d9049a72edc5fb5a1df7c6f0feeb52"
+    },
+    {
+      "path": "form_B_source_checks_NOT_RATINGS.json",
+      "size": 1861,
+      "sha256": "024e85799bba3471aac3b54fca3385bc9c315b030e1bc37dd80c4257a29666c6"
+    },
+    {
+      "path": "make_expert_figures.py",
+      "size": 14318,
+      "sha256": "a8aca89fec3556fd111c49aada50820d5188071a27348c8a422c87faf0bca813"
+    },
+    {
+      "path": "plot_data.json",
+      "size": 40413,
+      "sha256": "6c405aaf62f102fa008e1c419d25803c0e331359217c04a6a1420e29fbce163a"
+    },
+    {
+      "path": "README.md",
+      "size": 2528,
+      "sha256": "3c9a1e9d6aa807b0e6af0bab8780c20fcaf9c3ae226d150bad5aabc3a505bf0c"
+    },
+    {
+      "path": "scores_long.csv",
+      "size": 14123,
+      "sha256": "3e73f593c2365872ef2e3618036fa07e7131a53f2b56e4e4a51f8a408678711e"
+    },
+    {
+      "path": "siRNA_GPT_expert_figures_REVIEW_PENDING.pdf",
+      "size": 154809,
+      "sha256": "c00ef76ac8821d4009dfbb0f94aa1000c7ae0901296f6b0b3b418c1b15779c05"
+    },
+    {
+      "path": "source_completion_scores_original.xlsx",
+      "size": 13298,
+      "sha256": "97759996c7a8a2805e914fac6ee09d85428e35ff7e22a00de2bfa5318c84bcf4"
+    },
+    {
+      "path": "source_form_A_original.xlsx",
+      "size": 25410,
+      "sha256": "1463b5641298bee179b7c05b9f8b08697afdf856a055c57af7411ea9c995b675"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+本包内四页PDF、PNG/PDF/SVG图、两份原始评分、Excel/CSV数据及可复现脚本。评分理由与原答仍有不符，图为原分展示，尚未裁决；两表未合并。详见reviews下两份复核。运行：python make_expert_figures.py run_source/results_original.json。此操作不调用模型。

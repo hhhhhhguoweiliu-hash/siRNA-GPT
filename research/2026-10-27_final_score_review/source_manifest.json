@@ -1,0 +1,23 @@
+{
+  "review_date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "source_filename": "siRNA_GPT_三组问答_专家评分表_最终版.xlsx",
+  "source_preserved_as": "source_workbook_original.xlsx",
+  "source_size_bytes": 25410,
+  "source_sha256": "1463b5641298bee179b7c05b9f8b08697afdf856a055c57af7411ea9c995b675",
+  "user_confirmed_expert_review": true,
+  "user_statement": "之前那个评分表，我让专家复核了",
+  "reviewer_count": null,
+  "reviewer_independence_not_documented_in_file": true,
+  "number_of_submitted_score_files": 1,
+  "reviewed_branch_commit": "8c1009fcff2825612ae47cacee6a88d6cda98a24",
+  "run_evidence_commit": "4244ac0d9b9f0b1e01fe46f6871fd664825a4c24",
+  "run_source_commit": "6c13c5788405e8ecf1aaf77144accd8108701d48",
+  "run_id": "mini_real_20261027_061408",
+  "results_sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3",
+  "source_or_scores_modified_by_assistant": false,
+  "new_ratings_added": 0,
+  "new_model_calls": 0,
+  "new_scientific_computation": 0,
+  "purpose": "Preserve expert-reviewed submission, check against actual recorded evidence, and calculate stratified descriptive arithmetic; no new human or LLM scores."
+}

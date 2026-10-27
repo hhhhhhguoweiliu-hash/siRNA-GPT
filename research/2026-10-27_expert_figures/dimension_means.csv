@@ -1,0 +1,73 @@
+﻿form,stratum,group,dimension,n,mean
+A,Standard tasks,llm,factual_accuracy,4,0.5
+A,Standard tasks,llm,evidence_support,4,0.5
+A,Standard tasks,llm,requirement_completion,4,0.25
+A,Standard tasks,llm,boundary_handling,4,1.0
+A,Standard tasks,workflow,factual_accuracy,4,2.0
+A,Standard tasks,workflow,evidence_support,4,1.75
+A,Standard tasks,workflow,requirement_completion,4,2.0
+A,Standard tasks,workflow,boundary_handling,4,1.75
+A,Standard tasks,agent,factual_accuracy,4,2.0
+A,Standard tasks,agent,evidence_support,4,1.25
+A,Standard tasks,agent,requirement_completion,4,1.5
+A,Standard tasks,agent,boundary_handling,4,1.5
+A,Requirement change,llm,factual_accuracy,1,1.0
+A,Requirement change,llm,evidence_support,1,1.0
+A,Requirement change,llm,requirement_completion,1,0.0
+A,Requirement change,llm,boundary_handling,1,1.0
+A,Requirement change,workflow,factual_accuracy,1,2.0
+A,Requirement change,workflow,evidence_support,1,2.0
+A,Requirement change,workflow,requirement_completion,1,2.0
+A,Requirement change,workflow,boundary_handling,1,2.0
+A,Requirement change,agent,factual_accuracy,1,2.0
+A,Requirement change,agent,evidence_support,1,1.0
+A,Requirement change,agent,requirement_completion,1,2.0
+A,Requirement change,agent,boundary_handling,1,1.0
+A,Reliability,llm,factual_accuracy,4,1.25
+A,Reliability,llm,evidence_support,4,1.0
+A,Reliability,llm,requirement_completion,4,1.25
+A,Reliability,llm,boundary_handling,4,1.25
+A,Reliability,workflow,factual_accuracy,4,1.75
+A,Reliability,workflow,evidence_support,4,1.5
+A,Reliability,workflow,requirement_completion,4,1.5
+A,Reliability,workflow,boundary_handling,4,1.75
+A,Reliability,agent,factual_accuracy,4,2.0
+A,Reliability,agent,evidence_support,4,1.25
+A,Reliability,agent,requirement_completion,4,1.75
+A,Reliability,agent,boundary_handling,4,1.5
+B,Standard tasks,llm,factual_accuracy,4,0.0
+B,Standard tasks,llm,evidence_support,4,0.0
+B,Standard tasks,llm,requirement_completion,4,0.0
+B,Standard tasks,llm,boundary_handling,4,1.25
+B,Standard tasks,workflow,factual_accuracy,4,2.0
+B,Standard tasks,workflow,evidence_support,4,1.75
+B,Standard tasks,workflow,requirement_completion,4,1.75
+B,Standard tasks,workflow,boundary_handling,4,2.0
+B,Standard tasks,agent,factual_accuracy,4,1.25
+B,Standard tasks,agent,evidence_support,4,1.25
+B,Standard tasks,agent,requirement_completion,4,1.0
+B,Standard tasks,agent,boundary_handling,4,2.0
+B,Requirement change,llm,factual_accuracy,1,1.0
+B,Requirement change,llm,evidence_support,1,1.0
+B,Requirement change,llm,requirement_completion,1,1.0
+B,Requirement change,llm,boundary_handling,1,2.0
+B,Requirement change,workflow,factual_accuracy,1,2.0
+B,Requirement change,workflow,evidence_support,1,1.0
+B,Requirement change,workflow,requirement_completion,1,2.0
+B,Requirement change,workflow,boundary_handling,1,2.0
+B,Requirement change,agent,factual_accuracy,1,1.0
+B,Requirement change,agent,evidence_support,1,1.0
+B,Requirement change,agent,requirement_completion,1,2.0
+B,Requirement change,agent,boundary_handling,1,2.0
+B,Reliability,llm,factual_accuracy,4,0.5
+B,Reliability,llm,evidence_support,4,0.5
+B,Reliability,llm,requirement_completion,4,0.5
+B,Reliability,llm,boundary_handling,4,1.5
+B,Reliability,workflow,factual_accuracy,4,1.0
+B,Reliability,workflow,evidence_support,4,1.25
+B,Reliability,workflow,requirement_completion,4,1.5
+B,Reliability,workflow,boundary_handling,4,1.75
+B,Reliability,agent,factual_accuracy,4,1.0
+B,Reliability,agent,evidence_support,4,1.5
+B,Reliability,agent,requirement_completion,4,2.0
+B,Reliability,agent,boundary_handling,4,2.0

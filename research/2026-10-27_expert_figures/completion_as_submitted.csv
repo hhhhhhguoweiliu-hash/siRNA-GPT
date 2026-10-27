@@ -1,0 +1,19 @@
+﻿form,stratum,group,n,completed,partial,not_completed,percent
+A,Standard tasks,llm,4,0,1,3,0.0
+A,Standard tasks,workflow,4,4,0,0,100.0
+A,Standard tasks,agent,4,2,2,0,50.0
+A,Requirement change,llm,1,0,0,1,0.0
+A,Requirement change,workflow,1,1,0,0,100.0
+A,Requirement change,agent,1,0,1,0,0.0
+A,Reliability,llm,4,1,3,0,25.0
+A,Reliability,workflow,4,3,0,1,75.0
+A,Reliability,agent,4,2,2,0,50.0
+B,Standard tasks,llm,4,0,0,4,0.0
+B,Standard tasks,workflow,4,3,1,0,75.0
+B,Standard tasks,agent,4,0,4,0,0.0
+B,Requirement change,llm,1,0,1,0,0.0
+B,Requirement change,workflow,1,1,0,0,100.0
+B,Requirement change,agent,1,0,1,0,0.0
+B,Reliability,llm,4,1,0,3,25.0
+B,Reliability,workflow,4,2,1,1,50.0
+B,Reliability,agent,4,3,1,0,75.0

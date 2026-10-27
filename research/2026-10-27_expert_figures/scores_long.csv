@@ -1,0 +1,217 @@
+﻿form,answer_id,case_id,group,stratum,dimension,score,source_sheet,source_row
+A,A004,W1,agent,Standard tasks,factual_accuracy,2,评分总表,2
+A,A004,W1,agent,Standard tasks,evidence_support,1,评分总表,2
+A,A004,W1,agent,Standard tasks,requirement_completion,1,评分总表,2
+A,A004,W1,agent,Standard tasks,boundary_handling,1,评分总表,2
+A,A018,W1,llm,Standard tasks,factual_accuracy,1,评分总表,3
+A,A018,W1,llm,Standard tasks,evidence_support,1,评分总表,3
+A,A018,W1,llm,Standard tasks,requirement_completion,0,评分总表,3
+A,A018,W1,llm,Standard tasks,boundary_handling,2,评分总表,3
+A,A026,W1,workflow,Standard tasks,factual_accuracy,2,评分总表,4
+A,A026,W1,workflow,Standard tasks,evidence_support,2,评分总表,4
+A,A026,W1,workflow,Standard tasks,requirement_completion,2,评分总表,4
+A,A026,W1,workflow,Standard tasks,boundary_handling,2,评分总表,4
+A,A007,W2,agent,Standard tasks,factual_accuracy,2,评分总表,5
+A,A007,W2,agent,Standard tasks,evidence_support,1,评分总表,5
+A,A007,W2,agent,Standard tasks,requirement_completion,2,评分总表,5
+A,A007,W2,agent,Standard tasks,boundary_handling,2,评分总表,5
+A,A020,W2,llm,Standard tasks,factual_accuracy,0,评分总表,6
+A,A020,W2,llm,Standard tasks,evidence_support,0,评分总表,6
+A,A020,W2,llm,Standard tasks,requirement_completion,1,评分总表,6
+A,A020,W2,llm,Standard tasks,boundary_handling,1,评分总表,6
+A,A027,W2,workflow,Standard tasks,factual_accuracy,2,评分总表,7
+A,A027,W2,workflow,Standard tasks,evidence_support,1,评分总表,7
+A,A027,W2,workflow,Standard tasks,requirement_completion,2,评分总表,7
+A,A027,W2,workflow,Standard tasks,boundary_handling,2,评分总表,7
+A,A013,W2b,agent,Standard tasks,factual_accuracy,2,评分总表,8
+A,A013,W2b,agent,Standard tasks,evidence_support,2,评分总表,8
+A,A013,W2b,agent,Standard tasks,requirement_completion,2,评分总表,8
+A,A013,W2b,agent,Standard tasks,boundary_handling,2,评分总表,8
+A,A019,W2b,workflow,Standard tasks,factual_accuracy,2,评分总表,9
+A,A019,W2b,workflow,Standard tasks,evidence_support,2,评分总表,9
+A,A019,W2b,workflow,Standard tasks,requirement_completion,2,评分总表,9
+A,A019,W2b,workflow,Standard tasks,boundary_handling,1,评分总表,9
+A,A024,W2b,llm,Standard tasks,factual_accuracy,1,评分总表,10
+A,A024,W2b,llm,Standard tasks,evidence_support,1,评分总表,10
+A,A024,W2b,llm,Standard tasks,requirement_completion,0,评分总表,10
+A,A024,W2b,llm,Standard tasks,boundary_handling,1,评分总表,10
+A,A002,W3,agent,Standard tasks,factual_accuracy,2,评分总表,11
+A,A002,W3,agent,Standard tasks,evidence_support,1,评分总表,11
+A,A002,W3,agent,Standard tasks,requirement_completion,1,评分总表,11
+A,A002,W3,agent,Standard tasks,boundary_handling,1,评分总表,11
+A,A005,W3,workflow,Standard tasks,factual_accuracy,2,评分总表,12
+A,A005,W3,workflow,Standard tasks,evidence_support,2,评分总表,12
+A,A005,W3,workflow,Standard tasks,requirement_completion,2,评分总表,12
+A,A005,W3,workflow,Standard tasks,boundary_handling,2,评分总表,12
+A,A006,W3,llm,Standard tasks,factual_accuracy,0,评分总表,13
+A,A006,W3,llm,Standard tasks,evidence_support,0,评分总表,13
+A,A006,W3,llm,Standard tasks,requirement_completion,0,评分总表,13
+A,A006,W3,llm,Standard tasks,boundary_handling,0,评分总表,13
+A,A001,U1,llm,Requirement change,factual_accuracy,1,评分总表,14
+A,A001,U1,llm,Requirement change,evidence_support,1,评分总表,14
+A,A001,U1,llm,Requirement change,requirement_completion,0,评分总表,14
+A,A001,U1,llm,Requirement change,boundary_handling,1,评分总表,14
+A,A014,U1,agent,Requirement change,factual_accuracy,2,评分总表,15
+A,A014,U1,agent,Requirement change,evidence_support,1,评分总表,15
+A,A014,U1,agent,Requirement change,requirement_completion,2,评分总表,15
+A,A014,U1,agent,Requirement change,boundary_handling,1,评分总表,15
+A,A021,U1,workflow,Requirement change,factual_accuracy,2,评分总表,16
+A,A021,U1,workflow,Requirement change,evidence_support,2,评分总表,16
+A,A021,U1,workflow,Requirement change,requirement_completion,2,评分总表,16
+A,A021,U1,workflow,Requirement change,boundary_handling,2,评分总表,16
+A,A012,R1,workflow,Reliability,factual_accuracy,2,评分总表,17
+A,A012,R1,workflow,Reliability,evidence_support,2,评分总表,17
+A,A012,R1,workflow,Reliability,requirement_completion,2,评分总表,17
+A,A012,R1,workflow,Reliability,boundary_handling,2,评分总表,17
+A,A016,R1,llm,Reliability,factual_accuracy,1,评分总表,18
+A,A016,R1,llm,Reliability,evidence_support,1,评分总表,18
+A,A016,R1,llm,Reliability,requirement_completion,1,评分总表,18
+A,A016,R1,llm,Reliability,boundary_handling,1,评分总表,18
+A,A017,R1,agent,Reliability,factual_accuracy,2,评分总表,19
+A,A017,R1,agent,Reliability,evidence_support,1,评分总表,19
+A,A017,R1,agent,Reliability,requirement_completion,2,评分总表,19
+A,A017,R1,agent,Reliability,boundary_handling,1,评分总表,19
+A,A008,R2,llm,Reliability,factual_accuracy,2,评分总表,20
+A,A008,R2,llm,Reliability,evidence_support,1,评分总表,20
+A,A008,R2,llm,Reliability,requirement_completion,2,评分总表,20
+A,A008,R2,llm,Reliability,boundary_handling,2,评分总表,20
+A,A010,R2,agent,Reliability,factual_accuracy,2,评分总表,21
+A,A010,R2,agent,Reliability,evidence_support,1,评分总表,21
+A,A010,R2,agent,Reliability,requirement_completion,1,评分总表,21
+A,A010,R2,agent,Reliability,boundary_handling,1,评分总表,21
+A,A023,R2,workflow,Reliability,factual_accuracy,1,评分总表,22
+A,A023,R2,workflow,Reliability,evidence_support,1,评分总表,22
+A,A023,R2,workflow,Reliability,requirement_completion,0,评分总表,22
+A,A023,R2,workflow,Reliability,boundary_handling,1,评分总表,22
+A,A009,R3,workflow,Reliability,factual_accuracy,2,评分总表,23
+A,A009,R3,workflow,Reliability,evidence_support,1,评分总表,23
+A,A009,R3,workflow,Reliability,requirement_completion,2,评分总表,23
+A,A009,R3,workflow,Reliability,boundary_handling,2,评分总表,23
+A,A015,R3,llm,Reliability,factual_accuracy,1,评分总表,24
+A,A015,R3,llm,Reliability,evidence_support,1,评分总表,24
+A,A015,R3,llm,Reliability,requirement_completion,1,评分总表,24
+A,A015,R3,llm,Reliability,boundary_handling,1,评分总表,24
+A,A022,R3,agent,Reliability,factual_accuracy,2,评分总表,25
+A,A022,R3,agent,Reliability,evidence_support,1,评分总表,25
+A,A022,R3,agent,Reliability,requirement_completion,2,评分总表,25
+A,A022,R3,agent,Reliability,boundary_handling,2,评分总表,25
+A,A003,R4,llm,Reliability,factual_accuracy,1,评分总表,26
+A,A003,R4,llm,Reliability,evidence_support,1,评分总表,26
+A,A003,R4,llm,Reliability,requirement_completion,1,评分总表,26
+A,A003,R4,llm,Reliability,boundary_handling,1,评分总表,26
+A,A011,R4,workflow,Reliability,factual_accuracy,2,评分总表,27
+A,A011,R4,workflow,Reliability,evidence_support,2,评分总表,27
+A,A011,R4,workflow,Reliability,requirement_completion,2,评分总表,27
+A,A011,R4,workflow,Reliability,boundary_handling,2,评分总表,27
+A,A025,R4,agent,Reliability,factual_accuracy,2,评分总表,28
+A,A025,R4,agent,Reliability,evidence_support,2,评分总表,28
+A,A025,R4,agent,Reliability,requirement_completion,2,评分总表,28
+A,A025,R4,agent,Reliability,boundary_handling,2,评分总表,28
+B,A004,W1,agent,Standard tasks,factual_accuracy,2,Sheet1,2
+B,A004,W1,agent,Standard tasks,evidence_support,1,Sheet1,2
+B,A004,W1,agent,Standard tasks,requirement_completion,1,Sheet1,2
+B,A004,W1,agent,Standard tasks,boundary_handling,2,Sheet1,2
+B,A018,W1,llm,Standard tasks,factual_accuracy,0,Sheet1,3
+B,A018,W1,llm,Standard tasks,evidence_support,0,Sheet1,3
+B,A018,W1,llm,Standard tasks,requirement_completion,0,Sheet1,3
+B,A018,W1,llm,Standard tasks,boundary_handling,2,Sheet1,3
+B,A026,W1,workflow,Standard tasks,factual_accuracy,2,Sheet1,4
+B,A026,W1,workflow,Standard tasks,evidence_support,2,Sheet1,4
+B,A026,W1,workflow,Standard tasks,requirement_completion,1,Sheet1,4
+B,A026,W1,workflow,Standard tasks,boundary_handling,2,Sheet1,4
+B,A007,W2,agent,Standard tasks,factual_accuracy,1,Sheet1,5
+B,A007,W2,agent,Standard tasks,evidence_support,1,Sheet1,5
+B,A007,W2,agent,Standard tasks,requirement_completion,1,Sheet1,5
+B,A007,W2,agent,Standard tasks,boundary_handling,2,Sheet1,5
+B,A020,W2,llm,Standard tasks,factual_accuracy,0,Sheet1,6
+B,A020,W2,llm,Standard tasks,evidence_support,0,Sheet1,6
+B,A020,W2,llm,Standard tasks,requirement_completion,0,Sheet1,6
+B,A020,W2,llm,Standard tasks,boundary_handling,1,Sheet1,6
+B,A027,W2,workflow,Standard tasks,factual_accuracy,2,Sheet1,7
+B,A027,W2,workflow,Standard tasks,evidence_support,1,Sheet1,7
+B,A027,W2,workflow,Standard tasks,requirement_completion,2,Sheet1,7
+B,A027,W2,workflow,Standard tasks,boundary_handling,2,Sheet1,7
+B,A013,W2b,agent,Standard tasks,factual_accuracy,1,Sheet1,8
+B,A013,W2b,agent,Standard tasks,evidence_support,2,Sheet1,8
+B,A013,W2b,agent,Standard tasks,requirement_completion,1,Sheet1,8
+B,A013,W2b,agent,Standard tasks,boundary_handling,2,Sheet1,8
+B,A019,W2b,workflow,Standard tasks,factual_accuracy,2,Sheet1,9
+B,A019,W2b,workflow,Standard tasks,evidence_support,2,Sheet1,9
+B,A019,W2b,workflow,Standard tasks,requirement_completion,2,Sheet1,9
+B,A019,W2b,workflow,Standard tasks,boundary_handling,2,Sheet1,9
+B,A024,W2b,llm,Standard tasks,factual_accuracy,0,Sheet1,10
+B,A024,W2b,llm,Standard tasks,evidence_support,0,Sheet1,10
+B,A024,W2b,llm,Standard tasks,requirement_completion,0,Sheet1,10
+B,A024,W2b,llm,Standard tasks,boundary_handling,1,Sheet1,10
+B,A002,W3,agent,Standard tasks,factual_accuracy,1,Sheet1,11
+B,A002,W3,agent,Standard tasks,evidence_support,1,Sheet1,11
+B,A002,W3,agent,Standard tasks,requirement_completion,1,Sheet1,11
+B,A002,W3,agent,Standard tasks,boundary_handling,2,Sheet1,11
+B,A005,W3,workflow,Standard tasks,factual_accuracy,2,Sheet1,12
+B,A005,W3,workflow,Standard tasks,evidence_support,2,Sheet1,12
+B,A005,W3,workflow,Standard tasks,requirement_completion,2,Sheet1,12
+B,A005,W3,workflow,Standard tasks,boundary_handling,2,Sheet1,12
+B,A006,W3,llm,Standard tasks,factual_accuracy,0,Sheet1,13
+B,A006,W3,llm,Standard tasks,evidence_support,0,Sheet1,13
+B,A006,W3,llm,Standard tasks,requirement_completion,0,Sheet1,13
+B,A006,W3,llm,Standard tasks,boundary_handling,1,Sheet1,13
+B,A001,U1,llm,Requirement change,factual_accuracy,1,Sheet1,14
+B,A001,U1,llm,Requirement change,evidence_support,1,Sheet1,14
+B,A001,U1,llm,Requirement change,requirement_completion,1,Sheet1,14
+B,A001,U1,llm,Requirement change,boundary_handling,2,Sheet1,14
+B,A014,U1,agent,Requirement change,factual_accuracy,1,Sheet1,15
+B,A014,U1,agent,Requirement change,evidence_support,1,Sheet1,15
+B,A014,U1,agent,Requirement change,requirement_completion,2,Sheet1,15
+B,A014,U1,agent,Requirement change,boundary_handling,2,Sheet1,15
+B,A021,U1,workflow,Requirement change,factual_accuracy,2,Sheet1,16
+B,A021,U1,workflow,Requirement change,evidence_support,1,Sheet1,16
+B,A021,U1,workflow,Requirement change,requirement_completion,2,Sheet1,16
+B,A021,U1,workflow,Requirement change,boundary_handling,2,Sheet1,16
+B,A012,R1,workflow,Reliability,factual_accuracy,1,Sheet1,17
+B,A012,R1,workflow,Reliability,evidence_support,1,Sheet1,17
+B,A012,R1,workflow,Reliability,requirement_completion,2,Sheet1,17
+B,A012,R1,workflow,Reliability,boundary_handling,2,Sheet1,17
+B,A016,R1,llm,Reliability,factual_accuracy,0,Sheet1,18
+B,A016,R1,llm,Reliability,evidence_support,0,Sheet1,18
+B,A016,R1,llm,Reliability,requirement_completion,0,Sheet1,18
+B,A016,R1,llm,Reliability,boundary_handling,1,Sheet1,18
+B,A017,R1,agent,Reliability,factual_accuracy,1,Sheet1,19
+B,A017,R1,agent,Reliability,evidence_support,1,Sheet1,19
+B,A017,R1,agent,Reliability,requirement_completion,2,Sheet1,19
+B,A017,R1,agent,Reliability,boundary_handling,2,Sheet1,19
+B,A008,R2,llm,Reliability,factual_accuracy,1,Sheet1,20
+B,A008,R2,llm,Reliability,evidence_support,1,Sheet1,20
+B,A008,R2,llm,Reliability,requirement_completion,2,Sheet1,20
+B,A008,R2,llm,Reliability,boundary_handling,2,Sheet1,20
+B,A010,R2,agent,Reliability,factual_accuracy,1,Sheet1,21
+B,A010,R2,agent,Reliability,evidence_support,1,Sheet1,21
+B,A010,R2,agent,Reliability,requirement_completion,2,Sheet1,21
+B,A010,R2,agent,Reliability,boundary_handling,2,Sheet1,21
+B,A023,R2,workflow,Reliability,factual_accuracy,0,Sheet1,22
+B,A023,R2,workflow,Reliability,evidence_support,0,Sheet1,22
+B,A023,R2,workflow,Reliability,requirement_completion,0,Sheet1,22
+B,A023,R2,workflow,Reliability,boundary_handling,1,Sheet1,22
+B,A009,R3,workflow,Reliability,factual_accuracy,2,Sheet1,23
+B,A009,R3,workflow,Reliability,evidence_support,2,Sheet1,23
+B,A009,R3,workflow,Reliability,requirement_completion,2,Sheet1,23
+B,A009,R3,workflow,Reliability,boundary_handling,2,Sheet1,23
+B,A015,R3,llm,Reliability,factual_accuracy,1,Sheet1,24
+B,A015,R3,llm,Reliability,evidence_support,1,Sheet1,24
+B,A015,R3,llm,Reliability,requirement_completion,0,Sheet1,24
+B,A015,R3,llm,Reliability,boundary_handling,1,Sheet1,24
+B,A022,R3,agent,Reliability,factual_accuracy,1,Sheet1,25
+B,A022,R3,agent,Reliability,evidence_support,2,Sheet1,25
+B,A022,R3,agent,Reliability,requirement_completion,2,Sheet1,25
+B,A022,R3,agent,Reliability,boundary_handling,2,Sheet1,25
+B,A003,R4,llm,Reliability,factual_accuracy,0,Sheet1,26
+B,A003,R4,llm,Reliability,evidence_support,0,Sheet1,26
+B,A003,R4,llm,Reliability,requirement_completion,0,Sheet1,26
+B,A003,R4,llm,Reliability,boundary_handling,2,Sheet1,26
+B,A011,R4,workflow,Reliability,factual_accuracy,1,Sheet1,27
+B,A011,R4,workflow,Reliability,evidence_support,2,Sheet1,27
+B,A011,R4,workflow,Reliability,requirement_completion,2,Sheet1,27
+B,A011,R4,workflow,Reliability,boundary_handling,2,Sheet1,27
+B,A025,R4,agent,Reliability,factual_accuracy,1,Sheet1,28
+B,A025,R4,agent,Reliability,evidence_support,2,Sheet1,28
+B,A025,R4,agent,Reliability,requirement_completion,2,Sheet1,28
+B,A025,R4,agent,Reliability,boundary_handling,2,Sheet1,28
