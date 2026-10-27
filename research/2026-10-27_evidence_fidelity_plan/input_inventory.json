@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "reviewed_commit": "bfa1a0d19f5e207fc0ef4804b14c89ae7834a965",
+  "scope": "File availability, headers and SHA256 verification only; not a new scientific calculation",
+  "verified_files": [
+    {
+      "path": "C:\\00000\\ARPE RNA-seq\\result\\result\\6_expression\\expression\\gene_tpm.xls",
+      "bytes": 3041039,
+      "sha256": "c0ef6fbcfb5ae62f3979dfa1e359dd4d046caa1a281d72ff3816fd22ad5bcdcc",
+      "header_fields": [
+        "",
+        "Hyp1",
+        "Hyp2",
+        "Hyp3",
+        "Hyp4",
+        "Nor1",
+        "Nor2",
+        "Nor3",
+        "Nor4"
+      ],
+      "first_data_field_count": 9,
+      "is_text_tsv_despite_xls_suffix": true
+    },
+    {
+      "path": "analysis\\ARPE19_candidates_20261016\\prepared\\refseq_utr3_representative.fasta",
+      "bytes": 37782141,
+      "sha256": "8a7a99ecc7346c50c76e37cd24cd851ce96adb348cc447f007233e2f10aac779"
+    },
+    {
+      "path": "analysis\\ARPE19_candidates_20261016\\prepared\\utr_manifest_representative.tsv",
+      "bytes": 3685886,
+      "sha256": "a63dd3668d6cdb439a816c475b1cb9181183fd2bb2e76212d3a2fe0076d56aab"
+    },
+    {
+      "path": "analysis\\ARPE19_candidates_20261016\\official_tools\\SeedMatchR_1.1.1\\R\\get_seed.R",
+      "bytes": 4045,
+      "sha256": "164853a2be7a6b1a7f047604cd92e465ef1e7c73384f28d66df7bdca2835e9b9",
+      "base_seed_lines": [
+        "#' * `Seed.Seq.RNA`: The seed sequence as a `RNAString`",
+        "        base.seed = Biostrings::RNAString(substring(guide.seq, 2, 8))",
+        "        seed.rev.comp.dna = Biostrings::reverseComplement(Biostrings::DNAString(base.seed))",
+        "         rna.string = Biostrings::RNAString(guide.seq)",
+        "         base.seed = substr(rna.string, start.pos, stop.pos)",
+        "         seed.seq.rna = Biostrings::RNAString(base.seed)",
+        "    return(c(Guide = Biostrings::RNAString(guide.seq),",
+        "             Seed.Seq.RNA = Biostrings::RNAString(Biostrings::reverseComplement(seed.target.seq)),"
+      ]
+    }
+  ],
+  "optional_weights_availability_only": [
+    {
+      "path": "analysis/ARPE19_candidates_20261016/official_tools/OligoFormer/model/best_model.pth",
+      "exists": true,
+      "bytes": 5804894,
+      "sha256_rechecked_this_review": false
+    },
+    {
+      "path": "analysis/ARPE19_candidates_20261016/official_tools/RNA-FM/RNA-FM_pretrained.pth",
+      "exists": true,
+      "bytes": 1194424423,
+      "sha256_rechecked_this_review": false
+    }
+  ],
+  "environment_runnable_verified": false,
+  "source_manifest": "research/2026-10-24_candidate_v2/input_assets.json",
+  "note": "The historical expression origin ZIP path was absent, but the actual unpacked company per-sample TPM was found and hashed. No user re-upload is currently needed."
+}

@@ -1,0 +1,1 @@
+check_id,layer,candidate_id,strand_role,source_version,input_sha256,unit,scope,original_record_locator,original_value,recomputed_value,discrepancy,compared_items,missing_items,shared_dependencies,status,evidence_locator,run_id,elapsed_seconds,exit_code,independent_human_review_status

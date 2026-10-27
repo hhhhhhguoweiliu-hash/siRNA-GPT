@@ -1,0 +1,64 @@
+{
+  "reviewed_commit": "bfa1a0d19f5e207fc0ef4804b14c89ae7834a965",
+  "status": "PLAN_ONLY_NOT_EXECUTED",
+  "construct_zh": "工具证据检索与报告保真度",
+  "construct_en": "Tool-evidence retrieval and report fidelity",
+  "order": [
+    "L1_scope_and_answer_origin",
+    "L2_conditional_consistency",
+    "L3_raw_TPM_and_seed_exact_recount",
+    "L4_limited_offline_controls"
+  ],
+  "must_not_assume": [
+    "all_seed_sites_minus_nontarget_sites_always_equals_one",
+    "one_base_mutation_must_change_global_coordinate",
+    "reverse_complement_representation_never_matches",
+    "arithmetic_consistency_proves_external_validity",
+    "computational_reproduction_proves_knockdown_or_offtarget",
+    "same_official_results_are_independent_biological_ground_truth"
+  ],
+  "primary_independent_checks": [
+    {
+      "id": "L3_TPM",
+      "input": "original eight-sample company TPM table",
+      "not_input": "packaged detected-replicate counts or query_expression final totals",
+      "comparison": "per-gene mapped and detected sets plus per-candidate totals",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "L3_SEED",
+      "input": "same archived representative 3UTR FASTA, manifest and actual guide definition",
+      "method": "validation-only exact overlapping target-seed match counter; not a replacement scientific tool",
+      "comparison": "exact per-transcript and per-gene sites, target/non-target partition",
+      "status": "NOT_EXECUTED"
+    }
+  ],
+  "guide_panel": [
+    "VEGFA_SD_1157",
+    "VEGFA_SD_2739",
+    "VEGFA_SD_3119",
+    "VEGFA_SD_3193",
+    "VEGFA_SD_3429",
+    "VEGFA_SD_3499",
+    "VEGFA_SD_3500",
+    "VEGFA_SD_3502",
+    "VEGFA_SD_3535",
+    "USER_PURCHASED_siVEGF"
+  ],
+  "optional": "Independent OligoFormer reproduction only if existing resources permit; no paid compute, training or broad scan",
+  "shared_dependencies_to_disclose": [
+    "reference FASTA and annotation version",
+    "static feature-to-gene mapping",
+    "official seed definition",
+    "same raw TPM measurement",
+    "same model weights if model reproduction is performed"
+  ],
+  "new_model_calls": 0,
+  "new_scientific_results": 0,
+  "new_human_ratings": 0,
+  "paid_batch_authorized": false,
+  "historical_answers_modified": false,
+  "historical_scores_modified": false,
+  "classification_metrics": null,
+  "acceptance": "Real output and all discrepancies are required; missing or unequal results must not be relabelled PASS."
+}
