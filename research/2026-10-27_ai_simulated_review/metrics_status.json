@@ -1,0 +1,153 @@
+{
+  "evaluator": "ChatGPT",
+  "review_date": "2026-10-27",
+  "review_version": "AI_PRE_REVIEW_2026-10-27_v1",
+  "reviewed_branch": "codex/20261020-evidence-pilot",
+  "reviewed_head": "bfa1a0d19f5e207fc0ef4804b14c89ae7834a965",
+  "source_run": "mini_real_20261027_061408",
+  "n_original_answers": 27,
+  "n_turns": 33,
+  "n_tasks_per_group": 9,
+  "n_draft_items_active_9_cases": 59,
+  "n_draft_items_total": 70,
+  "n_unrun_Q1_Q2_items": 11,
+  "n_atomic_required_slots": 130,
+  "n_slot_judgements": 390,
+  "slot_status_counts": {
+    "CORRECT": 292,
+    "WRONG": 13,
+    "MISSING": 85,
+    "UNJUDGED": 0,
+    "NOT_APPLICABLE": 0
+  },
+  "task_verdict_counts": {
+    "llm": "1/9",
+    "workflow": "8/9",
+    "agent": "7/9"
+  },
+  "overall_metrics": [
+    {
+      "group": "普通LLM",
+      "task_accuracy": "1/9",
+      "slot_n": 130,
+      "TP": 55,
+      "FP": 12,
+      "FN": 75,
+      "micro_P": 0.8209,
+      "micro_R": 0.4231,
+      "micro_F1": 0.5584,
+      "macro_P": 0.9222,
+      "macro_R": 0.486,
+      "macro_F1": 0.6161
+    },
+    {
+      "group": "固定流程",
+      "task_accuracy": "8/9",
+      "slot_n": 130,
+      "TP": 125,
+      "FP": 0,
+      "FN": 5,
+      "micro_P": 1,
+      "micro_R": 0.9615,
+      "micro_F1": 0.9804,
+      "macro_P": 1,
+      "macro_R": 0.9306,
+      "macro_F1": 0.9495
+    },
+    {
+      "group": "Agent",
+      "task_accuracy": "7/9",
+      "slot_n": 130,
+      "TP": 112,
+      "FP": 1,
+      "FN": 18,
+      "micro_P": 0.9912,
+      "micro_R": 0.8615,
+      "micro_F1": 0.9218,
+      "macro_P": 0.7778,
+      "macro_R": 0.7778,
+      "macro_F1": 0.7778
+    }
+  ],
+  "category_metrics": [
+    {
+      "group": "普通LLM",
+      "category": "标准任务",
+      "task_accuracy": "0/4",
+      "macro_P": 0.825,
+      "macro_R": 0.344,
+      "macro_F1": 0.4744
+    },
+    {
+      "group": "普通LLM",
+      "category": "可靠性任务",
+      "task_accuracy": "1/4",
+      "macro_P": 1,
+      "macro_R": 0.5904,
+      "macro_F1": 0.7174
+    },
+    {
+      "group": "普通LLM",
+      "category": "需求变化任务",
+      "task_accuracy": "0/1",
+      "macro_P": 1,
+      "macro_R": 0.6364,
+      "macro_F1": 0.7778
+    },
+    {
+      "group": "固定流程",
+      "category": "标准任务",
+      "task_accuracy": "4/4",
+      "macro_P": 1,
+      "macro_R": 1,
+      "macro_F1": 1
+    },
+    {
+      "group": "固定流程",
+      "category": "可靠性任务",
+      "task_accuracy": "3/4",
+      "macro_P": 1,
+      "macro_R": 0.8438,
+      "macro_F1": 0.8864
+    },
+    {
+      "group": "固定流程",
+      "category": "需求变化任务",
+      "task_accuracy": "1/1",
+      "macro_P": 1,
+      "macro_R": 1,
+      "macro_F1": 1
+    },
+    {
+      "group": "Agent",
+      "category": "标准任务",
+      "task_accuracy": "3/4",
+      "macro_P": 0.75,
+      "macro_R": 0.75,
+      "macro_F1": 0.75
+    },
+    {
+      "group": "Agent",
+      "category": "可靠性任务",
+      "task_accuracy": "4/4",
+      "macro_P": 1,
+      "macro_R": 1,
+      "macro_F1": 1
+    },
+    {
+      "group": "Agent",
+      "category": "需求变化任务",
+      "task_accuracy": "0/1",
+      "macro_P": 0,
+      "macro_R": 0,
+      "macro_F1": 0
+    }
+  ],
+  "planning_metrics_status": "NOT_READY",
+  "human_approval": "PENDING; no pre-run human approval evidenced",
+  "original_expert_scores_modified": false,
+  "original_expert_scores_used_as_truth_labels": false,
+  "raw_model_text_substituted_for_final_answer": false,
+  "independent_blind_review": false,
+  "wet_lab_truth_available": false
+}
