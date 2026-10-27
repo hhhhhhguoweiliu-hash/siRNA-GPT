@@ -145,12 +145,15 @@
 
 ## 文件索引
 
+本目录各评审/派生CSV均附带评审者、日期、审计版本及AI辅助性质；原子标准和逐槽判断还保留协议版本与真人确认栏。逐文件元数据和未完成的人类确认状态见[review_metadata.json](review_metadata.json)。
+
 - [required_slots.csv](required_slots.csv)：135条完整原子标准和证据。
 - [slot_reviews.csv](slot_reviews.csv)：405条逐槽核对。
 - [task_reviews.csv](task_reviews.csv)：27份答复的整题AI预评审。
 - [metrics_by_task.csv](metrics_by_task.csv)：逐题TP/FP/FN和P/R/F1。
 - [metrics_summary.csv](metrics_summary.csv)：整体与分类指标。
 - [metrics_status.json](metrics_status.json)：机器可读指标状态及分母。
+- [review_metadata.json](review_metadata.json)：逐文件评审元数据和人工确认状态。
 - [planning_metrics_status.json](planning_metrics_status.json)：严格规划指标缺口。
 - [raw_delivery_scope.csv](raw_delivery_scope.csv)：33轮正文、内部原文、附件范围与原文一致性。
 - [group_map.csv](group_map.csv)：组别映射，明确非盲评。
