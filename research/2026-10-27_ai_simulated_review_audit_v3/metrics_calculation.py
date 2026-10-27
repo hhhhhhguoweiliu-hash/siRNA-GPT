@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Evaluator: ChatGPT | Review date: 2026-10-27 | Audit version: AUDIT_V3_2026-10-27
+# Nature: AI-assisted pre-review only; not independent human adjudication.
+# Source snapshot before this audit directory was added: ab54de166d77cf2c34ee7d9a5219e8ff3e6d834b
 """Reproduce AI-preliminary task accuracy and required-slot P/R/F1 from the committed CSVs.
 
 Run from this directory:

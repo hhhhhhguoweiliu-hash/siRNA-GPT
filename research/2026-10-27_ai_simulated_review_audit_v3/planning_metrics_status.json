@@ -27,5 +27,7 @@
   "no_new_model_calls": true,
   "no_new_paid_batch": true,
   "no_fine_tuning": true,
-  "no_wet_lab_expansion": true
+  "no_wet_lab_expansion": true,
+  "latest_remote_followup_head": "fe5b43c0d7f2c759b3a2e324f2b9589d81f7cb9e",
+  "followup_review_readback": "Primary AI labels unchanged; follow-up did not create strict C1 plan gold labels."
 }

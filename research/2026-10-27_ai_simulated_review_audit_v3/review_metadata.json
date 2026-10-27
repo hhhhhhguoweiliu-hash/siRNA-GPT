@@ -1,0 +1,62 @@
+{
+  "evaluator": "ChatGPT",
+  "review_date": "2026-10-27",
+  "review_version": "AUDIT_V3_2026-10-27",
+  "reviewed_branch": "codex/20261020-evidence-pilot",
+  "source_head_before_audit_commit": "ab54de166d77cf2c34ee7d9a5219e8ff3e6d834b",
+  "main_head_at_review": "2623c8601bd4b19b472fafc520b95c0cfd0a0fdb",
+  "required_handoff_commit": "c30473d3168ccf5ce6522722f0cea857c2065037",
+  "nature": "AI-assisted preliminary scientific review by ChatGPT; not independent human adjudication",
+  "pre_run_human_approval": "NOT_EVIDENCED",
+  "independent_blind_review": "NOT_PERFORMED",
+  "original_answers_modified": false,
+  "original_expert_scores_modified": false,
+  "historical_failures_overwritten": false,
+  "files": [
+    "README.md",
+    "POST_REVIEW_INTEGRITY_AUDIT.md",
+    "integrity_checks.json",
+    "metrics_status.json",
+    "planning_metrics_status.json",
+    "required_slots.csv",
+    "slot_reviews.csv",
+    "task_reviews.csv",
+    "metrics_by_task.csv",
+    "metrics_summary.csv",
+    "metrics_calculation.py",
+    "draft_reconciliation.csv",
+    "group_map.csv",
+    "raw_delivery_scope.csv",
+    "extra_errors_and_gaps.csv",
+    "pending_adjudications.csv"
+  ],
+  "file_metadata_rule": "Each CSV contains reviewer, review_date, review_version or audit_version, and ai_assisted. JSON files record evaluator/review_date/audit_version/AI-only status. README and audit log state the same metadata in prose.",
+  "limitations": [
+    "No human approval of the standards before the original run is evidenced.",
+    "No independent blind review was performed.",
+    "No original client UI screenshot exists to verify attachment clickability.",
+    "The binary original ZIP was not independently unpacked again in this re-audit; the source JSON, embedded tool evidence, attachment locators, and earlier archive-audit notes were checked."
+  ],
+  "latest_remote_head_at_reaudit": "fe5b43c0d7f2c759b3a2e324f2b9589d81f7cb9e",
+  "intervening_followup_commits": [
+    "e02708125b91dd8cdcb63f64f0a0c80725689db7",
+    "601431d008106b8f11d75fa02f244d147c2d2a43",
+    "fe5b43c0d7f2c759b3a2e324f2b9589d81f7cb9e"
+  ],
+  "primary_labels_unchanged_after_followup": true,
+  "followup_new_model_calls": 0,
+  "followup_new_human_ratings": 0,
+  "followup_new_oligoformer_inference_runs": 0,
+  "followup_completed_checks": {
+    "independent_seed_guides": 10,
+    "reference_transcripts": 19415,
+    "seed_count_differences": 0,
+    "raw_TPM_columns": 8,
+    "expression_gene_differences": 0,
+    "expression_set_differences": 0,
+    "first_alternate_mapping_differences_preserved": {
+      "candidate_gene_rows": 35,
+      "set_members": 100
+    }
+  }
+}

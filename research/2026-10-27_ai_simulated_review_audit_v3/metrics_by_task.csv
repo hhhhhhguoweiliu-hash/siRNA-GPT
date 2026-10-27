@@ -1,28 +1,28 @@
-answer_id,case_id,category,group,task_verdict,task_pass_indicator,task_denominator,required_slots_n,correct_slots,wrong_slots,missing_slots,unjudged_slots,TP,FP,FN,required_slot_precision,required_slot_recall,required_slot_f1,precision_denominator,recall_denominator,task_metric_label
-A001,U1,REQUIREMENT_CHANGE,llm,FAIL,0,1,12,7,0,5,0,7,0,5,1,0.5833333333333334,0.7368421052631579,7,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A002,W3,STANDARD_TASK,agent,FAIL,0,1,12,6,0,6,0,6,0,6,1,0.5,0.6666666666666666,6,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A003,R4,RELIABILITY,llm,FAIL,0,1,16,6,0,10,0,6,0,10,1,0.375,0.5454545454545454,6,16,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A004,W1,STANDARD_TASK,agent,PASS,1,1,28,28,0,0,0,28,0,0,1,1,1,28,28,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A005,W3,STANDARD_TASK,workflow,PASS,1,1,12,12,0,0,0,12,0,0,1,1,1,12,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A006,W3,STANDARD_TASK,llm,FAIL,0,1,12,4,1,7,0,4,1,8,0.8,0.3333333333333333,0.47058823529411764,5,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A007,W2,STANDARD_TASK,agent,PASS,1,1,31,31,0,0,0,31,0,0,1,1,1,31,31,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A008,R2,RELIABILITY,llm,PASS,1,1,8,8,0,0,0,8,0,0,1,1,1,8,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A009,R3,RELIABILITY,workflow,PASS,1,1,6,6,0,0,0,6,0,0,1,1,1,6,6,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A010,R2,RELIABILITY,agent,PASS,1,1,8,8,0,0,0,8,0,0,1,1,1,8,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A011,R4,RELIABILITY,workflow,PASS,1,1,16,16,0,0,0,16,0,0,1,1,1,16,16,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A012,R1,RELIABILITY,workflow,PASS,1,1,14,14,0,0,0,14,0,0,1,1,1,14,14,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A013,W2b,STANDARD_TASK,agent,FAIL,0,1,8,8,0,0,0,8,0,0,1,1,1,8,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A014,U1,REQUIREMENT_CHANGE,agent,FAIL,0,1,12,11,1,0,0,11,1,1,0.9166666666666666,0.9166666666666666,0.9166666666666666,12,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A015,R3,RELIABILITY,llm,FAIL,0,1,6,3,0,3,0,3,0,3,1,0.5,0.6666666666666666,3,6,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A016,R1,RELIABILITY,llm,FAIL,0,1,14,6,0,8,0,6,0,8,1,0.42857142857142855,0.6,6,14,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A017,R1,RELIABILITY,agent,PASS,1,1,14,14,0,0,0,14,0,0,1,1,1,14,14,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A018,W1,STANDARD_TASK,llm,FAIL,0,1,28,7,0,21,0,7,0,21,1,0.25,0.4,7,28,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A019,W2b,STANDARD_TASK,workflow,PASS,1,1,8,8,0,0,0,8,0,0,1,1,1,8,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A020,W2,STANDARD_TASK,llm,FAIL,0,1,31,11,11,9,0,11,11,20,0.5,0.3548387096774194,0.41509433962264153,22,31,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A021,U1,REQUIREMENT_CHANGE,workflow,PASS,1,1,12,12,0,0,0,12,0,0,1,1,1,12,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A022,R3,RELIABILITY,agent,PASS,1,1,6,6,0,0,0,6,0,0,1,1,1,6,6,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A023,R2,RELIABILITY,workflow,FAIL,0,1,8,3,0,5,0,3,0,5,1,0.375,0.5454545454545454,3,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A024,W2b,STANDARD_TASK,llm,FAIL,0,1,8,3,0,5,0,3,0,5,1,0.375,0.5454545454545454,3,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A025,R4,RELIABILITY,agent,PASS,1,1,16,16,0,0,0,16,0,0,1,1,1,16,16,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A026,W1,STANDARD_TASK,workflow,PASS,1,1,28,28,0,0,0,28,0,0,1,1,1,28,28,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
-A027,W2,STANDARD_TASK,workflow,PASS,1,1,31,31,0,0,0,31,0,0,1,1,1,31,31,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics
+answer_id,case_id,category,group,task_verdict,task_pass_indicator,task_denominator,required_slots_n,correct_slots,wrong_slots,missing_slots,unjudged_slots,TP,FP,FN,required_slot_precision,required_slot_recall,required_slot_f1,precision_denominator,recall_denominator,task_metric_label,reviewer,review_date,review_version,ai_assisted
+A001,U1,REQUIREMENT_CHANGE,llm,FAIL,0,1,12,7,0,5,0,7,0,5,1,0.5833333333333334,0.7368421052631579,7,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A002,W3,STANDARD_TASK,agent,FAIL,0,1,12,6,0,6,0,6,0,6,1,0.5,0.6666666666666666,6,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A003,R4,RELIABILITY,llm,FAIL,0,1,16,6,0,10,0,6,0,10,1,0.375,0.5454545454545454,6,16,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A004,W1,STANDARD_TASK,agent,PASS,1,1,28,28,0,0,0,28,0,0,1,1,1,28,28,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A005,W3,STANDARD_TASK,workflow,PASS,1,1,12,12,0,0,0,12,0,0,1,1,1,12,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A006,W3,STANDARD_TASK,llm,FAIL,0,1,12,4,1,7,0,4,1,8,0.8,0.3333333333333333,0.47058823529411764,5,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A007,W2,STANDARD_TASK,agent,PASS,1,1,31,31,0,0,0,31,0,0,1,1,1,31,31,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A008,R2,RELIABILITY,llm,PASS,1,1,8,8,0,0,0,8,0,0,1,1,1,8,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A009,R3,RELIABILITY,workflow,PASS,1,1,6,6,0,0,0,6,0,0,1,1,1,6,6,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A010,R2,RELIABILITY,agent,PASS,1,1,8,8,0,0,0,8,0,0,1,1,1,8,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A011,R4,RELIABILITY,workflow,PASS,1,1,16,16,0,0,0,16,0,0,1,1,1,16,16,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A012,R1,RELIABILITY,workflow,PASS,1,1,14,14,0,0,0,14,0,0,1,1,1,14,14,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A013,W2b,STANDARD_TASK,agent,FAIL,0,1,8,8,0,0,0,8,0,0,1,1,1,8,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A014,U1,REQUIREMENT_CHANGE,agent,FAIL,0,1,12,11,1,0,0,11,1,1,0.9166666666666666,0.9166666666666666,0.9166666666666666,12,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A015,R3,RELIABILITY,llm,FAIL,0,1,6,3,0,3,0,3,0,3,1,0.5,0.6666666666666666,3,6,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A016,R1,RELIABILITY,llm,FAIL,0,1,14,6,0,8,0,6,0,8,1,0.42857142857142855,0.6,6,14,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A017,R1,RELIABILITY,agent,PASS,1,1,14,14,0,0,0,14,0,0,1,1,1,14,14,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A018,W1,STANDARD_TASK,llm,FAIL,0,1,28,7,0,21,0,7,0,21,1,0.25,0.4,7,28,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A019,W2b,STANDARD_TASK,workflow,PASS,1,1,8,8,0,0,0,8,0,0,1,1,1,8,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A020,W2,STANDARD_TASK,llm,FAIL,0,1,31,11,11,9,0,11,11,20,0.5,0.3548387096774194,0.41509433962264153,22,31,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A021,U1,REQUIREMENT_CHANGE,workflow,PASS,1,1,12,12,0,0,0,12,0,0,1,1,1,12,12,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A022,R3,RELIABILITY,agent,PASS,1,1,6,6,0,0,0,6,0,0,1,1,1,6,6,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A023,R2,RELIABILITY,workflow,FAIL,0,1,8,3,0,5,0,3,0,5,1,0.375,0.5454545454545454,3,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A024,W2b,STANDARD_TASK,llm,FAIL,0,1,8,3,0,5,0,3,0,5,1,0.375,0.5454545454545454,3,8,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A025,R4,RELIABILITY,agent,PASS,1,1,16,16,0,0,0,16,0,0,1,1,1,16,16,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A026,W1,STANDARD_TASK,workflow,PASS,1,1,28,28,0,0,0,28,0,0,1,1,1,28,28,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication
+A027,W2,STANDARD_TASK,workflow,PASS,1,1,31,31,0,0,0,31,0,0,1,1,1,31,31,AI_PRE_REVIEW_ONLY; not CRISPR-GPT C1 planning metrics,ChatGPT,2026-10-27,AUDIT_V3_2026-10-27,YES; AI-assisted review artifact; not independent human adjudication

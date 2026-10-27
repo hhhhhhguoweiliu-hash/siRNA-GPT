@@ -176,5 +176,22 @@
     "all_27_task_verdicts_pending_human_review": true,
     "independent_blind_review": false,
     "pre_run_standard_approval": "NOT_EVIDENCED"
+  },
+  "latest_remote_followup_head": "fe5b43c0d7f2c759b3a2e324f2b9589d81f7cb9e",
+  "followup_review_readback": {
+    "primary_labels_unchanged": true,
+    "new_model_calls": 0,
+    "new_human_ratings": 0,
+    "new_oligoformer_inference_runs": 0,
+    "production_deployment": false,
+    "main_merged": false,
+    "independent_seed_guides": 10,
+    "reference_transcripts": 19415,
+    "seed_count_differences": 0,
+    "expression_candidate_differences": 0,
+    "first_alternate_mapping_differences_preserved": {
+      "candidate_gene_rows": 35,
+      "set_members": 100
+    }
   }
 }

@@ -172,5 +172,58 @@
     "binary_attachment_archive_independently_unpacked_in_this_reaudit": "NO; original ZIP remains in repository and prior review notes its archive audit; current pass checked raw JSON, source locators and evidence tables",
     "wet_lab_truth": "NOT_AVAILABLE",
     "strict_C1_planning_metrics": "NOT_READY"
+  },
+  "latest_remote_followup_head": "fe5b43c0d7f2c759b3a2e324f2b9589d81f7cb9e",
+  "latest_remote_followup_commits": [
+    "e02708125b91dd8cdcb63f64f0a0c80725689db7",
+    "601431d008106b8f11d75fa02f244d147c2d2a43",
+    "fe5b43c0d7f2c759b3a2e324f2b9589d81f7cb9e"
+  ],
+  "followup_review_readback": {
+    "primary_labels_unchanged": true,
+    "alignment_source": "research/2026-10-27_followup_execution/latest_v3_alignment.json",
+    "raw_comparison": "21 raw present: 20 equal, 1 different (A013); 12 NOT_COMPARABLE",
+    "independent_seed_check": {
+      "guides": 10,
+      "reference_transcripts": 19415,
+      "site_transcript_gene_differences": 0,
+      "interpretation": "same-definition code-path validation, not biological truth"
+    },
+    "independent_expression_check": {
+      "guides": 10,
+      "raw_TPM_columns": 8,
+      "per_gene_differences": 0,
+      "set_differences": 0,
+      "first_alternate_mapping_differences_preserved": {
+        "candidate_gene_rows": 35,
+        "set_members": 100
+      },
+      "interpretation": "same-mapping reproducibility, not independent biological truth"
+    },
+    "official_score_source": {
+      "source_rows_checked": 10,
+      "original_run_scored_candidate_ids": [
+        "USER_PURCHASED_siVEGF",
+        "VEGFA_SD_3499",
+        "VEGFA_SD_3535"
+      ],
+      "new_inference_runs": 0
+    },
+    "consistency_check": {
+      "tool_records": {
+        "PASS": 34,
+        "UNCHECKABLE": 266
+      },
+      "delivered_main_answers": {
+        "PASS": 12,
+        "UNCHECKABLE": 288
+      },
+      "new_task_labels": 0
+    },
+    "new_model_calls": 0,
+    "new_human_ratings": 0,
+    "new_oligoformer_inference_runs": 0,
+    "production_deployment": false,
+    "main_merged": false
   }
 }
