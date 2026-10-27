@@ -1,0 +1,1 @@
+protocol_version,case_id,answer_id,delivery_scope,pass_rule_version,required_slots_complete,prohibited_action_observed,invalidating_error_present,task_verdict,reason,evidence_locator,reviewer_id,human_confirmed_at_utc,adjudication_status,adjudicator_id

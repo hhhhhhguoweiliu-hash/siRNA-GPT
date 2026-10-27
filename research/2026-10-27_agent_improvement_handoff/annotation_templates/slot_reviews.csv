@@ -1,0 +1,1 @@
+protocol_version,case_id,round_id,answer_id,slot_id,delivered_artifact,answer_span_locator,provided_value,review_status,review_reason,automatic_check_result,reviewer_id,human_confirmed_at_utc,adjudication_status,adjudicator_id,adjudication_notes

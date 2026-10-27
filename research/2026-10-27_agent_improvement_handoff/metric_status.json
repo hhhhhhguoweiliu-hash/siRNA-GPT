@@ -1,0 +1,27 @@
+{
+  "reviewed_commit": "3f692e0b252cb4ffc46ba3881defb998d2c3af98",
+  "status": "NOT_READY",
+  "scope": "implementation_handoff_and_blank_annotation_templates",
+  "n_development_cases": 9,
+  "n_original_answers": 27,
+  "n_draft_compound_fact_items": 59,
+  "n_potential_case_group_draft_checks": 177,
+  "human_approved_gold_slots": null,
+  "human_completed_atomic_annotations": null,
+  "classification_accuracy": null,
+  "precision": null,
+  "recall": null,
+  "f1": null,
+  "task_accuracy": null,
+  "missing": [
+    "human-approved atomic criteria and tolerances",
+    "all three groups' per-slot original-delivery annotations",
+    "consistent delivery scope and adjudication",
+    "comparable original plan lists and finite action universe for strict C1"
+  ],
+  "new_human_ratings": 0,
+  "new_model_calls": 0,
+  "new_scientific_computations": 0,
+  "existing_ratings_modified": false,
+  "paid_batch_authorized_by_this_document": false
+}

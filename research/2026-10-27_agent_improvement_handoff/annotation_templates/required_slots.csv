@@ -1,0 +1,1 @@
+protocol_version,case_id,round_id,slot_id,source_draft_fact_id,requirement_type,atomic_requirement,accepted_values_json,tolerance,reference_version,chain_assumption,condition,evidence_locator,gold_approval_status,gold_approved_by,gold_approved_at_utc
