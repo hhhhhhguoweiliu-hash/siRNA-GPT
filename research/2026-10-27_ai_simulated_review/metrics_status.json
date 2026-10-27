@@ -14,16 +14,16 @@
   "n_atomic_required_slots": 130,
   "n_slot_judgements": 390,
   "slot_status_counts": {
-    "CORRECT": 309,
+    "CORRECT": 304,
     "WRONG": 13,
-    "MISSING": 68,
+    "MISSING": 73,
     "UNJUDGED": 0,
     "NOT_APPLICABLE": 0
   },
   "task_verdict_counts": {
     "llm": "1/9",
     "workflow": "8/9",
-    "agent": "7/9"
+    "agent": "6/9"
   },
   "overall_metrics": [
     {
@@ -56,17 +56,17 @@
     },
     {
       "group": "Agent",
-      "task_accuracy": "7/9",
+      "task_accuracy": "6/9",
       "slot_n": 130,
-      "TP": 129,
+      "TP": 124,
       "FP": 1,
-      "FN": 1,
-      "micro_P": 0.9923,
-      "micro_R": 0.9923,
-      "micro_F1": 0.9923,
+      "FN": 6,
+      "micro_P": 0.992,
+      "micro_R": 0.9538,
+      "micro_F1": 0.9725,
       "macro_P": 0.9899,
-      "macro_R": 0.9899,
-      "macro_F1": 0.9899
+      "macro_R": 0.9436,
+      "macro_F1": 0.9607
     }
   ],
   "category_metrics": [
@@ -121,10 +121,10 @@
     {
       "group": "Agent",
       "category": "标准任务",
-      "task_accuracy": "3/4",
+      "task_accuracy": "2/4",
       "macro_P": 1,
-      "macro_R": 1,
-      "macro_F1": 1
+      "macro_R": 0.8958,
+      "macro_F1": 0.9342
     },
     {
       "group": "Agent",
