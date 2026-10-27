@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="123.75mm" viewBox="0 0 1200 825">
+<rect width="100%" height="100%" fill="white"/>
+<text x="40" y="35.0" font-family="Arial" font-weight="700" font-size="27" text-anchor="start" fill="#262626">Requirement change: existing expert scores</text>
+<text x="40" y="61.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="start" fill="#666666">Identical 0–2 scores shown as bars and radar profiles</text>
+<rect x="305" y="83" width="20" height="14" fill="#8295B3" stroke="#8295B3" stroke-width=".65"/>
+<circle cx="315" cy="90" r="3" fill="#FFFFFF" stroke="#8295B3" stroke-width=".9"/>
+<text x="335" y="97.0" font-family="Arial" font-weight="700" font-size="17" text-anchor="start" fill="#262626">LLM</text>
+<rect x="555" y="83" width="20" height="14" fill="#E6B77C" stroke="#E6B77C" stroke-width=".65"/>
+<rect x="562" y="87" width="6" height="6" fill="#FFFFFF" stroke="#E6B77C" stroke-width=".65"/>
+<text x="585" y="97.0" font-family="Arial" font-weight="700" font-size="17" text-anchor="start" fill="#262626">Fixed workflow</text>
+<rect x="865" y="83" width="20" height="14" fill="#A44958" stroke="#A44958" stroke-width=".65"/>
+<line x1="875" y1="86" x2="879" y2="90" stroke="#A44958" stroke-width="1.4"/>
+<line x1="879" y1="90" x2="875" y2="94" stroke="#A44958" stroke-width="1.4"/>
+<line x1="875" y1="94" x2="871" y2="90" stroke="#A44958" stroke-width="1.4"/>
+<line x1="871" y1="90" x2="875" y2="86" stroke="#A44958" stroke-width="1.4"/>
+<text x="895" y="97.0" font-family="Arial" font-weight="700" font-size="17" text-anchor="start" fill="#262626">Agent</text>
+<text x="56" y="137.0" font-family="Arial" font-weight="700" font-size="22" text-anchor="start" fill="#262626">a</text>
+<text x="350.0" y="137.0" font-family="Arial" font-weight="700" font-size="19" text-anchor="middle" fill="#262626">Form A | mean scores</text>
+<text x="755" y="137.0" font-family="Arial" font-weight="700" font-size="22" text-anchor="start" fill="#262626">b</text>
+<text x="955" y="137.0" font-family="Arial" font-weight="700" font-size="19" text-anchor="middle" fill="#262626">Form A | radar</text>
+<line x1="95" y1="340.0" x2="605" y2="340.0" stroke="#E5E5E5" stroke-width="0.8"/>
+<line x1="90" y1="340.0" x2="95" y2="340.0" stroke="#262626" stroke-width="1"/>
+<text x="82" y="345.0" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">0</text>
+<line x1="95" y1="262.5" x2="605" y2="262.5" stroke="#E5E5E5" stroke-width="0.8"/>
+<line x1="90" y1="262.5" x2="95" y2="262.5" stroke="#262626" stroke-width="1"/>
+<text x="82" y="267.5" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">1</text>
+<line x1="95" y1="185.0" x2="605" y2="185.0" stroke="#E5E5E5" stroke-width="0.8"/>
+<line x1="90" y1="185.0" x2="95" y2="185.0" stroke="#262626" stroke-width="1"/>
+<text x="82" y="190.0" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">2</text>
+<line x1="95" y1="185" x2="95" y2="340" stroke="#262626" stroke-width="1"/>
+<line x1="95" y1="340" x2="605" y2="340" stroke="#262626" stroke-width="1"/>
+<text x="45" y="262.5" font-family="Arial" font-weight="700" font-size="17" text-anchor="middle" fill="#262626" transform="rotate(-90 45 262.5)">Expert score (0–2)</text>
+<rect x="118.75" y="262.5" width="22" height="77.5" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="129.75" cy="262.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="147.75" y="185.0" width="22" height="155.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="158.75" cy="185.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="176.75" y="185.0" width="22" height="155.0" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="187.75" cy="185.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="158.75" y="369.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Factual</text>
+<text x="158.75" y="387.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">accuracy</text>
+<rect x="246.25" y="262.5" width="22" height="77.5" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="257.25" cy="262.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="275.25" y="185.0" width="22" height="155.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="286.25" cy="185.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="304.25" y="262.5" width="22" height="77.5" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="315.25" cy="262.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="286.25" y="369.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Evidence</text>
+<text x="286.25" y="387.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">support</text>
+<rect x="373.75" y="340.0" width="22" height="0.0" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="384.75" cy="340.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="402.75" y="185.0" width="22" height="155.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="413.75" cy="185.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="431.75" y="185.0" width="22" height="155.0" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="442.75" cy="185.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="413.75" y="369.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Requirement</text>
+<text x="413.75" y="387.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">completion</text>
+<rect x="501.25" y="262.5" width="22" height="77.5" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="512.25" cy="262.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="530.25" y="185.0" width="22" height="155.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="541.25" cy="185.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="559.25" y="262.5" width="22" height="77.5" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="570.25" cy="262.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="541.25" y="369.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Boundary</text>
+<text x="541.25" y="387.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">handling</text>
+<line x1="955.0" y1="242.5" x2="974.5" y2="262.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="974.5" y1="262.0" x2="955.0" y2="281.5" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="281.5" x2="935.5" y2="262.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="935.5" y1="262.0" x2="955.0" y2="242.5" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="223.0" x2="994.0" y2="262.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="994.0" y1="262.0" x2="955.0" y2="301.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="301.0" x2="916.0" y2="262.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="916.0" y1="262.0" x2="955.0" y2="223.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="203.5" x2="1013.5" y2="262.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="1013.5" y1="262.0" x2="955.0" y2="320.5" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="320.5" x2="896.5" y2="262.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="896.5" y1="262.0" x2="955.0" y2="203.5" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="184.0" x2="1033.0" y2="262.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="1033.0" y1="262.0" x2="955.0" y2="340.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="340.0" x2="877.0" y2="262.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="877.0" y1="262.0" x2="955.0" y2="184.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955" y1="262" x2="955" y2="184" stroke="#C9C9C9" stroke-width="0.8"/>
+<line x1="955" y1="262" x2="1033" y2="262" stroke="#C9C9C9" stroke-width="0.8"/>
+<line x1="955" y1="262" x2="955" y2="340" stroke="#C9C9C9" stroke-width="0.8"/>
+<line x1="955" y1="262" x2="877" y2="262" stroke="#C9C9C9" stroke-width="0.8"/>
+<text x="963" y="227.0" font-family="Arial" font-weight="700" font-size="12" text-anchor="start" fill="#777777">1</text>
+<text x="963" y="188.0" font-family="Arial" font-weight="700" font-size="12" text-anchor="start" fill="#777777">2</text>
+<text x="963" y="277.0" font-family="Arial" font-weight="700" font-size="12" text-anchor="start" fill="#777777">0</text>
+<text x="955" y="161.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Factual</text>
+<text x="955" y="179.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">accuracy</text>
+<text x="1052" y="260.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="start" fill="#262626">Evidence</text>
+<text x="1052" y="278.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="start" fill="#262626">support</text>
+<text x="955" y="365.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Requirement</text>
+<text x="955" y="383.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">completion</text>
+<text x="858" y="260.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="end" fill="#262626">Boundary</text>
+<text x="858" y="278.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="end" fill="#262626">handling</text>
+<line x1="955.0" y1="223.0" x2="994.0" y2="262.0" stroke="#8295B3" stroke-width="1.9"/>
+<line x1="994.0" y1="262.0" x2="955.0" y2="262.0" stroke="#8295B3" stroke-width="1.9"/>
+<line x1="955.0" y1="262.0" x2="916.0" y2="262.0" stroke="#8295B3" stroke-width="1.9"/>
+<line x1="916.0" y1="262.0" x2="955.0" y2="223.0" stroke="#8295B3" stroke-width="1.9"/>
+<circle cx="955.0" cy="223.0" r="3.8" fill="#FFFFFF" stroke="#8295B3" stroke-width=".9"/>
+<circle cx="994.0" cy="262.0" r="3.8" fill="#FFFFFF" stroke="#8295B3" stroke-width=".9"/>
+<circle cx="955.0" cy="262.0" r="3.8" fill="#FFFFFF" stroke="#8295B3" stroke-width=".9"/>
+<circle cx="916.0" cy="262.0" r="3.8" fill="#FFFFFF" stroke="#8295B3" stroke-width=".9"/>
+<line x1="955.0" y1="184.0" x2="1033.0" y2="262.0" stroke="#E6B77C" stroke-width="2.6"/>
+<line x1="1033.0" y1="262.0" x2="955.0" y2="340.0" stroke="#E6B77C" stroke-width="2.6"/>
+<line x1="955.0" y1="340.0" x2="877.0" y2="262.0" stroke="#E6B77C" stroke-width="2.6"/>
+<line x1="877.0" y1="262.0" x2="955.0" y2="184.0" stroke="#E6B77C" stroke-width="2.6"/>
+<rect x="951.2" y="180.2" width="7.6" height="7.6" fill="#FFFFFF" stroke="#E6B77C" stroke-width=".65"/>
+<rect x="1029.2" y="258.2" width="7.6" height="7.6" fill="#FFFFFF" stroke="#E6B77C" stroke-width=".65"/>
+<rect x="951.2" y="336.2" width="7.6" height="7.6" fill="#FFFFFF" stroke="#E6B77C" stroke-width=".65"/>
+<rect x="873.2" y="258.2" width="7.6" height="7.6" fill="#FFFFFF" stroke="#E6B77C" stroke-width=".65"/>
+<line x1="955.0" y1="184.0" x2="994.0" y2="262.0" stroke="#A44958" stroke-width="1.9"/>
+<line x1="994.0" y1="262.0" x2="955.0" y2="340.0" stroke="#A44958" stroke-width="1.9"/>
+<line x1="955.0" y1="340.0" x2="916.0" y2="262.0" stroke="#A44958" stroke-width="1.9"/>
+<line x1="916.0" y1="262.0" x2="955.0" y2="184.0" stroke="#A44958" stroke-width="1.9"/>
+<line x1="955.0" y1="179.2" x2="959.8" y2="184.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="959.8" y1="184.0" x2="955.0" y2="188.8" stroke="#A44958" stroke-width="1.4"/>
+<line x1="955.0" y1="188.8" x2="950.2" y2="184.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="950.2" y1="184.0" x2="955.0" y2="179.2" stroke="#A44958" stroke-width="1.4"/>
+<line x1="994.0" y1="257.2" x2="998.8" y2="262.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="998.8" y1="262.0" x2="994.0" y2="266.8" stroke="#A44958" stroke-width="1.4"/>
+<line x1="994.0" y1="266.8" x2="989.2" y2="262.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="989.2" y1="262.0" x2="994.0" y2="257.2" stroke="#A44958" stroke-width="1.4"/>
+<line x1="955.0" y1="335.2" x2="959.8" y2="340.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="959.8" y1="340.0" x2="955.0" y2="344.8" stroke="#A44958" stroke-width="1.4"/>
+<line x1="955.0" y1="344.8" x2="950.2" y2="340.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="950.2" y1="340.0" x2="955.0" y2="335.2" stroke="#A44958" stroke-width="1.4"/>
+<line x1="916.0" y1="257.2" x2="920.8" y2="262.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="920.8" y1="262.0" x2="916.0" y2="266.8" stroke="#A44958" stroke-width="1.4"/>
+<line x1="916.0" y1="266.8" x2="911.2" y2="262.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="911.2" y1="262.0" x2="916.0" y2="257.2" stroke="#A44958" stroke-width="1.4"/>
+<text x="56" y="457.0" font-family="Arial" font-weight="700" font-size="22" text-anchor="start" fill="#262626">c</text>
+<text x="350.0" y="457.0" font-family="Arial" font-weight="700" font-size="19" text-anchor="middle" fill="#262626">Form B | mean scores</text>
+<text x="755" y="457.0" font-family="Arial" font-weight="700" font-size="22" text-anchor="start" fill="#262626">d</text>
+<text x="955" y="457.0" font-family="Arial" font-weight="700" font-size="19" text-anchor="middle" fill="#262626">Form B | radar</text>
+<line x1="95" y1="660.0" x2="605" y2="660.0" stroke="#E5E5E5" stroke-width="0.8"/>
+<line x1="90" y1="660.0" x2="95" y2="660.0" stroke="#262626" stroke-width="1"/>
+<text x="82" y="665.0" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">0</text>
+<line x1="95" y1="582.5" x2="605" y2="582.5" stroke="#E5E5E5" stroke-width="0.8"/>
+<line x1="90" y1="582.5" x2="95" y2="582.5" stroke="#262626" stroke-width="1"/>
+<text x="82" y="587.5" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">1</text>
+<line x1="95" y1="505.0" x2="605" y2="505.0" stroke="#E5E5E5" stroke-width="0.8"/>
+<line x1="90" y1="505.0" x2="95" y2="505.0" stroke="#262626" stroke-width="1"/>
+<text x="82" y="510.0" font-family="Arial" font-weight="700" font-size="15" text-anchor="end" fill="#262626">2</text>
+<line x1="95" y1="505" x2="95" y2="660" stroke="#262626" stroke-width="1"/>
+<line x1="95" y1="660" x2="605" y2="660" stroke="#262626" stroke-width="1"/>
+<text x="45" y="582.5" font-family="Arial" font-weight="700" font-size="17" text-anchor="middle" fill="#262626" transform="rotate(-90 45 582.5)">Expert score (0–2)</text>
+<rect x="118.75" y="582.5" width="22" height="77.5" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="129.75" cy="582.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="147.75" y="505.0" width="22" height="155.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="158.75" cy="505.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="176.75" y="582.5" width="22" height="77.5" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="187.75" cy="582.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="158.75" y="689.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Factual</text>
+<text x="158.75" y="707.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">accuracy</text>
+<rect x="246.25" y="582.5" width="22" height="77.5" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="257.25" cy="582.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="275.25" y="582.5" width="22" height="77.5" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="286.25" cy="582.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="304.25" y="582.5" width="22" height="77.5" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="315.25" cy="582.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="286.25" y="689.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Evidence</text>
+<text x="286.25" y="707.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">support</text>
+<rect x="373.75" y="582.5" width="22" height="77.5" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="384.75" cy="582.5" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="402.75" y="505.0" width="22" height="155.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="413.75" cy="505.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="431.75" y="505.0" width="22" height="155.0" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="442.75" cy="505.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="413.75" y="689.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Requirement</text>
+<text x="413.75" y="707.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">completion</text>
+<rect x="501.25" y="505.0" width="22" height="155.0" fill="#8295B3" stroke="#414141" stroke-width=".65"/>
+<circle cx="512.25" cy="505.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="530.25" y="505.0" width="22" height="155.0" fill="#E6B77C" stroke="#414141" stroke-width=".65"/>
+<circle cx="541.25" cy="505.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<rect x="559.25" y="505.0" width="22" height="155.0" fill="#A44958" stroke="#414141" stroke-width=".65"/>
+<circle cx="570.25" cy="505.0" r="2.7" fill="#FFFFFF" stroke="#262626" stroke-width=".9"/>
+<text x="541.25" y="689.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Boundary</text>
+<text x="541.25" y="707.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">handling</text>
+<line x1="955.0" y1="562.5" x2="974.5" y2="582.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="974.5" y1="582.0" x2="955.0" y2="601.5" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="601.5" x2="935.5" y2="582.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="935.5" y1="582.0" x2="955.0" y2="562.5" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="543.0" x2="994.0" y2="582.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="994.0" y1="582.0" x2="955.0" y2="621.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="621.0" x2="916.0" y2="582.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="916.0" y1="582.0" x2="955.0" y2="543.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="523.5" x2="1013.5" y2="582.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="1013.5" y1="582.0" x2="955.0" y2="640.5" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="640.5" x2="896.5" y2="582.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="896.5" y1="582.0" x2="955.0" y2="523.5" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="504.0" x2="1033.0" y2="582.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="1033.0" y1="582.0" x2="955.0" y2="660.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955.0" y1="660.0" x2="877.0" y2="582.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="877.0" y1="582.0" x2="955.0" y2="504.0" stroke="#D8D8D8" stroke-width="0.8"/>
+<line x1="955" y1="582" x2="955" y2="504" stroke="#C9C9C9" stroke-width="0.8"/>
+<line x1="955" y1="582" x2="1033" y2="582" stroke="#C9C9C9" stroke-width="0.8"/>
+<line x1="955" y1="582" x2="955" y2="660" stroke="#C9C9C9" stroke-width="0.8"/>
+<line x1="955" y1="582" x2="877" y2="582" stroke="#C9C9C9" stroke-width="0.8"/>
+<text x="963" y="547.0" font-family="Arial" font-weight="700" font-size="12" text-anchor="start" fill="#777777">1</text>
+<text x="963" y="508.0" font-family="Arial" font-weight="700" font-size="12" text-anchor="start" fill="#777777">2</text>
+<text x="963" y="597.0" font-family="Arial" font-weight="700" font-size="12" text-anchor="start" fill="#777777">0</text>
+<text x="955" y="481.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Factual</text>
+<text x="955" y="499.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">accuracy</text>
+<text x="1052" y="580.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="start" fill="#262626">Evidence</text>
+<text x="1052" y="598.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="start" fill="#262626">support</text>
+<text x="955" y="685.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">Requirement</text>
+<text x="955" y="703.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="middle" fill="#262626">completion</text>
+<text x="858" y="580.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="end" fill="#262626">Boundary</text>
+<text x="858" y="598.72" font-family="Arial" font-weight="700" font-size="16" text-anchor="end" fill="#262626">handling</text>
+<line x1="955.0" y1="543.0" x2="994.0" y2="582.0" stroke="#8295B3" stroke-width="1.9"/>
+<line x1="994.0" y1="582.0" x2="955.0" y2="621.0" stroke="#8295B3" stroke-width="1.9"/>
+<line x1="955.0" y1="621.0" x2="877.0" y2="582.0" stroke="#8295B3" stroke-width="1.9"/>
+<line x1="877.0" y1="582.0" x2="955.0" y2="543.0" stroke="#8295B3" stroke-width="1.9"/>
+<circle cx="955.0" cy="543.0" r="3.8" fill="#FFFFFF" stroke="#8295B3" stroke-width=".9"/>
+<circle cx="994.0" cy="582.0" r="3.8" fill="#FFFFFF" stroke="#8295B3" stroke-width=".9"/>
+<circle cx="955.0" cy="621.0" r="3.8" fill="#FFFFFF" stroke="#8295B3" stroke-width=".9"/>
+<circle cx="877.0" cy="582.0" r="3.8" fill="#FFFFFF" stroke="#8295B3" stroke-width=".9"/>
+<line x1="955.0" y1="504.0" x2="994.0" y2="582.0" stroke="#E6B77C" stroke-width="2.6"/>
+<line x1="994.0" y1="582.0" x2="955.0" y2="660.0" stroke="#E6B77C" stroke-width="2.6"/>
+<line x1="955.0" y1="660.0" x2="877.0" y2="582.0" stroke="#E6B77C" stroke-width="2.6"/>
+<line x1="877.0" y1="582.0" x2="955.0" y2="504.0" stroke="#E6B77C" stroke-width="2.6"/>
+<rect x="951.2" y="500.2" width="7.6" height="7.6" fill="#FFFFFF" stroke="#E6B77C" stroke-width=".65"/>
+<rect x="990.2" y="578.2" width="7.6" height="7.6" fill="#FFFFFF" stroke="#E6B77C" stroke-width=".65"/>
+<rect x="951.2" y="656.2" width="7.6" height="7.6" fill="#FFFFFF" stroke="#E6B77C" stroke-width=".65"/>
+<rect x="873.2" y="578.2" width="7.6" height="7.6" fill="#FFFFFF" stroke="#E6B77C" stroke-width=".65"/>
+<line x1="955.0" y1="543.0" x2="994.0" y2="582.0" stroke="#A44958" stroke-width="1.9"/>
+<line x1="994.0" y1="582.0" x2="955.0" y2="660.0" stroke="#A44958" stroke-width="1.9"/>
+<line x1="955.0" y1="660.0" x2="877.0" y2="582.0" stroke="#A44958" stroke-width="1.9"/>
+<line x1="877.0" y1="582.0" x2="955.0" y2="543.0" stroke="#A44958" stroke-width="1.9"/>
+<line x1="955.0" y1="538.2" x2="959.8" y2="543.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="959.8" y1="543.0" x2="955.0" y2="547.8" stroke="#A44958" stroke-width="1.4"/>
+<line x1="955.0" y1="547.8" x2="950.2" y2="543.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="950.2" y1="543.0" x2="955.0" y2="538.2" stroke="#A44958" stroke-width="1.4"/>
+<line x1="994.0" y1="577.2" x2="998.8" y2="582.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="998.8" y1="582.0" x2="994.0" y2="586.8" stroke="#A44958" stroke-width="1.4"/>
+<line x1="994.0" y1="586.8" x2="989.2" y2="582.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="989.2" y1="582.0" x2="994.0" y2="577.2" stroke="#A44958" stroke-width="1.4"/>
+<line x1="955.0" y1="655.2" x2="959.8" y2="660.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="959.8" y1="660.0" x2="955.0" y2="664.8" stroke="#A44958" stroke-width="1.4"/>
+<line x1="955.0" y1="664.8" x2="950.2" y2="660.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="950.2" y1="660.0" x2="955.0" y2="655.2" stroke="#A44958" stroke-width="1.4"/>
+<line x1="877.0" y1="577.2" x2="881.8" y2="582.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="881.8" y1="582.0" x2="877.0" y2="586.8" stroke="#A44958" stroke-width="1.4"/>
+<line x1="877.0" y1="586.8" x2="872.2" y2="582.0" stroke="#A44958" stroke-width="1.4"/>
+<line x1="872.2" y1="582.0" x2="877.0" y2="577.2" stroke="#A44958" stroke-width="1.4"/>
+<text x="40" y="755.0" font-family="Arial" font-weight="700" font-size="16" text-anchor="start" fill="#262626">n = 1 task episode(s) per group; bar dots show all task scores. Forms are not pooled.</text>
+<text x="40" y="784.0" font-family="Arial" font-weight="700" font-size="14" text-anchor="start" fill="#777777">Submitted ratings; evidence checks pending. Rating scores, not classification metrics or user-experience scores.</text>
+</svg>

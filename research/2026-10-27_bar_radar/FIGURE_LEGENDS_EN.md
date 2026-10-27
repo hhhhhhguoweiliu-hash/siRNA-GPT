@@ -1,0 +1,7 @@
+# Figure legends
+
+Three panels of figures show exactly the same existing ordinal scores in two representations. Each page contains form A in the upper row and form B in the lower row; the left column uses grouped bars and the right uses four-axis radar lines. The three pages correspond to four standard work scenarios, four reliability scenarios and one two-round requirement-change episode. Bars and radar vertices use identical per-configuration, per-dimension means; circles over the bars show all constituent task ratings. The scale is 0–2 throughout. Forms are not pooled. No trial-based error bars or significance tests are presented.
+
+The four axes are factual accuracy, evidence support, requirement completion and boundary handling. They retain the actual project rubric and should not be interpreted as classification Accuracy/Precision/Recall/F1 or a direct replication of the original paper's human-user-experience rubric. Source-rating discrepancies remain unresolved; all figures describe submitted development-case ratings rather than adjudicated unseen-test performance.
+
+Visual references: Qu et al., CRISPR-GPT for agentic automation of gene-editing experiments, Nature Biomedical Engineering 10, 245–258 (2026), Figure 3b (planning metrics) and Figure 5a (expert user-experience radar), DOI 10.1038/s41551-025-01463-z. The references inform chart form, not measurement equivalence or numerical results. We did not copy trial counts, model scores, 1–5 scales, or reported improvements.

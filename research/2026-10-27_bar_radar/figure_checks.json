@@ -1,0 +1,50 @@
+{
+  "source_plot_data_sha256": "6c405aaf62f102fa008e1c419d25803c0e331359217c04a6a1420e29fbce163a",
+  "source_hash_matches_existing_figure_manifest": true,
+  "source_commit": "748a71bec7043fdd9b031731c237f687009f015b",
+  "n_exact_mean_values": 72,
+  "bar_and_radar_values_identical": true,
+  "all_means_recomputed_from_original_score_rows": true,
+  "score_scale": [
+    0,
+    2
+  ],
+  "forms_pooled": false,
+  "new_scores": 0,
+  "new_model_calls": 0,
+  "classification_accuracy": null,
+  "precision": null,
+  "recall": null,
+  "f1": null,
+  "png_dpi": 600,
+  "pdf_embedded_fonts": [
+    {
+      "file": "fig1_standard_bar_radar.pdf",
+      "actual_text_fonts": [
+        {
+          "name": "/AAAAAA+Arial-BoldMT",
+          "embedded": true
+        }
+      ]
+    },
+    {
+      "file": "figS1_reliability_bar_radar.pdf",
+      "actual_text_fonts": [
+        {
+          "name": "/AAAAAA+Arial-BoldMT",
+          "embedded": true
+        }
+      ]
+    },
+    {
+      "file": "figS2_change_bar_radar.pdf",
+      "actual_text_fonts": [
+        {
+          "name": "/AAAAAA+Arial-BoldMT",
+          "embedded": true
+        }
+      ]
+    }
+  ],
+  "pages": 3
+}

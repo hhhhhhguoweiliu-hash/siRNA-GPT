@@ -1,0 +1,33 @@
+{
+  "classification_accuracy": null,
+  "precision": null,
+  "recall": null,
+  "f1": null,
+  "status": "NOT_DERIVABLE_FROM_EXISTING_ORDINAL_SCORE_MEANS",
+  "four_human_rating_axes": [
+    "factual_accuracy",
+    "evidence_support",
+    "requirement_completion",
+    "boundary_handling"
+  ],
+  "scale": [
+    0,
+    2
+  ],
+  "paper_planning_metric_unit": "per request, predicted versus expert-standard task-list membership, with defined universe for true negatives",
+  "current_missing": [
+    "Comparable proposed-plan outputs across all three groups",
+    "Independent task-list standards and acceptable alternatives with defined negative-step universe",
+    "A fixed rule for missing plans and zero denominators",
+    "Human-confirmed per-fact judgments if choosing a separate answer-fact evaluation"
+  ],
+  "warnings": [
+    "The ordinary model's lack of tool calls is an access restriction, not a uniformly collected planning prediction.",
+    "The fixed workflow receives structured conditions that preselect checks; do not call it autonomous intent extraction.",
+    "Do not treat the workflow's executed plan as independent ground truth.",
+    "Do not rescale or rename expert mean scores as classification metrics.",
+    "No new paid batch or artificial retrospective planning outputs."
+  ],
+  "new_scores": 0,
+  "new_model_calls": 0
+}
