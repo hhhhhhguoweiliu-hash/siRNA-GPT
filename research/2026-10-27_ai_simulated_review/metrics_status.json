@@ -14,9 +14,9 @@
   "n_atomic_required_slots": 130,
   "n_slot_judgements": 390,
   "slot_status_counts": {
-    "CORRECT": 292,
+    "CORRECT": 309,
     "WRONG": 13,
-    "MISSING": 85,
+    "MISSING": 68,
     "UNJUDGED": 0,
     "NOT_APPLICABLE": 0
   },
@@ -36,9 +36,9 @@
       "micro_P": 0.8209,
       "micro_R": 0.4231,
       "micro_F1": 0.5584,
-      "macro_P": 0.9222,
-      "macro_R": 0.486,
-      "macro_F1": 0.6161
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "固定流程",
@@ -50,23 +50,23 @@
       "micro_P": 1,
       "micro_R": 0.9615,
       "micro_F1": 0.9804,
-      "macro_P": 1,
-      "macro_R": 0.9306,
-      "macro_F1": 0.9495
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "Agent",
       "task_accuracy": "7/9",
       "slot_n": 130,
-      "TP": 112,
+      "TP": 129,
       "FP": 1,
-      "FN": 18,
-      "micro_P": 0.9912,
-      "micro_R": 0.8615,
-      "micro_F1": 0.9218,
-      "macro_P": 0.7778,
-      "macro_R": 0.7778,
-      "macro_F1": 0.7778
+      "FN": 1,
+      "micro_P": 0.9923,
+      "micro_R": 0.9923,
+      "micro_F1": 0.9923,
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     }
   ],
   "category_metrics": [
@@ -74,73 +74,73 @@
       "group": "普通LLM",
       "category": "标准任务",
       "task_accuracy": "0/4",
-      "macro_P": 0.825,
-      "macro_R": 0.344,
-      "macro_F1": 0.4744
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "普通LLM",
       "category": "可靠性任务",
       "task_accuracy": "1/4",
-      "macro_P": 1,
-      "macro_R": 0.5904,
-      "macro_F1": 0.7174
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "普通LLM",
       "category": "需求变化任务",
       "task_accuracy": "0/1",
-      "macro_P": 1,
-      "macro_R": 0.6364,
-      "macro_F1": 0.7778
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "固定流程",
       "category": "标准任务",
       "task_accuracy": "4/4",
-      "macro_P": 1,
-      "macro_R": 1,
-      "macro_F1": 1
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "固定流程",
       "category": "可靠性任务",
       "task_accuracy": "3/4",
-      "macro_P": 1,
-      "macro_R": 0.8438,
-      "macro_F1": 0.8864
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "固定流程",
       "category": "需求变化任务",
       "task_accuracy": "1/1",
-      "macro_P": 1,
-      "macro_R": 1,
-      "macro_F1": 1
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "Agent",
       "category": "标准任务",
       "task_accuracy": "3/4",
-      "macro_P": 0.75,
-      "macro_R": 0.75,
-      "macro_F1": 0.75
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "Agent",
       "category": "可靠性任务",
       "task_accuracy": "4/4",
-      "macro_P": 1,
-      "macro_R": 1,
-      "macro_F1": 1
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     },
     {
       "group": "Agent",
       "category": "需求变化任务",
       "task_accuracy": "0/1",
-      "macro_P": 0,
-      "macro_R": 0,
-      "macro_F1": 0
+      "macro_P": null,
+      "macro_R": null,
+      "macro_F1": null
     }
   ],
   "planning_metrics_status": "NOT_READY",
