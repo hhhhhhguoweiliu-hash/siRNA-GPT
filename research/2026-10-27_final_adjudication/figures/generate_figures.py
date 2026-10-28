@@ -4,6 +4,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 
 HERE = Path(__file__).resolve().parent
 RESEARCH = HERE.parent.parent
@@ -12,7 +13,16 @@ TASK_PATH = RESEARCH / "2026-10-27_ai_simulated_review_audit_v3" / "task_reviews
 SCORE_A_PATH = RESEARCH / "2026-10-27_final_score_review" / "score_rows_by_actual_group.csv"
 SCORE_C_PATH = RESEARCH / "2026-10-27_third_expert_review" / "score_rows_by_actual_group.csv"
 
-plt.rcParams["font.family"] = "Arial"
+AVAILABLE_FONTS = {font.name for font in font_manager.fontManager.ttflist}
+if "Arial" in AVAILABLE_FONTS:
+    FONT_FAMILY = "Arial"
+elif "Arimo" in AVAILABLE_FONTS:
+    FONT_FAMILY = "Arimo"  # metrically compatible Arial substitute
+elif "Liberation Sans" in AVAILABLE_FONTS:
+    FONT_FAMILY = "Liberation Sans"
+else:
+    FONT_FAMILY = "DejaVu Sans"
+plt.rcParams["font.family"] = FONT_FAMILY
 plt.rcParams["font.weight"] = "bold"
 plt.rcParams["axes.labelweight"] = "bold"
 plt.rcParams["axes.titleweight"] = "bold"
@@ -138,13 +148,16 @@ ax.set_xticks(x)
 ax.set_xticklabels(metric_names, fontweight="bold")
 ax.set_ylim(0, 1.12)
 ax.set_ylabel("Score", fontweight="bold")
-ax.set_title("Slot-level Precision, Recall and F1", fontweight="bold")
-ax.legend(frameon=False)
+ax.set_title("Slot-level Precision, Recall and F1", fontweight="bold", pad=16)
+ax.legend(frameon=False, loc="upper left", bbox_to_anchor=(1.01, 1.0))
 ax.grid(axis="y", alpha=0.25)
 ax.set_axisbelow(True)
-save(fig, "FigureM2_precision_recall_f1.png")
+fig.subplots_adjust(right=0.78)
+fig.savefig(HERE / "FigureM2_precision_recall_f1.png", bbox_inches="tight", dpi=300)
+plt.close(fig)
 
-print("Generated seven PNG figures from the repository source CSVs.")
+print(f"Generated seven PNG figures using font family: {FONT_FAMILY} (bold).")
+print("If Arial is unavailable, Arimo is preferred as a metrically compatible substitute.")
 for g in GROUPS:
     c, w, m = slot_counts[g]
     p, r, f1 = metrics[g]
