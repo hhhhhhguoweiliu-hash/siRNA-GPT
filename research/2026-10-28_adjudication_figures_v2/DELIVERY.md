@@ -1,6 +1,8 @@
 # 本轮交付
 
-2026-10-28（北京时间）。原任务分支`codex/20261020-evidence-pilot`，接手14f11f8；正常快进纳入裁决分支9提交至a09e9a8。三项收尾的实际结果见README：原协议指标修正、真实Arial的分类图包、裁决/共同记录同步。准确上传提交及GitHub读回另追加，当前不以本地文件冒称远端交付。
+2026-10-28（北京时间）。原任务分支`codex/20261020-evidence-pilot`，接手14f11f8；正常快进纳入裁决分支9提交至a09e9a8。三项收尾的实际结果见README：原协议指标修正、真实Arial的分类图包、裁决/共同记录同步。实现与图包提交`114aed6ad1a1a3bb3918ba7879db09a30dedc396`已普通推送成功；GitHub连接确认原任务分支指向同一提交，并读回三份关键JSON，Git blob与本地一致。main仍2623c8601bd4b19b472fafc520b95c0cfd0a0fdb，裁决原分支仍a09e9a8，未强推或改部署。
+
+已读回：export_checks.json blob `33d9c49553a7ed871a8e0ee4b7e85e4bfe056570`，metrics_corrected.json blob `6ad612b7bddff6c654ceb4fe154639ec9faeff74`，package_manifest.json blob `076c98592227aa8b328b52ea93e6e228434303e4`。仓库PDF/ZIP的Git对象分别为`4868a53b551123604efb666742f09e9148afa9f0`和`ab8757dd495e3767db6639ac3d374ffa0ed4a2d1`；这些是Git对象核对，未另做远端二进制重新下载。收尾收据在本段之后另行提交，图包及本地outputs副本未因此改变。
 
 交付包括：8页合并矢量PDF；8张单页PDF、8张600 dpi PNG、8张可编辑SVG；逐题/分类/整体的完整计算JSON与绘图数据；图注/方法结果；4项定向回归、字体和导出核查、原件指纹及逐页视觉记录。个人查看副本与完整图包另置本聊天outputs；本目录是仓库可复现交付。
 
