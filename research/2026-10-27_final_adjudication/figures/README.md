@@ -48,3 +48,8 @@ All source records below are read-only inputs; this figure directory does not re
 - Score sheet C: `research/2026-10-27_third_expert_review/score_rows_by_actual_group.csv` (blob SHA `dc9a0cbf4089295e3446deb08eab8bed60aee510`)
 
 These figures were derived from the records present on the isolated adjudication branch. No source answer, original slot label, or historical score sheet was edited by this figure-generation commit.
+
+
+## PDF export
+
+After running `python generate_figures.py`, run `python build_pdf.py` to create a seven-page PDF under `dist/`. The PDF preserves each figure's aspect ratio. The plotting script uses Arial Bold when available; otherwise it prefers Arimo Bold as an Arial-compatible substitute.
