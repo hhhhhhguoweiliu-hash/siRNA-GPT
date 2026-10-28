@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "source_commit": "c68baaf2a47b91c9713fc1c046f2bbfa45b217c8",
+  "source_csv": "research\\2026-10-28_authoritative_expert_analysis\\scores_by_actual_group.csv",
+  "source_sha256": {
+    "research\\2026-10-28_authoritative_expert_analysis\\scores_by_actual_group.csv": "15fbe126d126cdf22cea4356c353238cf50c1cc35f538f1af733286f4749bdf6",
+    "research\\2026-10-28_authoritative_expert_analysis\\source_workbook_user_corrected.xlsx": "bdd70317e6da4c6f8a78b82aacd5ae268a003505912f9c136ad80d8f7295f439",
+    "research\\2026-10-28_authoritative_expert_analysis\\source_workbook_original.xlsx": "2c0658ca713634fc25489ab1123ebdbc159f107d04fc2f8698b1a78685d7d45b"
+  },
+  "original_sources_unchanged": true,
+  "workbook_cells_checked": 108,
+  "cached_totals_checked": 27,
+  "n_models": 3,
+  "n_questions": 9,
+  "n_dimensions": 4,
+  "model_totals": {
+    "agent": 70,
+    "workflow": 51,
+    "llm": 52
+  },
+  "question_totals": {
+    "1": 21,
+    "2": 20,
+    "3": 19,
+    "4": 18,
+    "5": 21,
+    "6": 14,
+    "7": 17,
+    "8": 20,
+    "9": 23
+  },
+  "dimension_totals": {
+    "factual_accuracy": 46,
+    "evidence_support": 41,
+    "requirement_completion": 36,
+    "boundary_handling": 50
+  },
+  "score_points": 173,
+  "flow_conservation_at_all_nine_questions": true,
+  "common_linear_width_scale": 3.4971098265895955,
+  "links": 135,
+  "nonzero_links": 125,
+  "zero_links_omitted": 10,
+  "zero_scores_retained_in_data": true,
+  "model_identity_preserved": true,
+  "embedded_pdf_fonts": [
+    "/ELUGPM+ArialMT",
+    "/ELUGPM+Arial-BoldMT"
+  ],
+  "pdf_pages": 1,
+  "png_dpi": 600,
+  "png_pixels": [
+    8400,
+    5640
+  ],
+  "svg_fully_vector": true,
+  "node_label_bounds": "PASS",
+  "new_quality_scores": 0,
+  "new_model_requests": 0,
+  "fonts": {
+    "normal": {
+      "path": "C:\\Windows\\Fonts\\arial.ttf",
+      "sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+    },
+    "bold": {
+      "path": "C:\\Windows\\Fonts\\arialbd.ttf",
+      "sha256": "e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5"
+    }
+  },
+  "artifact_sha256": {
+    "siRNA_GPT_expert_score_sankey_20261028.pdf": "debfce535c022e8e34aea3500a00b7c589d3f0f1f414cf7ecab46612c7de3517",
+    "siRNA_GPT_expert_score_sankey_20261028.png": "53a26c7a1fd95f699f9ed36d16587ee95f141d395039ee8a29a7569bcb6880e0",
+    "siRNA_GPT_expert_score_sankey_20261028.svg": "4ba374a8524bb7e52d0ea0da8da49911b41915f88a1aaee641470bbecc81845b"
+  }
+}
