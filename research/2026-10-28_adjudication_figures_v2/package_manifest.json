@@ -1,0 +1,19 @@
+{
+  "zip_members": 35,
+  "zip_crc": "PASS",
+  "zip_member_bytes_match": true,
+  "outputs": [
+    {
+      "repository_path": "output\\pdf\\siRNA_GPT_corrected_adjudication_figures_20261028.pdf",
+      "local_output": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\outputs\\siRNA_GPT_corrected_adjudication_figures_20261028.pdf",
+      "bytes": 448598,
+      "sha256": "dde77be5c5583722d1ce3da7e2516c91b62a569bd42a08679cf79a7811e6296a"
+    },
+    {
+      "repository_path": "output\\siRNA_GPT_corrected_figure_package_20261028.zip",
+      "local_output": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\outputs\\siRNA_GPT_corrected_figure_package_20261028.zip",
+      "bytes": 5198419,
+      "sha256": "4d0191a9038562d944a7572f454c1f6196bca542a79ec315111b6ec438380198"
+    }
+  ]
+}

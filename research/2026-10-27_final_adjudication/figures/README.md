@@ -1,5 +1,7 @@
 # siRNA-GPT evaluation figures
 
+**2026-10-28 correction:** these original SVG masters and `figure_data.csv` are preserved historical exports. Their recall formula below omitted WRONG slots from FN and must not be used as the current metric definition. Use [the corrected category-separated figure package](../../2026-10-28_adjudication_figures_v2/README.md): FN = WRONG + MISSING, with actual embedded Arial and completed PDF/PNG/SVG exports. The two Python entrypoints now redirect to the corrected builder and write to the new directory, preserving these old figures. The original scripts are preserved verbatim in the new package's `legacy_source/`. The text below records the historical method and font fallback; it is superseded by the correction.
+
 ## Contents
 
 - `Figure3_score_sheet_A_dimension_means.svg`: four-dimension means from score sheet A.

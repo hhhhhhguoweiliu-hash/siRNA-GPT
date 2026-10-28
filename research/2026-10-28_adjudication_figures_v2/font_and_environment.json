@@ -1,0 +1,31 @@
+{
+  "fonts": {
+    "normal": {
+      "path": "C:\\Windows\\Fonts\\arial.ttf",
+      "family": "Arial",
+      "sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+    },
+    "bold": {
+      "path": "C:\\Windows\\Fonts\\arialbd.ttf",
+      "family": "Arial",
+      "sha256": "e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5"
+    }
+  },
+  "matplotlib": "3.10.0",
+  "numpy": "2.5.4",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "pdf_fonttype": 42,
+  "svg_fonttype": "none",
+  "substitution_allowed": false,
+  "png_dpi": 600,
+  "figure_order": [
+    "Fig1_task_pass_by_category",
+    "Fig2_slot_macro_by_category",
+    "Fig3A_scores_A_by_category",
+    "Fig3C_scores_C_by_category",
+    "Fig4A_score_matrix_A",
+    "FigS1_score_matrix_C",
+    "FigS2_changed_task_verdicts",
+    "FigS3_overall_slot_micro"
+  ]
+}

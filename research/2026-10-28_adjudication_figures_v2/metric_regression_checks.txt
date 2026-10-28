@@ -1,0 +1,9 @@
+test_raw_answers_judgments_scores_and_old_figures_unchanged (test_metrics.CorrectedMetricsTests.test_raw_answers_judgments_scores_and_old_figures_unchanged) ... ok
+test_recorded_overlay_and_exact_slot_totals (test_metrics.CorrectedMetricsTests.test_recorded_overlay_and_exact_slot_totals) ... ok
+test_unjudged_does_not_silently_become_missing_or_zero (test_metrics.CorrectedMetricsTests.test_unjudged_does_not_silently_become_missing_or_zero) ... ok
+test_wrong_value_is_both_false_positive_and_missing_correct_value (test_metrics.CorrectedMetricsTests.test_wrong_value_is_both_false_positive_and_missing_correct_value) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.290s
+
+OK

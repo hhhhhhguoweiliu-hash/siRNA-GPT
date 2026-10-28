@@ -1,0 +1,1 @@
+{"figures": 8, "standalone_pdfs": 8, "combined_pages": 8, "actual_Arial": true, "combined_pdf": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\research\\2026-10-28_adjudication_figures_v2\\output\\pdf\\siRNA_GPT_corrected_adjudication_figures_20261028.pdf"}

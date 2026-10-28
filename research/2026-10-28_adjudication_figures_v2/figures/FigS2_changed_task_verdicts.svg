@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="748.8pt" height="460.8pt" viewBox="0 0 748.8 460.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>siRNA-GPT corrected evaluation builder</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 460.8 
+L 748.8 460.8 
+L 748.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 239.616 359.424 
+L 666.432 359.424 
+L 666.432 92.16 
+L 239.616 92.16 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="QuadMesh_1">
+    <path d="M 239.616 92.16 
+L 453.024 92.16 
+L 453.024 158.976 
+L 239.616 158.976 
+L 239.616 92.16 
+" clip-path="url(#p28fd78a203)" style="fill: #b65e4d"/>
+    <path d="M 453.024 92.16 
+L 666.432 92.16 
+L 666.432 158.976 
+L 453.024 158.976 
+L 453.024 92.16 
+" clip-path="url(#p28fd78a203)" style="fill: #278577"/>
+    <path d="M 239.616 158.976 
+L 453.024 158.976 
+L 453.024 225.792 
+L 239.616 225.792 
+L 239.616 158.976 
+" clip-path="url(#p28fd78a203)" style="fill: #278577"/>
+    <path d="M 453.024 158.976 
+L 666.432 158.976 
+L 666.432 225.792 
+L 453.024 225.792 
+L 453.024 158.976 
+" clip-path="url(#p28fd78a203)" style="fill: #b65e4d"/>
+    <path d="M 239.616 225.792 
+L 453.024 225.792 
+L 453.024 292.608 
+L 239.616 292.608 
+L 239.616 225.792 
+" clip-path="url(#p28fd78a203)" style="fill: #b65e4d"/>
+    <path d="M 453.024 225.792 
+L 666.432 225.792 
+L 666.432 292.608 
+L 453.024 292.608 
+L 453.024 225.792 
+" clip-path="url(#p28fd78a203)" style="fill: #278577"/>
+    <path d="M 239.616 292.608 
+L 453.024 292.608 
+L 453.024 359.424 
+L 239.616 359.424 
+L 239.616 292.608 
+" clip-path="url(#p28fd78a203)" style="fill: #b65e4d"/>
+    <path d="M 453.024 292.608 
+L 666.432 292.608 
+L 666.432 359.424 
+L 453.024 359.424 
+L 453.024 292.608 
+" clip-path="url(#p28fd78a203)" style="fill: #278577"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'Arial'; text-anchor: middle" x="346.32" y="370.081813" transform="rotate(-0 346.32 370.081813)">Initial AI task label</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'Arial'; text-anchor: middle" x="559.728" y="370.081813" transform="rotate(-0 559.728 370.081813)">Project-adjudicated label</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'Arial'; text-anchor: end" x="236.116" y="129.207844" transform="rotate(-0 236.116 129.207844)">A002 | W3 | Agent</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'Arial'; text-anchor: end" x="236.116" y="196.023844" transform="rotate(-0 236.116 196.023844)">A008 | R2 | LLM</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'Arial'; text-anchor: end" x="236.116" y="262.839844" transform="rotate(-0 236.116 262.839844)">A013 | W2b | Agent</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'Arial'; text-anchor: end" x="236.116" y="329.655844" transform="rotate(-0 236.116 329.655844)">A014 | U1 | Agent</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 239.616 359.424 
+L 239.616 92.16 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 239.616 359.424 
+L 666.432 359.424 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial'; text-anchor: middle; fill: #ffffff" x="346.32" y="128.937844" transform="rotate(-0 346.32 128.937844)">FAIL</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial'; text-anchor: middle; fill: #ffffff" x="559.728" y="128.937844" transform="rotate(-0 559.728 128.937844)">PASS</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial'; text-anchor: middle; fill: #ffffff" x="346.32" y="195.753844" transform="rotate(-0 346.32 195.753844)">PASS</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial'; text-anchor: middle; fill: #ffffff" x="559.728" y="195.753844" transform="rotate(-0 559.728 195.753844)">FAIL</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial'; text-anchor: middle; fill: #ffffff" x="346.32" y="262.569844" transform="rotate(-0 346.32 262.569844)">FAIL</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial'; text-anchor: middle; fill: #ffffff" x="559.728" y="262.569844" transform="rotate(-0 559.728 262.569844)">PASS</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial'; text-anchor: middle; fill: #ffffff" x="346.32" y="329.385844" transform="rotate(-0 346.32 329.385844)">FAIL</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial'; text-anchor: middle; fill: #ffffff" x="559.728" y="329.385844" transform="rotate(-0 559.728 329.385844)">PASS</text>
+   </g>
+  </g>
+  <g id="text_15">
+   <text style="font-weight: 700; font-size: 16px; font-family: 'Arial'; text-anchor: start" x="41.184" y="26.6589" transform="rotate(-0 41.184 26.6589)">Four task labels changed by project adjudication</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 10px; font-family: 'Arial'; text-anchor: start; fill: #374151" x="41.184" y="39.6288" transform="rotate(-0 41.184 39.6288)">The other 23 task labels are unchanged; all 405 slot labels and both score sheets remain unchanged</text>
+  </g>
+  <g id="text_17">
+   <text style="font-size: 8.1px; font-family: 'Arial'; fill: #374151" transform="translate(41.184 420.616547)">A002/A013/A014: FAIL to PASS. A008: PASS to FAIL. This is a versioned retrospective decision overlay.</text>
+   <text style="font-size: 8.1px; font-family: 'Arial'; fill: #374151" transform="translate(41.184 430.871337)">The changed task labels do not make previously wrong/missing slots correct and do not establish unseen-task performance.</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 8px; font-family: 'Arial'; text-anchor: start; fill: #64748b" x="41.184" y="448.3584" transform="rotate(-0 41.184 448.3584)">Human VEGFA / ARPE-19 | Seen development tasks | 2026-10-28</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p28fd78a203">
+   <rect x="239.616" y="92.16" width="426.816" height="267.264"/>
+  </clipPath>
+ </defs>
+</svg>

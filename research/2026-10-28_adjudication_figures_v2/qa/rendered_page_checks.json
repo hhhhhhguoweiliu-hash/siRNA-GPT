@@ -1,0 +1,79 @@
+{
+  "renderer": "Bundled Poppler pdftoppm",
+  "resolution_dpi": 110,
+  "pages": {
+    "1": {
+      "render_png": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\pdf_qa_20261028\\final-1.png",
+      "sha256": "1a1726087273dc93e416c0bd2ef56da805622c4be93e68b29e550f51c6dcf489",
+      "pixels": [
+        1386,
+        748
+      ],
+      "visual_inspection": "PASS"
+    },
+    "2": {
+      "render_png": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\pdf_qa_20261028\\final-2.png",
+      "sha256": "65efbf2d7a1231e4c9267659162cce50bd1a76a298b8456f9866dc57978cacbe",
+      "pixels": [
+        1386,
+        748
+      ],
+      "visual_inspection": "PASS"
+    },
+    "3": {
+      "render_png": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\pdf_qa_20261028\\final-3.png",
+      "sha256": "27784b24c275edaffdd900c265f3850ea2029399bcd4438b51f3a1a17b53a882",
+      "pixels": [
+        1496,
+        748
+      ],
+      "visual_inspection": "PASS"
+    },
+    "4": {
+      "render_png": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\pdf_qa_20261028\\final-4.png",
+      "sha256": "95a05e90445d9f359b12fa3edb84a22dc20d77a72eb58056361d261b67426787",
+      "pixels": [
+        1496,
+        748
+      ],
+      "visual_inspection": "PASS"
+    },
+    "5": {
+      "render_png": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\pdf_qa_20261028\\final-5.png",
+      "sha256": "1243bb95e90554bd7f99e811f90900543d18da2be1f51fbccfed7a628f603bb5",
+      "pixels": [
+        1100,
+        1276
+      ],
+      "visual_inspection": "PASS"
+    },
+    "6": {
+      "render_png": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\pdf_qa_20261028\\final-6.png",
+      "sha256": "1b67a990ac17c1859815b956711d0639c392873f37c43301b22f3700b8195dce",
+      "pixels": [
+        1100,
+        1276
+      ],
+      "visual_inspection": "PASS"
+    },
+    "7": {
+      "render_png": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\pdf_qa_20261028\\final-7.png",
+      "sha256": "7498eed723de462645c18cacfd12971d0576c6a6c4c12cd03c51629b9d415323",
+      "pixels": [
+        1144,
+        704
+      ],
+      "visual_inspection": "PASS"
+    },
+    "8": {
+      "render_png": "C:\\Users\\86182\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\work\\pdf_qa_20261028\\final-8.png",
+      "sha256": "d872ac577ab5b6d24fd9fe326fa7f7b5230645bb3bd0a157486235abb8367e8f",
+      "pixels": [
+        1078,
+        704
+      ],
+      "visual_inspection": "PASS"
+    }
+  },
+  "inspection": "All eight pages reviewed in contact sheet; pages 2,3,5,6 inspected individually. Final pages 1,2,3,4,7,8 pixel-identical to reviewed layout."
+}

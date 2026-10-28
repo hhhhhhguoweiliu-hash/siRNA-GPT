@@ -1,0 +1,443 @@
+3 [0x0000b7fc] INFO pdffonts null - this process (23856) started by pwsh in directory C:\00000\ARPE RNA-seq\sirna-gpt-followup-20261027 with command line: C:\Users\86182\AppData\Local\Programs\MiKTeX\miktex\bin\x64\pdffonts.exe research/2026-10-28_adjudication_figures_v2/output/pdf/siRNA_GPT_corrected_adjudication_figures_20261028.pdf
+
+4 [0x0000b7fc] INFO pdffonts null - running on Windows 6.2.9200
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Setup
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+7 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+8 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+9 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+9 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+9 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+9 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+10 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+10 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+11 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+11 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+11 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+11 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+11 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+12 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+12 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+12 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+14 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+14 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+14 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+15 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+15 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+15 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+15 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+15 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+16 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+16 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+16 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+16 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+16 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+17 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+17 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+17 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+17 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+17 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+17 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+17 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+18 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+18 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+18 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+18 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+18 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+19 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+19 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+19 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+19 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+19 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+20 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+21 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+21 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+21 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+21 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+22 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+22 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+22 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+22 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+22 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+23 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+23 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+23 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+23 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+23 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+
+25 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+25 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+25 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+25 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+25 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+26 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+26 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+26 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+26 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+26 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+29 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+29 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+29 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+29 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+29 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+It seems that this is a fresh TeX installation.
+Please finish the setup before proceeding.
+For more information, visit:
+https://miktex.org/howto/install-miktex-win
+101 [0x0000b7fc] INFO pdffonts null - this process (23856) finishes with exit code 1
+
+108 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+108 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+108 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+110 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+110 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+111 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+111 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+111 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+111 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+111 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+112 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+112 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+112 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+112 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+
+112 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+116 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+116 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+116 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+116 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+117 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+117 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+117 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+117 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+117 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+117 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+118 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+118 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+118 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+118 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+118 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+119 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+119 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+119 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+119 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+119 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+120 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+120 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+120 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+120 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+120 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+121 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+121 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+122 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+122 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+122 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+122 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+122 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+122 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+123 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+123 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+123 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+123 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+123 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+123 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+123 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+124 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+124 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: RegOpenKeyExW
+
+124 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+124 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+
+124 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+
+127 [0x0000b7fc] ERROR trace.pdffonts.core null - 拒绝访问。
+
+
+
+127 [0x0000b7fc] ERROR trace.pdffonts.core null - Function: CreateDirectoryW
+
+127 [0x0000b7fc] ERROR trace.pdffonts.core null - Result: 5
+
+127 [0x0000b7fc] ERROR trace.pdffonts.core null - Data: path="C:\Users\86182\AppData\Roaming\MiKTeX\2.9"
+
+128 [0x0000b7fc] ERROR trace.pdffonts.core null - Source: Libraries\MiKTeX\Core\win\win.cpp:271
+

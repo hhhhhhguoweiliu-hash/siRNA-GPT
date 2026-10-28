@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\00000\ARPE RNA-seq\sirna-gpt-followup-20261027\research\2026-10-28_adjudication_figures_v2\verify_figures.py", line 62, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\00000\ARPE RNA-seq\sirna-gpt-followup-20261027\research\2026-10-28_adjudication_figures_v2\verify_figures.py", line 34, in main
+    assert '<image' not in content,'SVG must remain vector'
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SVG must remain vector

@@ -1,0 +1,19 @@
+# Corrected figure legends
+
+**Figure 1. Task-level PASS rates before and after retrospective project adjudication.** Panels a-c report standard work (four templates), requirement change (one two-round template) and reliability (four templates), respectively. Each bar gives the observed count over the category denominator, once per configuration/template. Initial AI task labels and the separately recorded project adjudication overlay are distinguished. No answer was rerun; 27 answer positions represent three configurations of nine seen templates, not 27 independent research tasks. Adjudication does not establish independent blind review or unseen-task performance.
+
+**Figure 2. Required-slot precision, recall and F1 by task category.** Panels a-c use the same categories. Each value is the arithmetic mean of the per-task metric (macro); the change category has n=1 per configuration. The 405 AI-provisional slot judgments were unchanged by task adjudication. CORRECT contributes TP, WRONG contributes FP and FN, and MISSING contributes FN. These metrics describe required-value delivery under a retrospective rubric, not biological efficacy, full-text factual precision or strict CRISPR-GPT C1 planning.
+
+**Figure 3A. Original ordinal ratings from score sheet A, separated by category.** Bars are means on the original 0-2 dimension scales, and dots are the observed task ratings. Factual accuracy, evidence support, requirement completion and boundary handling retain their original meanings. No rating was altered by task adjudication; tasks are not technical or biological replicate experiments and no inferential error bars are shown.
+
+**Figure 3C. Original ordinal ratings from score sheet C, separated by category.** Plotting conventions match Figure 3A. Sheets A and C are separate supplied score records and are not averaged together; file count does not establish rater count or independence. The change category is a single case.
+
+**Figure 4A. Complete task-by-dimension matrix for score sheet A.** All 27 original rating rows are shown, ordered by standard work, requirement change and reliability, and then by template and configuration. Separators indicate category boundaries. Each displayed integer is an original 0-2 rating, without conversion to classification labels.
+
+**Figure S1. Complete task-by-dimension matrix for score sheet C.** Conventions match Figure 4A. Both sheets are preserved separately, including differences between their judgments; selecting or pooling a more favorable sheet is not performed.
+
+**Figure S2. The four task labels changed by the recorded project adjudication overlay.** A002, A013 and A014 change from FAIL to PASS; A008 changes from PASS to FAIL. The remaining 23 task labels are unchanged. Original answers, internal model text, attachments, slot judgments and both ordinal score sheets are preserved. Acceptance of a whole-task summary under the overlay does not turn undisclosed or erroneous individual slots into correct slots.
+
+**Figure S3. Supplementary overall required-slot micro metrics.** Counts are pooled across nine templates and 135 required slots per configuration, including both rounds of multi-round tasks without treating rounds as independent tasks. With C correct, W wrong and M missing slots, precision=C/(C+W), recall=C/(C+W+M) and F1=2C/(2C+2W+M). The required-slot micro F1 values are 0.544554, 0.981132 and 0.969697 for generic LLM, fixed workflow and Agent, respectively. This pooled supplementary view does not replace the category-separated macro results.
+
+All figures use actual Arial regular/bold fonts; PDF text is embedded and SVG text remains editable. Colors identify configurations, not statistical significance. Results describe prepared-input development configurations; tool evidence, shared presentation/validation, model reasoning and human effort cannot be attributed interchangeably.
