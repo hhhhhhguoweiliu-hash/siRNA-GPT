@@ -8,18 +8,23 @@ from urllib.parse import urlsplit
 from knowledge import search as local_search
 from runtime_info import manifest
 from pathlib import Path
-from core import HOME, Session, TOOLS, SCHEMAS, TaskError, TaskCancelled, config, default_candidates, save_json, now
+from core import HOME, Session, TOOLS, OPTIONAL_TOOLS, SCHEMAS, TaskError, TaskCancelled, config, default_candidates, save_json, now
 from model_client import request_completion, ModelError, model_error_evidence
 from research import RESEARCH_TOOLS, run_tool as research_tool
 from evaluation_contract import FINAL_ANSWER_STYLE, FIELD_INSTRUCTIONS, workflow_answer
 
-ORDER = [x[0] for x in TOOLS]
-LABELS = dict(zip(ORDER, ['核对候选信息', '核对靶转录本', '计算效力模型分数', '检查 seed 匹配', '查询细胞表达背景', '生成候选报告']))
+BASE_ORDER = [x[0] for x in TOOLS]
+ORDER = BASE_ORDER + [x[0] for x in OPTIONAL_TOOLS]
+LABELS = dict(zip(BASE_ORDER, ['核对候选信息', '核对靶转录本', '计算效力模型分数', '检查 seed 匹配', '查询细胞表达背景', '生成候选报告']))
+LABELS['render_expression_figures']='用R生成候选表达背景图'
 DEPS = {'inspect_candidates': [], 'verify_target': ['inspect_candidates'],
         'score_candidates': ['verify_target'], 'match_seed': ['inspect_candidates'],
-        'query_expression': ['match_seed'], 'compile_report': ORDER[:-1]}
-PRESETS = {'full': ORDER, 'target': ORDER[:2], 'score': ORDER[:3],
-           'seed': ['inspect_candidates', 'match_seed', 'query_expression']}
+        'query_expression': ['match_seed'], 'compile_report': BASE_ORDER[:-1],
+        'render_expression_figures':['query_expression']}
+PRESETS = {'full': BASE_ORDER, 'target': BASE_ORDER[:2], 'score': BASE_ORDER[:3],
+           'seed': ['inspect_candidates', 'match_seed', 'query_expression'],
+           'figures':['inspect_candidates','match_seed','query_expression','render_expression_figures'],
+           'full_figures':ORDER}
 NATURAL_STYLE = ('用自然、简洁的中文交流，像和同实验室的同学一起做事。先直接回应用户最关心的问题，再说明必要依据或下一步。'
     '通常用两到四句话，复杂问题再展开；少用套话、状态码和英文内部字段。'
     '结合上下文理解“这个”“继续”“为什么”，不要每次重新介绍系统或要求切换模式。'
@@ -44,7 +49,7 @@ PLAN_SCHEMA = {'type': 'function', 'function': {'name': 'propose_plan',
 
 def expand_plan(names):
     if not isinstance(names, list) or not names or len(names) > len(ORDER):
-        raise ValueError('计划必须包含1至6个支持的工具')
+        raise ValueError('计划必须包含1至7个支持的工具')
     needed = set()
     def add(name):
         if name not in DEPS: raise ValueError('计划包含未支持的工具')
@@ -77,7 +82,8 @@ def prepare_inputs(data):
     task = {'gene': data.get('gene','VEGFA'), 'species': data.get('species','Homo sapiens'), 'state': state, 'top_n': n,
             'request': str(data.get('message', ''))[:2000]}
     identity=data.get('expression_dataset_id','builtin')
-    if identity!='builtin':
+    from expression_data import BUILTIN_IDS
+    if identity not in BUILTIN_IDS:
         from expression_data import load_dataset
         load_dataset(identity)
     task['expression_dataset_id']=identity
@@ -95,7 +101,7 @@ def propose(message, inputs, history, cfg, transport=None, local_context=None):
     system = ('你是siRNA辅助系统的任务规划器。' + SCOPE +
         '根据用户需求选择最少的工具，不是每个问题都跑完整流程。'
         '若需候选排序选compile_report；只核对序列选verify_target；只需效力分数选score_candidates；'
-        'seed或表达背景选query_expression。程序会补齐依赖。'
+        'seed或表达背景选query_expression；候选表达背景图、韦恩图、匹配基因TPM热图或PDF作图选render_expression_figures；同时需要排序报告再加compile_report。作图仅支持8样本基线，不能声称具备通用RNA-seq差异分析或任意绘图。程序会补齐依赖。'
         '打招呼、问概念、解释当前结果或询问怎么用时，decision用answer，在summary里直接自然回答，不要求切换模式，不创建计算计划。'
         '解释具体结果只能使用local_context中的真实记录；尚无记录时如实说明。未支持基因、数据或实验能力应返回unsupported。'
         '不明确的请求应clarify，说明具体缺什么。用户明确指定常氧/缺氧或候选数量时，用task_updates更新相应条件；未指定则沿用界面设置。'
@@ -141,6 +147,7 @@ def observed(name, result):
     if name == 'score_candidates': return (f'我核对并导入了这{count}条候选已有的效力模型分数。' if historical else f'这{count}条候选的效力模型分数已经算好了。') + '这些分数用于候选比较，不能直接当成敲低率。'
     if name == 'match_seed': return ('历史seed匹配结果已经核对并导入，' if historical else 'seed匹配已经完成，') + f'共得到{result["positive_rows"]}条候选与基因的匹配记录；位点数另见seed_site_counts_all，不能把记录数当位点数。匹配不代表实测脱靶。'
     if name == 'query_expression': return '我把匹配基因和你已有的ARPE-19表达数据对上了，现在可以查看它们在常氧和缺氧背景下的表达情况。'
+    if name == 'render_expression_figures': return f'已用R包生成本次{result["candidate_count"]}条候选的表达背景图，共{result["pages"]}页，可下载PDF和查看逐基因来源。'
     selected = '、'.join(result.get('selected_for_review', []))
     return '报告已经整理好了，建议先核查' + selected + '。' if selected else '报告已经整理好了；目前没有不带复核提示的候选，建议先看报告里的具体原因。'
 
@@ -174,6 +181,7 @@ class PlannedSession(Session):
             if summary:
                 from sequence_validation import answer_evidence
                 result.update(answer_evidence(summary,self.candidates,self.state))
+        if 'render_expression_figures' in self.state:result['expression_figures']=self.state['render_expression_figures']
         from delivery import present_delivery
         from bound_reuse import remember
         shared=present_delivery({'task':self.task,'candidates':self.candidates},self.state,self.planned_tools,sequence_check=result.get('answer_validation'))
@@ -496,7 +504,7 @@ class Conversation:
             if result['status'] == 'COMPLETE':
                 text = result.get('model_summary_display') or result.get('model_summary') or observed('compile_report', result)
             elif result['status'] == 'PARTIAL_COMPLETE' and self.session.mode == 'guided':
-                text = '这次选的核对步骤都做完了，结果和原始记录已经保留下来。我们还没有做完整的候选排序；如果你想接着评分或检查seed匹配，直接告诉我就行。'
+                text = (observed('render_expression_figures',result['expression_figures'])+'本次完成表达背景作图，未增加候选排序。' if result.get('expression_figures') else '这次选的核对步骤都做完了，结果和原始记录已经保留下来。我们还没有做完整的候选排序；如果你想接着评分或检查seed匹配，直接告诉我就行。')
             else: text = result.get('model_summary_display') or result.get('message', '任务未完成') + '\n' + result.get('note', '')
             extra={k:result[k] for k in ('answer_validation','verified_sequences','model_summary_raw') if k in result}
             self.add('assistant', text, kind='result', run_id=self.session.id,**extra)

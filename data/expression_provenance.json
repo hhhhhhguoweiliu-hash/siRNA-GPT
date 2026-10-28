@@ -1,0 +1,37 @@
+{
+  "version": "ARPE19_TPM_verified_v3_20261028",
+  "label": "ARPE-19逐样本TPM与2026-10-28核验映射",
+  "source": "PACKAGED_PROJECT_DATA",
+  "rows": 43418,
+  "sha256": "51efb5e326a6ae033f5c2b62bdc97d57ccb75774afbad3bbce1ef7e227d29c76",
+  "samples": [
+    "Nor1",
+    "Nor2",
+    "Nor3",
+    "Nor4",
+    "Hyp1",
+    "Hyp2",
+    "Hyp3",
+    "Hyp4"
+  ],
+  "scope": "同一培养批次，每状态4皿；未转染；缺氧1% O2 24h；全部8样本保留",
+  "per_sample_tpm_available_in_packaged_table": true,
+  "ranking_changed": false,
+  "sources": [
+    {
+      "path": "C:\\00000\\ARPE RNA-seq\\analysis_redraw_20261028_v3\\tables\\expression_background_v3.tsv",
+      "sha256": "a9e95c6bb0609795efc9ec8694e03e6b3c30a422b60db6c0b9b63aa061d1eda5"
+    },
+    {
+      "path": "C:\\00000\\ARPE RNA-seq\\analysis_stage1_20261017\\inputs\\tpm_all_features.tsv",
+      "sha256": "90b269fab8c9cffe90ae2231fb8e2da69d534535f0574a9b6e68797417d615e6"
+    }
+  ],
+  "mapping_rules": "Retain verified unique Entrez-to-feature representatives from v3; no suffix stripping, summing or minimum-p selection; exact-coordinate alias corrections retained.",
+  "mapping_evidence": "expression_mapping_evidence/",
+  "legacy_sha256": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+  "limitations": [
+    "Counts software/command and complete reference FASTA/GTF provenance remain unconfirmed.",
+    "TPM is baseline annotation only, not siRNA response, risk weights or reranking."
+  ]
+}

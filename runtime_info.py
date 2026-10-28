@@ -14,6 +14,7 @@ def manifest():
     names+=['sequence_validation.py','sequence_ui.js','index.html','ui_text.js','ui_labels.py']
     names+=['evaluation_dialogue.py','data/historical_near_matches.tsv','data/historical_IRGM_review.tsv','data/utr_gene_map.tsv']
     names+=['evaluation_transport.py','dialogue_evaluation.py','dialogue_review.py','evaluation_ui.js']
+    names+=['expression_figures.py','workers/expression_figures.R','data/expression_provenance.json','data/expression_legacy_20261016.tsv.gz']
     assets={}
     for name in names:
         p=ROOT/name

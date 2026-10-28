@@ -1,0 +1,19 @@
+{
+  "pages": 7,
+  "figure_pages": 5,
+  "methods_pages": 2,
+  "png_files": ["Candidates_Venn_1.png", "Candidates_Venn_2.png", "Candidates_Venn_3.png", "Candidate_genes_1.png", "Candidate_genes_2.png"],
+  "svg_files": ["Candidates_Venn_1.svg", "Candidates_Venn_2.svg", "Candidates_Venn_3.svg", "Candidate_genes_1.svg", "Candidate_genes_2.svg"],
+  "r_version": "R version 4.5.1 (2025-06-13 ucrt)",
+  "packages": {
+    "ggplot2": "4.0.0",
+    "ggforce": "0.5.0",
+    "patchwork": "1.3.2",
+    "ragg": "1.5.0",
+    "svglite": "2.2.1",
+    "systemfonts": "1.3.1",
+    "jsonlite": "2.0.0"
+  },
+  "font": "Arial Bold",
+  "plotting_method": "Native ggplot2 + ggforce + patchwork; cairo PDF, ragg PNG, svglite SVG"
+}

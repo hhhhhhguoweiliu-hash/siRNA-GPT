@@ -57,7 +57,7 @@ def effective_input(common):
     if not isinstance(rows, list) or len(rows) > 20:
         raise ValueError('当前计算入口最多20条候选')
     task = {'gene': 'VEGFA', 'species': 'Homo sapiens', 'state': 'Hypoxia', 'top_n': 2,
-            'request': common['message'], 'expression_dataset_id': 'builtin',
+            'request': common['message'], 'expression_dataset_id': 'builtin_legacy_20261016',
             'allow_builtin_expression': common['conditions'].get('allow_builtin_expression', True),
             'evaluation_conditions': common['conditions'],
             'user_provided_evidence': raw.get('user_provided_evidence', {}),

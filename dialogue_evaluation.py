@@ -29,6 +29,9 @@ def load_package(package=None):
     # The live tools read the fixed project resources, not an arbitrary upload.
     for rel,record in resources['files'].items():
         actual=RESOURCE_ROOT/record.get('source',rel)
+        if rel=='data/expression.tsv.gz' and (not actual.is_file() or sha(actual)!=record['sha256']):
+            # Frozen protocol keeps the exact old bytes; never rewrite its manifest/answers.
+            actual=RESOURCE_ROOT/'data/expression_legacy_20261016.tsv.gz'
         if not actual.is_file() or sha(actual)!=record['sha256']:
             raise ValueError('工具资源版本与已审核题包不一致：'+rel)
     return suite,resources

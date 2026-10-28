@@ -44,7 +44,7 @@ def execute(payload):
    available={r['candidate_id']:r for r in default_candidates()}
    if not ids or any(i not in available for i in ids):raise ValueError('请选择有效候选')
    candidates=[available[i] for i in ids]
-  task={'gene':payload.get('gene','VEGFA'),'species':'Homo sapiens','state':payload.get('state','Hypoxia'),'top_n':payload.get('top_n',2),'request':str(payload.get('request',''))[:2000],'expression_dataset_id':payload.get('expression_dataset_id','builtin')}
+  task={'gene':payload.get('gene','VEGFA'),'species':'Homo sapiens','state':payload.get('state','Hypoxia'),'top_n':payload.get('top_n',2),'request':str(payload.get('request',''))[:2000],'expression_dataset_id':payload.get('expression_dataset_id','builtin'),'include_expression_figures':payload.get('include_expression_figures') is True}
   s=Session(candidates=candidates,task=task,mode=payload.get('mode','agent'),tool_mode=payload.get('tool_mode','live'),event=progress)
   with LOCK:STATE['run_id']=s.id
   result=s.run()
@@ -169,10 +169,10 @@ class Handler(BaseHTTPRequestHandler):
     memory=io.BytesIO()
     with zipfile.ZipFile(memory,'w',zipfile.ZIP_DEFLATED) as z:
      for p in target.parent.rglob('*'):
-      if p.is_file() and p.suffix in ('.json','.jsonl','.tsv','.html','.txt','.log','.gz'):z.write(p,p.relative_to(target.parent))
+      if p.is_file() and p.suffix in ('.json','.jsonl','.tsv','.html','.txt','.log','.gz','.pdf','.png','.svg','.R'):z.write(p,p.relative_to(target.parent))
     return self.send(memory.getvalue(),kind='application/zip')
    if allowed not in target.parents or not target.is_file():return self.send({'error':'Not found'},404)
-   types={'.tsv':'text/tab-separated-values; charset=utf-8','.json':'application/json; charset=utf-8','.jsonl':'text/plain; charset=utf-8','.html':'text/html; charset=utf-8','.txt':'text/plain; charset=utf-8'}
+   types={'.tsv':'text/tab-separated-values; charset=utf-8','.json':'application/json; charset=utf-8','.jsonl':'text/plain; charset=utf-8','.html':'text/html; charset=utf-8','.txt':'text/plain; charset=utf-8','.pdf':'application/pdf','.png':'image/png','.svg':'image/svg+xml'}
    return self.send(target.read_bytes(),kind=types.get(target.suffix,'application/octet-stream'))
   return self.send({'error':'Not found'},404)
  def do_POST(self):

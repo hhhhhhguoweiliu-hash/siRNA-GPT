@@ -1,0 +1,62 @@
+{
+  "status": "COMPLETE",
+  "version": "candidate-expression-figures-v1",
+  "run_id": "20261029_015738_ba62b4",
+  "renderer": "native R",
+  "model_called_by_plot_tool": false,
+  "settings": "settings.json",
+  "files": {
+    "Candidates_Venn_1.png": "44c87bcb9cb18dd1485da2f102574dd7b3a799d05c29a73b15a7b23dda6b1b2d",
+    "Candidates_Venn_1.svg": "4b185b30e2b3451f106050c5a582ed110c03d878005a541057d57feb512bb47c",
+    "Candidates_Venn_2.png": "8f098afb688d95551bb917e7fcf602960c2501cd0a84cc549a361d55c9f0732a",
+    "Candidates_Venn_2.svg": "4e5935da413958444dfc920144ce7e468a64a2dac6a0cd9d1d73fac8313f4c9a",
+    "Candidates_Venn_3.png": "82cbb72387aef423a2811d5bede9e8283f48f5c250b03fb1b38d8f793a55dcb9",
+    "Candidates_Venn_3.svg": "f09e5f061354d244b45d779bd1e404a889b12fdc393bbc332b7bf64594eb25e8",
+    "candidate_expression.pdf": "3131f75be385d667167820974b3e88698dea40b334db3602f8e23b81a2470046",
+    "Candidate_genes_1.png": "03bacfdee4dfd5747c5a1384de84cfda747292274f9575a0076e0356ea13c006",
+    "Candidate_genes_1.svg": "b1a3049b74850df77dac6bc3e2a476703b34179fe91ad53930d92d543ffaebf0",
+    "Candidate_genes_2.png": "12ae3f168c4c42fd70976d02f183043fe31eeb9960b01e8c2893d49c241474b8",
+    "Candidate_genes_2.svg": "f6c91928ead854c765d95a2fc618fdc98311d28a8703e811d5b52f8759c2309a",
+    "candidate_snapshot.json": "9b0015e102cbe2e83c376b3314f5c212c1dc4cb6901f9935f8b80234c7979ca3",
+    "candidate_summary.tsv": "2c86dcfeb463b65e1659078a31ce0996c80833169865878887e1bf8375d6ecce",
+    "expression_figures.R": "da8445866b95b75cbd8198d64f8ae45be3ee065346b1e5166b8370dd09d2f2e4",
+    "expression_long.tsv": "d39315bce9a607a894e5cc8778e80cddea3204c51fd2bdf6f03705ca7dac859a",
+    "expression_snapshot.tsv.gz": "304c6c7c7ed347743bf86d1d3225ef6ee9a0b56df30d142fbd34fe27e672439b",
+    "match_matrix.tsv": "3716b371b7b28145c26a14ae290069449af9c0428984afcd954cb9fafbe38f67",
+    "render.log": "4495dbc22746e28cc3ad182e3c3c6f576681fa99fe02e1c2095246bac9a1a9e6",
+    "render_receipt.json": "5b0f3a74aa0f79866a3d9fd279c4f5cd8a29a4529cc84980d5ccf999f5b102fe",
+    "seed_snapshot.tsv": "e6b56f7dd095fa7db83a6b1c1973e94561e89edd37a082fbf8fd077c38ad81b9",
+    "sessionInfo.txt": "920c897b0639a0aae8f42913d34f64d7773471567f8df9bdf104d5d14cb3ee45",
+    "settings.json": "b9825ea98040fd2cd412fc000eab58e330faa2e277b3efa1c2a8b81c2633b9af",
+    "top20_selection.tsv": "6014340ac0fb02b45638535ef376be9f0e5762b622f8dd073d1ac7c55e8498fe"
+  },
+  "pages": 7,
+  "figure_pages": 5,
+  "methods_pages": 2,
+  "png_files": [
+    "Candidates_Venn_1.png",
+    "Candidates_Venn_2.png",
+    "Candidates_Venn_3.png",
+    "Candidate_genes_1.png",
+    "Candidate_genes_2.png"
+  ],
+  "svg_files": [
+    "Candidates_Venn_1.svg",
+    "Candidates_Venn_2.svg",
+    "Candidates_Venn_3.svg",
+    "Candidate_genes_1.svg",
+    "Candidate_genes_2.svg"
+  ],
+  "r_version": "R version 4.5.1 (2025-06-13 ucrt)",
+  "packages": {
+    "ggplot2": "4.0.0",
+    "ggforce": "0.5.0",
+    "patchwork": "1.3.2",
+    "ragg": "1.5.0",
+    "svglite": "2.2.1",
+    "systemfonts": "1.3.1",
+    "jsonlite": "2.0.0"
+  },
+  "font": "Arial Bold",
+  "plotting_method": "Native ggplot2 + ggforce + patchwork; cairo PDF, ragg PNG, svglite SVG"
+}

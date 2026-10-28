@@ -65,6 +65,8 @@ def _run_case(group,case,cfg,root,transport=None):
     if group not in ('llm','workflow','agent'):raise ValueError('Unknown evaluation arm')
     Path(root).mkdir(parents=True,exist_ok=True)
     start=time.monotonic();data={**case.get('input',{}),**case.get('task',{}),'message':case['request'],'tool_mode':'imported','web_enabled':False}
+    # Historical development protocol: keep all three arms on the old evidence.
+    data['expression_dataset_id']='builtin_legacy_20261016'
     inputs=prepare_inputs(data)
     save_json(Path(root)/'case_input.json',{'request':case['request'],'input':inputs,
         'supplied_fields':{**case.get('input',{}),**case.get('task',{})},'input_sha256':input_sha256(inputs)})

@@ -27,6 +27,6 @@ class IntegrationTests(unittest.TestCase):
   self.assertEqual(len([x for x in calls[-1]['input'] if x.get('type')=='function_call_output']),6)
   report=json.loads((session.path/'report.json').read_text(encoding='utf-8'))
   self.assertTrue(report['model_summary'].startswith('TEST_ONLY'))
-  self.assertIn('Model interpretation',(session.path/'report.html').read_text(encoding='utf-8'))
+  self.assertIn('Verified tool evidence (shared presentation)',(session.path/'report.html').read_text(encoding='utf-8'))
   self.assertNotIn('TEST_SECRET_ONLY',(session.path/'model_transcript.json').read_text(encoding='utf-8'))
 if __name__=='__main__':unittest.main(verbosity=2)

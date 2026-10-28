@@ -55,10 +55,20 @@ def load_dataset(identity,store=None):
     if not path.is_file():raise ValueError('所选表达表已不存在（云端重启可能清除上传），请重新上传；未回退内置数据')
     return json.loads(path.read_text(encoding='utf-8'))
 
-def builtin_receipt():
-    path=ROOT/'data/expression.tsv.gz'
-    return {'id':'builtin','label':'本项目2026-10-16整理的ARPE-19基线表达表',
-        'source':'PACKAGED_PROJECT_DATA','sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
-        'origin':r'C:\00000\ARPE RNA-seq\result\result.zip',
-        'samples':SAMPLES,'scope':'同一培养批次，每状态4皿；未转染；缺氧1% O2 24h',
-        'per_sample_tpm_available_in_packaged_table':False,'ranking_changed':False}
+BUILTIN_IDS=('builtin','builtin_legacy_20261016')
+
+def builtin_path(identity='builtin'):
+    if identity not in BUILTIN_IDS:raise ValueError('未知内置表达版本')
+    return ROOT/'data'/('expression.tsv.gz' if identity=='builtin' else 'expression_legacy_20261016.tsv.gz')
+
+def builtin_receipt(identity='builtin'):
+    path=builtin_path(identity)
+    provenance=json.loads((ROOT/'data/expression_provenance.json').read_text(encoding='utf-8'))
+    actual=hashlib.sha256(path.read_bytes()).hexdigest()
+    if identity=='builtin_legacy_20261016':
+        if actual!=provenance['legacy_sha256']:raise ValueError('历史表达版本指纹不一致，停止评价')
+        return {'id':identity,'label':'2026-10-16冻结的历史评价表达表（非当前作图版本）',
+                'source':'FROZEN_LEGACY_PROJECT_DATA','sha256':actual,'scope':provenance['scope'],
+                'samples':SAMPLES,'per_sample_tpm_available_in_packaged_table':False,'ranking_changed':False}
+    if actual!=provenance['sha256']:raise ValueError('内置表达表与校验记录不一致，停止且不回退旧表')
+    return {**provenance,'id':'builtin','sha256':actual}

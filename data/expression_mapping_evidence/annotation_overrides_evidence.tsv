@@ -1,0 +1,8 @@
+﻿feature_id	gene_id	current_symbol	frozen_symbol	old_approved_symbol	old_Entrez	exact_verified_position	evidence_url	source
+"ACKR5"	"11318"	"ACKR5"	"GPR182"	"CCRL2"	"9034"	"NC_000012.12[+]56994492-56998877"	"https://www.ncbi.nlm.nih.gov/gene/11318"	"NCBI esummary; current symbol and exact accession/start/end/strand"
+"KRABD5"	"124411"	"KRABD5"	"KRBOX5"	NA	NA	"NC_000016.10[+]31713244-31761565"	"https://www.ncbi.nlm.nih.gov/gene/124411"	"NCBI esummary; current symbol and exact accession/start/end/strand"
+"KRABD2"	"124751"	"KRABD2"	"KRBA2"	NA	NA	"NC_000017.11[-]8358822-8376704"	"https://www.ncbi.nlm.nih.gov/gene/124751"	"NCBI esummary; current symbol and exact accession/start/end/strand"
+"CATSPERT"	"151254"	"CATSPERT"	"C2CD6"	NA	NA	"NC_000002.12[-]201487421-201619178"	"https://www.ncbi.nlm.nih.gov/gene/151254"	"NCBI esummary; current symbol and exact accession/start/end/strand"
+"RMP64"	"25871"	"RMP64"	"NEPRO"	NA	NA	"NC_000003.12[-]113002444-113019671"	"https://www.ncbi.nlm.nih.gov/gene/25871"	"NCBI esummary; current symbol and exact accession/start/end/strand"
+"TMEM278"	"643965"	"TMEM278"	"TMEM88B"	NA	NA	"NC_000001.11[+]1425871-1430255"	"https://www.ncbi.nlm.nih.gov/gene/643965"	"NCBI esummary; current symbol and exact accession/start/end/strand"
+"DCPH1"	"79624"	"DCPH1"	"ARMT1"	NA	NA	"NC_000006.12[+]151452466-151470101"	"https://www.ncbi.nlm.nih.gov/gene/79624"	"NCBI esummary; current symbol and exact accession/start/end/strand"

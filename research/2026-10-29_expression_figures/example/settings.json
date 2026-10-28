@@ -1,0 +1,115 @@
+{
+  "version": "candidate-expression-figures-v1",
+  "samples": [
+    "Nor1",
+    "Nor2",
+    "Nor3",
+    "Nor4",
+    "Hyp1",
+    "Hyp2",
+    "Hyp3",
+    "Hyp4"
+  ],
+  "candidate_ids": [
+    "VEGFA_SD_1157",
+    "VEGFA_SD_2739",
+    "VEGFA_SD_3119",
+    "VEGFA_SD_3193",
+    "VEGFA_SD_3429",
+    "VEGFA_SD_3499",
+    "VEGFA_SD_3500",
+    "VEGFA_SD_3502",
+    "VEGFA_SD_3535"
+  ],
+  "detected": "TPM >= 1 in >= 2 of 4 vessels per state",
+  "excluded_target_entrez": "7422",
+  "top20": "Unique mapped non-target genes in the union of positive guide seed matches; mean TPM across all eight descending, symbol then numeric Entrez tie-break. No DE/FDR/direction filter.",
+  "venn": "Counts exact; circle areas schematic, not proportional; neither is below detection criterion in both states, not zero expression; unmapped is unknown.",
+  "heatmap": "log2(TPM+1), no row standardization; same gene order and color limits across pages; top20 are display only, full matches retained.",
+  "expression_source": {
+    "version": "ARPE19_TPM_verified_v3_20261028",
+    "label": "ARPE-19逐样本TPM与2026-10-28核验映射",
+    "source": "PACKAGED_PROJECT_DATA",
+    "rows": 43418,
+    "sha256": "51efb5e326a6ae033f5c2b62bdc97d57ccb75774afbad3bbce1ef7e227d29c76",
+    "samples": [
+      "Nor1",
+      "Nor2",
+      "Nor3",
+      "Nor4",
+      "Hyp1",
+      "Hyp2",
+      "Hyp3",
+      "Hyp4"
+    ],
+    "scope": "同一培养批次，每状态4皿；未转染；缺氧1% O2 24h；全部8样本保留",
+    "per_sample_tpm_available_in_packaged_table": true,
+    "ranking_changed": false,
+    "sources": [
+      {
+        "path": "C:\\00000\\ARPE RNA-seq\\analysis_redraw_20261028_v3\\tables\\expression_background_v3.tsv",
+        "sha256": "a9e95c6bb0609795efc9ec8694e03e6b3c30a422b60db6c0b9b63aa061d1eda5"
+      },
+      {
+        "path": "C:\\00000\\ARPE RNA-seq\\analysis_stage1_20261017\\inputs\\tpm_all_features.tsv",
+        "sha256": "90b269fab8c9cffe90ae2231fb8e2da69d534535f0574a9b6e68797417d615e6"
+      }
+    ],
+    "mapping_rules": "Retain verified unique Entrez-to-feature representatives from v3; no suffix stripping, summing or minimum-p selection; exact-coordinate alias corrections retained.",
+    "mapping_evidence": "expression_mapping_evidence/",
+    "legacy_sha256": "e7d44ab86c786b8b06eecd6561037d6d8382ee7fa185e996635d3f730cb5f57b",
+    "limitations": [
+      "Counts software/command and complete reference FASTA/GTF provenance remain unconfirmed.",
+      "TPM is baseline annotation only, not siRNA response, risk weights or reranking."
+    ],
+    "id": "builtin"
+  },
+  "seed_source": {
+    "status": "IMPORTED_HISTORICAL",
+    "scope": "guide only in expression join, mer7m8, 0 mismatches, representative annotated 3UTR; not measured off-target",
+    "positive_rows": 14524,
+    "details": "seed_matches.tsv",
+    "counts": {
+      "VEGFA_SD_1157": 2197,
+      "VEGFA_SD_2739": 1495,
+      "VEGFA_SD_3119": 2665,
+      "VEGFA_SD_3193": 2386,
+      "VEGFA_SD_3429": 279,
+      "VEGFA_SD_3499": 778,
+      "VEGFA_SD_3500": 1548,
+      "VEGFA_SD_3502": 2516,
+      "VEGFA_SD_3535": 3156
+    },
+    "counts_unit": "seed sites including VEGFA, not genes",
+    "seed_site_counts_all": {
+      "VEGFA_SD_1157": 2197,
+      "VEGFA_SD_2739": 1495,
+      "VEGFA_SD_3119": 2665,
+      "VEGFA_SD_3193": 2386,
+      "VEGFA_SD_3429": 279,
+      "VEGFA_SD_3499": 778,
+      "VEGFA_SD_3500": 1548,
+      "VEGFA_SD_3502": 2516,
+      "VEGFA_SD_3535": 3156
+    },
+    "seed_site_counts_nontarget": {
+      "VEGFA_SD_1157": 2197,
+      "VEGFA_SD_2739": 1494,
+      "VEGFA_SD_3119": 2663,
+      "VEGFA_SD_3193": 2385,
+      "VEGFA_SD_3429": 278,
+      "VEGFA_SD_3499": 777,
+      "VEGFA_SD_3500": 1547,
+      "VEGFA_SD_3502": 2515,
+      "VEGFA_SD_3535": 3155
+    }
+  },
+  "provenance": "Current run candidates; seed mode recorded separately. Imported historical matches are not a new sequence screen.",
+  "ranking_changed": false,
+  "font": "Arial Bold",
+  "width_inches": 10,
+  "height_inches": 7,
+  "title_pt": 24,
+  "main_label_pt": 18,
+  "dense_label_pt": 16
+}

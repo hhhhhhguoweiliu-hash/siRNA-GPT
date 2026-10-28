@@ -14,7 +14,7 @@ def requirement_audit(inputs,state,planned=()):
     conditions=inputs.get('task',{}).get('evaluation_conditions',{})
     required=[tool for key,tool in CHECKS.items() if conditions.get(key)]
     if not required:required=list(planned)
-    if 'compile_report' in required:required=list(CHECKS.values())
+    if 'compile_report' in required:required=list(dict.fromkeys([*CHECKS.values(),*required]))
     completed=[n for n in required if n in state and state[n].get('status')!='ERROR']
     missing=[n for n in required if n not in completed]
     return {'requirements_source':'explicit structured conditions or confirmed plan; free text coverage not independently validated',
@@ -25,6 +25,9 @@ def requirement_audit(inputs,state,planned=()):
 def present_delivery(inputs,state,planned=(),error='',sequence_check=None):
     audit=requirement_audit(inputs,state,planned)
     text=workflow_answer(inputs,state,error)
+    if state.get('render_expression_figures',{}).get('status')=='COMPLETE':
+        f=state['render_expression_figures']
+        text+='\n候选表达背景作图：原生R已生成'+str(f['pages'])+'页PDF；'+str(f['candidate_count'])+'条本次候选，来源表及图包可下载。表达不改变候选排序。'
     if audit['missing_steps'] and not error:
         text='判定：所要求证据尚未齐全；仅展示已取得部分。\n'+text.split('\n',1)[1]
     rows=verified_rows(inputs.get('candidates',[]),state)

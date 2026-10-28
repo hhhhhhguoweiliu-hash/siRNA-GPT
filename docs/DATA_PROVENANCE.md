@@ -6,7 +6,7 @@
 
 样本：Nor1–4与Hyp1–4，用户确认同一培养批次、8个不同培养皿、每皿分别提RNA、未混样、未加siRNA/转染试剂；缺氧1% O2连续24h，常氧同期培养。不能按编号推断配对，也不能写成4轮独立培养。
 
-仓库`data/expression.tsv.gz`包含43385行整理后基因表达背景，字段为approved_symbol、ENTREZID、两状态TPM均值及TPM≥1样本数。来源及校验记录见`data/provenance.json`。它不是原始FASTQ、不是siRNA处理后RNA-seq；某些映射仍有范围限制，不代表测到了所有实际3′UTR异构体/APA。
+2026-10-29同步后的`data/expression.tsv.gz`包含43,418条核验的唯一Entrez-参考条目，保留feature_id、approved_symbol、ENTREZID、Nor1–4/Hyp1–4逐样本TPM、两状态均值和TPM≥1样本数。当前来源/校验与映射规则见`data/expression_provenance.json`、`data/expression_mapping_evidence/`，复现入口为`scripts/sync_expression_baseline.py`。没有按后缀删行、加总或挑最小P值。旧43,385条仅摘要版本保存在`expression_legacy_20261016.tsv.gz`，历史来源仍可查。它不是原始FASTQ、不是siRNA处理后RNA-seq；基因表达不能证明实际3′UTR异构体/APA或seed位点可及性。
 
 网页表达检测规则为每状态TPM≥1且至少2/4样本，仅作描述性标记。TPM不进入效力模型，不改变排序。上传模板需要基因级未取对数TPM、唯一人Entrez ID；格式校验不能证明单位/物种/实验声明真实。
 

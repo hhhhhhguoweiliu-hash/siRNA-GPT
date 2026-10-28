@@ -1,0 +1,27 @@
+{
+  "run_id": "20261029_015125_5c9b07",
+  "run_dir": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\runs\\20261029_015125_5c9b07",
+  "status": "COMPLETE",
+  "expression_figures": {
+    "status": "COMPLETE",
+    "candidate_count": 9,
+    "display_gene_count": 20,
+    "pdf": "expression_figures/candidate_expression.pdf",
+    "report": "expression_figures/report.html",
+    "manifest": "expression_figures/manifest.json",
+    "ranking_changed": false,
+    "pages": 7
+  },
+  "actual_model_calls": 0,
+  "seed_and_score_mode": "IMPORTED_HISTORICAL",
+  "actual_tools": [
+    "inspect_candidates",
+    "verify_target",
+    "score_candidates",
+    "match_seed",
+    "query_expression",
+    "render_expression_figures",
+    "compile_report"
+  ],
+  "message": null
+}

@@ -1,0 +1,4 @@
+PASS: English dynamic labels, citation locators, Python/JS status agreement and unchanged original content.
+PASS: actual shared chat renderer displays FAIL/FAIL/PASS, verified fields and separate unchanged raw text.
+PASS: preview never starts a model; manual acknowledgement and current plan are sent; changing task set clears acknowledgement.
+Frontend syntax and browser backup retention/identity checks passed.

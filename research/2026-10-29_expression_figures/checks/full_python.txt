@@ -1,0 +1,10 @@
+C:\00000\ARPE RNA-seq\sirna-gpt-followup-20261027\test_evaluation_exports.py:57: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\.test_tmp\\tmpa60_2cyq\\out\\execution_status.tsv' mode='r' encoding='utf-8-sig'>
+  rows=list(csv.DictReader((out/'execution_status.tsv').open(encoding='utf-8-sig'),delimiter='\t'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Recorded 1 answers; COMPLETE; expert scoring has not been performed.
+STARTUP_CHECK pubmed {"status": "OK", "source_count": 1, "message": "", "provider_code": "", "request_id": "", "multi_turn_verified": false}
+STARTUP_CHECK web {"status": "ERROR", "source_count": 0, "message": "TEST not open", "provider_code": "ToolNotOpen", "request_id": "", "multi_turn_verified": false}
+----------------------------------------------------------------------
+Ran 228 tests in 115.639s
+
+OK

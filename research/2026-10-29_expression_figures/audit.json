@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "nine_candidate_counts": "all 9 equal independently saved v3 tables",
+  "top20_gene_order_and_mean_TPM": "all 20 equal v3",
+  "pdf_pages": 7,
+  "fonts": [
+    "/WZLIBZ+Arial-BoldMT"
+  ],
+  "characters_outside_page": [],
+  "png_count": 5,
+  "svg_count": 5,
+  "png_pixels": [
+    2400,
+    1680
+  ],
+  "white_background": true,
+  "svg_raster_images": false,
+  "visual_review": "All five scientific pages and two methods pages rendered and inspected separately."
+}
