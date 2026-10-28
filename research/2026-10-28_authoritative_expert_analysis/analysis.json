@@ -1,0 +1,295 @@
+{
+  "review_date": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "reviewed_commit": "888804378d5f62a1d0093f9da230a466ed67daf8",
+  "source_filename": "expert_scores_user_corrected.xlsx",
+  "source_sha256": "bdd70317e6da4c6f8a78b82aacd5ae268a003505912f9c136ad80d8f7295f439",
+  "source_bytes": 10093,
+  "original_upload_sha256": "2c0658ca713634fc25489ab1123ebdbc159f107d04fc2f8698b1a78685d7d45b",
+  "original_upload_preserved": true,
+  "user_transcription_correction_applied": true,
+  "reviewer_provenance": "User explicitly confirms this file was scored by one authoritative human expert",
+  "rater_count": 1,
+  "blind_review_method_recorded_in_workbook": false,
+  "new_assistant_quality_scores": 0,
+  "new_model_calls": 0,
+  "n_answers": 27,
+  "n_cases_per_group": 9,
+  "summary": [
+    {
+      "category": "all",
+      "group": "llm",
+      "n_tasks": 9,
+      "sum_total": 52,
+      "mean_total": 5.777777777777778,
+      "factual_accuracy": 1.8888888888888888,
+      "evidence_support": 1.1111111111111112,
+      "requirement_completion": 0.7777777777777778,
+      "boundary_handling": 2.0
+    },
+    {
+      "category": "all",
+      "group": "workflow",
+      "n_tasks": 9,
+      "sum_total": 51,
+      "mean_total": 5.666666666666667,
+      "factual_accuracy": 1.4444444444444444,
+      "evidence_support": 1.4444444444444444,
+      "requirement_completion": 1.2222222222222223,
+      "boundary_handling": 1.5555555555555556
+    },
+    {
+      "category": "all",
+      "group": "agent",
+      "n_tasks": 9,
+      "sum_total": 70,
+      "mean_total": 7.777777777777778,
+      "factual_accuracy": 1.7777777777777777,
+      "evidence_support": 2.0,
+      "requirement_completion": 2.0,
+      "boundary_handling": 2.0
+    },
+    {
+      "category": "standard",
+      "group": "llm",
+      "n_tasks": 4,
+      "sum_total": 20,
+      "mean_total": 5.0,
+      "factual_accuracy": 1.75,
+      "evidence_support": 0.75,
+      "requirement_completion": 0.5,
+      "boundary_handling": 2.0
+    },
+    {
+      "category": "standard",
+      "group": "workflow",
+      "n_tasks": 4,
+      "sum_total": 27,
+      "mean_total": 6.75,
+      "factual_accuracy": 1.75,
+      "evidence_support": 2.0,
+      "requirement_completion": 1.75,
+      "boundary_handling": 1.25
+    },
+    {
+      "category": "standard",
+      "group": "agent",
+      "n_tasks": 4,
+      "sum_total": 31,
+      "mean_total": 7.75,
+      "factual_accuracy": 1.75,
+      "evidence_support": 2.0,
+      "requirement_completion": 2.0,
+      "boundary_handling": 2.0
+    },
+    {
+      "category": "requirement_change",
+      "group": "llm",
+      "n_tasks": 1,
+      "sum_total": 7,
+      "mean_total": 7.0,
+      "factual_accuracy": 2.0,
+      "evidence_support": 1.0,
+      "requirement_completion": 2.0,
+      "boundary_handling": 2.0
+    },
+    {
+      "category": "requirement_change",
+      "group": "workflow",
+      "n_tasks": 1,
+      "sum_total": 6,
+      "mean_total": 6.0,
+      "factual_accuracy": 2.0,
+      "evidence_support": 1.0,
+      "requirement_completion": 1.0,
+      "boundary_handling": 2.0
+    },
+    {
+      "category": "requirement_change",
+      "group": "agent",
+      "n_tasks": 1,
+      "sum_total": 8,
+      "mean_total": 8.0,
+      "factual_accuracy": 2.0,
+      "evidence_support": 2.0,
+      "requirement_completion": 2.0,
+      "boundary_handling": 2.0
+    },
+    {
+      "category": "reliability",
+      "group": "llm",
+      "n_tasks": 4,
+      "sum_total": 25,
+      "mean_total": 6.25,
+      "factual_accuracy": 2.0,
+      "evidence_support": 1.5,
+      "requirement_completion": 0.75,
+      "boundary_handling": 2.0
+    },
+    {
+      "category": "reliability",
+      "group": "workflow",
+      "n_tasks": 4,
+      "sum_total": 18,
+      "mean_total": 4.5,
+      "factual_accuracy": 1.0,
+      "evidence_support": 1.0,
+      "requirement_completion": 0.75,
+      "boundary_handling": 1.75
+    },
+    {
+      "category": "reliability",
+      "group": "agent",
+      "n_tasks": 4,
+      "sum_total": 31,
+      "mean_total": 7.75,
+      "factual_accuracy": 1.75,
+      "evidence_support": 2.0,
+      "requirement_completion": 2.0,
+      "boundary_handling": 2.0
+    }
+  ],
+  "paired_totals": [
+    {
+      "question_number": 1,
+      "case_id": "W1",
+      "llm": 6,
+      "workflow": 7,
+      "agent": 8,
+      "agent_minus_llm": 2,
+      "agent_minus_workflow": 1
+    },
+    {
+      "question_number": 2,
+      "case_id": "W2",
+      "llm": 6,
+      "workflow": 6,
+      "agent": 8,
+      "agent_minus_llm": 2,
+      "agent_minus_workflow": 2
+    },
+    {
+      "question_number": 3,
+      "case_id": "W2b",
+      "llm": 4,
+      "workflow": 7,
+      "agent": 8,
+      "agent_minus_llm": 4,
+      "agent_minus_workflow": 1
+    },
+    {
+      "question_number": 4,
+      "case_id": "W3",
+      "llm": 4,
+      "workflow": 7,
+      "agent": 7,
+      "agent_minus_llm": 3,
+      "agent_minus_workflow": 0
+    },
+    {
+      "question_number": 5,
+      "case_id": "U1",
+      "llm": 7,
+      "workflow": 6,
+      "agent": 8,
+      "agent_minus_llm": 1,
+      "agent_minus_workflow": 2
+    },
+    {
+      "question_number": 6,
+      "case_id": "R1",
+      "llm": 5,
+      "workflow": 2,
+      "agent": 7,
+      "agent_minus_llm": 2,
+      "agent_minus_workflow": 5
+    },
+    {
+      "question_number": 7,
+      "case_id": "R2",
+      "llm": 7,
+      "workflow": 2,
+      "agent": 8,
+      "agent_minus_llm": 1,
+      "agent_minus_workflow": 6
+    },
+    {
+      "question_number": 8,
+      "case_id": "R3",
+      "llm": 6,
+      "workflow": 6,
+      "agent": 8,
+      "agent_minus_llm": 2,
+      "agent_minus_workflow": 2
+    },
+    {
+      "question_number": 9,
+      "case_id": "R4",
+      "llm": 7,
+      "workflow": 8,
+      "agent": 8,
+      "agent_minus_llm": 1,
+      "agent_minus_workflow": 0
+    }
+  ],
+  "comparisons": {
+    "llm": {
+      "paired_wins": 9,
+      "paired_ties": 0,
+      "paired_losses": 0,
+      "mean_total_difference": 2.0,
+      "relative_total_rating_difference": 0.34615384615384615,
+      "meaning": "Equal-weight 0-8 ordinal rating difference, not classification accuracy or a biological effect"
+    },
+    "workflow": {
+      "paired_wins": 7,
+      "paired_ties": 2,
+      "paired_losses": 0,
+      "mean_total_difference": 2.111111111111111,
+      "relative_total_rating_difference": 0.37254901960784315,
+      "meaning": "Equal-weight 0-8 ordinal rating difference, not classification accuracy or a biological effect"
+    }
+  },
+  "R1_R2_share_of_agent_workflow_total_point_gap": 0.5789473684210527,
+  "resolved_recording_issue": {
+    "case_id": "R4",
+    "answer_ids": [
+      "A011",
+      "A025"
+    ],
+    "current_totals": [
+      8,
+      8
+    ],
+    "agent_minus_workflow_by_dimension": {
+      "factual_accuracy": 0,
+      "evidence_support": 0,
+      "requirement_completion": 0,
+      "boundary_handling": 0
+    },
+    "resolution": "User confirmed both are 8; original difference was a transcription error",
+    "correction_applied": true
+  },
+  "interpretation_items_not_score_changes": [
+    {
+      "case_id": "W2b",
+      "answer_id": "A013",
+      "original_total": 8,
+      "needed": "State whether raw model text/attachments were counted; do not infer evaluator intent or replace delivered body"
+    }
+  ],
+  "classification_metrics": {
+    "accuracy": null,
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
+  "formal_task_success_rate": null,
+  "p_values": null,
+  "limitations": [
+    "One human rater",
+    "Nine seen, partly related development templates per configuration",
+    "No per-fact labels, pass/fail task judgements or score rationales in this workbook",
+    "Template, shared validation and model contributions remain distinct from aggregate system ratings"
+  ]
+}

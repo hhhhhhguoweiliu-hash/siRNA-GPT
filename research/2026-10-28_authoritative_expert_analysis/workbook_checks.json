@@ -1,0 +1,18 @@
+{
+  "sheet_count": 1,
+  "score_rows": 27,
+  "valid_original_dimension_scores": 108,
+  "cached_totals_match_independent_sums": 27,
+  "mapping_matches": 27,
+  "comments": 0,
+  "original_sha256": "2c0658ca713634fc25489ab1123ebdbc159f107d04fc2f8698b1a78685d7d45b",
+  "original_unchanged": true,
+  "current_sha256": "bdd70317e6da4c6f8a78b82aacd5ae268a003505912f9c136ad80d8f7295f439",
+  "user_correction_applied": true,
+  "changed_score_cells": [
+    "Sheet1!D27",
+    "Sheet1!E27"
+  ],
+  "formatting_changes": [],
+  "quality_rescoring_by_assistant": false
+}
