@@ -1,0 +1,57 @@
+{
+  "source_means_verified": true,
+  "all_108_dimension_scores_preserved": true,
+  "q9_correction_applied": true,
+  "png_dpi": 600,
+  "pdf_pages": 6,
+  "font_family": "Arial",
+  "font_weight": "Bold",
+  "font_file": "Arial-Bold-restored-cmap.ttf",
+  "pdf_fonts_verified": [
+    {
+      "figure": "Fig1_rating_summary",
+      "embedded_fonts": [
+        "/BHXPGK+Arial-BoldMT"
+      ]
+    },
+    {
+      "figure": "Fig2_rating_radar",
+      "embedded_fonts": [
+        "/BHXPGK+Arial-BoldMT"
+      ]
+    },
+    {
+      "figure": "Fig3_task_totals",
+      "embedded_fonts": [
+        "/BHXPGK+Arial-BoldMT"
+      ]
+    },
+    {
+      "figure": "Fig4_task_categories",
+      "embedded_fonts": [
+        "/BHXPGK+Arial-BoldMT"
+      ]
+    },
+    {
+      "figure": "Fig5_dimension_matrix",
+      "embedded_fonts": [
+        "/BHXPGK+Arial-BoldMT"
+      ]
+    },
+    {
+      "figure": "Fig6_paired_differences",
+      "embedded_fonts": [
+        "/BHXPGK+Arial-BoldMT"
+      ]
+    }
+  ],
+  "svg_editable_text": true,
+  "fake_error_bars": false,
+  "new_human_scores": 0,
+  "new_model_calls": 0,
+  "all_pngs_decode_successfully": true,
+  "combined_pdf_rendered_and_checked": true,
+  "visual_review": "all six figures; layout and values checked",
+  "font_source_pdf": "research/2026-10-27_bar_radar/siRNA_GPT_bar_radar_existing_scores_REVIEW_PENDING.pdf",
+  "font_source_pdf_sha256": "88b05e61c812521e550f713ad3482d8e5e08c71748d7479d68605b8e5bae91d5"
+}

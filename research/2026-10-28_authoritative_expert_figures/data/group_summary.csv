@@ -1,0 +1,13 @@
+﻿category,group,n_tasks,sum_total,mean_total,factual_accuracy,evidence_support,requirement_completion,boundary_handling
+all,llm,9,52,5.777777777777778,1.8888888888888888,1.1111111111111112,0.7777777777777778,2.0
+all,workflow,9,51,5.666666666666667,1.4444444444444444,1.4444444444444444,1.2222222222222223,1.5555555555555556
+all,agent,9,70,7.777777777777778,1.7777777777777777,2.0,2.0,2.0
+standard,llm,4,20,5.0,1.75,0.75,0.5,2.0
+standard,workflow,4,27,6.75,1.75,2.0,1.75,1.25
+standard,agent,4,31,7.75,1.75,2.0,2.0,2.0
+requirement_change,llm,1,7,7.0,2.0,1.0,2.0,2.0
+requirement_change,workflow,1,6,6.0,2.0,1.0,1.0,2.0
+requirement_change,agent,1,8,8.0,2.0,2.0,2.0,2.0
+reliability,llm,4,25,6.25,2.0,1.5,0.75,2.0
+reliability,workflow,4,18,4.5,1.0,1.0,0.75,1.75
+reliability,agent,4,31,7.75,1.75,2.0,2.0,2.0

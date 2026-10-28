@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "source": "User correction in the same conversation",
+  "user_statement_zh": "更改，第九题两份原答相同的都是8分，此处是我录入失误问题",
+  "reason": "USER_CONFIRMED_TRANSCRIPTION_ERROR_NOT_EXPERT_RESCORING",
+  "original_uploaded_sha256": "2c0658ca713634fc25489ab1123ebdbc159f107d04fc2f8698b1a78685d7d45b",
+  "case_id": "R4",
+  "question_number": 9,
+  "answer_id": "A011",
+  "changes": [
+    {"cell": "Sheet1!D27", "dimension": "evidence_support", "from": 1, "to": 2},
+    {"cell": "Sheet1!E27", "dimension": "requirement_completion", "from": 1, "to": 2}
+  ],
+  "total_formula": "Sheet1!G27 = C27+D27+E27+F27",
+  "total_before": 6,
+  "total_after": 8,
+  "A025_total_remains": 8,
+  "other_original_scores_changed": false,
+  "original_upload_preserved": true,
+  "assistant_generated_quality_scores": 0
+}

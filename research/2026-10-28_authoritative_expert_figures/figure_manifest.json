@@ -1,0 +1,38 @@
+{
+  "source_commit": "c68baaf2a47b91c9713fc1c046f2bbfa45b217c8",
+  "source_score_csv_sha256": "15fbe126d126cdf22cea4356c353238cf50c1cc35f538f1af733286f4749bdf6",
+  "source_corrected_workbook_sha256": "bdd70317e6da4c6f8a78b82aacd5ae268a003505912f9c136ad80d8f7295f439",
+  "figures": [
+    {
+      "key": "Fig1_rating_summary",
+      "caption": "Agent received higher overall ratings, mainly in evidence support and requirement completion."
+    },
+    {
+      "key": "Fig2_rating_radar",
+      "caption": "LLM scored slightly higher on factual accuracy. Agent and LLM tied on boundary handling."
+    },
+    {
+      "key": "Fig3_task_totals",
+      "caption": "Agent exceeded LLM on all nine tasks and tied Workflow on Q4 and Q9."
+    },
+    {
+      "key": "Fig4_task_categories",
+      "caption": "The largest mean gap from Workflow occurred in reliability tasks: 7.75 versus 4.50 points."
+    },
+    {
+      "key": "Fig5_dimension_matrix",
+      "caption": "All 108 dimension ratings are shown. Q9 Workflow and Agent entries are both 2/2/2/2."
+    },
+    {
+      "key": "Fig6_paired_differences",
+      "caption": "Q6 and Q7 contribute 11 of the 19 cumulative Agent-Workflow rating points."
+    }
+  ],
+  "n_experts": 1,
+  "n_seen_cases_per_group": 9,
+  "q9_workflow_total": 8,
+  "q9_agent_total": 8,
+  "new_model_calls": 0,
+  "new_ratings": 0,
+  "classification_metrics_created": false
+}
