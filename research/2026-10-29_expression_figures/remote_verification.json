@@ -1,0 +1,26 @@
+{
+  "status": "VERIFIED",
+  "implementation_commit": "3bd9302709806139a70765e84856346648a01bb0",
+  "branch": "codex/20261020-evidence-pilot",
+  "branch_pushed_and_ls_remote_confirmed": true,
+  "main": "2623c8601bd4b19b472fafc520b95c0cfd0a0fdb",
+  "main_modified": false,
+  "production_deployed": false,
+  "verification_method": "GitHub connector fetched files by exact implementation commit; blob identities compared with local committed blobs; git ls-remote confirmed branch and unchanged main.",
+  "files": [
+    {
+      "path": "data/expression_provenance.json",
+      "github_blob": "e4a4a256a91341ae10bdea069acc5580f4632f38",
+      "local_git_blob": "e4a4a256a91341ae10bdea069acc5580f4632f38",
+      "identical": true,
+      "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/blob/3bd9302709806139a70765e84856346648a01bb0/data/expression_provenance.json"
+    },
+    {
+      "path": "research/2026-10-29_expression_figures/http_e2e_receipt.json",
+      "github_blob": "c7c42781ff6ee090b9b85157b3b66d6c32fac420",
+      "local_git_blob": "c7c42781ff6ee090b9b85157b3b66d6c32fac420",
+      "identical": true,
+      "url": "https://github.com/hhhhhhguoweiliu-hash/siRNA-GPT/blob/3bd9302709806139a70765e84856346648a01bb0/research/2026-10-29_expression_figures/http_e2e_receipt.json"
+    }
+  ]
+}
