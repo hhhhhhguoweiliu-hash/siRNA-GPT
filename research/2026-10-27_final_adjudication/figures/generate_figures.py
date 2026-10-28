@@ -76,7 +76,7 @@ def heatmap(df, group_col, sheet, filename):
     ax.set_xticks(np.arange(4))
     ax.set_xticklabels(["Factual", "Evidence", "Requirement", "Boundary"], fontweight="bold")
     ax.set_yticks(np.arange(len(df)))
-    ax.set_yticklabels([f'{r.answer_id} | {r.case_id} | {LABELS[r[group_col]]}' for r in df.itertuples()], fontsize=8, fontweight="bold")
+    ax.set_yticklabels([f'{r.answer_id} | {r.case_id} | {LABELS[getattr(r, group_col)]}' for r in df.itertuples()], fontsize=8, fontweight="bold")
     ax.set_xlabel("Evaluation dimension", fontweight="bold")
     ax.set_ylabel("Task episode", fontweight="bold")
     ax.set_title(f"Task-level Score Matrix ({sheet})", fontweight="bold")
