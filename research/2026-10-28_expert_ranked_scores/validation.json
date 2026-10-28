@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "source_commit": "c68baaf2a47b91c9713fc1c046f2bbfa45b217c8",
+  "source_hashes": {
+    "research\\2026-10-28_authoritative_expert_analysis\\scores_by_actual_group.csv": "15fbe126d126cdf22cea4356c353238cf50c1cc35f538f1af733286f4749bdf6",
+    "research\\2026-10-28_authoritative_expert_analysis\\source_workbook_user_corrected.xlsx": "bdd70317e6da4c6f8a78b82aacd5ae268a003505912f9c136ad80d8f7295f439"
+  },
+  "original_scores_unchanged": true,
+  "groups": 3,
+  "questions_per_group": 9,
+  "total_bars": 27,
+  "all_questions_included_once_per_group": true,
+  "independent_descending_sort": true,
+  "tie_break": "original question number",
+  "group_totals": {
+    "agent": 70,
+    "workflow": 51,
+    "llm": 52
+  },
+  "overall_mean": 6.407407407407407,
+  "mean_line_is_not_a_quality_threshold": true,
+  "score_range": [
+    0,
+    8
+  ],
+  "continuous_color_scale": true,
+  "quality_categories_inferred": false,
+  "embedded_pdf_fonts": [
+    "/ELUGPM+ArialMT",
+    "/ELUGPM+Arial-BoldMT"
+  ],
+  "pdf_pages": 1,
+  "png_dpi": 600,
+  "png_pixels": [
+    7200,
+    4020
+  ],
+  "svg_fully_vector": true,
+  "font_sources": {
+    "normal": {
+      "path": "C:\\Windows\\Fonts\\arial.ttf",
+      "sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+    },
+    "bold": {
+      "path": "C:\\Windows\\Fonts\\arialbd.ttf",
+      "sha256": "e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5"
+    }
+  },
+  "new_model_calls": 0,
+  "new_quality_scores": 0,
+  "bar_values": [
+    {
+      "group": "agent",
+      "question": 1,
+      "value": 8
+    },
+    {
+      "group": "agent",
+      "question": 2,
+      "value": 8
+    },
+    {
+      "group": "agent",
+      "question": 3,
+      "value": 8
+    },
+    {
+      "group": "agent",
+      "question": 5,
+      "value": 8
+    },
+    {
+      "group": "agent",
+      "question": 7,
+      "value": 8
+    },
+    {
+      "group": "agent",
+      "question": 8,
+      "value": 8
+    },
+    {
+      "group": "agent",
+      "question": 9,
+      "value": 8
+    },
+    {
+      "group": "agent",
+      "question": 4,
+      "value": 7
+    },
+    {
+      "group": "agent",
+      "question": 6,
+      "value": 7
+    },
+    {
+      "group": "workflow",
+      "question": 9,
+      "value": 8
+    },
+    {
+      "group": "workflow",
+      "question": 1,
+      "value": 7
+    },
+    {
+      "group": "workflow",
+      "question": 3,
+      "value": 7
+    },
+    {
+      "group": "workflow",
+      "question": 4,
+      "value": 7
+    },
+    {
+      "group": "workflow",
+      "question": 2,
+      "value": 6
+    },
+    {
+      "group": "workflow",
+      "question": 5,
+      "value": 6
+    },
+    {
+      "group": "workflow",
+      "question": 8,
+      "value": 6
+    },
+    {
+      "group": "workflow",
+      "question": 6,
+      "value": 2
+    },
+    {
+      "group": "workflow",
+      "question": 7,
+      "value": 2
+    },
+    {
+      "group": "llm",
+      "question": 5,
+      "value": 7
+    },
+    {
+      "group": "llm",
+      "question": 7,
+      "value": 7
+    },
+    {
+      "group": "llm",
+      "question": 9,
+      "value": 7
+    },
+    {
+      "group": "llm",
+      "question": 1,
+      "value": 6
+    },
+    {
+      "group": "llm",
+      "question": 2,
+      "value": 6
+    },
+    {
+      "group": "llm",
+      "question": 8,
+      "value": 6
+    },
+    {
+      "group": "llm",
+      "question": 6,
+      "value": 5
+    },
+    {
+      "group": "llm",
+      "question": 3,
+      "value": 4
+    },
+    {
+      "group": "llm",
+      "question": 4,
+      "value": 4
+    }
+  ],
+  "artifacts": {
+    "siRNA_GPT_ranked_expert_scores_20261028.pdf": "c2236ec1c2bd5ef1c946fca740ef790678abd973c4078e2a2e61a1a6c2c5597d",
+    "siRNA_GPT_ranked_expert_scores_20261028.png": "545ff05e5c37355e0624fdd8d1947ec23190a341904938c2b9e3a014388d2803",
+    "siRNA_GPT_ranked_expert_scores_20261028.svg": "6537800eedac4dd5b43739d7ace597d881752105881873dbb39bd6166ee33de3"
+  }
+}
