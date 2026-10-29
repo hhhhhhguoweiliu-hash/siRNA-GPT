@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "pages": 2,
+  "nine_primary_core_intervals_verified": true,
+  "all20_exact_match_rows": 180,
+  "fonts": [
+    "/LRWQWG+Arial-BoldMT",
+    "/UBDQGB+Arial-BoldMT"
+  ],
+  "minimum_text_pt": 16.0,
+  "text_outside_page": [],
+  "PNG_dimensions": [
+    2400,
+    1680
+  ],
+  "graphics": "native R ggplot2; white background; no grid; vector PDF/SVG",
+  "pdf_sha256": "6960f8d8c0b8891e6801dab8d84a627bfd5a8370d6b2cba53975e62306854e66"
+}

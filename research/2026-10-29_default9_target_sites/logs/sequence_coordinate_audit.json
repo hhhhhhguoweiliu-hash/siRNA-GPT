@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "primary_reference": "NM_003376.6",
+  "primary_length": 3609,
+  "coordinate_system": "mature mRNA; 1-based inclusive; target 19-nt paired core; not genomic coordinates",
+  "core_formula": "design window start +2 through +20",
+  "candidates": 9,
+  "reference_transcripts": 20,
+  "candidate_transcript_pairs": 180,
+  "all180_single_exact_matches": true,
+  "primary_CDS_targets": 1,
+  "primary_3UTR_targets": 8,
+  "new_siRNA_design_or_prediction": false,
+  "RNAseq_expression_used_for_positioning": false,
+  "reference_policy": "Fixed historical versions; no substitution with current unversioned reference. Reference matches do not establish isoform expression or knockdown.",
+  "source_files": [
+    {
+      "name": "candidates.tsv",
+      "original_path": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\data\\candidates.tsv",
+      "sha256": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853"
+    },
+    {
+      "name": "candidate_trace.tsv",
+      "original_path": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\research\\2026-10-23_candidate_provenance\\candidate_trace.tsv",
+      "sha256": "b4be1113ba46590a7fcbc5d21abb70dbffc1595231cee9c59b8f5ccd25579c31"
+    },
+    {
+      "name": "VEGFA.fasta",
+      "original_path": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\data\\VEGFA.fasta",
+      "sha256": "30059fb1290f94692a1b0eeef85a7d992d6e34b8940395d390202bcf71d9c706"
+    },
+    {
+      "name": "VEGFA_NM003376.gb",
+      "original_path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\public_sources\\VEGFA_NM003376.gb",
+      "sha256": "613656acecb46d004472449c8c98546242443d0d9f9f3d49c92c8facb90bd4b0"
+    },
+    {
+      "name": "VEGFA_vendor_versions.gb",
+      "original_path": "C:\\Users\\86182\\.codex\\.chatgpt-projects\\g-p-6a82e08661e081919f3434650ae4f35c\\analysis\\ARPE19_candidates_20261016\\public_sources\\VEGFA_vendor_versions.gb",
+      "sha256": "fea4adcbfea8e371fab199147f132627692e375796aef99e1e7ac1b9d9c0faae"
+    }
+  ],
+  "existing_figure_search": "Found 20-reference coverage-count bar chart and 65-candidate position-versus-score plot; no default-nine target-interval diagram found in searched local files.",
+  "prior_related_figure": "research/2026-10-20_takeover/figures/Fig04_transcript_coverage.png"
+}

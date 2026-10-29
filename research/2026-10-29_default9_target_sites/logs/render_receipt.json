@@ -1,0 +1,15 @@
+{
+  "pages": 2,
+  "width_inches": 10,
+  "height_inches": 7,
+  "font": "Arial Bold",
+  "title_pt": 24,
+  "axis_title_pt": 20,
+  "candidate_label_pt": 18,
+  "coordinate_label_pt": 16,
+  "reference": "NM_003376.6",
+  "coordinates": "1-based inclusive mature mRNA",
+  "package": "ggplot2",
+  "all_graphics_native_R": true,
+  "model_fitting": false
+}
