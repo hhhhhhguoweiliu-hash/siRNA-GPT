@@ -6,6 +6,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch,Ellipse
 from matplotlib import font_manager,text as mt
+from PIL import Image
 
 HERE=Path(__file__).resolve().parent
 COLORS={'TP':'#90D9CA','TN':'#99C4CE','FP':'#AB88B3','FN':'#DDCDE2'}
@@ -55,6 +56,7 @@ def main(font):
         b=t.get_window_extent(renderer);assert b.x0>=0 and b.y0>=0 and b.x1<=w and b.y1<=h,(t.get_text(),b.bounds)
         assert Path(font_manager.findfont(t.get_fontproperties(),fallback_to_default=False)).resolve()==font
     for ext in ['png','svg']:fig.savefig(HERE/f'four_metric_calculation_schematic.{ext}',dpi=600)
+    with Image.open(HERE/'four_metric_calculation_schematic.png') as im:im.load()
     svg=(HERE/'four_metric_calculation_schematic.svg').read_text();assert 'DejaVu' not in svg and '<image' not in svg and '<text' in svg
     (HERE/'README.md').write_text('''# Four-metric calculation schematic
 
