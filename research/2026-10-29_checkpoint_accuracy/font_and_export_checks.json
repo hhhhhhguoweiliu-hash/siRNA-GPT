@@ -1,0 +1,102 @@
+{
+  "font_file_sha256": "eadd6d42df8f833cc91435376266b6840119c871e8cbc62d84908f5257f52f40",
+  "font_family": "Arial",
+  "font_weight": "Bold",
+  "fallback_allowed": false,
+  "palette": {
+    "llm": "#AB88B3",
+    "workflow": "#99C4CE",
+    "agent": "#90D9CA"
+  },
+  "dpi": 600,
+  "pdf_outputs": 0,
+  "figures": [
+    {
+      "stem": "Fig1_accuracy_precision_recall_f1_micro",
+      "size_inches": [
+        10.2,
+        5.6
+      ],
+      "png_pixels": [
+        6120,
+        3360
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "font": "Arial Bold",
+      "text_inside_canvas": true,
+      "editable_svg_text": true,
+      "raster_layers_in_svg": 0
+    },
+    {
+      "stem": "FigS1_accuracy_precision_recall_f1_macro",
+      "size_inches": [
+        10.2,
+        5.6
+      ],
+      "png_pixels": [
+        6120,
+        3360
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "font": "Arial Bold",
+      "text_inside_canvas": true,
+      "editable_svg_text": true,
+      "raster_layers_in_svg": 0
+    },
+    {
+      "stem": "Fig2_outcomes_and_true_negatives",
+      "size_inches": [
+        11.2,
+        5.5
+      ],
+      "png_pixels": [
+        6720,
+        3300
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "font": "Arial Bold",
+      "text_inside_canvas": true,
+      "editable_svg_text": true,
+      "raster_layers_in_svg": 0
+    },
+    {
+      "stem": "Fig3_confusion_tables_with_abstentions",
+      "size_inches": [
+        11.4,
+        4.8
+      ],
+      "png_pixels": [
+        6840,
+        2880
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "font": "Arial Bold",
+      "text_inside_canvas": true,
+      "editable_svg_text": true,
+      "raster_layers_in_svg": 0
+    }
+  ],
+  "data_sha256": {
+    "confusion_matrix_2x3.csv": "ad24e4a95ef5639a15ebbb68f482917a1ef29f6b67a5d30bb9d67acc62a45120",
+    "metrics_macro.csv": "17df92cc30dea23f2f40df72c7706684e43b179ca78181665bc1d5474209e06d",
+    "retained_extra_errors_and_scope_notes.json": "0f60d0ae567780abe002e8964af78e63a4ab82a3d8afaf587cbe70f4816e44de",
+    "judgments.csv": "7f4ac732422f6b7c4c70916df220f318e819460312c521db5a1d59ea3ef1daec",
+    "figure_plot_data.csv": "fdd804075997368557af17369e076178b32e84d8692d668175478677759de9f9",
+    "metrics_micro.csv": "20c7f73d2c59791dec3412bfddb5605d45f6f31ddc92307fd6c9b3562ec2f4b9",
+    "checkpoint_definitions.csv": "88a05e8597da14a0a336f36eab814001c47b0f13f891301f7a94986a0040c2fe",
+    "negative_evidence_review.csv": "9f65f10d3af3b549317dd9c32b35ae0749ad65aca399df1cc1e2d0945bff9dee",
+    "metrics_by_task.csv": "3870d881a5d0a035526db6a23efa39078d19689cfccfbed9b4d041d3da979157"
+  }
+}

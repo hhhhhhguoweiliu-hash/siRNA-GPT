@@ -1,0 +1,16 @@
+{
+  "n_judgments": 405,
+  "n_original_checkpoints": 135,
+  "positive": 108,
+  "negative": 27,
+  "n_groups": 3,
+  "same_checkpoint_set_in_all_groups": true,
+  "original_C_W_M_retained": true,
+  "abstentions_never_counted_as_TN": true,
+  "TN_evidence_records": 72,
+  "independent_sklearn_accuracy_precision_recall_f1_check": "passed",
+  "sklearn_2x3_confusion_matrix_check": "passed",
+  "source_hash_join_check": true,
+  "new_runs": 0,
+  "new_expert_scores": 0
+}

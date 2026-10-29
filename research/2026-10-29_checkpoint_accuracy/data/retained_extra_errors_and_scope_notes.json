@@ -1,0 +1,18 @@
+[
+  {
+    "answer_id": "A017",
+    "question_number": 6,
+    "display_answer": "丙",
+    "kind": "WRONG_ADDITIONAL_ISOFORM_COORDINATE_CLAIM",
+    "evidence": "正式第二轮称NM_003376.6及17种其他转录本的区域均为1439-1457；verify_target.json中部分其他转录本为471-489。",
+    "handling": "作为额外事实错误单列；不重复改写R1_R2_COORD（该项只要求NM_003376.6坐标）；如何纳入额外FP须先固定协议。"
+  },
+  {
+    "answer_id": "A008",
+    "question_number": 7,
+    "display_answer": "甲",
+    "kind": "PROVENANCE_WORDING_CAUTION",
+    "evidence": "正文把原分数标注写成“非供应商确认的用户计算假设”；原输入该限定针对链角色，分数有单独绑定来源。",
+    "handling": "来源解释需区分；不自动重复计入当前逐项FP。"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "reference_doi": "10.1038/s41551-025-01463-z",
+  "reference_panel": "Figure 3b",
+  "reference_figure_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41551-025-01463-z/MediaObjects/41551_2025_1463_Fig3_HTML.png",
+  "reference_image_sha256": "7e373b4d8f38893198fdd691ac0d3b1cee671b61a486ee7785c0939465dab6e5",
+  "method": "exact solid-fill RGB values sampled after visual inspection",
+  "colors": {
+    "Generic LLM": "#AB88B3",
+    "Fixed workflow": "#99C4CE",
+    "Agent": "#90D9CA"
+  },
+  "all_text": "Arial Bold",
+  "user_request_date": "2026-10-29",
+  "rgb_sampling_only_no_reference_data_reuse": true
+}

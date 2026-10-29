@@ -1,0 +1,50 @@
+{
+  "sources": [
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/results_original.json",
+      "commit": "0fea37f726b4adff9ba06dc5e55f69ce561a96a3",
+      "bytes": 3495823,
+      "sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3",
+      "git_blob_sha1": "f0b334c3d5b1c44d4a164a1752d32df38043e480"
+    },
+    {
+      "path": "research/2026-10-27_real_dialogue_mini/raw/anonymous_reviewer_package_original.zip",
+      "commit": "0fea37f726b4adff9ba06dc5e55f69ce561a96a3",
+      "bytes": 2031924,
+      "sha256": "0e3167519bc13c4ccee2fe2eb9d479254d498695b2ba46dc3386271eca66d66d",
+      "git_blob_sha1": "3ab3cff9754b5a77cdb1b1d8249b4b1df1a06f8f"
+    },
+    {
+      "path": "research/2026-10-27_ai_simulated_review_audit_v3/required_slots.csv",
+      "commit": "0fea37f726b4adff9ba06dc5e55f69ce561a96a3",
+      "bytes": 197883,
+      "sha256": "27a9225216be9c35dc0ca36181c19d383c4f057571b440dd55ca69236e214fed",
+      "git_blob_sha1": "6e3f73d39624de082f804da5188c9cb31b34d5ff"
+    },
+    {
+      "path": "research/2026-10-29_metric_figures_paper_style/data/resolved_slots.csv",
+      "commit": "0fea37f726b4adff9ba06dc5e55f69ce561a96a3",
+      "bytes": 420139,
+      "sha256": "aee520e7fea925ca0c3358fdf4715861a4547b332e185b615e09f4e307f7e9e6",
+      "git_blob_sha1": "40da3b694075e11dab8589b9bf2d2311fa269b0c"
+    },
+    {
+      "path": "research/2026-10-29_metric_figures_paper_style/data/adjudication_receipt_BCC.json",
+      "commit": "0fea37f726b4adff9ba06dc5e55f69ce561a96a3",
+      "bytes": 730,
+      "sha256": "8b5ad7f3e34de2abce0a19f855923296dc31f7c0f68c289391032459698c0f72",
+      "git_blob_sha1": "7b88208d8116f833681149c3eb2a97c45cc168a7"
+    }
+  ],
+  "original_answers": 27,
+  "tasks_per_group": 9,
+  "checkpoints_per_group": 135,
+  "positive_checkpoints_per_group": 108,
+  "negative_checkpoints_per_group": 27,
+  "new_checkpoints": 0,
+  "new_system_runs": 0,
+  "new_expert_scores": 0,
+  "review_type": "retrospective recoding of existing AI-assisted review plus user-relayed BCC adjudication",
+  "independent_test": false,
+  "original_C_W_M_changed": false
+}

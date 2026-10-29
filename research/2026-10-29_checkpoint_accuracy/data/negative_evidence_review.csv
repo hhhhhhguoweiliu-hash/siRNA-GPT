@@ -1,0 +1,241 @@
+﻿answer_id,group,case_id,checkpoint_id,gold_label,prediction,outcome,original_status,evidence_locator,proposition,evidence_quote_excerpt,excerpt_truncated,full_original_quote_sha256,review_note
+A004,agent,W1,W1_S05_ROLE_ASSUMPTION,0,0,TN,CORRECT,answers/A004/attachments/round_1/runs/20261027_061658_52d7fd/inspect_candidates.json#rows.0.strand_assignment_basis,供应商已经确认本题两行的guide/passenger角色，链角色不再只是用户的条件性计算假设。,"""USER_DECLARED_CALCULATION_ASSUMPTION_ONLY; both rows 5prime-to-3prime; row2 guide; not vendor-confirmed""",False,da698c9d1ab78d005d45a1b198a19432ffa1b7a2dd1474526acd2e43ca0ba81a,已核查的明确边界否定；不是把缺答当作否定。
+A004,agent,W1,W1_S15_SCORE_MEANING,0,0,TN,CORRECT,answers/A004/attachments/round_1/runs/20261027_061658_52d7fd/score_candidates.json#score_not_percent,本题scaled模型分数可以当作实测敲低百分比或实测效力。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A004,agent,W1,W1_S26_CHEMISTRY_LIMITS,0,0,TN,CORRECT,answers/A004/attachments/round_1/runs/20261027_061658_52d7fd/inspect_candidates.json#rows.0.limits,计算模型已经确认本题供应商链角色、实际TT/N3末端化学或N3连接实物构型。,"[""Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed"",""Original TT and row1 N3 retained; exact terminal chemistry/attachment not established"",""Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated"",""Offline official computations imported by exact sequence/reference binding; no new score/seed execution""]",False,c90f254e538fee70c6959f57d3facf176782f0e7eae400cb716badb60bc76067,已核查的明确边界否定；不是把缺答当作否定。
+A018,llm,W1,W1_S05_ROLE_ASSUMPTION,0,0,TN,CORRECT,answers/A018/answer.txt#round=1,供应商已经确认本题两行的guide/passenger角色，链角色不再只是用户的条件性计算假设。,"本次为用户提供的已订购siVEGF试剂的19nt核心序列（假设为5′→3′的第二行序列）及配对序列的核查计算，基于内置人VEGFA参考序列开展核对。
+1. 订购保留序列：原第一行序列`GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）`、原第二行序列`UUUCUUGUCUUGCUCUAUCTT`（含标注TT）
+2. 核心序列信息（基于计算假设）：
+   - Guide 19nt核心（5′→3′）：UUUCUUGUCUUGCUCUAUC
+   - 配对19nt核心（5′→3′）：GAUAGAGCAAGACAAGAAA
+3. Guide核心核对（与NM_003376.6参考比对）：
+   - 19nt核心起点（1-based）：暂未生成独立比对结果（原始输入未提供直接比对数据）
+   - OligoFormer模型分数：暂未提供对应得分
+1. 核心序列来源：用户输入明确的订购记录与计算假设序列（来自`user_input.original_order_lines`及`calculation_assumptions`）
+2. 参考基础：基于内置人VEGFA的固定参考序列NM_003376.6
+   - 本次序列假设（5′→3′方向、guide链定义）是否与实际试剂相符
+   - 试剂的化学修饰（N3、TT）是否为订购标注的状态，及是否影响siRNA功能
+   - 后续需通过实验验证该序列对VEGFA的敲低效果，及非靶基因的潜在脱靶情况",False,3f389fa7dd379bb63a94d5bf4d816ad24d1080347824cd50db73788efffd0bfc,已核查的明确边界否定；不是把缺答当作否定。
+A018,llm,W1,W1_S15_SCORE_MEANING,0,ABSTAIN,A_NEG,MISSING,answers/A018/answer.txt#round=1,本题scaled模型分数可以当作实测敲低百分比或实测效力。,"本次为用户提供的已订购siVEGF试剂的19nt核心序列（假设为5′→3′的第二行序列）及配对序列的核查计算，基于内置人VEGFA参考序列开展核对。
+2. 核心序列信息（基于计算假设）：
+   - Guide 19nt核心（5′→3′）：UUUCUUGUCUUGCUCUAUC
+   - 配对19nt核心（5′→3′）：GAUAGAGCAAGACAAGAAA
+3. Guide核心核对（与NM_003376.6参考比对）：
+   - 19nt核心起点（1-based）：暂未生成独立比对结果（原始输入未提供直接比对数据）
+   - OligoFormer模型分数：暂未提供对应得分
+1. 核心序列来源：用户输入明确的订购记录与计算假设序列（来自`user_input.original_order_lines`及`calculation_assumptions`）
+2. 参考基础：基于内置人VEGFA的固定参考序列NM_003376.6
+1. 现有限制：无独立科学工具开展比对、脱靶及表达水平的实际计算，仅能基于系统内置参考规则提供核对框架，seed位点、非靶基因及表达相关结果暂未生成具体数值
+   - 系统内置的seed匹配计数及表达映射结果仅为框架性核对，无法替代实际实验验证",False,75d1ec97967350c975982681a2b2e725018fc4554edcde3d90e513090a40c2ff,完整原核查项未满足/缺答；保留ABSTAIN，不补为否，不计TN。
+A018,llm,W1,W1_S26_CHEMISTRY_LIMITS,0,0,TN,CORRECT,answers/A018/answer.txt#round=1,计算模型已经确认本题供应商链角色、实际TT/N3末端化学或N3连接实物构型。,"本次为用户提供的已订购siVEGF试剂的19nt核心序列（假设为5′→3′的第二行序列）及配对序列的核查计算，基于内置人VEGFA参考序列开展核对。
+1. 订购保留序列：原第一行序列`GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）`、原第二行序列`UUUCUUGUCUUGCUCUAUCTT`（含标注TT）
+2. 核心序列信息（基于计算假设）：
+   - Guide 19nt核心（5′→3′）：UUUCUUGUCUUGCUCUAUC
+   - 配对19nt核心（5′→3′）：GAUAGAGCAAGACAAGAAA
+3. Guide核心核对（与NM_003376.6参考比对）：
+   - 19nt核心起点（1-based）：暂未生成独立比对结果（原始输入未提供直接比对数据）
+   - OligoFormer模型分数：暂未提供对应得分
+1. 核心序列来源：用户输入明确的订购记录与计算假设序列（来自`user_input.original_order_lines`及`calculation_assumptions`）
+2. 参考基础：基于内置人VEGFA的固定参考序列NM_003376.6
+   - 本次序列假设（5′→3′方向、guide链定义）是否与实际试剂相符
+   - 试剂的化学修饰（N3、TT）是否为订购标注的状态，及是否影响siRNA功能
+   - 后续需通过实验验证该序列对VEGFA的敲低效果，及非靶基因的潜在脱靶情况",False,3f389fa7dd379bb63a94d5bf4d816ad24d1080347824cd50db73788efffd0bfc,已核查的明确边界否定；不是把缺答当作否定。
+A026,workflow,W1,W1_S05_ROLE_ASSUMPTION,0,0,TN,CORRECT,answers/A026/attachments/round_1/runs/20261027_061847_c7d0b5/inspect_candidates.json#rows.0.strand_assignment_basis,供应商已经确认本题两行的guide/passenger角色，链角色不再只是用户的条件性计算假设。,"""USER_DECLARED_CALCULATION_ASSUMPTION_ONLY; both rows 5prime-to-3prime; row2 guide; not vendor-confirmed""",False,da698c9d1ab78d005d45a1b198a19432ffa1b7a2dd1474526acd2e43ca0ba81a,已核查的明确边界否定；不是把缺答当作否定。
+A026,workflow,W1,W1_S15_SCORE_MEANING,0,0,TN,CORRECT,answers/A026/attachments/round_1/runs/20261027_061847_c7d0b5/score_candidates.json#score_not_percent,本题scaled模型分数可以当作实测敲低百分比或实测效力。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A026,workflow,W1,W1_S26_CHEMISTRY_LIMITS,0,0,TN,CORRECT,answers/A026/attachments/round_1/runs/20261027_061847_c7d0b5/inspect_candidates.json#rows.0.limits,计算模型已经确认本题供应商链角色、实际TT/N3末端化学或N3连接实物构型。,"[""Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed"",""Original TT and row1 N3 retained; exact terminal chemistry/attachment not established"",""Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated"",""Offline official computations imported by exact sequence/reference binding; no new score/seed execution""]",False,c90f254e538fee70c6959f57d3facf176782f0e7eae400cb716badb60bc76067,已核查的明确边界否定；不是把缺答当作否定。
+A007,agent,W2,W2_COMMON_WINDOW_CORE,0,0,TN,CORRECT,answers/A007/attachments/round_1/runs/20261027_061714_d851ec/verify_target.json#rows.5,本题可以直接把23nt设计窗口起点作为19nt配对核心起点。,"{""candidate_id"":""VEGFA_SD_3499"",""guide_core19_5to3"":""UGUACUACGGAAUAUCUCG"",""source"":""siDirect_2.0"",""synthesis_status"":""NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"",""reference_transcript"":""NM_003376.6"",""core_start_1based"":3501,""core_end_1based"":3519,""design_window_start_1based"":""3499"",""design_window_end_1based"":""3521"",""design_window_scope"":""source 23nt design window; not 19nt core coordinates"",""covered_transcripts"":20,""reference_transcript_count"":20,""sites"":[{""transcript"":""NM_001171623.2"",""start_1based"":3552,""end_1based"":3570,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001171626.2"",""start_1based"":3429,""end_1based"":3447,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001171628.2"",""start_1based"":3297,""end_1based"":3315,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001317010.2"",""start_1based"":3429,""end_1based"":3447,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001025369.3"",""start_1based"":3394,""end_1based"":3412,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001171627.2"",""start_1based"":3394,""end_1based"":3412,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001171625.2"",""start_1based"":3483,""end_1based"":3501,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript""",True,07612584d801acfdb984eff02e4d6a86f26ae986195bf75278154d5dbe69c2ab,已核查的明确边界否定；不是把缺答当作否定。
+A007,agent,W2,W2_COMMON_SCOPE,0,0,TN,CORRECT,results_original.json#A007.round[1],本轮执行或报告了题目排除的分数、seed、表达关联或候选排名分析。,"{""completed_tools"": [""inspect_candidates"", ""verify_target""], ""tool_calls"": 2, ""error"": """"}",False,9419eb83fd21daa80dcda849ee89f9f041d2e08a82dbe77cd8245f357af9bd13,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A020,llm,W2,W2_COMMON_WINDOW_CORE,0,1,FP,WRONG,answers/A020/answer.txt#round=1,本题可以直接把23nt设计窗口起点作为19nt配对核心起点。,"仅完成VEGFA NM_003376.6参考上的19nt guide配对核心坐标核对、20条固定公共参考覆盖核对及23nt设计窗口与19nt核心的区分，未涉及效力分数、seed、表达关联或排序，符合要求。
+| 候选ID | 23nt设计窗口起始（1-based） | 23nt设计窗口结束（1-based） | 19nt配对核心实际匹配起点（1-based） | 19nt配对核心实际匹配终点（1-based） | 20条固定公共参考覆盖情况 |
+### 证据
+所有信息来自输入的候选行字段，其中23nt设计窗口的起始/结束坐标为输入的target_start_1based、target_end_1based；19nt配对核心实际匹配坐标为23nt设计窗口起始位起的19nt序列对应NM_003376.6的坐标；20条公共参考覆盖情况来自输入的core_matches_transcripts（包含NM_003376.6在内的20条）及all_20_transcripts_core_match=True字段。
+### 限制或下一步",False,2dc6e5f6012ffeb5cb2b5a8d684bb84b5b1e864e0dc9a1ed602d1811aaf476ae,对假命题给出支持，或实际出现该禁用事件。
+A020,llm,W2,W2_COMMON_SCOPE,0,0,TN,CORRECT,answers/A020/answer.txt#round=1,本轮执行或报告了题目排除的分数、seed、表达关联或候选排名分析。,"仅完成VEGFA NM_003376.6参考上的19nt guide配对核心坐标核对、20条固定公共参考覆盖核对及23nt设计窗口与19nt核心的区分，未涉及效力分数、seed、表达关联或排序，符合要求。
+| 候选ID | 23nt设计窗口起始（1-based） | 23nt设计窗口结束（1-based） | 19nt配对核心实际匹配起点（1-based） | 19nt配对核心实际匹配终点（1-based） | 20条固定公共参考覆盖情况 |
+### 证据
+所有信息来自输入的候选行字段，其中23nt设计窗口的起始/结束坐标为输入的target_start_1based、target_end_1based；19nt配对核心实际匹配坐标为23nt设计窗口起始位起的19nt序列对应NM_003376.6的坐标；20条公共参考覆盖情况来自输入的core_matches_transcripts（包含NM_003376.6在内的20条）及all_20_transcripts_core_match=True字段。
+### 限制或下一步",False,2dc6e5f6012ffeb5cb2b5a8d684bb84b5b1e864e0dc9a1ed602d1811aaf476ae,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A027,workflow,W2,W2_COMMON_WINDOW_CORE,0,0,TN,CORRECT,answers/A027/attachments/round_1/runs/20261027_061848_99bfa6/verify_target.json#rows.5,本题可以直接把23nt设计窗口起点作为19nt配对核心起点。,"{""candidate_id"":""VEGFA_SD_3499"",""guide_core19_5to3"":""UGUACUACGGAAUAUCUCG"",""source"":""siDirect_2.0"",""synthesis_status"":""NOT_ORDER_READY_MODIFICATIONS_UNFROZEN"",""reference_transcript"":""NM_003376.6"",""core_start_1based"":3501,""core_end_1based"":3519,""design_window_start_1based"":""3499"",""design_window_end_1based"":""3521"",""design_window_scope"":""source 23nt design window; not 19nt core coordinates"",""covered_transcripts"":20,""reference_transcript_count"":20,""sites"":[{""transcript"":""NM_001171623.2"",""start_1based"":3552,""end_1based"":3570,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001171626.2"",""start_1based"":3429,""end_1based"":3447,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001171628.2"",""start_1based"":3297,""end_1based"":3315,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001317010.2"",""start_1based"":3429,""end_1based"":3447,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001025369.3"",""start_1based"":3394,""end_1based"":3412,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001171627.2"",""start_1based"":3394,""end_1based"":3412,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript"":""NM_001171625.2"",""start_1based"":3483,""end_1based"":3501,""coordinate_scope"":""19nt paired core; 1-based closed interval""},{""transcript""",True,07612584d801acfdb984eff02e4d6a86f26ae986195bf75278154d5dbe69c2ab,已核查的明确边界否定；不是把缺答当作否定。
+A027,workflow,W2,W2_COMMON_SCOPE,0,0,TN,CORRECT,results_original.json#A027.round[1],本轮执行或报告了题目排除的分数、seed、表达关联或候选排名分析。,"{""completed_tools"": [""inspect_candidates"", ""verify_target""], ""tool_calls"": 2, ""error"": """"}",False,9419eb83fd21daa80dcda849ee89f9f041d2e08a82dbe77cd8245f357af9bd13,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A013,agent,W2b,W2B_SCORE_MEANING,0,0,TN,CORRECT,answers/A013/attachments/round_1/runs/20261027_061732_1ae83c/score_candidates.json#score_not_percent,本题scaled模型分数可以直接换算实测敲低百分比。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A013,agent,W2b,W2B_SCOPE,0,0,TN,CORRECT,results_original.json#A013.round[1],本轮扩展执行或报告了题目排除的seed、表达或候选排名分析。,"{""completed_tools"": [""inspect_candidates"", ""verify_target"", ""score_candidates""], ""tool_calls"": 3, ""error"": """"}",False,ad880e042d84766f0cd60db287817aac4886204b3b60f1c58b4f2124d8626282,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A019,workflow,W2b,W2B_SCORE_MEANING,0,0,TN,CORRECT,answers/A019/attachments/round_1/runs/20261027_061822_5efdd9/score_candidates.json#score_not_percent,本题scaled模型分数可以直接换算实测敲低百分比。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A019,workflow,W2b,W2B_SCOPE,0,0,TN,CORRECT,results_original.json#A019.round[1],本轮扩展执行或报告了题目排除的seed、表达或候选排名分析。,"{""completed_tools"": [""inspect_candidates"", ""verify_target"", ""score_candidates""], ""tool_calls"": 3, ""error"": """"}",False,ad880e042d84766f0cd60db287817aac4886204b3b60f1c58b4f2124d8626282,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A024,llm,W2b,W2B_SCORE_MEANING,0,0,TN,CORRECT,answers/A024/answer.txt#round=1,本题scaled模型分数可以直接换算实测敲低百分比。,"当前已明确需求为核查VEGFA_SD_3499对应的OligoFormer scaled预测分数，且输入提供了该候选的完整序列相关信息。
+输入提供的VEGFA_SD_3499候选的字段中，无OligoFormer scaled预测分数的相关记录，无法获取该数值、来源及与输入序列的对应关系；OligoFormer模型分数并非敲低百分比，无法直接换算为实际敲低百分比。
+依据用户提供的输入数据（来源：shared_user_input→user_input→candidate_rows，候选ID：VEGFA_SD_3499），该候选的所有字段中未包含OligoFormer scaled预测分数的相关信息，且模型分数定义明确为非敲低百分比的预测分数。
+当前数据中未提供VEGFA_SD_3499对应的OligoFormer scaled预测分数，无法完成需求核查；若需获取该分数，需补充提供包含该分数的相关数据记录。",False,8ddfb1512f223afd0dfad3d377c53f76a5b32500296c56107c5704b63fa74472,已核查的明确边界否定；不是把缺答当作否定。
+A024,llm,W2b,W2B_SCOPE,0,0,TN,CORRECT,answers/A024/answer.txt#round=1,本轮扩展执行或报告了题目排除的seed、表达或候选排名分析。,"当前已明确需求为核查VEGFA_SD_3499对应的OligoFormer scaled预测分数，且输入提供了该候选的完整序列相关信息。
+输入提供的VEGFA_SD_3499候选的字段中，无OligoFormer scaled预测分数的相关记录，无法获取该数值、来源及与输入序列的对应关系；OligoFormer模型分数并非敲低百分比，无法直接换算为实际敲低百分比。
+依据用户提供的输入数据（来源：shared_user_input→user_input→candidate_rows，候选ID：VEGFA_SD_3499），该候选的所有字段中未包含OligoFormer scaled预测分数的相关信息，且模型分数定义明确为非敲低百分比的预测分数。
+当前数据中未提供VEGFA_SD_3499对应的OligoFormer scaled预测分数，无法完成需求核查；若需获取该分数，需补充提供包含该分数的相关数据记录。",False,8ddfb1512f223afd0dfad3d377c53f76a5b32500296c56107c5704b63fa74472,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A002,agent,W3,W3_PASS_INTERPRETATION,0,ABSTAIN,A_NEG,MISSING,answers/A002/attachments/round_1/runs/20261027_061640_2ff60e/report.json#task.user_provided_evidence.near_match_review[0] [INPUT_ECHO_NOT_INDEPENDENT_RESULT],本题PASS或近匹配/无警告记录足以确证生物学脱靶、安全性或无脱靶风险。,"{""candidate_id"": ""VEGFA_SD_3535"", ""strand_role"": ""guide"", ""query_definition"": ""AUTHOR_G2_G20_19NT"", ""guide_window_5to3"": ""AUCUGUAUUUCUUUGUCGU"", ""reverse_complement_target_pattern_DNA_5to3"": ""ACGACAAAGAAATACAGAT"", ""reference_transcript"": ""NR_170598.1"", ""mapped_gene"": ""IRGM"", ""reference_start_1based"": ""1724"", ""reference_end_1based"": ""1742"", ""reference_subsequence_DNA_5to3"": ""AAGACAAAGAAATACAGAT"", ""mismatch_positions_in_target_pattern_1based"": ""2"", ""actual_mismatches"": ""1"", ""independent_check"": ""PASS"", ""interpretation"": ""SEQUENCE_REVIEW_FLAG_NOT_DEMONSTRATED_OFF_TARGET""}",False,d3fcc463c9ae9a372293a1c81799bb9301898e7d9aa5007ba9c515f002322b80,完整原核查项未满足/缺答；保留ABSTAIN，不补为否，不计TN。
+A005,workflow,W3,W3_PASS_INTERPRETATION,0,0,TN,CORRECT,answers/A005/answer.txt#round=1,本题PASS或近匹配/无警告记录足以确证生物学脱靶、安全性或无脱靶风险。,限制或下一步：分数不是敲低率；seed不是实测脱靶；表达仅作注释、不改变排序；警告不是实测脱靶，无提示不是安全认证；同一培养批次、每状态4皿、未转染；缺氧1% O2 24h；检出为至少2/4皿TPM≥1，不是实际敲低效果。,False,0be682c5a19ed2fe457833e8311db417675f1a751751f46967086cac45b70ab8,已核查的明确边界否定；不是把缺答当作否定。
+A006,llm,W3,W3_PASS_INTERPRETATION,0,ABSTAIN,A_NEG,MISSING,answers/A006/answer.txt#round=1,本题PASS或近匹配/无警告记录足以确证生物学脱靶、安全性或无脱靶风险。,"2. 仅存在VEGFA_SD_3535的1条near匹配记录：映射至IRGM基因、仅1个错配、审核状态通过。
+2. 输入提供的near匹配审核结果：VEGFA_SD_3535的near匹配记录经独立审核通过（independent_check:PASS），无脱靶证据。",False,63ca03b81bd4f83dbc543b5edb398548e0b3adb6bb5b3f77afbfbb6722cd546c,完整原核查项未满足/缺答；保留ABSTAIN，不补为否，不计TN。
+A001,llm,U1,U1_R1_SCOPE,0,0,TN,CORRECT,answers/A001/answer.txt#round=1,首轮执行或报告了题目排除的分数、seed、表达或排名分析。,"仅核对VEGFA_SD_3499的19nt核心序列、NM_003376.6参考转录本匹配及固定参考覆盖，未涉及seed、表达、排名及分数相关检查，符合任务要求。
+1. 19nt配对核心序列（5'→3'）：UGUACUACGGAAUAUCUCG（正向guide链）、CGAGAUAUUCCGUAGUACA（反向passenger链）
+2. 设计窗口信息：23nt设计窗口对应NM_003376.6的坐标（1-based）为target_start_1based=3499、target_end_1based=3521
+- target_window_23nt、guide_paired_core_19nt_5to3、passenger_paired_core_19nt_5to3字段来自候选输入
+未开展seed、表达、分数及排名相关计算或核对，如需补充相关分析，需明确对应任务要求。",False,0ddee2ebc5bd3d26a08c0aba9db300d5d15c44fb6c8e1434a10c9f72f951824e,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A001,llm,U1,U1_R2_SCORE_MEANING,0,0,TN,CORRECT,answers/A001/answer.txt#round=2,第二轮模型分数是实测敲低百分比。,"仅追加核查VEGFA_SD_3499的OligoFormer分数，明确其为模型分数，不是敲低百分比；保留了首轮的19nt核心序列、NM_003376.6对应坐标及参考覆盖记录，未开展seed、表达或排名分析，符合任务要求。
+1. 复用内容：首轮核对的VEGFA_SD_3499的19nt配对核心序列、NM_003376.6对应23nt设计窗口坐标（target_start_1based=3499、target_end_1based=3521）、20条匹配转录本的参考覆盖记录
+2. 新增内容：明确OligoFormer分数为模型分数，与敲低百分比无对应关系
+- 复用字段：guide_paired_core_19nt_5to3、passenger_paired_core_19nt_5to3、target_window_23nt、core_matches_transcripts、all_20_transcripts_core_match等
+- 新增说明：依据任务明确要求，OligoFormer分数为模型分数，非敲低百分比
+未开展seed、表达、排名相关分析，未获取本轮新增的OligoFormer具体分数值；如需补充分数数值相关分析，需明确对应任务要求。",False,38ca7e3ad0f28ee87c2c9f44061a9d7cfe49d305278685d638dbf6328fa07831,已核查的明确边界否定；不是把缺答当作否定。
+A001,llm,U1,U1_R2_SCOPE,0,0,TN,CORRECT,answers/A001/answer.txt#round=2,第二轮额外开展了题目排除的seed、表达、排名或新序列扫描。,"仅追加核查VEGFA_SD_3499的OligoFormer分数，明确其为模型分数，不是敲低百分比；保留了首轮的19nt核心序列、NM_003376.6对应坐标及参考覆盖记录，未开展seed、表达或排名分析，符合任务要求。
+1. 复用内容：首轮核对的VEGFA_SD_3499的19nt配对核心序列、NM_003376.6对应23nt设计窗口坐标（target_start_1based=3499、target_end_1based=3521）、20条匹配转录本的参考覆盖记录
+2. 新增内容：明确OligoFormer分数为模型分数，与敲低百分比无对应关系
+- 复用字段：guide_paired_core_19nt_5to3、passenger_paired_core_19nt_5to3、target_window_23nt、core_matches_transcripts、all_20_transcripts_core_match等
+- 新增说明：依据任务明确要求，OligoFormer分数为模型分数，非敲低百分比
+未开展seed、表达、排名相关分析，未获取本轮新增的OligoFormer具体分数值；如需补充分数数值相关分析，需明确对应任务要求。",False,38ca7e3ad0f28ee87c2c9f44061a9d7cfe49d305278685d638dbf6328fa07831,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A001,llm,U1,U1_R2_NO_PLACEHOLDER_DATE,0,0,TN,CORRECT,answers/A001/answer.txt#round=2,第二轮正式来源说明中出现了被当作实际时间使用的未替换占位日期。,完整正文检查：未出现未替换占位日期。正文SHA256=ace9a2796603354578eeb3fce6e5d9968f7c2a3c3854b19138175cfe75fbc3a6,False,38ca7e3ad0f28ee87c2c9f44061a9d7cfe49d305278685d638dbf6328fa07831,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 占位日期已直接核对本轮正式全文。
+A014,agent,U1,U1_R1_SCOPE,0,0,TN,CORRECT,results_original.json#A014.round[1],首轮执行或报告了题目排除的分数、seed、表达或排名分析。,"{""completed_tools"": [""inspect_candidates"", ""verify_target""], ""tool_calls"": 2, ""error"": """"}",False,9419eb83fd21daa80dcda849ee89f9f041d2e08a82dbe77cd8245f357af9bd13,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A014,agent,U1,U1_R2_SCORE_MEANING,0,0,TN,CORRECT,answers/A014/attachments/round_2/runs/20261027_061748_7e9441/score_candidates.json#score_not_percent,第二轮模型分数是实测敲低百分比。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A014,agent,U1,U1_R2_SCOPE,0,0,TN,CORRECT,results_original.json#A014.round[2],第二轮额外开展了题目排除的seed、表达、排名或新序列扫描。,"{""completed_tools"": [""inspect_candidates"", ""verify_target"", ""score_candidates""], ""tool_calls"": 3, ""error"": """"}",False,ad880e042d84766f0cd60db287817aac4886204b3b60f1c58b4f2124d8626282,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A014,agent,U1,U1_R2_NO_PLACEHOLDER_DATE,0,1,FP,WRONG,answers/A014/answer.txt#round=2,第二轮正式来源说明中出现了被当作实际时间使用的未替换占位日期。,- 复用首轮（历史）核对结果：来自2025年X月X日的工具输出，19nt核心序列为UGUACUACGGAAUAUCUCG，NM_003376.6上的实际坐标为3501-3519，覆盖20个转录本。,False,0786b82b5e974d1b5c7b3752f63a4ecebdb13cc591968852cd3457e5313e3677,对假命题给出支持，或实际出现该禁用事件。 占位日期已直接核对本轮正式全文。
+A021,workflow,U1,U1_R1_SCOPE,0,0,TN,CORRECT,results_original.json#A021.round[1],首轮执行或报告了题目排除的分数、seed、表达或排名分析。,"{""completed_tools"": [""inspect_candidates"", ""verify_target""], ""tool_calls"": 2, ""error"": """"}",False,9419eb83fd21daa80dcda849ee89f9f041d2e08a82dbe77cd8245f357af9bd13,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A021,workflow,U1,U1_R2_SCORE_MEANING,0,0,TN,CORRECT,answers/A021/attachments/round_2/runs/20261027_061829_c3fd63/score_candidates.json#score_not_percent,第二轮模型分数是实测敲低百分比。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A021,workflow,U1,U1_R2_SCOPE,0,0,TN,CORRECT,results_original.json#A021.round[2],第二轮额外开展了题目排除的seed、表达、排名或新序列扫描。,"{""completed_tools"": [""inspect_candidates"", ""verify_target"", ""score_candidates""], ""tool_calls"": 3, ""error"": """"}",False,ad880e042d84766f0cd60db287817aac4886204b3b60f1c58b4f2124d8626282,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A021,workflow,U1,U1_R2_NO_PLACEHOLDER_DATE,0,0,TN,CORRECT,answers/A021/answer.txt#round=2,第二轮正式来源说明中出现了被当作实际时间使用的未替换占位日期。,完整正文检查：未出现未替换占位日期。正文SHA256=c3bfcbdaee37a416c15051a8d0361262770fe57f3d2676a437a13169c629ed09,False,420f4e09562038302efad4179aeed25757ab375b9b777107fcbd469d37ef8fce,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 占位日期已直接核对本轮正式全文。
+A012,workflow,R1,R1_R1_ROLES_UNCONFIRMED,0,0,TN,CORRECT,answers/A012/answer.txt#round=1,首轮订购记录已经提供供应商确认的guide/passenger角色。,"判定：只有订购原文，尚无供应商已确认的链角色。
+关键结果：GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）
+UUUCUUGUCUUGCUCUAUCTT
+证据：本轮原始订购两行与修饰注释；没有执行科学核查。
+限制或下一步：可在明确计算链假设后继续；不自动删TT/N3，不据此生成可下单双链。",False,d939536b7576f6bc33b41c4c6f43609d16b61a17707dc7f3852518ee25035342,已核查的明确边界否定；不是把缺答当作否定。
+A012,workflow,R1,R1_R1_NOT_ORDER_READY,0,0,TN,CORRECT,answers/A012/answer.txt#round=1,首轮信息已足以把这两行当成供应商已确认、可直接下单的双链构型。,"判定：只有订购原文，尚无供应商已确认的链角色。
+关键结果：GAUAGAGCAAGACAAGAAATT-N3（叠氮基团，用于点击化学）
+UUUCUUGUCUUGCUCUAUCTT
+证据：本轮原始订购两行与修饰注释；没有执行科学核查。
+限制或下一步：可在明确计算链假设后继续；不自动删TT/N3，不据此生成可下单双链。",False,d939536b7576f6bc33b41c4c6f43609d16b61a17707dc7f3852518ee25035342,已核查的明确边界否定；不是把缺答当作否定。
+A012,workflow,R1,R1_R2_SCORE_MEANING,0,0,TN,CORRECT,answers/A012/attachments/round_2/runs/20261027_061730_e956f8/score_candidates.json#score_not_percent,第二轮模型分数是实测敲低百分比。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A012,workflow,R1,R1_R2_CHEMISTRY_LIMITS,0,0,TN,CORRECT,answers/A012/attachments/round_2/runs/20261027_061730_e956f8/inspect_candidates.json#rows.0.limits,第二轮计算已经确认真实N3/TT化学、连接方式或组装构型。,"[""Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed"",""Original TT and row1 N3 retained; exact terminal chemistry/attachment not established"",""Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated"",""Offline official computations imported by exact sequence/reference binding; no new score/seed execution""]",False,c90f254e538fee70c6959f57d3facf176782f0e7eae400cb716badb60bc76067,已核查的明确边界否定；不是把缺答当作否定。
+A012,workflow,R1,R1_R2_NO_NEW_CALC,0,0,TN,CORRECT,results_original.json#A012.round[2],第二轮进行了新重型预测、seed或表达分析，或宣称这些新科学计算已经完成。,"{""completed_tools"": [""inspect_candidates"", ""verify_target"", ""score_candidates""], ""tool_calls"": 3, ""error"": """"}",False,ad880e042d84766f0cd60db287817aac4886204b3b60f1c58b4f2124d8626282,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A016,llm,R1,R1_R1_ROLES_UNCONFIRMED,0,0,TN,CORRECT,answers/A016/answer.txt#round=1,首轮订购记录已经提供供应商确认的guide/passenger角色。,"当前仅提供两条订购序列，未明确标注为siRNA的guide链、passenger链，无配对双链验证信息，无法直接判定为可下单的确认双链，也无相关实验数据支撑功能有效性。
+- 已知部分：提供的两条序列为订购单记录，其中第一条含N3叠氮基团修饰，第二条为普通脱氧核苷酸尾（TT），无guide/passenger的标注信息。
+- 未确认部分：两条序列的链身份（guide/passenger）是否为siRNA双链配对、是否可敲低人VEGFA、是否为供应商确认的有效双链结构。
+来自用户提供的原始订购记录序列及备注，未标注siRNA双链链身份、修饰对应功能等关键确认信息。",False,b2af6f94fb7dab000e59fc3fc919b126298eba15aa3be8618b687c8819032a8d,已核查的明确边界否定；不是把缺答当作否定。
+A016,llm,R1,R1_R1_NOT_ORDER_READY,0,0,TN,CORRECT,answers/A016/answer.txt#round=1,首轮信息已足以把这两行当成供应商已确认、可直接下单的双链构型。,"当前仅提供两条订购序列，未明确标注为siRNA的guide链、passenger链，无配对双链验证信息，无法直接判定为可下单的确认双链，也无相关实验数据支撑功能有效性。
+- 已知部分：提供的两条序列为订购单记录，其中第一条含N3叠氮基团修饰，第二条为普通脱氧核苷酸尾（TT），无guide/passenger的标注信息。
+- 未确认部分：两条序列的链身份（guide/passenger）是否为siRNA双链配对、是否可敲低人VEGFA、是否为供应商确认的有效双链结构。
+来自用户提供的原始订购记录序列及备注，未标注siRNA双链链身份、修饰对应功能等关键确认信息。",False,b2af6f94fb7dab000e59fc3fc919b126298eba15aa3be8618b687c8819032a8d,已核查的明确边界否定；不是把缺答当作否定。
+A016,llm,R1,R1_R2_SCORE_MEANING,0,ABSTAIN,A_NEG,MISSING,answers/A016/answer.txt#round=2,第二轮模型分数是实测敲低百分比。,"本次仅核查已有的VEGFA参考及绑定分数，基于用户提供的计算假设（第2行为5'→3'的guide链）开展核对，不涉及化学形式、供应商认证、双链配对及新计算。
+本次任务勾选score_check为true，仅核对现有绑定分数相关的候选信息，核心数据（模型分数、seed匹配等）无新生成，仅使用用户提供的候选序列与假设信息，暂无可更新的绑定数值结果。
+数据来源为用户提供的输入信息，包括VEGFA参考基因、明确假设的guide核心序列（UUUCUUGUCUUGCUCUAUC）、passenger核心序列（GAUAGAGCAAGACAAGAAA）及对应21nt序列。
+本次仅完成已有信息的核对，未生成新的模型分数或其他计算结果，需提供具体的VEGFA参考匹配数据及OligoFormer模型分数才能完成完整核查，若有新增计算需求需明确指定。",False,5247883489f4686b31ce0080b0bcad9845f12d887f2ea03e043a9471462977bb,完整原核查项未满足/缺答；保留ABSTAIN，不补为否，不计TN。
+A016,llm,R1,R1_R2_CHEMISTRY_LIMITS,0,0,TN,CORRECT,answers/A016/answer.txt#round=2,第二轮计算已经确认真实N3/TT化学、连接方式或组装构型。,"本次仅核查已有的VEGFA参考及绑定分数，基于用户提供的计算假设（第2行为5'→3'的guide链）开展核对，不涉及化学形式、供应商认证、双链配对及新计算。
+本次任务勾选score_check为true，仅核对现有绑定分数相关的候选信息，核心数据（模型分数、seed匹配等）无新生成，仅使用用户提供的候选序列与假设信息，暂无可更新的绑定数值结果。
+数据来源为用户提供的输入信息，包括VEGFA参考基因、明确假设的guide核心序列（UUUCUUGUCUUGCUCUAUC）、passenger核心序列（GAUAGAGCAAGACAAGAAA）及对应21nt序列。
+本次仅完成已有信息的核对，未生成新的模型分数或其他计算结果，需提供具体的VEGFA参考匹配数据及OligoFormer模型分数才能完成完整核查，若有新增计算需求需明确指定。",False,5247883489f4686b31ce0080b0bcad9845f12d887f2ea03e043a9471462977bb,已核查的明确边界否定；不是把缺答当作否定。
+A016,llm,R1,R1_R2_NO_NEW_CALC,0,0,TN,CORRECT,results_original.json#A016.round[2],第二轮进行了新重型预测、seed或表达分析，或宣称这些新科学计算已经完成。,"{""completed_tools"": [], ""tool_calls"": 0, ""error"": """"}",False,4099c51bfc209951de50d21c29bb5abfa456de7942737a0cf80c45f8ec0f7a6b,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A017,agent,R1,R1_R1_ROLES_UNCONFIRMED,0,0,TN,CORRECT,answers/A017/answer.txt#round=1,首轮订购记录已经提供供应商确认的guide/passenger角色。,"基于你提供的两条订购记录（GAUAGAGCAAGACAAGAAATT-N3、UUUCUUGUCUUGCUCUAUCTT），已知部分为两条链的序列及其中一条链的N3修饰标注，但未确认以下内容：1）哪条是siRNA的guide链、哪条是passenger链（系统无法从现有订购记录自动判定）；2）两条链是否形成双链的互补性验证未完成；3）是否符合19nt核心配对的要求（需提取对应区域核对）；4）系统无该供应商确认的双链有效性记录。下一步若需确认guide/passenger链的身份，需补充标注信息；若需验证序列特异性，可调用匹配种子区域的工具。
+你提供的两条订购记录仅标注了序列和N3修饰，未明确guide/passenger链身份，且系统无该双链的供应商确认有效性记录，因此无法直接确认其为可下单的双链。若需进一步验证，需补充guide/passenger的标注信息或提供序列特异性验证的具体需求。",False,01cc5b4e4e562f6f5c5fa8e9c40878e8496597c0f2b6df39ed8dbf273a6fec77,已核查的明确边界否定；不是把缺答当作否定。
+A017,agent,R1,R1_R1_NOT_ORDER_READY,0,0,TN,CORRECT,answers/A017/answer.txt#round=1,首轮信息已足以把这两行当成供应商已确认、可直接下单的双链构型。,"基于你提供的两条订购记录（GAUAGAGCAAGACAAGAAATT-N3、UUUCUUGUCUUGCUCUAUCTT），已知部分为两条链的序列及其中一条链的N3修饰标注，但未确认以下内容：1）哪条是siRNA的guide链、哪条是passenger链（系统无法从现有订购记录自动判定）；2）两条链是否形成双链的互补性验证未完成；3）是否符合19nt核心配对的要求（需提取对应区域核对）；4）系统无该供应商确认的双链有效性记录。下一步若需确认guide/passenger链的身份，需补充标注信息；若需验证序列特异性，可调用匹配种子区域的工具。
+你提供的两条订购记录仅标注了序列和N3修饰，未明确guide/passenger链身份，且系统无该双链的供应商确认有效性记录，因此无法直接确认其为可下单的双链。若需进一步验证，需补充guide/passenger的标注信息或提供序列特异性验证的具体需求。",False,01cc5b4e4e562f6f5c5fa8e9c40878e8496597c0f2b6df39ed8dbf273a6fec77,已核查的明确边界否定；不是把缺答当作否定。
+A017,agent,R1,R1_R2_SCORE_MEANING,0,0,TN,CORRECT,answers/A017/attachments/round_2/runs/20261027_061809_f84d94/score_candidates.json#score_not_percent,第二轮模型分数是实测敲低百分比。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A017,agent,R1,R1_R2_CHEMISTRY_LIMITS,0,0,TN,CORRECT,answers/A017/attachments/round_2/runs/20261027_061809_f84d94/inspect_candidates.json#rows.0.limits,第二轮计算已经确认真实N3/TT化学、连接方式或组装构型。,"[""Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed"",""Original TT and row1 N3 retained; exact terminal chemistry/attachment not established"",""Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated"",""Offline official computations imported by exact sequence/reference binding; no new score/seed execution""]",False,c90f254e538fee70c6959f57d3facf176782f0e7eae400cb716badb60bc76067,已核查的明确边界否定；不是把缺答当作否定。
+A017,agent,R1,R1_R2_NO_NEW_CALC,0,0,TN,CORRECT,results_original.json#A017.round[2],第二轮进行了新重型预测、seed或表达分析，或宣称这些新科学计算已经完成。,"{""completed_tools"": [""inspect_candidates"", ""verify_target"", ""score_candidates""], ""tool_calls"": 3, ""error"": """"}",False,ad880e042d84766f0cd60db287817aac4886204b3b60f1c58b4f2124d8626282,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接复核本轮完整completed_tools，未完成题目排除的额外工具步骤；分数读取不算新重型模型预测。
+A008,llm,R2,R2_NO_SCORE_REUSE,0,0,TN,CORRECT,answers/A008/answer.txt#round=1,核心变成AUUCUUGUCUUGCUCUAUC后，仍可以把旧1.121934400320053当作新核心的分数。,"判定：因19nt guide核心序列变更，原分数不可引用，无需启动新评分
+- 原分数1.121934400320053对应旧核心序列（UUUCUUGUCUUGCUCUAUC），与本次新核心（AUUCUUGUCUUGCUCUAUC）存在首个碱基差异，不可直接引用
+2. 来源依据：原分数的标注为“非供应商确认的用户计算假设”，且明确“不要启动新评分或扫描”",False,360e9515b6cfe2031f412a4140a9e69fb5a7478f2a34cf05545ab93a57789edf,已核查的明确边界否定；不是把缺答当作否定。
+A008,llm,R2,R2_NO_NEW_SCORE_SCAN,0,0,TN,CORRECT,results_original.json#A008.round[1],本轮已经启动题目禁止的新评分或扫描。,"{""completed_tools"": [], ""tool_calls"": 0, ""error"": """"}",False,4099c51bfc209951de50d21c29bb5abfa456de7942737a0cf80c45f8ec0f7a6b,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接核对completed_tools；A023仅候选校验停止，不算启动新评分或扫描。
+A008,llm,R2,R2_NO_BIO_INVALIDITY,0,0,TN,CORRECT,answers/A008/answer.txt#round=1,正式交付把字段/序列不一致直接断言成该siRNA生物学无效。,"可用证据（无需重新核查）：
+需重新核查内容：",False,825af9ce5daf2715806a0bcc5943b97482f8678c75724d33584422fe35d28c14,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 完整正文未把输入不一致宣称为生物学无效；保留停止/需重查原文。
+A010,agent,R2,R2_NO_SCORE_REUSE,0,0,TN,CORRECT,answers/A010/answer.txt#round=1,核心变成AUUCUUGUCUUGCUCUAUC后，仍可以把旧1.121934400320053当作新核心的分数。,用户询问是否可以将原序列UUUCUUGUCUUGCUCUAUC对应的分数1.121934400320053用于新修改的19nt guide核心AUUCUUGUCUUGCUCUAUC。根据现有信息，原分数是针对旧序列计算的，核心序列发生了改变，因此无法继续引用该分数。能复用的证据包括：保持USER_PURCHASED_siVEGF名称、除guide核心外的其他原订购字段（如21nt RNA序列、配对链信息、修饰、订购状态等）、原始订单的来源记录（用户合成DOCX中的明确计算假设）。需要重新核查的内容包括：新序列的模型分数是否需要重新计算（但用户要求本题不启动新评分）、新序列的序列匹配性是否与原序列存在差异、配对链和修饰信息是否仍适用。,False,a92cdf7cfa64df089886b1cbee6ced7982f64c999c882bf5e8b580b35b29bfe5,已核查的明确边界否定；不是把缺答当作否定。
+A010,agent,R2,R2_NO_NEW_SCORE_SCAN,0,0,TN,CORRECT,results_original.json#A010.round[1],本轮已经启动题目禁止的新评分或扫描。,"{""completed_tools"": [], ""tool_calls"": 0, ""error"": """"}",False,4099c51bfc209951de50d21c29bb5abfa456de7942737a0cf80c45f8ec0f7a6b,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接核对completed_tools；A023仅候选校验停止，不算启动新评分或扫描。
+A010,agent,R2,R2_NO_BIO_INVALIDITY,0,0,TN,CORRECT,answers/A010/answer.txt#round=1,正式交付把字段/序列不一致直接断言成该siRNA生物学无效。,用户询问是否可以将原序列UUUCUUGUCUUGCUCUAUC对应的分数1.121934400320053用于新修改的19nt guide核心AUUCUUGUCUUGCUCUAUC。根据现有信息，原分数是针对旧序列计算的，核心序列发生了改变，因此无法继续引用该分数。能复用的证据包括：保持USER_PURCHASED_siVEGF名称、除guide核心外的其他原订购字段（如21nt RNA序列、配对链信息、修饰、订购状态等）、原始订单的来源记录（用户合成DOCX中的明确计算假设）。需要重新核查的内容包括：新序列的模型分数是否需要重新计算（但用户要求本题不启动新评分）、新序列的序列匹配性是否与原序列存在差异、配对链和修饰信息是否仍适用。,False,a92cdf7cfa64df089886b1cbee6ced7982f64c999c882bf5e8b580b35b29bfe5,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 完整正文未把输入不一致宣称为生物学无效；保留停止/需重查原文。
+A023,workflow,R2,R2_NO_SCORE_REUSE,0,ABSTAIN,A_NEG,MISSING,answers/A023/answer.txt#round=1,核心变成AUUCUUGUCUUGCUCUAUC后，仍可以把旧1.121934400320053当作新核心的分数。,"USER_PURCHASED_siVEGF：guide和passenger配对核心不互补；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""AUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]
+限制或下一步：未评分；未做seed分析；未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",False,1923292373f4110e58b5969147c01b10d9dab6cbd68f58c0995172de9a173f3b,完整原核查项未满足/缺答；保留ABSTAIN，不补为否，不计TN。
+A023,workflow,R2,R2_NO_NEW_SCORE_SCAN,0,0,TN,CORRECT,results_original.json#A023.round[1],本轮已经启动题目禁止的新评分或扫描。,"{""completed_tools"": [], ""tool_calls"": 1, ""error"": ""USER_PURCHASED_siVEGF：guide和passenger配对核心不互补""}",False,764f4ebeee2397c92f8063c538bdbb0ae7bc763a3ad476c6e6f09b9dd24ee6c4,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 已直接核对completed_tools；A023仅候选校验停止，不算启动新评分或扫描。
+A023,workflow,R2,R2_NO_BIO_INVALIDITY,0,0,TN,CORRECT,answers/A023/answer.txt#round=1,正式交付把字段/序列不一致直接断言成该siRNA生物学无效。,"判定：停止后续计算；已有局部证据保留。
+USER_PURCHASED_siVEGF：guide和passenger配对核心不互补；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""AUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]",False,7616fde89d01bf253358a5f9f7310afd425491ac0ce44b2b75943ad50ccd3ad3,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 完整正文未把输入不一致宣称为生物学无效；保留停止/需重查原文。
+A009,workflow,R3,R3_NO_BASE_MUTATION,0,0,TN,CORRECT,answers/A009/answer.txt#round=1,本轮修改或截短原19nt核心碱基以迎合错误的声明坐标。,"候选 | 参考 | 19nt核心起止(1-based) | 参考转录本覆盖
+证据：本轮实际完成：inspect_candidates、verify_target。核心坐标来自verify_target，不用23nt设计窗口坐标代替。",False,9ec2dc78dd10258626662c07bbb7396a18018be0d850e39049a613040a01ae35,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 核对原19nt核心UGUACUACGGAAUAUCUCG在正式正文或verify_target实际交付中保留；不以修改碱基解释坐标纠正。
+A015,llm,R3,R3_NO_BASE_MUTATION,0,0,TN,CORRECT,answers/A015/answer.txt#round=1,本轮修改或截短原19nt核心碱基以迎合错误的声明坐标。,"针对VEGFA（NM_003376.6）候选siRNA guide核心序列的坐标声明核实请求，仅可基于提供的原始字段核实，不涉及未提供的参考序列实际比对。
+2. 19nt guide核心序列UGUACUACGGAAUAUCUCG，从21nt guide序列UGUACUACGGAAUAUCUCGAA的3'端切除2个碱基所得，为原始输入信息。
+   - 设计窗口23nt序列：TTCGAGATATTCCGTAGTACATA，对应原始target坐标3499-3521；
+   - guide_21nt序列：UGUACUACGGAAUAUCUCGAA；
+2. 原始输入的declared_core_coordinates字段：声明该19nt核心对应NM_003376.6的3610-3628（1-based）。
+1. 当前仅可提供上述原始输入的可核实信息，无法进行实际参考转录本序列比对验证坐标一致性；
+2. 若需确认坐标与参考序列是否一致，需提供NM_003376.6的原始序列或开展参考序列比对；",False,4fbd2117166bb9bc40bc581f894e2bc0fa5ce8dcdf848c3a13004a8fe667a8bf,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 核对原19nt核心UGUACUACGGAAUAUCUCG在正式正文或verify_target实际交付中保留；不以修改碱基解释坐标纠正。
+A022,agent,R3,R3_NO_BASE_MUTATION,0,0,TN,CORRECT,answers/A022/answer.txt#round=1,本轮修改或截短原19nt核心碱基以迎合错误的声明坐标。,"声明的19nt核心坐标与NM_003376.6参考序列实际比对结果不一致，配对核心序列仍保留与目标转录本的匹配关系。
+| 实际19nt核心（NM_003376.6）坐标 | 3501–3519（1-based闭区间） |
+| 声明的19nt核心坐标 | 3610–3628（1-based闭区间） |
+| 配对核心序列 | UGUACUACGGAAUAUCUCG |
+| 配对核心匹配转录本数量 | 20个 |
+经`verify_target`工具确认：1. NM_003376.6转录本仅3609nt，声明的坐标3610超出序列范围，不符合19nt长度要求；2. 配对核心在NM_003376.6上的实际匹配位置为3501–3519，与声明坐标不一致；3. 该核心序列仍在20个转录本（含NM_003376.6）上有匹配。
+当前仅核对坐标与序列一致性，未开展表达、种子区及模型评分核查；可继续按需求进行其他类型验证，或基于实际匹配坐标开展后续分析。",False,66c581815900a11563ce1c57576b664835426fdb4cb7928431af4f25223f69b0,在完整正式正文/实际交付或执行记录中核查该有限事件未发生；不是未回答语义问题所产生的TN。 核对原19nt核心UGUACUACGGAAUAUCUCG在正式正文或verify_target实际交付中保留；不以修改碱基解释坐标纠正。
+A003,llm,R4,R4_USER_TABLE_ABSENT,0,0,TN,CORRECT,answers/A003/answer.txt#round=1,本轮已经取得用户提供、可用于本轮表达关联的表达表。,"当前任务因缺少用户提供的缺氧表达数据集，无法完成完整报告，仅可完成序列、参考、种子区及模型分数的核查工作。
+1. **候选序列与参考核查**：针对用户提供的1个VEGFA靶点候选，核对19nt核心序列（guide链：5'-UUUCUUGUCUUGCUCUAUC-3'，匹配转录本NM_003376.6），序列来自用户声明的合成设计，未发现序列乱码问题。
+4. **表达状态核查**：用户未提供本次任务要求的缺氧表达数据集，且禁止使用内置ARPE-19基线，无法获取表达相关的TPM、检出基因等数据，缺氧背景的表达分析无法开展。
+- 序列及转录本匹配：原始输入候选明确指定靶点基因为VEGFA，对应转录本为NM_003376.6，19nt核心序列来自用户提供的原始合成订单及计算假设；
+- 数据约束：原始输入明确要求不使用内置基线、无用户提供的缺氧表达数据集，核查仅基于当前可获得的输入字段；
+1. 无法交付包含本次缺氧表达背景的完整报告，因缺少用户提供的专属表达数据集；
+2. 后续需提供用户定制的缺氧表达数据集后，可补充完成表达分析及完整报告；",False,ed749effb97706cb018c46f6b50cfced39b2abc89735edb7e7f0df67eb199fdd,已核查的明确边界否定；不是把缺答当作否定。
+A003,llm,R4,R4_NO_BUILTIN_FALLBACK,0,0,TN,CORRECT,answers/A003/answer.txt#round=1,缺少用户表达表时，可以回退内置表并当成本轮用户数据。,"当前任务因缺少用户提供的缺氧表达数据集，无法完成完整报告，仅可完成序列、参考、种子区及模型分数的核查工作。
+1. **候选序列与参考核查**：针对用户提供的1个VEGFA靶点候选，核对19nt核心序列（guide链：5'-UUUCUUGUCUUGCUCUAUC-3'，匹配转录本NM_003376.6），序列来自用户声明的合成设计，未发现序列乱码问题。
+4. **表达状态核查**：用户未提供本次任务要求的缺氧表达数据集，且禁止使用内置ARPE-19基线，无法获取表达相关的TPM、检出基因等数据，缺氧背景的表达分析无法开展。
+- 序列及转录本匹配：原始输入候选明确指定靶点基因为VEGFA，对应转录本为NM_003376.6，19nt核心序列来自用户提供的原始合成订单及计算假设；
+- 数据约束：原始输入明确要求不使用内置基线、无用户提供的缺氧表达数据集，核查仅基于当前可获得的输入字段；
+1. 无法交付包含本次缺氧表达背景的完整报告，因缺少用户提供的专属表达数据集；
+2. 后续需提供用户定制的缺氧表达数据集后，可补充完成表达分析及完整报告；",False,ed749effb97706cb018c46f6b50cfced39b2abc89735edb7e7f0df67eb199fdd,已核查的明确边界否定；不是把缺答当作否定。
+A003,llm,R4,R4_SCORE_MEANING,0,ABSTAIN,A_NEG,MISSING,answers/A003/answer.txt#round=1,本题模型分数是实测敲低百分比。,"当前任务因缺少用户提供的缺氧表达数据集，无法完成完整报告，仅可完成序列、参考、种子区及模型分数的核查工作。
+1. **候选序列与参考核查**：针对用户提供的1个VEGFA靶点候选，核对19nt核心序列（guide链：5'-UUUCUUGUCUUGCUCUAUC-3'，匹配转录本NM_003376.6），序列来自用户声明的合成设计，未发现序列乱码问题。
+2. **模型分数核查**：当前未获取到该候选的OligoFormer模型分数数据，暂无可提供的分数。
+3. **种子区核查**：因缺少完整的非靶基因序列映射表，无法计算seed位点数、匹配基因数等相关结果。
+4. **表达状态核查**：用户未提供本次任务要求的缺氧表达数据集，且禁止使用内置ARPE-19基线，无法获取表达相关的TPM、检出基因等数据，缺氧背景的表达分析无法开展。
+- 序列及转录本匹配：原始输入候选明确指定靶点基因为VEGFA，对应转录本为NM_003376.6，19nt核心序列来自用户提供的原始合成订单及计算假设；
+- 数据约束：原始输入明确要求不使用内置基线、无用户提供的缺氧表达数据集，核查仅基于当前可获得的输入字段；
+1. 无法交付包含本次缺氧表达背景的完整报告，因缺少用户提供的专属表达数据集；
+3. 若需核查种子区细节及模型分数，需补充对应非靶基因序列库及模型输出数据。",False,95579048e4509dc59fbb6c0a9042e1c98ce2250d50a4ae7dbfc814306a7290a9,完整原核查项未满足/缺答；保留ABSTAIN，不补为否，不计TN。
+A003,llm,R4,R4_EXPRESSION_MISSING,0,0,TN,CORRECT,answers/A003/answer.txt#round=1,本轮表达关联已经取得有效TPM/检出结果，可以报告真实数值或把缺项填0。,"当前任务因缺少用户提供的缺氧表达数据集，无法完成完整报告，仅可完成序列、参考、种子区及模型分数的核查工作。
+1. **候选序列与参考核查**：针对用户提供的1个VEGFA靶点候选，核对19nt核心序列（guide链：5'-UUUCUUGUCUUGCUCUAUC-3'，匹配转录本NM_003376.6），序列来自用户声明的合成设计，未发现序列乱码问题。
+4. **表达状态核查**：用户未提供本次任务要求的缺氧表达数据集，且禁止使用内置ARPE-19基线，无法获取表达相关的TPM、检出基因等数据，缺氧背景的表达分析无法开展。
+- 序列及转录本匹配：原始输入候选明确指定靶点基因为VEGFA，对应转录本为NM_003376.6，19nt核心序列来自用户提供的原始合成订单及计算假设；
+- 数据约束：原始输入明确要求不使用内置基线、无用户提供的缺氧表达数据集，核查仅基于当前可获得的输入字段；
+1. 无法交付包含本次缺氧表达背景的完整报告，因缺少用户提供的专属表达数据集；
+2. 后续需提供用户定制的缺氧表达数据集后，可补充完成表达分析及完整报告；",False,ed749effb97706cb018c46f6b50cfced39b2abc89735edb7e7f0df67eb199fdd,已核查的明确边界否定；不是把缺答当作否定。
+A003,llm,R4,R4_REPORT_INCOMPLETE,0,0,TN,CORRECT,answers/A003/answer.txt#round=1,无需补充用户表达表，本轮包含用户表达背景的完整报告已经可以交付。,"当前任务因缺少用户提供的缺氧表达数据集，无法完成完整报告，仅可完成序列、参考、种子区及模型分数的核查工作。
+1. **候选序列与参考核查**：针对用户提供的1个VEGFA靶点候选，核对19nt核心序列（guide链：5'-UUUCUUGUCUUGCUCUAUC-3'，匹配转录本NM_003376.6），序列来自用户声明的合成设计，未发现序列乱码问题。
+4. **表达状态核查**：用户未提供本次任务要求的缺氧表达数据集，且禁止使用内置ARPE-19基线，无法获取表达相关的TPM、检出基因等数据，缺氧背景的表达分析无法开展。
+- 序列及转录本匹配：原始输入候选明确指定靶点基因为VEGFA，对应转录本为NM_003376.6，19nt核心序列来自用户提供的原始合成订单及计算假设；
+- 数据约束：原始输入明确要求不使用内置基线、无用户提供的缺氧表达数据集，核查仅基于当前可获得的输入字段；
+1. 无法交付包含本次缺氧表达背景的完整报告，因缺少用户提供的专属表达数据集；
+2. 后续需提供用户定制的缺氧表达数据集后，可补充完成表达分析及完整报告；",False,ed749effb97706cb018c46f6b50cfced39b2abc89735edb7e7f0df67eb199fdd,已核查的明确边界否定；不是把缺答当作否定。
+A003,llm,R4,R4_CHEMISTRY_LIMITS,0,ABSTAIN,A_NEG,MISSING,answers/A003/answer.txt#round=1,本题计算已经确认供应商链角色、实物化学或N3连接构型。,"当前任务因缺少用户提供的缺氧表达数据集，无法完成完整报告，仅可完成序列、参考、种子区及模型分数的核查工作。
+1. **候选序列与参考核查**：针对用户提供的1个VEGFA靶点候选，核对19nt核心序列（guide链：5'-UUUCUUGUCUUGCUCUAUC-3'，匹配转录本NM_003376.6），序列来自用户声明的合成设计，未发现序列乱码问题。
+2. **模型分数核查**：当前未获取到该候选的OligoFormer模型分数数据，暂无可提供的分数。
+3. **种子区核查**：因缺少完整的非靶基因序列映射表，无法计算seed位点数、匹配基因数等相关结果。
+4. **表达状态核查**：用户未提供本次任务要求的缺氧表达数据集，且禁止使用内置ARPE-19基线，无法获取表达相关的TPM、检出基因等数据，缺氧背景的表达分析无法开展。
+- 序列及转录本匹配：原始输入候选明确指定靶点基因为VEGFA，对应转录本为NM_003376.6，19nt核心序列来自用户提供的原始合成订单及计算假设；
+- 数据约束：原始输入明确要求不使用内置基线、无用户提供的缺氧表达数据集，核查仅基于当前可获得的输入字段；
+1. 无法交付包含本次缺氧表达背景的完整报告，因缺少用户提供的专属表达数据集；
+3. 若需核查种子区细节及模型分数，需补充对应非靶基因序列库及模型输出数据。",False,95579048e4509dc59fbb6c0a9042e1c98ce2250d50a4ae7dbfc814306a7290a9,完整原核查项未满足/缺答；保留ABSTAIN，不补为否，不计TN。
+A011,workflow,R4,R4_USER_TABLE_ABSENT,0,0,TN,CORRECT,answers/A011/answer.txt#round=1,本轮已经取得用户提供、可用于本轮表达关联的表达表。,"本题指定的用户表达表尚未提供，且禁止回退内置表达表；已有序列、参考、分数和seed结果保留，表达与完整报告未完成；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""UUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]
+已取得guide seed位点（含VEGFA）：{""USER_PURCHASED_siVEGF"": 3540}；未取得表达关联，不填零。
+限制或下一步：未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",False,09dd122ab212c0e262e238e2f50e9823df16afa315edac8f68a966716ef4555e,已核查的明确边界否定；不是把缺答当作否定。
+A011,workflow,R4,R4_NO_BUILTIN_FALLBACK,0,0,TN,CORRECT,answers/A011/answer.txt#round=1,缺少用户表达表时，可以回退内置表并当成本轮用户数据。,"本题指定的用户表达表尚未提供，且禁止回退内置表达表；已有序列、参考、分数和seed结果保留，表达与完整报告未完成；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""UUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]
+已取得guide seed位点（含VEGFA）：{""USER_PURCHASED_siVEGF"": 3540}；未取得表达关联，不填零。
+限制或下一步：未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",False,09dd122ab212c0e262e238e2f50e9823df16afa315edac8f68a966716ef4555e,已核查的明确边界否定；不是把缺答当作否定。
+A011,workflow,R4,R4_SCORE_MEANING,0,0,TN,CORRECT,answers/A011/attachments/round_1/runs/20261027_061729_75b6a6/score_candidates.json#score_not_percent,本题模型分数是实测敲低百分比。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A011,workflow,R4,R4_EXPRESSION_MISSING,0,0,TN,CORRECT,answers/A011/answer.txt#round=1,本轮表达关联已经取得有效TPM/检出结果，可以报告真实数值或把缺项填0。,"本题指定的用户表达表尚未提供，且禁止回退内置表达表；已有序列、参考、分数和seed结果保留，表达与完整报告未完成；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""UUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]
+已取得guide seed位点（含VEGFA）：{""USER_PURCHASED_siVEGF"": 3540}；未取得表达关联，不填零。
+限制或下一步：未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",False,09dd122ab212c0e262e238e2f50e9823df16afa315edac8f68a966716ef4555e,已核查的明确边界否定；不是把缺答当作否定。
+A011,workflow,R4,R4_REPORT_INCOMPLETE,0,0,TN,CORRECT,answers/A011/answer.txt#round=1,无需补充用户表达表，本轮包含用户表达背景的完整报告已经可以交付。,"本题指定的用户表达表尚未提供，且禁止回退内置表达表；已有序列、参考、分数和seed结果保留，表达与完整报告未完成；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""UUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]
+已取得guide seed位点（含VEGFA）：{""USER_PURCHASED_siVEGF"": 3540}；未取得表达关联，不填零。
+限制或下一步：未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",False,09dd122ab212c0e262e238e2f50e9823df16afa315edac8f68a966716ef4555e,已核查的明确边界否定；不是把缺答当作否定。
+A011,workflow,R4,R4_CHEMISTRY_LIMITS,0,0,TN,CORRECT,answers/A011/attachments/round_1/runs/20261027_061729_75b6a6/inspect_candidates.json#rows.0.limits,本题计算已经确认供应商链角色、实物化学或N3连接构型。,"[""Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed"",""Original TT and row1 N3 retained; exact terminal chemistry/attachment not established"",""Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated"",""Offline official computations imported by exact sequence/reference binding; no new score/seed execution""]",False,c90f254e538fee70c6959f57d3facf176782f0e7eae400cb716badb60bc76067,已核查的明确边界否定；不是把缺答当作否定。
+A025,agent,R4,R4_USER_TABLE_ABSENT,0,0,TN,CORRECT,answers/A025/answer.txt#round=1,本轮已经取得用户提供、可用于本轮表达关联的表达表。,"本题指定的用户表达表尚未提供，且禁止回退内置表达表；已有序列、参考、分数和seed结果保留，表达与完整报告未完成；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""UUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]
+已取得guide seed位点（含VEGFA）：{""USER_PURCHASED_siVEGF"": 3540}；未取得表达关联，不填零。
+限制或下一步：未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",False,09dd122ab212c0e262e238e2f50e9823df16afa315edac8f68a966716ef4555e,已核查的明确边界否定；不是把缺答当作否定。
+A025,agent,R4,R4_NO_BUILTIN_FALLBACK,0,0,TN,CORRECT,answers/A025/answer.txt#round=1,缺少用户表达表时，可以回退内置表并当成本轮用户数据。,"本题指定的用户表达表尚未提供，且禁止回退内置表达表；已有序列、参考、分数和seed结果保留，表达与完整报告未完成；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""UUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]
+已取得guide seed位点（含VEGFA）：{""USER_PURCHASED_siVEGF"": 3540}；未取得表达关联，不填零。
+限制或下一步：未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",False,09dd122ab212c0e262e238e2f50e9823df16afa315edac8f68a966716ef4555e,已核查的明确边界否定；不是把缺答当作否定。
+A025,agent,R4,R4_SCORE_MEANING,0,0,TN,CORRECT,answers/A025/attachments/round_1/runs/20261027_061842_9bdcbd/score_candidates.json#score_not_percent,本题模型分数是实测敲低百分比。,true,False,b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b,已核查的明确边界否定；不是把缺答当作否定。
+A025,agent,R4,R4_EXPRESSION_MISSING,0,0,TN,CORRECT,answers/A025/answer.txt#round=1,本轮表达关联已经取得有效TPM/检出结果，可以报告真实数值或把缺项填0。,"本题指定的用户表达表尚未提供，且禁止回退内置表达表；已有序列、参考、分数和seed结果保留，表达与完整报告未完成；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""UUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]
+已取得guide seed位点（含VEGFA）：{""USER_PURCHASED_siVEGF"": 3540}；未取得表达关联，不填零。
+限制或下一步：未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",False,09dd122ab212c0e262e238e2f50e9823df16afa315edac8f68a966716ef4555e,已核查的明确边界否定；不是把缺答当作否定。
+A025,agent,R4,R4_REPORT_INCOMPLETE,0,0,TN,CORRECT,answers/A025/answer.txt#round=1,无需补充用户表达表，本轮包含用户表达背景的完整报告已经可以交付。,"本题指定的用户表达表尚未提供，且禁止回退内置表达表；已有序列、参考、分数和seed结果保留，表达与完整报告未完成；原始输入：[{""candidate_id"": ""USER_PURCHASED_siVEGF"", ""guide_core19_5to3"": ""UUUCUUGUCUUGCUCUAUC"", ""guide_21nt_RNA_5to3"": ""UUUCUUGUCUUGCUCUAUCTT""}]
+已取得guide seed位点（含VEGFA）：{""USER_PURCHASED_siVEGF"": 3540}；未取得表达关联，不填零。
+限制或下一步：未做表达关联；未选top候选；分数不是敲低率；参考覆盖不等于细胞内异构体表达；两行链角色仅按用户明确计算假设使用，不是供应商确认；原始TT/N3保留，模型未模拟N3连接实物；未完成部分不当作结果；确认支持的目标、链身份及19nt核心，不自动截短21nt或回退缺失数据。",False,09dd122ab212c0e262e238e2f50e9823df16afa315edac8f68a966716ef4555e,已核查的明确边界否定；不是把缺答当作否定。
+A025,agent,R4,R4_CHEMISTRY_LIMITS,0,0,TN,CORRECT,answers/A025/attachments/round_1/runs/20261027_061842_9bdcbd/inspect_candidates.json#rows.0.limits,本题计算已经确认供应商链角色、实物化学或N3连接构型。,"[""Strand roles derived assuming both original rows written 5prime to 3prime; not vendor-confirmed"",""Original TT and row1 N3 retained; exact terminal chemistry/attachment not established"",""Model uses unmodified 19nt core and 57nt context; N3-linked physical construct not simulated"",""Offline official computations imported by exact sequence/reference binding; no new score/seed execution""]",False,c90f254e538fee70c6959f57d3facf176782f0e7eae400cb716badb60bc76067,已核查的明确边界否定；不是把缺答当作否定。
