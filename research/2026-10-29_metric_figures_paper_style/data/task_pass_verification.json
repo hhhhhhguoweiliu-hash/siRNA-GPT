@@ -1,0 +1,18 @@
+{
+  "same_original_answers_sha256": "f443d6f358a3c63f45eeef0906ae968f74f231534eb3c5276207767a14c2b9a3",
+  "matches_recorded_answer_hash": true,
+  "exactly_27_tasks": true,
+  "n_tasks_per_group": 9,
+  "U1_R1_rounds_combined": true,
+  "four_recorded_verdict_changes": [
+    "A002",
+    "A008",
+    "A013",
+    "A014"
+  ],
+  "all_27_match_recorded_final_labels": true,
+  "new_task_adjudications_fabricated": 0,
+  "new_expert_confirmations_claimed": 0,
+  "original_raw_and_slot_labels_changed": false,
+  "task_labels_not_derived_from_four_dimension_scores": true
+}

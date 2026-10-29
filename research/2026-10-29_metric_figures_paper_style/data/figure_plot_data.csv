@@ -1,0 +1,34 @@
+﻿figure,group,metric,aggregation,value,numerator,denominator
+Fig1_macro_precision_recall_f1_BCC,llm,precision,macro,0.9470899470899471,,135
+Fig1_macro_precision_recall_f1_BCC,llm,recall,macro,0.437905359276327,,135
+Fig1_macro_precision_recall_f1_BCC,llm,f1,macro,0.5745597482439587,,135
+Fig1_macro_precision_recall_f1_BCC,workflow,precision,macro,1.0,,135
+Fig1_macro_precision_recall_f1_BCC,workflow,recall,macro,0.9226190476190477,,135
+Fig1_macro_precision_recall_f1_BCC,workflow,f1,macro,0.945379723157501,,135
+Fig1_macro_precision_recall_f1_BCC,agent,precision,macro,0.9722222222222222,,135
+Fig1_macro_precision_recall_f1_BCC,agent,recall,macro,0.955026455026455,,135
+Fig1_macro_precision_recall_f1_BCC,agent,f1,macro,0.9632760780103775,,135
+FigS1_micro_precision_recall_f1_BCC,llm,precision,micro,0.8387096774193549,,135
+FigS1_micro_precision_recall_f1_BCC,llm,recall,micro,0.3851851851851852,,135
+FigS1_micro_precision_recall_f1_BCC,llm,f1,micro,0.5279187817258884,,135
+FigS1_micro_precision_recall_f1_BCC,workflow,precision,micro,1.0,,135
+FigS1_micro_precision_recall_f1_BCC,workflow,recall,micro,0.9555555555555556,,135
+FigS1_micro_precision_recall_f1_BCC,workflow,f1,micro,0.9772727272727273,,135
+FigS1_micro_precision_recall_f1_BCC,agent,precision,micro,0.9849624060150376,,135
+FigS1_micro_precision_recall_f1_BCC,agent,recall,micro,0.9703703703703703,,135
+FigS1_micro_precision_recall_f1_BCC,agent,f1,micro,0.9776119402985075,,135
+Fig2_task_pass_rate_reconciled,llm,Task-level PASS rate,task,0.0,0,9
+Fig2_task_pass_rate_reconciled,workflow,Task-level PASS rate,task,0.8888888888888888,8,9
+Fig2_task_pass_rate_reconciled,agent,Task-level PASS rate,task,1.0,9,9
+Fig3_task_and_slot_metrics_separate_panels,llm,Task-level PASS rate,task,0.0,0,9
+Fig3_task_and_slot_metrics_separate_panels,workflow,Task-level PASS rate,task,0.8888888888888888,8,9
+Fig3_task_and_slot_metrics_separate_panels,agent,Task-level PASS rate,task,1.0,9,9
+Fig3_task_and_slot_metrics_separate_panels,llm,precision,micro,0.8387096774193549,,135
+Fig3_task_and_slot_metrics_separate_panels,llm,recall,micro,0.3851851851851852,,135
+Fig3_task_and_slot_metrics_separate_panels,llm,f1,micro,0.5279187817258884,,135
+Fig3_task_and_slot_metrics_separate_panels,workflow,precision,micro,1.0,,135
+Fig3_task_and_slot_metrics_separate_panels,workflow,recall,micro,0.9555555555555556,,135
+Fig3_task_and_slot_metrics_separate_panels,workflow,f1,micro,0.9772727272727273,,135
+Fig3_task_and_slot_metrics_separate_panels,agent,precision,micro,0.9849624060150376,,135
+Fig3_task_and_slot_metrics_separate_panels,agent,recall,micro,0.9703703703703703,,135
+Fig3_task_and_slot_metrics_separate_panels,agent,f1,micro,0.9776119402985075,,135

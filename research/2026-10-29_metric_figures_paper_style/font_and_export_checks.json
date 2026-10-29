@@ -1,0 +1,108 @@
+{
+  "font_family": "Arial",
+  "font_subfamily": "Bold",
+  "font_postscript_names": [
+    "Arial-BoldMT"
+  ],
+  "font_file_sha256": "eadd6d42df8f833cc91435376266b6840119c871e8cbc62d84908f5257f52f40",
+  "fallback_allowed": false,
+  "all_text_uses_explicit_font_file": true,
+  "exports": [
+    {
+      "stem": "Fig1_macro_precision_recall_f1_BCC",
+      "kind": "macro",
+      "size_inches": [
+        8.4,
+        5.4
+      ],
+      "png_pixels": [
+        5040,
+        3240
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "text_clipping_check": "passed",
+      "font_file_used_for_every_text_artist": "Arial Bold verified",
+      "svg_text_editable": true,
+      "svg_raster_layers": 0
+    },
+    {
+      "stem": "FigS1_micro_precision_recall_f1_BCC",
+      "kind": "micro",
+      "size_inches": [
+        8.4,
+        5.4
+      ],
+      "png_pixels": [
+        5040,
+        3240
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "text_clipping_check": "passed",
+      "font_file_used_for_every_text_artist": "Arial Bold verified",
+      "svg_text_editable": true,
+      "svg_raster_layers": 0
+    },
+    {
+      "stem": "Fig2_task_pass_rate_reconciled",
+      "kind": "task",
+      "size_inches": [
+        7.2,
+        5.0
+      ],
+      "png_pixels": [
+        4320,
+        3000
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "text_clipping_check": "passed",
+      "font_file_used_for_every_text_artist": "Arial Bold verified",
+      "svg_text_editable": true,
+      "svg_raster_layers": 0
+    },
+    {
+      "stem": "Fig3_task_and_slot_metrics_separate_panels",
+      "kind": "separate_task_and_slot_units",
+      "size_inches": [
+        12.8,
+        5.6
+      ],
+      "png_pixels": [
+        7680,
+        3360
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "text_clipping_check": "passed",
+      "font_file_used_for_every_text_artist": "Arial Bold verified",
+      "svg_text_editable": true,
+      "svg_raster_layers": 0
+    }
+  ],
+  "data_sha256": {
+    "resolved_slots.csv": "aee520e7fea925ca0c3358fdf4715861a4547b332e185b615e09f4e307f7e9e6",
+    "task_verdicts_reconciled.csv": "9b7a6984acbe3bbffcaef874d453040a78469b5213d2d81001d3bef12d10d78d",
+    "task_pass_rates.csv": "ecb5ad5bc0ee834a50ad63a18d2014d958214529ea609891e7daa2e1b760985c",
+    "metrics_by_task.csv": "d272e2cb4b06b8498d778e7f9fb8014b765d6af8404370574ac04d5aac3939c3",
+    "task_pass_verification.json": "6f26caa4f87adaac2a34d0956a662e9f4025ba13b0afdbb0c6f34d3079a337d3",
+    "figure_plot_data.csv": "b6cd77c3f3010cf42474aeb0962a0e80f5870c1034ed5529b1135d6d0e72f734",
+    "adjudication_changes.csv": "9a9831ff95a2e68326ba8b8e95a9d4e5a6fa30ce21c88ad5bf7ceae6ef85cc67",
+    "metric_readiness.json": "aec53a17dd3863042626dd665c32eac5958290f1ae33c2eb2fdfff60d05b8184",
+    "metrics_by_group_category.csv": "dcefe5ae3907f37b05a88cb5e8a9fad1899676a4b77ee8f918eb1589af04d01d",
+    "adjudication_receipt_BCC.json": "8b5ad7f3e34de2abce0a19f855923296dc31f7c0f68c289391032459698c0f72"
+  },
+  "new_model_calls": 0,
+  "new_scientific_runs": 0,
+  "new_label_changes": 0,
+  "pdf_outputs": 0
+}

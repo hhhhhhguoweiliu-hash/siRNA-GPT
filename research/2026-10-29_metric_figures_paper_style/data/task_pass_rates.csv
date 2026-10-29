@@ -1,0 +1,13 @@
+﻿group,category,n_tasks,passed,failed,pass_rate,source
+llm,STANDARD,4,0,4,0.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+llm,REQUIREMENT_CHANGE,1,0,1,0.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+llm,RELIABILITY,4,0,4,0.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+llm,OVERALL,9,0,9,0.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+workflow,STANDARD,4,4,0,1.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+workflow,REQUIREMENT_CHANGE,1,1,0,1.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+workflow,RELIABILITY,4,3,1,0.75,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+workflow,OVERALL,9,8,1,0.8888888888888888,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+agent,STANDARD,4,4,0,1.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+agent,REQUIREMENT_CHANGE,1,1,0,1.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+agent,RELIABILITY,4,4,0,1.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers
+agent,OVERALL,9,9,0,1.0,existing project-recorded retrospective task adjudication; reconciled to identical raw answers

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "user_response": "BCC",
+  "source": "用户在本次对话回传的人工裁定；未额外推断评审人数或独立性",
+  "scope": "正式答复正文＋实际交付附件",
+  "decisions": {
+    "E1": {
+      "choice": "B",
+      "meaning": "字段保留可以算交付：6个字段项正确，1个解释项缺失"
+    },
+    "E3": {
+      "choice": "C",
+      "meaning": "未充分解释PASS限制，计缺失"
+    },
+    "E4": {
+      "choice": "C",
+      "meaning": "未充分区分字符注释与未知实物化学，计缺失"
+    }
+  },
+  "scope_of_human_decision": "只覆盖这3个争议问题涉及的9条记录；其余AI判断不标为专家逐项确认"
+}
