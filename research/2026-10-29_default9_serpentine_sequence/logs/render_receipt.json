@@ -1,0 +1,16 @@
+{
+  "pages": 1,
+  "reference": "NM_003376.6",
+  "RNA_bases": 3609,
+  "guide_bases": 189,
+  "guides": 9,
+  "RNA_rows": 29,
+  "columns": 126,
+  "font": "Arial Bold",
+  "base_font_pt": 16,
+  "width_inches": 28.8889,
+  "height_inches": 23.8694,
+  "all_graphics_native_R": true,
+  "plotting_packages": ["ggplot2", "ragg", "svglite"],
+  "new_scientific_prediction": false
+}

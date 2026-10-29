@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "reference": "NM_003376.6",
+  "all_mRNA_bases": 3609,
+  "guide_strands": 9,
+  "guide_bases": 189,
+  "columns": 126,
+  "rows": 29,
+  "first_row_direction": "LTR",
+  "alternating_directions": true,
+  "all9_21nt_exact_reverse_complements": true,
+  "paired_core_19nt_and_full_guide_21nt_distinguished": true,
+  "guide_terminal_interpretation": "Gray 3-prime terminal dinucleotides are overhangs relative to the original passenger duplex; here the full 21-nt guide is still exactly complementary to the fixed mRNA reference. Gray does not mean an mRNA mismatch.",
+  "alignment": "Guide x coordinates equal their complementary mRNA coordinates; strand-end labels reflect antiparallel orientation.",
+  "new_design_prediction_or_RNAseq_analysis": false,
+  "mRNA_RNA_sequence_sha256": "bb3379e65c7d7b1afaf3391942e11b56b25899a583910d03f5086ddd0d0671c7",
+  "sources": [
+    {
+      "name": "VEGFA_NM003376.gb",
+      "path": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\research\\2026-10-29_default9_target_sites\\inputs\\VEGFA_NM003376.gb",
+      "sha256": "613656acecb46d004472449c8c98546242443d0d9f9f3d49c92c8facb90bd4b0"
+    },
+    {
+      "name": "default9_primary_positions.tsv",
+      "path": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\research\\2026-10-29_default9_target_sites\\tables\\default9_primary_positions.tsv",
+      "sha256": "2489542d077085e310e4cf621243750802ef43b85e75b2354bd05fe0ff397945"
+    },
+    {
+      "name": "candidates.tsv",
+      "path": "C:\\00000\\ARPE RNA-seq\\sirna-gpt-followup-20261027\\data\\candidates.tsv",
+      "sha256": "8e311e0102973c8f044ec898530ebb79e8861cd3f84592754f271c59b7490853"
+    }
+  ]
+}

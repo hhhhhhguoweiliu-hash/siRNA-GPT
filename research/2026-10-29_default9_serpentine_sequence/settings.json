@@ -1,0 +1,22 @@
+{
+  "reference": "NM_003376.6",
+  "length": 3609,
+  "columns": 126,
+  "RNA_rows": 29,
+  "xmin": -21,
+  "xmax": 139,
+  "ymin": -121.20000000000003,
+  "ymax": 11,
+  "cell_pt": 13,
+  "width_inches": 28.88888888888889,
+  "height_inches": 23.869444444444454,
+  "base_font_pt": 16,
+  "guide_font_pt": 16,
+  "title_font_pt": 32,
+  "subtitle_font_pt": 20,
+  "footer_y1": -116.80000000000003,
+  "footer_y2": -118.70000000000003,
+  "footer_y3": -120.20000000000003,
+  "terminal_3_x": 83.3,
+  "terminal_3_y": -111.20000000000003
+}

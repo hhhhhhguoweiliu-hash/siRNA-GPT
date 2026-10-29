@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "PDF_pages": 1,
+  "RNA_reference_bases_verified": 3609,
+  "siRNA_guides": 9,
+  "guide_bases_verified": 189,
+  "all_PDF_nucleotide_glyphs_checked": 3798,
+  "all_guide_bases_complementary_and_x_aligned": true,
+  "all9_guides_match_original_5to3_sequences": true,
+  "guide_5prime_3prime_end_labels_correct": true,
+  "all_29_rows_reconstruct_the_original_RNA_in_S_reading_order": true,
+  "fonts": [
+    "/ABRAFQ+Arial-BoldMT"
+  ],
+  "text_outside_page": [],
+  "width_inches": 28.88888888888889,
+  "height_inches": 23.869444444444454,
+  "font_size_bases_pt": 16,
+  "pdf_sha256": "eab5bd27ac7ada3055211747677c0a6297503b42d06aadeeaf3030bdb49d8808"
+}
