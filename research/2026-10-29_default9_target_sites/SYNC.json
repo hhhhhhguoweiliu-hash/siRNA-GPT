@@ -1,0 +1,25 @@
+{
+  "status": "VERIFIED",
+  "implementation_commit": "6fa1d538fa439a8ab364719d31a759479015ea00",
+  "branch": "codex/20261020-evidence-pilot",
+  "remote_branch_confirmed": true,
+  "verified_files": [
+    {
+      "path": "research/2026-10-29_default9_target_sites/tables/default9_primary_positions.tsv",
+      "github_blob": "b6a2af7f7259a8f663ec4dd99e2a0ae24bb95b88",
+      "local_committed_blob": "b6a2af7f7259a8f663ec4dd99e2a0ae24bb95b88",
+      "identical": true
+    },
+    {
+      "path": "research/2026-10-29_default9_target_sites/logs/output_audit.json",
+      "github_blob": "6237f492ea5aa561acf404cf5796cfb946f346f0",
+      "local_committed_blob": "6237f492ea5aa561acf404cf5796cfb946f346f0",
+      "identical": true
+    }
+  ],
+  "main": "2623c8601bd4b19b472fafc520b95c0cfd0a0fdb",
+  "main_modified": false,
+  "production_deployed": false,
+  "local_PDF_copy": "C:/00000/ARPE RNA-seq/output/pdf/siRNA_GPT_default9_VEGFA_target_sites_20261029.pdf",
+  "local_PDF_copy_byte_identical": true
+}
